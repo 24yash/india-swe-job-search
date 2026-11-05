@@ -2,6 +2,8 @@
 
 A local, read-only job-search pipeline for **software engineers in India**. It crawls company job boards and LinkedIn's public job search, filters roles against *your* requirements (level, years asked, city, pay floor, stack), scores them, and puts everything into a single offline **dashboard** where you can mark each role (Applied, Interviewing…) and keep notes.
 
+**Live dashboard: https://24yash.github.io/india-swe-job-search/** (GitHub Pages serves whatever is on `main`, so it shows the latest committed crawl). Your Applied/comment marks are saved in your own browser.
+
 The repo ships with a real data snapshot (see `output/`): about 200 ranked roles, 100+ leads and a bank of about 600 companies with pay evidence. Open `dashboard.html` to browse it right away, or personalise it and re-crawl.
 
 ![Dashboard: ranked shortlist with pay evidence, stack, status and comments](docs/dashboard-shortlist.png)
