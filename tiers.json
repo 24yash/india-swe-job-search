@@ -611,7 +611,7 @@
    "type": "Healthcare tech GCC",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "Entry bands often below bar"
+   "pay_note": "Levels.fyi India GL26 18.7, GL27 27.6 LPA — level-dependent"
   },
   {
    "name": "Freshworks",
@@ -814,8 +814,8 @@
    "name": "KLA",
    "type": "Semiconductor equipment (software)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "Levels.fyi India P1 median TC 25.5, P2 36.7 LPA"
   },
   {
    "name": "Applied Materials",
@@ -1045,8 +1045,9 @@
    "name": "Teradata",
    "type": "Data platform",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE median TC 22.6 LPA; Associate 10.6 below bar",
+   "below_title": "associate"
   },
   {
    "name": "Informatica",
@@ -1060,7 +1061,7 @@
    "type": "Security SaaS (Pune)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Levels.fyi India overall 24.3 LPA — borderline"
   },
   {
    "name": "Tekion",
@@ -1094,8 +1095,8 @@
    "name": "Tesco",
    "type": "Retail tech centre",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "Levels.fyi India Graduate SE 22.7, SE1 37.6 LPA"
   },
   {
    "name": "84.51°",
@@ -1130,7 +1131,7 @@
    "type": "Travel tech",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Levels.fyi India L2 19.6, L3 21.2 LPA — borderline"
   },
   {
    "name": "Amadeus",
@@ -1178,8 +1179,8 @@
    "name": "Barclays",
    "type": "Global bank tech centre",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "below",
+   "pay_note": "Levels.fyi India BA4 18.1 LPA"
   },
   {
    "name": "Citi",
@@ -1249,7 +1250,7 @@
    "type": "Global bank tech centre",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Levels.fyi India Band 6 13.2, Band 5 23.5 LPA — band-dependent"
   },
   {
    "name": "BlackRock",
@@ -1262,8 +1263,8 @@
    "name": "State Street",
    "type": "Bank tech centre",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Bands often below bar"
+   "pay": "below",
+   "pay_note": "Levels.fyi India SWE I 11.3 LPA"
   },
   {
    "name": "Northern Trust",
@@ -1403,7 +1404,7 @@
    "type": "Data/fintech",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Levels.fyi India L2 14.1, L3 21.0 LPA — level-dependent"
   },
   {
    "name": "Equifax",
@@ -2173,8 +2174,9 @@
    "name": "Innovaccer",
    "type": "Healthcare SaaS",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE2 median TC 29.6 LPA; SE1 14.3 below bar",
+   "below_title": "(sde|engineer)\\s*[-–]?\\s*(1|i)\\b|associate"
   },
   {
    "name": "Icertis",
@@ -2692,8 +2694,8 @@
    "name": "Smartsheet",
    "type": "Work-management SaaS",
    "quality": 11,
-   "pay": "likely",
-   "pay_note": "Levels.fyi India overall median TC 25.2 LPA"
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India overall 25.2 LPA — borderline (overall medians lean senior)"
   },
   {
    "name": "Clearwater Analytics",
@@ -2930,8 +2932,8 @@
    "name": "UKG",
    "type": "Global product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "Levels.fyi India P1 15.1, P2 16.6 LPA"
   },
   {
    "name": "Infoblox",
@@ -2980,7 +2982,7 @@
    "type": "Global product",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "Levels.fyi India JG8 20.6 LPA — borderline"
   },
   {
    "name": "Synchrony",
@@ -3224,8 +3226,8 @@
    "name": "Schneider Electric",
    "type": "Global product",
    "quality": 8,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "Levels.fyi India SWE II 13.1 LPA"
   },
   {
    "name": "Infineon",
@@ -3315,8 +3317,8 @@
    "name": "Zebra Technologies",
    "type": "Global product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE2 16.2 LPA"
   },
   {
    "name": "Motorola Solutions",
@@ -3477,7 +3479,7 @@
    "type": "Indian product",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "Levels.fyi India overall 29.5 LPA — borderline"
   },
   {
    "name": "Pixis",
@@ -4185,6 +4187,125 @@
    "quality": 9,
    "pay": "unclear",
    "pay_note": "Levels.fyi India L2 18.3, L3 32.6 LPA — level-dependent"
+  },
+  {
+   "name": "WEX",
+   "type": "Payments/fintech product",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE II median TC 32.1 LPA"
+  },
+  {
+   "name": "PayPay",
+   "type": "Japanese fintech, Gurugram centre",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India P2 median TC 36.8 LPA"
+  },
+  {
+   "name": "Planview",
+   "type": "Work-management SaaS",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 32.4 LPA (all levels)"
+  },
+  {
+   "name": "Warner Music Group",
+   "type": "Media/entertainment tech centre",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 50.8 LPA (all levels)"
+  },
+  {
+   "name": "Cargill",
+   "type": "Agri/commodities tech centre",
+   "quality": 9,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 31.7 LPA (all levels)"
+  },
+  {
+   "name": "Sage",
+   "type": "Accounting SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India overall 27.5 LPA, no level split — borderline"
+  },
+  {
+   "name": "MetLife",
+   "type": "Insurance tech centre",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India overall 24.6 LPA — borderline"
+  },
+  {
+   "name": "Drip Capital",
+   "type": "Trade-finance fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India overall 26.5 LPA — borderline"
+  },
+  {
+   "name": "MassMutual",
+   "type": "Insurance tech centre",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India overall 25.7 LPA — borderline"
+  },
+  {
+   "name": "Platform Science",
+   "type": "Fleet SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India overall 20.8 LPA — borderline"
+  },
+  {
+   "name": "Rimini Street",
+   "type": "Enterprise software support",
+   "quality": 8,
+   "pay": "below",
+   "pay_note": "Levels.fyi India overall 5.3 LPA"
+  },
+  {
+   "name": "EdgeVerve",
+   "type": "Infosys product arm",
+   "quality": 8,
+   "pay": "below",
+   "pay_note": "Levels.fyi India overall 12.6 LPA"
+  },
+  {
+   "name": "Infor",
+   "type": "Enterprise software",
+   "quality": 8,
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE 17.5 LPA"
+  },
+  {
+   "name": "DBS Bank",
+   "type": "Bank tech centre",
+   "quality": 8,
+   "pay": "below",
+   "pay_note": "Levels.fyi India Associate 17.9 LPA"
+  },
+  {
+   "name": "FNZ",
+   "type": "Wealth-platform fintech",
+   "quality": 8,
+   "pay": "below",
+   "pay_note": "Levels.fyi India overall 16.4 LPA"
+  },
+  {
+   "name": "Veradigm",
+   "type": "Healthcare IT",
+   "quality": 8,
+   "pay": "below",
+   "pay_note": "Levels.fyi India overall 8.8 LPA"
+  },
+  {
+   "name": "Mitratech",
+   "type": "Legal SaaS",
+   "quality": 8,
+   "pay": "below",
+   "pay_note": "Levels.fyi India overall 15.1 LPA"
   }
  ],
  "services_and_staffing": [
@@ -4315,6 +4436,27 @@
   "Naukri",
   "Foundit",
   "iimjobs",
-  "Michael Page"
+  "Michael Page",
+  "Career Crafterz",
+  "TalentRabbit",
+  "WillWare",
+  "SWITS DIGITAL",
+  "Edstem",
+  "algoleap",
+  "JMD Technologies",
+  "Deqode",
+  "EXL",
+  "Asymbl",
+  "Training Basket",
+  "Cybrain",
+  "Teknophile",
+  "Kaaliber",
+  "WebBee",
+  "ACS International",
+  "ACURA SOLUTIONS",
+  "CADOpt",
+  "Tech Data",
+  "InstantDM",
+  "BHIVE"
  ]
 }

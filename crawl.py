@@ -298,11 +298,12 @@ def linkedin_cards(params, max_results):
         for card in r.text.split("<li>")[1:]:
             jid = re.search(r"jobPosting:(\d+)", card)
             title = re.search(r'base-search-card__title">\s*(.*?)\s*</h3>', card, re.S)
-            comp = re.search(r'base-search-card__subtitle">.*?>\s*(.*?)\s*</a>', card, re.S)
+            sub = re.search(r'base-search-card__subtitle">(.*?)</h4>', card, re.S)  # company is usually a link, sometimes plain text
+            comp = re.search(r"\S.*\S|\S", re.sub(r"<[^>]+>", " ", sub.group(1))) if sub else None
             loc = re.search(r'job-search-card__location">\s*(.*?)\s*</span>', card, re.S)
             date = re.search(r'datetime="([\d-]+)"', card)
             if jid and title and comp:
-                yield (jid.group(1), html.unescape(title.group(1)), html.unescape(comp.group(1)),
+                yield (jid.group(1), html.unescape(title.group(1)), html.unescape(re.sub(r"\s+", " ", comp.group(0))),
                        loc.group(1) if loc else "India", date.group(1) if date else None)
 
 
