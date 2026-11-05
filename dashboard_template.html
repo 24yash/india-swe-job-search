@@ -79,6 +79,10 @@
   <select id="city"><option value="">All cities</option></select>
   <select id="pay"><option value="">Any pay confidence</option><option>Posted</option><option>Strong evidence</option><option>Likely</option><option>Unverified</option></select>
   <select id="st"><option value="">Any status</option></select>
+  <select id="exp" title="Minimum years of experience the role asks for">
+    <option value="">Any experience</option><option value="1">Asks ≤ 1 yr</option><option value="2">Asks ≤ 2 yrs</option>
+    <option value="3">Asks ≤ 3 yrs</option><option value="none">Years not stated</option>
+  </select>
   <label class="chk">Min score <input type="number" id="min" value="0" min="0" max="100"></label>
   <label class="chk"><input type="checkbox" id="hide"> Hide applied/skipped</label>
   <label class="chk"><input type="checkbox" id="onlyNew"> New only</label>
@@ -127,7 +131,7 @@ function renderTabs() {
   const names = { shortlist: "Shortlist", lead: "Leads (pay unverified)", companies: "Company bank" };
   document.getElementById("tabs").innerHTML = Object.keys(names).map(k =>
     `<button class="tab ${k === tab ? "on" : ""}" data-tab="${k}">${names[k]} (${n(k)})</button>`).join("");
-  document.getElementById("filters").querySelectorAll("#city,#pay,#st,#min,#hide,#onlyNew,#showOld").forEach(el =>
+  document.getElementById("filters").querySelectorAll("#city,#pay,#st,#exp,#min,#hide,#onlyNew,#showOld").forEach(el =>
     (el.closest("label") || el).style.display = tab === "companies" ? "none" : "");
 }
 
@@ -143,7 +147,7 @@ function renderStats() {
 function jobRows() {
   const q = document.getElementById("q").value.toLowerCase(), cityF = document.getElementById("city").value,
         payF = document.getElementById("pay").value, stF = document.getElementById("st").value,
-        min = +document.getElementById("min").value || 0, hide = document.getElementById("hide").checked,
+        min = +document.getElementById("min").value || 0, expF = document.getElementById("exp").value, hide = document.getElementById("hide").checked,
         onlyNew = document.getElementById("onlyNew").checked, showOld = document.getElementById("showOld").checked;
   let rows = DATA.jobs.filter(j => j.kind === tab).filter(j => {
     const m = mark(j.url);
@@ -154,9 +158,13 @@ function jobRows() {
     if (hide && ["Applied", "Interviewing", "Offer", "Rejected", "Skipped"].includes(m.status)) return false;
     if (onlyNew && !j.isNew) return false;
     if (j.score < min) return false;
+    const yrs = parseInt(j.exp);  // "2+ yrs" -> 2; "not stated" -> NaN
+    if (expF === "none" && !isNaN(yrs)) return false;
+    if (expF && expF !== "none" && (isNaN(yrs) || yrs > +expF)) return false;
     return !q || [j.company, j.title, j.stack, j.location, j.type, m.comment].join(" ").toLowerCase().includes(q);
   });
-  const val = j => sortKey === "status" ? mark(j.url).status : j[sortKey];
+  const val = j => sortKey === "status" ? mark(j.url).status
+                 : sortKey === "exp" ? (isNaN(parseInt(j.exp)) ? 99 : parseInt(j.exp)) : j[sortKey];
   rows.sort((a, b) => { const x = val(a), y = val(b); return (x > y ? 1 : x < y ? -1 : 0) * (sortAsc ? 1 : -1); });
   return rows;
 }
@@ -232,7 +240,7 @@ document.getElementById("tabs").addEventListener("click", e => {
 document.getElementById("filters").addEventListener("input", e => { if (e.target.id !== "importFile") render(); });
 document.getElementById("table").addEventListener("click", e => {
   const h = e.target.closest("th[data-sort]");
-  if (h) { const k = h.dataset.sort; sortAsc = sortKey === k ? !sortAsc : ["company","title","city","status","covered_by"].includes(k); sortKey = k; render(); return; }
+  if (h) { const k = h.dataset.sort; sortAsc = sortKey === k ? !sortAsc : ["company","title","city","status","covered_by","exp"].includes(k); sortKey = k; render(); return; }
   const o = e.target.closest("[data-open]");
   if (o) { const u = decodeURIComponent(o.dataset.open); open.has(u) ? open.delete(u) : open.add(u); render(); }
 });

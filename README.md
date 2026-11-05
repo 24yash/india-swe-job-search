@@ -117,7 +117,7 @@ Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `-
   - Leads (pay unverified);
   - Company bank.
 - **Filters:**
-  - search (it also searches your comments), city, pay confidence, status, minimum score;
+  - search (it also searches your comments), city, pay confidence, status, **experience asked** (≤1 / ≤2 / ≤3 yrs / not stated), minimum score;
   - hide applied/skipped, new only, show no-longer-listed.
 - **Per role:** a status (Not applied → Applied → Interviewing → Offer / Rejected / Skipped), a comment box, an expandable details row, and an apply link. Companies get a notes box.
 - **Your marks live in the browser's localStorage, keyed by job link.** Rebuilding the page after a new crawl keeps them:
