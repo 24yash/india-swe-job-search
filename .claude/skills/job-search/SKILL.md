@@ -42,6 +42,10 @@ Use `python3 crawl.py --sources linkedin --deep` (hours) only if the user asks f
    Use `below_title` (a regex) when only some levels fall below the floor.
 3. Run `python3 crawl.py --rescore`.
 
+## 3b. (Monthly) Find direct job boards for the bank
+
+`python3 discover_ats.py --bank` (about 5 min) tries likely board names for every good or unclear-pay company that has no direct board, across Greenhouse, Lever, Ashby and SmartRecruiters (Workable and Recruitee hits are reported but marked "(no crawler yet: don't add)", because `crawl.py` can't read them yet). It writes `output/discovered-boards.json`. Keep only hits with India postings whose name is verified, or whose postings mention the company (slugs can belong to a different company with the same name). Never add the user's own employer. Add the good ones to `companies.json` (`ats` and `slug`, plus type, quality and pay copied from `tiers.json`). Direct boards are faster, fresher and give the company's own apply link.
+
 ## 4. Finish: open the dashboard
 
 Right after the fast phase, tell the user the headline numbers: roles, leads, companies hiring, and any "hiring now (new since last run)". Then open the dashboard:

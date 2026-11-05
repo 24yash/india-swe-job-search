@@ -112,12 +112,20 @@ def title_ok(title):
 
 
 def greenhouse(c):
-    d = get(f"https://boards-api.greenhouse.io/v1/boards/{c['slug']}/jobs?content=true")
-    for j in d["jobs"]:
+    """List first (no descriptions: ~12x smaller for big boards), then fetch descriptions only for
+    India roles whose title fits."""
+    base = f"https://boards-api.greenhouse.io/v1/boards/{c['slug']}/jobs"
+    for j in get(base)["jobs"]:
         loc = j.get("location", {}).get("name", "")
+        if not (title_ok(j["title"]) and (in_india(loc) or "remote" in loc.lower())):
+            continue
+        try:
+            detail = get(f"{base}/{j['id']}")
+        except requests.RequestException:
+            continue  # closed between the list and the detail call
         yield Job(c["name"], j["title"], loc, j["absolute_url"],
                   parse_ts(j.get("first_published") or j.get("updated_at")),
-                  strip_html(j.get("content")), remote="remote" in loc.lower())
+                  strip_html(detail.get("content")), remote="remote" in loc.lower())
 
 
 def lever(c):
@@ -165,7 +173,7 @@ def smartrecruiters(c):
 def workday(c):
     host = f"https://{c['tenant']}.{c['wd']}.myworkdayjobs.com"
     api = f"{host}/wday/cxs/{c['tenant']}/{c['site']}"
-    seen = set()
+    seen, todo = set(), []
     # Workday has no country filter without facet IDs, so put the place in the search text.
     for query in ("software engineer", "software engineer Bangalore", "software engineer India", "backend engineer", "software developer India"):
         offset = 0
@@ -178,16 +186,24 @@ def workday(c):
                     continue
                 seen.add(path)
                 loc = j.get("locationsText", "")
-                if not in_india(loc) and "location" not in loc.lower():
-                    continue  # "3 Locations" needs the detail call; a foreign single location does not
-                info = get(f"{api}{path}").get("jobPostingInfo", {})
-                locs = " / ".join([info.get("location", "")] + info.get("additionalLocations", []))
-                yield Job(c["name"], info.get("title", j["title"]), locs, info.get("externalUrl") or f"{host}/{c['site']}{path}",
-                          parse_ts(info.get("startDate")) or workday_age(j.get("postedOn")),
-                          strip_html(info.get("jobDescription")), remote="remote" in (info.get("remoteType") or "").lower())
+                if in_india(loc) or "location" in loc.lower():  # "3 Locations" needs the detail call
+                    todo.append(j)
             offset += 20
             if not posts or offset >= d.get("total", 0):
                 break
+
+    def detail(j):  # one request per job: run a few at a time instead of one after another
+        try:
+            info = get(f"{api}{j['externalPath']}").get("jobPostingInfo", {})
+        except requests.RequestException:
+            return None  # closed between the search and the detail call; don't lose the rest of the board
+        locs = " / ".join([info.get("location", "")] + info.get("additionalLocations", []))
+        return Job(c["name"], info.get("title", j["title"]), locs, info.get("externalUrl") or f"{host}/{c['site']}{j['externalPath']}",
+                   parse_ts(info.get("startDate")) or workday_age(j.get("postedOn")),
+                   strip_html(info.get("jobDescription")), remote="remote" in (info.get("remoteType") or "").lower())
+
+    with ThreadPoolExecutor(6) as pool:
+        yield from filter(None, pool.map(detail, todo))
 
 
 def amazon(c):
@@ -339,7 +355,8 @@ def linkedin(c):
             if jid in seen or (only and not any(nc.startswith(o) or o.startswith(nc) for o in only)):
                 continue
             seen.add(jid)
-            if not title_ok(title) or is_excluded_company(comp) or nc in skip:
+            if not title_ok(title) or is_excluded_company(comp) or nc in skip \
+                    or on_own_board(c["boards"]["titles"], comp, title=title):
                 continue
             if jid not in LI_DETAILS:
                 d = li_get(f"{LI_API}/jobPosting/{jid}")
@@ -350,6 +367,33 @@ def linkedin(c):
 
 
 FETCHERS = {f.__name__: f for f in (greenhouse, lever, ashby, smartrecruiters, workday, amazon, microsoft, atlassian, google, linkedin)}
+
+
+def title_key(title):
+    return " ".join(re.findall(r"[a-z0-9]+", title.lower()))
+
+
+def same_or_alias(n, k):
+    """Normalised names of the same company: equal, or one a prefix of the other ('amazonwebservicesaws' / 'amazon').
+    The shorter name must have 5+ characters, so 'cred' doesn't swallow 'credgenics'."""
+    return n == k or (min(len(n), len(k)) >= 5 and (n.startswith(k) or k.startswith(n)))
+
+
+def on_own_board(board_titles, *names, title):
+    """True if the company's own board lists this title. Matches aliases by prefix, e.g.
+    'Amazon Web Services (AWS)' or 'Walmart Global Tech India' against the 'Amazon' / 'Walmart' boards."""
+    key = title_key(title)
+    for n in {norm(x) for x in names}:
+        for k, titles in board_titles.items():
+            if key in titles and same_or_alias(n, k):
+                return True
+    return False
+
+
+def board_titles_now(companies):
+    """Titles each company currently lists on its own board, from the latest raw files."""
+    return {norm(c["name"]): {title_key(j.title) for j in load_raw(c["name"])[0]}
+            for c in companies if c["ats"] != "linkedin"}
 
 
 def norm(name):
@@ -533,6 +577,7 @@ def crawl(company, ctx):
     """Fetch one source and save its raw file. LinkedIn sources checkpoint every few dozen postings:
     the raw file (fresh + not-yet-refreshed previous jobs) is saved and the shortlist and dashboard
     are rebuilt, so results appear while LinkedIn is still running."""
+    started = time.time()
     jobs, err = [], None
     is_li = company["ats"] == "linkedin"
     try:
@@ -556,7 +601,8 @@ def crawl(company, ctx):
         save_raw(company["name"], jobs)  # a board's own listing is authoritative: anything missing has closed
     if is_li:
         checkpoint(company, None, ctx)
-    print(f"{company['name']:<22} {len(jobs):>4} fetched{'  ERROR ' + err if err else ''}", file=sys.stderr, flush=True)
+    print(f"{company['name']:<22} {len(jobs):>4} fetched  {time.time() - started:5.1f}s{'  ERROR ' + err if err else ''}",
+          file=sys.stderr, flush=True)
     return company["name"], err
 
 
@@ -620,7 +666,7 @@ def build_context(args):
             c.update({k: e[k] for k in ("pay", "pay_note", "below_title") if k in e})
     direct = {norm(c["name"]) for c in companies if c["ats"] != "linkedin"}
     sweep = sorted({c["name"] for c in TIERS["known"]
-                    if norm(c["name"]) not in direct and c.get("pay") in ("likely", "unclear")
+                    if not any(same_or_alias(norm(c["name"]), d) for d in direct) and c.get("pay") in ("likely", "unclear")
                     and (c.get("pay") == "likely" or c.get("quality", 0) >= PROFILE["linkedin"]["company_sweep"]["min_quality"])},
                    key=norm)
     sweep = list({norm(n): n for n in sweep}.values())  # one search per company, not per alias
@@ -641,14 +687,21 @@ def build_context(args):
     sweep.sort(key=lambda n: (not active(n), not DEEP and quality.get(norm(n), 0) < tier, norm(n) in state,
                               state.get(norm(n), ""), -quality.get(norm(n), 0)))
     sweep = sweep[:PROFILE["linkedin"]["company_sweep"]["deep_companies_per_run" if DEEP else "companies_per_run"]]
+    below = {norm(c["name"]) for c in TIERS["known"] if c.get("pay") == "below"}
+    # Titles each company lists on its own board: a LinkedIn posting is a duplicate only if its title is
+    # there too (some companies post roles on LinkedIn that their board doesn't show).
+    # Shared holder: evaluation swaps in a fresh table with one assignment while the LinkedIn passes read
+    # it from other threads, so readers always see a complete table.
+    boards = {"titles": board_titles_now(companies)}
     for c in companies:
         if c["ats"] == "linkedin":
-            c["skip_companies"] = direct
+            c["skip_companies"] = below  # their LinkedIn postings would be dropped anyway
+            c["boards"] = boards
             if c.get("mode") == "sweep":
                 c["sweep_companies"] = sweep
     lookup = {norm(c["name"]): c for c in TIERS["known"]}
     lookup.update({norm(c["name"]): c for c in companies})
-    return {"companies": companies, "direct": direct, "sweep": sweep, "lookup": lookup, "sweep_state": state,
+    return {"companies": companies, "direct": direct, "boards": boards, "sweep": sweep, "lookup": lookup, "sweep_state": state,
             "max_age": args.max_age}
 
 
@@ -661,10 +714,11 @@ def evaluate_all(ctx, quiet=False):
         n = norm(name)
         if n in lookup:
             return lookup[n]
-        hit = next((v for k, v in lookup.items() if len(k) > 3 and (n.startswith(k) or k.startswith(n))), None)
+        hit = next((v for k, v in lookup.items() if same_or_alias(n, k)), None)
         return hit or {"name": name, "type": "Unknown — check stage/funding", "quality": 8, "pay": "unclear",
                        "pay_note": "company not in tiers.json"}
 
+    ctx["boards"]["titles"] = titles = board_titles_now(companies)  # boards may have just been re-crawled
     keep, leads, rejected, errors, seen_urls = [], [], [], [], set()
     activity = collections.defaultdict(lambda: {"seen": 0, "fitting": 0, "leads": 0})
     for source in companies:
@@ -678,8 +732,8 @@ def evaluate_all(ctx, quiet=False):
             company = source
             if source["ats"] == "linkedin":
                 company = resolve(job.company)
-                if norm(company["name"]) in direct or is_excluded_company(job.company):
-                    continue  # already covered by the company's own board, or a services/staffing firm
+                if on_own_board(titles, company["name"], job.company, title=job.title) or is_excluded_company(job.company):
+                    continue  # the company's own board lists this role, or a services/staffing firm
             row, why = evaluate(job, company, ctx["max_age"])
             act = activity[company["name"] if company.get("pay") != "unclear" or norm(company["name"]) in lookup else job.company]
             act["seen"] += 1
@@ -770,7 +824,7 @@ def main():
         fast = [c for c in sources if c["ats"] != "linkedin"]
         slow = [c for c in sources if c["ats"] == "linkedin"]
         if args.sources in ("fast", "all") and fast:
-            with ThreadPoolExecutor(10) as pool:
+            with ThreadPoolExecutor(16) as pool:  # boards are on different hosts, so this is polite per host
                 list(pool.map(lambda c: crawl(c, ctx), fast))
             evaluate_all(ctx)  # results from company boards are usable now; LinkedIn data is the previous crawl's
         if args.sources in ("linkedin", "all") and slow:

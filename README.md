@@ -88,7 +88,7 @@ profile.json  companies.json  tiers.json          ← your criteria, boards craw
 | Amazon, Microsoft, Atlassian, Google careers | their own endpoints |
 | LinkedIn public guest search (no login) | **light (default):** role keywords across India + a 40-company sweep (companies active last run and top-tier employers with no readable board: JPMorgan, Goldman, Uber, Flipkart, Walmart…). **`--deep`:** adds 7-city searches and a 180-company rotating sweep |
 
-Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `--workday <tenant>`). Put hits in `companies.json`; otherwise add it to `tiers.json` and the LinkedIn sweep will cover it.
+Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `--workday <tenant>`). **`python3 discover_ats.py --bank`** does this for every company in the bank that has no direct board. It tries likely board names on Greenhouse, Lever, Ashby and SmartRecruiters (and reports Workable and Recruitee boards, which `crawl.py` can't read yet), checks the board's company name, and writes `output/discovered-boards.json` for review. One run turned 42 LinkedIn-only companies into direct sources. Put hits in `companies.json`; otherwise add it to `tiers.json` and the LinkedIn sweep will cover it.
 
 ### Filters (in order; each rejection records its reason)
 1. India location.

@@ -869,6 +869,384 @@
    "pay_note": "not yet checked"
   },
   {
+   "name": "Experian",
+   "ats": "smartrecruiters",
+   "slug": "experian",
+   "type": "Data/fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Saviynt",
+   "ats": "lever",
+   "slug": "saviynt",
+   "type": "Identity security SaaS",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 46.3 LPA (all levels)"
+  },
+  {
+   "name": "Glance",
+   "ats": "greenhouse",
+   "slug": "glance",
+   "type": "InMobi consumer tech",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "InMobi group bands"
+  },
+  {
+   "name": "Squarepoint Capital",
+   "ats": "greenhouse",
+   "slug": "squarepointcapital",
+   "type": "Quant fund",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Quant bands"
+  },
+  {
+   "name": "Smartsheet",
+   "ats": "greenhouse",
+   "slug": "smartsheet",
+   "type": "Work-management SaaS",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India overall 25.2 LPA — borderline (overall medians lean senior)"
+  },
+  {
+   "name": "Truveta",
+   "ats": "greenhouse",
+   "slug": "truveta",
+   "type": "Health-data product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No company-specific India salary data found"
+  },
+  {
+   "name": "Fampay",
+   "ats": "lever",
+   "slug": "fampay",
+   "type": "Teen fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Truecaller",
+   "ats": "greenhouse",
+   "slug": "truecaller",
+   "type": "Indian product",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 44.7 LPA (all levels)"
+  },
+  {
+   "name": "Ema",
+   "ats": "ashby",
+   "slug": "ema",
+   "type": "AI startups",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Sophos",
+   "ats": "lever",
+   "slug": "sophos",
+   "type": "Security product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "NK Securities Research",
+   "ats": "greenhouse",
+   "slug": "nksecuritiesresearch",
+   "type": "HFT firm",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "HFT bands"
+  },
+  {
+   "name": "Clearwater Analytics",
+   "ats": "greenhouse",
+   "slug": "clearwater",
+   "type": "Investment-accounting SaaS",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 38.3 LPA (all levels)"
+  },
+  {
+   "name": "CloudSEK",
+   "ats": "greenhouse",
+   "slug": "cloudsek",
+   "type": "SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Arista Networks",
+   "ats": "smartrecruiters",
+   "slug": "aristanetworks",
+   "type": "Public networking product",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "High bands"
+  },
+  {
+   "name": "Graviton Research Capital",
+   "ats": "greenhouse",
+   "slug": "gravitonresearchcapital",
+   "type": "HFT firm",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "HFT bands"
+  },
+  {
+   "name": "SigNoz",
+   "ats": "ashby",
+   "slug": "signoz",
+   "type": "SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Tower Research Capital",
+   "ats": "greenhouse",
+   "slug": "towerresearchcapital",
+   "type": "HFT firm",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Very high bands"
+  },
+  {
+   "name": "project44",
+   "ats": "greenhouse",
+   "slug": "project44",
+   "type": "Logistics SaaS",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SWE median TC 44.6 LPA"
+  },
+  {
+   "name": "Gen Digital",
+   "ats": "ashby",
+   "slug": "gen-digital",
+   "type": "Global product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "WorldQuant",
+   "ats": "greenhouse",
+   "slug": "worldquant",
+   "type": "Quant fund",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Quant bands"
+  },
+  {
+   "name": "DigiCert",
+   "ats": "greenhouse",
+   "slug": "digicert",
+   "type": "Security/PKI product",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 34.6 LPA (all levels)"
+  },
+  {
+   "name": "Sumo Logic",
+   "ats": "greenhouse",
+   "slug": "sumologic",
+   "type": "Global product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Ixigo",
+   "ats": "smartrecruiters",
+   "slug": "ixigo",
+   "type": "Travel tech (listed)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "OpenAI",
+   "ats": "ashby",
+   "slug": "openai",
+   "type": "Global product",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Anthropic",
+   "ats": "greenhouse",
+   "slug": "anthropic",
+   "type": "Global product",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Enterpret",
+   "ats": "greenhouse",
+   "slug": "enterpret",
+   "type": "SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Bolna",
+   "ats": "ashby",
+   "slug": "bolna",
+   "type": "AI startups",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Continental",
+   "ats": "smartrecruiters",
+   "slug": "continental",
+   "type": "Global product",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Gainsight",
+   "ats": "ashby",
+   "slug": "gainsight",
+   "type": "SaaS",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Neo4j",
+   "ats": "greenhouse",
+   "slug": "neo4j",
+   "type": "SaaS",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Platform Science",
+   "ats": "greenhouse",
+   "slug": "platformscience",
+   "type": "Fleet SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India overall 20.8 LPA — borderline"
+  },
+  {
+   "name": "Unacademy",
+   "ats": "smartrecruiters",
+   "slug": "unacademy",
+   "type": "Edtech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Smallest.ai",
+   "ats": "ashby",
+   "slug": "smallest",
+   "type": "AI startup",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Redis",
+   "ats": "ashby",
+   "slug": "redis",
+   "type": "SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Western Digital",
+   "ats": "smartrecruiters",
+   "slug": "westerndigital",
+   "type": "Storage product MNC",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Upstox",
+   "ats": "smartrecruiters",
+   "slug": "upstox",
+   "type": "Indian fintech",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "SDE bands around 20+"
+  },
+  {
+   "name": "Turtlemint",
+   "ats": "smartrecruiters",
+   "slug": "turtlemint",
+   "type": "Insurtech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Cars24",
+   "ats": "smartrecruiters",
+   "slug": "cars24",
+   "type": "Auto commerce",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Nobroker",
+   "ats": "smartrecruiters",
+   "slug": "nobroker",
+   "type": "Proptech",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Whatfix",
+   "ats": "smartrecruiters",
+   "slug": "whatfix",
+   "type": "SaaS",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Lendingkart",
+   "ats": "smartrecruiters",
+   "slug": "lendingkart",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Giga ML",
+   "ats": "ashby",
+   "slug": "gigaml",
+   "type": "AI startups",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
    "name": "LinkedIn search",
    "ats": "linkedin",
    "type": "aggregator",
