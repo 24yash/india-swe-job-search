@@ -1,0 +1,4320 @@
+{
+ "_comment": "Company bank. type/quality(0-15)/pay(likely|unclear|below)/pay_note. pay=likely with a 'Levels.fyi' note is evidence-backed (India total comp, not fixed CTC); without it, it's a tier judgement. Add companies freely.",
+ "known": [
+  {
+   "name": "Google",
+   "type": "Global product MNC (public)",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Big-tech L3/L4 bands"
+  },
+  {
+   "name": "Meta",
+   "type": "Global product MNC (public)",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Big-tech bands"
+  },
+  {
+   "name": "Apple",
+   "type": "Global product MNC (public)",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Big-tech bands"
+  },
+  {
+   "name": "Netflix",
+   "type": "Global product MNC (public)",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Big-tech bands"
+  },
+  {
+   "name": "Uber",
+   "type": "Global product MNC (public)",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India L3 median TC 35.4 LPA"
+  },
+  {
+   "name": "LinkedIn",
+   "type": "Global product MNC (Microsoft)",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Big-tech bands"
+  },
+  {
+   "name": "Oracle",
+   "type": "Global product MNC (public)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India IC-2 median TC 26.5 LPA"
+  },
+  {
+   "name": "Intuit",
+   "type": "Global product MNC (public)",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Strong Bengaluru bands"
+  },
+  {
+   "name": "Walmart",
+   "type": "Global retail tech centre",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India P2 median TC 20.6, P3 34.4 LPA"
+  },
+  {
+   "name": "Walmart Global Tech India",
+   "type": "Global retail tech centre",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India P2 median TC 20.6, P3 34.4 LPA"
+  },
+  {
+   "name": "Flipkart",
+   "type": "Indian e-commerce (Walmart)",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SDE1 median TC 22.1, SDE2 36.4 LPA"
+  },
+  {
+   "name": "PhonePe",
+   "type": "Late-stage Indian fintech",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE1 median TC 28.9 LPA"
+  },
+  {
+   "name": "Eternal",
+   "type": "Indian consumer tech (listed; Zomato/Blinkit)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi (Zomato) SWE median TC 50.4 LPA, all levels"
+  },
+  {
+   "name": "Zomato",
+   "type": "Indian consumer tech (listed; Eternal)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SWE median TC 50.4 LPA (all levels; base 33.9)"
+  },
+  {
+   "name": "Blinkit",
+   "type": "Indian quick-commerce (Eternal)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Eternal group; Levels.fyi (Zomato) SWE median TC 50.4 LPA, all levels"
+  },
+  {
+   "name": "Zepto",
+   "type": "Late-stage quick-commerce",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "SDE bands above 20"
+  },
+  {
+   "name": "Myntra",
+   "type": "Indian e-commerce (Flipkart)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE median TC 22.1 LPA"
+  },
+  {
+   "name": "CRED",
+   "type": "Late-stage Indian fintech",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India L3 median TC 31.4 LPA"
+  },
+  {
+   "name": "Razorpay",
+   "type": "Late-stage Indian fintech",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE median TC 21.7 LPA"
+  },
+  {
+   "name": "Groww",
+   "type": "Indian fintech (listed)",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Top fintech payer"
+  },
+  {
+   "name": "Zerodha",
+   "type": "Profitable Indian fintech",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Known to pay well for engineers"
+  },
+  {
+   "name": "Juspay",
+   "type": "Late-stage Indian fintech",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Fintech unicorn"
+  },
+  {
+   "name": "Dream11",
+   "type": "Late-stage consumer tech (Dream Sports)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "High startup bands"
+  },
+  {
+   "name": "Dream Sports",
+   "type": "Late-stage consumer tech",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "High startup bands"
+  },
+  {
+   "name": "Games24x7",
+   "type": "Profitable gaming tech",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "SDE bands above 20"
+  },
+  {
+   "name": "MakeMyTrip",
+   "type": "Public travel tech",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "SDE-2 bands above 20"
+  },
+  {
+   "name": "Media.net",
+   "type": "Adtech product company",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Known high payer"
+  },
+  {
+   "name": "The D. E. Shaw Group",
+   "type": "Quant/finance tech",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Very high bands"
+  },
+  {
+   "name": "D. E. Shaw",
+   "type": "Quant/finance tech",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Very high bands"
+  },
+  {
+   "name": "Tower Research Capital",
+   "type": "HFT firm",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Very high bands"
+  },
+  {
+   "name": "Goldman Sachs",
+   "type": "Global bank engineering",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India Analyst median TC 32.9 LPA"
+  },
+  {
+   "name": "Nutanix",
+   "type": "Public infra product",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "MTS bands above 20"
+  },
+  {
+   "name": "ThoughtSpot",
+   "type": "Late-stage analytics SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "High SaaS bands"
+  },
+  {
+   "name": "Postman",
+   "type": "Late-stage devtools",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "High devtools bands"
+  },
+  {
+   "name": "BrowserStack",
+   "type": "Late-stage devtools",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "High devtools bands"
+  },
+  {
+   "name": "Rippling",
+   "type": "Late-stage HR SaaS",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Global bands in Bengaluru"
+  },
+  {
+   "name": "Sprinklr",
+   "type": "Public SaaS",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Product co"
+  },
+  {
+   "name": "ServiceNow",
+   "type": "Public SaaS",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Strong Hyderabad bands"
+  },
+  {
+   "name": "Visa",
+   "type": "Global payments MNC",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Payments MNC"
+  },
+  {
+   "name": "Mastercard",
+   "type": "Global payments MNC",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India L8 (SE II) median TC 22.5 LPA; L9 16.5 below bar",
+   "below_title": "engineer\\s*[-–]?\\s*(1|i)\\b|associate"
+  },
+  {
+   "name": "American Express",
+   "type": "Global payments MNC",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE II median TC 24.3 LPA"
+  },
+  {
+   "name": "PayPal",
+   "type": "Global payments MNC",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Payments MNC"
+  },
+  {
+   "name": "Expedia Group",
+   "type": "Global travel tech",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India J median TC 20.9, K 36.7 LPA"
+  },
+  {
+   "name": "Booking Holdings",
+   "type": "Global travel tech",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Global product co"
+  },
+  {
+   "name": "Qualcomm",
+   "type": "Global semiconductor MNC",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Software bands near or above 20"
+  },
+  {
+   "name": "Arista Networks",
+   "type": "Public networking product",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "High bands"
+  },
+  {
+   "name": "Palo Alto Networks",
+   "type": "Public security product",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "High bands"
+  },
+  {
+   "name": "Akamai Technologies",
+   "type": "Public infra product",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Infra product co"
+  },
+  {
+   "name": "Workday",
+   "type": "Public SaaS",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "SaaS MNC"
+  },
+  {
+   "name": "Autodesk",
+   "type": "Public software MNC",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India Grade 8 median TC 20.2, Grade 9 28.0 LPA"
+  },
+  {
+   "name": "VMware",
+   "type": "Infra product (Broadcom)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Infra MNC"
+  },
+  {
+   "name": "Broadcom",
+   "type": "Global product MNC",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Infra MNC"
+  },
+  {
+   "name": "Adobe",
+   "type": "Global product MNC",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Big-tech India bands"
+  },
+  {
+   "name": "Salesforce",
+   "type": "Global SaaS MNC",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India AMTS median TC 26.1 LPA"
+  },
+  {
+   "name": "Cisco",
+   "type": "Global product MNC",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Levels.fyi Grade 6 median TC 24.7 LPA"
+  },
+  {
+   "name": "Microsoft",
+   "type": "Global product MNC",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Levels.fyi L59 median TC 27.4 LPA"
+  },
+  {
+   "name": "Amazon",
+   "type": "Global product MNC",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Levels.fyi L4 median TC 29.7 LPA"
+  },
+  {
+   "name": "Atlassian",
+   "type": "Global product MNC",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Levels.fyi P30 median TC 44 LPA"
+  },
+  {
+   "name": "Target",
+   "type": "Global retail tech centre",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi L4 median TC 21.4 LPA"
+  },
+  {
+   "name": "Swiggy",
+   "type": "Indian consumer tech (listed)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi entry median TC 20.6 LPA"
+  },
+  {
+   "name": "Meesho",
+   "type": "Indian e-commerce (listed)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE I median TC 25.5 LPA"
+  },
+  {
+   "name": "ShareChat",
+   "type": "Late-stage consumer tech",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "High startup bands"
+  },
+  {
+   "name": "Urban Company",
+   "type": "Indian consumer tech (listed)",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "SDE bands above 20"
+  },
+  {
+   "name": "Navi",
+   "type": "Indian fintech",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "High startup bands"
+  },
+  {
+   "name": "Slice",
+   "type": "Indian fintech/bank",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "High startup bands"
+  },
+  {
+   "name": "Upstox",
+   "type": "Indian fintech",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "SDE bands around 20+"
+  },
+  {
+   "name": "InMobi",
+   "type": "Indian adtech product",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi SDE I median TC 26.7 LPA"
+  },
+  {
+   "name": "Glance",
+   "type": "InMobi consumer tech",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "InMobi group bands"
+  },
+  {
+   "name": "Atlan",
+   "type": "Late-stage data SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Well-funded"
+  },
+  {
+   "name": "Chargebee",
+   "type": "Late-stage SaaS",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "SaaS unicorn"
+  },
+  {
+   "name": "Hasura",
+   "type": "Devtools startup",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Devtools"
+  },
+  {
+   "name": "Zscaler",
+   "type": "Public security SaaS",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Levels.fyi SE I median TC 21.4 LPA"
+  },
+  {
+   "name": "Rubrik",
+   "type": "Public data security",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "High infra bands"
+  },
+  {
+   "name": "Databricks",
+   "type": "Late-stage data/AI",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India L3 median TC 69 LPA"
+  },
+  {
+   "name": "Snowflake",
+   "type": "Public data cloud",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Top-tier bands"
+  },
+  {
+   "name": "Stripe",
+   "type": "Late-stage fintech",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Top-tier bands"
+  },
+  {
+   "name": "Coinbase",
+   "type": "Public crypto/fintech",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "JPMorgan Chase & Co.",
+   "type": "Global bank tech centre",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India 601 median TC 27.5, 602 42.4 LPA (502 is 18.2, below bar)"
+  },
+  {
+   "name": "Morgan Stanley",
+   "type": "Global bank tech centre",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India L3 18.5, L4 33.8 LPA — depends on level offered",
+   "below_title": "analyst"
+  },
+  {
+   "name": "Wells Fargo",
+   "type": "Global bank tech centre",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India L1 median TC 21.5, L2 24.3 LPA"
+  },
+  {
+   "name": "Deutsche Bank",
+   "type": "Global bank tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India Analyst 17.7, Associate 22.6 LPA — depends on level",
+   "below_title": "analyst"
+  },
+  {
+   "name": "Paytm",
+   "type": "Indian fintech (listed)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Entry bands mixed"
+  },
+  {
+   "name": "PolicyBazaar",
+   "type": "Indian insurtech (listed)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Info Edge",
+   "type": "Indian internet (listed)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Airtel",
+   "type": "Telecom (Airtel Digital)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Jio",
+   "type": "Telecom/digital",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Entry bands often below bar"
+  },
+  {
+   "name": "Optum",
+   "type": "Healthcare tech GCC",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Entry bands often below bar"
+  },
+  {
+   "name": "Freshworks",
+   "type": "Public SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "SaaS bands"
+  },
+  {
+   "name": "eBay",
+   "type": "Global product MNC",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE1 median TC 21.4, SE2 35.0 LPA"
+  },
+  {
+   "name": "SAP Labs",
+   "type": "Global software MNC",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "SAP Labs India dev bands"
+  },
+  {
+   "name": "SAP",
+   "type": "Global software MNC",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "SAP Labs India dev bands"
+  },
+  {
+   "name": "Nvidia",
+   "type": "Global product MNC",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Top-tier bands"
+  },
+  {
+   "name": "AMD",
+   "type": "Semiconductor MNC (software roles)",
+   "quality": 12,
+   "pay": "unclear",
+   "pay_note": "Bands vary by team"
+  },
+  {
+   "name": "Intel",
+   "type": "Semiconductor MNC",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India Grade 3 19.7, Grade 5 21.6 LPA — borderline",
+   "below_title": "\\bgrade 3\\b"
+  },
+  {
+   "name": "Samsung R&D Institute",
+   "type": "R&D centre (SRIB/SRI-Noida)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "R&D bands vary"
+  },
+  {
+   "name": "Samsung",
+   "type": "R&D centre",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "R&D bands vary"
+  },
+  {
+   "name": "Mercedes-Benz Research and Development India",
+   "type": "Automotive software R&D",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Siemens Healthineers",
+   "type": "Healthcare tech R&D",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Philips",
+   "type": "Healthcare tech R&D",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "GE HealthCare",
+   "type": "Healthcare tech R&D",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Honeywell",
+   "type": "Industrial tech R&D",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Western Digital",
+   "type": "Storage product MNC",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "NetApp",
+   "type": "Storage/infra product",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India MTS I 22.7, MTS II 31.0 LPA"
+  },
+  {
+   "name": "Hewlett Packard Enterprise",
+   "type": "Infra product MNC",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "HP",
+   "type": "Product MNC",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Dell Technologies",
+   "type": "Product MNC",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "F5",
+   "type": "Infra/security product",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Infra product bands"
+  },
+  {
+   "name": "Red Hat",
+   "type": "Open-source infra (IBM)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Pune/Bengaluru bands vary"
+  },
+  {
+   "name": "Juniper Networks",
+   "type": "Networking product",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Networking product bands"
+  },
+  {
+   "name": "Ciena",
+   "type": "Networking product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Synopsys",
+   "type": "EDA software MNC",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Software roles vary"
+  },
+  {
+   "name": "Cadence Design Systems",
+   "type": "EDA software MNC",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Software roles vary"
+  },
+  {
+   "name": "Arm",
+   "type": "Semiconductor IP",
+   "quality": 12,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Marvell Technology",
+   "type": "Semiconductor MNC",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Micron Technology",
+   "type": "Semiconductor MNC",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "KLA",
+   "type": "Semiconductor equipment (software)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Applied Materials",
+   "type": "Semiconductor equipment",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Texas Instruments",
+   "type": "Semiconductor MNC",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Analog Devices",
+   "type": "Semiconductor MNC",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "MathWorks",
+   "type": "Engineering software",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Product software bands"
+  },
+  {
+   "name": "PTC",
+   "type": "Engineering software",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Ansys",
+   "type": "Engineering software",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Citrix",
+   "type": "Infra software",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Cloud Software Group",
+   "type": "Infra software",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Couchbase",
+   "type": "Database company",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "DB product bands"
+  },
+  {
+   "name": "Confluent",
+   "type": "Data streaming infra",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Infra product bands"
+  },
+  {
+   "name": "Cohesity",
+   "type": "Data security/infra",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Infra product bands"
+  },
+  {
+   "name": "Veritas",
+   "type": "Data protection",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Druva",
+   "type": "SaaS data protection",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Commvault",
+   "type": "Data protection",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India Associate Engineer 20.2, Engineer 23.5 LPA"
+  },
+  {
+   "name": "Splunk",
+   "type": "Observability (Cisco)",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Infra product bands"
+  },
+  {
+   "name": "Dropbox",
+   "type": "Product company",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Twilio",
+   "type": "CPaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Product bands"
+  },
+  {
+   "name": "Zendesk",
+   "type": "SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Product bands"
+  },
+  {
+   "name": "HubSpot",
+   "type": "SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Product bands"
+  },
+  {
+   "name": "DocuSign",
+   "type": "SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Product bands"
+  },
+  {
+   "name": "Okta",
+   "type": "Identity SaaS",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Product bands"
+  },
+  {
+   "name": "CrowdStrike",
+   "type": "Security SaaS",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Product bands"
+  },
+  {
+   "name": "Check Point Software",
+   "type": "Security product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Fortinet",
+   "type": "Security product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Sophos",
+   "type": "Security product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Akamai",
+   "type": "Infra product",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Product bands"
+  },
+  {
+   "name": "Cloudflare",
+   "type": "Infra product",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Datadog",
+   "type": "Observability SaaS",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "New Relic",
+   "type": "Observability SaaS",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Product bands"
+  },
+  {
+   "name": "Dynatrace",
+   "type": "Observability SaaS",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Elastic",
+   "type": "Search/observability",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "MongoDB",
+   "type": "Database company",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Teradata",
+   "type": "Data platform",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Informatica",
+   "type": "Data platform",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Qualys",
+   "type": "Security SaaS (Pune)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Tekion",
+   "type": "Auto SaaS",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Unicorn bands"
+  },
+  {
+   "name": "Toast",
+   "type": "Restaurant SaaS/fintech",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Product bands"
+  },
+  {
+   "name": "Wayfair",
+   "type": "E-commerce tech",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Product bands"
+  },
+  {
+   "name": "Lowe's",
+   "type": "Retail tech centre",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Tesco",
+   "type": "Retail tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "84.51°",
+   "type": "Retail data science (Kroger)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "The Home Depot",
+   "type": "Retail tech centre",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Nike",
+   "type": "Retail tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "McDonald's",
+   "type": "Retail tech centre (Hyderabad)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Sabre",
+   "type": "Travel tech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Amadeus",
+   "type": "Travel tech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Agoda",
+   "type": "Travel tech",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Global product co"
+  },
+  {
+   "name": "Trip.com",
+   "type": "Travel tech",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Cleartrip",
+   "type": "Travel tech (Flipkart)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Ixigo",
+   "type": "Travel tech (listed)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Yatra",
+   "type": "Travel tech",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Barclays",
+   "type": "Global bank tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Citi",
+   "type": "Global bank tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Citigroup",
+   "type": "Global bank tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "BNY",
+   "type": "Global bank tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "BNY Mellon",
+   "type": "Global bank tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Nomura",
+   "type": "Global bank tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "UBS",
+   "type": "Global bank tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "HSBC",
+   "type": "Global bank tech centre",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Standard Chartered",
+   "type": "Global bank tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Societe Generale",
+   "type": "Global bank tech centre",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Bank of America",
+   "type": "Global bank tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "BlackRock",
+   "type": "Asset manager tech",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Strong Gurugram/Mumbai bands"
+  },
+  {
+   "name": "State Street",
+   "type": "Bank tech centre",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands often below bar"
+  },
+  {
+   "name": "Northern Trust",
+   "type": "Bank tech centre",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Fidelity Investments",
+   "type": "Asset manager tech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Vanguard",
+   "type": "Asset manager tech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Charles Schwab",
+   "type": "Brokerage tech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "FIS",
+   "type": "Fintech infra",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands often below bar"
+  },
+  {
+   "name": "Fiserv",
+   "type": "Fintech infra",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands often below bar"
+  },
+  {
+   "name": "Broadridge",
+   "type": "Fintech infra",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "S&P Global",
+   "type": "Financial data",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Moody's",
+   "type": "Financial data",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "MSCI",
+   "type": "Financial data",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Morningstar",
+   "type": "Financial data",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Nasdaq",
+   "type": "Exchange tech",
+   "quality": 11,
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE median TC 19.8 LPA"
+  },
+  {
+   "name": "LSEG",
+   "type": "Financial data",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Intercontinental Exchange",
+   "type": "Exchange tech (Hyderabad)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "CME Group",
+   "type": "Exchange tech",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Arcesium",
+   "type": "Fin-tech platform (D. E. Shaw)",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Known high Hyderabad/Bengaluru bands"
+  },
+  {
+   "name": "Addepar",
+   "type": "Wealth fintech",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Bloomberg",
+   "type": "Financial data",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Experian",
+   "type": "Data/fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "TransUnion",
+   "type": "Data/fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Equifax",
+   "type": "Data/fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India P2 18.1, P3 33.0 LPA — depends on level"
+  },
+  {
+   "name": "FICO",
+   "type": "Analytics software",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Kotak Mahindra Bank",
+   "type": "Indian bank tech",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "HDFC Bank",
+   "type": "Indian bank tech",
+   "quality": 7,
+   "pay": "unclear",
+   "pay_note": "Bands often below bar"
+  },
+  {
+   "name": "ICICI Bank",
+   "type": "Indian bank tech",
+   "quality": 7,
+   "pay": "unclear",
+   "pay_note": "Bands often below bar"
+  },
+  {
+   "name": "Axis Bank",
+   "type": "Indian bank tech",
+   "quality": 7,
+   "pay": "unclear",
+   "pay_note": "Bands often below bar"
+  },
+  {
+   "name": "NPCI",
+   "type": "Payments infrastructure",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "NSE",
+   "type": "Exchange tech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Graviton Research Capital",
+   "type": "HFT firm",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "HFT bands"
+  },
+  {
+   "name": "Quadeye",
+   "type": "HFT firm",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "HFT bands"
+  },
+  {
+   "name": "AlphaGrep",
+   "type": "HFT firm",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "HFT bands"
+  },
+  {
+   "name": "Optiver",
+   "type": "Market maker",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "HFT bands"
+  },
+  {
+   "name": "Squarepoint Capital",
+   "type": "Quant fund",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Quant bands"
+  },
+  {
+   "name": "WorldQuant",
+   "type": "Quant fund",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Quant bands"
+  },
+  {
+   "name": "Millennium",
+   "type": "Hedge fund tech",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Quant bands"
+  },
+  {
+   "name": "NK Securities Research",
+   "type": "HFT firm",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "HFT bands"
+  },
+  {
+   "name": "iRage",
+   "type": "HFT firm",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "HFT bands"
+  },
+  {
+   "name": "Trexquant",
+   "type": "Quant fund",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Quant bands"
+  },
+  {
+   "name": "Futures First",
+   "type": "Trading firm",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "APT Portfolio",
+   "type": "HFT firm",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "HFT bands"
+  },
+  {
+   "name": "Dolat Capital",
+   "type": "HFT firm",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "HFT bands"
+  },
+  {
+   "name": "Citadel",
+   "type": "Hedge fund",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Top bands"
+  },
+  {
+   "name": "Citadel Securities",
+   "type": "Market maker",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Top bands"
+  },
+  {
+   "name": "M2P Fintech",
+   "type": "Fintech infra (API banking)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Setu",
+   "type": "Fintech infra (Pine Labs)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Pine Labs",
+   "type": "Payments (listed)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Cashfree Payments",
+   "type": "Payments",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "PayU",
+   "type": "Payments",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "BharatPe",
+   "type": "Fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "MobiKwik",
+   "type": "Fintech (listed)",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Jupiter",
+   "type": "Neobank",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Fi Money",
+   "type": "Neobank",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Niyo",
+   "type": "Neobank",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "OneCard",
+   "type": "Credit card fintech (FPL)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "FPL Technologies",
+   "type": "Credit card fintech",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Uni Cards",
+   "type": "Credit card fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "KreditBee",
+   "type": "Lending fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Moneyview",
+   "type": "Lending fintech",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Dhan",
+   "type": "Broking fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "INDmoney",
+   "type": "Wealth fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "smallcase",
+   "type": "Wealth fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Angel One",
+   "type": "Broking fintech (listed)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Perfios",
+   "type": "Fintech infra",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Yubi",
+   "type": "Debt fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Credgenics",
+   "type": "Fintech SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Acko",
+   "type": "Insurtech",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "High startup bands"
+  },
+  {
+   "name": "Go Digit",
+   "type": "Insurtech (listed)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Digit Insurance",
+   "type": "Insurtech (listed)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "InsuranceDekho",
+   "type": "Insurtech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Turtlemint",
+   "type": "Insurtech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Paytm Money",
+   "type": "Broking fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Rupeek",
+   "type": "Lending fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Kissht",
+   "type": "Lending fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "GoKwik",
+   "type": "E-com checkout fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Simpl",
+   "type": "BNPL fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Scapia",
+   "type": "Credit card fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Jar",
+   "type": "Savings fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Fampay",
+   "type": "Teen fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Airwallex",
+   "type": "Global fintech",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Nium",
+   "type": "Cross-border payments",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Fintech unicorn"
+  },
+  {
+   "name": "Tide",
+   "type": "UK fintech India centre",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Global fintech"
+  },
+  {
+   "name": "Wise",
+   "type": "Global fintech",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Revolut",
+   "type": "Global fintech",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Checkout.com",
+   "type": "Global payments",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Adyen",
+   "type": "Global payments",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Plaid",
+   "type": "Global fintech",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Brex",
+   "type": "Global fintech",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Ramp",
+   "type": "Global fintech",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "CoinDCX",
+   "type": "Crypto exchange",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "CoinSwitch",
+   "type": "Crypto exchange",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Nykaa",
+   "type": "Beauty e-commerce (listed)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Lenskart",
+   "type": "Eyewear omnichannel (listed)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Delhivery",
+   "type": "Logistics (listed)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Shadowfax",
+   "type": "Logistics",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Porter",
+   "type": "Logistics",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Rapido",
+   "type": "Mobility",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Ola",
+   "type": "Mobility",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Ola Electric",
+   "type": "EV (listed)",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Krutrim",
+   "type": "AI (Ola group)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Udaan",
+   "type": "B2B commerce",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "BigBasket",
+   "type": "Grocery (Tata)",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Tata 1mg",
+   "type": "Health commerce",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Tata Digital",
+   "type": "Digital commerce (Tata Neu)",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "PharmEasy",
+   "type": "Health commerce",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Cars24",
+   "type": "Auto commerce",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Spinny",
+   "type": "Auto commerce",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "CarDekho",
+   "type": "Auto commerce",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Licious",
+   "type": "D2C",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "boAt",
+   "type": "D2C",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Mamaearth",
+   "type": "D2C (listed)",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "PhysicsWallah",
+   "type": "Edtech (listed)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Unacademy",
+   "type": "Edtech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "upGrad",
+   "type": "Edtech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Scaler",
+   "type": "Edtech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Moj",
+   "type": "Social media (ShareChat)",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "High startup bands"
+  },
+  {
+   "name": "VerSe Innovation",
+   "type": "Content tech (Dailyhunt/Josh)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Pocket FM",
+   "type": "Audio entertainment",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Kuku FM",
+   "type": "Audio entertainment",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Apna",
+   "type": "Jobs platform",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "JioHotstar",
+   "type": "Streaming",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Disney+ Hotstar",
+   "type": "Streaming",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Known strong bands"
+  },
+  {
+   "name": "Hotstar",
+   "type": "Streaming",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Known strong bands"
+  },
+  {
+   "name": "Nobroker",
+   "type": "Proptech",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Livspace",
+   "type": "Home interiors tech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Eightfold AI",
+   "type": "HR AI SaaS",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "High SaaS bands"
+  },
+  {
+   "name": "Deel",
+   "type": "HR/payroll SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Darwinbox",
+   "type": "HR SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Whatfix",
+   "type": "SaaS",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Mindtickle",
+   "type": "SaaS",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE1 19.8, SE2 36.9 LPA",
+   "below_title": "engineer\\s*(1|i)\\b"
+  },
+  {
+   "name": "Innovaccer",
+   "type": "Healthcare SaaS",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Icertis",
+   "type": "Contract SaaS",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "HighRadius",
+   "type": "Fintech SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Entry bands often below bar"
+  },
+  {
+   "name": "CleverTap",
+   "type": "Martech SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "MoEngage",
+   "type": "Martech SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "WebEngage",
+   "type": "Martech SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Netcore Cloud",
+   "type": "Martech SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Gupshup",
+   "type": "Conversational SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Yellow.ai",
+   "type": "Conversational AI",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Haptik",
+   "type": "Conversational AI",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Exotel",
+   "type": "CPaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "LeadSquared",
+   "type": "SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Capillary Technologies",
+   "type": "SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Unicommerce",
+   "type": "SaaS (listed)",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Increff",
+   "type": "SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Shiprocket",
+   "type": "Logistics SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Zoho",
+   "type": "SaaS (bootstrapped)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary; often below bar at entry"
+  },
+  {
+   "name": "LambdaTest",
+   "type": "Devtools",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "DevRev",
+   "type": "AI SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Khosla-backed; strong bands"
+  },
+  {
+   "name": "Rocketlane",
+   "type": "SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Atomicwork",
+   "type": "AI SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Sprinto",
+   "type": "Compliance SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Zluri",
+   "type": "SaaS management",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Scrut Automation",
+   "type": "Compliance SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "SpotDraft",
+   "type": "Legal SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Fyle",
+   "type": "Fintech SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Hevo Data",
+   "type": "Data SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "e6data",
+   "type": "Data infra",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Uniphore",
+   "type": "Conversational AI",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Observe.AI",
+   "type": "AI SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Glean",
+   "type": "AI enterprise search",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Sarvam AI",
+   "type": "AI lab (Series B 2026)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Well-funded AI lab"
+  },
+  {
+   "name": "Sarvam",
+   "type": "AI lab (Series B 2026)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Well-funded AI lab"
+  },
+  {
+   "name": "TrueFoundry",
+   "type": "AI infra startup",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Composio",
+   "type": "AI devtools startup",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Lightspeed-backed"
+  },
+  {
+   "name": "Lyzr",
+   "type": "AI startup",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Simplismart",
+   "type": "AI infra startup",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Portkey",
+   "type": "AI infra startup",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Emergent",
+   "type": "AI startup",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Smallest.ai",
+   "type": "AI startup",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Gnani.ai",
+   "type": "AI startup",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Neysa",
+   "type": "AI cloud startup",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Ringg AI",
+   "type": "Series A AI startup (Peak XV)",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "RapidCanvas",
+   "type": "Series B AI startup",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Clueso",
+   "type": "Series A AI startup",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Onehouse",
+   "type": "Data lakehouse startup",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "US-funded infra startup"
+  },
+  {
+   "name": "StarTree",
+   "type": "Real-time analytics",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Infra startup"
+  },
+  {
+   "name": "Yugabyte",
+   "type": "Distributed DB",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Distributed PostgreSQL co"
+  },
+  {
+   "name": "Cockroach Labs",
+   "type": "Distributed DB",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "ClickHouse",
+   "type": "Database",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Temporal Technologies",
+   "type": "Infra devtools",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Harness",
+   "type": "Devtools",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Devtools unicorn"
+  },
+  {
+   "name": "GitLab",
+   "type": "Devtools (remote)",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Grafana Labs",
+   "type": "Observability (remote)",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Pure Storage",
+   "type": "Storage/infra",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "High infra bands"
+  },
+  {
+   "name": "Netskope",
+   "type": "Security SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Security product"
+  },
+  {
+   "name": "Fivetran",
+   "type": "Data infra",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Figma",
+   "type": "Design SaaS",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Notion",
+   "type": "SaaS",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Airbnb",
+   "type": "Consumer tech",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Big-tech bands"
+  },
+  {
+   "name": "Booking.com",
+   "type": "Travel tech",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Global product co"
+  },
+  {
+   "name": "Swiggy Instamart",
+   "type": "Quick commerce (Swiggy)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi Swiggy entry median TC 20.6 LPA"
+  },
+  {
+   "name": "JPMorganChase",
+   "type": "Global bank tech centre",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India 601 median TC 27.5, 602 42.4 LPA (502 is 18.2, below bar)"
+  },
+  {
+   "name": "JPMorgan Chase",
+   "type": "Global bank tech centre",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India 601 median TC 27.5, 602 42.4 LPA (502 is 18.2, below bar)"
+  },
+  {
+   "name": "J.P. Morgan",
+   "type": "Global bank tech centre",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India 601 median TC 27.5, 602 42.4 LPA (502 is 18.2, below bar)"
+  },
+  {
+   "name": "Prime Video & Amazon MGM Studios",
+   "type": "Global product MNC",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Levels.fyi L4 median TC 29.7 LPA"
+  },
+  {
+   "name": "Amazon Web Services (AWS)",
+   "type": "Global product MNC",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Levels.fyi L4 median TC 29.7 LPA"
+  },
+  {
+   "name": "AWS",
+   "type": "Global product MNC",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Levels.fyi L4 median TC 29.7 LPA"
+  },
+  {
+   "name": "Google Cloud",
+   "type": "Global product MNC (public)",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Big-tech L3/L4 bands"
+  },
+  {
+   "name": "Walmart Global Tech",
+   "type": "Global retail tech centre",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India P2 median TC 20.6, P3 34.4 LPA"
+  },
+  {
+   "name": "Salesforce, Inc.",
+   "type": "Global SaaS MNC",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India AMTS median TC 26.1 LPA"
+  },
+  {
+   "name": "Mastercard Incorporated",
+   "type": "Global payments MNC",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India L8 (SE II) median TC 22.5 LPA; L9 16.5 below bar",
+   "below_title": "engineer\\s*[-–]?\\s*(1|i)\\b|associate"
+  },
+  {
+   "name": "project44",
+   "type": "Logistics SaaS",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SWE median TC 44.6 LPA"
+  },
+  {
+   "name": "Saviynt",
+   "type": "Identity security SaaS",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 46.3 LPA (all levels)"
+  },
+  {
+   "name": "Smartsheet",
+   "type": "Work-management SaaS",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 25.2 LPA"
+  },
+  {
+   "name": "Clearwater Analytics",
+   "type": "Investment-accounting SaaS",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 38.3 LPA (all levels)"
+  },
+  {
+   "name": "DigiCert",
+   "type": "Security/PKI product",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 34.6 LPA (all levels)"
+  },
+  {
+   "name": "HighLevel",
+   "type": "Martech SaaS",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 34.7 LPA (all levels)"
+  },
+  {
+   "name": "HackerRank",
+   "type": "Devtools SaaS",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE1 median TC 22.8, SE2 33.1 LPA"
+  },
+  {
+   "name": "TMUS Global Solutions",
+   "type": "Telecom tech centre (T-Mobile)",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi T-Mobile India T2 median TC 32.6, overall 21.3 LPA"
+  },
+  {
+   "name": "NCR Atleos",
+   "type": "Banking/ATM tech",
+   "quality": 8,
+   "pay": "below",
+   "pay_note": "Levels.fyi India overall median TC 15.9 LPA"
+  },
+  {
+   "name": "NatWest Group",
+   "type": "Bank tech centre",
+   "quality": 9,
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE median TC 17.1 LPA"
+  },
+  {
+   "name": "SAP Fioneer",
+   "type": "Banking software",
+   "quality": 9,
+   "pay": "below",
+   "pay_note": "Levels.fyi India overall median TC 19.6 LPA"
+  },
+  {
+   "name": "FactSet",
+   "type": "Financial data",
+   "quality": 9,
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE I 10.8, SE II 14.2 LPA"
+  },
+  {
+   "name": "BNP Paribas",
+   "type": "Global bank tech centre",
+   "quality": 8,
+   "pay": "below",
+   "pay_note": "Levels.fyi India overall median 11.9 LPA"
+  },
+  {
+   "name": "ACI Worldwide",
+   "type": "Payments software",
+   "quality": 8,
+   "pay": "below",
+   "pay_note": "Levels.fyi India overall median 12.4 LPA"
+  },
+  {
+   "name": "ADP",
+   "type": "HR/payroll tech",
+   "quality": 8,
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE median 9.1 LPA"
+  },
+  {
+   "name": "Thomson Reuters",
+   "type": "Information services tech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India TR6 20.3, TR7 7.9 LPA — level-dependent"
+  },
+  {
+   "name": "Precisely",
+   "type": "Data integrity software",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India overall median 27.7 LPA, no level split"
+  },
+  {
+   "name": "Box",
+   "type": "Global product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Sumo Logic",
+   "type": "Global product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Wingify",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "VWO",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Electronic Arts",
+   "type": "Global product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Warner Bros. Discovery",
+   "type": "Global product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Fox Corporation",
+   "type": "Global product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Comcast",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Disney",
+   "type": "Global product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "JioStar",
+   "type": "Global product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Spotify",
+   "type": "Global product",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Gojek",
+   "type": "Global product",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Careem",
+   "type": "Global product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "OpenAI",
+   "type": "Global product",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Anthropic",
+   "type": "Global product",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Google DeepMind",
+   "type": "Global product",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Microsoft Research",
+   "type": "Global product",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Adobe Research",
+   "type": "Global product",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "HashiCorp",
+   "type": "Global product",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "UKG",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Infoblox",
+   "type": "Global product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Gen Digital",
+   "type": "Global product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "McAfee",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Trellix",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Arista",
+   "type": "Global product",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Ericsson",
+   "type": "Global product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Nokia",
+   "type": "Global product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Synchrony",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Capital One",
+   "type": "Global product",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India Associate SE median TC 31.5 LPA"
+  },
+  {
+   "name": "Commonwealth Bank of Australia",
+   "type": "Global product",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "CommBank",
+   "type": "Global product",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "ANZ",
+   "type": "Global product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Macquarie Group",
+   "type": "Global product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Lloyds Technology Centre",
+   "type": "Global product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "NAB",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Invesco",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Franklin Templeton",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "T. Rowe Price",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Western Union",
+   "type": "Global product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Paysafe",
+   "type": "Global product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Rapyd",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Marriott Tech Accelerator",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Starbucks",
+   "type": "Global product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "United Airlines",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "American Airlines",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "FedEx",
+   "type": "Global product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Maersk",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Sainsbury's",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Kroger",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Best Buy",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Cigna",
+   "type": "Global product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Carelon",
+   "type": "Global product",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Novartis",
+   "type": "Global product",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Airbus",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Rolls-Royce",
+   "type": "Global product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Caterpillar",
+   "type": "Global product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "John Deere",
+   "type": "Global product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Siemens",
+   "type": "Global product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Bosch",
+   "type": "Global product",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Continental",
+   "type": "Global product",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "ABB",
+   "type": "Global product",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Schneider Electric",
+   "type": "Global product",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Infineon",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "NXP Semiconductors",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "MediaTek",
+   "type": "Global product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Microchip",
+   "type": "Global product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Renesas",
+   "type": "Global product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "STMicroelectronics",
+   "type": "Global product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Seagate",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "SanDisk",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Lam Research",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Dassault Systemes",
+   "type": "Global product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Trimble",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Hexagon",
+   "type": "Global product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Zebra Technologies",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Motorola Solutions",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "BCG X",
+   "type": "Global product",
+   "quality": 12,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "OYO",
+   "type": "Indian product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Purplle",
+   "type": "Indian product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "FirstCry",
+   "type": "Indian product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Rebel Foods",
+   "type": "Indian product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "cult.fit",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Curefit",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "HealthifyMe",
+   "type": "Indian product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Practo",
+   "type": "Indian product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Classplus",
+   "type": "Indian product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Teachmint",
+   "type": "Indian product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Leap Scholar",
+   "type": "Indian product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Testbook",
+   "type": "Indian product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Vedantu",
+   "type": "Indian product",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Simplilearn",
+   "type": "Indian product",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "WinZO",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "MPL",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Mobile Premier League",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Nazara",
+   "type": "Indian product",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Dailyhunt",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Josh",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Amagi",
+   "type": "Indian product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Pixis",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "GreyOrange",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Ather Energy",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "District",
+   "type": "Indian product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Hyperpure",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Reliance Jio",
+   "type": "Indian product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Jio Platforms",
+   "type": "Indian product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Airtel Digital",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Bharti Airtel",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Tata Neu",
+   "type": "Indian product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Croma",
+   "type": "Indian product",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Snapmint",
+   "type": "Indian product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Fynd",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Shopsy",
+   "type": "Indian product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Flipkart Health+",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Indeed",
+   "type": "Indian product",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Unstop",
+   "type": "Indian product",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Truecaller",
+   "type": "Indian product",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 44.7 LPA (all levels)"
+  },
+  {
+   "name": "Ola Krutrim",
+   "type": "Indian product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Stable Money",
+   "type": "Indian fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Jiraaf",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Kiwi",
+   "type": "Indian fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Freo",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Vayana",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Open Financial Technologies",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Plum",
+   "type": "Indian fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Ditto",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Even Healthcare",
+   "type": "Indian fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Leap Finance",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Lendingkart",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Indifi",
+   "type": "Indian fintech",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Mswipe",
+   "type": "Indian fintech",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "HyperVerge",
+   "type": "Indian fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Signzy",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "IDfy",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Recko",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Fintrac",
+   "type": "Indian fintech",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Mintoak",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Decentro",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Falcon",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Hypto",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Zolve",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Kotak811",
+   "type": "Indian fintech",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Fyers",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Sensibull",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Hudson River Trading",
+   "type": "Trading",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Da Vinci Trading",
+   "type": "Trading",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "QuantBox",
+   "type": "Trading",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Edelweiss",
+   "type": "Trading",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Nuvama",
+   "type": "Trading",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Kotak Securities",
+   "type": "Trading",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Two Sigma",
+   "type": "Trading",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "DRW",
+   "type": "Trading",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Akuna Capital",
+   "type": "Trading",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Eclipse Trading",
+   "type": "Trading",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Appsmith",
+   "type": "SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "ToolJet",
+   "type": "SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "SigNoz",
+   "type": "SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Middleware",
+   "type": "SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Last9",
+   "type": "SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Plivo",
+   "type": "SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Kaleyra",
+   "type": "SaaS",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Ozonetel",
+   "type": "SaaS",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Vue.ai",
+   "type": "SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Mad Street Den",
+   "type": "SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Facilio",
+   "type": "SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Kissflow",
+   "type": "SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "MiQ",
+   "type": "SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Unifize",
+   "type": "SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Enterpret",
+   "type": "SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Toplyne",
+   "type": "SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Clari",
+   "type": "SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Highspot",
+   "type": "SaaS",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Gainsight",
+   "type": "SaaS",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Freshdesk",
+   "type": "SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "CloudSEK",
+   "type": "SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Astra Security",
+   "type": "SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "ScyllaDB",
+   "type": "SaaS",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Aerospike",
+   "type": "SaaS",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Redis",
+   "type": "SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "tier judgement"
+  },
+  {
+   "name": "Neo4j",
+   "type": "SaaS",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Arcana",
+   "type": "SaaS",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Ema",
+   "type": "AI startups",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Giga ML",
+   "type": "AI startups",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Maxim AI",
+   "type": "AI startups",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Dashtoon",
+   "type": "AI startups",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Writesonic",
+   "type": "AI startups",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Qure.ai",
+   "type": "AI startups",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Avataar",
+   "type": "AI startups",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "CoRover",
+   "type": "AI startups",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Rephrase.ai",
+   "type": "AI startups",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Wadhwani AI",
+   "type": "AI startups",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Pixxel",
+   "type": "AI startups",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Skyroot Aerospace",
+   "type": "AI startups",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Agnikul",
+   "type": "AI startups",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Cent AI",
+   "type": "AI startups",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Unify Apps",
+   "type": "AI startups",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Supernova",
+   "type": "AI startups",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Bolna",
+   "type": "AI startups",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Vapi",
+   "type": "AI startups",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Boeing",
+   "type": "Aerospace engineering centre",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India L2 18.3, L3 32.6 LPA — level-dependent"
+  }
+ ],
+ "services_and_staffing": [
+  "TCS",
+  "Tata Consultancy",
+  "Infosys",
+  "Wipro",
+  "Cognizant",
+  "Accenture",
+  "Capgemini",
+  "HCLTech",
+  "HCL Technologies",
+  "Tech Mahindra",
+  "LTIMindtree",
+  "Mphasis",
+  "Hexaware",
+  "Persistent Systems",
+  "Coforge",
+  "Birlasoft",
+  "Zensar",
+  "Cyient",
+  "KPIT",
+  "Sonata Software",
+  "NTT DATA",
+  "DXC",
+  "IBM",
+  "Deloitte",
+  "EY",
+  "Ernst & Young",
+  "KPMG",
+  "PwC",
+  "Genpact",
+  "Virtusa",
+  "UST",
+  "Nagarro",
+  "EPAM",
+  "Globant",
+  "Ascendion",
+  "Happiest Minds",
+  "Mindtree",
+  "L&T Technology",
+  "Quess",
+  "TeamLease",
+  "Randstad",
+  "Adecco",
+  "ManpowerGroup",
+  "Xpheno",
+  "Allegis",
+  "TEKsystems",
+  "Collabera",
+  "Talent500",
+  "Antal",
+  "Michael Page",
+  "Robert Half",
+  "Hays",
+  "Kelly Services",
+  "CIEL HR",
+  "Careernet",
+  "Weekday",
+  "Crossing Hurdles",
+  "Uplers",
+  "Turing",
+  "Mercor",
+  "Toptal",
+  "Recro",
+  "NeoGenCode",
+  "Rapidbrains",
+  "NexionPro",
+  "Recruitment",
+  "Staffing",
+  "Consultants",
+  "Placement",
+  "HR Solutions",
+  "Talent Acquisition",
+  "Capco",
+  "Quest Global",
+  "ACL Digital",
+  "Golden Opportunities",
+  "HuntingCube",
+  "Luxoft",
+  "CGI",
+  "Artech",
+  "Concentrix",
+  "Miratech",
+  "Seventh Contact",
+  "Jobgether",
+  "C4 Technical Services",
+  "Smart Working",
+  "Codewalla",
+  "Mastek",
+  "Auriga IT",
+  "CoeusApps",
+  "Sasken",
+  "Altimetrik",
+  "Infogain",
+  "Synechron",
+  "Iris Software",
+  "GlobalLogic",
+  "Publicis Sapient",
+  "Thoughtworks",
+  "Sopra Steria",
+  "Atos",
+  "Mphasis",
+  "Tiger Analytics",
+  "Fractal",
+  "LatentView",
+  "Mu Sigma",
+  "Kellton",
+  "Xoriant",
+  "Encora",
+  "Ness Digital",
+  "Brillio",
+  "Valuelabs",
+  "Cybage",
+  "Netsmartz",
+  "Indium",
+  "Hitachi Vantara",
+  "Bahwan",
+  "Aspire Systems",
+  "Photon",
+  "Movate",
+  "Firstsource",
+  "Wipro",
+  "Hirequotient",
+  "Instahyre",
+  "Cutshort",
+  "Hirist",
+  "Naukri",
+  "Foundit",
+  "iimjobs",
+  "Michael Page"
+ ]
+}

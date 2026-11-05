@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Search Tracker</title>
+<style>
+  :root {
+    --bg: #f7f7f5; --panel: #ffffff; --text: #1d1d1b; --muted: #6b6b66; --line: #e4e3de;
+    --accent: #2f5bd3; --accent-soft: #e8eefc; --good: #1f7a4d; --good-soft: #e3f3ea;
+    --warn: #9a6200; --warn-soft: #fbf0d9; --bad: #b3261e; --bad-soft: #fbe5e3; --chip: #f0efea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151514; --panel: #1e1e1c; --text: #ecebe6; --muted: #9c9b94; --line: #33322f;
+      --accent: #8aa8ff; --accent-soft: #24304f; --good: #6fd19c; --good-soft: #1d3328;
+      --warn: #f0b955; --warn-soft: #3a2f17; --bad: #ff8a80; --bad-soft: #3d1f1d; --chip: #2a2a27;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif; }
+  header { padding: 20px 24px 8px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: end; justify-content: space-between; }
+  h1 { font-size: 20px; margin: 0; }
+  .sub { color: var(--muted); font-size: 13px; }
+  .stats { display: flex; gap: 8px; flex-wrap: wrap; }
+  .stat { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; font-size: 12px; color: var(--muted); }
+  .stat b { color: var(--text); font-size: 15px; margin-right: 4px; }
+  .bar { padding: 8px 24px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .tabs { display: flex; gap: 4px; padding: 0 24px; border-bottom: 1px solid var(--line); }
+  .tab { border: 0; background: none; color: var(--muted); padding: 10px 12px; font: inherit; cursor: pointer; border-bottom: 2px solid transparent; }
+  .tab.on { color: var(--text); border-color: var(--accent); font-weight: 600; }
+  input, select, textarea, button { font: inherit; color: var(--text); }
+  input[type=search], select, input[type=number] { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; }
+  input[type=search] { width: 260px; }
+  input[type=number] { width: 70px; }
+  label.chk { display: inline-flex; gap: 6px; align-items: center; color: var(--muted); font-size: 13px; }
+  .btn { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; cursor: pointer; }
+  .btn:hover { border-color: var(--accent); }
+  .wrap { padding: 8px 24px 40px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; color: var(--muted); font-weight: 600; cursor: pointer; white-space: nowrap; position: sticky; top: 0; background: var(--panel); z-index: 1; }
+  th.sorted::after { content: " ▾"; }
+  th.sorted.asc::after { content: " ▴"; }
+  tr.applied > td { background: color-mix(in srgb, var(--good-soft) 55%, transparent); }
+  tr.skipped > td { opacity: .55; }
+  .score { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .co { font-weight: 600; }
+  .muted { color: var(--muted); font-size: 12px; }
+  .badge { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 999px; margin-left: 4px; vertical-align: 1px; }
+  .b-new { background: var(--accent-soft); color: var(--accent); }
+  .b-Posted, .b-Strong { background: var(--good-soft); color: var(--good); }
+  .b-Likely { background: var(--warn-soft); color: var(--warn); }
+  .b-Unverified { background: var(--bad-soft); color: var(--bad); }
+  .chips span { display: inline-block; background: var(--chip); border-radius: 4px; padding: 0 5px; margin: 0 3px 3px 0; font-size: 12px; }
+  .gap span { background: var(--bad-soft); color: var(--bad); }
+  select.status { width: 128px; }
+  textarea { width: 220px; min-height: 34px; resize: vertical; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 5px 7px; font-size: 13px; }
+  a { color: var(--accent); }
+  .toggle { cursor: pointer; color: var(--muted); user-select: none; border: 0; background: none; padding: 0 4px; }
+  tr.detail td { background: var(--bg); font-size: 13px; }
+  .detail-grid { display: grid; grid-template-columns: 140px 1fr; gap: 4px 12px; }
+  .detail-grid div:nth-child(odd) { color: var(--muted); }
+  .empty { padding: 40px; text-align: center; color: var(--muted); }
+  .saved { color: var(--good); font-size: 11px; height: 14px; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Job Search Tracker</h1>
+    <div class="sub" id="sub"></div>
+  </div>
+  <div class="stats" id="stats"></div>
+</header>
+<div class="tabs" id="tabs"></div>
+<div class="bar" id="filters">
+  <input type="search" id="q" placeholder="Search company, role, stack, comment…">
+  <select id="city"><option value="">All cities</option></select>
+  <select id="pay"><option value="">Any pay confidence</option><option>Posted</option><option>Strong evidence</option><option>Likely</option><option>Unverified</option></select>
+  <select id="st"><option value="">Any status</option></select>
+  <label class="chk">Min score <input type="number" id="min" value="0" min="0" max="100"></label>
+  <label class="chk"><input type="checkbox" id="hide"> Hide applied/skipped</label>
+  <label class="chk"><input type="checkbox" id="onlyNew"> New only</label>
+  <label class="chk"><input type="checkbox" id="showOld"> Show no-longer-listed</label>
+  <span style="flex:1"></span>
+  <button class="btn" id="export">Export marks</button>
+  <button class="btn" id="importBtn">Import marks</button>
+  <input type="file" id="importFile" accept="application/json" hidden>
+</div>
+<div class="wrap"><div id="table"></div></div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const STATUSES = ["Not applied", "Applied", "Interviewing", "Offer", "Rejected", "Skipped"];
+const KEY = "jobsearch.marks.v1", CKEY = "jobsearch.companyNotes.v1";
+
+function load(k) { try { return JSON.parse(localStorage.getItem(k)) || {}; } catch { return {}; } }
+function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch { return false; } }
+let marks = load(KEY), notes = load(CKEY);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const chips = (s, cls = "") => `<span class="chips ${cls}">${String(s || "").split(",").map(x => x.trim()).filter(x => x && x !== "none obvious").map(x => `<span>${esc(x)}</span>`).join("")}</span>`;
+// Marks are keyed by job link. A repost of the same role (same company + title + city) under a new
+// link inherits the mark, so a LinkedIn re-listing doesn't reset "Applied". Exact location text, not city,
+// so a different role with the same title in the same city doesn't pick it up.
+const keyOf = j => [j.company, j.title, j.location].join("|").toLowerCase().replace(/\s+/g, " ").trim();
+const byUrl = Object.fromEntries(DATA.jobs.map(j => [j.url, j]));
+let byKey = {};
+const reindex = () => { byKey = {}; Object.values(marks).forEach(m => { if (m.key) byKey[m.key] = m; }); };
+reindex();
+const liveKeys = new Set(DATA.jobs.filter(j => j.inLatest).map(keyOf));
+const mark = url => marks[url] || (byUrl[url] && byKey[keyOf(byUrl[url])]) || { status: "Not applied", comment: "" };
+
+let tab = "shortlist", sortKey = "score", sortAsc = false, open = new Set();
+
+function setMark(url, patch) {
+  const m = { ...mark(url), ...patch, updated: new Date().toISOString().slice(0, 10) };
+  if (patch.status === "Applied" && !m.appliedOn) m.appliedOn = m.updated;
+  if (byUrl[url]) m.key = keyOf(byUrl[url]);
+  marks[url] = m;
+  reindex();
+  return save(KEY, marks);
+}
+
+function renderTabs() {
+  const n = k => k === "companies" ? DATA.companies.length : DATA.jobs.filter(j => j.kind === k && j.inLatest).length;
+  const names = { shortlist: "Shortlist", lead: "Leads (pay unverified)", companies: "Company bank" };
+  document.getElementById("tabs").innerHTML = Object.keys(names).map(k =>
+    `<button class="tab ${k === tab ? "on" : ""}" data-tab="${k}">${names[k]} (${n(k)})</button>`).join("");
+  document.getElementById("filters").querySelectorAll("#city,#pay,#st,#min,#hide,#onlyNew,#showOld").forEach(el =>
+    (el.closest("label") || el).style.display = tab === "companies" ? "none" : "");
+}
+
+function renderStats() {
+  // Count your marks (one per action), not rows: a mark carried over to a repost isn't counted twice.
+  const c = {}; STATUSES.forEach(s => c[s] = 0);
+  const marked = Object.values(marks).filter(m => m.status !== "Not applied");
+  marked.forEach(m => c[m.status]++);
+  c["Not applied"] = DATA.jobs.filter(j => j.inLatest && mark(j.url).status === "Not applied").length;
+  document.getElementById("stats").innerHTML = STATUSES.map(s => `<div class="stat"><b>${c[s]}</b>${s}</div>`).join("");
+}
+
+function jobRows() {
+  const q = document.getElementById("q").value.toLowerCase(), cityF = document.getElementById("city").value,
+        payF = document.getElementById("pay").value, stF = document.getElementById("st").value,
+        min = +document.getElementById("min").value || 0, hide = document.getElementById("hide").checked,
+        onlyNew = document.getElementById("onlyNew").checked, showOld = document.getElementById("showOld").checked;
+  let rows = DATA.jobs.filter(j => j.kind === tab).filter(j => {
+    const m = mark(j.url);
+    if (!j.inLatest && !showOld && (m.status === "Not applied" || liveKeys.has(keyOf(j)))) return false;  // marked roles stay visible unless a repost replaced them
+    if (cityF && j.city !== cityF) return false;
+    if (payF && j.payConf !== payF) return false;
+    if (stF && m.status !== stF) return false;
+    if (hide && ["Applied", "Interviewing", "Offer", "Rejected", "Skipped"].includes(m.status)) return false;
+    if (onlyNew && !j.isNew) return false;
+    if (j.score < min) return false;
+    return !q || [j.company, j.title, j.stack, j.location, j.type, m.comment].join(" ").toLowerCase().includes(q);
+  });
+  const val = j => sortKey === "status" ? mark(j.url).status : j[sortKey];
+  rows.sort((a, b) => { const x = val(a), y = val(b); return (x > y ? 1 : x < y ? -1 : 0) * (sortAsc ? 1 : -1); });
+  return rows;
+}
+
+function th(key, label) { return `<th data-sort="${key}" class="${sortKey === key ? "sorted" + (sortAsc ? " asc" : "") : ""}">${label}</th>`; }
+
+function renderJobs() {
+  const rows = jobRows();
+  if (!rows.length) return `<div class="empty">No roles match these filters.</div>`;
+  return `<table><thead><tr><th></th>${th("score","Score")}${th("company","Company")}${th("title","Role")}${th("city","Location")}${th("exp","Exp asked")}${th("payConf","Pay")}<th>Stack</th>${th("posted","Posted")}${th("status","Status")}<th>Comments</th><th>Apply</th></tr></thead><tbody>` +
+    rows.map(j => {
+      const m = mark(j.url), id = encodeURIComponent(j.url), isOpen = open.has(j.url);
+      const cls = m.status === "Skipped" || m.status === "Rejected" ? "skipped" : m.status === "Not applied" ? "" : "applied";
+      const conf = j.payConf.split(" ")[0];
+      return `<tr class="${cls}">
+        <td><button class="toggle" data-open="${id}" title="Details">${isOpen ? "▾" : "▸"}</button></td>
+        <td class="score">${j.score}</td>
+        <td><div class="co">${esc(j.company)}</div><div class="muted">${esc(j.type)}</div></td>
+        <td>${esc(j.title)}${j.isNew && j.inLatest ? '<span class="badge b-new">NEW</span>' : ""}${j.inLatest ? "" : `<span class="badge b-Unverified">no longer listed · last seen ${esc(j.lastSeen)}</span>`}${j.reqs > 1 ? `<span class="muted"> · ${j.reqs} reqs</span>` : ""}</td>
+        <td>${esc(j.city)}<div class="muted">${esc(j.location)}</div></td>
+        <td>${esc(j.exp)}</td>
+        <td><span class="badge b-${conf}">${esc(j.payConf)}</span><div class="muted">${esc(j.pay.replace(/^(Strong|Likely ≥20|Unverified) — /, ""))}</div></td>
+        <td>${chips(j.stack)}</td>
+        <td class="muted">${esc(j.posted)}</td>
+        <td><select class="status" data-url="${id}">${STATUSES.map(s => `<option ${s === m.status ? "selected" : ""}>${s}</option>`).join("")}</select>
+            ${m.appliedOn ? `<div class="muted">applied ${esc(m.appliedOn)}</div>` : ""}
+            ${!marks[j.url] && m.status !== "Not applied" ? '<div class="muted" title="Same company, title and city as a role you marked earlier">carried over from earlier listing</div>' : ""}</td>
+        <td><textarea data-url="${id}" placeholder="Referral, recruiter, notes…">${esc(m.comment)}</textarea><div class="saved" data-saved="${id}"></div></td>
+        <td><a href="${esc(j.url)}" target="_blank" rel="noopener">Apply ↗</a>${j.source.startsWith("LinkedIn") ? '<div class="muted">via LinkedIn</div>' : ""}</td>
+      </tr>` + (isOpen ? `<tr class="detail"><td></td><td colspan="11"><div class="detail-grid">
+        <div>Company</div><div>${esc(j.type)}</div>
+        <div>Pay evidence</div><div>${esc(j.pay)}</div>
+        <div>Gaps vs profile</div><div>${chips(j.gaps, "gap") || "none obvious"}</div>
+        <div>Experience text</div><div>${esc(j.expSnippet) || "not stated"}</div>
+        <div>Score breakdown</div><div>${esc(j.breakdown)}</div>
+        <div>Source</div><div>${esc(j.source)}</div>
+        ${j.otherLinks.length ? `<div>Other reqs</div><div>${j.otherLinks.map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">req ${i + 2}</a>`).join(" · ")}</div>` : ""}
+      </div></td></tr>` : "");
+    }).join("") + `</tbody></table>`;
+}
+
+function renderCompanies() {
+  const q = document.getElementById("q").value.toLowerCase();
+  let rows = DATA.companies.filter(c => !q || [c.company, c.type, c.status, notes[c.company]].join(" ").toLowerCase().includes(q));
+  const num = k => ["eng_postings_seen_today", "fitting_today", "leads_today"].includes(k);
+  const key = { score: "fitting_today", company: "company" }[sortKey] || sortKey;
+  rows.sort((a, b) => { const x = num(key) ? +a[key] : a[key] ?? "", y = num(key) ? +b[key] : b[key] ?? ""; return (x > y ? 1 : x < y ? -1 : 0) * (sortAsc ? 1 : -1); });
+  if (!rows.length) return `<div class="empty">No companies match.</div>`;
+  return `<table><thead><tr>${th("company","Company")}${th("status","Status")}${th("fitting_today","Fitting roles")}${th("leads_today","Leads")}${th("pay","Pay")}${th("covered_by","Covered by")}${th("last_date_with_fitting_role","Last fitting role")}<th>Notes</th></tr></thead><tbody>` +
+    rows.map(c => `<tr>
+      <td><div class="co">${esc(c.company)}</div><div class="muted">${esc(c.type)}</div></td>
+      <td>${esc(c.status)}</td>
+      <td class="score">${esc(c.fitting_today)}</td>
+      <td>${esc(c.leads_today)}</td>
+      <td>${esc(c.pay)}<div class="muted">${esc(c.pay_note)}</div></td>
+      <td class="muted">${esc(c.covered_by)}</td>
+      <td class="muted">${esc(c.last_date_with_fitting_role)}</td>
+      <td><textarea data-company="${esc(c.company)}" placeholder="Contacts, referral, why interesting…">${esc(notes[c.company] || "")}</textarea></td>
+    </tr>`).join("") + `</tbody></table>`;
+}
+
+function render() {
+  renderTabs(); renderStats();
+  document.getElementById("table").innerHTML = tab === "companies" ? renderCompanies() : renderJobs();
+}
+
+// events
+document.getElementById("tabs").addEventListener("click", e => {
+  const t = e.target.closest("[data-tab]"); if (!t) return;
+  tab = t.dataset.tab; sortKey = tab === "companies" ? "fitting_today" : "score"; sortAsc = false;
+  history.replaceState(null, "", "#" + tab); render();
+});
+document.getElementById("filters").addEventListener("input", e => { if (e.target.id !== "importFile") render(); });
+document.getElementById("table").addEventListener("click", e => {
+  const h = e.target.closest("th[data-sort]");
+  if (h) { const k = h.dataset.sort; sortAsc = sortKey === k ? !sortAsc : ["company","title","city","status","covered_by"].includes(k); sortKey = k; render(); return; }
+  const o = e.target.closest("[data-open]");
+  if (o) { const u = decodeURIComponent(o.dataset.open); open.has(u) ? open.delete(u) : open.add(u); render(); }
+});
+document.getElementById("table").addEventListener("change", e => {
+  if (e.target.matches("select.status")) { setMark(decodeURIComponent(e.target.dataset.url), { status: e.target.value }); render(); }
+});
+let timer;
+document.getElementById("table").addEventListener("input", e => {
+  const t = e.target; if (t.tagName !== "TEXTAREA") return;
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    let ok;
+    if (t.dataset.company) { notes[t.dataset.company] = t.value; ok = save(CKEY, notes); }
+    else { ok = setMark(decodeURIComponent(t.dataset.url), { comment: t.value }); }
+    const s = t.parentElement.querySelector(".saved");
+    if (s) { s.textContent = ok ? "saved" : "not saved — browser storage blocked"; setTimeout(() => s.textContent = "", 1500); }
+  }, 400);
+});
+document.getElementById("export").addEventListener("click", () => {
+  const blob = new Blob([JSON.stringify({ exported: new Date().toISOString(), marks, companyNotes: notes }, null, 1)], { type: "application/json" });
+  const a = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: `job-marks-${new Date().toISOString().slice(0, 10)}.json` });
+  a.click(); URL.revokeObjectURL(a.href);
+});
+document.getElementById("importBtn").addEventListener("click", () => document.getElementById("importFile").click());
+document.getElementById("importFile").addEventListener("change", async e => {
+  const f = e.target.files[0]; if (!f) return;
+  try {
+    const d = JSON.parse(await f.text());
+    marks = { ...marks, ...(d.marks || {}) }; notes = { ...notes, ...(d.companyNotes || {}) };
+    save(KEY, marks); save(CKEY, notes); reindex(); render();
+    alert(`Imported ${Object.keys(d.marks || {}).length} job marks and ${Object.keys(d.companyNotes || {}).length} company notes.`);
+  } catch { alert("That file isn't a marks export."); }
+  e.target.value = "";
+});
+
+// init
+const storageOk = (() => { try { localStorage.setItem("jobsearch.test", "1"); localStorage.removeItem("jobsearch.test"); return true; } catch { return false; } })();
+document.getElementById("sub").innerHTML = storageOk
+  ? `Crawl of ${esc(DATA.generated)} · marks are saved in this browser — use Export to back them up`
+  : `Crawl of ${esc(DATA.generated)} · <b style="color:var(--bad)">this browser is blocking storage here, so marks will not survive a reload. Open the file directly in Chrome/Safari, or Export before closing.</b>`;
+[...new Set(DATA.jobs.map(j => j.city))].sort().forEach(c => document.getElementById("city").add(new Option(c, c)));
+STATUSES.forEach(s => document.getElementById("st").add(new Option(s, s)));
+if (["shortlist", "lead", "companies"].includes(location.hash.slice(1))) {  // link straight to a tab
+  tab = location.hash.slice(1); if (tab === "companies") sortKey = "fitting_today";
+}
+render();
+</script>
+</body>
+</html>

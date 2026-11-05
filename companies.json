@@ -1,0 +1,889 @@
+{
+ "_comment": "quality = 0-15 company-quality score. pay = likely | unclear. pay_note = why. funding = startup round hint; 'unverified' until checked against a source. Find slugs with discover_ats.py.",
+ "companies": [
+  {
+   "name": "Amazon",
+   "ats": "amazon",
+   "type": "Global product MNC (public)",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Big-tech SDE I/II bands in India are well above 20 LPA"
+  },
+  {
+   "name": "Microsoft",
+   "ats": "microsoft",
+   "type": "Global product MNC (public)",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Big-tech SWE bands in India are well above 20 LPA"
+  },
+  {
+   "name": "Atlassian",
+   "ats": "atlassian",
+   "type": "Global product MNC (public)",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Top-paying SaaS in Bengaluru"
+  },
+  {
+   "name": "Google",
+   "ats": "google",
+   "type": "Global product MNC (public)",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Big-tech L3/L4 bands"
+  },
+  {
+   "name": "Databricks",
+   "ats": "greenhouse",
+   "slug": "databricks",
+   "type": "Late-stage private data/AI infra",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Top-tier infra pay band in Bengaluru",
+   "funding": "Series K/L 2024-25 (unverified)"
+  },
+  {
+   "name": "Stripe",
+   "ats": "greenhouse",
+   "slug": "stripe",
+   "type": "Late-stage private fintech",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Top-tier fintech pay band",
+   "funding": "Late-stage, tender offers (unverified)"
+  },
+  {
+   "name": "Rubrik",
+   "ats": "greenhouse",
+   "slug": "rubrik",
+   "type": "Public data-security product",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Known high payer in Bengaluru infra"
+  },
+  {
+   "name": "MongoDB",
+   "ats": "greenhouse",
+   "slug": "mongodb",
+   "type": "Public database company",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Global DB company, high India bands"
+  },
+  {
+   "name": "Coinbase",
+   "ats": "greenhouse",
+   "slug": "coinbase",
+   "type": "Public crypto/fintech",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Remote-India roles on global bands"
+  },
+  {
+   "name": "Datadog",
+   "ats": "greenhouse",
+   "slug": "datadog",
+   "type": "Public observability SaaS",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Top-tier infra SaaS"
+  },
+  {
+   "name": "GitLab",
+   "ats": "greenhouse",
+   "slug": "gitlab",
+   "type": "Public devtools (all-remote)",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Published geo-adjusted bands; check calculator"
+  },
+  {
+   "name": "Twilio",
+   "ats": "greenhouse",
+   "slug": "twilio",
+   "type": "Public CPaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "US product co with Bengaluru eng centre"
+  },
+  {
+   "name": "Okta",
+   "ats": "greenhouse",
+   "slug": "okta",
+   "type": "Public identity SaaS",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "US product co with large Bengaluru centre"
+  },
+  {
+   "name": "Zscaler",
+   "ats": "greenhouse",
+   "slug": "zscaler",
+   "type": "Public security SaaS",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Security product, strong India bands"
+  },
+  {
+   "name": "Airbnb",
+   "ats": "greenhouse",
+   "slug": "airbnb",
+   "type": "Public consumer tech",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Big-tech pay in Bengaluru"
+  },
+  {
+   "name": "Glean",
+   "ats": "greenhouse",
+   "slug": "gleanwork",
+   "type": "Late-stage AI enterprise search",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Well-funded AI co, global bands",
+   "funding": "Series F, 2025 (unverified)"
+  },
+  {
+   "name": "Harness",
+   "ats": "greenhouse",
+   "slug": "harnessinc",
+   "type": "Late-stage devtools/CI-CD",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Devtools unicorn with Bengaluru centre",
+   "funding": "Series D/E (unverified)"
+  },
+  {
+   "name": "Razorpay",
+   "ats": "greenhouse",
+   "slug": "razorpaysoftwareprivatelimited",
+   "type": "Late-stage Indian fintech",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE median TC 21.7 LPA",
+   "funding": "Series F, Dec 2021 (unverified)"
+  },
+  {
+   "name": "Groww",
+   "ats": "greenhouse",
+   "slug": "groww",
+   "type": "Indian fintech (listed)",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Top Indian fintech pay band for SDE"
+  },
+  {
+   "name": "InMobi",
+   "ats": "greenhouse",
+   "slug": "inmobi",
+   "type": "Indian adtech product",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Product co, mid-high bands"
+  },
+  {
+   "name": "Druva",
+   "ats": "greenhouse",
+   "slug": "druva",
+   "type": "Late-stage SaaS backup",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Pune-centred; entry bands vary"
+  },
+  {
+   "name": "HackerRank",
+   "ats": "greenhouse",
+   "slug": "hackerrank",
+   "type": "Growth-stage devtools SaaS",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE1 median TC 22.8, SE2 33.1 LPA"
+  },
+  {
+   "name": "DevRev",
+   "ats": "greenhouse",
+   "slug": "devrev",
+   "type": "Well-funded AI SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Funded by Khosla; founded by ex-Nutanix CEO",
+   "funding": "Series A ~$100M, Aug 2024 (unverified)"
+  },
+  {
+   "name": "Observe.AI",
+   "ats": "greenhouse",
+   "slug": "observeai",
+   "type": "Growth-stage AI SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary",
+   "funding": "Series C 2022 (unverified)"
+  },
+  {
+   "name": "Figma",
+   "ats": "greenhouse",
+   "slug": "figma",
+   "type": "Public design SaaS",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Grafana Labs",
+   "ats": "greenhouse",
+   "slug": "grafanalabs",
+   "type": "Late-stage observability (remote)",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Remote global bands"
+  },
+  {
+   "name": "Elastic",
+   "ats": "greenhouse",
+   "slug": "elastic",
+   "type": "Public search/observability",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Distributed, remote-friendly; global bands"
+  },
+  {
+   "name": "New Relic",
+   "ats": "greenhouse",
+   "slug": "newrelic",
+   "type": "Observability SaaS (PE-owned)",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "US product co with Hyderabad/Bengaluru centre"
+  },
+  {
+   "name": "Cockroach Labs",
+   "ats": "greenhouse",
+   "slug": "cockroachlabs",
+   "type": "Late-stage distributed DB",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Distributed DB co, global bands"
+  },
+  {
+   "name": "Yugabyte",
+   "ats": "greenhouse",
+   "slug": "yugabyte",
+   "type": "Late-stage distributed DB",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Distributed PostgreSQL co, Bengaluru team",
+   "funding": "Series C 2021 (unverified)"
+  },
+  {
+   "name": "StarTree",
+   "ats": "greenhouse",
+   "slug": "startree",
+   "type": "Growth-stage real-time analytics",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Infra startup, Bengaluru team",
+   "funding": "Series B 2022 (unverified)"
+  },
+  {
+   "name": "Fivetran",
+   "ats": "greenhouse",
+   "slug": "fivetran",
+   "type": "Late-stage data infra",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Global data-infra bands, Bengaluru centre"
+  },
+  {
+   "name": "Toast",
+   "ats": "greenhouse",
+   "slug": "toast",
+   "type": "Public restaurant fintech/SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "US product co with Chennai/Bengaluru centre"
+  },
+  {
+   "name": "Adyen",
+   "ats": "greenhouse",
+   "slug": "adyen",
+   "type": "Public payments",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Global payments company"
+  },
+  {
+   "name": "Commvault",
+   "ats": "greenhouse",
+   "slug": "commvault",
+   "type": "Public data-protection",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India Associate Engineer 20.2, Engineer 23.5 LPA"
+  },
+  {
+   "name": "Pure Storage",
+   "ats": "greenhouse",
+   "slug": "purestorage",
+   "type": "Public storage/infra",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "High infra bands in Bengaluru"
+  },
+  {
+   "name": "Netskope",
+   "ats": "greenhouse",
+   "slug": "netskope",
+   "type": "Public security SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Security product, Bengaluru/Pune"
+  },
+  {
+   "name": "Zenoti",
+   "ats": "greenhouse",
+   "slug": "zenoti",
+   "type": "Growth-stage SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Hyderabad SaaS; bands vary"
+  },
+  {
+   "name": "HighRadius",
+   "ats": "greenhouse",
+   "slug": "highradius",
+   "type": "Late-stage fintech SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Entry bands often below bar"
+  },
+  {
+   "name": "Agoda",
+   "ats": "greenhouse",
+   "slug": "agoda",
+   "type": "Global travel tech (Booking Holdings)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Global product co"
+  },
+  {
+   "name": "CRED",
+   "ats": "lever",
+   "slug": "cred",
+   "type": "Late-stage Indian fintech",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India L3 median TC 31.4 LPA",
+   "funding": "2025 round led by GIC (unverified)"
+  },
+  {
+   "name": "Meesho",
+   "ats": "lever",
+   "slug": "meesho",
+   "type": "Indian e-commerce (listed)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE I median TC 25.5 LPA"
+  },
+  {
+   "name": "Paytm",
+   "ats": "lever",
+   "slug": "paytm",
+   "type": "Indian fintech (listed)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Entry bands mixed"
+  },
+  {
+   "name": "Nium",
+   "ats": "lever",
+   "slug": "nium",
+   "type": "Late-stage cross-border payments",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Fintech unicorn, Bengaluru eng",
+   "funding": "Series E 2023 (unverified)"
+  },
+  {
+   "name": "Mindtickle",
+   "ats": "lever",
+   "slug": "mindtickle",
+   "type": "Late-stage SaaS",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE1 19.8, SE2 36.9 LPA",
+   "below_title": "engineer\\s*(1|i)\\b"
+  },
+  {
+   "name": "Hevo Data",
+   "ats": "lever",
+   "slug": "hevodata",
+   "type": "Growth-stage data-infra SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary",
+   "funding": "Series B 2021 (unverified)"
+  },
+  {
+   "name": "Pocket FM",
+   "ats": "lever",
+   "slug": "pocketfm",
+   "type": "Growth-stage consumer tech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Snowflake",
+   "ats": "ashby",
+   "slug": "snowflake",
+   "type": "Public data cloud",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Top-tier infra pay band"
+  },
+  {
+   "name": "Atlan",
+   "ats": "ashby",
+   "slug": "atlan",
+   "type": "Late-stage data SaaS",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Well-funded, global customers",
+   "funding": "Series C 2024 (unverified)"
+  },
+  {
+   "name": "Sarvam AI",
+   "ats": "ashby",
+   "slug": "sarvam",
+   "type": "Funded AI startup",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Well-funded AI lab, Bengaluru",
+   "funding": "Series B $234M first close, Jun 2026, led by HCLTech (Business Today)"
+  },
+  {
+   "name": "Composio",
+   "ats": "ashby",
+   "slug": "composio",
+   "type": "Funded AI devtools startup",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Lightspeed-backed devtools",
+   "funding": "Series A 2025 (unverified)"
+  },
+  {
+   "name": "Notion",
+   "ats": "ashby",
+   "slug": "notion",
+   "type": "Late-stage SaaS",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Global bands"
+  },
+  {
+   "name": "Temporal",
+   "ats": "ashby",
+   "slug": "temporal",
+   "type": "Late-stage infra/devtools",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Infra devtools, global bands"
+  },
+  {
+   "name": "ClickHouse",
+   "ats": "ashby",
+   "slug": "clickhouse",
+   "type": "Late-stage database",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Database co, global bands"
+  },
+  {
+   "name": "Tekion",
+   "ats": "ashby",
+   "slug": "tekion",
+   "type": "Late-stage auto SaaS",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Unicorn with large Bengaluru/Chennai centre"
+  },
+  {
+   "name": "Airwallex",
+   "ats": "ashby",
+   "slug": "airwallex",
+   "type": "Late-stage fintech",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Global fintech"
+  },
+  {
+   "name": "Sardine",
+   "ats": "ashby",
+   "slug": "sardine",
+   "type": "Growth-stage fraud/fintech",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "US fintech, remote bands"
+  },
+  {
+   "name": "SpotDraft",
+   "ats": "ashby",
+   "slug": "spotdraft",
+   "type": "Growth-stage legal SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary",
+   "funding": "Series B 2025 (unverified)"
+  },
+  {
+   "name": "Freshworks",
+   "ats": "smartrecruiters",
+   "slug": "freshworks",
+   "type": "Public SaaS (Indian-origin)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "SaaS bands, Chennai/Bengaluru"
+  },
+  {
+   "name": "Swiggy",
+   "ats": "smartrecruiters",
+   "slug": "swiggy",
+   "type": "Indian consumer tech (listed)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "SDE bands typically above 20 LPA"
+  },
+  {
+   "name": "ServiceNow",
+   "ats": "smartrecruiters",
+   "slug": "servicenow",
+   "type": "Public SaaS",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Hyderabad/Bengaluru; strong bands"
+  },
+  {
+   "name": "Wise",
+   "ats": "smartrecruiters",
+   "slug": "wise",
+   "type": "Public fintech",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Hyderabad eng centre, global co"
+  },
+  {
+   "name": "Grab",
+   "ats": "smartrecruiters",
+   "slug": "grab",
+   "type": "Public SE-Asia super-app",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Bengaluru centre"
+  },
+  {
+   "name": "Visa",
+   "ats": "workday",
+   "tenant": "visa",
+   "wd": "wd5",
+   "site": "Visa",
+   "type": "Global payments MNC",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Payments MNC, strong Bengaluru bands"
+  },
+  {
+   "name": "Salesforce",
+   "ats": "workday",
+   "tenant": "salesforce",
+   "wd": "wd12",
+   "site": "External_Career_Site",
+   "type": "Global SaaS MNC",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Big SaaS, high India bands"
+  },
+  {
+   "name": "Adobe",
+   "ats": "workday",
+   "tenant": "adobe",
+   "wd": "wd5",
+   "site": "external_experienced",
+   "type": "Global product MNC",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Big-tech India bands"
+  },
+  {
+   "name": "PayPal",
+   "ats": "workday",
+   "tenant": "paypal",
+   "wd": "wd1",
+   "site": "jobs",
+   "type": "Global payments MNC",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Payments MNC, strong bands"
+  },
+  {
+   "name": "Target",
+   "ats": "workday",
+   "tenant": "target",
+   "wd": "wd5",
+   "site": "targetcareers",
+   "type": "Global retail tech centre",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Retail GCC; Eng II bands near/above 20"
+  },
+  {
+   "name": "Cisco",
+   "ats": "workday",
+   "tenant": "cisco",
+   "wd": "wd5",
+   "site": "Cisco_Careers",
+   "type": "Global product MNC",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Networking MNC, strong Bengaluru bands"
+  },
+  {
+   "name": "Broadcom/VMware",
+   "ats": "workday",
+   "tenant": "broadcom",
+   "wd": "wd1",
+   "site": "External_Career",
+   "type": "Global product MNC",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Infra MNC"
+  },
+  {
+   "name": "Deutsche Bank",
+   "ats": "workday",
+   "tenant": "db",
+   "wd": "wd3",
+   "site": "DBWebsite",
+   "type": "Global bank tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bank GCC; entry bands vary",
+   "below_title": "analyst"
+  },
+  {
+   "name": "Sprinklr",
+   "ats": "workday",
+   "tenant": "sprinklr",
+   "wd": "wd1",
+   "site": "careers",
+   "type": "Public SaaS",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Product co with Gurugram/Bengaluru centre"
+  },
+  {
+   "name": "Intel",
+   "ats": "workday",
+   "tenant": "intel",
+   "wd": "wd1",
+   "site": "External",
+   "type": "Global semiconductor MNC",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India Grade 3 19.7, Grade 5 21.6 LPA — borderline",
+   "below_title": "\\bgrade 3\\b"
+  },
+  {
+   "name": "NVIDIA",
+   "ats": "workday",
+   "tenant": "nvidia",
+   "wd": "wd5",
+   "site": "NVIDIAExternalCareerSite",
+   "type": "Global product MNC",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Top-tier bands"
+  },
+  {
+   "name": "Morgan Stanley",
+   "ats": "workday",
+   "tenant": "ms",
+   "wd": "wd5",
+   "site": "External",
+   "type": "Global bank tech centre",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bank GCC; entry bands vary",
+   "below_title": "analyst"
+  },
+  {
+   "name": "LSEG",
+   "ats": "workday",
+   "tenant": "lseg",
+   "wd": "wd3",
+   "site": "Careers",
+   "type": "Global financial data MNC",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary"
+  },
+  {
+   "name": "Onehouse",
+   "ats": "lever",
+   "slug": "Onehouse",
+   "type": "Growth-stage data lakehouse startup",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "US-funded infra startup hiring a Bengaluru team",
+   "funding": "Series B $35M, Jun 2024, led by Craft Ventures (TechCrunch) — runway risk: last round >24 months ago"
+  },
+  {
+   "name": "Ethos",
+   "ats": "greenhouse",
+   "slug": "ethoslife",
+   "type": "Late-stage US insurtech, Bengaluru eng centre",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Wellfound listing shows ₹25L–40L for a 4-yr backend role",
+   "funding": "Series D 2021 (unverified)"
+  },
+  {
+   "name": "Refyne",
+   "ats": "smartrecruiters",
+   "slug": "refyne",
+   "type": "Growth-stage Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary",
+   "funding": "Series B 2022 (unverified)"
+  },
+  {
+   "name": "IMC Trading",
+   "ats": "greenhouse",
+   "slug": "imc",
+   "type": "Global HFT/market maker (Mumbai)",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "HFT bands far above 20"
+  },
+  {
+   "name": "Jump Trading",
+   "ats": "greenhouse",
+   "slug": "jumptrading",
+   "type": "Global HFT firm",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "HFT bands far above 20"
+  },
+  {
+   "name": "Tide",
+   "ats": "greenhouse",
+   "slug": "tide",
+   "type": "UK fintech with Hyderabad/Delhi centre",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Global fintech; India eng centre"
+  },
+  {
+   "name": "Clueso",
+   "ats": "ashby",
+   "slug": "clueso",
+   "type": "Seed/Series A AI startup",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "no pay data yet",
+   "funding": "Series A ~$10M, Oct 2026 (per Entrackr-cited roundup; unverified)"
+  },
+  {
+   "name": "TrueFoundry",
+   "ats": "greenhouse",
+   "slug": "truefoundry",
+   "type": "Series A AI infra startup",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "no pay data yet",
+   "funding": "Series A 2025 (unverified)"
+  },
+  {
+   "name": "Bureau",
+   "ats": "ashby",
+   "slug": "bureau",
+   "type": "Series B fraud/identity fintech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "no pay data yet",
+   "funding": "Series B 2024 (unverified)"
+  },
+  {
+   "name": "eBay",
+   "ats": "workday",
+   "tenant": "ebay",
+   "wd": "wd5",
+   "site": "apply",
+   "type": "Global product MNC (public)",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE1 median TC 21.4, SE2 35.0 LPA"
+  },
+  {
+   "name": "Mastercard",
+   "ats": "workday",
+   "tenant": "mastercard",
+   "wd": "wd1",
+   "site": "CorporateCareers",
+   "type": "Global payments MNC",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India L8 (SE II) median TC 22.5 LPA; L9 16.5 below bar",
+   "below_title": "engineer\\s*[-–]?\\s*(1|i)\\b|associate"
+  },
+  {
+   "name": "Wells Fargo",
+   "ats": "workday",
+   "tenant": "wf",
+   "wd": "wd1",
+   "site": "WellsFargoJobs",
+   "type": "Global bank tech centre",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India L1 median TC 21.5, L2 24.3 LPA"
+  },
+  {
+   "name": "Nasdaq",
+   "ats": "workday",
+   "tenant": "nasdaq",
+   "wd": "wd1",
+   "site": "Global_External_Site",
+   "type": "Exchange tech",
+   "quality": 11,
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE median TC 19.8 LPA"
+  },
+  {
+   "name": "Arcana Analytics",
+   "ats": "greenhouse",
+   "slug": "arcanaanalytics",
+   "type": "Portfolio-analytics SaaS for hedge funds (Bengaluru/Coimbatore)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "LinkedIn search",
+   "ats": "linkedin",
+   "type": "aggregator",
+   "quality": 0,
+   "pay": "unclear",
+   "pay_note": ""
+  },
+  {
+   "name": "LinkedIn company sweep",
+   "ats": "linkedin",
+   "mode": "sweep",
+   "type": "aggregator",
+   "quality": 0,
+   "pay": "unclear",
+   "pay_note": ""
+  }
+ ]
+}

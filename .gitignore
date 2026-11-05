@@ -1,0 +1,6 @@
+# raw crawl caches: large and regenerated on every run
+output/raw/
+output/linkedin-details.json
+output/*.log
+__pycache__/
+.DS_Store

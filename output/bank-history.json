@@ -1,0 +1,6023 @@
+{
+"google": {
+"name": "Google",
+"runs": {
+"2026-11-05": [
+86,
+4
+]
+}
+},
+"meta": {
+"name": "Meta",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"apple": {
+"name": "Apple",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"netflix": {
+"name": "Netflix",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"uber": {
+"name": "Uber",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"linkedin": {
+"name": "LinkedIn",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"oracle": {
+"name": "Oracle",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"intuit": {
+"name": "Intuit",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"walmart": {
+"name": "Walmart",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"walmartglobaltech": {
+"name": "Walmart Global Tech",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"flipkart": {
+"name": "Flipkart",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"phonepe": {
+"name": "PhonePe",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"eternal": {
+"name": "Eternal",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"zomato": {
+"name": "Zomato",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"blinkit": {
+"name": "Blinkit",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"zepto": {
+"name": "Zepto",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"myntra": {
+"name": "Myntra",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"cred": {
+"name": "CRED",
+"runs": {
+"2026-11-05": [
+13,
+0
+]
+}
+},
+"razorpay": {
+"name": "Razorpay",
+"runs": {
+"2026-11-05": [
+22,
+0
+]
+}
+},
+"groww": {
+"name": "Groww",
+"runs": {
+"2026-11-05": [
+9,
+0
+]
+}
+},
+"zerodha": {
+"name": "Zerodha",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"juspay": {
+"name": "Juspay",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"dream11": {
+"name": "Dream11",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"dreamsports": {
+"name": "Dream Sports",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"games24x7": {
+"name": "Games24x7",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"makemytrip": {
+"name": "MakeMyTrip",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"medianet": {
+"name": "Media.net",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"deshawgroup": {
+"name": "The D. E. Shaw Group",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"deshaw": {
+"name": "D. E. Shaw",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"towerresearchcapital": {
+"name": "Tower Research Capital",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"goldmansachs": {
+"name": "Goldman Sachs",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"nutanix": {
+"name": "Nutanix",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"thoughtspot": {
+"name": "ThoughtSpot",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"postman": {
+"name": "Postman",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"browserstack": {
+"name": "BrowserStack",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"rippling": {
+"name": "Rippling",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"sprinklr": {
+"name": "Sprinklr",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"servicenow": {
+"name": "ServiceNow",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"visa": {
+"name": "Visa",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"mastercard": {
+"name": "Mastercard",
+"runs": {
+"2026-11-05": [
+5,
+4
+]
+}
+},
+"americanexpress": {
+"name": "American Express",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"paypal": {
+"name": "PayPal",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"expediagroup": {
+"name": "Expedia Group",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"bookingholdings": {
+"name": "Booking Holdings",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"qualcomm": {
+"name": "Qualcomm",
+"runs": {
+"2026-11-05": [
+2,
+2
+]
+}
+},
+"aristanetworks": {
+"name": "Arista Networks",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"paloaltonetworks": {
+"name": "Palo Alto Networks",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"akamai": {
+"name": "Akamai",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"workday": {
+"name": "Workday",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"autodesk": {
+"name": "Autodesk",
+"runs": {
+"2026-11-05": [
+2,
+2
+]
+}
+},
+"vmware": {
+"name": "VMware",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"broadcom": {
+"name": "Broadcom",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"adobe": {
+"name": "Adobe",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"salesforce": {
+"name": "Salesforce",
+"runs": {
+"2026-11-05": [
+8,
+2
+]
+}
+},
+"cisco": {
+"name": "Cisco",
+"runs": {
+"2026-11-05": [
+30,
+10
+]
+}
+},
+"microsoft": {
+"name": "Microsoft",
+"runs": {
+"2026-11-05": [
+22,
+10
+]
+}
+},
+"amazon": {
+"name": "Amazon",
+"runs": {
+"2026-11-05": [
+234,
+181
+]
+}
+},
+"atlassian": {
+"name": "Atlassian",
+"runs": {
+"2026-11-05": [
+42,
+1
+]
+}
+},
+"target": {
+"name": "Target",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"swiggy": {
+"name": "Swiggy",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"meesho": {
+"name": "Meesho",
+"runs": {
+"2026-11-05": [
+53,
+0
+]
+}
+},
+"sharechat": {
+"name": "ShareChat",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"urbancompany": {
+"name": "Urban Company",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"navi": {
+"name": "Navi",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"slice": {
+"name": "Slice",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"upstox": {
+"name": "Upstox",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"inmobi": {
+"name": "InMobi",
+"runs": {
+"2026-11-05": [
+48,
+1
+]
+}
+},
+"glance": {
+"name": "Glance",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"atlan": {
+"name": "Atlan",
+"runs": {
+"2026-11-05": [
+4,
+0
+]
+}
+},
+"chargebee": {
+"name": "Chargebee",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"hasura": {
+"name": "Hasura",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"zscaler": {
+"name": "Zscaler",
+"runs": {
+"2026-11-05": [
+95,
+1
+]
+}
+},
+"rubrik": {
+"name": "Rubrik",
+"runs": {
+"2026-11-05": [
+31,
+1
+]
+}
+},
+"databricks": {
+"name": "Databricks",
+"runs": {
+"2026-11-05": [
+90,
+1
+]
+}
+},
+"snowflake": {
+"name": "Snowflake",
+"runs": {
+"2026-11-05": [
+11,
+0
+]
+}
+},
+"stripe": {
+"name": "Stripe",
+"runs": {
+"2026-11-05": [
+46,
+1
+]
+}
+},
+"coinbase": {
+"name": "Coinbase",
+"runs": {
+"2026-11-05": [
+12,
+1
+]
+}
+},
+"jpmorganchaseco": {
+"name": "JPMorgan Chase & Co.",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"morganstanley": {
+"name": "Morgan Stanley",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"wellsfargo": {
+"name": "Wells Fargo",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"deutschebank": {
+"name": "Deutsche Bank",
+"runs": {
+"2026-11-05": [
+4,
+0
+]
+}
+},
+"paytm": {
+"name": "Paytm",
+"runs": {
+"2026-11-05": [
+172,
+0
+]
+}
+},
+"policybazaar": {
+"name": "PolicyBazaar",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"infoedge": {
+"name": "Info Edge",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"airtel": {
+"name": "Airtel",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"jio": {
+"name": "Jio",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"optum": {
+"name": "Optum",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"freshworks": {
+"name": "Freshworks",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"ebay": {
+"name": "eBay",
+"runs": {
+"2026-11-05": [
+17,
+3
+]
+}
+},
+"sap": {
+"name": "SAP",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"nvidia": {
+"name": "NVIDIA",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"amd": {
+"name": "AMD",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"intel": {
+"name": "Intel",
+"runs": {
+"2026-11-05": [
+4,
+0
+]
+}
+},
+"samsungrdinstitute": {
+"name": "Samsung R&D Institute",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"samsung": {
+"name": "Samsung",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"mercedesbenzresearchanddevelopment": {
+"name": "Mercedes-Benz Research and Development India",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"siemenshealthineers": {
+"name": "Siemens Healthineers",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"philips": {
+"name": "Philips",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"gehealthcare": {
+"name": "GE HealthCare",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"honeywell": {
+"name": "Honeywell",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"westerndigital": {
+"name": "Western Digital",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"netapp": {
+"name": "NetApp",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"hewlettpackardenterprise": {
+"name": "Hewlett Packard Enterprise",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"hp": {
+"name": "HP",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"dell": {
+"name": "Dell Technologies",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"f5": {
+"name": "F5",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"redhat": {
+"name": "Red Hat",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"junipernetworks": {
+"name": "Juniper Networks",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"ciena": {
+"name": "Ciena",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"synopsys": {
+"name": "Synopsys",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"cadencedesignsystems": {
+"name": "Cadence Design Systems",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"arm": {
+"name": "Arm",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"marvell": {
+"name": "Marvell Technology",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"micron": {
+"name": "Micron Technology",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"kla": {
+"name": "KLA",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"appliedmaterials": {
+"name": "Applied Materials",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"texasinstruments": {
+"name": "Texas Instruments",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"analogdevices": {
+"name": "Analog Devices",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"mathworks": {
+"name": "MathWorks",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"ptc": {
+"name": "PTC",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"ansys": {
+"name": "Ansys",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"citrix": {
+"name": "Citrix",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"cloudgroup": {
+"name": "Cloud Software Group",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"couchbase": {
+"name": "Couchbase",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"confluent": {
+"name": "Confluent",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"cohesity": {
+"name": "Cohesity",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"veritas": {
+"name": "Veritas",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"druva": {
+"name": "Druva",
+"runs": {
+"2026-11-05": [
+13,
+0
+]
+}
+},
+"commvault": {
+"name": "Commvault",
+"runs": {
+"2026-11-05": [
+12,
+0
+]
+}
+},
+"splunk": {
+"name": "Splunk",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"dropbox": {
+"name": "Dropbox",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"twilio": {
+"name": "Twilio",
+"runs": {
+"2026-11-05": [
+7,
+1
+]
+}
+},
+"zendesk": {
+"name": "Zendesk",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"hubspot": {
+"name": "HubSpot",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"docusign": {
+"name": "DocuSign",
+"runs": {
+"2026-11-05": [
+2,
+1
+]
+}
+},
+"okta": {
+"name": "Okta",
+"runs": {
+"2026-11-05": [
+104,
+0
+]
+}
+},
+"crowdstrike": {
+"name": "CrowdStrike",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"checkpoint": {
+"name": "Check Point Software",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"fortinet": {
+"name": "Fortinet",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"sophos": {
+"name": "Sophos",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"cloudflare": {
+"name": "Cloudflare",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"datadog": {
+"name": "Datadog",
+"runs": {
+"2026-11-05": [
+9,
+0
+]
+}
+},
+"newrelic": {
+"name": "New Relic",
+"runs": {
+"2026-11-05": [
+6,
+0
+]
+}
+},
+"dynatrace": {
+"name": "Dynatrace",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"elastic": {
+"name": "Elastic",
+"runs": {
+"2026-11-05": [
+16,
+0
+]
+}
+},
+"mongodb": {
+"name": "MongoDB",
+"runs": {
+"2026-11-05": [
+80,
+0
+]
+}
+},
+"teradata": {
+"name": "Teradata",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"informatica": {
+"name": "Informatica",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"qualys": {
+"name": "Qualys",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"tekion": {
+"name": "Tekion",
+"runs": {
+"2026-11-05": [
+66,
+1
+]
+}
+},
+"toast": {
+"name": "Toast",
+"runs": {
+"2026-11-05": [
+25,
+0
+]
+}
+},
+"wayfair": {
+"name": "Wayfair",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"lowes": {
+"name": "Lowe's",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"tesco": {
+"name": "Tesco",
+"runs": {
+"2026-11-05": [
+3,
+0
+]
+}
+},
+"8451": {
+"name": "84.51\u00b0",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"homedepot": {
+"name": "The Home Depot",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"nike": {
+"name": "Nike",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"mcdonalds": {
+"name": "McDonald's",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"sabre": {
+"name": "Sabre",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"amadeus": {
+"name": "Amadeus",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"agoda": {
+"name": "Agoda",
+"runs": {
+"2026-11-05": [
+12,
+0
+]
+}
+},
+"tripcom": {
+"name": "Trip.com",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"cleartrip": {
+"name": "Cleartrip",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"ixigo": {
+"name": "Ixigo",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"yatra": {
+"name": "Yatra",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"barclays": {
+"name": "Barclays",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"citi": {
+"name": "Citi",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"citigroup": {
+"name": "Citigroup",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"bny": {
+"name": "BNY",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"bnymellon": {
+"name": "BNY Mellon",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"nomura": {
+"name": "Nomura",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"ubs": {
+"name": "UBS",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"hsbc": {
+"name": "HSBC",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"standardchartered": {
+"name": "Standard Chartered",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"societegenerale": {
+"name": "Societe Generale",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"bankofamerica": {
+"name": "Bank of America",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"blackrock": {
+"name": "BlackRock",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"statestreet": {
+"name": "State Street",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"northerntrust": {
+"name": "Northern Trust",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"fidelityinvestments": {
+"name": "Fidelity Investments",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"vanguard": {
+"name": "Vanguard",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"charlesschwab": {
+"name": "Charles Schwab",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"fis": {
+"name": "FIS",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"fiserv": {
+"name": "Fiserv",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"broadridge": {
+"name": "Broadridge",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"spglobal": {
+"name": "S&P Global",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"moodys": {
+"name": "Moody's",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"msci": {
+"name": "MSCI",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"morningstar": {
+"name": "Morningstar",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"nasdaq": {
+"name": "Nasdaq",
+"runs": {
+"2026-11-05": [
+3,
+0
+]
+}
+},
+"lseg": {
+"name": "LSEG",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"intercontinentalexchange": {
+"name": "Intercontinental Exchange",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"cmegroup": {
+"name": "CME Group",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"arcesium": {
+"name": "Arcesium",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"addepar": {
+"name": "Addepar",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"bloomberg": {
+"name": "Bloomberg",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"experian": {
+"name": "Experian",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"transunion": {
+"name": "TransUnion",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"equifax": {
+"name": "Equifax",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"fico": {
+"name": "FICO",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"kotakmahindrabank": {
+"name": "Kotak Mahindra Bank",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"hdfcbank": {
+"name": "HDFC Bank",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"icicibank": {
+"name": "ICICI Bank",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"axisbank": {
+"name": "Axis Bank",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"npci": {
+"name": "NPCI",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"nse": {
+"name": "NSE",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"gravitonresearchcapital": {
+"name": "Graviton Research Capital",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"quadeye": {
+"name": "Quadeye",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"alphagrep": {
+"name": "AlphaGrep",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"optiver": {
+"name": "Optiver",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"squarepointcapital": {
+"name": "Squarepoint Capital",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"worldquant": {
+"name": "WorldQuant",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"millennium": {
+"name": "Millennium",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"nksecuritiesresearch": {
+"name": "NK Securities Research",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"irage": {
+"name": "iRage",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"trexquant": {
+"name": "Trexquant",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"futuresfirst": {
+"name": "Futures First",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"aptportfolio": {
+"name": "APT Portfolio",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"dolatcapital": {
+"name": "Dolat Capital",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"citadel": {
+"name": "Citadel",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"citadelsecurities": {
+"name": "Citadel Securities",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"m2pfintech": {
+"name": "M2P Fintech",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"setu": {
+"name": "Setu",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"pine": {
+"name": "Pine Labs",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"cashfreepayments": {
+"name": "Cashfree Payments",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"payu": {
+"name": "PayU",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"bharatpe": {
+"name": "BharatPe",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"mobikwik": {
+"name": "MobiKwik",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"jupiter": {
+"name": "Jupiter",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"fimoney": {
+"name": "Fi Money",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"niyo": {
+"name": "Niyo",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"onecard": {
+"name": "OneCard",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"fpl": {
+"name": "FPL Technologies",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"unicards": {
+"name": "Uni Cards",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"kreditbee": {
+"name": "KreditBee",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"moneyview": {
+"name": "Moneyview",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"dhan": {
+"name": "Dhan",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"indmoney": {
+"name": "INDmoney",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"smallcase": {
+"name": "smallcase",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"angelone": {
+"name": "Angel One",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"perfios": {
+"name": "Perfios",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"yubi": {
+"name": "Yubi",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"credgenics": {
+"name": "Credgenics",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"acko": {
+"name": "Acko",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"godigit": {
+"name": "Go Digit",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"digitinsurance": {
+"name": "Digit Insurance",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"insurancedekho": {
+"name": "InsuranceDekho",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"turtlemint": {
+"name": "Turtlemint",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"paytmmoney": {
+"name": "Paytm Money",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"rupeek": {
+"name": "Rupeek",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"kissht": {
+"name": "Kissht",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"gokwik": {
+"name": "GoKwik",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"simpl": {
+"name": "Simpl",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"scapia": {
+"name": "Scapia",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"jar": {
+"name": "Jar",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"fampay": {
+"name": "Fampay",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"airwallex": {
+"name": "Airwallex",
+"runs": {
+"2026-11-05": [
+9,
+0
+]
+}
+},
+"nium": {
+"name": "Nium",
+"runs": {
+"2026-11-05": [
+11,
+0
+]
+}
+},
+"tide": {
+"name": "Tide",
+"runs": {
+"2026-11-05": [
+34,
+0
+]
+}
+},
+"wise": {
+"name": "Wise",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"revolut": {
+"name": "Revolut",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"checkoutcom": {
+"name": "Checkout.com",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"adyen": {
+"name": "Adyen",
+"runs": {
+"2026-11-05": [
+3,
+0
+]
+}
+},
+"plaid": {
+"name": "Plaid",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"brex": {
+"name": "Brex",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"ramp": {
+"name": "Ramp",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"coindcx": {
+"name": "CoinDCX",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"coinswitch": {
+"name": "CoinSwitch",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"nykaa": {
+"name": "Nykaa",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"lenskart": {
+"name": "Lenskart",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"delhivery": {
+"name": "Delhivery",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"shadowfax": {
+"name": "Shadowfax",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"porter": {
+"name": "Porter",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"rapido": {
+"name": "Rapido",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"ola": {
+"name": "Ola",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"olaelectric": {
+"name": "Ola Electric",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"krutrim": {
+"name": "Krutrim",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"udaan": {
+"name": "Udaan",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"bigbasket": {
+"name": "BigBasket",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"tata1mg": {
+"name": "Tata 1mg",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"tatadigital": {
+"name": "Tata Digital",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"pharmeasy": {
+"name": "PharmEasy",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"cars24": {
+"name": "Cars24",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"spinny": {
+"name": "Spinny",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"cardekho": {
+"name": "CarDekho",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"licious": {
+"name": "Licious",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"boat": {
+"name": "boAt",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"mamaearth": {
+"name": "Mamaearth",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"physicswallah": {
+"name": "PhysicsWallah",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"unacademy": {
+"name": "Unacademy",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"upgrad": {
+"name": "upGrad",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"scaler": {
+"name": "Scaler",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"moj": {
+"name": "Moj",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"verseinnovation": {
+"name": "VerSe Innovation",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"pocketfm": {
+"name": "Pocket FM",
+"runs": {
+"2026-11-05": [
+4,
+0
+]
+}
+},
+"kukufm": {
+"name": "Kuku FM",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"apna": {
+"name": "Apna",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"jiohotstar": {
+"name": "JioHotstar",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"disneyhotstar": {
+"name": "Disney+ Hotstar",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"hotstar": {
+"name": "Hotstar",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"nobroker": {
+"name": "Nobroker",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"livspace": {
+"name": "Livspace",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"eightfoldai": {
+"name": "Eightfold AI",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"deel": {
+"name": "Deel",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"darwinbox": {
+"name": "Darwinbox",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"whatfix": {
+"name": "Whatfix",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"mindtickle": {
+"name": "Mindtickle",
+"runs": {
+"2026-11-05": [
+19,
+0
+]
+}
+},
+"innovaccer": {
+"name": "Innovaccer",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"icertis": {
+"name": "Icertis",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"highradius": {
+"name": "HighRadius",
+"runs": {
+"2026-11-05": [
+45,
+0
+]
+}
+},
+"clevertap": {
+"name": "CleverTap",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"moengage": {
+"name": "MoEngage",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"webengage": {
+"name": "WebEngage",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"netcorecloud": {
+"name": "Netcore Cloud",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"gupshup": {
+"name": "Gupshup",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"yellowai": {
+"name": "Yellow.ai",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"haptik": {
+"name": "Haptik",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"exotel": {
+"name": "Exotel",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"leadsquared": {
+"name": "LeadSquared",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"capillary": {
+"name": "Capillary Technologies",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"unicommerce": {
+"name": "Unicommerce",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"increff": {
+"name": "Increff",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"shiprocket": {
+"name": "Shiprocket",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"zoho": {
+"name": "Zoho",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"lambdatest": {
+"name": "LambdaTest",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"devrev": {
+"name": "DevRev",
+"runs": {
+"2026-11-05": [
+17,
+0
+]
+}
+},
+"rocketlane": {
+"name": "Rocketlane",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"atomicwork": {
+"name": "Atomicwork",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"sprinto": {
+"name": "Sprinto",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"zluri": {
+"name": "Zluri",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"scrutautomation": {
+"name": "Scrut Automation",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"spotdraft": {
+"name": "SpotDraft",
+"runs": {
+"2026-11-05": [
+11,
+0
+]
+}
+},
+"fyle": {
+"name": "Fyle",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"hevodata": {
+"name": "Hevo Data",
+"runs": {
+"2026-11-05": [
+41,
+0
+]
+}
+},
+"e6data": {
+"name": "e6data",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"uniphore": {
+"name": "Uniphore",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"observeai": {
+"name": "Observe.AI",
+"runs": {
+"2026-11-05": [
+6,
+0
+]
+}
+},
+"glean": {
+"name": "Glean",
+"runs": {
+"2026-11-05": [
+22,
+0
+]
+}
+},
+"sarvamai": {
+"name": "Sarvam AI",
+"runs": {
+"2026-11-05": [
+47,
+3
+]
+}
+},
+"sarvam": {
+"name": "Sarvam",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"truefoundry": {
+"name": "TrueFoundry",
+"runs": {
+"2026-11-05": [
+17,
+0
+]
+}
+},
+"composio": {
+"name": "Composio",
+"runs": {
+"2026-11-05": [
+4,
+0
+]
+}
+},
+"lyzr": {
+"name": "Lyzr",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"simplismart": {
+"name": "Simplismart",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"portkey": {
+"name": "Portkey",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"emergent": {
+"name": "Emergent",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"smallestai": {
+"name": "Smallest.ai",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"gnaniai": {
+"name": "Gnani.ai",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"neysa": {
+"name": "Neysa",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"ringgai": {
+"name": "Ringg AI",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"rapidcanvas": {
+"name": "RapidCanvas",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"clueso": {
+"name": "Clueso",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"onehouse": {
+"name": "Onehouse",
+"runs": {
+"2026-11-05": [
+5,
+2
+]
+}
+},
+"startree": {
+"name": "StarTree",
+"runs": {
+"2026-11-05": [
+4,
+1
+]
+}
+},
+"yugabyte": {
+"name": "Yugabyte",
+"runs": {
+"2026-11-05": [
+3,
+0
+]
+}
+},
+"cockroach": {
+"name": "Cockroach Labs",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"clickhouse": {
+"name": "ClickHouse",
+"runs": {
+"2026-11-05": [
+11,
+1
+]
+}
+},
+"temporal": {
+"name": "Temporal",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"harness": {
+"name": "Harness",
+"runs": {
+"2026-11-05": [
+14,
+0
+]
+}
+},
+"gitlab": {
+"name": "GitLab",
+"runs": {
+"2026-11-05": [
+33,
+4
+]
+}
+},
+"grafana": {
+"name": "Grafana Labs",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"purestorage": {
+"name": "Pure Storage",
+"runs": {
+"2026-11-05": [
+69,
+6
+]
+}
+},
+"netskope": {
+"name": "Netskope",
+"runs": {
+"2026-11-05": [
+19,
+0
+]
+}
+},
+"fivetran": {
+"name": "Fivetran",
+"runs": {
+"2026-11-05": [
+19,
+0
+]
+}
+},
+"figma": {
+"name": "Figma",
+"runs": {
+"2026-11-05": [
+5,
+0
+]
+}
+},
+"notion": {
+"name": "Notion",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"airbnb": {
+"name": "Airbnb",
+"runs": {
+"2026-11-05": [
+10,
+0
+]
+}
+},
+"bookingcom": {
+"name": "Booking.com",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"swiggyinstamart": {
+"name": "Swiggy Instamart",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"jpmorganchase": {
+"name": "JPMorgan Chase",
+"runs": {
+"2026-11-05": [
+9,
+9
+]
+}
+},
+"jpmorgan": {
+"name": "J.P. Morgan",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"primevideoamazonmgmstudios": {
+"name": "Prime Video & Amazon MGM Studios",
+"runs": {
+"2026-11-05": [
+2,
+2
+]
+}
+},
+"amazonwebservicesaws": {
+"name": "Amazon Web Services (AWS)",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"aws": {
+"name": "AWS",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"googlecloud": {
+"name": "Google Cloud",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"mastercardincorporated": {
+"name": "Mastercard Incorporated",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"project44": {
+"name": "project44",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"saviynt": {
+"name": "Saviynt",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"smartsheet": {
+"name": "Smartsheet",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"clearwateranalytics": {
+"name": "Clearwater Analytics",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"digicert": {
+"name": "DigiCert",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"highlevel": {
+"name": "HighLevel",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"hackerrank": {
+"name": "HackerRank",
+"runs": {
+"2026-11-05": [
+17,
+1
+]
+}
+},
+"tmusglobal": {
+"name": "TMUS Global Solutions",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"ncratleos": {
+"name": "NCR Atleos",
+"runs": {
+"2026-11-05": [
+3,
+0
+]
+}
+},
+"natwestgroup": {
+"name": "NatWest Group",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"sapfioneer": {
+"name": "SAP Fioneer",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"factset": {
+"name": "FactSet",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"bnpparibas": {
+"name": "BNP Paribas",
+"runs": {
+"2026-11-05": [
+4,
+0
+]
+}
+},
+"aciworldwide": {
+"name": "ACI Worldwide",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"adp": {
+"name": "ADP",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"thomsonreuters": {
+"name": "Thomson Reuters",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"precisely": {
+"name": "Precisely",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"box": {
+"name": "Box",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"sumologic": {
+"name": "Sumo Logic",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"wingify": {
+"name": "Wingify",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"vwo": {
+"name": "VWO",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"electronicarts": {
+"name": "Electronic Arts",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"warnerbrosdiscovery": {
+"name": "Warner Bros. Discovery",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"foxcorporation": {
+"name": "Fox Corporation",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"comcast": {
+"name": "Comcast",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"disney": {
+"name": "Disney",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"jiostar": {
+"name": "JioStar",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"spotify": {
+"name": "Spotify",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"gojek": {
+"name": "Gojek",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"careem": {
+"name": "Careem",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"openai": {
+"name": "OpenAI",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"anthropic": {
+"name": "Anthropic",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"googledeepmind": {
+"name": "Google DeepMind",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"microsoftresearch": {
+"name": "Microsoft Research",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"adoberesearch": {
+"name": "Adobe Research",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"hashicorp": {
+"name": "HashiCorp",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"ukg": {
+"name": "UKG",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"infoblox": {
+"name": "Infoblox",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"gendigital": {
+"name": "Gen Digital",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"mcafee": {
+"name": "McAfee",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"trellix": {
+"name": "Trellix",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"arista": {
+"name": "Arista",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"ericsson": {
+"name": "Ericsson",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"nokia": {
+"name": "Nokia",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"synchrony": {
+"name": "Synchrony",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"capitalone": {
+"name": "Capital One",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"commonwealthbankofaustralia": {
+"name": "Commonwealth Bank of Australia",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"commbank": {
+"name": "CommBank",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"anz": {
+"name": "ANZ",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"macquariegroup": {
+"name": "Macquarie Group",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"lloydscentre": {
+"name": "Lloyds Technology Centre",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"nab": {
+"name": "NAB",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"invesco": {
+"name": "Invesco",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"franklintempleton": {
+"name": "Franklin Templeton",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"troweprice": {
+"name": "T. Rowe Price",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"westernunion": {
+"name": "Western Union",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"paysafe": {
+"name": "Paysafe",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"rapyd": {
+"name": "Rapyd",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"marriotttechaccelerator": {
+"name": "Marriott Tech Accelerator",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"starbucks": {
+"name": "Starbucks",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"unitedairlines": {
+"name": "United Airlines",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"americanairlines": {
+"name": "American Airlines",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"fedex": {
+"name": "FedEx",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"maersk": {
+"name": "Maersk",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"sainsburys": {
+"name": "Sainsbury's",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"kroger": {
+"name": "Kroger",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"bestbuy": {
+"name": "Best Buy",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"cigna": {
+"name": "Cigna",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"carelon": {
+"name": "Carelon",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"novartis": {
+"name": "Novartis",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"airbus": {
+"name": "Airbus",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"rollsroyce": {
+"name": "Rolls-Royce",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"caterpillar": {
+"name": "Caterpillar",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"johndeere": {
+"name": "John Deere",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"siemens": {
+"name": "Siemens",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"bosch": {
+"name": "Bosch",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"continental": {
+"name": "Continental",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"abb": {
+"name": "ABB",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"schneiderelectric": {
+"name": "Schneider Electric",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"infineon": {
+"name": "Infineon",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"nxpsemiconductors": {
+"name": "NXP Semiconductors",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"mediatek": {
+"name": "MediaTek",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"microchip": {
+"name": "Microchip",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"renesas": {
+"name": "Renesas",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"stmicroelectronics": {
+"name": "STMicroelectronics",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"seagate": {
+"name": "Seagate",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"sandisk": {
+"name": "SanDisk",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"lamresearch": {
+"name": "Lam Research",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"dassaultsystemes": {
+"name": "Dassault Systemes",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"trimble": {
+"name": "Trimble",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"hexagon": {
+"name": "Hexagon",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"zebra": {
+"name": "Zebra Technologies",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"motorola": {
+"name": "Motorola Solutions",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"bcgx": {
+"name": "BCG X",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"oyo": {
+"name": "OYO",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"purplle": {
+"name": "Purplle",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"firstcry": {
+"name": "FirstCry",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"rebelfoods": {
+"name": "Rebel Foods",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"cultfit": {
+"name": "cult.fit",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"curefit": {
+"name": "Curefit",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"healthifyme": {
+"name": "HealthifyMe",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"practo": {
+"name": "Practo",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"classplus": {
+"name": "Classplus",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"teachmint": {
+"name": "Teachmint",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"leapscholar": {
+"name": "Leap Scholar",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"testbook": {
+"name": "Testbook",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"vedantu": {
+"name": "Vedantu",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"simplilearn": {
+"name": "Simplilearn",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"winzo": {
+"name": "WinZO",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"mpl": {
+"name": "MPL",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"mobilepremierleague": {
+"name": "Mobile Premier League",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"nazara": {
+"name": "Nazara",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"dailyhunt": {
+"name": "Dailyhunt",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"josh": {
+"name": "Josh",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"amagi": {
+"name": "Amagi",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"pixis": {
+"name": "Pixis",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"greyorange": {
+"name": "GreyOrange",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"atherenergy": {
+"name": "Ather Energy",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"district": {
+"name": "District",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"hyperpure": {
+"name": "Hyperpure",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"reliancejio": {
+"name": "Reliance Jio",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"jioplatforms": {
+"name": "Jio Platforms",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"airteldigital": {
+"name": "Airtel Digital",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"bhartiairtel": {
+"name": "Bharti Airtel",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"tataneu": {
+"name": "Tata Neu",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"croma": {
+"name": "Croma",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"snapmint": {
+"name": "Snapmint",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"fynd": {
+"name": "Fynd",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"shopsy": {
+"name": "Shopsy",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"flipkarthealth": {
+"name": "Flipkart Health+",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"indeed": {
+"name": "Indeed",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"unstop": {
+"name": "Unstop",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"truecaller": {
+"name": "Truecaller",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"olakrutrim": {
+"name": "Ola Krutrim",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"stablemoney": {
+"name": "Stable Money",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"jiraaf": {
+"name": "Jiraaf",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"kiwi": {
+"name": "Kiwi",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"freo": {
+"name": "Freo",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"vayana": {
+"name": "Vayana",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"openfinancial": {
+"name": "Open Financial Technologies",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"plum": {
+"name": "Plum",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"ditto": {
+"name": "Ditto",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"evenhealthcare": {
+"name": "Even Healthcare",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"leapfinance": {
+"name": "Leap Finance",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"lendingkart": {
+"name": "Lendingkart",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"indifi": {
+"name": "Indifi",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"mswipe": {
+"name": "Mswipe",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"hyperverge": {
+"name": "HyperVerge",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"signzy": {
+"name": "Signzy",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"idfy": {
+"name": "IDfy",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"recko": {
+"name": "Recko",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"fintrac": {
+"name": "Fintrac",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"mintoak": {
+"name": "Mintoak",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"decentro": {
+"name": "Decentro",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"falcon": {
+"name": "Falcon",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"hypto": {
+"name": "Hypto",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"zolve": {
+"name": "Zolve",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"kotak811": {
+"name": "Kotak811",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"fyers": {
+"name": "Fyers",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"sensibull": {
+"name": "Sensibull",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"hudsonrivertrading": {
+"name": "Hudson River Trading",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"davincitrading": {
+"name": "Da Vinci Trading",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"quantbox": {
+"name": "QuantBox",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"edelweiss": {
+"name": "Edelweiss",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"nuvama": {
+"name": "Nuvama",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"kotaksecurities": {
+"name": "Kotak Securities",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"twosigma": {
+"name": "Two Sigma",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"drw": {
+"name": "DRW",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"akunacapital": {
+"name": "Akuna Capital",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"eclipsetrading": {
+"name": "Eclipse Trading",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"appsmith": {
+"name": "Appsmith",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"tooljet": {
+"name": "ToolJet",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"signoz": {
+"name": "SigNoz",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"middleware": {
+"name": "Middleware",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"last9": {
+"name": "Last9",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"plivo": {
+"name": "Plivo",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"kaleyra": {
+"name": "Kaleyra",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"ozonetel": {
+"name": "Ozonetel",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"vueai": {
+"name": "Vue.ai",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"madstreetden": {
+"name": "Mad Street Den",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"facilio": {
+"name": "Facilio",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"kissflow": {
+"name": "Kissflow",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"miq": {
+"name": "MiQ",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"unifize": {
+"name": "Unifize",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"enterpret": {
+"name": "Enterpret",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"toplyne": {
+"name": "Toplyne",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"clari": {
+"name": "Clari",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"highspot": {
+"name": "Highspot",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"gainsight": {
+"name": "Gainsight",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"freshdesk": {
+"name": "Freshdesk",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"cloudsek": {
+"name": "CloudSEK",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"astrasecurity": {
+"name": "Astra Security",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"scylladb": {
+"name": "ScyllaDB",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"aerospike": {
+"name": "Aerospike",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"redis": {
+"name": "Redis",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"neo4j": {
+"name": "Neo4j",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"arcana": {
+"name": "Arcana",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"ema": {
+"name": "Ema",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"gigaml": {
+"name": "Giga ML",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"maximai": {
+"name": "Maxim AI",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"dashtoon": {
+"name": "Dashtoon",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"writesonic": {
+"name": "Writesonic",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"qureai": {
+"name": "Qure.ai",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"avataar": {
+"name": "Avataar",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"corover": {
+"name": "CoRover",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"rephraseai": {
+"name": "Rephrase.ai",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"wadhwaniai": {
+"name": "Wadhwani AI",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"pixxel": {
+"name": "Pixxel",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"skyrootaerospace": {
+"name": "Skyroot Aerospace",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"agnikul": {
+"name": "Agnikul",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"centai": {
+"name": "Cent AI",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"unifyapps": {
+"name": "Unify Apps",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"supernova": {
+"name": "Supernova",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"bolna": {
+"name": "Bolna",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"vapi": {
+"name": "Vapi",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"boeing": {
+"name": "Boeing",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"zenoti": {
+"name": "Zenoti",
+"runs": {
+"2026-11-05": [
+34,
+0
+]
+}
+},
+"sardine": {
+"name": "Sardine",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"grab": {
+"name": "Grab",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"broadcomvmware": {
+"name": "Broadcom/VMware",
+"runs": {
+"2026-11-05": [
+1,
+1
+]
+}
+},
+"ethos": {
+"name": "Ethos",
+"runs": {
+"2026-11-05": [
+40,
+0
+]
+}
+},
+"refyne": {
+"name": "Refyne",
+"runs": {
+"2026-11-05": [
+0,
+0
+]
+}
+},
+"imctrading": {
+"name": "IMC Trading",
+"runs": {
+"2026-11-05": [
+16,
+3
+]
+}
+},
+"jumptrading": {
+"name": "Jump Trading",
+"runs": {
+"2026-11-05": [
+4,
+0
+]
+}
+},
+"bureau": {
+"name": "Bureau",
+"runs": {
+"2026-11-05": [
+17,
+0
+]
+}
+},
+"arcanaanalytics": {
+"name": "Arcana Analytics",
+"runs": {
+"2026-11-05": [
+15,
+0
+]
+}
+},
+"quinstreet": {
+"name": "QuinStreet",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"jitterbit": {
+"name": "Jitterbit",
+"runs": {
+"2026-11-05": [
+3,
+0
+]
+}
+},
+"divclassbasesearchcardmetadataspanclassjobsearchcardlocationgurgaonharyanaspantimeclassjobsearchcardlistdatedatetime202610084weeksagotimedivdiv": {
+"name": "<!---->\n            <div class=\"base-search-card__metadata\">\n              \n          <span class=\"job-search-card__location\">\n            Gurgaon, Haryana, India\n          </span>\n\n        \n    \n    \n    \n    \n\n<!---->  \n\n          <time class=\"job-search-card__listdate\" datetime=\"2026-10-08\">\n            \n\n    \n    \n    \n    \n    \n    \n    \n    \n    \n    \n    \n    \n    \n    \n    \n    \n\n    \n    \n    \n    \n    \n    \n    \n    \n    \n    \n    \n    \n    \n    \n\n      4 weeks ago\n  \n          </time>\n\n<!---->      \n            </div>\n        </div>\n<!---->",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"pumagroup": {
+"name": "PUMA Group",
+"runs": {
+"2026-11-05": [
+4,
+0
+]
+}
+},
+"foxit": {
+"name": "Foxit",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"juicelabsai": {
+"name": "JuiceLabs AI",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"dripcapital": {
+"name": "Drip Capital",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"transactionnetworkservicestns": {
+"name": "Transaction Network Services (TNS)",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"edstem": {
+"name": "Edstem Technologies",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"willware": {
+"name": "WillWare Technologies",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"loylogic": {
+"name": "Loylogic",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"webbeeglobal": {
+"name": "WebBee Global",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"veradigm": {
+"name": "Veradigm\u00ae",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"spreetail": {
+"name": "Spreetail",
+"runs": {
+"2026-11-05": [
+5,
+0
+]
+}
+},
+"par": {
+"name": "PAR Technology",
+"runs": {
+"2026-11-05": [
+3,
+0
+]
+}
+},
+"riministreet": {
+"name": "Rimini Street",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"usbank": {
+"name": "U.S. Bank",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"wex": {
+"name": "WEX",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"bhiveworkspace": {
+"name": "BHIVE Workspace",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"ncrvoyix": {
+"name": "NCR Voyix",
+"runs": {
+"2026-11-05": [
+3,
+0
+]
+}
+},
+"medfar": {
+"name": "MEDFAR",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"onit": {
+"name": "Onit India",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"sumtracker": {
+"name": "Sumtracker",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"leegality": {
+"name": "Leegality",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"paypay": {
+"name": "PayPay India",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"clovirtualfashion": {
+"name": "CLO Virtual Fashion",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"kaaliber": {
+"name": "Kaaliber",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"planview": {
+"name": "Planview",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"allendigital": {
+"name": "ALLEN Digital",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"dcluttr": {
+"name": "Dcluttr",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"hoichoi": {
+"name": "hoichoi",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"syniverse": {
+"name": "Syniverse",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"edgeverve": {
+"name": "EdgeVerve",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"geojit": {
+"name": "Geojit Technologies",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"lplfinancialglobalcapabilitycenter": {
+"name": "LPL Financial Global Capability Center",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"1club": {
+"name": "1% Club",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"newspaceresearchand": {
+"name": "NewSpace Research and Technologies",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"pepper": {
+"name": "Pepper",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"qubridai": {
+"name": "Qubrid AI",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"candescent": {
+"name": "Candescent",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"precisionautonomy": {
+"name": "Precision Autonomy",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"baxterinternational": {
+"name": "Baxter International Inc.",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"aisensy": {
+"name": "AiSensy",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"avaloq": {
+"name": "Avaloq",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"asymbl": {
+"name": "Asymbl",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"nationwide": {
+"name": "Nationwide",
+"runs": {
+"2026-11-05": [
+3,
+0
+]
+}
+},
+"servicechannel": {
+"name": "ServiceChannel",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"fnz": {
+"name": "FNZ",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"anyscale": {
+"name": "Anyscale",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"metlife": {
+"name": "MetLife",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"mozn": {
+"name": "MOZN",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"dhl": {
+"name": "DHL",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"sunking": {
+"name": "Sun King",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"tatacommunications": {
+"name": "Tata Communications",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"linde": {
+"name": "Linde@India",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"careercrafterz": {
+"name": "Career Crafterz",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"algoleap": {
+"name": "algoleap",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"warnermusicgroup": {
+"name": "Warner Music Group",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"sage": {
+"name": "Sage",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"valgenesis": {
+"name": "ValGenesis",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"platformscience": {
+"name": "Platform Science",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"volante": {
+"name": "Volante Technologies",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"cadopt": {
+"name": "CADOpt Technologies Private Limited",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"jmd": {
+"name": "JMD Technologies Inc.",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"rohdeschwarz": {
+"name": "Rohde & Schwarz",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"acsinternationalacsii": {
+"name": "ACS International India Pvt. Ltd. (ACSII)",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"vena": {
+"name": "Vena Solutions",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+}
+}

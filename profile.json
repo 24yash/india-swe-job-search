@@ -1,0 +1,197 @@
+{
+  "_comment": "YOUR requirements. Shipped as an example: backend/platform SWE in India, 0-3 years asked, >= 20 LPA, Java-leaning stack. Edit title include/exclude, max_min_years, min_pay_lpa, max_age_days, stack weights, gaps and exclude_companies (add your current employer here). Regexes are matched case-insensitively against lower-cased text.",
+  "title": {
+    "include": "software (development |dev )?engineer|software developer|\\bsde\\b|sde[- ]?(i|1|ii|2)\\b|backend|back-end|back end|platform engineer|infrastructure engineer|member of technical staff|\\bmts\\b|full[- ]?stack|engineer[- ,]*(i|ii|1|2)\\b|java (developer|engineer)|spring boot|application (developer|engineer)|python (backend )?developer|api (developer|engineer)|distributed systems engineer|cloud (software|platform) engineer|associate software",
+    "exclude": "senior|\\bsr\\b\\.?|staff|\\blead\\b|principal|architect|manager|director|\\bhead\\b|vice president|\\bvp\\b|\\bavp\\b|\\bintern\\b|internship|apprentice|distinguished|fellow|\\bphd\\b|\\bsse\\b|\\biii\\b|\\biv\\b|sde[- ]?(3|iii)\\b|engineer[- ]?(3|iii)\\b|\\bl[5-9]\\b|front[- ]?end|android|\\bios\\b|\\bmobile\\b|\\bqa\\b|sdet|\\btest\\b|in test|testing|quality (assurance|engineer)|data scientist|machine learning engineer|\\bml engineer|research (engineer|scientist)|sales engineer|solutions? (engineer|architect|consultant)|support engineer|customer (success|support) engineer|field (engineer|application)|hardware|firmware|embedded|asic|verification|silicon|analog|physical design|\\brtl\\b|security engineer|salesforce (developer|engineer)|servicenow developer|consultant|trainee|contract|\\bftc\\b|fixed term|graphics|gpu|compiler|kernel|device driver|\\bsap\\b|mainframe|cobol"
+  },
+  "location": {
+    "home_markers": [
+      "bengaluru",
+      "bangalore",
+      "karnataka"
+    ],
+    "india_markers": [
+      "india",
+      "bengaluru",
+      "bangalore",
+      "hyderabad",
+      "pune",
+      "mumbai",
+      "gurgaon",
+      "gurugram",
+      "noida",
+      "chennai",
+      "delhi",
+      "kolkata",
+      "ahmedabad",
+      ", in",
+      "karnataka",
+      "telangana",
+      "maharashtra",
+      "haryana",
+      "tamil nadu"
+    ],
+    "other_city_min_quality": 0
+  },
+  "max_min_years": 3,
+  "linkedin": {
+    "queries": [
+      "backend engineer",
+      "software engineer java",
+      "software development engineer",
+      "SDE 2",
+      "SDE 1",
+      "software engineer II",
+      "platform engineer",
+      "java developer spring boot",
+      "member of technical staff",
+      "full stack engineer java",
+      "software engineer backend"
+    ],
+    "locations": [
+      "India",
+      "Bengaluru",
+      "Hyderabad",
+      "Pune",
+      "Gurugram",
+      "Noida",
+      "Chennai",
+      "Mumbai"
+    ],
+    "max_results_per_query": 100,
+    "company_sweep": {
+      "min_quality": 10,
+      "pages": 2,
+      "companies_per_run": 180,
+      "_comment": "One LinkedIn search per bank company, rotating: companies_per_run per run, active and least-recently-searched first."
+    },
+    "max_results_per_city": 50,
+    "seconds_between_requests": 1.5,
+    "city_queries": [
+      "software engineer java",
+      "backend engineer",
+      "SDE 2",
+      "software development engineer"
+    ],
+    "checkpoint_every": 40
+  },
+  "min_pay_lpa": 20,
+  "max_age_days": 30,
+  "exclude_companies": [
+    "TCS",
+    "Infosys",
+    "Wipro",
+    "Cognizant",
+    "Accenture",
+    "Capgemini",
+    "HCL",
+    "Tech Mahindra"
+  ],
+  "exclude_text": "contract[- ]to[- ]hire|\\bc2h\\b|fixed[- ]term contract|this is a contract role",
+  "stack": [
+    [
+      "Java",
+      "\\bjava\\b",
+      7
+    ],
+    [
+      "Spring",
+      "spring",
+      5
+    ],
+    [
+      "PostgreSQL",
+      "postgres",
+      4
+    ],
+    [
+      "SQL",
+      "\\bsql\\b|rdbms|relational database",
+      2
+    ],
+    [
+      "Kubernetes",
+      "kubernetes|\\bk8s\\b",
+      5
+    ],
+    [
+      "AWS",
+      "\\baws\\b|amazon web services",
+      3
+    ],
+    [
+      "Distributed systems",
+      "distributed system",
+      4
+    ],
+    [
+      "Microservices",
+      "microservice",
+      3
+    ],
+    [
+      "Docker",
+      "docker|container",
+      2
+    ],
+    [
+      "Helm",
+      "\\bhelm\\b",
+      2
+    ],
+    [
+      "Operators/CRDs",
+      "operator pattern|kubernetes operator|\\bcrds?\\b|custom resource",
+      3
+    ],
+    [
+      "Flink/streaming",
+      "flink|stream processing",
+      2
+    ],
+    [
+      "Redshift/warehouse",
+      "redshift|data warehouse",
+      1
+    ],
+    [
+      "REST APIs",
+      "\\brest\\b|restful|\\bapis?\\b",
+      1
+    ],
+    [
+      "CI/CD",
+      "ci/cd|jenkins|continuous integration",
+      1
+    ],
+    [
+      "Payments/fintech",
+      "payments? (platform|system|processing)|fintech|core banking|ledger",
+      2
+    ],
+    [
+      "Python",
+      "\\bpython\\b",
+      1
+    ],
+    [
+      "TypeScript/React",
+      "typescript|react|vue",
+      1
+    ]
+  ],
+  "gaps": {
+    "Go": "\\bgolang\\b|\\bgo\\b(?! to| through| beyond| above)",
+    "C++": "c\\+\\+",
+    "Rust": "\\brust\\b",
+    "Scala": "\\bscala\\b",
+    "Kafka": "kafka",
+    "GCP": "\\bgcp\\b|google cloud",
+    "Azure": "\\bazure\\b",
+    "Terraform": "terraform",
+    "ML/LLM": "\\bllms?\\b|machine learning|pytorch",
+    "Node.js": "node\\.?js",
+    "Kotlin": "kotlin",
+    "C#/.NET": "c#|\\.net\\b"
+  }
+}

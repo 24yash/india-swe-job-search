@@ -1,0 +1,772 @@
+"""Crawl public job-board APIs, filter roles against profile.json, score and rank them.
+
+Usage:
+    python3 crawl.py                 # all companies in companies.json
+    python3 crawl.py --only Stripe   # one or more company names (comma-separated)
+    python3 crawl.py --max-age 30    # widen freshness window (days)
+
+Writes output/jobs-<date>.csv, output/jobs-<date>.md and output/rejected-<date>.csv,
+and keeps output/seen.json so each run flags roles that are new since the last run.
+Read only: it calls public GET/search endpoints and never applies or signs in.
+"""
+import argparse
+import collections
+import csv
+import html
+import json
+import re
+import sys
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor
+from dataclasses import dataclass, field, asdict
+from datetime import datetime, timezone, timedelta
+from pathlib import Path
+
+import requests
+
+ROOT = Path(__file__).parent
+OUT = ROOT / "output"
+UA = {"User-Agent": "Mozilla/5.0 (job-search research script; read-only)"}
+NOW = datetime.now(timezone.utc)
+
+PROFILE = json.loads((ROOT / "profile.json").read_text())
+INDIA = PROFILE["location"]["india_markers"]
+HOME = PROFILE["location"]["home_markers"]
+
+
+@dataclass
+class Job:
+    company: str
+    title: str
+    location: str
+    url: str
+    posted: datetime | None
+    text: str
+    remote: bool = False
+    pay_posted: str = ""
+    meta: dict = field(default_factory=dict)
+
+
+# ---------------------------------------------------------------- fetchers
+
+SESSION = requests.Session()  # some boards (Microsoft) rate-limit cookieless clients
+SESSION.headers.update(UA)
+
+
+def get(url, **kw):
+    for attempt in range(5):
+        r = SESSION.get(url, timeout=30, **kw)
+        if r.status_code != 429:
+            break
+        time.sleep(2 ** attempt * 3)  # rate limited: back off and retry
+    r.raise_for_status()
+    return r.json()
+
+
+def post(url, body, **kw):
+    r = SESSION.post(url, json=body, timeout=30, **kw)
+    r.raise_for_status()
+    return r.json()
+
+
+def strip_html(s):
+    s = html.unescape(s or "")
+    s = re.sub(r"<(br|/p|/li|/div|/h\d)[^>]*>", "\n", s, flags=re.I)
+    return re.sub(r"[ \t]+", " ", re.sub(r"<[^>]+>", " ", s))
+
+
+def parse_ts(v):
+    if not v:
+        return None
+    if isinstance(v, (int, float)):
+        return datetime.fromtimestamp(v / 1000 if v > 1e11 else v, timezone.utc)
+    for fmt in ("%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%S.%f%z", "%Y-%m-%d", "%B %d, %Y", "%Y-%m-%d %I:%M %p"):
+        try:
+            d = datetime.strptime(v.replace("Z", "+00:00"), fmt)
+            return d if d.tzinfo else d.replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+    return None
+
+
+def workday_age(s):
+    """'Posted 3 Days Ago' / 'Posted Today' / 'Posted 30+ Days Ago' -> datetime."""
+    s = (s or "").lower()
+    if "today" in s:
+        return NOW
+    if "yesterday" in s:
+        return NOW - timedelta(days=1)
+    m = re.search(r"(\d+)\+?\s*day", s)
+    return NOW - timedelta(days=int(m.group(1))) if m else None
+
+
+def in_india(loc):
+    l = loc.lower()
+    return any(k in l for k in INDIA)
+
+
+def title_ok(title):
+    t = title.lower()
+    return (re.search(PROFILE["title"]["include"], t) and not re.search(PROFILE["title"]["exclude"], t))
+
+
+def greenhouse(c):
+    d = get(f"https://boards-api.greenhouse.io/v1/boards/{c['slug']}/jobs?content=true")
+    for j in d["jobs"]:
+        loc = j.get("location", {}).get("name", "")
+        yield Job(c["name"], j["title"], loc, j["absolute_url"],
+                  parse_ts(j.get("first_published") or j.get("updated_at")),
+                  strip_html(j.get("content")), remote="remote" in loc.lower())
+
+
+def lever(c):
+    for j in get(f"https://api.lever.co/v0/postings/{c['slug']}?mode=json"):
+        cat = j.get("categories") or {}
+        locs = cat.get("allLocations") or [cat.get("location") or ""]
+        text = j.get("descriptionPlain", "") + "\n" + "\n".join(
+            l.get("text", "") + "\n" + strip_html(l.get("content")) for l in j.get("lists", [])
+        ) + "\n" + (j.get("additionalPlain") or "")
+        yield Job(c["name"], j["text"], " / ".join(locs), j["hostedUrl"], parse_ts(j.get("createdAt")),
+                  text, remote=j.get("workplaceType") == "remote", meta={"commitment": cat.get("commitment", "")})
+
+
+def ashby(c):
+    d = get(f"https://api.ashbyhq.com/posting-api/job-board/{c['slug']}?includeCompensation=true")
+    for j in d["jobs"]:
+        locs = [j.get("location") or ""] + [s.get("location", "") for s in j.get("secondaryLocations", [])]
+        comp = (j.get("compensation") or {}).get("compensationTierSummary") or ""
+        yield Job(c["name"], j["title"], " / ".join(filter(None, locs)), j["jobUrl"],
+                  parse_ts(j.get("publishedAt")), j.get("descriptionPlain", ""),
+                  remote=bool(j.get("isRemote")), pay_posted=comp,
+                  meta={"employmentType": j.get("employmentType", "")})
+
+
+def smartrecruiters(c):
+    base = f"https://api.smartrecruiters.com/v1/companies/{c['slug']}/postings"
+    offset = 0
+    while True:
+        d = get(base, params={"limit": 100, "offset": offset})
+        for j in d.get("content", []):
+            if (j.get("location") or {}).get("country", "").lower() != "in" or not title_ok(j["name"]):
+                continue
+            det = get(f"{base}/{j['id']}")
+            sec = (det.get("jobAd") or {}).get("sections") or {}
+            text = "\n".join(strip_html((sec.get(k) or {}).get("text")) for k in ("jobDescription", "qualifications", "additionalInformation"))
+            loc = j.get("location") or {}
+            yield Job(c["name"], j["name"], ", ".join(filter(None, [loc.get("city"), loc.get("country", "").upper()])),
+                      det.get("postingUrl") or f"https://jobs.smartrecruiters.com/{c['slug']}/{j['id']}",
+                      parse_ts(j.get("releasedDate")), text, remote=bool(loc.get("remote")))
+        offset += 100
+        if offset >= d.get("totalFound", 0) or offset >= 1000:
+            break
+
+
+def workday(c):
+    host = f"https://{c['tenant']}.{c['wd']}.myworkdayjobs.com"
+    api = f"{host}/wday/cxs/{c['tenant']}/{c['site']}"
+    seen = set()
+    # Workday has no country filter without facet IDs, so put the place in the search text.
+    for query in ("software engineer", "software engineer Bangalore", "software engineer India", "backend engineer", "software developer India"):
+        offset = 0
+        while offset < 200:
+            d = post(f"{api}/jobs", {"limit": 20, "offset": offset, "searchText": query, "appliedFacets": {}})
+            posts = d.get("jobPostings", [])
+            for j in posts:
+                path = j.get("externalPath", "")
+                if path in seen or not title_ok(j.get("title", "")):
+                    continue
+                seen.add(path)
+                loc = j.get("locationsText", "")
+                if not in_india(loc) and "location" not in loc.lower():
+                    continue  # "3 Locations" needs the detail call; a foreign single location does not
+                info = get(f"{api}{path}").get("jobPostingInfo", {})
+                locs = " / ".join([info.get("location", "")] + info.get("additionalLocations", []))
+                yield Job(c["name"], info.get("title", j["title"]), locs, info.get("externalUrl") or f"{host}/{c['site']}{path}",
+                          parse_ts(info.get("startDate")) or workday_age(j.get("postedOn")),
+                          strip_html(info.get("jobDescription")), remote="remote" in (info.get("remoteType") or "").lower())
+            offset += 20
+            if not posts or offset >= d.get("total", 0):
+                break
+
+
+def amazon(c):
+    for q in ("software development engineer", "backend engineer"):
+        for offset in range(0, 300, 100):
+            d = get("https://www.amazon.jobs/en/search.json", params={
+                "base_query": q, "country": "IND", "result_limit": 100, "offset": offset, "sort": "recent"})
+            for j in d.get("jobs", []):
+                yield Job(c["name"], j["title"], j.get("normalized_location") or j.get("location", ""),
+                          "https://www.amazon.jobs" + j["job_path"], parse_ts(j.get("posted_date")),
+                          "\n".join(strip_html(j.get(k)) for k in ("description", "basic_qualifications", "preferred_qualifications")))
+            if len(d.get("jobs", [])) < 100:
+                break
+
+
+def microsoft(c):
+    api = "https://apply.careers.microsoft.com/api/pcsx"
+    SESSION.get("https://apply.careers.microsoft.com/careers?domain=microsoft.com")  # sets the cookies the API expects
+    seen = set()
+    for q in ("software engineer", "backend"):
+        for start in range(0, 200, 10):
+            d = get(f"{api}/search", params={"domain": "microsoft.com", "query": q, "location": "India", "start": start, "num": 10})
+            pos = d.get("data", {}).get("positions", [])
+            for p in pos:
+                if p["id"] in seen or not title_ok(p["name"]):
+                    continue
+                seen.add(p["id"])
+                time.sleep(0.5)
+                det = get(f"{api}/position_details", params={"position_id": p["id"], "domain": "microsoft.com", "hl": "en"})["data"]
+                yield Job(c["name"], p["name"], " / ".join(p.get("standardizedLocations") or p.get("locations", [])),
+                          det.get("publicUrl") or f"https://apply.careers.microsoft.com/careers/job/{p['id']}",
+                          parse_ts(p.get("postedTs")), strip_html(det.get("jobDescription")),
+                          remote=(p.get("workLocationOption") or "") == "remote")
+            if len(pos) < 10:
+                break
+
+
+def atlassian(c):
+    for j in get("https://www.atlassian.com/endpoint/careers/listings"):
+        url = (j.get("portalJobPost") or {}).get("portalUrl", "")
+        yield Job(c["name"], j["title"], " / ".join(j.get("locations", [])), url,
+                  parse_ts((j.get("portalJobPost") or {}).get("updatedDate")),
+                  "\n".join(strip_html(j.get(k)) for k in ("overview", "responsibilities", "qualifications")),
+                  remote="remote" in " ".join(j.get("locations", [])).lower())
+
+
+def google(c):
+    """Google careers embeds results as JSON in AF_initDataCallback('ds:1'); 20 per page."""
+    base = "https://www.google.com/about/careers/applications/jobs/results/"
+    seen = set()
+    for q in ("software engineer", "backend", "software developer"):
+        for page in range(1, 11):
+            r = SESSION.get(base, timeout=30, params={"location": "India", "q": q, "page": page,
+                                                      "target_level": ["EARLY", "MID"]})
+            m = re.search(r"AF_initDataCallback\(\{key: 'ds:1'.*?data:(.*?), sideChannel", r.text, re.S)
+            jobs = json.loads(m.group(1))[0] if m else None
+            if not jobs:
+                break
+            for j in jobs:
+                if j[0] in seen:
+                    continue
+                seen.add(j[0])
+                locs = " / ".join(l[0] for l in (j[9] or []))
+                text = "\n".join(strip_html((j[k] or [None, ""])[1]) for k in (10, 3, 4, 19) if isinstance(j[k], list))
+                yield Job(c["name"], j[1], locs, f"{base}{j[0]}", parse_ts(j[12][0]) if j[12] else None, text,
+                          remote="remote" in locs.lower())
+
+
+LI_API = "https://www.linkedin.com/jobs-guest/jobs/api"
+LI_DETAILS_FILE = ROOT / "output" / "linkedin-details.json"
+LI_DETAILS = json.loads(LI_DETAILS_FILE.read_text()) if LI_DETAILS_FILE.exists() else {}  # job id -> description
+LI_LOCK = threading.Lock()
+LI_STATE = {"last": 0.0, "strikes": 0}
+LI_SEEN = set()  # job ids already handled this run, shared by both LinkedIn passes
+
+
+class RateLimited(Exception):
+    pass
+
+
+def li_get(url, **params):
+    """Every LinkedIn request goes through here: one request per LI_GAP seconds across both LinkedIn
+    passes, and a growing back-off on 429. After 4 consecutive 429s, LinkedIn has blocked us for now,
+    so stop instead of waiting on it for hours; the caller keeps what it already has."""
+    while True:
+        with LI_LOCK:
+            wait = LI_STATE["last"] + PROFILE["linkedin"]["seconds_between_requests"] - time.time()
+            if wait > 0:
+                time.sleep(wait)
+            r = SESSION.get(url, timeout=30, params=params)
+            LI_STATE["last"] = time.time()
+            if r.status_code != 429:
+                LI_STATE["strikes"] = 0
+                return r
+            LI_STATE["strikes"] += 1
+            if LI_STATE["strikes"] >= 4:
+                raise RateLimited("LinkedIn returned 429 four times in a row; stopping LinkedIn for this run")
+            time.sleep(30 * 2 ** (LI_STATE["strikes"] - 1))  # 30s, 60s, 120s
+
+
+def linkedin_cards(params, max_results):
+    """One LinkedIn guest search, paged. Yields (job id, title, company, location, date) per card."""
+    for start in range(0, max_results, 25):
+        r = li_get(f"{LI_API}/seeMoreJobPostings/search", **params, start=start)
+        if r.status_code != 200 or "base-card" not in r.text:
+            return
+        for card in r.text.split("<li>")[1:]:
+            jid = re.search(r"jobPosting:(\d+)", card)
+            title = re.search(r'base-search-card__title">\s*(.*?)\s*</h3>', card, re.S)
+            comp = re.search(r'base-search-card__subtitle">.*?>\s*(.*?)\s*</a>', card, re.S)
+            loc = re.search(r'job-search-card__location">\s*(.*?)\s*</span>', card, re.S)
+            date = re.search(r'datetime="([\d-]+)"', card)
+            if jid and title and comp:
+                yield (jid.group(1), html.unescape(title.group(1)), html.unescape(comp.group(1)),
+                       loc.group(1) if loc else "India", date.group(1) if date else None)
+
+
+def linkedin(c):
+    """LinkedIn's public guest job search (no sign-in). The role pass searches role keywords across
+    India and per city (LinkedIn returns different sets per location). The sweep pass searches the
+    company bank by name, several companies per query ("A" OR "B" ...), keeping only their cards.
+    Descriptions are cached across runs, and companies we read directly are skipped.
+    main() looks each company up in companies.json / tiers.json afterwards."""
+    cfg = PROFILE["linkedin"]
+    window = f"r{PROFILE['max_age_days'] * 86400}"
+    skip = c.get("skip_companies", set())
+    if c.get("sweep_companies") is None:
+        searches = [({"keywords": q, "location": "India", "f_TPR": window, "f_E": "2,3,4"}, cfg["max_results_per_query"], None)
+                    for q in cfg["queries"]]
+        searches += [({"keywords": q, "location": loc, "f_TPR": window, "f_E": "2,3,4"}, cfg["max_results_per_city"], None)
+                     for loc in cfg["locations"] if loc != "India" for q in cfg["city_queries"]]
+    else:  # one search per company: OR-batching lets the biggest poster crowd out the rest
+        searches = [({"keywords": n, "location": "India", "f_TPR": window}, cfg["company_sweep"]["pages"] * 25, {norm(n)})
+                    for n in c["sweep_companies"]]
+    seen = LI_SEEN
+    c["searched"] = []
+    label = "company sweep" if c.get("sweep_companies") is not None else "role search"
+    for n, (params, limit, only) in enumerate(searches, 1):
+        if n % 20 == 0 or n == len(searches):  # the LinkedIn passes are the slow part, so show where they are
+            print(f"  LinkedIn {label}: {n}/{len(searches)} searches, {len(seen)} postings so far", file=sys.stderr, flush=True)
+        if only:
+            c["searched"].extend(only)
+        for jid, title, comp, loc, date in linkedin_cards(params, limit):
+            nc = norm(comp)
+            if jid in seen or (only and not any(nc.startswith(o) or o.startswith(nc) for o in only)):
+                continue
+            seen.add(jid)
+            if not title_ok(title) or is_excluded_company(comp) or nc in skip:
+                continue
+            if jid not in LI_DETAILS:
+                d = li_get(f"{LI_API}/jobPosting/{jid}")
+                i = d.text.find("show-more-less-html__markup") if d.ok else -1
+                LI_DETAILS[jid] = strip_html(d.text[i:i + 20000]) if i > 0 else ""
+            yield Job(comp, title, loc, f"https://www.linkedin.com/jobs/view/{jid}/", parse_ts(date),
+                      LI_DETAILS[jid], remote="remote" in loc.lower(), meta={"source": "LinkedIn (aggregator)"})
+
+
+FETCHERS = {f.__name__: f for f in (greenhouse, lever, ashby, smartrecruiters, workday, amazon, microsoft, atlassian, google, linkedin)}
+
+
+def norm(name):
+    return re.sub(r"\b(pvt|private|ltd|limited|inc|llc|technologies|technology|india|solutions|labs|software|the)\b|[^a-z0-9]", "",
+                  name.lower())
+
+
+TIERS = json.loads((ROOT / "tiers.json").read_text())
+
+
+def is_excluded_company(name):
+    n = norm(name)
+    return any(norm(x) and norm(x) in n for x in PROFILE["exclude_companies"] + TIERS["services_and_staffing"])
+
+
+# ---------------------------------------------------------------- evaluation
+
+EXP_RE = re.compile(
+    r"(?<![\d.])(\d{1,2})\s*(?:\+|plus)?\s*(?:(?:-|–|to)\s*(\d{1,2})\s*\+?)?\s*(?:years?|yrs?)(?:\s+of)?(?=[^.\n]{0,80}(?:experience|exp\b|industry|software|engineering|development|professional|building))",
+    re.I)
+
+
+def min_experience(text):
+    """Smallest minimum-years figure the JD asks for, plus the snippet it came from."""
+    found = []
+    for m in EXP_RE.finditer(text):
+        lo = int(m.group(1))
+        if lo <= 15:
+            found.append((lo, text[max(0, m.start() - 20): m.end() + 40].replace("\n", " ").strip()))
+    if not found:
+        return None, ""
+    return min(found, key=lambda x: x[0])
+
+
+def posted_pay_lpa(s):
+    """Lowest INR figure in a posted range, as LPA. None if no INR amount."""
+    if not s or not re.search(r"₹|INR|LPA|lakh", s, re.I):
+        return None
+    vals = []
+    for m in re.finditer(r"(?:₹|INR)\s*([\d,.]+)\s*([KkLM]|lakhs?|lpa)?", s):
+        n = float(m.group(1).replace(",", ""))
+        unit = (m.group(2) or "").lower()
+        n *= {"k": 1e3, "m": 1e6, "l": 1e5, "lakh": 1e5, "lakhs": 1e5, "lpa": 1e5}.get(unit, 1)
+        vals.append(n / 1e5)
+    vals += [float(x) for x in re.findall(r"([\d.]+)\s*(?:LPA|lakhs?)", s, re.I)]
+    vals = [v for v in vals if 1 <= v <= 500]
+    return min(vals) if vals else None
+
+
+def location_mode(job, company):
+    loc = job.location.lower()
+    text = job.text.lower()
+    mode = "remote" if job.remote or "remote" in loc else "hybrid" if "hybrid" in text or "hybrid" in loc else "on-site/hybrid (check JD)"
+    if any(k in loc for k in HOME):
+        return True, f"Bengaluru, {mode}"
+    if not in_india(job.location):
+        return False, "outside India"
+    if mode == "remote":
+        return True, "Remote (India)"
+    if company["quality"] >= PROFILE["location"]["other_city_min_quality"]:
+        return True, f"{job.location.split('/')[0].strip()} ({mode})"
+    return False, "other Indian city, not remote"
+
+
+def stack_score(text):
+    t = text.lower()
+    hits = [(label, w) for label, pat, w in PROFILE["stack"] if re.search(pat, t)]
+    score = sum(w for _, w in hits)
+    gaps = [g for g, pat in PROFILE["gaps"].items() if re.search(pat, t)]
+    # A JD built around a language I don't use gets capped even if infra words match.
+    if any(g in gaps for g in ("Go", "C++", "Rust", "Scala", "C#/.NET", "Kotlin")) and not re.search(r"\bjava\b", t):
+        score = min(score, 20)
+    return min(score, 35), [label for label, _ in hits], gaps
+
+
+def level_score(title, years):
+    t = title.lower()
+    if years is None:
+        if re.search(r"\b(i|1|new grad|graduate|associate)\b", t):
+            return 17
+        if re.search(r"\b(ii|2)\b", t):
+            return 16
+        return 13
+    return {0: 18, 1: 20, 2: 19, 3: 14}.get(years, 0)
+
+
+def fresh_score(posted):
+    if posted is None:
+        return 3 + 3
+    age = (NOW - posted).days
+    base = 7 if age <= 7 else 6 if age <= 14 else 5 if age <= 21 else 2
+    return base + 3  # +3 for a company careers/ATS link; main() takes it back for aggregator links
+
+
+def evaluate(job, company, max_age):
+    if not title_ok(job.title):
+        return None, "title/level"
+    ok, mode = location_mode(job, company)
+    if not ok:
+        return None, mode
+    if re.search(PROFILE["exclude_text"], job.text, re.I) or re.search(r"intern|contract|temporary", job.meta.get("commitment", "") + job.meta.get("employmentType", ""), re.I):
+        return None, "contract/intern/temporary"
+    years, snippet = min_experience(job.text)
+    m = re.search(r"(\d{1,2})\s*(?:\+|-|–|to)\s*(?:\d{1,2}\s*)?(?:years?|yrs?)", job.title, re.I)
+    if m:  # "4 to 8 years" in the title beats boilerplate in the body
+        years, snippet = int(m.group(1)), job.title
+    if years is not None and years > PROFILE["max_min_years"]:
+        return None, f"{years}+ yrs asked"
+    if company.get("below_title") and re.search(company["below_title"], job.title, re.I):
+        return None, f"pay below bar at this level ({company['pay_note']})"
+    if company["pay"] == "below":
+        return None, f"pay below bar ({company['pay_note']})"
+    pay_lpa = posted_pay_lpa(job.pay_posted or job.text)
+    if pay_lpa is not None and pay_lpa < PROFILE["min_pay_lpa"]:
+        return None, f"posted pay {pay_lpa:.0f} LPA below bar"
+    if pay_lpa is not None:
+        pay_conf, pay_pts, pay_txt = "Posted", 20, f"≥{pay_lpa:.0f} (Posted: {job.pay_posted[:60] or 'JD'})"
+    elif company["pay"] == "likely" and "levels.fyi" in company["pay_note"].lower():
+        pay_conf, pay_pts, pay_txt = "Strong evidence", 16, f"Strong — {company['pay_note']} (total comp, not fixed CTC)"
+    elif company["pay"] == "likely":
+        pay_conf, pay_pts, pay_txt = "Likely", 10, f"Likely ≥20 — {company['pay_note']} (tier judgement, no direct data)"
+    else:  # no evidence either way: goes to the leads file, not the shortlist
+        pay_conf, pay_pts, pay_txt = "Unverified", 0, f"Unverified — {company['pay_note']}"
+    stale = job.posted is not None and (NOW - job.posted).days > max_age
+    s_stack, hits, gaps = stack_score(job.text)
+    s_level = level_score(job.title, years)
+    score = s_stack + s_level + pay_pts + company["quality"] + fresh_score(job.posted)
+    return {
+        "score": score,
+        "company": job.company,
+        "type": company["type"] + (f"; {company['funding']}" if company.get("funding") else ""),
+        "title": job.title.strip(),
+        "location": mode,
+        "exp_asked": f"{years}+ yrs" if years is not None else "not stated",
+        "exp_snippet": snippet,
+        "pay": pay_txt,
+        "source": job.meta.get("source", "company careers/ATS"),
+        "pay_conf": pay_conf,
+        "stack": ", ".join(hits[:8]),
+        "gaps": ", ".join(gaps) or "none obvious",
+        "url": job.url,
+        "posted": job.posted.date().isoformat() if job.posted else "unknown",
+        "listed_open": "yes (live on ATS)",
+        "older_than_window": "yes" if stale else "",
+        "breakdown": f"stack {s_stack}/35, level {s_level}/20, pay {pay_pts}/20, company {company['quality']}/15, fresh {fresh_score(job.posted)}/10",
+    }, ""
+
+
+# ---------------------------------------------------------------- main
+
+RAW = OUT / "raw"  # one file per source, so a slow or failed source never blocks or empties the others
+EVAL_LOCK = threading.Lock()
+
+
+def raw_path(name):
+    return RAW / (re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-") + ".json")
+
+
+def load_raw(name):
+    p = raw_path(name)
+    if not p.exists():
+        return [], None
+    d = json.loads(p.read_text())
+    return [Job(**j | {"posted": parse_ts(j["posted"])}) for j in d["jobs"]], d
+
+
+def save_raw(name, jobs, note=""):
+    RAW.mkdir(parents=True, exist_ok=True)
+    raw_path(name).write_text(json.dumps({"source": name, "fetched_at": NOW.isoformat(timespec="seconds"), "note": note,
+                                          "jobs": [asdict(j) | {"posted": j.posted.isoformat() if j.posted else None} for j in jobs]}))
+
+
+def with_previous(name, fresh):
+    """Fresh jobs topped up with the source's previous jobs that weren't seen again (yet)."""
+    old, _ = load_raw(name)
+    have = {j.url for j in fresh}
+    return fresh + [j for j in old if j.url not in have]
+
+
+def crawl(company, ctx):
+    """Fetch one source and save its raw file. LinkedIn sources checkpoint every few dozen postings:
+    the raw file (fresh + not-yet-refreshed previous jobs) is saved and the shortlist and dashboard
+    are rebuilt, so results appear while LinkedIn is still running."""
+    jobs, err = [], None
+    is_li = company["ats"] == "linkedin"
+    try:
+        for job in FETCHERS[company["ats"]](company):
+            jobs.append(job)
+            if is_li and len(jobs) % PROFILE["linkedin"]["checkpoint_every"] == 0:
+                checkpoint(company, jobs, ctx)
+    except Exception as e:  # one broken board should not kill the run; keep what it fetched before failing
+        err = f"{type(e).__name__}: {str(e)[:120]}"
+    if is_li:
+        # LinkedIn searches only part of the bank per run (rotation), so keep earlier postings that weren't
+        # seen again, as long as they're still inside the freshness window.
+        cutoff = NOW - timedelta(days=ctx["max_age"])
+        fresh = {j.url for j in jobs}
+        merged = [j for j in with_previous(company["name"], jobs) if j.url in fresh or (j.posted and j.posted >= cutoff)]
+        save_raw(company["name"], merged, f"{err} — {len(jobs)} fresh + {len(merged) - len(jobs)} earlier" if err else "")
+    elif err:
+        merged = with_previous(company["name"], jobs)
+        save_raw(company["name"], merged, f"{err} — {len(jobs)} fresh + {len(merged) - len(jobs)} from previous crawl")
+    else:
+        save_raw(company["name"], jobs)  # a board's own listing is authoritative: anything missing has closed
+    if is_li:
+        checkpoint(company, None, ctx)
+    print(f"{company['name']:<22} {len(jobs):>4} fetched{'  ERROR ' + err if err else ''}", file=sys.stderr, flush=True)
+    return company["name"], err
+
+
+def checkpoint(company, jobs, ctx):
+    with EVAL_LOCK:
+        if jobs is not None:
+            save_raw(company["name"], with_previous(company["name"], jobs), "in progress")
+        LI_DETAILS_FILE.write_text(json.dumps(LI_DETAILS))
+        state = ctx["sweep_state"]
+        state.update({norm(n): NOW.strftime("%Y-%m-%d") for n in company.get("searched", [])})
+        (OUT / "sweep-state.json").write_text(json.dumps(state, indent=0))
+        evaluate_all(ctx, quiet=jobs is not None)
+
+
+def write_bank(companies, activity, direct, sweep):
+    """The company bank: every company we track, whether or not it is hiring today, with run history,
+    so quiet companies stay on the watchlist and a company that starts hiring again stands out."""
+    stamp = NOW.strftime("%Y-%m-%d")
+    hist_file = OUT / "bank-history.json"
+    hist = json.loads(hist_file.read_text()) if hist_file.exists() else {}
+    swept = {norm(n) for n in sweep}
+    tracked = {norm(c["name"]): c for c in TIERS["known"]}
+    tracked.update({norm(c["name"]): c for c in companies if c["ats"] != "linkedin"})
+    for name, act in activity.items():  # companies discovered this run (not yet in tiers.json)
+        if norm(name) not in tracked and act["leads"]:
+            tracked[norm(name)] = {"name": name, "type": "Discovered via LinkedIn — add to tiers.json", "quality": 0,
+                                   "pay": "unclear", "pay_note": "not yet checked"}
+    rows = []
+    for key, c in tracked.items():
+        act = activity.get(c["name"], {"seen": 0, "fitting": 0, "leads": 0})
+        h = hist.setdefault(key, {"name": c["name"], "runs": {}})
+        h["runs"][stamp] = [act["seen"], act["fitting"]]
+        fit_dates = sorted(d for d, (_, f) in h["runs"].items() if f)
+        before = [d for d in fit_dates if d < stamp]
+        status = ("hiring now (new since last run)" if act["fitting"] and not before and len(h["runs"]) > 1 else
+                  "hiring now" if act["fitting"] else
+                  "pay unverified — check levels.fyi" if act["leads"] else
+                  "quiet — keep watching" if c.get("pay") != "below" else "pay below bar")
+        rows.append({"company": c["name"], "type": c.get("type", ""), "pay": c.get("pay", ""), "pay_note": c.get("pay_note", ""),
+                     "covered_by": "own job board" if key in direct else "LinkedIn company sweep" if key in swept else "LinkedIn generic search only",
+                     "eng_postings_seen_today": act["seen"], "fitting_today": act["fitting"], "leads_today": act["leads"],
+                     "last_date_with_fitting_role": fit_dates[-1] if fit_dates else "never (so far)", "status": status})
+    hist_file.write_text(json.dumps(hist, indent=0))
+    rows.sort(key=lambda r: (-r["fitting_today"], -r["leads_today"], r["company"].lower()))
+    with open(OUT / f"company-bank-{stamp}.csv", "w", newline="") as f:
+        w = csv.DictWriter(f, list(rows[0].keys()))
+        w.writeheader()
+        w.writerows(rows)
+
+
+def build_context(args):
+    companies = json.loads((ROOT / "companies.json").read_text())["companies"]
+    excluded = [x.lower() for x in PROFILE["exclude_companies"]]
+    companies = [c for c in companies if c["name"].lower() not in excluded]
+
+    # Pay evidence gathered into tiers.json also applies to companies crawled from their own boards.
+    evidence = {norm(c["name"]): c for c in TIERS["known"] if c.get("pay") in ("below", "unclear") or "levels.fyi" in c.get("pay_note", "").lower()}
+    for c in companies:
+        e = evidence.get(norm(c["name"]))
+        if e:
+            c.update({k: e[k] for k in ("pay", "pay_note", "below_title") if k in e})
+    direct = {norm(c["name"]) for c in companies if c["ats"] != "linkedin"}
+    sweep = sorted({c["name"] for c in TIERS["known"]
+                    if norm(c["name"]) not in direct and c.get("pay") in ("likely", "unclear")
+                    and (c.get("pay") == "likely" or c.get("quality", 0) >= PROFILE["linkedin"]["company_sweep"]["min_quality"])},
+                   key=norm)
+    sweep = list({norm(n): n for n in sweep}.values())  # one search per company, not per alias
+    # Rotating sweep: LinkedIn rate-limits unsigned clients, so each run searches a budget of companies.
+    # Companies active last run come first, then never-searched ones, then the least recently searched,
+    # higher quality first within each group, so the whole bank is covered every couple of runs.
+    state_file = OUT / "sweep-state.json"
+    state = json.loads(state_file.read_text()) if state_file.exists() else {}
+    hist_file = OUT / "bank-history.json"
+    hist = json.loads(hist_file.read_text()) if hist_file.exists() else {}
+    def active(n):
+        runs = hist.get(norm(n), {}).get("runs", {})
+        return bool(runs) and runs[max(runs)][1] > 0
+    quality = {norm(c["name"]): c.get("quality", 0) for c in TIERS["known"]}
+    sweep.sort(key=lambda n: (not active(n), norm(n) in state, state.get(norm(n), ""), -quality.get(norm(n), 0)))
+    sweep = sweep[:PROFILE["linkedin"]["company_sweep"]["companies_per_run"]]
+    for c in companies:
+        if c["ats"] == "linkedin":
+            c["skip_companies"] = direct
+            if c.get("mode") == "sweep":
+                c["sweep_companies"] = sweep
+    lookup = {norm(c["name"]): c for c in TIERS["known"]}
+    lookup.update({norm(c["name"]): c for c in companies})
+    return {"companies": companies, "direct": direct, "sweep": sweep, "lookup": lookup, "sweep_state": state,
+            "max_age": args.max_age}
+
+
+def evaluate_all(ctx, quiet=False):
+    """Score every source's latest raw file and write the shortlist, leads, rejected, company bank,
+    report table and dashboard. Fast: no network, so it can run after every LinkedIn checkpoint."""
+    companies, lookup, direct = ctx["companies"], ctx["lookup"], ctx["direct"]
+
+    def resolve(name):
+        n = norm(name)
+        if n in lookup:
+            return lookup[n]
+        hit = next((v for k, v in lookup.items() if len(k) > 3 and (n.startswith(k) or k.startswith(n))), None)
+        return hit or {"name": name, "type": "Unknown — check stage/funding", "quality": 8, "pay": "unclear",
+                       "pay_note": "company not in tiers.json"}
+
+    keep, leads, rejected, errors, seen_urls = [], [], [], [], set()
+    activity = collections.defaultdict(lambda: {"seen": 0, "fitting": 0, "leads": 0})
+    for source in companies:
+        jobs, meta = load_raw(source["name"])
+        if meta and meta.get("note"):
+            errors.append(f"{source['name']}: {meta['note']} (fetched {meta['fetched_at']})")
+        for job in jobs:
+            if job.url in seen_urls or not in_india(job.location + (" india" if job.remote and "india" in job.text.lower()[:400] else "")):
+                continue
+            seen_urls.add(job.url)
+            company = source
+            if source["ats"] == "linkedin":
+                company = resolve(job.company)
+                if norm(company["name"]) in direct or is_excluded_company(job.company):
+                    continue  # already covered by the company's own board, or a services/staffing firm
+            row, why = evaluate(job, company, ctx["max_age"])
+            act = activity[company["name"] if company.get("pay") != "unclear" or norm(company["name"]) in lookup else job.company]
+            act["seen"] += 1
+            act["fitting"] += bool(row) and row["pay_conf"] != "Unverified"
+            act["leads"] += bool(row) and row["pay_conf"] == "Unverified"
+            if row and source["ats"] == "linkedin":  # both LinkedIn passes
+                row["score"] -= 3  # aggregator link, not the company's own page
+                row["company"] = job.company
+            if row and row["pay_conf"] == "Unverified":
+                leads.append(row)
+            elif row:
+                keep.append(row)
+            elif why != "title/level":
+                rejected.append({"company": job.company, "title": job.title, "location": job.location, "reason": why, "url": job.url})
+
+    write_bank(companies, activity, direct, ctx["sweep"])
+    keep.sort(key=lambda r: (-r["score"], r["posted"]))
+    groups = {}
+    for r in keep:
+        key = (r["company"], re.sub(r"\W+", " ", r["title"].lower()).strip(), r["location"])
+        if key in groups:
+            groups[key]["reqs"] += 1
+            groups[key]["other_links"] += " " + r["url"]
+        else:
+            groups[key] = r | {"reqs": 1, "other_links": ""}
+    keep = list(groups.values())
+
+    # NEW = first seen today. Stored per URL with its first-seen date, so rebuilding several times
+    # in one day (LinkedIn checkpoints, --rescore) doesn't reset the flag.
+    stamp = NOW.strftime("%Y-%m-%d")
+    seen_file = OUT / "seen.json"
+    first_seen = json.loads(seen_file.read_text()) if seen_file.exists() else {}
+    if isinstance(first_seen, list):  # older format: plain list of URLs
+        first_seen = {u: "2026-11-05" for u in first_seen}
+    for r in keep + leads:
+        first_seen.setdefault(r["url"], stamp)
+        r["new"] = "NEW" if first_seen[r["url"]] == stamp and len(set(first_seen.values())) > 1 else ""
+    seen_file.write_text(json.dumps(first_seen, indent=0))
+
+    cols = list(keep[0].keys()) if keep else []
+    with open(OUT / f"jobs-{stamp}.csv", "w", newline="") as f:
+        w = csv.DictWriter(f, cols)
+        w.writeheader()
+        w.writerows(keep)
+    leads.sort(key=lambda r: -r["score"])
+    with open(OUT / f"leads-unverified-pay-{stamp}.csv", "w", newline="") as f:
+        w = csv.DictWriter(f, list(leads[0].keys()) if leads else ["company"])
+        w.writeheader()
+        w.writerows(leads)
+    with open(OUT / f"rejected-{stamp}.csv", "w", newline="") as f:
+        w = csv.DictWriter(f, ["company", "title", "location", "reason", "url"])
+        w.writeheader()
+        w.writerows(rejected)
+
+    md = [f"# Job crawl {stamp}", "", f"{len(keep)} roles kept, {len(leads)} leads with unverified pay (see leads CSV), {len(rejected)} rejected after title filter.", "",
+          "| # | Company | Type / stage | Role | Location / mode | Exp asked | Pay + confidence | Key stack | Score | Gaps | Link | Posted |",
+          "|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    for i, r in enumerate(keep, 1):
+        md.append(f"| {i} | {r['company']} | {r['type']} | {r['title']}{f" ({r['reqs']} reqs)" if r['reqs'] > 1 else ""} {r['new']} | {r['location']} | {r['exp_asked']} | {r['pay']} | {r['stack']} | {r['score']} | {r['gaps']} | [link]({r['url']}) | {r['posted']} |")
+    if errors:
+        md += ["", "## Sources with problems", ""] + [f"- {e}" for e in errors]
+    (OUT / f"jobs-{stamp}.md").write_text("\n".join(md) + "\n")
+
+    import build_dashboard, report  # local modules; imported here to keep crawl.py usable on its own
+    report.main([])
+    build_dashboard.main()
+    if not quiet:
+        print(f"\n{len(keep)} roles, {len(leads)} leads, {len(rejected)} rejected, {len(errors)} sources with problems "
+              f"-> dashboard.html rebuilt", file=sys.stderr, flush=True)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--sources", choices=("fast", "linkedin", "all"), default="all",
+                    help="fast = company job boards (~3 min); linkedin = LinkedIn passes (slow, rebuilds as it goes); all = fast then linkedin")
+    ap.add_argument("--only", help="comma-separated company names to re-crawl")
+    ap.add_argument("--max-age", type=int, default=PROFILE["max_age_days"])
+    ap.add_argument("--rescore", action="store_true", help="re-score the saved raw data (after editing tiers.json/profile.json) without fetching")
+    args = ap.parse_args()
+    ctx = build_context(args)
+    if not args.rescore:
+        sources = [c for c in ctx["companies"] if c["name"].lower() in {x.strip().lower() for x in args.only.split(",")}] \
+            if args.only else ctx["companies"]
+        fast = [c for c in sources if c["ats"] != "linkedin"]
+        slow = [c for c in sources if c["ats"] == "linkedin"]
+        if args.sources in ("fast", "all") and fast:
+            with ThreadPoolExecutor(10) as pool:
+                list(pool.map(lambda c: crawl(c, ctx), fast))
+            evaluate_all(ctx)  # results from company boards are usable now; LinkedIn data is the previous crawl's
+        if args.sources in ("linkedin", "all") and slow:
+            with ThreadPoolExecutor(len(slow)) as pool:  # both passes share one throttle, so this stays polite
+                list(pool.map(lambda c: crawl(c, ctx), slow))
+        return
+    evaluate_all(ctx)
+
+
+if __name__ == "__main__":
+    main()
