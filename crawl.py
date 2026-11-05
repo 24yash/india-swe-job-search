@@ -262,6 +262,7 @@ LI_DETAILS = json.loads(LI_DETAILS_FILE.read_text()) if LI_DETAILS_FILE.exists()
 LI_LOCK = threading.Lock()
 LI_STATE = {"last": 0.0, "strikes": 0}
 LI_SEEN = set()  # job ids already handled this run, shared by both LinkedIn passes
+DEEP = False  # --deep: add per-city role searches and a much bigger company sweep (slow; LinkedIn rate-limits)
 
 
 class RateLimited(Exception):
@@ -314,13 +315,15 @@ def linkedin(c):
     cfg = PROFILE["linkedin"]
     window = f"r{PROFILE['max_age_days'] * 86400}"
     skip = c.get("skip_companies", set())
+    mode = cfg["deep"] if DEEP else {}
     if c.get("sweep_companies") is None:
         searches = [({"keywords": q, "location": "India", "f_TPR": window, "f_E": "2,3,4"}, cfg["max_results_per_query"], None)
                     for q in cfg["queries"]]
-        searches += [({"keywords": q, "location": loc, "f_TPR": window, "f_E": "2,3,4"}, cfg["max_results_per_city"], None)
-                     for loc in cfg["locations"] if loc != "India" for q in cfg["city_queries"]]
+        searches += [({"keywords": q, "location": loc, "f_TPR": window, "f_E": "2,3,4"}, mode["max_results_per_city"], None)
+                     for loc in mode.get("cities", []) for q in mode["city_queries"]]
     else:  # one search per company: OR-batching lets the biggest poster crowd out the rest
-        searches = [({"keywords": n, "location": "India", "f_TPR": window}, cfg["company_sweep"]["pages"] * 25, {norm(n)})
+        pages = cfg["company_sweep"]["deep_pages" if DEEP else "pages"]
+        searches = [({"keywords": n, "location": "India", "f_TPR": window}, pages * 25, {norm(n)})
                     for n in c["sweep_companies"]]
     seen = LI_SEEN
     c["searched"] = []
@@ -631,8 +634,12 @@ def build_context(args):
         runs = hist.get(norm(n), {}).get("runs", {})
         return bool(runs) and runs[max(runs)][1] > 0
     quality = {norm(c["name"]): c.get("quality", 0) for c in TIERS["known"]}
-    sweep.sort(key=lambda n: (not active(n), norm(n) in state, state.get(norm(n), ""), -quality.get(norm(n), 0)))
-    sweep = sweep[:PROFILE["linkedin"]["company_sweep"]["companies_per_run"]]
+    # Light runs: companies active last run, then top-tier ones (quality >= 13: the big employers with no
+    # readable job board), each group least-recently-searched first; deep runs rotate through the whole bank.
+    tier = PROFILE["linkedin"]["company_sweep"]["top_tier_quality"]
+    sweep.sort(key=lambda n: (not active(n), not DEEP and quality.get(norm(n), 0) < tier, norm(n) in state,
+                              state.get(norm(n), ""), -quality.get(norm(n), 0)))
+    sweep = sweep[:PROFILE["linkedin"]["company_sweep"]["deep_companies_per_run" if DEEP else "companies_per_run"]]
     for c in companies:
         if c["ats"] == "linkedin":
             c["skip_companies"] = direct
@@ -749,8 +756,12 @@ def main():
                     help="fast = company job boards (~3 min); linkedin = LinkedIn passes (slow, rebuilds as it goes); all = fast then linkedin")
     ap.add_argument("--only", help="comma-separated company names to re-crawl")
     ap.add_argument("--max-age", type=int, default=PROFILE["max_age_days"])
+    ap.add_argument("--deep", action="store_true",
+                    help="LinkedIn deep mode: per-city searches + big company sweep (hours; occasional use)")
     ap.add_argument("--rescore", action="store_true", help="re-score the saved raw data (after editing tiers.json/profile.json) without fetching")
     args = ap.parse_args()
+    global DEEP
+    DEEP = args.deep
     ctx = build_context(args)
     if not args.rescore:
         sources = [c for c in ctx["companies"] if c["name"].lower() in {x.strip().lower() for x in args.only.split(",")}] \

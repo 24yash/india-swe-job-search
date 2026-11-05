@@ -35,6 +35,9 @@
   },
   "max_min_years": 3,
   "linkedin": {
+    "_comment": "Light mode (default) is India-wide role searches plus a small company sweep: ~5-15 min, and where nearly all LinkedIn-only results come from. --deep adds per-city searches and a big sweep (hours).",
+    "seconds_between_requests": 1.5,
+    "checkpoint_every": 40,
     "queries": [
       "backend engineer",
       "software engineer java",
@@ -48,32 +51,33 @@
       "full stack engineer java",
       "software engineer backend"
     ],
-    "locations": [
-      "India",
-      "Bengaluru",
-      "Hyderabad",
-      "Pune",
-      "Gurugram",
-      "Noida",
-      "Chennai",
-      "Mumbai"
-    ],
     "max_results_per_query": 100,
     "company_sweep": {
       "min_quality": 10,
-      "pages": 2,
-      "companies_per_run": 180,
-      "_comment": "One LinkedIn search per bank company, rotating: companies_per_run per run, active and least-recently-searched first."
+      "top_tier_quality": 13,
+      "companies_per_run": 40,
+      "pages": 1,
+      "deep_companies_per_run": 180,
+      "deep_pages": 2
     },
-    "max_results_per_city": 50,
-    "seconds_between_requests": 1.5,
-    "city_queries": [
-      "software engineer java",
-      "backend engineer",
-      "SDE 2",
-      "software development engineer"
-    ],
-    "checkpoint_every": 40
+    "deep": {
+      "cities": [
+        "Bengaluru",
+        "Hyderabad",
+        "Pune",
+        "Gurugram",
+        "Noida",
+        "Chennai",
+        "Mumbai"
+      ],
+      "city_queries": [
+        "software engineer java",
+        "backend engineer",
+        "SDE 2",
+        "software development engineer"
+      ],
+      "max_results_per_city": 50
+    }
   },
   "min_pay_lpa": 20,
   "max_age_days": 30,

@@ -26,9 +26,9 @@ Write the answers into `profile.json`: `title.include` / `title.exclude`, `max_m
 ```
 
 - **Fast phase (~1 min):** crawls every company job board, then rebuilds `output/jobs-<date>.csv`, the leads, the company bank and `dashboard.html`.
-- **LinkedIn phase:** starts in the background (20–40 min). It rebuilds the dashboard every ~40 postings; progress is in `output/linkedin.log`.
+- **LinkedIn phase:** starts in the background (light mode, ~5–15 min). It rebuilds the dashboard every ~40 postings; progress is in `output/linkedin.log`.
 
-**Don't wait for LinkedIn before showing the user results.** If LinkedIn rate-limits (429), it stops itself and keeps the earlier data. That's expected; don't retry straight away.
+Use `python3 crawl.py --sources linkedin --deep` (hours) only if the user asks for an exhaustive sweep. **Don't wait for LinkedIn before showing the user results.** If LinkedIn rate-limits (429), it stops itself and keeps the earlier data. That's expected; don't retry straight away.
 
 ## 3. (Optional, recommended) Pay evidence for new companies
 

@@ -1,7 +1,7 @@
 #!/bin/zsh
 # Refresh the job data and dashboard in two speeds:
 #   1. company job boards (~1 min), then the shortlist and dashboard are rebuilt;
-#   2. LinkedIn in the background (20-40 min). It rebuilds the dashboard every ~40 postings, so just
+#   2. LinkedIn in the background (light mode, ~5-15 min; add --deep to the crawl for an hours-long full sweep). It rebuilds the dashboard every ~40 postings, so just
 #      reload dashboard.html to see it fill in. Progress goes to output/linkedin.log.
 # Your Applied/comment marks live in the browser and carry over (keyed by job link, plus a
 # company + title + location match for reposts).

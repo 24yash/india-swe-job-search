@@ -264,8 +264,8 @@
 "name": "Tower Research Capital",
 "runs": {
 "2026-11-05": [
-0,
-0
+3,
+3
 ]
 }
 },
@@ -273,8 +273,8 @@
 "name": "Goldman Sachs",
 "runs": {
 "2026-11-05": [
-1,
-1
+4,
+3
 ]
 }
 },
@@ -318,8 +318,8 @@
 "name": "Rippling",
 "runs": {
 "2026-11-05": [
-0,
-0
+4,
+4
 ]
 }
 },
@@ -912,8 +912,8 @@
 "name": "NetApp",
 "runs": {
 "2026-11-05": [
-1,
-1
+2,
+2
 ]
 }
 },
@@ -921,7 +921,7 @@
 "name": "Hewlett Packard Enterprise",
 "runs": {
 "2026-11-05": [
-2,
+3,
 0
 ]
 }
@@ -1029,7 +1029,7 @@
 "name": "KLA",
 "runs": {
 "2026-11-05": [
-0,
+1,
 0
 ]
 }
@@ -1209,8 +1209,8 @@
 "name": "DocuSign",
 "runs": {
 "2026-11-05": [
-2,
-1
+6,
+3
 ]
 }
 },
@@ -1227,8 +1227,8 @@
 "name": "CrowdStrike",
 "runs": {
 "2026-11-05": [
-1,
-1
+3,
+2
 ]
 }
 },
@@ -1263,8 +1263,8 @@
 "name": "Cloudflare",
 "runs": {
 "2026-11-05": [
-1,
-1
+2,
+2
 ]
 }
 },
@@ -1326,7 +1326,7 @@
 "name": "Informatica",
 "runs": {
 "2026-11-05": [
-0,
+1,
 0
 ]
 }
@@ -1569,7 +1569,7 @@
 "name": "Societe Generale",
 "runs": {
 "2026-11-05": [
-2,
+3,
 0
 ]
 }
@@ -1776,7 +1776,7 @@
 "name": "TransUnion",
 "runs": {
 "2026-11-05": [
-0,
+1,
 0
 ]
 }
@@ -1857,7 +1857,7 @@
 "name": "Graviton Research Capital",
 "runs": {
 "2026-11-05": [
-0,
+1,
 0
 ]
 }
@@ -1983,8 +1983,8 @@
 "name": "Citadel Securities",
 "runs": {
 "2026-11-05": [
-0,
-0
+3,
+3
 ]
 }
 },
@@ -3324,8 +3324,8 @@
 "name": "JPMorgan Chase",
 "runs": {
 "2026-11-05": [
-9,
-9
+10,
+10
 ]
 }
 },
@@ -3342,8 +3342,8 @@
 "name": "Prime Video & Amazon MGM Studios",
 "runs": {
 "2026-11-05": [
-2,
-2
+4,
+4
 ]
 }
 },
@@ -3351,8 +3351,8 @@
 "name": "Amazon Web Services (AWS)",
 "runs": {
 "2026-11-05": [
-1,
-1
+2,
+2
 ]
 }
 },
@@ -3450,7 +3450,7 @@
 "name": "TMUS Global Solutions",
 "runs": {
 "2026-11-05": [
-1,
+2,
 1
 ]
 }
@@ -3495,7 +3495,7 @@
 "name": "BNP Paribas",
 "runs": {
 "2026-11-05": [
-4,
+5,
 0
 ]
 }
@@ -3711,7 +3711,7 @@
 "name": "UKG",
 "runs": {
 "2026-11-05": [
-0,
+1,
 0
 ]
 }
@@ -3774,7 +3774,7 @@
 "name": "Nokia",
 "runs": {
 "2026-11-05": [
-0,
+1,
 0
 ]
 }
@@ -4089,7 +4089,7 @@
 "name": "Schneider Electric",
 "runs": {
 "2026-11-05": [
-1,
+2,
 0
 ]
 }
@@ -4413,7 +4413,7 @@
 "name": "Amagi",
 "runs": {
 "2026-11-05": [
-0,
+1,
 0
 ]
 }
@@ -5430,7 +5430,7 @@
 "name": "Jitterbit",
 "runs": {
 "2026-11-05": [
-3,
+4,
 0
 ]
 }
@@ -5547,7 +5547,7 @@
 "name": "PAR Technology",
 "runs": {
 "2026-11-05": [
-3,
+4,
 0
 ]
 }
@@ -5610,7 +5610,7 @@
 "name": "Onit India",
 "runs": {
 "2026-11-05": [
-1,
+2,
 0
 ]
 }
@@ -5826,7 +5826,7 @@
 "name": "Nationwide",
 "runs": {
 "2026-11-05": [
-3,
+4,
 0
 ]
 }
@@ -6013,6 +6013,249 @@
 },
 "vena": {
 "name": "Vena Solutions",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"logile": {
+"name": "Logile, Inc.",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"techdataapac": {
+"name": "Tech Data APAC",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"vontier": {
+"name": "Vontier",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"teknophileservices": {
+"name": "Teknophile Services Private Limited",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"talentrabbit": {
+"name": "TalentRabbit",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"trainingbasket": {
+"name": "Training Basket",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"deqode": {
+"name": "Deqode",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"dbsbank": {
+"name": "DBS Bank",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"proofpoint": {
+"name": "Proofpoint",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"meril": {
+"name": "Meril",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"cybrain": {
+"name": "Cybrain Software Solutions Pvt.Ltd",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"alacriti": {
+"name": "Alacriti",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"exl": {
+"name": "EXL",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"ion": {
+"name": "ION",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"instantdm": {
+"name": "InstantDM",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"mizuho": {
+"name": "Mizuho",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"charlesriverlaboratories": {
+"name": "Charles River Laboratories",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"mitratech": {
+"name": "Mitratech",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"truveta": {
+"name": "Truveta",
+"runs": {
+"2026-11-05": [
+2,
+0
+]
+}
+},
+"anaplan": {
+"name": "Anaplan",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"wisdomai": {
+"name": "WisdomAI",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"massmutual": {
+"name": "MassMutual India",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"acura": {
+"name": "ACURA SOLUTIONS LTD",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"cargill": {
+"name": "Cargill",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"switsdigital": {
+"name": "SWITS DIGITAL Private Limited",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"youtrip": {
+"name": "YouTrip",
+"runs": {
+"2026-11-05": [
+1,
+0
+]
+}
+},
+"vcommission": {
+"name": "vCommission",
 "runs": {
 "2026-11-05": [
 1,

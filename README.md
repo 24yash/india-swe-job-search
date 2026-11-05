@@ -44,7 +44,8 @@ To use your own requirements:
    ./refresh.sh
    ```
    - About 1 minute: every company job board is crawled, and the shortlist and dashboard are rebuilt.
-   - Then LinkedIn runs in the background (20–40 min) and rebuilds the dashboard every ~40 postings. Progress: `tail -f output/linkedin.log`.
+   - Then LinkedIn runs in the background (light mode, ~5–15 min) and rebuilds the dashboard every ~40 postings. Progress: `tail -f output/linkedin.log`.
+   - For an occasional exhaustive pass (hours), run `python3 crawl.py --sources linkedin --deep`.
 3. Open or reload `dashboard.html`; reload again later to see the LinkedIn results. Your marks carry over (see *Dashboard* below).
 
 ## Quick start (AI agent)
@@ -65,7 +66,8 @@ profile.json  companies.json  tiers.json          ← your criteria, boards craw
         ▼            ▼             ▼
    crawl.py  ── fetch → normalise → resolve company → filter → score → dedupe
         │      --sources fast      company job boards, 10 in parallel (~1 min)
-        │      --sources linkedin  LinkedIn passes, throttled; re-scores + rebuilds every ~40 postings
+        │      --sources linkedin  LinkedIn, throttled; re-scores + rebuilds every ~40 postings
+        │      --deep              LinkedIn per-city searches + big company sweep (hours; occasional)
         │      --rescore           re-score saved data only (~2 s), e.g. after editing tiers.json
         │
         ├─ output/jobs-<date>.csv              roles passing every filter, ranked
@@ -84,7 +86,7 @@ profile.json  companies.json  tiers.json          ← your criteria, boards craw
 | Greenhouse, Lever, Ashby, SmartRecruiters public APIs | Stripe, Databricks, Rubrik, MongoDB, Razorpay, Groww, CRED, Meesho, Snowflake, Sarvam, Freshworks, Swiggy… |
 | Workday search API | Cisco, Salesforce, Adobe, eBay, Mastercard, Target, PayPal… |
 | Amazon, Microsoft, Atlassian, Google careers | their own endpoints |
-| LinkedIn public guest search (no login) | role keywords across India and 7 cities, plus a **rotating per-company sweep** of the bank (Flipkart, Uber, JPMorgan, Walmart… which have no readable board) |
+| LinkedIn public guest search (no login) | **light (default):** role keywords across India + a 40-company sweep (companies active last run and top-tier employers with no readable board: JPMorgan, Goldman, Uber, Flipkart, Walmart…). **`--deep`:** adds 7-city searches and a 180-company rotating sweep |
 
 Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `--workday <tenant>`). Put hits in `companies.json`; otherwise add it to `tiers.json` and the LinkedIn sweep will cover it.
 
@@ -132,7 +134,8 @@ Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `-
 - **LinkedIn limits unsigned clients** (HTTP 429), which is why it runs separately and slowly:
   - All LinkedIn calls share one throttle (`seconds_between_requests`).
   - The run stops LinkedIn after four 429s in a row.
-  - Each run searches a rotating `companies_per_run` slice of the bank; postings from companies not searched this time are kept while they're inside the freshness window.
+  - Light mode is the default because it's where nearly all LinkedIn value comes from. In a measured run, LinkedIn supplied 6 of the top 10 roles and 22 companies with no readable board, almost all of it from the India-wide role searches; the deep extras added a handful of roles for hours of crawling.
+  - The company sweep searches a slice of the bank each run; postings from companies not searched this time are kept while they're inside the freshness window.
   - Job descriptions are cached (`output/linkedin-details.json`), so later runs are faster.
 
   Don't lower the throttle or run LinkedIn crawls back to back.
