@@ -613,7 +613,7 @@ def build_context(args):
     companies = [c for c in companies if c["name"].lower() not in excluded]
 
     # Pay evidence gathered into tiers.json also applies to companies crawled from their own boards.
-    evidence = {norm(c["name"]): c for c in TIERS["known"] if c.get("pay") in ("below", "unclear") or "levels.fyi" in c.get("pay_note", "").lower()}
+    evidence = {norm(c["name"]): c for c in TIERS["known"]}  # the bank is the record of pay research
     for c in companies:
         e = evidence.get(norm(c["name"]))
         if e:

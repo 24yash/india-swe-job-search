@@ -610,8 +610,8 @@
    "name": "Optum",
    "type": "Healthcare tech GCC",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Levels.fyi India GL26 18.7, GL27 27.6 LPA — level-dependent"
+   "pay": "below",
+   "pay_note": "Below bar at 0-3 yrs: Levels.fyi India GL26 (3-4 yrs) 18.7 LPA; GL27 27.6 needs 6-7 yrs"
   },
   {
    "name": "Freshworks",
@@ -659,9 +659,8 @@
    "name": "Intel",
    "type": "Semiconductor MNC",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "Levels.fyi India Grade 3 19.7, Grade 5 21.6 LPA — borderline",
-   "below_title": "\\bgrade 3\\b"
+   "pay": "below",
+   "pay_note": "Below bar at 0-3 yrs: Levels.fyi India Grade 3 (2-3 yrs) 19.7, Grade 5 (3-4 yrs) 21.6 LPA; AmbitionBox SDE at 3 yrs 14-17 LPA"
   },
   {
    "name": "Samsung R&D Institute",
@@ -1403,15 +1402,15 @@
    "name": "TransUnion",
    "type": "Data/fintech",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Levels.fyi India L2 14.1, L3 21.0 LPA — level-dependent"
+   "pay": "below",
+   "pay_note": "Below bar at 0-3 yrs: Levels.fyi India L2 (1-4 yrs) 14.1 LPA"
   },
   {
    "name": "Equifax",
    "type": "Data/fintech",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Levels.fyi India P2 18.1, P3 33.0 LPA — depends on level"
+   "pay": "below",
+   "pay_note": "Below bar: Levels.fyi India P2 (SE II) 18.1 LPA"
   },
   {
    "name": "FICO",
@@ -1782,7 +1781,7 @@
    "type": "E-com checkout fintech",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "AmbitionBox SE II 11-25 LPA (low confidence); self-reported CTCs 27-39 LPA — borderline"
   },
   {
    "name": "Simpl",
@@ -2357,8 +2356,8 @@
    "name": "Hevo Data",
    "type": "Data SaaS",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "AmbitionBox SDE-1 22.3-28.5 LPA (<2 yrs, 2 reports); LeetCode SDE-2 posts 34 LPA base"
   },
   {
    "name": "e6data",
@@ -2863,7 +2862,7 @@
    "type": "Global product",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "AmbitionBox SDE-2 at 3 yrs 14.4-18.4 LPA; Jio SDE-2 23-29.5 LPA — borderline"
   },
   {
    "name": "Spotify",
@@ -4018,7 +4017,7 @@
    "type": "SaaS",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "No usable salary data found"
   },
   {
    "name": "ScyllaDB",
@@ -4185,8 +4184,8 @@
    "name": "Boeing",
    "type": "Aerospace engineering centre",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Levels.fyi India L2 18.3, L3 32.6 LPA — level-dependent"
+   "pay": "below",
+   "pay_note": "Below bar at 0-3 yrs: Levels.fyi India L1 (2-3 yrs) 12.7, L2 (4-5 yrs) 18.3 LPA; AmbitionBox Associate SE 9.5-12.9 LPA"
   },
   {
    "name": "WEX",
@@ -4306,6 +4305,69 @@
    "quality": 8,
    "pay": "below",
    "pay_note": "Levels.fyi India overall 15.1 LPA"
+  },
+  {
+   "name": "LPL Financial",
+   "type": "Wealth-management tech centre (Hyderabad)",
+   "quality": 9,
+   "pay": "below",
+   "pay_note": "Below bar: SE II listed at 12 LPA for 3-6 yrs (single listing)"
+  },
+  {
+   "name": "Avaloq",
+   "type": "Banking software (Pune)",
+   "quality": 9,
+   "pay": "below",
+   "pay_note": "Below bar: AmbitionBox Developer at 1 yr 5.9-7.5 LPA; SE 7.1-40 LPA across 1-12 yrs (7 reports)"
+  },
+  {
+   "name": "Leegality",
+   "type": "Legal-tech SaaS",
+   "quality": 9,
+   "pay": "below",
+   "pay_note": "Below bar: AmbitionBox SE 6.2-19 LPA (1-4 yrs)"
+  },
+  {
+   "name": "Volante Technologies",
+   "type": "Payments software",
+   "quality": 8,
+   "pay": "below",
+   "pay_note": "Below bar: AmbitionBox Engineer 6.8-8.6 LPA, Java Developer 5.3-7 LPA"
+  },
+  {
+   "name": "Onit",
+   "type": "Legal-tech SaaS",
+   "quality": 9,
+   "pay": "below",
+   "pay_note": "Below bar for early career: AmbitionBox SE 7.8-31 LPA (2-7 yrs, 7 reports)"
+  },
+  {
+   "name": "PUMA",
+   "type": "Retail/consumer tech centre",
+   "quality": 8,
+   "pay": "below",
+   "pay_note": "Below bar: AmbitionBox SE 9.9-12.7 LPA"
+  },
+  {
+   "name": "Syniverse",
+   "type": "Telecom tech",
+   "quality": 8,
+   "pay": "below",
+   "pay_note": "Below bar: AmbitionBox SE 4.8-15 LPA (1-7 yrs)"
+  },
+  {
+   "name": "Proofpoint",
+   "type": "Security product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Salary-site data conflicting/sparse — unverified"
+  },
+  {
+   "name": "Truveta",
+   "type": "Health-data product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No company-specific India salary data found"
   }
  ],
  "services_and_staffing": [
