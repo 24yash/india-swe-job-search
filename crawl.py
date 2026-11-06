@@ -487,12 +487,16 @@ def stack_score(text):
 def level_score(title, years):
     t = title.lower()
     if years is None:
-        if re.search(r"\b(i|1|new grad|graduate|associate)\b", t):
+        if re.search(r"\b(i|1|associate)\b", t):
             return 17
         if re.search(r"\b(ii|2)\b", t):
             return 16
         return 13
-    return {0: 18, 1: 20, 2: 19, 3: 14}.get(years, 0)
+    return {0: 17, 1: 20, 2: 19, 3: 13}.get(years, 0)  # ~1-2 years is the sweet spot; 3+ is a stretch
+
+
+def exp_band(years):
+    return "not stated" if years is None else "0–1 yrs" if years <= 1 else f"{years} yrs"
 
 
 def fresh_score(posted):
@@ -543,6 +547,9 @@ def evaluate(job, company, max_age):
         "title": job.title.strip(),
         "location": mode,
         "exp_asked": f"{years}+ yrs" if years is not None else "not stated",
+        "exp_band": exp_band(years),
+        # Sweet spot: asks at most 2 years (campus hiring is already excluded) and pay is evidenced, not guessed.
+        "sweet_spot": "yes" if years is not None and years <= 2 and pay_conf in ("Posted", "Strong evidence") else "",
         "exp_snippet": snippet,
         "pay": pay_txt,
         "source": job.meta.get("source", "company careers/ATS"),

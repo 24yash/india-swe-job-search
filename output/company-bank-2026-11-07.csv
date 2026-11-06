@@ -23,7 +23,6 @@ eBay,Global product MNC (public),likely,"Levels.fyi India SE1 median TC 21.4, SE
 Graviton Research Capital,HFT firm,likely,Levels.fyi India overall median TC 81.1 LPA (all levels),own job board,4,3,0,2026-11-07,hiring now
 IMC Trading,Global HFT/market maker (Mumbai),likely,"Tier judgement: Indian HFT firms report entry pay far above 20 LPA (Business Today, Sep 2025); no reliable per-level data",own job board,4,3,0,2026-11-07,hiring now
 Media.net,Adtech product company,likely,"Levels.fyi India SE1 19.7 LPA (below bar), higher levels above; AmbitionBox dev 18.5-21.1",LinkedIn company sweep,4,3,0,2026-11-07,hiring now
-Salesforce,Global SaaS MNC,likely,Levels.fyi India AMTS median TC 26.1 LPA,own job board,6,3,0,2026-11-07,hiring now
 Sarvam AI,Funded AI startup,likely,Well-funded AI lab,own job board,47,3,0,2026-11-07,hiring now
 Tower Research Capital,HFT firm,likely,Levels.fyi India overall median TC 72.7 LPA (all levels),own job board,3,3,0,2026-11-07,hiring now
 American Express,Global payments MNC,likely,Levels.fyi India SE II median TC 24.3 LPA,LinkedIn company sweep,2,2,0,2026-11-07,hiring now
@@ -40,6 +39,7 @@ Onehouse,Growth-stage data lakehouse startup,likely,US-funded infra startup,own 
 PhonePe,Late-stage Indian fintech,likely,Levels.fyi India SE1 median TC 28.9 LPA,LinkedIn company sweep,3,2,0,2026-11-07,hiring now
 Planview,Work-management SaaS,likely,Levels.fyi India overall median TC 32.4 LPA (all levels),LinkedIn company sweep,2,2,0,2026-11-07,hiring now
 project44,Logistics SaaS,likely,Levels.fyi India SWE median TC 44.6 LPA,own job board,2,2,0,2026-11-07,hiring now
+Salesforce,Global SaaS MNC,likely,Levels.fyi India AMTS median TC 26.1 LPA,own job board,6,2,0,2026-11-07,hiring now
 Warner Music Group,Media/entertainment tech centre,likely,Levels.fyi India overall median TC 50.8 LPA (all levels),LinkedIn company sweep,2,2,0,2026-11-07,hiring now
 Akamai,Infra product,likely,Levels.fyi India SE2 28.1 LPA median TC; SE1 19.9 below bar,LinkedIn company sweep,1,1,0,2026-11-07,hiring now
 Amazon Web Services (AWS),Global product MNC,likely,Levels.fyi L4 median TC 29.7 LPA,LinkedIn generic search only,1,1,0,2026-11-07,hiring now
@@ -63,7 +63,6 @@ Rubrik,Public data-security product,likely,Levels.fyi India L3 68.9 LPA median T
 Saviynt,Identity security SaaS,likely,Levels.fyi India overall median TC 46.3 LPA (all levels),own job board,23,1,0,2026-11-07,hiring now
 Squarepoint Capital,Quant fund,likely,Levels.fyi India Junior SE 50.0 LPA median TC,own job board,5,1,0,2026-11-07,hiring now
 StarTree,Growth-stage real-time analytics,likely,Levels.fyi India overall median TC 55.1 LPA (all levels),own job board,1,1,0,2026-11-07,hiring now
-Stripe,Late-stage private fintech,likely,Levels.fyi India L1 57.9 LPA median TC,own job board,5,1,0,2026-11-07,hiring now
 Swiggy,Indian consumer tech (listed),likely,Levels.fyi entry median TC 20.6 LPA,own job board,1,1,0,2026-11-07,hiring now
 Target,Global retail tech centre,likely,Levels.fyi L4 median TC 21.4 LPA,own job board,1,1,0,2026-11-07,hiring now
 Tekion,Late-stage auto SaaS,likely,"Levels.fyi India Associate SE 20.4, SE 23.1 LPA median TC",own job board,65,1,0,2026-11-07,hiring now
@@ -1280,6 +1279,7 @@ Stanza Living,Accel-backed startup (ISJB),unclear,not yet checked,LinkedIn gener
 Starbucks,Global product,unclear,not yet checked,LinkedIn generic search only,0,0,0,never (so far),quiet — keep watching
 State Street,Bank tech centre,below,Levels.fyi India SWE I 11.3 LPA,LinkedIn generic search only,1,0,0,never (so far),pay below bar
 STMicroelectronics,Global product,unclear,not yet checked,LinkedIn generic search only,0,0,0,never (so far),quiet — keep watching
+Stripe,Late-stage private fintech,likely,Levels.fyi India L1 57.9 LPA median TC,own job board,5,0,0,2026-11-05,quiet — keep watching
 Suburban Diagnostics,Peak XV-backed startup (ISJB),unclear,not yet checked,LinkedIn generic search only,0,0,0,never (so far),quiet — keep watching
 Sukino Continuum Care,Bessemer-backed startup (ISJB),unclear,not yet checked,LinkedIn generic search only,0,0,0,never (so far),quiet — keep watching
 Sumosave Retail Ventures,Lightspeed-backed startup (ISJB),unclear,not yet checked,LinkedIn generic search only,0,0,0,never (so far),quiet — keep watching

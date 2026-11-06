@@ -36,6 +36,7 @@ Supporting tools: `discover_ats.py` (find direct boards), `import_lists.py` (gro
 | **Pay evidence lives in `tiers.json`** | Levels.fyi blocks scripts (403), so an agent looks pay up with WebFetch and records it once; every run reuses it. Total comp, not fixed CTC. An overall-only median ≥ 30 L counts as likely; 20–30 L stays borderline (overall medians lean senior). `below_title` excludes the levels that pay below the floor (e.g. Mastercard SE-I, BlackRock Analyst). |
 | **Pay confidence on every role**: Posted › Strong (levels.fyi) › Likely (tier judgement, with the reason) › Unverified (goes to leads) | Your brief allows "Likely" if the reason is stated. Unverified roles never reach the shortlist. |
 | **Experience = the smallest "N+ years" / "N–M years" near experience words; years in the title override** | Lenient on purpose ("2+ required, 5+ preferred" counts as 2). A role with no years stated gets a neutral score, not a rejection. |
+| **Experience focus: 0–2 years is the sweet spot; campus hiring excluded** | Every role gets an experience band (0–1, 2, 3 yrs, not stated). A role is a *sweet spot* when it asks ≤ 2 years and its pay is backed by salary data (not a tier judgement). Level score: 1 yr 20, 2 yrs 19, 0 yrs 17, 3 yrs 13. New-grad, graduate, early-career, campus and fresher titles are excluded, as are descriptions that say "campus hiring/drive/placement", "graduating in …", "2026 batch". A duty like "help with campus recruitments" doesn't count (Graviton false positive, fixed with a test). |
 | **Exclusions match leading words** ("EY" matches "EY GDS", not "Honeywell"); staffing keywords match whole words anywhere | The old substring match silently dropped Disney+ Hotstar, Honeywell, Palo Alto Networks, Anthropic, Northern Trust… |
 | **Company matching: exact name, or a prefix with ≥ 5 characters** | Merges real aliases (AWS → Amazon, DeepMind → Google) without merging different companies (CRED ≠ Credgenics/CredHive). |
 | **LinkedIn duplicate = same title on the company's own board (today's listing)** | Some companies post roles on LinkedIn that their board doesn't show (e.g. Clearwater SDE-II); those are kept. |
@@ -80,7 +81,7 @@ Supporting tools: `discover_ats.py` (find direct boards), `import_lists.py` (gro
 
 - Pay figures are levels.fyi **total comp** (base + stock + bonus), not fixed CTC.
 - 17 roles from 8 companies rely on tier judgement (no public salary data): IMC, Citadel Securities, NK Securities, Sarvam, Onehouse, ClickHouse, Hevo, Urban Company.
-- 172 of ~300 shortlisted roles ask "3+ years": allowed by the brief (≤ 3), but stretch roles at ~1.5 years. Use the dashboard's experience filter.
+- ~170 of ~300 shortlisted roles ask "3+ years": allowed by the brief (≤ 3), but stretch roles at ~1.5 years. The dashboard's "Sweet spot only" filter shows the 0–2-year roles with evidenced pay.
 - Many good companies currently list only senior roles in India (e.g. Coupang 42, Celonis 27, Roku). They stay in the bank and appear when they post SDE-level roles.
 - Companies on Darwinbox, Keka or Zoho Recruit are visible only through LinkedIn.
 - LinkedIn liveness checks are budgeted; under heavy rate limiting some old postings may age out before being confirmed open.

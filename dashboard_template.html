@@ -49,6 +49,7 @@
   .muted { color: var(--muted); font-size: 12px; }
   .badge { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 999px; margin-left: 4px; vertical-align: 1px; }
   .b-new { background: var(--accent-soft); color: var(--accent); }
+  .b-sweet { background: var(--good-soft); color: var(--good); font-weight: 600; }
   .b-Posted, .b-Strong { background: var(--good-soft); color: var(--good); }
   .b-Likely { background: var(--warn-soft); color: var(--warn); }
   .b-Unverified { background: var(--bad-soft); color: var(--bad); }
@@ -85,6 +86,7 @@
   </select>
   <label class="chk">Min score <input type="number" id="min" value="0" min="0" max="100"></label>
   <label class="chk"><input type="checkbox" id="hide"> Hide applied/skipped</label>
+  <label class="chk" title="Asks 0–2 years (no campus hiring) and pay is backed by salary data"><input type="checkbox" id="sweet"> Sweet spot only</label>
   <label class="chk"><input type="checkbox" id="onlyNew"> New only</label>
   <label class="chk"><input type="checkbox" id="showOld"> Show no-longer-listed</label>
   <span style="flex:1"></span>
@@ -131,7 +133,7 @@ function renderTabs() {
   const names = { shortlist: "Shortlist", lead: "Leads (pay unverified)", companies: "Company bank" };
   document.getElementById("tabs").innerHTML = Object.keys(names).map(k =>
     `<button class="tab ${k === tab ? "on" : ""}" data-tab="${k}">${names[k]} (${n(k)})</button>`).join("");
-  document.getElementById("filters").querySelectorAll("#city,#pay,#st,#exp,#min,#hide,#onlyNew,#showOld").forEach(el =>
+  document.getElementById("filters").querySelectorAll("#city,#pay,#st,#exp,#min,#hide,#sweet,#onlyNew,#showOld").forEach(el =>
     (el.closest("label") || el).style.display = tab === "companies" ? "none" : "");
 }
 
@@ -148,7 +150,7 @@ function jobRows() {
   const q = document.getElementById("q").value.toLowerCase(), cityF = document.getElementById("city").value,
         payF = document.getElementById("pay").value, stF = document.getElementById("st").value,
         min = +document.getElementById("min").value || 0, expF = document.getElementById("exp").value, hide = document.getElementById("hide").checked,
-        onlyNew = document.getElementById("onlyNew").checked, showOld = document.getElementById("showOld").checked;
+        onlyNew = document.getElementById("onlyNew").checked, sweetOnly = document.getElementById("sweet").checked, showOld = document.getElementById("showOld").checked;
   let rows = DATA.jobs.filter(j => j.kind === tab).filter(j => {
     const m = mark(j.url);
     if (!j.inLatest && !showOld && (m.status === "Not applied" || liveKeys.has(keyOf(j)))) return false;  // marked roles stay visible unless a repost replaced them
@@ -157,6 +159,7 @@ function jobRows() {
     if (stF && m.status !== stF) return false;
     if (hide && ["Applied", "Interviewing", "Offer", "Rejected", "Skipped"].includes(m.status)) return false;
     if (onlyNew && !j.isNew) return false;
+    if (sweetOnly && !j.sweet) return false;
     if (j.score < min) return false;
     const yrs = parseInt(j.exp);  // "2+ yrs" -> 2; "not stated" -> NaN
     if (expF === "none" && !isNaN(yrs)) return false;
@@ -183,7 +186,7 @@ function renderJobs() {
         <td><button class="toggle" data-open="${id}" title="Details">${isOpen ? "▾" : "▸"}</button></td>
         <td class="score">${j.score}</td>
         <td><div class="co">${esc(j.company)}</div><div class="muted">${esc(j.type)}</div></td>
-        <td>${esc(j.title)}${j.isNew && j.inLatest ? '<span class="badge b-new">NEW</span>' : ""}${j.inLatest ? "" : `<span class="badge b-Unverified">no longer listed · last seen ${esc(j.lastSeen)}</span>`}${j.reqs > 1 ? `<span class="muted"> · ${j.reqs} reqs</span>` : ""}</td>
+        <td>${esc(j.title)}${j.sweet ? '<span class="badge b-sweet" title="Asks 0–2 years and pay is backed by salary data">sweet spot</span>' : ""}${j.isNew && j.inLatest ? '<span class="badge b-new">NEW</span>' : ""}${j.inLatest ? "" : `<span class="badge b-Unverified">no longer listed · last seen ${esc(j.lastSeen)}</span>`}${j.reqs > 1 ? `<span class="muted"> · ${j.reqs} reqs</span>` : ""}</td>
         <td>${esc(j.city)}<div class="muted">${esc(j.location)}</div></td>
         <td>${esc(j.exp)}</td>
         <td><span class="badge b-${conf}">${esc(j.payConf)}</span><div class="muted">${esc(j.pay.replace(/^(Strong|Likely ≥20|Unverified) — /, ""))}</div></td>
