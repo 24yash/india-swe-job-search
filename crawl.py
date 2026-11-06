@@ -28,7 +28,8 @@ import requests
 ROOT = Path(__file__).parent
 OUT = ROOT / "output"
 UA = {"User-Agent": "Mozilla/5.0 (job-search research script; read-only)"}
-NOW = datetime.now(timezone.utc)
+NOW = datetime.now(timezone.utc)  # for posting ages
+TODAY = datetime.now().strftime("%Y-%m-%d")  # local date, for file names and history (matches report.py)
 
 PROFILE = json.loads((ROOT / "profile.json").read_text())
 INDIA = PROFILE["location"]["india_markers"]
@@ -612,7 +613,7 @@ def checkpoint(company, jobs, ctx):
             save_raw(company["name"], with_previous(company["name"], jobs), "in progress")
         LI_DETAILS_FILE.write_text(json.dumps(LI_DETAILS))
         state = ctx["sweep_state"]
-        state.update({norm(n): NOW.strftime("%Y-%m-%d") for n in company.get("searched", [])})
+        state.update({norm(n): TODAY for n in company.get("searched", [])})
         (OUT / "sweep-state.json").write_text(json.dumps(state, indent=0))
         evaluate_all(ctx, quiet=jobs is not None)
 
@@ -620,7 +621,7 @@ def checkpoint(company, jobs, ctx):
 def write_bank(companies, activity, direct, sweep):
     """The company bank: every company we track, whether or not it is hiring today, with run history,
     so quiet companies stay on the watchlist and a company that starts hiring again stands out."""
-    stamp = NOW.strftime("%Y-%m-%d")
+    stamp = TODAY
     hist_file = OUT / "bank-history.json"
     hist = json.loads(hist_file.read_text()) if hist_file.exists() else {}
     swept = {norm(n) for n in sweep}
@@ -763,7 +764,7 @@ def evaluate_all(ctx, quiet=False):
 
     # NEW = first seen today. Stored per URL with its first-seen date, so rebuilding several times
     # in one day (LinkedIn checkpoints, --rescore) doesn't reset the flag.
-    stamp = NOW.strftime("%Y-%m-%d")
+    stamp = TODAY
     seen_file = OUT / "seen.json"
     first_seen = json.loads(seen_file.read_text()) if seen_file.exists() else {}
     if isinstance(first_seen, list):  # older format: plain list of URLs
