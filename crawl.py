@@ -207,6 +207,66 @@ def workday(c):
         yield from filter(None, pool.map(detail, todo))
 
 
+def oracle(c):
+    """Oracle Recruiting Cloud (JPMorgan, Oracle…): the public REST API behind the company's own careers site."""
+    api = f"https://{c['host']}/hcmRestApi/resources/latest"
+    seen, todo = set(), []
+    for query in ("software engineer", "software developer", "backend engineer"):
+        offset = 0
+        while offset < 500:
+            finder = (f'findReqs;siteNumber={c["site"]},keyword="{query}",location=India,limit=25,offset={offset},'
+                      f'sortBy=POSTING_DATES_DESC')
+            d = get(f"{api}/recruitingCEJobRequisitions", params={"onlyData": "true", "finder": finder,
+                                                                  "expand": "requisitionList.secondaryLocations"})
+            page = ((d.get("items") or [{}])[0]).get("requisitionList") or []
+            for j in page:
+                locs = [j.get("PrimaryLocation") or ""] + [s.get("Name", "") for s in j.get("secondaryLocations") or []]
+                if j["Id"] in seen or not title_ok(j.get("Title", "")) or not any(in_india(l) for l in locs):
+                    continue
+                seen.add(j["Id"])
+                todo.append((j, locs))
+            offset += 25
+            if len(page) < 25:
+                break
+
+    def detail(item):
+        j, locs = item
+        try:
+            finder = f'ById;Id="{j["Id"]}",siteNumber={c["site"]}'
+            info = (get(f"{api}/recruitingCEJobRequisitionDetails", params={"expand": "all", "onlyData": "true", "finder": finder})
+                    .get("items") or [{}])[0]
+        except requests.RequestException:
+            return None
+        text = "\n".join(strip_html(info.get(k)) for k in ("ExternalDescriptionStr", "ExternalResponsibilitiesStr", "ExternalQualificationsStr"))
+        return Job(c["name"], j["Title"], " / ".join(filter(None, locs)),
+                   f"https://{c['host']}/hcmUI/CandidateExperience/en/sites/{c['site']}/job/{j['Id']}",
+                   parse_ts(info.get("ExternalPostedStartDate") or j.get("PostedDate")), text,
+                   remote="remote" in (info.get("WorkplaceType") or "").lower(), meta={"commitment": info.get("JobSchedule") or ""})
+
+    with ThreadPoolExecutor(6) as pool:
+        yield from filter(None, pool.map(detail, todo))
+
+
+def rippling(c):
+    """Rippling ATS public board (ats.rippling.com/<slug>)."""
+    base = f"https://api.rippling.com/platform/api/ats/v1/board/{c['slug']}/jobs"
+    for j in get(base):
+        loc = (j.get("workLocation") or {}).get("label", "")
+        if not title_ok(j.get("name", "")) or not (in_india(loc) or "remote" in loc.lower()):
+            continue
+        try:
+            d = get(f"{base}/{j['uuid']}")
+        except requests.RequestException:
+            continue
+        desc = d.get("description") or {}
+        text = "\n".join(strip_html(v) for v in (desc.values() if isinstance(desc, dict) else [desc]) if isinstance(v, str))
+        inr = [p for p in d.get("payRangeDetails") or [] if p.get("currency") == "INR"]
+        pay = f"INR {inr[0]['rangeStart']:,.0f}–{inr[0]['rangeEnd']:,.0f}" if inr else ""
+        yield Job(c["name"], j["name"], " / ".join(d.get("workLocations") or [loc]), j["url"], parse_ts(d.get("createdOn")),
+                  text, remote="remote" in loc.lower(), pay_posted=pay,
+                  meta={"employmentType": (d.get("employmentType") or {}).get("label", "")})
+
+
 def amazon(c):
     for q in ("software development engineer", "backend engineer"):
         for offset in range(0, 300, 100):
@@ -220,26 +280,41 @@ def amazon(c):
                 break
 
 
-def microsoft(c):
-    api = "https://apply.careers.microsoft.com/api/pcsx"
-    SESSION.get("https://apply.careers.microsoft.com/careers?domain=microsoft.com")  # sets the cookies the API expects
+def eightfold(c):
+    """Eightfold PCSX careers sites (Microsoft, Qualcomm, Autodesk…): the public search API behind the site."""
+    host, domain = c["host"], c["domain"]
+    api = f"https://{host}/api/pcsx"
+    SESSION.get(f"https://{host}/careers?domain={domain}")  # sets the cookies the API expects
     seen = set()
     for q in ("software engineer", "backend"):
         for start in range(0, 200, 10):
-            d = get(f"{api}/search", params={"domain": "microsoft.com", "query": q, "location": "India", "start": start, "num": 10})
+            d = get(f"{api}/search", params={"domain": domain, "query": q, "location": "India", "start": start, "num": 10})
             pos = d.get("data", {}).get("positions", [])
             for p in pos:
                 if p["id"] in seen or not title_ok(p["name"]):
                     continue
                 seen.add(p["id"])
                 time.sleep(0.5)
-                det = get(f"{api}/position_details", params={"position_id": p["id"], "domain": "microsoft.com", "hl": "en"})["data"]
+                try:
+                    det = get(f"{api}/position_details", params={"position_id": p["id"], "domain": domain, "hl": "en"})["data"]
+                except (requests.RequestException, KeyError):
+                    continue
                 yield Job(c["name"], p["name"], " / ".join(p.get("standardizedLocations") or p.get("locations", [])),
-                          det.get("publicUrl") or f"https://apply.careers.microsoft.com/careers/job/{p['id']}",
+                          det.get("publicUrl") or f"https://{host}/careers/job/{p['id']}",
                           parse_ts(p.get("postedTs")), strip_html(det.get("jobDescription")),
                           remote=(p.get("workLocationOption") or "") == "remote")
             if len(pos) < 10:
                 break
+
+
+def portal(c):
+    """A company's own careers portal: see portals/."""
+    import portals
+    yield from portals.fetch(c, sys.modules[__name__])
+
+
+def microsoft(c):
+    yield from eightfold(c | {"host": "apply.careers.microsoft.com", "domain": "microsoft.com"})
 
 
 def atlassian(c):
@@ -367,7 +442,7 @@ def linkedin(c):
                       LI_DETAILS[jid], remote="remote" in loc.lower(), meta={"source": "LinkedIn (aggregator)"})
 
 
-FETCHERS = {f.__name__: f for f in (greenhouse, lever, ashby, smartrecruiters, workday, amazon, microsoft, atlassian, google, linkedin)}
+FETCHERS = {f.__name__: f for f in (greenhouse, lever, ashby, smartrecruiters, workday, oracle, rippling, eightfold, portal, amazon, microsoft, atlassian, google, linkedin)}
 
 
 def title_key(title):
@@ -513,7 +588,7 @@ def evaluate(job, company, max_age):
     ok, mode = location_mode(job, company)
     if not ok:
         return None, mode
-    if re.search(PROFILE["exclude_text"], job.text, re.I) or re.search(r"intern|contract|temporary", job.meta.get("commitment", "") + job.meta.get("employmentType", ""), re.I):
+    if re.search(PROFILE["exclude_text"], job.text, re.I) or re.search(r"intern|contract|temporary", (job.meta.get("commitment") or "") + (job.meta.get("employmentType") or ""), re.I):
         return None, "contract/intern/temporary"
     years, snippet = min_experience(job.text)
     m = re.search(r"(\d{1,2})\s*(?:\+|-|–|to)\s*(?:\d{1,2}\s*)?(?:years?|yrs?)", job.title, re.I)

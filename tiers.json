@@ -13,112 +13,128 @@
    "type": "Global product MNC (public)",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Big-tech bands"
+   "pay_note": "Big-tech bands",
+   "site": "metacareers.com"
   },
   {
    "name": "Apple",
    "type": "Global product MNC (public)",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Levels.fyi India ICT2 35.7, ICT3 71.7 LPA median TC"
+   "pay_note": "Levels.fyi India ICT2 35.7, ICT3 71.7 LPA median TC",
+   "site": "jobs.apple.com"
   },
   {
    "name": "Netflix",
    "type": "Global product MNC (public)",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Big-tech bands"
+   "pay_note": "Big-tech bands",
+   "site": "jobs.netflix.com"
   },
   {
    "name": "Uber",
    "type": "Global product MNC (public)",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Levels.fyi India L3 median TC 35.4 LPA"
+   "pay_note": "Levels.fyi India L3 median TC 35.4 LPA",
+   "site": "uber.com"
   },
   {
    "name": "LinkedIn",
    "type": "Global product MNC (Microsoft)",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Big-tech bands"
+   "pay_note": "Big-tech bands",
+   "site": "careers.linkedin.com"
   },
   {
    "name": "Oracle",
    "type": "Global product MNC (public)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India IC-2 median TC 26.5 LPA"
+   "pay_note": "Levels.fyi India IC-2 median TC 26.5 LPA",
+   "site": "oracle.com"
   },
   {
    "name": "Intuit",
    "type": "Global product MNC (public)",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "Strong Bengaluru bands"
+   "pay_note": "Strong Bengaluru bands",
+   "site": "intuit.com"
   },
   {
    "name": "Walmart",
    "type": "Global retail tech centre",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India P2 median TC 20.6, P3 34.4 LPA"
+   "pay_note": "Levels.fyi India P2 median TC 20.6, P3 34.4 LPA",
+   "site": "careers.walmart.com"
   },
   {
    "name": "Walmart Global Tech India",
    "type": "Global retail tech centre",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India P2 median TC 20.6, P3 34.4 LPA"
+   "pay_note": "Levels.fyi India P2 median TC 20.6, P3 34.4 LPA",
+   "site": "tech.walmart.com"
   },
   {
    "name": "Flipkart",
    "type": "Indian e-commerce (Walmart)",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SDE1 median TC 22.1, SDE2 36.4 LPA"
+   "pay_note": "Levels.fyi India SDE1 median TC 22.1, SDE2 36.4 LPA",
+   "site": "flipkartcareers.com"
   },
   {
    "name": "PhonePe",
    "type": "Late-stage Indian fintech",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SE1 median TC 28.9 LPA"
+   "pay_note": "Levels.fyi India SE1 median TC 28.9 LPA",
+   "site": "phonepe.com"
   },
   {
    "name": "Eternal",
    "type": "Indian consumer tech (listed; Zomato/Blinkit)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi (Zomato) SWE median TC 50.4 LPA, all levels"
+   "pay_note": "Levels.fyi (Zomato) SWE median TC 50.4 LPA, all levels",
+   "site": "eternal.com"
   },
   {
    "name": "Zomato",
    "type": "Indian consumer tech (listed; Eternal)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SWE median TC 50.4 LPA (all levels; base 33.9)"
+   "pay_note": "Levels.fyi India SWE median TC 50.4 LPA (all levels; base 33.9)",
+   "site": "zomato.com"
   },
   {
    "name": "Blinkit",
    "type": "Indian quick-commerce (Eternal)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Eternal group; Levels.fyi (Zomato) SWE median TC 50.4 LPA, all levels"
+   "pay_note": "Eternal group; Levels.fyi (Zomato) SWE median TC 50.4 LPA, all levels",
+   "site": "blinkit.com"
   },
   {
    "name": "Zepto",
    "type": "Late-stage quick-commerce",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SE1 median TC 34.7 LPA"
+   "pay_note": "Levels.fyi India SE1 median TC 34.7 LPA",
+   "site": "zeptonow.com"
   },
   {
    "name": "Myntra",
    "type": "Indian e-commerce (Flipkart)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SE median TC 22.1 LPA"
+   "pay_note": "Levels.fyi India SE median TC 22.1 LPA",
+   "site": "myntra.com"
   },
   {
    "name": "CRED",
@@ -146,35 +162,40 @@
    "type": "Profitable Indian fintech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Known to pay well for engineers"
+   "pay_note": "Known to pay well for engineers",
+   "site": "zerodha.com"
   },
   {
    "name": "Juspay",
    "type": "Late-stage Indian fintech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Fintech unicorn"
+   "pay_note": "Fintech unicorn",
+   "site": "juspay.io"
   },
   {
    "name": "Dream11",
    "type": "Late-stage consumer tech (Dream Sports)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SDE 1 median TC 25.1, SDE 2 55.6 LPA"
+   "pay_note": "Levels.fyi India SDE 1 median TC 25.1, SDE 2 55.6 LPA",
+   "site": "dream11.com"
   },
   {
    "name": "Dream Sports",
    "type": "Late-stage consumer tech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "High startup bands"
+   "pay_note": "High startup bands",
+   "site": "dreamsports.group"
   },
   {
    "name": "Games24x7",
    "type": "Profitable gaming tech",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "SDE bands above 20"
+   "pay_note": "SDE bands above 20",
+   "site": "games24x7.com"
   },
   {
    "name": "MakeMyTrip",
@@ -189,21 +210,24 @@
    "quality": 12,
    "pay": "likely",
    "pay_note": "Levels.fyi India SE1 19.7 LPA (below bar), higher levels above; AmbitionBox dev 18.5-21.1",
-   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate"
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate",
+   "site": "media.net"
   },
   {
    "name": "The D. E. Shaw Group",
    "type": "Quant/finance tech",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Very high bands"
+   "pay_note": "Very high bands",
+   "site": "deshawindia.com"
   },
   {
    "name": "D. E. Shaw",
    "type": "Quant/finance tech",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Very high bands"
+   "pay_note": "Very high bands",
+   "site": "deshawindia.com"
   },
   {
    "name": "Tower Research Capital",
@@ -217,42 +241,48 @@
    "type": "Global bank engineering",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Levels.fyi India Analyst median TC 32.9 LPA"
+   "pay_note": "Levels.fyi India Analyst median TC 32.9 LPA",
+   "site": "goldmansachs.com"
   },
   {
    "name": "Nutanix",
    "type": "Public infra product",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "MTS bands above 20"
+   "pay_note": "MTS bands above 20",
+   "site": "nutanix.com"
   },
   {
    "name": "ThoughtSpot",
    "type": "Late-stage analytics SaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "High SaaS bands"
+   "pay_note": "High SaaS bands",
+   "site": "thoughtspot.com"
   },
   {
    "name": "Postman",
    "type": "Late-stage devtools",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Levels.fyi India IC1 29.1 LPA median TC"
+   "pay_note": "Levels.fyi India IC1 29.1 LPA median TC",
+   "site": "postman.com"
   },
   {
    "name": "BrowserStack",
    "type": "Late-stage devtools",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "High devtools bands"
+   "pay_note": "High devtools bands",
+   "site": "browserstack.com"
   },
   {
    "name": "Rippling",
    "type": "Late-stage HR SaaS",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "Levels.fyi India L5 45.5 LPA median TC"
+   "pay_note": "Levels.fyi India L5 45.5 LPA median TC",
+   "site": "rippling.com"
   },
   {
    "name": "Sprinklr",
@@ -288,7 +318,8 @@
    "type": "Global payments MNC",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SE II median TC 24.3 LPA"
+   "pay_note": "Levels.fyi India SE II median TC 24.3 LPA",
+   "site": "americanexpress.com"
   },
   {
    "name": "PayPal",
@@ -302,21 +333,24 @@
    "type": "Global travel tech",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Levels.fyi India J median TC 20.9, K 36.7 LPA"
+   "pay_note": "Levels.fyi India J median TC 20.9, K 36.7 LPA",
+   "site": "expediagroup.com"
   },
   {
    "name": "Booking Holdings",
    "type": "Global travel tech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Global product co"
+   "pay_note": "Global product co",
+   "site": "bookingholdings.com"
   },
   {
    "name": "Qualcomm",
    "type": "Global semiconductor MNC",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India Associate Engineer 20.5, Engineer 29.4 LPA median TC"
+   "pay_note": "Levels.fyi India Associate Engineer 20.5, Engineer 29.4 LPA median TC",
+   "site": "qualcomm.com"
   },
   {
    "name": "Arista Networks",
@@ -330,42 +364,48 @@
    "type": "Public security product",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "High bands"
+   "pay_note": "High bands",
+   "site": "paloaltonetworks.com"
   },
   {
    "name": "Akamai Technologies",
    "type": "Public infra product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Infra product co"
+   "pay_note": "Infra product co",
+   "site": "akamai.com"
   },
   {
    "name": "Workday",
    "type": "Public SaaS",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "SaaS MNC"
+   "pay_note": "SaaS MNC",
+   "site": "workday.com"
   },
   {
    "name": "Autodesk",
    "type": "Public software MNC",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India Grade 8 median TC 20.2, Grade 9 28.0 LPA"
+   "pay_note": "Levels.fyi India Grade 8 median TC 20.2, Grade 9 28.0 LPA",
+   "site": "autodesk.com"
   },
   {
    "name": "VMware",
    "type": "Infra product (Broadcom)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Infra MNC"
+   "pay_note": "Infra MNC",
+   "site": "vmware.com"
   },
   {
    "name": "Broadcom",
    "type": "Global product MNC",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Infra MNC"
+   "pay_note": "Infra MNC",
+   "site": "broadcom.com"
   },
   {
    "name": "Adobe",
@@ -428,42 +468,48 @@
    "type": "Indian e-commerce (listed)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SE I median TC 25.5 LPA"
+   "pay_note": "Levels.fyi India SE I median TC 25.5 LPA",
+   "site": "meesho.io"
   },
   {
    "name": "ShareChat",
    "type": "Late-stage consumer tech",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "High startup bands"
+   "pay_note": "High startup bands",
+   "site": "sharechat.com"
   },
   {
    "name": "Urban Company",
    "type": "Indian consumer tech (listed)",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "SDE bands above 20"
+   "pay_note": "SDE bands above 20",
+   "site": "urbancompany.com"
   },
   {
    "name": "Navi",
    "type": "Indian fintech",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "High startup bands"
+   "pay_note": "High startup bands",
+   "site": "navi.com"
   },
   {
    "name": "Slice",
    "type": "Indian fintech/bank",
    "quality": 10,
    "pay": "likely",
-   "pay_note": "High startup bands"
+   "pay_note": "High startup bands",
+   "site": "slice.bank.in"
   },
   {
    "name": "Upstox",
    "type": "Indian fintech",
    "quality": 10,
    "pay": "likely",
-   "pay_note": "Levels.fyi India overall median TC 42.4 LPA (all levels)"
+   "pay_note": "Levels.fyi India overall median TC 42.4 LPA (all levels)",
+   "site": "upstox.com"
   },
   {
    "name": "InMobi",
@@ -491,14 +537,16 @@
    "type": "Late-stage SaaS",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "SaaS unicorn"
+   "pay_note": "SaaS unicorn",
+   "site": "chargebee.com"
   },
   {
    "name": "Hasura",
    "type": "Devtools startup",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "Devtools"
+   "pay_note": "Devtools",
+   "site": "hasura.io"
   },
   {
    "name": "Zscaler",
@@ -547,7 +595,8 @@
    "type": "Global bank tech centre",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "Levels.fyi India 601 median TC 27.5, 602 42.4 LPA (502 is 18.2, below bar)"
+   "pay_note": "Levels.fyi India 601 median TC 27.5, 602 42.4 LPA (502 is 18.2, below bar)",
+   "site": "jpmorganchase.com"
   },
   {
    "name": "Morgan Stanley",
@@ -633,14 +682,16 @@
    "type": "Global software MNC",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "SAP Labs India dev bands"
+   "pay_note": "SAP Labs India dev bands",
+   "site": "sap.com"
   },
   {
    "name": "SAP",
    "type": "Global software MNC",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "SAP Labs India dev bands"
+   "pay_note": "SAP Labs India dev bands",
+   "site": "sap.com"
   },
   {
    "name": "Nvidia",
@@ -724,7 +775,8 @@
    "type": "Storage/infra product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India MTS I 22.7, MTS II 31.0 LPA"
+   "pay_note": "Levels.fyi India MTS I 22.7, MTS II 31.0 LPA",
+   "site": "netapp.com"
   },
   {
    "name": "Hewlett Packard Enterprise",
@@ -752,7 +804,8 @@
    "type": "Infra/security product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Infra product bands"
+   "pay_note": "Infra product bands",
+   "site": "f5.com"
   },
   {
    "name": "Red Hat",
@@ -766,7 +819,8 @@
    "type": "Networking product",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Networking product bands"
+   "pay_note": "Networking product bands",
+   "site": "juniper.net"
   },
   {
    "name": "Ciena",
@@ -843,7 +897,8 @@
    "type": "Engineering software",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India Associate 25.1, SE 2 30.5 LPA median TC"
+   "pay_note": "Levels.fyi India Associate 25.1, SE 2 30.5 LPA median TC",
+   "site": "mathworks.com"
   },
   {
    "name": "PTC",
@@ -878,14 +933,16 @@
    "type": "Database company",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "DB product bands"
+   "pay_note": "DB product bands",
+   "site": "couchbase.com"
   },
   {
    "name": "Confluent",
    "type": "Data streaming infra",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "Infra product bands"
+   "pay_note": "Infra product bands",
+   "site": "confluent.io"
   },
   {
    "name": "Cohesity",
@@ -920,14 +977,16 @@
    "type": "Observability (Cisco)",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Infra product bands"
+   "pay_note": "Infra product bands",
+   "site": "splunk.com"
   },
   {
    "name": "Dropbox",
    "type": "Product company",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Global bands",
+   "site": "dropbox.com"
   },
   {
    "name": "Twilio",
@@ -941,21 +1000,24 @@
    "type": "SaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Product bands"
+   "pay_note": "Product bands",
+   "site": "zendesk.com"
   },
   {
    "name": "HubSpot",
    "type": "SaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Product bands"
+   "pay_note": "Product bands",
+   "site": "hubspot.com"
   },
   {
    "name": "DocuSign",
    "type": "SaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India P2 49.5 LPA median TC"
+   "pay_note": "Levels.fyi India P2 49.5 LPA median TC",
+   "site": "docusign.com"
   },
   {
    "name": "Okta",
@@ -998,14 +1060,16 @@
    "quality": 12,
    "pay": "likely",
    "pay_note": "Levels.fyi India SE2 28.1 LPA median TC; SE1 19.9 below bar",
-   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate"
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate",
+   "site": "akamai.com"
   },
   {
    "name": "Cloudflare",
    "type": "Infra product",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "Levels.fyi India L3 63.9 LPA median TC"
+   "pay_note": "Levels.fyi India L3 63.9 LPA median TC",
+   "site": "cloudflare.com"
   },
   {
    "name": "Datadog",
@@ -1048,7 +1112,8 @@
    "quality": 10,
    "pay": "likely",
    "pay_note": "Levels.fyi India SE median TC 22.6 LPA; Associate 10.6 below bar",
-   "below_title": "associate"
+   "below_title": "associate",
+   "site": "teradata.com"
   },
   {
    "name": "Informatica",
@@ -1069,7 +1134,8 @@
    "type": "Auto SaaS",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "Levels.fyi India Associate SE 20.4, SE 23.1 LPA median TC"
+   "pay_note": "Levels.fyi India Associate SE 20.4, SE 23.1 LPA median TC",
+   "site": "tekion.com"
   },
   {
    "name": "Toast",
@@ -1083,7 +1149,8 @@
    "type": "E-commerce tech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India L1 25.9 LPA median TC"
+   "pay_note": "Levels.fyi India L1 25.9 LPA median TC",
+   "site": "wayfair.com"
   },
   {
    "name": "Lowe's",
@@ -1097,7 +1164,8 @@
    "type": "Retail tech centre",
    "quality": 10,
    "pay": "likely",
-   "pay_note": "Levels.fyi India Graduate SE 22.7, SE1 37.6 LPA"
+   "pay_note": "Levels.fyi India Graduate SE 22.7, SE1 37.6 LPA",
+   "site": "tesco-careers.com"
   },
   {
    "name": "84.51°",
@@ -1259,7 +1327,8 @@
    "quality": 12,
    "pay": "likely",
    "pay_note": "Levels.fyi India Associate 31.6 LPA median TC; Analyst 18.8 below bar",
-   "below_title": "analyst"
+   "below_title": "analyst",
+   "site": "blackrock.com"
   },
   {
    "name": "State Street",
@@ -1378,21 +1447,24 @@
    "type": "Fin-tech platform (D. E. Shaw)",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Known high Hyderabad/Bengaluru bands"
+   "pay_note": "Known high Hyderabad/Bengaluru bands",
+   "site": "arcesium.com"
   },
   {
    "name": "Addepar",
    "type": "Wealth fintech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Global bands",
+   "site": "addepar.com"
   },
   {
    "name": "Bloomberg",
    "type": "Financial data",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Global bands",
+   "site": "bloomberg.com"
   },
   {
    "name": "Experian",
@@ -1476,21 +1548,24 @@
    "type": "HFT firm",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "HFT bands"
+   "pay_note": "HFT bands",
+   "site": "quadeye.com"
   },
   {
    "name": "AlphaGrep",
    "type": "HFT firm",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "HFT bands"
+   "pay_note": "HFT bands",
+   "site": "alpha-grep.com"
   },
   {
    "name": "Optiver",
    "type": "Market maker",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "HFT bands"
+   "pay_note": "HFT bands",
+   "site": "optiver.com"
   },
   {
    "name": "Squarepoint Capital",
@@ -1511,7 +1586,8 @@
    "type": "Hedge fund tech",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SE 68.7 LPA median TC"
+   "pay_note": "Levels.fyi India SE 68.7 LPA median TC",
+   "site": "mlp.com"
   },
   {
    "name": "NK Securities Research",
@@ -1525,14 +1601,16 @@
    "type": "HFT firm",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "HFT bands"
+   "pay_note": "HFT bands",
+   "site": "irage.in"
   },
   {
    "name": "Trexquant",
    "type": "Quant fund",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Quant bands"
+   "pay_note": "Quant bands",
+   "site": "trexquant.com"
   },
   {
    "name": "Futures First",
@@ -1546,28 +1624,32 @@
    "type": "HFT firm",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "HFT bands"
+   "pay_note": "HFT bands",
+   "site": "aptportfolio.com"
   },
   {
    "name": "Dolat Capital",
    "type": "HFT firm",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "HFT bands"
+   "pay_note": "HFT bands",
+   "site": "dolatcapital.com"
   },
   {
    "name": "Citadel",
    "type": "Hedge fund",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Top bands"
+   "pay_note": "Top bands",
+   "site": "citadel.com"
   },
   {
    "name": "Citadel Securities",
    "type": "Market maker",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Top bands"
+   "pay_note": "Top bands",
+   "site": "citadelsecurities.com"
   },
   {
    "name": "M2P Fintech",
@@ -1728,7 +1810,8 @@
    "type": "Insurtech",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "High startup bands"
+   "pay_note": "High startup bands",
+   "site": "acko.com"
   },
   {
    "name": "Go Digit",
@@ -1847,14 +1930,16 @@
    "type": "Global fintech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Global bands",
+   "site": "revolut.com"
   },
   {
    "name": "Checkout.com",
    "type": "Global payments",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Global bands",
+   "site": "checkout.com"
   },
   {
    "name": "Adyen",
@@ -1868,21 +1953,24 @@
    "type": "Global fintech",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Global bands",
+   "site": "plaid.com"
   },
   {
    "name": "Brex",
    "type": "Global fintech",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Global bands",
+   "site": "brex.com"
   },
   {
    "name": "Ramp",
    "type": "Global fintech",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Global bands",
+   "site": "ramp.com"
   },
   {
    "name": "CoinDCX",
@@ -2071,7 +2159,8 @@
    "type": "Social media (ShareChat)",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "High startup bands"
+   "pay_note": "High startup bands",
+   "site": "mojapp.in"
   },
   {
    "name": "VerSe Innovation",
@@ -2113,14 +2202,16 @@
    "type": "Streaming",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Known strong bands"
+   "pay_note": "Known strong bands",
+   "site": "jiostar.com"
   },
   {
    "name": "Hotstar",
    "type": "Streaming",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Known strong bands"
+   "pay_note": "Known strong bands",
+   "site": "jiostar.com"
   },
   {
    "name": "Nobroker",
@@ -2141,14 +2232,16 @@
    "type": "HR AI SaaS",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "High SaaS bands"
+   "pay_note": "High SaaS bands",
+   "site": "eightfold.ai"
   },
   {
    "name": "Deel",
    "type": "HR/payroll SaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SE I 24.9 LPA median TC"
+   "pay_note": "Levels.fyi India SE I 24.9 LPA median TC",
+   "site": "deel.com"
   },
   {
    "name": "Darwinbox",
@@ -2178,7 +2271,8 @@
    "quality": 11,
    "pay": "likely",
    "pay_note": "Levels.fyi India SE2 median TC 29.6 LPA; SE1 14.3 below bar",
-   "below_title": "(sde|engineer)\\s*[-–]?\\s*(1|i)\\b|associate"
+   "below_title": "(sde|engineer)\\s*[-–]?\\s*(1|i)\\b|associate",
+   "site": "innovaccer.com"
   },
   {
    "name": "Icertis",
@@ -2304,7 +2398,8 @@
    "type": "AI SaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Khosla-backed; strong bands"
+   "pay_note": "Khosla-backed; strong bands",
+   "site": "devrev.ai"
   },
   {
    "name": "Rocketlane",
@@ -2402,7 +2497,8 @@
    "type": "AI lab (Series B 2026)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Well-funded AI lab"
+   "pay_note": "Well-funded AI lab",
+   "site": "sarvam.ai"
   },
   {
    "name": "TrueFoundry",
@@ -2598,14 +2694,16 @@
    "type": "Travel tech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Global product co"
+   "pay_note": "Global product co",
+   "site": "booking.com"
   },
   {
    "name": "Swiggy Instamart",
    "type": "Quick commerce (Swiggy)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi Swiggy entry median TC 20.6 LPA"
+   "pay_note": "Levels.fyi Swiggy entry median TC 20.6 LPA",
+   "site": "swiggy.com"
   },
   {
    "name": "JPMorganChase",
@@ -2676,7 +2774,8 @@
    "quality": 12,
    "pay": "likely",
    "pay_note": "Levels.fyi India L8 (SE II) median TC 22.5 LPA; L9 16.5 below bar",
-   "below_title": "engineer\\s*[-–]?\\s*(1|i)\\b|associate"
+   "below_title": "engineer\\s*[-–]?\\s*(1|i)\\b|associate",
+   "site": "mastercard.com"
   },
   {
    "name": "project44",
@@ -2718,7 +2817,8 @@
    "type": "Martech SaaS",
    "quality": 10,
    "pay": "likely",
-   "pay_note": "Levels.fyi India overall median TC 34.7 LPA (all levels)"
+   "pay_note": "Levels.fyi India overall median TC 34.7 LPA (all levels)",
+   "site": "gohighlevel.com"
   },
   {
    "name": "HackerRank",
@@ -2732,7 +2832,8 @@
    "type": "Telecom tech centre (T-Mobile)",
    "quality": 10,
    "pay": "likely",
-   "pay_note": "Levels.fyi T-Mobile India T2 median TC 32.6, overall 21.3 LPA"
+   "pay_note": "Levels.fyi T-Mobile India T2 median TC 32.6, overall 21.3 LPA",
+   "site": "tmus.com"
   },
   {
    "name": "NCR Atleos",
@@ -2872,14 +2973,16 @@
    "type": "Global product",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "lifeatspotify.com"
   },
   {
    "name": "Gojek",
    "type": "Global product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "gojek.com"
   },
   {
    "name": "Careem",
@@ -2928,7 +3031,8 @@
    "type": "Global product",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "hashicorp.com"
   },
   {
    "name": "UKG",
@@ -2970,7 +3074,8 @@
    "type": "Global product",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "arista.com"
   },
   {
    "name": "Ericsson",
@@ -2998,21 +3103,24 @@
    "type": "Global product",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Levels.fyi India Associate SE median TC 31.5 LPA"
+   "pay_note": "Levels.fyi India Associate SE median TC 31.5 LPA",
+   "site": "capitalone.com"
   },
   {
    "name": "Commonwealth Bank of Australia",
    "type": "Global product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "commbank.com.au"
   },
   {
    "name": "CommBank",
    "type": "Global product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "commbank.com.au"
   },
   {
    "name": "ANZ",
@@ -3593,7 +3701,8 @@
    "type": "Indian product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "indeed.jobs"
   },
   {
    "name": "Unstop",
@@ -3607,7 +3716,8 @@
    "type": "Indian product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India overall median TC 44.7 LPA (all levels)"
+   "pay_note": "Levels.fyi India overall median TC 44.7 LPA (all levels)",
+   "site": "truecaller.com"
   },
   {
    "name": "Ola Krutrim",
@@ -3803,21 +3913,24 @@
    "type": "Trading",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "hudsonrivertrading.com"
   },
   {
    "name": "Da Vinci Trading",
    "type": "Trading",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "davincitrading.com"
   },
   {
    "name": "QuantBox",
    "type": "Trading",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "quantboxresearch.com"
   },
   {
    "name": "Edelweiss",
@@ -3845,28 +3958,32 @@
    "type": "Trading",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "twosigma.com"
   },
   {
    "name": "DRW",
    "type": "Trading",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "drw.com"
   },
   {
    "name": "Akuna Capital",
    "type": "Trading",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "akunacapital.com"
   },
   {
    "name": "Eclipse Trading",
    "type": "Trading",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "eclipsetrading.com"
   },
   {
    "name": "Appsmith",
@@ -3985,7 +4102,8 @@
    "type": "SaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "clari.com"
   },
   {
    "name": "Highspot",
@@ -4006,7 +4124,8 @@
    "type": "SaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "freshworks.com"
   },
   {
    "name": "CloudSEK",
@@ -4195,35 +4314,40 @@
    "type": "Payments/fintech product",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SE II median TC 32.1 LPA"
+   "pay_note": "Levels.fyi India SE II median TC 32.1 LPA",
+   "site": "wexinc.com"
   },
   {
    "name": "PayPay",
    "type": "Japanese fintech, Gurugram centre",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "Levels.fyi India P2 median TC 36.8 LPA"
+   "pay_note": "Levels.fyi India P2 median TC 36.8 LPA",
+   "site": "paypay.ne.jp"
   },
   {
    "name": "Planview",
    "type": "Work-management SaaS",
    "quality": 10,
    "pay": "likely",
-   "pay_note": "Levels.fyi India overall median TC 32.4 LPA (all levels)"
+   "pay_note": "Levels.fyi India overall median TC 32.4 LPA (all levels)",
+   "site": "planview.com"
   },
   {
    "name": "Warner Music Group",
    "type": "Media/entertainment tech centre",
    "quality": 10,
    "pay": "likely",
-   "pay_note": "Levels.fyi India overall median TC 50.8 LPA (all levels)"
+   "pay_note": "Levels.fyi India overall median TC 50.8 LPA (all levels)",
+   "site": "wmg.com"
   },
   {
    "name": "Cargill",
    "type": "Agri/commodities tech centre",
    "quality": 9,
    "pay": "likely",
-   "pay_note": "Levels.fyi India overall median TC 31.7 LPA (all levels)"
+   "pay_note": "Levels.fyi India overall median TC 31.7 LPA (all levels)",
+   "site": "cargill.com"
   },
   {
    "name": "Sage",
