@@ -405,9 +405,23 @@ def norm(name):
 TIERS = json.loads((ROOT / "tiers.json").read_text())
 
 
+def words(name):
+    return re.findall(r"[a-z0-9]+", name.lower())
+
+
+EXCLUDED_NAMES = [w for w in (words(x) for x in PROFILE["exclude_companies"] + TIERS["services_and_staffing"]) if w]
+STAFFING_WORDS = [w for w in (words(x) for x in TIERS.get("staffing_keywords", [])) if w]
+
+
 def is_excluded_company(name):
-    n = norm(name)
-    return any(norm(x) and norm(x) in n for x in PROFILE["exclude_companies"] + TIERS["services_and_staffing"])
+    """Services/staffing firms and the user's own exclusions. A listed name must be the company name's
+    leading words ('EY' matches 'EY GDS' but not 'Honeywell'; 'UST' not 'Northern Trust'); staffing
+    keywords ('Recruitment', 'Staffing'...) match as whole words anywhere in the name."""
+    w = words(name)
+    if any(w[:len(x)] == x for x in EXCLUDED_NAMES):
+        return True
+    padded = f" {' '.join(w)} "
+    return any(f" {' '.join(k)} " in padded for k in STAFFING_WORDS)
 
 
 # ---------------------------------------------------------------- evaluation
@@ -589,12 +603,9 @@ def crawl(company, ctx):
     except Exception as e:  # one broken board should not kill the run; keep what it fetched before failing
         err = f"{type(e).__name__}: {str(e)[:120]}"
     if is_li:
-        # LinkedIn searches only part of the bank per run (rotation), so keep earlier postings that weren't
-        # seen again, as long as they're still inside the freshness window.
-        cutoff = NOW - timedelta(days=ctx["max_age"])
-        fresh = {j.url for j in jobs}
-        merged = [j for j in with_previous(company["name"], jobs) if j.url in fresh or (j.posted and j.posted >= cutoff)]
-        save_raw(company["name"], merged, f"{err} — {len(jobs)} fresh + {len(merged) - len(jobs)} earlier" if err else "")
+        kept, closed = keep_open_earlier(company["name"], jobs, ctx["max_age"])
+        note = f"{len(jobs)} fresh + {len(kept)} earlier still open; {closed} closed dropped"
+        save_raw(company["name"], jobs + kept, f"{err} — {note}" if err else "")
     elif err:
         merged = with_previous(company["name"], jobs)
         save_raw(company["name"], merged, f"{err} — {len(jobs)} fresh + {len(merged) - len(jobs)} from previous crawl")
@@ -605,6 +616,63 @@ def crawl(company, ctx):
     print(f"{company['name']:<22} {len(jobs):>4} fetched  {time.time() - started:5.1f}s{'  ERROR ' + err if err else ''}",
           file=sys.stderr, flush=True)
     return company["name"], err
+
+
+LIVENESS_FILE = OUT / "linkedin-liveness.json"
+LIVENESS_LOCK = threading.Lock()  # both LinkedIn passes update the same state file
+
+
+def li_job_id(url):
+    m = re.search(r"/view/(\d+)", url)
+    return m.group(1) if m else url
+
+
+def li_status(job_id):
+    """'open' or 'closed' from LinkedIn's public job page (removed postings return 404; closed ones say
+    'No longer accepting applications'). None if LinkedIn rate-limits or errors."""
+    try:
+        r = li_get(f"{LI_API}/jobPosting/{job_id}")
+    except (RateLimited, requests.RequestException):
+        return None
+    if r.status_code in (404, 410) or (r.ok and "no longer accepting applications" in r.text.lower()):
+        return "closed"
+    return "open" if r.ok else None
+
+
+def keep_open_earlier(name, fresh, max_age):
+    """Earlier LinkedIn postings that this run didn't see again: keep the ones still open, drop the closed.
+    The company sweep rotates and searches only cover the last max_age days, so not seeing a posting
+    doesn't mean it closed. Each run checks a budget of them on LinkedIn, the ones about to age out first.
+    Unchecked postings are kept while younger than max_age; older ones only once confirmed open,
+    so long-running open roles stay and dead ones go."""
+    seen = {j.url for j in fresh}
+    earlier = [j for j in load_raw(name)[0] if j.url not in seen]
+    with LIVENESS_LOCK:
+        state = json.loads(LIVENESS_FILE.read_text()) if LIVENESS_FILE.exists() else {}
+    cutoff = NOW - timedelta(days=max_age)
+    recheck_after = (NOW - timedelta(days=PROFILE["linkedin"]["liveness_recheck_days"])).strftime("%Y-%m-%d")
+    last = lambda j: state.get(li_job_id(j.url), {}).get("checked", "")  # noqa: E731
+    due = sorted((j for j in earlier if last(j) < recheck_after),
+                 key=lambda j: (bool(j.posted and j.posted >= cutoff), last(j)))  # about to age out first
+    updates = {}
+    for j in due[:PROFILE["linkedin"]["liveness_checks_per_run"]]:
+        status = li_status(li_job_id(j.url))
+        if status is None:
+            break  # rate-limited: stop; the rest keep their previous state
+        updates[li_job_id(j.url)] = {"status": status, "checked": TODAY}
+    with LIVENESS_LOCK:  # merge only our changes: the other pass may have saved in the meantime
+        current = json.loads(LIVENESS_FILE.read_text()) if LIVENESS_FILE.exists() else {}
+        current.update(updates)
+        LIVENESS_FILE.write_text(json.dumps(current))
+    state.update(updates)
+    kept, closed = [], 0
+    for j in earlier:
+        status = state.get(li_job_id(j.url), {}).get("status")
+        if status == "closed":
+            closed += 1
+        elif status == "open" or (j.posted and j.posted >= cutoff):
+            kept.append(j)
+    return kept, closed
 
 
 def checkpoint(company, jobs, ctx):

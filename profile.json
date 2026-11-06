@@ -77,7 +77,10 @@
         "software development engineer"
       ],
       "max_results_per_city": 50
-    }
+    },
+    "liveness_checks_per_run": 120,
+    "liveness_recheck_days": 7,
+    "_comment_liveness": "Earlier LinkedIn postings not seen again are checked on LinkedIn (up to liveness_checks_per_run per pass, rechecked after liveness_recheck_days): closed ones are dropped, open ones kept at any age."
   },
   "min_pay_lpa": 20,
   "max_age_days": 30,

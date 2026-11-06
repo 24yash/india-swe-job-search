@@ -1247,6 +1247,428 @@
    "pay_note": "not yet checked"
   },
   {
+   "name": "OpenFX",
+   "ats": "greenhouse",
+   "type": "Product company",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "slug": "openfx"
+  },
+  {
+   "name": "CertifyOS",
+   "ats": "ashby",
+   "type": "Product company",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "slug": "certifyos"
+  },
+  {
+   "name": "Zinier",
+   "ats": "greenhouse",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "slug": "zinier"
+  },
+  {
+   "name": "100ms",
+   "ats": "lever",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "slug": "100ms"
+  },
+  {
+   "name": "Neuron7.ai",
+   "ats": "lever",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "slug": "neuron7"
+  },
+  {
+   "name": "UiPath",
+   "ats": "ashby",
+   "type": "Product company",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "slug": "uipath"
+  },
+  {
+   "name": "Bidgely",
+   "ats": "ashby",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "slug": "bidgely-inc"
+  },
+  {
+   "name": "Aviatrix",
+   "ats": "greenhouse",
+   "type": "Product company",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "slug": "aviatrix"
+  },
+  {
+   "name": "Take-Two Interactive",
+   "ats": "greenhouse",
+   "type": "Product company",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "slug": "taketwo"
+  },
+  {
+   "name": "Flexport",
+   "ats": "greenhouse",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "slug": "flexport"
+  },
+  {
+   "name": "Commure",
+   "ats": "ashby",
+   "type": "Product company",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "slug": "commure"
+  },
+  {
+   "name": "Chainguard",
+   "ats": "greenhouse",
+   "type": "Product company",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "slug": "chainguard"
+  },
+  {
+   "name": "Better",
+   "ats": "ashby",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "slug": "better-mortgage"
+  },
+  {
+   "name": "Affinidi",
+   "ats": "greenhouse",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "slug": "affinidi"
+  },
+  {
+   "name": "Cambridge Mobile Telematics",
+   "ats": "greenhouse",
+   "type": "Product company",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "slug": "cambridgemobiletelematics"
+  },
+  {
+   "name": "Rox",
+   "ats": "ashby",
+   "type": "Product company",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "slug": "rox-data-corp"
+  },
+  {
+   "name": "KLA",
+   "ats": "workday",
+   "type": "Semiconductor equipment (software)",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India P1 median TC 25.5, P2 36.7 LPA",
+   "tenant": "kla",
+   "wd": "wd1",
+   "site": "Search"
+  },
+  {
+   "name": "Cohesity",
+   "ats": "workday",
+   "type": "Data security/infra",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Infra product bands",
+   "tenant": "cohesity",
+   "wd": "wd5",
+   "site": "Cohesity_Careers"
+  },
+  {
+   "name": "CrowdStrike",
+   "ats": "workday",
+   "type": "Security SaaS",
+   "quality": 13,
+   "pay": "likely",
+   "pay_note": "Product bands",
+   "tenant": "crowdstrike",
+   "wd": "wd5",
+   "site": "crowdstrikecareers"
+  },
+  {
+   "name": "BlackBerry",
+   "ats": "workday",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "tenant": "bb",
+   "wd": "wd3",
+   "site": "BlackBerry"
+  },
+  {
+   "name": "Coupang",
+   "ats": "greenhouse",
+   "slug": "coupang",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "PubMatic",
+   "ats": "greenhouse",
+   "slug": "pubmatic",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Celonis",
+   "ats": "greenhouse",
+   "slug": "celonis",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Airbound",
+   "ats": "ashby",
+   "slug": "airbound",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Level AI",
+   "ats": "lever",
+   "slug": "levelai",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Acceldata",
+   "ats": "lever",
+   "slug": "acceldata",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Interview Kickstart",
+   "ats": "ashby",
+   "slug": "interview-kickstart",
+   "type": "Blume-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "AQR",
+   "ats": "greenhouse",
+   "slug": "aqr",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "DoorDash",
+   "ats": "greenhouse",
+   "slug": "doordashindia",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "LogicMonitor",
+   "ats": "greenhouse",
+   "slug": "logicmonitor",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "KredX",
+   "ats": "smartrecruiters",
+   "slug": "kredx",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "AppZen",
+   "ats": "lever",
+   "slug": "appzen",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Metaforms",
+   "ats": "ashby",
+   "slug": "metaforms",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "6sense",
+   "ats": "greenhouse",
+   "slug": "6sense",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Gushwork",
+   "ats": "lever",
+   "slug": "gushwork",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Vegrow",
+   "ats": "smartrecruiters",
+   "slug": "vegrow",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "GoDaddy",
+   "ats": "greenhouse",
+   "slug": "godaddy",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Sureify",
+   "ats": "greenhouse",
+   "slug": "sureify",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Roku",
+   "ats": "greenhouse",
+   "slug": "roku",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Shipsy",
+   "ats": "smartrecruiters",
+   "slug": "shipsy",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Turvo",
+   "ats": "lever",
+   "slug": "turvo",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Captain Fresh",
+   "ats": "smartrecruiters",
+   "slug": "captainfresh",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Socure",
+   "ats": "ashby",
+   "slug": "socure",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Entropik",
+   "ats": "smartrecruiters",
+   "slug": "entropik",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Protegrity",
+   "ats": "ashby",
+   "slug": "protegrity",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
+   "name": "Ping Identity",
+   "ats": "greenhouse",
+   "slug": "pingidentity",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked"
+  },
+  {
    "name": "LinkedIn search",
    "ats": "linkedin",
    "type": "aggregator",
