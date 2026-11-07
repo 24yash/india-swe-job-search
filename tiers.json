@@ -6,119 +6,135 @@
    "type": "Global product MNC (public)",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Big-tech L3/L4 bands"
+   "pay_note": "Levels.fyi India L3 44.8, L4 71.8 LPA median TC"
   },
   {
    "name": "Meta",
    "type": "Global product MNC (public)",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Big-tech bands"
+   "pay_note": "Big-tech bands",
+   "site": "metacareers.com"
   },
   {
    "name": "Apple",
    "type": "Global product MNC (public)",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Big-tech bands"
+   "pay_note": "Levels.fyi India ICT2 35.7, ICT3 71.7 LPA median TC",
+   "site": "jobs.apple.com"
   },
   {
    "name": "Netflix",
    "type": "Global product MNC (public)",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Big-tech bands"
+   "pay_note": "Big-tech bands",
+   "site": "jobs.netflix.com"
   },
   {
    "name": "Uber",
    "type": "Global product MNC (public)",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Levels.fyi India L3 median TC 35.4 LPA"
+   "pay_note": "Levels.fyi India L3 median TC 35.4 LPA",
+   "site": "uber.com"
   },
   {
    "name": "LinkedIn",
    "type": "Global product MNC (Microsoft)",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Big-tech bands"
+   "pay_note": "Big-tech bands",
+   "site": "careers.linkedin.com"
   },
   {
    "name": "Oracle",
    "type": "Global product MNC (public)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India IC-2 median TC 26.5 LPA"
+   "pay_note": "Levels.fyi India IC-2 median TC 26.5 LPA",
+   "site": "oracle.com"
   },
   {
    "name": "Intuit",
    "type": "Global product MNC (public)",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "Strong Bengaluru bands"
+   "pay_note": "Strong Bengaluru bands",
+   "site": "intuit.com"
   },
   {
    "name": "Walmart",
    "type": "Global retail tech centre",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India P2 median TC 20.6, P3 34.4 LPA"
+   "pay_note": "Levels.fyi India P2 median TC 20.6, P3 34.4 LPA",
+   "site": "careers.walmart.com"
   },
   {
    "name": "Walmart Global Tech India",
    "type": "Global retail tech centre",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India P2 median TC 20.6, P3 34.4 LPA"
+   "pay_note": "Levels.fyi India P2 median TC 20.6, P3 34.4 LPA",
+   "site": "tech.walmart.com"
   },
   {
    "name": "Flipkart",
    "type": "Indian e-commerce (Walmart)",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SDE1 median TC 22.1, SDE2 36.4 LPA"
+   "pay_note": "Levels.fyi India SDE1 median TC 22.1, SDE2 36.4 LPA",
+   "site": "flipkartcareers.com"
   },
   {
    "name": "PhonePe",
    "type": "Late-stage Indian fintech",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SE1 median TC 28.9 LPA"
+   "pay_note": "Levels.fyi India SE1 median TC 28.9 LPA",
+   "site": "phonepe.com"
   },
   {
    "name": "Eternal",
    "type": "Indian consumer tech (listed; Zomato/Blinkit)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi (Zomato) SWE median TC 50.4 LPA, all levels"
+   "pay_note": "Levels.fyi (Zomato) SWE median TC 50.4 LPA, all levels",
+   "site": "eternal.com"
   },
   {
    "name": "Zomato",
    "type": "Indian consumer tech (listed; Eternal)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SWE median TC 50.4 LPA (all levels; base 33.9)"
+   "pay_note": "Levels.fyi India SWE median TC 50.4 LPA (all levels; base 33.9)",
+   "site": "zomato.com"
   },
   {
    "name": "Blinkit",
    "type": "Indian quick-commerce (Eternal)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Eternal group; Levels.fyi (Zomato) SWE median TC 50.4 LPA, all levels"
+   "pay_note": "Eternal group; Levels.fyi (Zomato) SWE median TC 50.4 LPA, all levels",
+   "site": "blinkit.com"
   },
   {
    "name": "Zepto",
    "type": "Late-stage quick-commerce",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "SDE bands above 20"
+   "pay_note": "Levels.fyi India SE1 median TC 34.7 LPA",
+   "site": "zeptonow.com"
   },
   {
    "name": "Myntra",
    "type": "Indian e-commerce (Flipkart)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SE median TC 22.1 LPA"
+   "pay_note": "Levels.fyi India SE median TC 22.1 LPA",
+   "site": "myntra.com"
   },
   {
    "name": "CRED",
@@ -146,112 +162,127 @@
    "type": "Profitable Indian fintech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Known to pay well for engineers"
+   "pay_note": "Known to pay well for engineers",
+   "site": "zerodha.com"
   },
   {
    "name": "Juspay",
    "type": "Late-stage Indian fintech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Fintech unicorn"
+   "pay_note": "Fintech unicorn",
+   "site": "juspay.io"
   },
   {
    "name": "Dream11",
    "type": "Late-stage consumer tech (Dream Sports)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "High startup bands"
+   "pay_note": "Levels.fyi India SDE 1 median TC 25.1, SDE 2 55.6 LPA",
+   "site": "dream11.com"
   },
   {
    "name": "Dream Sports",
    "type": "Late-stage consumer tech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "High startup bands"
+   "pay_note": "High startup bands",
+   "site": "dreamsports.group"
   },
   {
    "name": "Games24x7",
    "type": "Profitable gaming tech",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "SDE bands above 20"
+   "pay_note": "SDE bands above 20",
+   "site": "games24x7.com"
   },
   {
    "name": "MakeMyTrip",
    "type": "Public travel tech",
    "quality": 11,
-   "pay": "likely",
-   "pay_note": "SDE-2 bands above 20"
+   "pay": "below",
+   "pay_note": "Below bar at early-career level: Levels.fyi India Software Engineer 17.1 LPA (Senior SE1 23.1)"
   },
   {
    "name": "Media.net",
    "type": "Adtech product company",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Known high payer"
+   "pay_note": "Levels.fyi India SE1 19.7 LPA (below bar), higher levels above; AmbitionBox dev 18.5-21.1",
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate",
+   "site": "media.net"
   },
   {
    "name": "The D. E. Shaw Group",
    "type": "Quant/finance tech",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Very high bands"
+   "pay_note": "Very high bands",
+   "site": "deshawindia.com"
   },
   {
    "name": "D. E. Shaw",
    "type": "Quant/finance tech",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Very high bands"
+   "pay_note": "Very high bands",
+   "site": "deshawindia.com"
   },
   {
    "name": "Tower Research Capital",
    "type": "HFT firm",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Very high bands"
+   "pay_note": "Levels.fyi India overall median TC 72.7 LPA (all levels)"
   },
   {
    "name": "Goldman Sachs",
    "type": "Global bank engineering",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Levels.fyi India Analyst median TC 32.9 LPA"
+   "pay_note": "Levels.fyi India Analyst median TC 32.9 LPA",
+   "site": "goldmansachs.com"
   },
   {
    "name": "Nutanix",
    "type": "Public infra product",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "MTS bands above 20"
+   "pay_note": "MTS bands above 20",
+   "site": "nutanix.com"
   },
   {
    "name": "ThoughtSpot",
    "type": "Late-stage analytics SaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "High SaaS bands"
+   "pay_note": "High SaaS bands",
+   "site": "thoughtspot.com"
   },
   {
    "name": "Postman",
    "type": "Late-stage devtools",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "High devtools bands"
+   "pay_note": "Levels.fyi India IC1 29.1 LPA median TC",
+   "site": "postman.com"
   },
   {
    "name": "BrowserStack",
    "type": "Late-stage devtools",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "High devtools bands"
+   "pay_note": "High devtools bands",
+   "site": "browserstack.com"
   },
   {
    "name": "Rippling",
    "type": "Late-stage HR SaaS",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "Global bands in Bengaluru"
+   "pay_note": "Levels.fyi India L5 45.5 LPA median TC",
+   "site": "rippling.com"
   },
   {
    "name": "Sprinklr",
@@ -287,7 +318,8 @@
    "type": "Global payments MNC",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SE II median TC 24.3 LPA"
+   "pay_note": "Levels.fyi India SE II median TC 24.3 LPA",
+   "site": "americanexpress.com"
   },
   {
    "name": "PayPal",
@@ -301,70 +333,79 @@
    "type": "Global travel tech",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Levels.fyi India J median TC 20.9, K 36.7 LPA"
+   "pay_note": "Levels.fyi India J median TC 20.9, K 36.7 LPA",
+   "site": "expediagroup.com"
   },
   {
    "name": "Booking Holdings",
    "type": "Global travel tech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Global product co"
+   "pay_note": "Global product co",
+   "site": "bookingholdings.com"
   },
   {
    "name": "Qualcomm",
    "type": "Global semiconductor MNC",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Software bands near or above 20"
+   "pay_note": "Levels.fyi India Associate Engineer 20.5, Engineer 29.4 LPA median TC",
+   "site": "qualcomm.com"
   },
   {
    "name": "Arista Networks",
    "type": "Public networking product",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "High bands"
+   "pay_note": "Levels.fyi India grade 2 25.7, 3L 41.3 LPA median TC"
   },
   {
    "name": "Palo Alto Networks",
    "type": "Public security product",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "High bands"
+   "pay_note": "High bands",
+   "site": "paloaltonetworks.com"
   },
   {
    "name": "Akamai Technologies",
    "type": "Public infra product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Infra product co"
+   "pay_note": "Infra product co",
+   "site": "akamai.com"
   },
   {
    "name": "Workday",
    "type": "Public SaaS",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "SaaS MNC"
+   "pay_note": "SaaS MNC",
+   "site": "workday.com"
   },
   {
    "name": "Autodesk",
    "type": "Public software MNC",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India Grade 8 median TC 20.2, Grade 9 28.0 LPA"
+   "pay_note": "Levels.fyi India Grade 8 median TC 20.2, Grade 9 28.0 LPA",
+   "site": "autodesk.com"
   },
   {
    "name": "VMware",
    "type": "Infra product (Broadcom)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Infra MNC"
+   "pay_note": "Infra MNC",
+   "site": "vmware.com"
   },
   {
    "name": "Broadcom",
    "type": "Global product MNC",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Infra MNC"
+   "pay_note": "Infra MNC",
+   "site": "broadcom.com"
   },
   {
    "name": "Adobe",
@@ -427,42 +468,48 @@
    "type": "Indian e-commerce (listed)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SE I median TC 25.5 LPA"
+   "pay_note": "Levels.fyi India SE I median TC 25.5 LPA",
+   "site": "meesho.io"
   },
   {
    "name": "ShareChat",
    "type": "Late-stage consumer tech",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "High startup bands"
+   "pay_note": "High startup bands",
+   "site": "sharechat.com"
   },
   {
    "name": "Urban Company",
    "type": "Indian consumer tech (listed)",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "SDE bands above 20"
+   "pay_note": "SDE bands above 20",
+   "site": "urbancompany.com"
   },
   {
    "name": "Navi",
    "type": "Indian fintech",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "High startup bands"
+   "pay_note": "High startup bands",
+   "site": "navi.com"
   },
   {
    "name": "Slice",
    "type": "Indian fintech/bank",
    "quality": 10,
    "pay": "likely",
-   "pay_note": "High startup bands"
+   "pay_note": "High startup bands",
+   "site": "slice.bank.in"
   },
   {
    "name": "Upstox",
    "type": "Indian fintech",
    "quality": 10,
    "pay": "likely",
-   "pay_note": "SDE bands around 20+"
+   "pay_note": "Levels.fyi India overall median TC 42.4 LPA (all levels)",
+   "site": "upstox.com"
   },
   {
    "name": "InMobi",
@@ -476,7 +523,7 @@
    "type": "InMobi consumer tech",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "InMobi group bands"
+   "pay_note": "Levels.fyi India SE1 26.9 LPA median TC"
   },
   {
    "name": "Atlan",
@@ -490,14 +537,16 @@
    "type": "Late-stage SaaS",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "SaaS unicorn"
+   "pay_note": "SaaS unicorn",
+   "site": "chargebee.com"
   },
   {
    "name": "Hasura",
    "type": "Devtools startup",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "Devtools"
+   "pay_note": "Devtools",
+   "site": "hasura.io"
   },
   {
    "name": "Zscaler",
@@ -511,7 +560,7 @@
    "type": "Public data security",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "High infra bands"
+   "pay_note": "Levels.fyi India L3 68.9 LPA median TC"
   },
   {
    "name": "Databricks",
@@ -532,7 +581,7 @@
    "type": "Late-stage fintech",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Top-tier bands"
+   "pay_note": "Levels.fyi India L1 57.9 LPA median TC"
   },
   {
    "name": "Coinbase",
@@ -546,7 +595,8 @@
    "type": "Global bank tech centre",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "Levels.fyi India 601 median TC 27.5, 602 42.4 LPA (502 is 18.2, below bar)"
+   "pay_note": "Levels.fyi India 601 median TC 27.5, 602 42.4 LPA (502 is 18.2, below bar)",
+   "site": "jpmorganchase.com"
   },
   {
    "name": "Morgan Stanley",
@@ -632,14 +682,16 @@
    "type": "Global software MNC",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "SAP Labs India dev bands"
+   "pay_note": "SAP Labs India dev bands",
+   "site": "sap.com"
   },
   {
    "name": "SAP",
    "type": "Global software MNC",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "SAP Labs India dev bands"
+   "pay_note": "SAP Labs India dev bands",
+   "site": "sap.com"
   },
   {
    "name": "Nvidia",
@@ -652,8 +704,8 @@
    "name": "AMD",
    "type": "Semiconductor MNC (software roles)",
    "quality": 12,
-   "pay": "unclear",
-   "pay_note": "Bands vary by team"
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE median TC 53.6 LPA; L5 (entry) 27.9 LPA (Nov 2026)"
   },
   {
    "name": "Intel",
@@ -701,8 +753,8 @@
    "name": "GE HealthCare",
    "type": "Healthcare tech R&D",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE (entry) 16.7 LPA; median 20.0 LPA (Nov 2026)"
   },
   {
    "name": "Honeywell",
@@ -723,14 +775,15 @@
    "type": "Storage/infra product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India MTS I 22.7, MTS II 31.0 LPA"
+   "pay_note": "Levels.fyi India MTS I 22.7, MTS II 31.0 LPA",
+   "site": "netapp.com"
   },
   {
    "name": "Hewlett Packard Enterprise",
    "type": "Infra product MNC",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "India entry 14.9, intermediate 24.6 LPA: depends on level (levels.fyi, Nov 2026)"
   },
   {
    "name": "HP",
@@ -751,7 +804,8 @@
    "type": "Infra/security product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Infra product bands"
+   "pay_note": "Infra product bands",
+   "site": "f5.com"
   },
   {
    "name": "Red Hat",
@@ -765,7 +819,8 @@
    "type": "Networking product",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Networking product bands"
+   "pay_note": "Networking product bands",
+   "site": "juniper.net"
   },
   {
    "name": "Ciena",
@@ -785,15 +840,16 @@
    "name": "Cadence Design Systems",
    "type": "EDA software MNC",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "Software roles vary"
+   "pay": "likely",
+   "pay_note": "India SE I 16.6 (below), SE II 21.2 LPA; median 33.9 (levels.fyi, Nov 2026)",
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate"
   },
   {
    "name": "Arm",
    "type": "Semiconductor IP",
    "quality": 12,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE median TC 67.0 LPA; Grade 2 (entry) 21.9, Grade 3 32.0 LPA (Nov 2026)"
   },
   {
    "name": "Marvell Technology",
@@ -807,7 +863,7 @@
    "type": "Semiconductor MNC",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Levels.fyi India SE median TC 29.8 LPA; E1 13.9 (below floor), E2 24.2, E3 30.0 LPA: level-dependent (Nov 2026)"
   },
   {
    "name": "KLA",
@@ -842,7 +898,8 @@
    "type": "Engineering software",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Product software bands"
+   "pay_note": "Levels.fyi India Associate 25.1, SE 2 30.5 LPA median TC",
+   "site": "mathworks.com"
   },
   {
    "name": "PTC",
@@ -877,14 +934,16 @@
    "type": "Database company",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "DB product bands"
+   "pay_note": "DB product bands",
+   "site": "couchbase.com"
   },
   {
    "name": "Confluent",
    "type": "Data streaming infra",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "Infra product bands"
+   "pay_note": "Infra product bands",
+   "site": "confluent.io"
   },
   {
    "name": "Cohesity",
@@ -919,42 +978,47 @@
    "type": "Observability (Cisco)",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Infra product bands"
+   "pay_note": "Infra product bands",
+   "site": "splunk.com"
   },
   {
    "name": "Dropbox",
    "type": "Product company",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Global bands",
+   "site": "dropbox.com"
   },
   {
    "name": "Twilio",
    "type": "CPaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Product bands"
+   "pay_note": "Levels.fyi India IC1 27.8 LPA median TC"
   },
   {
    "name": "Zendesk",
    "type": "SaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Product bands"
+   "pay_note": "Product bands",
+   "site": "zendesk.com"
   },
   {
    "name": "HubSpot",
    "type": "SaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Product bands"
+   "pay_note": "Product bands",
+   "site": "hubspot.com"
   },
   {
    "name": "DocuSign",
    "type": "SaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Product bands"
+   "pay_note": "Levels.fyi India P2 49.5 LPA median TC",
+   "site": "docusign.com"
   },
   {
    "name": "Okta",
@@ -968,7 +1032,7 @@
    "type": "Security SaaS",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Product bands"
+   "pay_note": "Levels.fyi India Engineer I 24.3 LPA median TC"
   },
   {
    "name": "Check Point Software",
@@ -988,22 +1052,26 @@
    "name": "Sophos",
    "type": "Security product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "India SE1 15.6 (below), SE2 22.4 LPA; median 45.2 (levels.fyi, Nov 2026)",
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate"
   },
   {
    "name": "Akamai",
    "type": "Infra product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Product bands"
+   "pay_note": "Levels.fyi India SE2 28.1 LPA median TC; SE1 19.9 below bar",
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate",
+   "site": "akamai.com"
   },
   {
    "name": "Cloudflare",
    "type": "Infra product",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Levels.fyi India L3 63.9 LPA median TC",
+   "site": "cloudflare.com"
   },
   {
    "name": "Datadog",
@@ -1046,7 +1114,8 @@
    "quality": 10,
    "pay": "likely",
    "pay_note": "Levels.fyi India SE median TC 22.6 LPA; Associate 10.6 below bar",
-   "below_title": "associate"
+   "below_title": "associate",
+   "site": "teradata.com"
   },
   {
    "name": "Informatica",
@@ -1060,14 +1129,15 @@
    "type": "Security SaaS (Pune)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Levels.fyi India overall 24.3 LPA — borderline"
+   "pay_note": "India SE median 24.1 LPA, no level split: borderline (levels.fyi, Nov 2026)"
   },
   {
    "name": "Tekion",
    "type": "Auto SaaS",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "Unicorn bands"
+   "pay_note": "Levels.fyi India Associate SE 20.4, SE 23.1 LPA median TC",
+   "site": "tekion.com"
   },
   {
    "name": "Toast",
@@ -1081,21 +1151,23 @@
    "type": "E-commerce tech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Product bands"
+   "pay_note": "Levels.fyi India L1 25.9 LPA median TC",
+   "site": "wayfair.com"
   },
   {
    "name": "Lowe's",
    "type": "Retail tech centre",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE L3 14.5, L4 18.9 LPA; median 20.1 LPA (Nov 2026)"
   },
   {
    "name": "Tesco",
    "type": "Retail tech centre",
    "quality": 10,
    "pay": "likely",
-   "pay_note": "Levels.fyi India Graduate SE 22.7, SE1 37.6 LPA"
+   "pay_note": "Levels.fyi India Graduate SE 22.7, SE1 37.6 LPA",
+   "site": "tesco-careers.com"
   },
   {
    "name": "84.51°",
@@ -1185,8 +1257,8 @@
    "name": "Citi",
    "type": "Global bank tech centre",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE median TC 28.8 LPA; C10 22.4, C11 29.4 LPA (Nov 2026)"
   },
   {
    "name": "Citigroup",
@@ -1199,8 +1271,8 @@
    "name": "BNY",
    "type": "Global bank tech centre",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "India level E 19.9, F 21.7 LPA; median 21.1 (levels.fyi, Nov 2026)"
   },
   {
    "name": "BNY Mellon",
@@ -1256,7 +1328,9 @@
    "type": "Asset manager tech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Strong Gurugram/Mumbai bands"
+   "pay_note": "Levels.fyi India Associate 31.6 LPA median TC; Analyst 18.8 below bar",
+   "below_title": "analyst",
+   "site": "blackrock.com"
   },
   {
    "name": "State Street",
@@ -1297,8 +1371,8 @@
    "name": "FIS",
    "type": "Fintech infra",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Bands often below bar"
+   "pay": "below",
+   "pay_note": "India SE1 9.6, SE2 16.7 LPA; median 15.6 (levels.fyi, Nov 2026)"
   },
   {
    "name": "Fiserv",
@@ -1375,21 +1449,24 @@
    "type": "Fin-tech platform (D. E. Shaw)",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Known high Hyderabad/Bengaluru bands"
+   "pay_note": "Known high Hyderabad/Bengaluru bands",
+   "site": "arcesium.com"
   },
   {
    "name": "Addepar",
    "type": "Wealth fintech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Global bands",
+   "site": "addepar.com"
   },
   {
    "name": "Bloomberg",
    "type": "Financial data",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Global bands",
+   "site": "bloomberg.com"
   },
   {
    "name": "Experian",
@@ -1466,35 +1543,38 @@
    "type": "HFT firm",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "HFT bands"
+   "pay_note": "Levels.fyi India overall median TC 81.1 LPA (all levels)"
   },
   {
    "name": "Quadeye",
    "type": "HFT firm",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "HFT bands"
+   "pay_note": "HFT bands",
+   "site": "quadeye.com"
   },
   {
    "name": "AlphaGrep",
    "type": "HFT firm",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "HFT bands"
+   "pay_note": "HFT bands",
+   "site": "alpha-grep.com"
   },
   {
    "name": "Optiver",
    "type": "Market maker",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "HFT bands"
+   "pay_note": "HFT bands",
+   "site": "optiver.com"
   },
   {
    "name": "Squarepoint Capital",
    "type": "Quant fund",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Quant bands"
+   "pay_note": "Levels.fyi India Junior SE 50.0 LPA median TC"
   },
   {
    "name": "WorldQuant",
@@ -1508,7 +1588,8 @@
    "type": "Hedge fund tech",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "Quant bands"
+   "pay_note": "Levels.fyi India SE 68.7 LPA median TC",
+   "site": "mlp.com"
   },
   {
    "name": "NK Securities Research",
@@ -1522,14 +1603,16 @@
    "type": "HFT firm",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "HFT bands"
+   "pay_note": "HFT bands",
+   "site": "irage.in"
   },
   {
    "name": "Trexquant",
    "type": "Quant fund",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Quant bands"
+   "pay_note": "Quant bands",
+   "site": "trexquant.com"
   },
   {
    "name": "Futures First",
@@ -1543,28 +1626,32 @@
    "type": "HFT firm",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "HFT bands"
+   "pay_note": "HFT bands",
+   "site": "aptportfolio.com"
   },
   {
    "name": "Dolat Capital",
    "type": "HFT firm",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "HFT bands"
+   "pay_note": "HFT bands",
+   "site": "dolatcapital.com"
   },
   {
    "name": "Citadel",
    "type": "Hedge fund",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Top bands"
+   "pay_note": "Top bands",
+   "site": "citadel.com"
   },
   {
    "name": "Citadel Securities",
    "type": "Market maker",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "Top bands"
+   "pay_note": "Top bands",
+   "site": "citadelsecurities.com"
   },
   {
    "name": "M2P Fintech",
@@ -1725,7 +1812,8 @@
    "type": "Insurtech",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "High startup bands"
+   "pay_note": "High startup bands",
+   "site": "acko.com"
   },
   {
    "name": "Go Digit",
@@ -1844,14 +1932,16 @@
    "type": "Global fintech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Global bands",
+   "site": "revolut.com"
   },
   {
    "name": "Checkout.com",
    "type": "Global payments",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Global bands",
+   "site": "checkout.com"
   },
   {
    "name": "Adyen",
@@ -1865,21 +1955,24 @@
    "type": "Global fintech",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Global bands",
+   "site": "plaid.com"
   },
   {
    "name": "Brex",
    "type": "Global fintech",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Global bands",
+   "site": "brex.com"
   },
   {
    "name": "Ramp",
    "type": "Global fintech",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Global bands",
+   "site": "ramp.com"
   },
   {
    "name": "CoinDCX",
@@ -2068,7 +2161,8 @@
    "type": "Social media (ShareChat)",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "High startup bands"
+   "pay_note": "High startup bands",
+   "site": "mojapp.in"
   },
   {
    "name": "VerSe Innovation",
@@ -2110,14 +2204,16 @@
    "type": "Streaming",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Known strong bands"
+   "pay_note": "Known strong bands",
+   "site": "jiostar.com"
   },
   {
    "name": "Hotstar",
    "type": "Streaming",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Known strong bands"
+   "pay_note": "Known strong bands",
+   "site": "jiostar.com"
   },
   {
    "name": "Nobroker",
@@ -2138,14 +2234,16 @@
    "type": "HR AI SaaS",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "High SaaS bands"
+   "pay_note": "High SaaS bands",
+   "site": "eightfold.ai"
   },
   {
    "name": "Deel",
    "type": "HR/payroll SaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Levels.fyi India SE I 24.9 LPA median TC",
+   "site": "deel.com"
   },
   {
    "name": "Darwinbox",
@@ -2175,7 +2273,8 @@
    "quality": 11,
    "pay": "likely",
    "pay_note": "Levels.fyi India SE2 median TC 29.6 LPA; SE1 14.3 below bar",
-   "below_title": "(sde|engineer)\\s*[-–]?\\s*(1|i)\\b|associate"
+   "below_title": "(sde|engineer)\\s*[-–]?\\s*(1|i)\\b|associate",
+   "site": "innovaccer.com"
   },
   {
    "name": "Icertis",
@@ -2188,8 +2287,8 @@
    "name": "HighRadius",
    "type": "Fintech SaaS",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Entry bands often below bar"
+   "pay": "below",
+   "pay_note": "India Associate SE1 7.2, SE1 9.8 LPA; median 9.3 (levels.fyi, Nov 2026)"
   },
   {
    "name": "CleverTap",
@@ -2301,7 +2400,8 @@
    "type": "AI SaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Khosla-backed; strong bands"
+   "pay_note": "Khosla-backed; strong bands",
+   "site": "devrev.ai"
   },
   {
    "name": "Rocketlane",
@@ -2399,7 +2499,8 @@
    "type": "AI lab (Series B 2026)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Well-funded AI lab"
+   "pay_note": "Well-funded AI lab",
+   "site": "sarvam.ai"
   },
   {
    "name": "TrueFoundry",
@@ -2497,7 +2598,7 @@
    "type": "Real-time analytics",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "Infra startup"
+   "pay_note": "Levels.fyi India overall median TC 55.1 LPA (all levels)"
   },
   {
    "name": "Yugabyte",
@@ -2539,7 +2640,7 @@
    "type": "Devtools (remote)",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Global bands"
+   "pay_note": "Levels.fyi India Intermediate SE 71.5 LPA median TC"
   },
   {
    "name": "Grafana Labs",
@@ -2553,7 +2654,7 @@
    "type": "Storage/infra",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "High infra bands"
+   "pay_note": "Levels.fyi India MTS3 50+ LPA; LeetCode report: fresh-grad MTS II 59 LPA"
   },
   {
    "name": "Netskope",
@@ -2595,14 +2696,16 @@
    "type": "Travel tech",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Global product co"
+   "pay_note": "Global product co",
+   "site": "booking.com"
   },
   {
    "name": "Swiggy Instamart",
    "type": "Quick commerce (Swiggy)",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi Swiggy entry median TC 20.6 LPA"
+   "pay_note": "Levels.fyi Swiggy entry median TC 20.6 LPA",
+   "site": "swiggy.com"
   },
   {
    "name": "JPMorganChase",
@@ -2673,7 +2776,8 @@
    "quality": 12,
    "pay": "likely",
    "pay_note": "Levels.fyi India L8 (SE II) median TC 22.5 LPA; L9 16.5 below bar",
-   "below_title": "engineer\\s*[-–]?\\s*(1|i)\\b|associate"
+   "below_title": "engineer\\s*[-–]?\\s*(1|i)\\b|associate",
+   "site": "mastercard.com"
   },
   {
    "name": "project44",
@@ -2694,7 +2798,7 @@
    "type": "Work-management SaaS",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "Levels.fyi India overall 25.2 LPA — borderline (overall medians lean senior)"
+   "pay_note": "India SE median 25.0 LPA, level labels unreliable: borderline (levels.fyi, Nov 2026)"
   },
   {
    "name": "Clearwater Analytics",
@@ -2715,7 +2819,8 @@
    "type": "Martech SaaS",
    "quality": 10,
    "pay": "likely",
-   "pay_note": "Levels.fyi India overall median TC 34.7 LPA (all levels)"
+   "pay_note": "Levels.fyi India overall median TC 34.7 LPA (all levels)",
+   "site": "gohighlevel.com"
   },
   {
    "name": "HackerRank",
@@ -2729,7 +2834,8 @@
    "type": "Telecom tech centre (T-Mobile)",
    "quality": 10,
    "pay": "likely",
-   "pay_note": "Levels.fyi T-Mobile India T2 median TC 32.6, overall 21.3 LPA"
+   "pay_note": "Levels.fyi T-Mobile India T2 median TC 32.6, overall 21.3 LPA",
+   "site": "tmus.com"
   },
   {
    "name": "NCR Atleos",
@@ -2854,8 +2960,8 @@
    "name": "Disney",
    "type": "Global product",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE median TC 38.7 LPA (only senior level reported) (Nov 2026)"
   },
   {
    "name": "JioStar",
@@ -2869,14 +2975,16 @@
    "type": "Global product",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "lifeatspotify.com"
   },
   {
    "name": "Gojek",
    "type": "Global product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "gojek.com"
   },
   {
    "name": "Careem",
@@ -2925,7 +3033,8 @@
    "type": "Global product",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "hashicorp.com"
   },
   {
    "name": "UKG",
@@ -2967,7 +3076,8 @@
    "type": "Global product",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "arista.com"
   },
   {
    "name": "Ericsson",
@@ -2995,21 +3105,24 @@
    "type": "Global product",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "Levels.fyi India Associate SE median TC 31.5 LPA"
+   "pay_note": "Levels.fyi India Associate SE median TC 31.5 LPA",
+   "site": "capitalone.com"
   },
   {
    "name": "Commonwealth Bank of Australia",
    "type": "Global product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "commbank.com.au"
   },
   {
    "name": "CommBank",
    "type": "Global product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "commbank.com.au"
   },
   {
    "name": "ANZ",
@@ -3289,7 +3402,7 @@
    "type": "Global product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "Levels.fyi India SE median TC 22.3 LPA, no per-level data: borderline (Nov 2026)"
   },
   {
    "name": "Dassault Systemes",
@@ -3478,7 +3591,7 @@
    "type": "Indian product",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "Levels.fyi India overall 29.5 LPA — borderline"
+   "pay_note": "India SE median 29.3 LPA, no level split: borderline (levels.fyi, Nov 2026)"
   },
   {
    "name": "Pixis",
@@ -3590,7 +3703,8 @@
    "type": "Indian product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "indeed.jobs"
   },
   {
    "name": "Unstop",
@@ -3604,7 +3718,8 @@
    "type": "Indian product",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India overall median TC 44.7 LPA (all levels)"
+   "pay_note": "Levels.fyi India overall median TC 44.7 LPA (all levels)",
+   "site": "truecaller.com"
   },
   {
    "name": "Ola Krutrim",
@@ -3800,21 +3915,24 @@
    "type": "Trading",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "hudsonrivertrading.com"
   },
   {
    "name": "Da Vinci Trading",
    "type": "Trading",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "davincitrading.com"
   },
   {
    "name": "QuantBox",
    "type": "Trading",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "quantboxresearch.com"
   },
   {
    "name": "Edelweiss",
@@ -3842,28 +3960,32 @@
    "type": "Trading",
    "quality": 15,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "twosigma.com"
   },
   {
    "name": "DRW",
    "type": "Trading",
    "quality": 14,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "drw.com"
   },
   {
    "name": "Akuna Capital",
    "type": "Trading",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "akunacapital.com"
   },
   {
    "name": "Eclipse Trading",
    "type": "Trading",
    "quality": 13,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "eclipsetrading.com"
   },
   {
    "name": "Appsmith",
@@ -3982,7 +4104,8 @@
    "type": "SaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "clari.com"
   },
   {
    "name": "Highspot",
@@ -4003,7 +4126,8 @@
    "type": "SaaS",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "tier judgement"
+   "pay_note": "tier judgement",
+   "site": "freshworks.com"
   },
   {
    "name": "CloudSEK",
@@ -4192,42 +4316,47 @@
    "type": "Payments/fintech product",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SE II median TC 32.1 LPA"
+   "pay_note": "Levels.fyi India SE II median TC 32.1 LPA",
+   "site": "wexinc.com"
   },
   {
    "name": "PayPay",
    "type": "Japanese fintech, Gurugram centre",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "Levels.fyi India P2 median TC 36.8 LPA"
+   "pay_note": "Levels.fyi India P2 median TC 36.8 LPA",
+   "site": "paypay.ne.jp"
   },
   {
    "name": "Planview",
    "type": "Work-management SaaS",
    "quality": 10,
    "pay": "likely",
-   "pay_note": "Levels.fyi India overall median TC 32.4 LPA (all levels)"
+   "pay_note": "Levels.fyi India overall median TC 32.4 LPA (all levels)",
+   "site": "planview.com"
   },
   {
    "name": "Warner Music Group",
    "type": "Media/entertainment tech centre",
    "quality": 10,
    "pay": "likely",
-   "pay_note": "Levels.fyi India overall median TC 50.8 LPA (all levels)"
+   "pay_note": "Levels.fyi India overall median TC 50.8 LPA (all levels)",
+   "site": "wmg.com"
   },
   {
    "name": "Cargill",
    "type": "Agri/commodities tech centre",
    "quality": 9,
    "pay": "likely",
-   "pay_note": "Levels.fyi India overall median TC 31.7 LPA (all levels)"
+   "pay_note": "Levels.fyi India overall median TC 31.7 LPA (all levels)",
+   "site": "cargill.com"
   },
   {
    "name": "Sage",
    "type": "Accounting SaaS",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Levels.fyi India overall 27.5 LPA, no level split — borderline"
+   "pay_note": "India SE median 27.3 LPA, no level split: borderline (levels.fyi, Nov 2026)"
   },
   {
    "name": "MetLife",
@@ -4368,6 +4497,5211 @@
    "quality": 10,
    "pay": "unclear",
    "pay_note": "No company-specific India salary data found"
+  },
+  {
+   "name": "Accolite software",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.accolite.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Accord software",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://accord-global.com/careers.html",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Able",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://able.co/team",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Abstract",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://angel.co/company/abstract/jobs",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Accredible",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.accredible.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Activision Blizzard",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.activisionblizzard.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Affinidi",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.affinidi.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Agile Solutions",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "http://agilesolutions.com/careers-2/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Agnikul Cosmos",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://agnikul.in/#/career",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Airbase",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.airbase.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Airtel x labs",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.airtel.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Ajio",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.ajio.com/ajio-careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Alibaba Group",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://talent.alibaba.com/en/home?lang=en",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Alstom",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.alstom.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Alphonso",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://lgads.tv/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Amdocs",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://asset.amdocs.com/careers/home",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Amway",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.amway.in/about-amway/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "App Dynamics",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.appdynamics.com/company/careers/india",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Appen",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://appen.com/jobs/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Appfolio",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.appfolio.com/company/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "AppInventiv",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://appinventiv.com/career/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Aptiv",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.aptiv.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "AQR",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 38.4 LPA (all levels)",
+   "careers_url": "https://www.aqr.com/About-Us/Careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Aryaka networks",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.linkedin.com/company/aryaka-networks/jobs?originalSubdomain=in",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Asteria Aerospace Ltd",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://asteria.co.in/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "ASML",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.asml.com/en/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Automatic Data Processing",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.adp.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Auzmor",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://auzmor.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Avail finance",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://availfinance.in/opportunities/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Avalara",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.avalara.com/us/en/about/jobs/job-openings.html",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Avaya",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.avaya.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Bain & Co",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.bain.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "BARC India",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.barcindia.co.in/life-at-barc",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "bankbazaar",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.bankbazaar.com/careers.html",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Bazaarvoice",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.bazaarvoice.com/company/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "BCG",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "India L1 17.2, L2 28.6 LPA: depends on level (levels.fyi, Nov 2026)",
+   "careers_url": "https://careers.bcg.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Bellatrix Aerospace",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "http://www.bellatrixaerospace.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Benchmark",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://benchmarkit.zohorecruit.com/jobs/Careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Better",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 54.1 LPA (all levels)",
+   "careers_url": "https://better.com/about-us/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Bidgely",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 80.2 LPA (all levels)",
+   "careers_url": "https://www.bidgely.com/bidgely-career-opportunities/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Billdesk",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.linkedin.com/company/billdesk/jobs/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "bitdefender",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.bitdefender.com/company/job-opportunities/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "bitly",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://bitly.com/pages/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "BlackBuck",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.blackbuck.com/careers.php",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "blackberry",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://bb.wd3.myworkdayjobs.com/BlackBerry/jobs",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Block Inc",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://block.xyz/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Bloomberg LP",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.bloomberg.com/job/search",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "BlueJeans",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.bluejeans.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "blueorigin",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.blueorigin.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Bluestacks",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.bluestacks.com/work-at-bluestacks.html",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "BMC software",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.bmc.com/careers/careers.html",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Bottemline Technologies",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.bottomline.com/apac/about/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Bounce",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers-bounce.peoplestrong.com/portal/job/joblist",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Brahmastra Aerospace",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.brahmastraspace.org/career",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "BukuWarung",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.notion.so/BukuWarung-Building-the-digital-infrastructure-for-60-million-MSMEs-in-Indonesia-7e8a4f614acb4c4888659f9d36179579",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "ByteDance",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.bytedance.com/en",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Cadence",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.cadence.com/en_US/home/company/careers.html",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "CarWale",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.carwale.com/career/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Cashfree",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "India SDE1 25.4, SDE2 30.0 LPA (levels.fyi, Nov 2026)",
+   "careers_url": "https://www.cashfree.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Cimpress",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://cimpress.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Celigo",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.celigo.com/company/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Citi Bank",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.citi.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Cerner",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.cerner.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "ClearGlass",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://clearglass.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Cloudera",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.cloudera.com/careers.html",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Codenation innovation labs",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "http://codenation.co.in/hiringprocess.html",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "CodeParva Technologies Pvt Ltd",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://cutshort.io/company/codeparva-technologies-pvt-ltd-t0cDhxZW",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "CodingNinjas",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.linkedin.com/jobs/coding-ninjas-jobs/?originalSubdomain=in",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Coinswitch kuber",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://recruiterflow.com/coinswitch/jobs",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Contra",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://contra.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Coupang",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India L5 median TC 76.3 LPA",
+   "careers_url": "https://rocketyourcareer.usa.coupang.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Cradlepoint",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://cradlepoint.com/about-us/careers/job-listings/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Credit Suisse",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.credit-suisse.com/careers/en/apply.html",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Crestron",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.crestron.com/About/careers-jobs-employment-opportunities",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "CSS Corp",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.csscorp.com/company/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Cvent",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.cvent.com/en/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Dashlane",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.dashlane.com/about/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Dataminr",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.dataminr.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "DBS",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.dbs.com/careers/default.page",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "D. E. Shaw & Co.",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.deshawindia.com/careers/career-development",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "DealShare",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.dealshare.in/careers#home",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Dialpad",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.dialpad.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Directi",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.directi.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "digit",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://digit.co/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "digitalocean",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.digitalocean.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Discord",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://discord.com/jobs",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Discovery inc",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.discovery.com/careers-home/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "dolby",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.dolby.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "DoorDash",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India E4 median TC 54.7 LPA",
+   "careers_url": "https://careers.doordash.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "doximity",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.doximity.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "DP World",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://ehpv.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "DRDO",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.drdo.gov.in/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "droom",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://droom.in/career",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Dukaan",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://angel.co/company/dukaan-app/jobs",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Dunzo",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.dunzo.com/careers#jobs",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "duo",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://duo.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "DuPont",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.dupont.com/us/en",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "EA Games",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.ea.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Enfussion",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://enfusion.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Envestnet Yoodlee",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.yodlee.com/oceania/india-careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Epic Games",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.epicgames.com/site/en-US/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Eurofins",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "India SE median TC 13.0 LPA (levels.fyi, Nov 2026)",
+   "careers_url": "https://careers.eurofins.com/in/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Equinix",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.equinix.com/homepage",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Expedia",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://lifeatexpediagroup.com/jobs/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Fischer Jordan",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://fischerjordan.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Flexport",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.flexport.com/careers/jobs/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "FlyFin",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.linkedin.com/company/flyfin-ai/jobs/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "fincover",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.fincover.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Frappe Technologies",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://frappe.io/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "FreeCharge",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.freecharge.in/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Furlenco",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.furlenco.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Fujitsu",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.fujitsu.com/global/about/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Gartner",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.gartner.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Garuda Aerospace private Ltd",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.garudaaerospace.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "GeeksForGeeks",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.geeksforgeeks.org/careers/?",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "GE",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.ge.com/in/careers/opportunities",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "GeekyAnts",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://geekyants.com/join-geekyants",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Ghost",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.ghost.org/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Github",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://github.com/about/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Glass Door",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.glassdoor.com/Jobs/Glassdoor-Jobs-E100431.htm",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "GoDaddy",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SDE 1 median TC 22.1, SDE 2 36.9 LPA",
+   "careers_url": "https://careers.godaddy.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Godrej Aerospace",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.godrej.com/godrejandboyce/gnb-careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "GoodSpace",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://goodspace.ai/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Go Pro",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.gopro.com/?lang=en-us#/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Gravitont Rading",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.gravitontrading.com/careers.html",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Groupon",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.grouponcareers.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Grofers",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://grofers.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Groq",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://groq.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Hackerearth",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.hackerearth.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Hashedin",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://hashedin.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Hashnode",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.hashnode.com/jobs",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "HBO",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://warnermediacareers.com/hbo-jobs",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "HERE",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.here.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Hexagone",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://hexagon.com/about/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "HSBC Bank",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.hsbc.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Huggingface",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://apply.workable.com/huggingface/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "5ire",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.5ire.org/carreer-blockchain",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "IAC",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.iac.com/join-team",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "IdeaForge",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.ideaforge.co.in/career/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "IHS Markit",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.ihsmarkit.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Impact Analytics",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.impactanalytics.co/join-us/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "India Mart",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.indiamart.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Infospoke",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "http://www.infospoke.in/careers.html",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Intellika",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.intellika.in/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "IP Infusion",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.ipinfusion.com/career/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "ISRO",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.isro.gov.in/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "iQuanti",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.iquanti.com/contact-us/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Jaguar",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.jaguarlandrovercareers.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "JM Financial",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jmfl.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Jumbotail",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jumbotail.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Kantar",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.kantar.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Kesari bharat",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.linkedin.com/in/deepak-sharda-6594561b1/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Khatabook",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://khatabook.com/hiring",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "khoros",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://khoros.com/about/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "KLA Tencor",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.kla-tencor.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Koch",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.kochcareers.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Land rover",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.jaguarlandrovercareers.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Lenovo",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lenovo.com/en_US/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Level AI",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://thelevel.ai/career/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Liebherr",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.liebherr.com/en/usa/start/start-page.html",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "LogicFruit",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.logic-fruit.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Logicmonitor",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India overall 23.8 LPA — borderline",
+   "careers_url": "https://www.logicmonitor.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Lowe's companies, inc",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://corporate.lowes.com/careers/search-apply",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Magicpin",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://magicpin.darwinbox.in/ms/candidate/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Mastery",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://mastery.net/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Maq Software",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://maqsoftware.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Memory",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://memory.ai/jobs",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Molbio Diagnostics",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.molbiodiagnostics.com/career.php",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Mount talent",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.mounttalent.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "MTX",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.mtxb2b.com/s/career",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "National instruments",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.ni.com/en-in/about-ni/careers.html",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "NCR Corporation",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.ncr.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Netcracker",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.netcracker.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Netmeds",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://netmeds.darwinbox.in/ms/candidate/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Ninjacart",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://ninjacart.in/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "nurture.farm",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://nurture.farm/join-us/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Obvious",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://obvious.in/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Ocrolus",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.ocrolus.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Olx",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.olxgroup.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Oneplus",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.oneplus.com/global/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "OpenText",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.opentext.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Optym",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://optym.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Park+",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://parkplus.io/we-are-hiring#hiring",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Pazo",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.gopazo.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "PeopleStrong",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.peoplestrong.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Phillips",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.careers.philips.com/professional/in/en",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Playment",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.playment.io/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Planful",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://planful.com/jobs/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Polygon Technology",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://polygon.technology/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "priceline",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.priceline.com/search",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Principal",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.principal.com/about-us/careers/global-jobs",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Privado.ai",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.privado.ai",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Protegrity",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lever.co/protegrity?location=Bengaluru",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Proximity Labs",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.proximity.tech/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Prodapt",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.prodapt.com/en/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "PubMatic",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "Levels.fyi India overall median TC 18.5 LPA",
+   "careers_url": "https://pubmatic.com/careers/home/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Quantiphi",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://quantiphi.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "QuickSell",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.linkedin.com/company/quicksell/jobs/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Quora",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.quora.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Reelo",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://angel.co/company/reelohq",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Reprise",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.getreprise.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Rivigo",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.rivigo.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Rocket Companies",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.myrocketcareer.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Rockstar Games",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.rockstargames.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Roku",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India Software Engineer median TC 73.4 LPA",
+   "careers_url": "https://www.weareroku.com/jobs/search",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Saavan",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.jiosaavn.com/corporate/jobs",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Sabre corporation",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.sabre.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "SalaryBox",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.salarybox.in/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "SearchApi",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.searchapi.io/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "SendinBlue",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.sendinblue.com/en",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "SerpApi",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://serpapi.com/team",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Shaadi.com",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.naukri.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Shell",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.shell.com/careers.html",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Shipsy",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://shipsy.io/career/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Shopee",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.shopee.sg/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Shopify",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.shopify.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Sigmoid",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "India SE1 14.6 (below), SE2 23.4 LPA; median 22.8 (levels.fyi, Nov 2026)",
+   "careers_url": "https://www.sigmoid.com/careers/",
+   "source": "moreThanFAANGM (product companies list)",
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate"
+  },
+  {
+   "name": "SkillVertex",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.linkedin.com/jobs/search/?f_C=75860188&geoId=92000000",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Sling Media",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.linkedin.com/jobs/sling-media-jobs/?originalSubdomain=in",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Smith Detection",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.smithsdetection.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Sony",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.sonyjobs.com/careers.html",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Squadstack",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.squadstack.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Sureify",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://sureify.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "TATA Advanced Sysytems Ltd",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.tataadvancedsystems.com/careers.php",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "TATA nexarc",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.tatanexarc.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "TE Connectivity",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.te.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Tekion corp",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://tekion.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Tencent",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.tencent.com/en-us/search.html?query=ot_40001001,ot_40001002,ot_40001003,ot_40001004,ot_40001005,ot_40001006",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Tesla",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.tesla.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "TestingBot",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://testingbot.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "TSMC",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.tsmc.com/static/english/careers/index.htm",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Topcoder",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.topcoder.com/company/jobs/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Treebo Hotels",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.linkedin.com/company/treebohotels/jobs/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Turvo",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://turvo.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Twitter",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.twitter.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Ubisoft",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.ubisoft.com/en-us/company/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "unacadamy",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://unacademy.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Unisys",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.unisys.com/us/en",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Upwork",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.upwork.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Valuefy",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://valuefy-solutions.breezy.hr/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Viasat",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE1 13.0, SE3 18.2 LPA; median 22.0 LPA (Nov 2026)",
+   "careers_url": "https://careers.viasat.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Vicara",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://vicara.ch/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Vogo",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://vogo.in/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Warner Bros.",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://warnermediacareers.com/warner-bros-jobs",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Wooqer",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://wooqer.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Xiaomi",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://xiaomi.app.param.ai/jobs/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Xicom Technologies",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.xicom.biz/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Yahoo",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://research.yahoo.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "Yulu Bikes",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.yulu.bike/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "YeasiTech",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.yeasitech.com/career",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "ZivaMe",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.zivame.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "ZoomCar",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.zoomcar.com/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "ZS",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.zs.com/all/jobs",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "1 mg",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.1mg.com/jobs",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "3i Infotech",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.3i-infotech.com/careers/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "4i Apps",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.4iapps.com/careers/#jobs",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "314e Corporation",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.314e.com/",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "[24]7.ai",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.247.ai/company/careers",
+   "source": "moreThanFAANGM (product companies list)"
+  },
+  {
+   "name": "100ms",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India overall 22.2 LPA — borderline",
+   "careers_url": "https://100ms.live",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "6sense",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE II median TC 41.3 LPA",
+   "careers_url": "https://6sense.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Aavenir",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://aavenir.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Acalvio Technologies",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://acalvio.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Accacia",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://accacia.ai",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Agrostar",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://agrostar.in",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Airmeet",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://airmeet.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Akridata",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://akridata.ai",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "ANSR",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://ansr.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Apna Mart",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://apnamart.in",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Axio Biosolutions",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://axiobio.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "BestDoc",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://bestdocapp.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Binocs",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://binocs.co",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Bizongo",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://bizongo.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Bluestone",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://bluestone.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "BookMyShow",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India overall 22.5 LPA — borderline",
+   "careers_url": "https://bookmyshow.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Breathe Well-being",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://breathewellbeing.in",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Campaign Monitor",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://campaignmonitor.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Captain Fresh",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://captainfresh.in",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Celonis",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 48.0 LPA (all levels)",
+   "careers_url": "https://celonis.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "CityMall",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://citymall.live",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Cogoport",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://cogoport.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Consure Medical",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://consuremedical.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Coverfox Insurance",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://coverfox.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Creator Stack",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://creatorstack.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Crown Castle",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://crowncastle.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Curefoods",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://curefoods.in",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Curejoy",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://curejoy.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Detect Technologies",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://detecttechnologies.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Dezerv",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://dezerv.in",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "EduPristine",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://edupristine.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Entytle",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://entytle.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Fabheads Automation",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://fabheads.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "FabHotels",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://fabhotels.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Fashinza",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://fashinza.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Fibr",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://fibr.ai",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Forescout",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://forescout.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Fundly.ai",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://fundly.ai",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "G2",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://g2.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "GutWellness Club",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://gutwellnessclub.in",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Haber",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://haberwater.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Holidayme",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://holidayme.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "HomeLane",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://homelane.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Hotelogix",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://hotelogix.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Houseeazy",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://houseeazy.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Hudl",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://hudl.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Infra.Market",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://infra.market",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Innovist",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://innovist.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Ironclad",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://ironcladapp.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Jifflenow",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jifflenow.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Jify",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jify.co",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "KGEN",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://kgen.io",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Kirusa",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://kirusa.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Knight FinTech",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://knightfintech.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "LetsVenture",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://letsventure.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Lookout",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://lookout.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Mason",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://kubric.io",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Material Depot",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://materialdepot.in",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Meragi",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://meragi.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Mihup",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://mihup.ai",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Mirana Toys",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://miranatoys.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Moglix",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://moglix.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "MyGlamm",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://myglamm.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Nabhdrishti Aerospace Private Limited",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://nabhdrishti.in",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "NAKAD",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://nakad.co",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Newme",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://newme.asia",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Nimble Storage",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://nimblestorage.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Onco",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://onco.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Onsitego",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://onsitego.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Openhouse",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://openhouse.study",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Oslash",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://oslash.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Plex Systems, Inc.",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://plex.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Portea Medical",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://portea.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Power2SME",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://power2sme.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Powerplay",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://getpowerplay.in",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "PrimaryIO",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://primaryio.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Probe42",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://probe42.in",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Productiv",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://productiv.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "PropTiger.com",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://proptiger.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Qwikcilver",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://qwikcilver.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Recommercex",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://recommercex.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Rentomojo",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://rentomojo.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "RetainIQ",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://retainiq.io",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Rigi",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://rigi.club",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Riverbed Technology",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://riverbed.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "S4S Technologies",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://s4stechnologies.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Sahi",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://sahi.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Samunnati",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://samunnati.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Sarla Aviation",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://sarla-aviation.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Sayre Therapeutics",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://sayretherapeutics.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Scimplify",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://scimplify.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Scripbox",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://scripbox.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "SentinelOne",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://sentinelone.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Shivalik Bank",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://shivalikbank.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "SigTuple",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://sigtuple.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Simility, a Paypal Service",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://simility.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Skeps",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://skeps.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Slack",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://slack.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Socure",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "India SE median TC 38.4 LPA (levels.fyi, Nov 2026)",
+   "careers_url": "https://socure.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Spacejoy",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://spacejoy.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "SplashLearn",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://splashlearn.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Spyne",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://spyne.ai",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Stanza Living",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://stanzaliving.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "SureWaves",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://surewaves.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Teabox",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://teabox.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Tenable",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://tenable.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Testsigma",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://testsigma.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Tracxn",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://tracxn.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Trifacta",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://trifacta.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Trinkerr",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://trinkerr.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Truemeds India",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://truemeds.in",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Unmannd Autonomy",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://unmannd.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Unreal Foods",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://unrealfoods.in",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Uppercase",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://uppercase.co.in",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Venwiz",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://venwiz.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Virgio",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://virgio.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Wiom",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://wiom.in",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Zetwerk",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://zetwerk.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Zinier",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "below",
+   "pay_note": "Levels.fyi India overall 11.1 LPA",
+   "careers_url": "https://zinier.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Zumutor Biologics",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://zumutor.com",
+   "source": "Accel-backed startup (ISJB)"
+  },
+  {
+   "name": "Plum HQ",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://plumhq.com",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "DrinkPrime",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://drinkprime.in",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Awfis",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://awfis.com",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Log 9 Materials",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://log9materials.com",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Mosaic Wellness",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://mosaicwellness.in",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "OneScore",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://onescore.app",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Absolute Foods",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://absolutefoods.com",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Cuemath",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://cuemath.com",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "NAT HABIT",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://nathabit.in",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Convosight",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/convosight",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "DeHaat",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/dehaat",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "K12 Techno Services",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/k12-techno-services",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Eduvanz",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/eduvanz",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Fi",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/fi",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Nimbbl",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/nimbbl",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "numberz",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/numberz",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Animall",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/animall",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Byju's",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/byju",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "InCore Semiconductors",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/incore-semiconductors",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Mesh",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/mesh",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Toddle",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/toddle",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Flynote",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/flynote",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "GoMechanic",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/gomechanic",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Octro",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/octro",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Progcap",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/progcap",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "SirionLabs",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://sirionlabs.com",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Wakefit",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/wakefit",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Bijak",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/bijak",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Bira 91",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/bira-91",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Cloudnine Group of Hospitals",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/cloudnine-group-of-hospitals",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Eruditus Executive Education",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/eruditus-executive-education",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Faces Canada",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/faces-canada",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Finova Capital",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/finova-capital",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "FITTR",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/fittr",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "FOXY",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/foxy",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Happay",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/happay",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Innovcare Lifesciences",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/innovcare-lifesciences",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Knowlarity",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/knowlarity",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Koye Pharmaceuticals",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/koye-pharmaceuticals",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "KredX",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/kredx",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Learn More",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/bijnis",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "LocoNav",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/loconav",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "MedGenome",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/medgenome",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Moonfrog",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/moonfrog",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "OncoStem",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/oncostem",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "OneAssist",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/oneassist",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Paper Boat Drinks",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/hector-beverages",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Pristyn Care",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/pristyn-care",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Rattle",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/rattle",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Salesken",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/salesken",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Skillmatics",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/skillmatics",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Suburban Diagnostics",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/suburban-diagnostics",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Trell",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/trell",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "UrbanPiper",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/urbanpiper",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Vymo",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/vymo",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Wildcraft India",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/wildcraft-india",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "Wingreens Farms",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://careers.peakxv.com/jobs/wingreens-farms",
+   "source": "Peak XV-backed startup (ISJB)"
+  },
+  {
+   "name": "SolarSquare Energy",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/solarsquare-energy",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Oolka",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/oolka",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Exponent Energy",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/exponent-energy",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Acceldata",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 44.2 LPA (all levels)",
+   "careers_url": "https://jobs.lsvp.com/jobs/acceldata",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Nexthop AI",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/nexthop-ai",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Tessell",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/tessell",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Typeface",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/typeface",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "AppZen",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/appzen",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Freight Tiger",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/freight-tiger",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Gushwork",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/gushwork",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Slikk",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/slikk",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "XFlow",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/xflow",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Airbound",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/airbound",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "VEGROW",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/vegrow",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Officebanao",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/officebanao",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Snabbit",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/snabbit",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Indian Energy Exchange",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://iexindia.com",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Seekho",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/seekho",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "NextBillion.ai",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/nextbillion",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Bachatt",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/bachatt",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Thena",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/thena",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Data Sutram",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/data-sutram",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Sumosave Retail Ventures",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/sumosave-retail-ventures",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Craftsvilla",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/craftsvilla",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Dpanda",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/dpanda",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Emversity",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/emversity",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "FreshMenu",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/freshmenu",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "FrontRow",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/frontrow",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "GlobalBees",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/globalbees",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "GlobalFair",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/globalfair",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "House of X",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/house-of-x",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Lio",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/lio",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Nexprt",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/nexprt",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "OkCredit",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/okcredit",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "People Home Finance Limited",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/people-home-finance-limited",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Property Share",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/property-share",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Shivalik Small Finance Bank",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/shivalik-small-finance-bank",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "ZYOD",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.lsvp.com/jobs/zyod",
+   "source": "Lightspeed-backed startup (ISJB)"
+  },
+  {
+   "name": "Newton School",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://newtonschool.co",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "AssetPlus",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://assetplus.in",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Daloopa",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://daloopa.com",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Neuron7.ai",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India overall median TC 46.4 LPA (all levels)",
+   "careers_url": "https://neuron7.ai",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Pice",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://pice.one",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Cognida.ai",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/cognida.ai",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Aryaka",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://aryaka.com",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Onsurity",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://onsurity.com",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Peoplebox.ai",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/peoplebox.ai",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Joveo",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://joveo.com",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Mudrex",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://mudrex.com",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "myUpchar.com",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/myupchar.com",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Namaste Credit",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://namastecredit.com",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "PromptQL",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://promptql.io",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Wayground",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://wayground.com",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "HyperTrack",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/hypertrack",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Maximl",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://maximl.com",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Pratilipi",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://pratilipi.com",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Agilitas",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/agilitas",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Elecbits",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/elecbits",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Tijoree",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/tijoree",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "zango",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/zango",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Aurva",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://aurva.io",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Blueshift",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://blueshift.com",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Brightpoint Studios",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/brightpoint-studios",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Covvalent",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/covvalent",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Finarkein Analytics",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/finarkein-analytics",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Investmint",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://investmint.club",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Metaforms",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/metaforms",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Mitigata",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/mitigata",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "MoveInSync",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/moveinsync",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Mugafi",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://mugafi.com",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Nektar.ai",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/nektar.ai",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Singulr AI",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/singulr-ai",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "Zinc",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.nexusvp.com/jobs/zinc",
+   "source": "Nexus-backed startup (ISJB)"
+  },
+  {
+   "name": "MediBuddy",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://medibuddy.in",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Easebuzz",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://easebuzz.in",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Klook",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.bvp.com/jobs/klook",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Aivar Innovations",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://aivar.tech",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Leena AI",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://leena.ai",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Sukino Continuum Care",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://sukinohealthcare.com",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Teleradiology Solutions",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://telradsol.com",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Nova Benefits",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://novabenefits.com",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Zopper",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://zopper.com",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Cambly",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.bvp.com/jobs/cambly",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "graph ai",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://graphsafety.ai",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "CTERA",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.bvp.com/jobs/ctera",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Protectt.ai",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://protectt.ai",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "TransBnk",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://transbnk.co.in",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Vetic",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://vetic.in",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Entropik",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.bvp.com/jobs/entropik",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "The Good Glamm Group",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://goodglamm.com",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Appwrite",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.bvp.com/jobs/appwrite",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Innoviti",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://innoviti.com",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Lentra",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://lentra.ai",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Anunta Tech",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://anuntatech.com",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Boldfit",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://boldfit.com",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Cashify",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://cashify.in",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Hungama",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://hungama.com",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "InRisk Labs",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://inrisk.insure",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "MediSage",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://mymedisage.com",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Moxie Beauty",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jobs.bvp.com/jobs/moxie-beauty",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Rupifi",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://rupifi.com",
+   "source": "Bessemer-backed startup (ISJB)"
+  },
+  {
+   "name": "Amigo",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://amigo.ai",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Billion Hearts",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://billionhearts.co",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Cashflo",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://cashflo.io",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Chai Shots",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://chaishots.in",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Constelli",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://constelli.com",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Eightfold",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://eightfold.ai",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Fitmint",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://fitmint.io",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "GetSupp",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://getsupp.com",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Hive",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://thehive.ai",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "JEH Aerospace",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://jeh.aero",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Magma",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://magmagroup.in",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Meolaa",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://meolaa.com",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Nurix",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://nurix.ai",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Omli Technologies",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://omli.in",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Ping Identity",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://pingidentity.com",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Primus",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://primuslife.in",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Pronto",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://withpronto.com",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Prosimo.io",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://prosimo.io",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Raphe mPhibr",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://raphe.com",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Shyft",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://betheshyft.com",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Singular",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://singular.net",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Stan",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://getstan.app",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "The Honest Company",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://honest.com",
+   "source": "General Catalyst-backed startup (ISJB)"
+  },
+  {
+   "name": "Ati Motors",
+   "type": "Blume-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://atimotors.com",
+   "source": "Blume-backed startup (ISJB)"
+  },
+  {
+   "name": "DPDzero",
+   "type": "Blume-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://dpdzero.com",
+   "source": "Blume-backed startup (ISJB)"
+  },
+  {
+   "name": "Interview Kickstart",
+   "type": "Blume-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://interviewkickstart.com",
+   "source": "Blume-backed startup (ISJB)"
+  },
+  {
+   "name": "Optimized Electrotech",
+   "type": "Blume-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://optimizedelectrotech.com",
+   "source": "Blume-backed startup (ISJB)"
+  },
+  {
+   "name": "OZi",
+   "type": "Blume-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://ozi.in",
+   "source": "Blume-backed startup (ISJB)"
+  },
+  {
+   "name": "SiftHub",
+   "type": "Blume-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://sifthub.io",
+   "source": "Blume-backed startup (ISJB)"
+  },
+  {
+   "name": "Vecmocon Technologies",
+   "type": "Blume-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://vecmocon.com",
+   "source": "Blume-backed startup (ISJB)"
+  },
+  {
+   "name": "Vutto",
+   "type": "Blume-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://vutto.in",
+   "source": "Blume-backed startup (ISJB)"
+  },
+  {
+   "name": "Wizcommerce",
+   "type": "Blume-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "careers_url": "https://wizcommerce.com",
+   "source": "Blume-backed startup (ISJB)"
+  },
+  {
+   "name": "UiPath",
+   "type": "Automation software",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India L3 median TC 44.4 LPA"
+  },
+  {
+   "name": "IMC Trading",
+   "type": "Product company",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Tier judgement: Indian HFT firms report entry pay far above 20 LPA (Business Today, Sep 2025); no reliable per-level data"
+  },
+  {
+   "name": "Applied Materials India",
+   "type": "Semiconductor equipment MNC",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "India SE I 14.3 (below), SE II 25.6 LPA; median 24.9 (levels.fyi, Nov 2026)",
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate"
+  },
+  {
+   "name": "Guidewire Software",
+   "type": "Insurance software product",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "India Software Engineer 22.2 LPA; median 26.2 (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Safe Security",
+   "type": "Cyber-risk SaaS",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "India SE median TC 31.5 LPA (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Emerson",
+   "type": "Industrial technology MNC (owns National Instruments)",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "India SE median TC 12.2 LPA (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "NCR Voyix",
+   "type": "Retail/restaurant tech",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "India (NCR) Grade 9 12.3, Grade 10 18.2 LPA; median 16.5 (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "UPS",
+   "type": "Logistics tech centre",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "India L1 8.7 LPA at entry; median 32.3 leans senior (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Wolters Kluwer",
+   "type": "Information services",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "India T1 8.3, T2 16.0 LPA; median 12.8 (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "GE Vernova",
+   "type": "Energy tech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "India SE median 21.2 LPA, no level split: borderline (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "DHL",
+   "type": "Logistics tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "India SE median 22.9 LPA, no level split: borderline (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "LogicMonitor",
+   "type": "Observability SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "India SE median 23.8 LPA, no level split: borderline (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Flexera",
+   "type": "IT asset SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "India SE median 26.8 LPA, no level split: borderline (levels.fyi, Nov 2026)"
   }
  ],
  "services_and_staffing": [
@@ -4436,12 +9770,6 @@
   "NeoGenCode",
   "Rapidbrains",
   "NexionPro",
-  "Recruitment",
-  "Staffing",
-  "Consultants",
-  "Placement",
-  "HR Solutions",
-  "Talent Acquisition",
   "Capco",
   "Quest Global",
   "ACL Digital",
@@ -4519,6 +9847,21 @@
   "CADOpt",
   "Tech Data",
   "InstantDM",
-  "BHIVE"
- ]
+  "BHIVE",
+  "HTC Global Services",
+  "Kumaran Systems",
+  "Kanerika",
+  "NonStop io Technologies",
+  "HYrEzy Tech Solutions",
+  "Searchjob.ai"
+ ],
+ "staffing_keywords": [
+  "Recruitment",
+  "Staffing",
+  "Consultants",
+  "Placement",
+  "HR Solutions",
+  "Talent Acquisition"
+ ],
+ "_comment_exclusions": "services_and_staffing: company names, matched as the leading words of a company name ('EY' matches 'EY GDS', not 'Honeywell'). staffing_keywords: words that mark a staffing or consulting firm wherever they appear in the name."
 }

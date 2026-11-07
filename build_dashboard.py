@@ -34,7 +34,8 @@ def job(r, kind):
             "location": r["location"], "city": city(r["location"]), "exp": r["exp_asked"], "expSnippet": r["exp_snippet"],
             "pay": r["pay"], "payConf": r["pay_conf"], "stack": r["stack"], "gaps": r["gaps"], "score": int(r["score"]),
             "posted": r["posted"], "source": r.get("source", ""), "reqs": int(r.get("reqs") or 1),
-            "otherLinks": (r.get("other_links") or "").split(), "breakdown": r.get("breakdown", ""), "isNew": r.get("new") == "NEW"}
+            "otherLinks": (r.get("other_links") or "").split(), "breakdown": r.get("breakdown", ""), "isNew": r.get("new") == "NEW",
+            "expBand": r.get("exp_band", ""), "sweet": r.get("sweet_spot") == "yes"}
 
 
 def main():

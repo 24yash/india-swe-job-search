@@ -84,11 +84,17 @@ profile.json  companies.json  tiers.json          ← your criteria, boards craw
 | Source | Covers |
 |---|---|
 | Greenhouse, Lever, Ashby, SmartRecruiters public APIs | Stripe, Databricks, Rubrik, MongoDB, Razorpay, Groww, CRED, Meesho, Snowflake, Sarvam, Freshworks, Swiggy… |
-| Workday search API | Cisco, Salesforce, Adobe, eBay, Mastercard, Target, PayPal… |
-| Amazon, Microsoft, Atlassian, Google careers | their own endpoints |
-| LinkedIn public guest search (no login) | **light (default):** role keywords across India + a 40-company sweep (companies active last run and top-tier employers with no readable board: JPMorgan, Goldman, Uber, Flipkart, Walmart…). **`--deep`:** adds 7-city searches and a 180-company rotating sweep |
+| Workday search API | Cisco, Salesforce, Adobe, eBay, Mastercard, Target, PayPal, Walmart Global Tech, Citi, Capital One, Cadence… |
+| Oracle Recruiting Cloud, Eightfold, Rippling public feeds | JPMorgan Chase, American Express, Oracle, Honeywell, BNY, Citi, Qualcomm, Micron, Autodesk, Microsoft, ThoughtSpot |
+| Company portals (`portals/`: one small reader per site, plus a generic job-links reader) | Apple, Goldman Sachs, Uber, Juspay, Urban Company, ShareChat, Nutanix, Intuit, D. E. Shaw India |
+| Careers-site sitemaps + schema.org JobPosting pages (`portals/sitemap.py`) | Phenom, iCIMS, Avature and SuccessFactors sites and custom ones: Fiserv, WEX, Disney, Arm, BlackRock, Moody's, BCG, Lowe's… |
+| iCIMS Jibe feeds; Keka, Zoho Recruit and Kula careers pages | AMD, DocuSign, Cvent, ICE; Slice, Acko, Cashfree, Wingify, GoKwik, Increff, GeeksForGeeks… |
+| Amazon, Atlassian, Google careers | their own endpoints |
+| LinkedIn public guest search (no login) | **light (default):** role keywords across India + a 40-company sweep (companies active last run and top-tier employers with no readable board: Flipkart, Meta, Netflix, Zepto…). **`--deep`:** adds 7-city searches and a 180-company rotating sweep |
 
-Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `--workday <tenant>`). **`python3 discover_ats.py --bank`** does this for every company in the bank that has no direct board. It tries likely board names on Greenhouse, Lever, Ashby and SmartRecruiters (and reports Workable and Recruitee boards, which `crawl.py` can't read yet), checks the board's company name, and writes `output/discovered-boards.json` for review. One run turned 42 LinkedIn-only companies into direct sources. Put hits in `companies.json`; otherwise add it to `tiers.json` and the LinkedIn sweep will cover it.
+Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `--workday <tenant>`). **`python3 discover_ats.py --bank`** does this for every company in the bank that has no direct board. It tries likely board names on Greenhouse, Lever, Ashby and SmartRecruiters (and reports Workable and Recruitee boards, which `crawl.py` can't read yet), checks the board's company name, and writes `output/discovered-boards.json` for review. One run turned 42 LinkedIn-only companies into direct sources. **`--careers`** reads boards straight from the careers URLs in the bank and from VC portfolio job boards' apply links, and names companies on platforms the crawler can't read yet (Darwinbox, Keka, Zoho Recruit). **`python3 import_lists.py`** grows the bank from public lists ([moreThanFAANGM](https://github.com/Kaustubh-Natuskar/moreThanFAANGM), [ISJB](https://github.com/pHequals7/isjb) VC portfolios). Put hits in `companies.json`; otherwise add it to `tiers.json` and the LinkedIn sweep will cover it.
+
+**`python3 find_careers.py`** goes further for companies with no known board. It finds each company's website, opens its careers page (rendered in headless Chrome when the job list is built with JavaScript), follows its "open roles" links, and works out which job platform serves the openings. Then it verifies the platform for India roles and the right company. `--more` runs a second pass for Keka, Zoho Recruit and Kula pages, Eightfold tenants, Jibe feeds and JobPosting sitemaps. See [CAREERS_DISCOVERY.md](CAREERS_DISCOVERY.md) for the study behind it, the readers it led to, and how to add more companies.
 
 ### Filters (in order; each rejection records its reason)
 1. India location.
@@ -143,8 +149,9 @@ Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `-
   - Naukri (reCAPTCHA);
   - Instahyre, Hirist and Cutshort (login required);
   - Myntra's portal (bot protection);
-  - Walmart's Workday API (refused; Walmart is covered through LinkedIn).
-- **Freshness:** LinkedIn roles must be from the last `max_age_days` days. Company-board roles count as open while they're still listed.
+  - Darwinbox careers sites (Zepto, Unacademy…), JioStar's Workday and Millennium's Eightfold (403 to scripts);
+  - sites behind bot protection (Meta, Netflix, Flipkart, Bloomberg…) and job portals listing other employers' jobs (Apna, GoodSpace);
+- **Expiry:** company-board roles count as open while the board lists them, at any age. LinkedIn roles not seen again are checked on LinkedIn: closed ones are dropped, open ones kept at any age, and unchecked ones are kept only while younger than `max_age_days`.
 - **Snapshot age:** the shipped data is from the crawl date shown in the dashboard header. Job data belongs to the respective employers; check every role on the employer's site before applying.
 
 ## Files
@@ -155,7 +162,12 @@ Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `-
 | `tiers.json` | Company bank: type, quality, pay status and evidence; services/staffing exclusion list |
 | `crawl.py` | The pipeline (`--sources fast\|linkedin\|all`, `--rescore`, `--only "A,B"`, `--max-age 30`) |
 | `discover_ats.py` | Find a company's Greenhouse/Lever/Ashby/SmartRecruiters/Workday board |
+| `find_careers.py` | Find each company's careers site and the job platform behind it ([CAREERS_DISCOVERY.md](CAREERS_DISCOVERY.md)) |
+| `portals/` | Readers for companies' own careers portals (one module per site + a configurable job-links reader) |
 | `report.py` | Markdown shortlist table (max 3 per company) |
 | `build_dashboard.py`, `dashboard_template.html` | Build the dashboard |
 | `refresh.sh` | Fast crawl + dashboard now, then LinkedIn in the background |
+| `import_lists.py` | Grow the company bank from public company lists |
+| `DESIGN.md` | Design decisions, what was rejected and why, improvement backlog |
+| `tests/` | Fixture tests (`python3 tests/<file>.py .`); they never touch real data |
 | `.claude/skills/job-search/SKILL.md` | Agent instructions |

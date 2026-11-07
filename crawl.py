@@ -207,6 +207,66 @@ def workday(c):
         yield from filter(None, pool.map(detail, todo))
 
 
+def oracle(c):
+    """Oracle Recruiting Cloud (JPMorgan, Oracle…): the public REST API behind the company's own careers site."""
+    api = f"https://{c['host']}/hcmRestApi/resources/latest"
+    seen, todo = set(), []
+    for query in ("software engineer", "software developer", "backend engineer"):
+        offset = 0
+        while offset < 500:
+            finder = (f'findReqs;siteNumber={c["site"]},keyword="{query}",location=India,limit=25,offset={offset},'
+                      f'sortBy=POSTING_DATES_DESC')
+            d = get(f"{api}/recruitingCEJobRequisitions", params={"onlyData": "true", "finder": finder,
+                                                                  "expand": "requisitionList.secondaryLocations"})
+            page = ((d.get("items") or [{}])[0]).get("requisitionList") or []
+            for j in page:
+                locs = [j.get("PrimaryLocation") or ""] + [s.get("Name", "") for s in j.get("secondaryLocations") or []]
+                if j["Id"] in seen or not title_ok(j.get("Title", "")) or not any(in_india(l) for l in locs):
+                    continue
+                seen.add(j["Id"])
+                todo.append((j, locs))
+            offset += 25
+            if len(page) < 25:
+                break
+
+    def detail(item):
+        j, locs = item
+        try:
+            finder = f'ById;Id="{j["Id"]}",siteNumber={c["site"]}'
+            info = (get(f"{api}/recruitingCEJobRequisitionDetails", params={"expand": "all", "onlyData": "true", "finder": finder})
+                    .get("items") or [{}])[0]
+        except requests.RequestException:
+            return None
+        text = "\n".join(strip_html(info.get(k)) for k in ("ExternalDescriptionStr", "ExternalResponsibilitiesStr", "ExternalQualificationsStr"))
+        return Job(c["name"], j["Title"], " / ".join(filter(None, locs)),
+                   f"https://{c['host']}/hcmUI/CandidateExperience/en/sites/{c['site']}/job/{j['Id']}",
+                   parse_ts(info.get("ExternalPostedStartDate") or j.get("PostedDate")), text,
+                   remote="remote" in (info.get("WorkplaceType") or "").lower(), meta={"commitment": info.get("JobSchedule") or ""})
+
+    with ThreadPoolExecutor(6) as pool:
+        yield from filter(None, pool.map(detail, todo))
+
+
+def rippling(c):
+    """Rippling ATS public board (ats.rippling.com/<slug>)."""
+    base = f"https://api.rippling.com/platform/api/ats/v1/board/{c['slug']}/jobs"
+    for j in get(base):
+        loc = (j.get("workLocation") or {}).get("label", "")
+        if not title_ok(j.get("name", "")) or not (in_india(loc) or "remote" in loc.lower()):
+            continue
+        try:
+            d = get(f"{base}/{j['uuid']}")
+        except requests.RequestException:
+            continue
+        desc = d.get("description") or {}
+        text = "\n".join(strip_html(v) for v in (desc.values() if isinstance(desc, dict) else [desc]) if isinstance(v, str))
+        inr = [p for p in d.get("payRangeDetails") or [] if p.get("currency") == "INR"]
+        pay = f"INR {inr[0]['rangeStart']:,.0f}–{inr[0]['rangeEnd']:,.0f}" if inr else ""
+        yield Job(c["name"], j["name"], " / ".join(d.get("workLocations") or [loc]), j["url"], parse_ts(d.get("createdOn")),
+                  text, remote="remote" in loc.lower(), pay_posted=pay,
+                  meta={"employmentType": (d.get("employmentType") or {}).get("label", "")})
+
+
 def amazon(c):
     for q in ("software development engineer", "backend engineer"):
         for offset in range(0, 300, 100):
@@ -220,26 +280,41 @@ def amazon(c):
                 break
 
 
-def microsoft(c):
-    api = "https://apply.careers.microsoft.com/api/pcsx"
-    SESSION.get("https://apply.careers.microsoft.com/careers?domain=microsoft.com")  # sets the cookies the API expects
+def eightfold(c):
+    """Eightfold PCSX careers sites (Microsoft, Qualcomm, Autodesk…): the public search API behind the site."""
+    host, domain = c["host"], c["domain"]
+    api = f"https://{host}/api/pcsx"
+    SESSION.get(f"https://{host}/careers?domain={domain}")  # sets the cookies the API expects
     seen = set()
     for q in ("software engineer", "backend"):
         for start in range(0, 200, 10):
-            d = get(f"{api}/search", params={"domain": "microsoft.com", "query": q, "location": "India", "start": start, "num": 10})
+            d = get(f"{api}/search", params={"domain": domain, "query": q, "location": "India", "start": start, "num": 10})
             pos = d.get("data", {}).get("positions", [])
             for p in pos:
                 if p["id"] in seen or not title_ok(p["name"]):
                     continue
                 seen.add(p["id"])
                 time.sleep(0.5)
-                det = get(f"{api}/position_details", params={"position_id": p["id"], "domain": "microsoft.com", "hl": "en"})["data"]
+                try:
+                    det = get(f"{api}/position_details", params={"position_id": p["id"], "domain": domain, "hl": "en"})["data"]
+                except (requests.RequestException, KeyError):
+                    continue
                 yield Job(c["name"], p["name"], " / ".join(p.get("standardizedLocations") or p.get("locations", [])),
-                          det.get("publicUrl") or f"https://apply.careers.microsoft.com/careers/job/{p['id']}",
+                          det.get("publicUrl") or f"https://{host}/careers/job/{p['id']}",
                           parse_ts(p.get("postedTs")), strip_html(det.get("jobDescription")),
                           remote=(p.get("workLocationOption") or "") == "remote")
             if len(pos) < 10:
                 break
+
+
+def portal(c):
+    """A company's own careers portal: see portals/."""
+    import portals
+    yield from portals.fetch(c, sys.modules[__name__])
+
+
+def microsoft(c):
+    yield from eightfold(c | {"host": "apply.careers.microsoft.com", "domain": "microsoft.com"})
 
 
 def atlassian(c):
@@ -367,7 +442,7 @@ def linkedin(c):
                       LI_DETAILS[jid], remote="remote" in loc.lower(), meta={"source": "LinkedIn (aggregator)"})
 
 
-FETCHERS = {f.__name__: f for f in (greenhouse, lever, ashby, smartrecruiters, workday, amazon, microsoft, atlassian, google, linkedin)}
+FETCHERS = {f.__name__: f for f in (greenhouse, lever, ashby, smartrecruiters, workday, oracle, rippling, eightfold, portal, amazon, microsoft, atlassian, google, linkedin)}
 
 
 def title_key(title):
@@ -405,9 +480,23 @@ def norm(name):
 TIERS = json.loads((ROOT / "tiers.json").read_text())
 
 
+def words(name):
+    return re.findall(r"[a-z0-9]+", name.lower())
+
+
+EXCLUDED_NAMES = [w for w in (words(x) for x in PROFILE["exclude_companies"] + TIERS["services_and_staffing"]) if w]
+STAFFING_WORDS = [w for w in (words(x) for x in TIERS.get("staffing_keywords", [])) if w]
+
+
 def is_excluded_company(name):
-    n = norm(name)
-    return any(norm(x) and norm(x) in n for x in PROFILE["exclude_companies"] + TIERS["services_and_staffing"])
+    """Services/staffing firms and the user's own exclusions. A listed name must be the company name's
+    leading words ('EY' matches 'EY GDS' but not 'Honeywell'; 'UST' not 'Northern Trust'); staffing
+    keywords ('Recruitment', 'Staffing'...) match as whole words anywhere in the name."""
+    w = words(name)
+    if any(w[:len(x)] == x for x in EXCLUDED_NAMES):
+        return True
+    padded = f" {' '.join(w)} "
+    return any(f" {' '.join(k)} " in padded for k in STAFFING_WORDS)
 
 
 # ---------------------------------------------------------------- evaluation
@@ -417,10 +506,17 @@ EXP_RE = re.compile(
     re.I)
 
 
+# "Years of Experience: Minimum 6-8 years", "Experience: 2+ yrs", "Experience required - 3 to 5 years".
+# A bare dash is not a label: in bulleted JDs "...development experience\n- 2+ years of..." is the next bullet.
+EXP_LABEL_RE = re.compile(
+    r"(?:years?\s+of\s+)?experience(?:\s*(?:required|needed)\s*[:\-–]?|\s*:)\s*(?:minimum|min\.?|at\s*least)?\s*(\d{1,2})\s*(?:\+|plus)?\s*"
+    r"(?:(?:-|–|to)\s*\d{1,2}\s*)?(?:years?|yrs?)", re.I)
+
+
 def min_experience(text):
     """Smallest minimum-years figure the JD asks for, plus the snippet it came from."""
     found = []
-    for m in EXP_RE.finditer(text):
+    for m in list(EXP_RE.finditer(text)) + list(EXP_LABEL_RE.finditer(text)):
         lo = int(m.group(1))
         if lo <= 15:
             found.append((lo, text[max(0, m.start() - 20): m.end() + 40].replace("\n", " ").strip()))
@@ -473,12 +569,16 @@ def stack_score(text):
 def level_score(title, years):
     t = title.lower()
     if years is None:
-        if re.search(r"\b(i|1|new grad|graduate|associate)\b", t):
+        if re.search(r"\b(i|1|associate)\b", t):
             return 17
         if re.search(r"\b(ii|2)\b", t):
             return 16
         return 13
-    return {0: 18, 1: 20, 2: 19, 3: 14}.get(years, 0)
+    return {0: 17, 1: 20, 2: 19, 3: 13}.get(years, 0)  # ~1-2 years is the sweet spot; 3+ is a stretch
+
+
+def exp_band(years):
+    return "not stated" if years is None else "0–1 yrs" if years <= 1 else f"{years} yrs"
 
 
 def fresh_score(posted):
@@ -495,7 +595,7 @@ def evaluate(job, company, max_age):
     ok, mode = location_mode(job, company)
     if not ok:
         return None, mode
-    if re.search(PROFILE["exclude_text"], job.text, re.I) or re.search(r"intern|contract|temporary", job.meta.get("commitment", "") + job.meta.get("employmentType", ""), re.I):
+    if re.search(PROFILE["exclude_text"], job.text, re.I) or re.search(r"intern|contract|temporary", (job.meta.get("commitment") or "") + (job.meta.get("employmentType") or ""), re.I):
         return None, "contract/intern/temporary"
     years, snippet = min_experience(job.text)
     m = re.search(r"(\d{1,2})\s*(?:\+|-|–|to)\s*(?:\d{1,2}\s*)?(?:years?|yrs?)", job.title, re.I)
@@ -529,6 +629,9 @@ def evaluate(job, company, max_age):
         "title": job.title.strip(),
         "location": mode,
         "exp_asked": f"{years}+ yrs" if years is not None else "not stated",
+        "exp_band": exp_band(years),
+        # Sweet spot: asks at most 2 years (campus hiring is already excluded) and pay is evidenced, not guessed.
+        "sweet_spot": "yes" if years is not None and years <= 2 and pay_conf in ("Posted", "Strong evidence") else "",
         "exp_snippet": snippet,
         "pay": pay_txt,
         "source": job.meta.get("source", "company careers/ATS"),
@@ -589,12 +692,9 @@ def crawl(company, ctx):
     except Exception as e:  # one broken board should not kill the run; keep what it fetched before failing
         err = f"{type(e).__name__}: {str(e)[:120]}"
     if is_li:
-        # LinkedIn searches only part of the bank per run (rotation), so keep earlier postings that weren't
-        # seen again, as long as they're still inside the freshness window.
-        cutoff = NOW - timedelta(days=ctx["max_age"])
-        fresh = {j.url for j in jobs}
-        merged = [j for j in with_previous(company["name"], jobs) if j.url in fresh or (j.posted and j.posted >= cutoff)]
-        save_raw(company["name"], merged, f"{err} — {len(jobs)} fresh + {len(merged) - len(jobs)} earlier" if err else "")
+        kept, closed = keep_open_earlier(company["name"], jobs, ctx["max_age"])
+        note = f"{len(jobs)} fresh + {len(kept)} earlier still open; {closed} closed dropped"
+        save_raw(company["name"], jobs + kept, f"{err} — {note}" if err else "")
     elif err:
         merged = with_previous(company["name"], jobs)
         save_raw(company["name"], merged, f"{err} — {len(jobs)} fresh + {len(merged) - len(jobs)} from previous crawl")
@@ -605,6 +705,63 @@ def crawl(company, ctx):
     print(f"{company['name']:<22} {len(jobs):>4} fetched  {time.time() - started:5.1f}s{'  ERROR ' + err if err else ''}",
           file=sys.stderr, flush=True)
     return company["name"], err
+
+
+LIVENESS_FILE = OUT / "linkedin-liveness.json"
+LIVENESS_LOCK = threading.Lock()  # both LinkedIn passes update the same state file
+
+
+def li_job_id(url):
+    m = re.search(r"/view/(\d+)", url)
+    return m.group(1) if m else url
+
+
+def li_status(job_id):
+    """'open' or 'closed' from LinkedIn's public job page (removed postings return 404; closed ones say
+    'No longer accepting applications'). None if LinkedIn rate-limits or errors."""
+    try:
+        r = li_get(f"{LI_API}/jobPosting/{job_id}")
+    except (RateLimited, requests.RequestException):
+        return None
+    if r.status_code in (404, 410) or (r.ok and "no longer accepting applications" in r.text.lower()):
+        return "closed"
+    return "open" if r.ok else None
+
+
+def keep_open_earlier(name, fresh, max_age):
+    """Earlier LinkedIn postings that this run didn't see again: keep the ones still open, drop the closed.
+    The company sweep rotates and searches only cover the last max_age days, so not seeing a posting
+    doesn't mean it closed. Each run checks a budget of them on LinkedIn, the ones about to age out first.
+    Unchecked postings are kept while younger than max_age; older ones only once confirmed open,
+    so long-running open roles stay and dead ones go."""
+    seen = {j.url for j in fresh}
+    earlier = [j for j in load_raw(name)[0] if j.url not in seen]
+    with LIVENESS_LOCK:
+        state = json.loads(LIVENESS_FILE.read_text()) if LIVENESS_FILE.exists() else {}
+    cutoff = NOW - timedelta(days=max_age)
+    recheck_after = (NOW - timedelta(days=PROFILE["linkedin"]["liveness_recheck_days"])).strftime("%Y-%m-%d")
+    last = lambda j: state.get(li_job_id(j.url), {}).get("checked", "")  # noqa: E731
+    due = sorted((j for j in earlier if last(j) < recheck_after),
+                 key=lambda j: (bool(j.posted and j.posted >= cutoff), last(j)))  # about to age out first
+    updates = {}
+    for j in due[:PROFILE["linkedin"]["liveness_checks_per_run"]]:
+        status = li_status(li_job_id(j.url))
+        if status is None:
+            break  # rate-limited: stop; the rest keep their previous state
+        updates[li_job_id(j.url)] = {"status": status, "checked": TODAY}
+    with LIVENESS_LOCK:  # merge only our changes: the other pass may have saved in the meantime
+        current = json.loads(LIVENESS_FILE.read_text()) if LIVENESS_FILE.exists() else {}
+        current.update(updates)
+        LIVENESS_FILE.write_text(json.dumps(current))
+    state.update(updates)
+    kept, closed = [], 0
+    for j in earlier:
+        status = state.get(li_job_id(j.url), {}).get("status")
+        if status == "closed":
+            closed += 1
+        elif status == "open" or (j.posted and j.posted >= cutoff):
+            kept.append(j)
+    return kept, closed
 
 
 def checkpoint(company, jobs, ctx):

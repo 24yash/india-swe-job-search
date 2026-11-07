@@ -3,6 +3,7 @@
 Usage: python3 discover_ats.py razorpay groww phonepe ...
        python3 discover_ats.py --workday ebay walmart mastercard ...
        python3 discover_ats.py --bank            # every bank company in tiers.json without a direct board
+       python3 discover_ats.py --careers         # read boards from careers URLs and VC portfolio job boards
 Prints one line per hit: <slug> <ats> <total jobs> <india jobs> (Workday: tenant wd site total).
 --bank also writes output/discovered-boards.json for review; copy the confirmed hits into companies.json.
 """
@@ -144,7 +145,173 @@ def bank():
               "verified" if h["name_verified"] else "CHECK NAME", "" if h["crawler"] else "(no crawler yet: don't add)")
 
 
+# Job-board links as they appear in careers URLs and pages: (ats, regex capturing the board slug).
+ATS_LINKS = [
+    ("greenhouse", r"(?:boards|job-boards)(?:\.eu)?\.greenhouse\.io/(?:embed/job_board\?for=)?([a-z0-9_-]{1,100})"),
+    ("lever", r"jobs\.(?:eu\.)?lever\.co/([a-z0-9_.-]{1,100})"),
+    ("ashby", r"jobs\.ashbyhq\.com/([a-z0-9_.%-]{1,100})"),
+    ("smartrecruiters", r"(?:careers|jobs)\.smartrecruiters\.com/([A-Za-z0-9_-]{1,100})"),
+    ("workday", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.(wd\d+)\.myworkdayjobs\.com/(?:[a-z]{2}-[A-Z]{2}/)?([A-Za-z0-9_-]{1,100})"),
+    # Subdomain parts are bounded and must start at a boundary: unbounded ([a-z0-9-]+)\. went quadratic on
+    # long base64 blobs in page source and froze discovery.
+    # Indian and other platforms crawl.py can't read yet: counted so we know which reader to build next
+    ("darwinbox", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.darwinbox\.(?:in|com)"),
+    ("keka", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.keka\.com"),
+    ("freshteam", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.freshteam\.com"),
+    ("zohorecruit", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.zohorecruit\.(?:in|com)"),
+    ("turbohire", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.turbohire\.co"),
+    ("workable", r"apply\.workable\.com/([a-z0-9_-]{1,100})"),
+    ("rippling", r"ats\.rippling\.com/([a-z0-9_-]{1,100})"),
+    ("oracle", r"(?<![a-z0-9.])([a-z0-9]{1,63}\.fa(?:\.[a-z0-9]+)?\.oraclecloud\.com)/hcmUI/CandidateExperience/[a-z]{2}/sites/([A-Za-z0-9_]{1,100})"),
+    ("eightfold", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.eightfold\.ai"),
+    ("successfactors", r"career\d*\.successfactors\.(?:com|eu)/career\?company=([A-Za-z0-9_]{1,100})"),
+    ("bamboohr", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.bamboohr\.com"),
+    ("recruitee", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.recruitee\.com"),
+    ("breezy", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.breezy\.hr"),
+    ("teamtailor", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.teamtailor\.com"),
+    ("gem", r"jobs\.gem\.com/([a-z0-9_-]{1,100})"),
+    ("recruiterflow", r"recruiterflow\.com/([a-z0-9_-]{1,100})/jobs"),
+    ("icims", r"(?<![a-z0-9-])careers-([a-z0-9-]{1,63})\.icims\.com"),
+    ("jobvite", r"jobs\.jobvite\.com/([a-z0-9_-]{1,100})"),
+    ("phenom", r"(phenompeople\.com|phenom\.com/[a-z])"),
+    ("kula", r"careers\.kula\.ai/([a-z0-9_-]{1,100})"),
+    # Oracle behind a company's own domain: the page's scripts still name the real tenant
+    ("oracle", r"(?<![a-z0-9.])([a-z0-9]{1,63}\.fa(?:\.[a-z0-9]+)?\.oraclecloud\.com)/hcmRestApi/CandidateExperience/[a-z]{2}/(?:siteSettings|sites)/([A-Za-z0-9_]{1,100})"),
+]
+NOT_A_BOARD = {"embed", "jobs", "careers", "api", "www", "boards", "apply", "app", "static"}
+
+
+def boards_in(text):
+    """Every job-board reference in a URL or page: [(ats, slug or (tenant, wd, site))]."""
+    found = []
+    for ats, pat in ATS_LINKS:
+        for m in re.finditer(pat, text, re.I):
+            slug = m.groups() if ats in ("workday", "oracle") else m.group(1).lower()
+            if ats != "workday" and slug in NOT_A_BOARD:
+                continue
+            found.append((ats, slug))
+    return list(dict.fromkeys(found))
+
+
+def getro_apply_links(network, queries=("software engineer", "backend", "developer", "sde")):
+    """Company names and apply links of India engineering jobs on a VC portfolio job board (Getro)."""
+    S = requests.Session()
+    S.headers.update({"User-Agent": "Mozilla/5.0", "Content-Type": "application/json", "Accept": "application/json"})
+    out = {}
+    for q in queries:
+        for page in range(0, 40):
+            r = S.post(f"https://api.getro.com/api/v2/collections/{network}/search/jobs", timeout=30,
+                       json={"hitsPerPage": 100, "page": page, "query": q, "filters": {"searchable_locations": ["India"]}})
+            jobs = r.json().get("results", {}).get("jobs", []) if r.ok else []
+            for j in jobs:
+                name = re.sub(r"\s*\([^)]*\)$", "", (j.get("organization") or {}).get("name", "")).strip()
+                out.setdefault(name, set()).add(j.get("url", ""))
+            if len(jobs) < 100:
+                break
+    return out
+
+
+def verify(links):
+    """links: company -> [(ats, slug)]. Probe each readable board for India roles and check it is that company.
+    Returns (hits, unsupported platform -> companies, tally of platforms)."""
+    tally, hits, unsupported = {}, [], {}
+    for name, refs in links.items():
+        for ats, slug in dict.fromkeys(refs):
+            tally[ats] = tally.get(ats, 0) + 1
+            if ats not in CRAWLED and ats not in ("workday", "oracle", "eightfold", "rippling"):
+                unsupported.setdefault(ats, []).append(name)  # platforms crawl.py can't read yet
+            elif ats in CRAWLED:
+                hit = probe(slug, ats)
+                if hit and hit[3]:
+                    hits.append({"company": name, "ats": ats, "slug": slug, "total": hit[2], "india": hit[3],
+                                 "board_name": hit[4], "name_verified": same_company(name, hit[4]), "crawler": True})
+            elif ats == "rippling":
+                try:
+                    jobs = requests.get(f"https://api.rippling.com/platform/api/ats/v1/board/{slug}/jobs", timeout=15).json()
+                    india = sum(1 for j in jobs if any(k in ((j.get("workLocation") or {}).get("label") or "").lower() for k in INDIA))
+                except (requests.RequestException, ValueError, AttributeError):
+                    india = 0
+                if india:
+                    hits.append({"company": name, "ats": "rippling", "slug": slug, "india": india, "name_verified": None, "crawler": True})
+            elif ats == "oracle":
+                host, site = slug
+                finder = f'findReqs;siteNumber={site},keyword="software engineer",location=India,limit=1'
+                try:
+                    r = requests.get(f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions",
+                                     params={"onlyData": "true", "finder": finder}, timeout=20)
+                    india = (r.json().get("items") or [{}])[0].get("TotalJobsCount") if r.ok else None
+                except (requests.RequestException, ValueError):
+                    india = None
+                if india:
+                    hits.append({"company": name, "ats": "oracle", "host": host, "site": site, "india": india,
+                                 "name_verified": None, "crawler": True})
+            elif ats == "eightfold":
+                unsupported.setdefault(ats, []).append(name)  # reader not built yet
+            else:  # workday: count India engineering roles on the board
+                tenant, wd, site = slug
+                try:
+                    r = requests.post(f"https://{tenant}.{wd}.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs", timeout=15,
+                                      json={"limit": 1, "offset": 0, "searchText": "software engineer India", "appliedFacets": {}})
+                    india = r.json().get("total") if r.ok else None
+                except requests.RequestException:
+                    india = None
+                if india:
+                    hits.append({"company": name, "ats": "workday", "tenant": tenant, "wd": wd, "site": site,
+                                 "india": india, "name_verified": None, "crawler": True})
+    return hits, unsupported, tally
+
+
+def best_hits(hits):
+    best = {}
+    for h in hits:
+        if h["name_verified"] is not False and (h["company"] not in best or (h["india"] or 0) > (best[h["company"]]["india"] or 0)):
+            best[h["company"]] = h
+    return sorted(best.values(), key=lambda h: -(h["india"] or 0))
+
+
+def careers():
+    tiers = json.loads((ROOT / "tiers.json").read_text())["known"]
+    companies = json.loads((ROOT / "companies.json").read_text())["companies"]
+    direct = {norm(c["name"]) for c in companies if c["ats"] != "linkedin"}
+    pages = {c["name"]: c["careers_url"] for c in tiers if c.get("careers_url") and norm(c["name"]) not in direct}
+    links = {}  # company -> set of URLs/pages that may reference its board
+
+    def scan(item):
+        name, url = item
+        refs = boards_in(url)
+        if not refs:
+            try:
+                r = requests.get(url, timeout=12, headers={"User-Agent": "Mozilla/5.0"})
+                refs = boards_in(r.url + " " + r.text[:400000])
+            except requests.RequestException:
+                pass
+        return name, refs
+
+    print(f"scanning {len(pages)} careers URLs", file=sys.stderr)
+    with ThreadPoolExecutor(16) as pool:
+        for name, refs in pool.map(scan, pages.items()):
+            if refs:
+                links.setdefault(name, []).extend(refs)
+    for network in (8672, 222):  # Accel, General Catalyst portfolio job boards
+        for name, urls in getro_apply_links(network).items():
+            if norm(name) in direct:
+                continue
+            for u in urls:
+                links.setdefault(name, []).extend(boards_in(u))
+    hits, unsupported, tally = verify(links)
+    out = best_hits(hits)
+    (ROOT / "output" / "discovered-careers.json").write_text(json.dumps({"boards": out, "unsupported": unsupported}, indent=1))
+    print("boards referenced, by platform:", dict(sorted(tally.items(), key=lambda x: -x[1])))
+    for ats, names in sorted(unsupported.items(), key=lambda x: -len(x[1])):
+        print(f"  no reader yet ({ats}): {', '.join(sorted(names))}")
+    for h in out:
+        print(h["company"], h["ats"], h.get("slug") or (h.get("tenant"), h.get("site")), h["india"],
+              "verified" if h["name_verified"] else "CHECK NAME")
+
+
 def main(slugs):
+    if slugs and slugs[0] == "--careers":
+        return careers()
     if slugs and slugs[0] == "--bank":
         return bank()
     if slugs and slugs[0] == "--workday":
