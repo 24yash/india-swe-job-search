@@ -88,7 +88,8 @@ profile.json  companies.json  tiers.json          ← your criteria, boards craw
 | Oracle Recruiting Cloud, Eightfold, Rippling public feeds | JPMorgan Chase, American Express, Oracle, Honeywell, BNY, Citi, Qualcomm, Micron, Autodesk, Microsoft, ThoughtSpot |
 | Company portals (`portals/`: one small reader per site, plus a generic job-links reader) | Apple, Goldman Sachs, Uber, Juspay, Urban Company, ShareChat, Nutanix, Intuit, D. E. Shaw India |
 | Careers-site sitemaps + schema.org JobPosting pages (`portals/sitemap.py`) | Phenom, iCIMS, Avature and SuccessFactors sites and custom ones: Fiserv, WEX, Disney, Arm, BlackRock, Moody's, BCG, Lowe's… |
-| iCIMS Jibe feeds; Keka, Zoho Recruit and Kula careers pages | AMD, DocuSign, Cvent, ICE; Slice, Acko, Cashfree, Wingify, GoKwik, Increff, GeeksForGeeks… |
+| iCIMS Jibe feeds; Keka, Zoho Recruit, Kula, Darwinbox, Workable, Freshteam and Recruitee pages | AMD, DocuSign, Cvent, ICE; Slice, Acko, Cashfree, Fynd, Jupiter, Zepto, MobiKwik, KreditBee, Delhivery, Innovaccer, Trexquant, Lenskart, Log9… |
+| JazzHR, Teamtailor, Avature and custom job-link pages (generic links reader) | Tesco, iRage, AlphaGrep, Jar, FrontRow, D. E. Shaw India… |
 | Amazon, Atlassian, Google careers | their own endpoints |
 | LinkedIn public guest search (no login) | **light (default):** role keywords across India + a 40-company sweep (companies active last run and top-tier employers with no readable board: Flipkart, Meta, Netflix, Zepto…). **`--deep`:** adds 7-city searches and a 180-company rotating sweep |
 
@@ -162,7 +163,8 @@ Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `-
 | `tiers.json` | Company bank: type, quality, pay status and evidence; services/staffing exclusion list |
 | `crawl.py` | The pipeline (`--sources fast\|linkedin\|all`, `--rescore`, `--only "A,B"`, `--max-age 30`) |
 | `discover_ats.py` | Find a company's Greenhouse/Lever/Ashby/SmartRecruiters/Workday board |
-| `find_careers.py` | Find each company's careers site and the job platform behind it ([CAREERS_DISCOVERY.md](CAREERS_DISCOVERY.md)) |
+| `find_careers.py` | Find each company's careers site (Clearbit domains, `--linkedin-companies`) and the job platform behind it; `--more` and `--lists` second and third passes ([CAREERS_DISCOVERY.md](CAREERS_DISCOVERY.md)) |
+| `coverage.py` | Per-company coverage status: source with/without fitting roles, nothing to read, blocked, dead/retryable, pending (`output/coverage-<date>.csv`) |
 | `portals/` | Readers for companies' own careers portals (one module per site + a configurable job-links reader) |
 | `report.py` | Markdown shortlist table (max 3 per company) |
 | `build_dashboard.py`, `dashboard_template.html` | Build the dashboard |

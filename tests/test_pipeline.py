@@ -111,7 +111,7 @@ check("same_company: true match", discover_ats.same_company("Squarepoint Capital
 check("same_company: different company rejected", discover_ats.same_company("Plum", "Applied Intuition") is False)
 check("same_company: no board name -> needs review", discover_ats.same_company("Ema", None) is None)
 check("slug variants", "urbancompany" in discover_ats.slug_variants("Urban Company") and "urban-company" in discover_ats.slug_variants("Urban Company"))
-check("only crawlable platforms marked addable", discover_ats.CRAWLED == {"greenhouse", "lever", "ashby", "smartrecruiters"})
+check("only platforms crawl.py can read are marked addable", discover_ats.CRAWLED <= set(crawl.FETCHERS) and "workable" not in discover_ats.CRAWLED)
 
 # ---------------------------------------------------------------- concurrency: readers vs atomic table swaps
 holder = {"titles": {f"co{i}": {"software engineer"} for i in range(300)}}

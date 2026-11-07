@@ -253,6 +253,13 @@ check("zoho recruit: published India roles from the embedded list, years readabl
 patched({"/slice/1-sde-2-data-platform": ld("SDE 2 - Data Platform", "Bengaluru"),
          "careers.kula.ai/slice?jobs=true": '<a href="/slice/1-sde-2-data-platform?jobs=true">Apply Now</a><a href="/slice/2-fraud-analyst?jobs=true">Apply Now</a>'}, raw=True)
 jobs = list(portals.fetch({"name": "Slice", "portal": "kula", "slug": "slice"}, crawl))
+patched({"/JobDetail/Software-Development-Engineer-II/216221": ld("Software Development Engineer II", "Bengaluru"),
+         "SearchJobs": '<a href="https://careers.tesco.com/en_GB/careers/JobDetail/Software-Development-Engineer-II/216221">Read more</a>'
+                       '<a href="https://careers.tesco.com/en_GB/careers/JobDetail/Store-Colleague/216222">Read more</a>'}, raw=True)
+tesco = list(portals.fetch({"name": "Tesco", "portal": "links", "title_from_url": True, "job_link": r"https://careers\.tesco\.com/en_GB/careers/JobDetail/[^/\"]+/\d+",
+                            "list_urls": ["https://careers.tesco.com/en_GB/careers/SearchJobs/software"]}, crawl))
+check("links: URL titles skip a trailing numeric id (Avature: .../Title-Words/216221)", [j.title for j in tesco] == ["Software Development Engineer II"],
+      [j.title for j in tesco])
 check("kula: titles from the URL when links say 'Apply Now'; details from the job page's JobPosting data",
       [(j.title, j.location) for j in jobs] == [("SDE 2 - Data Platform", "Bengaluru, India")], [(j.title, j.location) for j in jobs])
 
@@ -276,6 +283,9 @@ check("boards_in: Oracle (with and without region), Rippling, Eightfold, Gem",
 blob = "a1b2c3d4" * 120000  # a long base64-like run, as embedded in many careers pages
 t = time.time()
 da.boards_in(blob + " https://acme.keka.com/careers")
+check("boards_in: Oracle tenant hosts with hyphens (Akamai) are matched whole",
+      ("oracle", ("fa-extu-saasfaprod1.fa.ocs.oraclecloud.com", "CX_1")) in da.boards_in(
+          "https://fa-extu-saasfaprod1.fa.ocs.oraclecloud.com/hcmRestApi/CandidateExperience/en/siteSettings/CX_1"))
 check("boards_in stays fast on long alphanumeric runs (unbounded subdomain patterns went quadratic)", time.time() - t < 2, f"{time.time() - t:.1f}s")
 check("guessed domain accepted only when the page names the company",
       fc.names_company("Urban Company", "<title>Urban Company | Home services</title>") and not fc.names_company("Urban Company", "<title>Parked domain</title>"))
@@ -287,7 +297,40 @@ slow_page = '<a href="x">x' * 20000 + "<div>" * 100000  # the old unbounded patt
 fc.job_links("https://x.com", slow_page)
 fc.careers_candidates("https://x.com", slow_page)
 check("find_careers: bounded link parsing on a pathological page", time.time() - t < 2, f"{time.time() - t:.1f}s")
-check("VC portfolio pages are not taken as a company's own careers page", bool(__import__("re").search(fc.NOT_OWN, "https://careers.peakxv.com/jobs/trell")))
+check("VC portfolio pages and aggregators are not taken as a company's own careers page",
+      fc.not_own("https://careers.peakxv.com/jobs/trell") and fc.not_own("https://cutshort.io/company/x") and fc.not_own("https://x.com/acme"))
+check("domains merely ending in 'x.com' are not mistaken for x.com (netflix.com, dropbox.com, nutanix.com were rejected)",
+      not any(fc.not_own(u) for u in ("https://jobs.netflix.com/", "https://www.dropbox.com/", "https://www.nutanix.com/", "https://careers.equinix.com/")))
+check("a company's own domain on an aggregator list is its own site (careers.linkedin.com for LinkedIn)",
+      not fc.not_own("https://careers.linkedin.com/", "LinkedIn") and fc.not_own("https://www.linkedin.com/company/acme/jobs", "Acme"))
+check("boards_in: MyNextHire iframe boards and Rippling's embedded job board are detected",
+      ("mynexthire", "amagi") in da.boards_in('<iframe src="https://amagi.mynexthire.com/employer/jobs/careers#?src=careers">')
+      and ("rippling", "daloopa") in da.boards_in('<div id="rr-job-board" data-job-board-id="daloopa"></div>'))
+
+# MyNextHire: board feed -> Job, with the board's own experience range carried into the text for the years parser
+import base64
+from types import SimpleNamespace
+from portals import mynexthire as mnh
+
+
+class _Resp:
+    def __init__(self, data): self.data = data
+    def raise_for_status(self): pass
+    def json(self): return self.data
+
+
+feed = {"reqDetailsBOList": [
+    {"reqId": 459, "reqTitle": "Software Development Engineer II", "expMin": 2.0, "expMax": 5.0, "location": "Bangalore",
+     "locationList": [{"office": "Bangalore"}], "jdDisplay": "Build playout services.", "approvedOn": "2026-10-23T05:04:12.345+0000"},
+    {"reqId": 460, "reqTitle": "Head of Global Growth Marketing", "expMin": 10.0, "expMax": 15.0, "locationList": [{"office": "Bangalore"}]},
+    {"reqId": 461, "reqTitle": "Software Engineer II", "expMin": 2.0, "expMax": 4.0, "locationList": [{"office": "United Kingdom"}]}]}
+h = SimpleNamespace(**{k: getattr(crawl, k) for k in ("Job", "title_ok", "in_india", "parse_ts")},
+                    SESSION=SimpleNamespace(post=lambda url, json, timeout: _Resp(feed)))
+jobs = list(mnh.fetch({"name": "Amagi", "slug": "amagi", "jd_page": "https://www.amagi.com/job-description"}, h))
+check("MyNextHire: only India roles with fitting titles", [j.title for j in jobs] == ["Software Development Engineer II"], [j.title for j in jobs])
+check("MyNextHire: experience range carried into the text", jobs and jobs[0].text.startswith("Experience: 2-5 years"))
+p = jobs[0].url.split("p%3D")[1] if jobs else ""
+check("MyNextHire: job link is the company's JD page with the board's encoded request", '"reqId":459' in base64.b64decode(p).decode() if p else False, jobs and jobs[0].url)
 
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)

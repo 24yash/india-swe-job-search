@@ -30,14 +30,15 @@ def fetch(c, h):
             url = tmpl.format(page=page)
             body = page_text(h, url)
             found = 0
-            for href, inner in re.findall(r'<a\b[^>]{0,1500}?href="(' + c["job_link"] + r'[^"]{0,600})"[^>]{0,1500}>(.{0,3000}?)</a>', body[:3_000_000], re.S | re.I):
+            for href, inner in re.findall(r'<a\b[^>]{0,1500}?href=["\'](' + c["job_link"] + r'[^"\']{0,600})["\'][^>]{0,1500}>(.{0,3000}?)</a>', body[:3_000_000], re.S | re.I):
                 link = urljoin(url, htmllib.unescape(href))
                 inner = re.sub(r"<svg.*?</svg>", " ", inner, flags=re.S | re.I)
                 named = re.search(r'class="[^"]*(?:title|name)[^"]*"[^>]*>(.*?)<', inner, re.S | re.I)
                 name = htmllib.unescape(re.sub(r"<[^>]+>", " ", named.group(1) if named else inner))
                 title = re.split(r"\s{3,}|:\s", name.strip())[0].strip()
                 if c.get("title_from_url"):  # link text is just "Apply Now": read the title from the URL slug
-                    slug = re.sub(r"[?#].*", "", link).rstrip("/").rsplit("/", 1)[-1]
+                    parts = re.sub(r"[?#].*", "", link).rstrip("/").split("/")
+                    slug = parts[-2] if parts[-1].isdigit() and len(parts) > 1 else parts[-1]  # .../Title-Words/216221
                     title = re.sub(r"^\d+-|-\d+$", "", slug).replace("-", " ")
                 found += 1
                 if link in seen or not title or not h.title_ok(title):

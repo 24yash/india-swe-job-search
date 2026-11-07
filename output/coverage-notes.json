@@ -1,0 +1,2150 @@
+{
+ "Media.net": {
+  "status": "nothing_to_read",
+  "reason": "site says no open positions",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Akamai Technologies": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Chargebee": {
+  "status": "nothing_to_read",
+  "reason": "careers page links only to LinkedIn jobs",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "PolicyBazaar": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Info Edge": {
+  "status": "blocked",
+  "reason": "hires via its own Naukri (CAPTCHA)",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "SAP Labs": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "SAP": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "NetApp": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Dell Technologies": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Marvell Technology": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Applied Materials": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "MathWorks": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Veritas": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Akamai": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Wayfair": {
+  "status": "blocked",
+  "reason": "PerimeterX bot protection",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Tesco": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "84.51°": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "The Home Depot": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Nike": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "McDonald's": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Bloomberg": {
+  "status": "nothing_to_read",
+  "reason": "Avature readable but no fitting India roles; no structured data",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "iRage": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Dolat Capital": {
+  "status": "nothing_to_read",
+  "reason": "bank entry is the broking firm, not the HFT arm",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Citadel": {
+  "status": "blocked",
+  "reason": "403 to the crawler",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Pine Labs": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Kissht": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "CoinDCX": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Nykaa": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Lenskart": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Kuku FM": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: naukri",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "LambdaTest": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Sprinto": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Box": {
+  "status": "pending",
+  "by": "checked by hand",
+  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
+ },
+ "Electronic Arts": {
+  "status": "pending",
+  "by": "checked by hand",
+  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
+ },
+ "Warner Bros. Discovery": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Comcast": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "McAfee": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "American Airlines": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Caterpillar": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Testbook": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: google.com/forms",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Vedantu": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: google.com/forms",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Pixis": {
+  "status": "nothing_to_read",
+  "reason": "says no openings now",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Ather Energy": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Flipkart Health+": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Hypto": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: typeform",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Sensibull": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: notion.site",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Hudson River Trading": {
+  "status": "blocked",
+  "reason": "Cloudflare challenge (403)",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Da Vinci Trading": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Nuvama": {
+  "status": "nothing_to_read",
+  "reason": "jobs only on LinkedIn (careers page links there)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Appsmith": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: google.com/forms",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "ToolJet": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: wellfound",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Kissflow": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Dashtoon": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: notion.site",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Cargill": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Ajio": {
+  "status": "nothing_to_read",
+  "reason": "no official listings (Reliance group hiring)",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Bloomberg LP": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Bounce": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "CarWale": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Credit Suisse": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Crestron": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Dataminr": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "digit": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "EA Games": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Epic Games": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Equinix": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Furlenco": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Hackerearth": {
+  "status": "nothing_to_read",
+  "reason": "jobs only on LinkedIn (careers page links there)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Hexagone": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "IAC": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Memory": {
+  "status": "nothing_to_read",
+  "reason": "says no openings now",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "QuickSell": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: typeform",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Quora": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Rocket Companies": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "TATA nexarc": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Tesla": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Upwork": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Wooqer": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "YeasiTech": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "[24]7.ai": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Airmeet": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: typeform",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "ANSR": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: naukri",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Binocs": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: notion.site",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "BookMyShow": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Cogoport": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Coverfox Insurance": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Curefoods": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "FabHotels": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Fibr": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: typeform",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "G2": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Mason": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: angel.co",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Material Depot": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: forms.gle",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Onco": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Portea Medical": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Productiv": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Skeps": {
+  "status": "nothing_to_read",
+  "reason": "says no openings now",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Truemeds India": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "OneScore": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "NAT HABIT": {
+  "status": "nothing_to_read",
+  "reason": "jobs only on LinkedIn (careers page links there)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Nimbbl": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: angel.co",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "SirionLabs": {
+  "status": "blocked",
+  "reason": "blocked (403/challenge)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Knowlarity": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "LocoNav": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Tessell": {
+  "status": "nothing_to_read",
+  "reason": "says no openings now",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Officebanao": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Snabbit": {
+  "status": "nothing_to_read",
+  "reason": "jobs only on LinkedIn (careers page links there)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Seekho": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: naukri",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "GlobalBees": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Onsurity": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: forms.gle",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Aurva": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Zopper": {
+  "status": "nothing_to_read",
+  "reason": "jobs only on LinkedIn (careers page links there)",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Protectt.ai": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Vetic": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: forms.gle",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Lentra": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Cashify": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: forms.gle",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Amigo": {
+  "status": "nothing_to_read",
+  "reason": "other job platform: wellfound",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Pronto": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "DPDzero": {
+  "status": "nothing_to_read",
+  "reason": "apply by email only",
+  "checked": "2026-11-07",
+  "by": "scripted probe"
+ },
+ "Prime Video & Amazon MGM Studios": {
+  "status": "dead",
+  "reason": "no domain known (Clearbit has none either)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Hewlett Packard Enterprise": {
+  "status": "retryable",
+  "reason": "retryable: timeout",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "MassMutual": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "5ire": {
+  "status": "retryable",
+  "reason": "retryable: server error 530",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Absolute Foods": {
+  "status": "dead",
+  "reason": "dead: HTTP 404",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Accolite software": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Agile Solutions": {
+  "status": "blocked",
+  "reason": "blocked: 403/challenge",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Agilitas": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Agnikul": {
+  "status": "dead",
+  "reason": "dead: parked / for sale",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Airbus": {
+  "status": "dead",
+  "reason": "wrong: page doesn't name the company",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Airtel Digital": {
+  "status": "dead",
+  "reason": "dead: parked / for sale",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Analog Devices": {
+  "status": "retryable",
+  "reason": "retryable: timeout",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Aptiv": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Avail finance": {
+  "status": "retryable",
+  "reason": "retryable: connection error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Avalara": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "BCG X": {
+  "status": "dead",
+  "reason": "no domain known (Clearbit has none either)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Bellatrix Aerospace": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Bharti Airtel": {
+  "status": "dead",
+  "reason": "no domain known (Clearbit has none either)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "BigBasket": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Billdesk": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Billion Hearts": {
+  "status": "dead",
+  "reason": "dead: HTTP 404",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "bitdefender": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "BlackBuck": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "BlueJeans": {
+  "status": "retryable",
+  "reason": "retryable: connection error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "boAt": {
+  "status": "dead",
+  "reason": "dead: parked / for sale",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Brahmastra Aerospace": {
+  "status": "dead",
+  "reason": "dead: HTTP 404",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Breathe Well-being": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Brightpoint Studios": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Cent AI": {
+  "status": "dead",
+  "reason": "dead: parked / for sale",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Charles Schwab": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Codenation innovation labs": {
+  "status": "dead",
+  "reason": "dead: HTTP 404",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Cognida.ai": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Covvalent": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Creator Stack": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "cult.fit": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Curefit": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Dassault Systemes": {
+  "status": "dead",
+  "reason": "no domain known (Clearbit has none either)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "DealShare": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Digit Insurance": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "DRDO": {
+  "status": "dead",
+  "reason": "dead: HTTP 404",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Dukaan": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Dunzo": {
+  "status": "retryable",
+  "reason": "retryable: connection error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "EduPristine": {
+  "status": "retryable",
+  "reason": "retryable: server error 502",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Elecbits": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Emergent": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "FICO": {
+  "status": "dead",
+  "reason": "wrong: page doesn't name the company",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Fidelity Investments": {
+  "status": "pending",
+  "by": "checked by hand",
+  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
+ },
+ "Finarkein Analytics": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "FrontRow": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "GE": {
+  "status": "dead",
+  "reason": "dead: HTTP 404",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "GetSupp": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Haptik": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Hashnode": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "HBO": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "HERE": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Holidayme": {
+  "status": "retryable",
+  "reason": "retryable: connection error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Hotelogix": {
+  "status": "dead",
+  "reason": "dead: parked / for sale",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "HP": {
+  "status": "dead",
+  "reason": "wrong: page doesn't name the company",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "HyperTrack": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "IdeaForge": {
+  "status": "retryable",
+  "reason": "retryable: timeout",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "IHS Markit": {
+  "status": "blocked",
+  "reason": "blocked: 403/challenge",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Impact Analytics": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Indian Energy Exchange": {
+  "status": "retryable",
+  "reason": "retryable: server error 502",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "INDmoney": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Investmint": {
+  "status": "retryable",
+  "reason": "retryable: connection error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "ISRO": {
+  "status": "dead",
+  "reason": "dead: HTTP 404",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Jupiter": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "KGEN": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Kotak Mahindra Bank": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Kroger": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Krutrim": {
+  "status": "dead",
+  "reason": "no domain known (Clearbit has none either)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Lloyds Technology Centre": {
+  "status": "dead",
+  "reason": "no domain known (Clearbit has none either)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Marriott Tech Accelerator": {
+  "status": "dead",
+  "reason": "no domain known (Clearbit has none either)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "MedGenome": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "MediBuddy": {
+  "status": "retryable",
+  "reason": "retryable: timeout",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Mercedes-Benz Research and Development India": {
+  "status": "dead",
+  "reason": "no domain known (Clearbit has none either)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Microchip": {
+  "status": "blocked",
+  "reason": "blocked: 403/challenge",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Mihup": {
+  "status": "dead",
+  "reason": "dead: parked / for sale",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Mitigata": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Mobile Premier League": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Mount talent": {
+  "status": "retryable",
+  "reason": "retryable: server error 530",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "MoveInSync": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "myUpchar.com": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Namaste Credit": {
+  "status": "retryable",
+  "reason": "retryable: timeout",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Nektar.ai": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "NextBillion.ai": {
+  "status": "dead",
+  "reason": "dead: parked / for sale",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Nimble Storage": {
+  "status": "retryable",
+  "reason": "retryable: timeout",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Ninjacart": {
+  "status": "dead",
+  "reason": "wrong: page doesn't name the company",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Niyo": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "NPCI": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "nurture.farm": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "NXP Semiconductors": {
+  "status": "dead",
+  "reason": "dead: HTTP 404",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Obvious": {
+  "status": "dead",
+  "reason": "dead: HTTP 404",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Oneplus": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "OYO": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Park+": {
+  "status": "dead",
+  "reason": "dead: HTTP 404",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Peoplebox.ai": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "PeopleStrong": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Pixxel": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Plex Systems, Inc.": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Practo": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Prodapt": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Property Share": {
+  "status": "dead",
+  "reason": "dead: parked / for sale",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "PropTiger.com": {
+  "status": "retryable",
+  "reason": "retryable: timeout",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Qure.ai": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Qwikcilver": {
+  "status": "retryable",
+  "reason": "retryable: connection error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Rapido": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Reliance Jio": {
+  "status": "dead",
+  "reason": "no domain known (Clearbit has none either)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Rephrase.ai": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Rivigo": {
+  "status": "retryable",
+  "reason": "retryable: timeout",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Rolls-Royce": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Sainsbury's": {
+  "status": "blocked",
+  "reason": "blocked: 403/challenge",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "SendinBlue": {
+  "status": "dead",
+  "reason": "dead: HTTP 404",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Shivalik Bank": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Simility, a Paypal Service": {
+  "status": "retryable",
+  "reason": "retryable: connection error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Simpl": {
+  "status": "dead",
+  "reason": "dead: parked / for sale",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Singulr AI": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Skyroot Aerospace": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Spacejoy": {
+  "status": "dead",
+  "reason": "dead: parked / for sale",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Standard Chartered": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "STMicroelectronics": {
+  "status": "retryable",
+  "reason": "retryable: timeout",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "TATA Advanced Sysytems Ltd": {
+  "status": "dead",
+  "reason": "dead: HTTP 404",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Tijoree": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Topcoder": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Trell": {
+  "status": "retryable",
+  "reason": "retryable: timeout",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Uni Cards": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Unicommerce": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "United Airlines": {
+  "status": "retryable",
+  "reason": "retryable: timeout",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Valuefy": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "VerSe Innovation": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Vicara": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Vogo": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Wadhwani AI": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Warner Bros.": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Xiaomi": {
+  "status": "pending",
+  "reason": "ok now: site reachable (re-run discovery)",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "zango": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Zinc": {
+  "status": "retryable",
+  "reason": "retryable: TLS/SSL error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "ZivaMe": {
+  "status": "retryable",
+  "reason": "retryable: connection error",
+  "checked": "2026-11-07",
+  "by": "re-probe with Clearbit domains"
+ },
+ "Eternal": {
+  "status": "nothing_to_read",
+  "reason": "referral-only hiring, no listings",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Zomato": {
+  "status": "nothing_to_read",
+  "reason": "referral-only (Eternal)",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Blinkit": {
+  "status": "nothing_to_read",
+  "reason": "referral-only (Eternal)",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Zerodha": {
+  "status": "nothing_to_read",
+  "reason": "own feed lists 0 openings",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Netflix": {
+  "status": "nothing_to_read",
+  "reason": "no India engineering roles (Mumbai content/business only)",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Spotify": {
+  "status": "nothing_to_read",
+  "reason": "no India engineering roles",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Two Sigma": {
+  "status": "nothing_to_read",
+  "reason": "no India engineering office",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "HubSpot": {
+  "status": "nothing_to_read",
+  "reason": "no India engineering roles",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Deel": {
+  "status": "nothing_to_read",
+  "reason": "Ashby board empty; jobs hosted elsewhere",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Honasa Consumer": {
+  "status": "nothing_to_read",
+  "reason": "no official listings; job portals only",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Mamaearth": {
+  "status": "nothing_to_read",
+  "reason": "no official listings (Honasa)",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Citadel Securities": {
+  "status": "blocked",
+  "reason": "403 to the crawler",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Myntra": {
+  "status": "blocked",
+  "reason": "bot detection",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Flipkart": {
+  "status": "blocked",
+  "reason": "TurboHire token; drops connections",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Navi": {
+  "status": "blocked",
+  "reason": "TurboHire token",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Purplle": {
+  "status": "blocked",
+  "reason": "TurboHire token",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "BharatPe": {
+  "status": "blocked",
+  "reason": "403 to the crawler (Darwinbox)",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Millennium": {
+  "status": "blocked",
+  "reason": "Eightfold 403",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Hotstar": {
+  "status": "blocked",
+  "reason": "JioStar Workday 403",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Disney+ Hotstar": {
+  "status": "blocked",
+  "reason": "JioStar Workday 403",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "JioStar": {
+  "status": "blocked",
+  "reason": "Workday 403",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Amdocs": {
+  "status": "blocked",
+  "reason": "job site requires sign-in",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "GreyOrange": {
+  "status": "pending",
+  "reason": "Zwayam ATS; feed request not yet cracked",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Snapmint": {
+  "status": "pending",
+  "reason": "Zwayam ATS; feed request not yet cracked",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Salesken": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere (only the homepage / VC page / aggregators)",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "SureWaves": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere (only the homepage / VC page / aggregators)",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Powerplay": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere (only the homepage / VC page / aggregators)",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "GoMechanic": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere (only the homepage / VC page / aggregators)",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Data Sutram": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere (only the homepage / VC page / aggregators)",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Toplyne": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere (only the homepage / VC page / aggregators)",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "SigTuple": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere (only the homepage / VC page / aggregators)",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Trendlyne.com": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere (only the homepage / VC page / aggregators)",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Wakefit": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere (only the homepage / VC page / aggregators)",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "RetainIQ": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere (only the homepage / VC page / aggregators)",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Avataar": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere (only the homepage / VC page / aggregators)",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "FlyFin": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere (only the homepage / VC page / aggregators)",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "District": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere (only the homepage / VC page / aggregators)",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Apna Mart": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "GlobalFair": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "JuiceLabs AI": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "CredHive": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Magma": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "numberz": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Oolka": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "OZi": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Portkey": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Power2SME": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Vutto": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "FOXY": {
+  "status": "nothing_to_read",
+  "reason": "only a VC (Consider) board, which needs a session token",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Jify": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Oslash": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Recko": {
+  "status": "nothing_to_read",
+  "reason": "acquired by Stripe; no own listings",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Mugafi": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "JEH Aerospace": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Recommercex": {
+  "status": "nothing_to_read",
+  "reason": "Google search: no careers page or job listing anywhere",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Ambia Systems": {
+  "status": "nothing_to_read",
+  "reason": "Google search: only other companies with similar names; no careers page found",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Accacia": {
+  "status": "nothing_to_read",
+  "reason": "Google search: only other companies with similar names; no careers page found",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "InfraTech Insights": {
+  "status": "nothing_to_read",
+  "reason": "Google search: only other companies with similar names; no careers page found",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Fitmint": {
+  "status": "nothing_to_read",
+  "reason": "Google search: only other companies with similar names; no careers page found",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "Learn More": {
+  "status": "nothing_to_read",
+  "reason": "Google search: only other companies with similar names; no careers page found",
+  "checked": "2026-11-07",
+  "by": "Google search in the user's browser"
+ },
+ "314e Corporation": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Bluestone": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Hexagon": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Unify Apps": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Supernova": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Ringg AI": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Maxim AI": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Jiraaf": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Josh": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Even Healthcare": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "hoichoi": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Fintrac": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "AssetPlus": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "MaxIQ": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Recrew AI": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Uppercase": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "ZOOP": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Boldfit": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Slikk": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "The Alter Office": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "AtomicAds": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Elements Energy": {
+  "status": "pending",
+  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Faces Canada": {
+  "status": "pending",
+  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Unreal Foods": {
+  "status": "pending",
+  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Newme": {
+  "status": "pending",
+  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Virgio": {
+  "status": "pending",
+  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Pazo": {
+  "status": "pending",
+  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Meolaa": {
+  "status": "pending",
+  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Suman": {
+  "status": "pending",
+  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Babaclick": {
+  "status": "pending",
+  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Consure Medical": {
+  "status": "pending",
+  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Curejoy": {
+  "status": "pending",
+  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Dpanda": {
+  "status": "pending",
+  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "GutWellness Club": {
+  "status": "pending",
+  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Koye Pharmaceuticals": {
+  "status": "pending",
+  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "ISA": {
+  "status": "pending",
+  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Lio": {
+  "status": "pending",
+  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Dream Sports": {
+  "status": "pending",
+  "reason": "Lever board listed on its page no longer exists (404); no other listing",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Gojek": {
+  "status": "pending",
+  "reason": "GoTo Lever board 404; no India listing",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Magicpin": {
+  "status": "pending",
+  "reason": "Darwinbox candidate API errors (500)",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Netmeds": {
+  "status": "pending",
+  "reason": "Darwinbox candidate API errors (500)",
+  "checked": "2026-11-07",
+  "by": "checked by hand"
+ },
+ "Liebherr": {
+  "status": "pending",
+  "by": "checked by hand",
+  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
+ },
+ "Flight Centre Travel Group": {
+  "status": "pending",
+  "by": "checked by hand",
+  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
+ },
+ "Macquarie Group": {
+  "status": "pending",
+  "by": "checked by hand",
+  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
+ }
+}

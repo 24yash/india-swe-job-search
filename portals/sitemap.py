@@ -118,7 +118,8 @@ def place(jp):
             continue
         country = a.get("addressCountry")
         country = country.get("name") if isinstance(country, dict) else country
-        out.append(", ".join(str(x) for x in (a.get("addressLocality"), a.get("addressRegion"), country) if x))
+        parts = [str(x).strip() for x in (a.get("addressLocality"), a.get("addressRegion"), country) if x]
+        out.append(", ".join(dict.fromkeys(p for part in parts for p in part.split(", ") if p)))  # no "India, India"
     return [o for o in out if o]
 
 
