@@ -506,10 +506,17 @@ EXP_RE = re.compile(
     re.I)
 
 
+# "Years of Experience: Minimum 6-8 years", "Experience: 2+ yrs", "Experience required - 3 to 5 years".
+# A bare dash is not a label: in bulleted JDs "...development experience\n- 2+ years of..." is the next bullet.
+EXP_LABEL_RE = re.compile(
+    r"(?:years?\s+of\s+)?experience(?:\s*(?:required|needed)\s*[:\-–]?|\s*:)\s*(?:minimum|min\.?|at\s*least)?\s*(\d{1,2})\s*(?:\+|plus)?\s*"
+    r"(?:(?:-|–|to)\s*\d{1,2}\s*)?(?:years?|yrs?)", re.I)
+
+
 def min_experience(text):
     """Smallest minimum-years figure the JD asks for, plus the snippet it came from."""
     found = []
-    for m in EXP_RE.finditer(text):
+    for m in list(EXP_RE.finditer(text)) + list(EXP_LABEL_RE.finditer(text)):
         lo = int(m.group(1))
         if lo <= 15:
             found.append((lo, text[max(0, m.start() - 20): m.end() + 40].replace("\n", " ").strip()))

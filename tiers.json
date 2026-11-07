@@ -704,8 +704,8 @@
    "name": "AMD",
    "type": "Semiconductor MNC (software roles)",
    "quality": 12,
-   "pay": "unclear",
-   "pay_note": "Bands vary by team"
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE median TC 53.6 LPA; L5 (entry) 27.9 LPA (Nov 2026)"
   },
   {
    "name": "Intel",
@@ -753,8 +753,8 @@
    "name": "GE HealthCare",
    "type": "Healthcare tech R&D",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE (entry) 16.7 LPA; median 20.0 LPA (Nov 2026)"
   },
   {
    "name": "Honeywell",
@@ -847,8 +847,8 @@
    "name": "Arm",
    "type": "Semiconductor IP",
    "quality": 12,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE median TC 67.0 LPA; Grade 2 (entry) 21.9, Grade 3 32.0 LPA (Nov 2026)"
   },
   {
    "name": "Marvell Technology",
@@ -862,7 +862,7 @@
    "type": "Semiconductor MNC",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Levels.fyi India SE median TC 29.8 LPA; E1 13.9 (below floor), E2 24.2, E3 30.0 LPA: level-dependent (Nov 2026)"
   },
   {
    "name": "KLA",
@@ -1156,8 +1156,8 @@
    "name": "Lowe's",
    "type": "Retail tech centre",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE L3 14.5, L4 18.9 LPA; median 20.1 LPA (Nov 2026)"
   },
   {
    "name": "Tesco",
@@ -1255,8 +1255,8 @@
    "name": "Citi",
    "type": "Global bank tech centre",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE median TC 28.8 LPA; C10 22.4, C11 29.4 LPA (Nov 2026)"
   },
   {
    "name": "Citigroup",
@@ -2958,8 +2958,8 @@
    "name": "Disney",
    "type": "Global product",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE median TC 38.7 LPA (only senior level reported) (Nov 2026)"
   },
   {
    "name": "JioStar",
@@ -3400,7 +3400,7 @@
    "type": "Global product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "Levels.fyi India SE median TC 22.3 LPA, no per-level data: borderline (Nov 2026)"
   },
   {
    "name": "Dassault Systemes",
@@ -6660,8 +6660,8 @@
    "name": "Viasat",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE1 13.0, SE3 18.2 LPA; median 22.0 LPA (Nov 2026)",
    "careers_url": "https://careers.viasat.com/",
    "source": "moreThanFAANGM (product companies list)"
   },

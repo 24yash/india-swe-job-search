@@ -2,7 +2,7 @@
 
 Usage: python3 tests/test_sources.py <path to the job-search folder>
 Covers the Oracle, Rippling and Eightfold readers, the portals/ readers (generic links, Juspay, Goldman, Uber,
-Apple, Urban Company, ShareChat), board recognition in URLs/pages, and find_careers helpers (bounded link parsing,
+Apple, Urban Company, ShareChat, sitemap, Jibe, Keka, Zoho Recruit, Kula), board recognition in URLs/pages, and find_careers helpers (bounded link parsing,
 company check for guessed domains, careers-page candidates).
 """
 import json
@@ -177,6 +177,84 @@ patched({"careersList": {"data": {"hasNext": False, "careersList": [{"title": "E
 jobs = list(portals.fetch({"name": "ShareChat", "portal": "sharechat"}, crawl))
 check("sharechat: fitting titles, years asked readable, link opens the MyNextHire job page",
       len(jobs) == 1 and crawl.min_experience(jobs[0].text)[0] == 1 and "mynexthire.com/employer/jobs" in jobs[0].url and jobs[0].posted is not None)
+
+# --- sitemap + JobPosting, Jibe, Keka, Zoho Recruit, Kula -----------------------------------------------
+def ld(title, city, country="India", posted="2026-11-01", until=None):
+    jp = {"@context": "https://schema.org", "@type": "JobPosting", "title": title, "datePosted": posted, "description": "<p>2+ years of Java</p>",
+          "jobLocation": {"@type": "Place", "address": {"addressLocality": city, "addressCountry": country}}}
+    if until:
+        jp["validThrough"] = until
+    return f'<html><script type="application/ld+json">{json.dumps(jp)}</script></html>'
+
+
+smap = ("<urlset>"
+        "<url><loc>https://careers.acme.com/job/bengaluru/software-engineer-ii/1</loc><lastmod>2026-11-01</lastmod></url>"
+        "<url><loc>https://careers.acme.com/job/bengaluru/senior-software-engineer/2</loc><lastmod>2026-11-02</lastmod></url>"
+        "<url><loc>https://careers.acme.com/job/austin/software-engineer/3</loc><lastmod>2026-11-03</lastmod></url>"
+        "<url><loc>https://careers.acme.com/job/pune/backend-developer/4</loc><lastmod>2026-11-04</lastmod></url>"
+        "<url><loc>https://careers.acme.com/job/pune/sales-manager/5</loc><lastmod>2026-11-05</lastmod></url>"
+        "<url><loc>https://careers.acme.com/about-us</loc></url></urlset>")
+calls = []
+
+
+def sm_route(k):
+    calls.append(k)
+    return None
+
+
+patched({"robots.txt": "User-agent: *\nDisallow: /job/pune/backend-developer\nSitemap: https://careers.acme.com/jobs-sitemap.xml",
+         "jobs-sitemap.xml": smap, "sitemap.xml": "", "sitemal.xml": "",
+         "/job/bengaluru/software-engineer-ii/1": ld("Software Engineer II", "Bengaluru"),
+         "/job/austin/software-engineer/3": ld("Software Engineer", "Austin", "United States"),
+         "/job/bengaluru/senior-software-engineer/2": ld("Senior Software Engineer", "Bengaluru")}, raw=True)
+crawl.SESSION.headers = {"User-Agent": "test"}
+_sess_get = crawl.SESSION.get
+crawl.SESSION.get = lambda url, **kw: (calls.append(url), SimpleNamespace(status_code=200, content=_sess_get(url).text.encode(), text=_sess_get(url).text))[1]
+jobs = list(portals.fetch({"name": "Acme", "portal": "sitemap", "host": "careers.acme.com"}, crawl))
+check("sitemap: software roles in India from JobPosting data; senior URLs, non-software URLs and other countries skipped",
+      [(j.title, j.location) for j in jobs] == [("Software Engineer II", "Bengaluru, India")], [(j.title, j.location) for j in jobs])
+check("sitemap: robots.txt-disallowed job pages are never fetched", not any("backend-developer" in u for u in calls))
+check("sitemap: senior and non-software job pages aren't fetched at all (filtered by URL first)",
+      not any("senior-software" in u or "sales-manager" in u for u in calls))
+patched({"robots.txt": "", "jobs-sitemap.xml": smap.replace("<url><loc>https://careers.acme.com/job/austin/software-engineer/3</loc><lastmod>2026-11-03</lastmod></url>", ""),
+         "sitemap.xml": "", "sitemal.xml": "", "/job/pune/backend-developer/4": ld("Backend Developer", "Pune", until="2026-01-01T00:00:00Z"),
+         "/job/bengaluru/software-engineer-ii/1": ld("Software Engineer II", "Bengaluru")}, raw=True)
+crawl.SESSION.headers = {"User-Agent": "test"}
+_sess_get2 = crawl.SESSION.get
+crawl.SESSION.get = lambda url, **kw: SimpleNamespace(status_code=200, content=_sess_get2(url).text.encode(), text=_sess_get2(url).text)
+jobs = list(portals.fetch({"name": "Acme", "portal": "sitemap", "host": "careers.acme.com", "sitemaps": ["https://careers.acme.com/jobs-sitemap.xml"]}, crawl))
+check("sitemap: a job whose closing date (validThrough) has passed is dropped", [j.title for j in jobs] == ["Software Engineer II"], [j.title for j in jobs])
+
+from portals.sitemap import place
+check("sitemap: addresses given as a list (Gartner) or missing don't crash",
+      place({"jobLocation": [{"address": [{"addressLocality": "Gurugram", "addressCountry": "IN"}]}, None, {"address": None}]}) == ["Gurugram, IN"])
+
+patched({"/api/jobs": lambda k: {"jobs": [{"data": {"req_id": "1", "slug": "1", "title": "Software Engineer", "country": "India", "city": "Bengaluru",
+                                                    "posted_date": "2026-11-01T00:00:00+0000", "description": "1+ years"}},
+                                          {"data": {"req_id": "2", "slug": "2", "title": "Software Engineer", "country": "Canada", "city": "Markham"}}]}
+         if '"page": 1' in k else {"jobs": []}})
+jobs = list(portals.fetch({"name": "AMD", "portal": "jibe", "host": "careers.amd.com"}, crawl))
+check("jibe: India roles once across keywords, link to the job page", [j.url for j in jobs] == ["https://careers.amd.com/jobs/1?lang=en-us"], [j.url for j in jobs])
+
+patched({"keka.com": [{"id": "9", "title": "Software Engineer", "description": "<p>Build</p>", "experience": "1 - 3 years",
+                       "jobLocations": [{"city": "Bengaluru", "state": "Karnataka", "countryName": "India", "countryCode": "IN"}], "publishedOn": "2026-11-01T00:00:00Z"},
+                      {"id": "10", "title": "Software Engineer", "jobLocations": [{"city": "Berlin", "countryName": "Germany", "countryCode": "DE"}]}]})
+jobs = list(portals.fetch({"name": "Wingify", "portal": "keka", "slug": "wingify"}, crawl))
+check("keka: India roles with years asked readable", len(jobs) == 1 and crawl.min_experience(jobs[0].text)[0] == 1 and jobs[0].url.endswith("/jobdetails/9"))
+
+zjobs = [{"id": "5", "Posting_Title": "SDE -1", "City": "Noida", "Country": "India", "Publish": "True", "Work_Experience": "1-3 year"},
+         {"id": "6", "Posting_Title": "SDE -1", "City": "Noida", "Country": "India", "Publish": "False"}]
+zpage = '<input type="hidden" value="' + json.dumps(zjobs).replace('"', "&#34;") + '" id="jobs">'
+patched({"zohorecruit.in/careers": zpage}, raw=True)
+jobs = list(portals.fetch({"name": "GfG", "portal": "zohorecruit", "slug": "geeksforgeeks", "tld": "in"}, crawl))
+check("zoho recruit: published India roles from the embedded list, years readable",
+      len(jobs) == 1 and crawl.min_experience(jobs[0].text)[0] == 1 and jobs[0].url.endswith("/jobs/Careers/5"), [(j.title, j.text) for j in jobs])
+
+patched({"/slice/1-sde-2-data-platform": ld("SDE 2 - Data Platform", "Bengaluru"),
+         "careers.kula.ai/slice?jobs=true": '<a href="/slice/1-sde-2-data-platform?jobs=true">Apply Now</a><a href="/slice/2-fraud-analyst?jobs=true">Apply Now</a>'}, raw=True)
+jobs = list(portals.fetch({"name": "Slice", "portal": "kula", "slug": "slice"}, crawl))
+check("kula: titles from the URL when links say 'Apply Now'; details from the job page's JobPosting data",
+      [(j.title, j.location) for j in jobs] == [("SDE 2 - Data Platform", "Bengaluru, India")], [(j.title, j.location) for j in jobs])
 
 crawl.get, crawl.post, crawl.SESSION = real_get, real_post, real_session
 

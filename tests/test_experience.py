@@ -49,6 +49,14 @@ row, why = crawl.evaluate(job("Software Engineer II", "4+ years of software engi
 check("4-year role: rejected", row is None and "4+" in why, why)
 row, _ = crawl.evaluate(job("Software Engineer I", "1+ years of experience"), company | {"pay_note": "tier judgement"}, 30)
 check("sweet spot needs salary evidence, not a tier judgement", row and row["pay_conf"] == "Likely" and row["sweet_spot"] == "")
+for text, want in [("Years of Experience: Minimum 6-8 years", 6), ("Experience: 2+ yrs", 2), ("Experience required - 3 to 5 years", 3),
+                   ("Founded 25 years ago", None), ("Experience: Java, Spring", None),
+                   # a bullet after "experience" is not a label: the next bullet's 2 years belong to no requirement here
+                   ("- 3+ years of non-internship professional software development experience\n- 2+ years in a fast-moving team", 3)]:
+    check(f"labelled experience parsed: {text!r} -> {want}", crawl.min_experience(text)[0] == want, crawl.min_experience(text))
+check("'Mgr' and trailing level-3 titles are senior; Web3 and level-2 titles are not",
+      not crawl.title_ok("Mgr, Software Engineering") and not crawl.title_ok("Software Engineer Apps 3")
+      and crawl.title_ok("Web3 Backend Engineer") and crawl.title_ok("SDE 2 - Data Platform"))
 check("level score favours 1-2 years over 3", crawl.level_score("x", 1) > crawl.level_score("x", 3) and crawl.level_score("x", 2) > crawl.level_score("x", 3))
 
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")

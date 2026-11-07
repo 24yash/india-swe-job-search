@@ -9,7 +9,7 @@ Find every open software-engineering role in India that fits the profile in `pro
 ## Architecture
 
 ```
-tiers.json (company bank, ~1,200)   companies.json (~250 direct sources + 2 LinkedIn sources)   profile.json (criteria)
+tiers.json (company bank, ~1,200)   companies.json (~335 direct sources + 2 LinkedIn sources)   profile.json (criteria)
             │                                   │
             ▼                                   ▼
 crawl.py ── fast phase: boards, platform feeds, portals/, 16 at a time (~1 min) ┐
@@ -30,6 +30,9 @@ Supporting tools: `discover_ats.py` (find direct boards), `find_careers.py` (fin
 | **Read company job boards directly** (Greenhouse, Lever, Ashby, SmartRecruiters, Workday, Amazon, Microsoft, Atlassian, Google) | Complete, current, has the full description, and the apply link is the company's own. A role that disappears from the board has closed. |
 | **Read companies' own careers sites** (Oracle Recruiting Cloud, Eightfold, Rippling feeds; `portals/` for custom sites) | A study of 100 board-less companies showed most careers pages load jobs from a public feed. JPMorgan, Apple, Goldman Sachs, Qualcomm, Juspay and others were LinkedIn-only before. Details in `CAREERS_DISCOVERY.md`. |
 | **Custom portals: one small module each, plus a configurable job-links reader** | Sites differ too much for one generic scraper, but each needs only ~30 lines. Server-rendered link lists need only config (`portals/links.py`). |
+| **Sitemaps + job-page JobPosting data as a generic reader** (`portals/sitemap.py`) | Phenom, iCIMS, Avature, SuccessFactors and many custom sites have no public list feed, but their sitemaps list every job and each job page carries schema.org JobPosting data (for Google for Jobs). One reader covers them all: URLs are filtered by wording before any page is fetched, robots.txt is honoured, and expired `validThrough` dates are dropped. The idea came from strata-harvest (MIT); its "stealth"/"impersonating" fetchers were deliberately not used. |
+| **Small readers for Indian ATS pages: Keka, Zoho Recruit, Kula; iCIMS Jibe feeds** | Each careers page loads a public feed or embeds its list. One reader per platform covers dozens of Indian startups that were LinkedIn-only. |
+| **Job portals are never taken as an employer's source** | Apna's and GoodSpace's sitemaps list other employers' jobs; reading them would mislabel roles. |
 | **Discovery renders careers pages in headless Chrome** | Plain HTML of modern careers pages rarely names the job platform (the list is built by JavaScript); rendering found boards the plain fetch missed. Bounded regexes keep huge pages fast. |
 | **LinkedIn public guest search as the second source** | Covers companies with no readable board (Flipkart, Meta, Netflix, Zepto…). In a measured run it supplied 6 of the top 10 roles. |
 | **Two speeds** (`--sources fast` vs `linkedin`) | LinkedIn must be slow (rate limits). Company boards give a usable dashboard in ~1 min, and LinkedIn fills in every ~40 postings. |
@@ -72,7 +75,7 @@ Supporting tools: `discover_ats.py` (find direct boards), `find_careers.py` (fin
 | **LinkedIn company sweep with OR-batched names** | The biggest poster crowds out the rest (Walmart took 24/30 results). One search per company instead, rotating. |
 | **LinkedIn "engineering function" filter** | Ignored by the public search. |
 | **Hiring.cafe, Apify ATS actors** | No public API (hiring.cafe) or commercial (Apify). |
-| **schema.org JobPosting in careers pages** | 0 of 100 sampled careers pages had it; no generic reader built. |
+| **schema.org JobPosting on careers *list* pages** | 0 of 100 sampled list pages had it. Job *detail* pages do (see the sitemap reader). |
 | **LinkedIn "apply on company site" links to find boards** | LinkedIn hides them unless signed in. |
 | **Wikidata for company websites** | Many Indian companies missing, and it rate-limits; recorded `site` values plus checked domain guesses instead. |
 | **JioStar (Disney+ Hotstar) Workday; Walmart's new careers site** | JioStar's Workday returns 403 to scripts, so it stays on LinkedIn. Walmart's new site ignores the search and lists US store jobs, but its Workday board (`walmart.wd504`) answers again and is read directly. |
@@ -90,7 +93,8 @@ Supporting tools: `discover_ats.py` (find direct boards), `find_careers.py` (fin
 - 17 roles from 8 companies rely on tier judgement (no public salary data): IMC, Citadel Securities, NK Securities, Sarvam, Onehouse, ClickHouse, Hevo, Urban Company.
 - ~170 of ~300 shortlisted roles ask "3+ years": allowed by the brief (≤ 3), but stretch roles at ~1.5 years. The dashboard's "Sweet spot only" filter shows the 0–2-year roles with evidenced pay.
 - Many good companies currently list only senior roles in India (e.g. Coupang 42, Celonis 27, Roku). They stay in the bank and appear when they post SDE-level roles.
-- Companies on Darwinbox, Keka, Zoho Recruit, TurboHire, MyNextHire or Kula are visible only through LinkedIn. Darwinbox refuses scripts (403); the others have no reader yet.
+- Companies on Darwinbox (403 to scripts), TurboHire (token-gated) or MyNextHire, and sites blocked by bot protection, are visible only through LinkedIn.
+- The sitemap reader reads at most 150 job pages per company per run, chosen by URL wording (software/engineer/developer…, not senior). A site whose job URLs carry no title words (bare IDs) is read only if it has a search feed (e.g. Jibe).
 - Goldman Sachs and Juspay roles have no posting date in their feeds (freshness gets a neutral score). Juspay's links open the careers page, not the single role.
 - LinkedIn liveness checks are budgeted; under heavy rate limiting some old postings may age out before being confirmed open.
 

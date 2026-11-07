@@ -66,6 +66,9 @@ One small module per portal, run in the fast phase like any board (`"ats": "port
 | `juspay.py` | `joinus.juspay.in/api/careerJobOpening`: every opening with years asked |
 | `urbancompany.py` | One public POST call returns all openings with descriptions |
 | `sharechat.py` | `sharechat.com/api/careersList` gives titles, locations, years asked and dates (no description). The link opens the MyNextHire job page. |
+| `sitemap.py` | **Generic**: sitemap job URLs → schema.org JobPosting on each job page (Phenom, iCIMS, Avature, SuccessFactors and custom sites) |
+| `jibe.py` | iCIMS Jibe search feed `/api/jobs` (AMD, DocuSign, Cvent, ICE, ZS…) |
+| `keka.py`, `zohorecruit.py`, `kula.py` | Indian ATS careers pages: Keka's public feed, Zoho's embedded list, Kula's job links plus JobPosting data |
 | `links.py` | **Generic**: server-rendered job links, configured per company (list URL, job-link pattern, pages, fallback location). Used for Nutanix, Intuit (Radancy) and D. E. Shaw India. |
 
 Rules for every reader (repeated in `portals/__init__.py`):
@@ -151,36 +154,121 @@ Bugs found while verifying, all fixed and covered by tests:
 3. Evaluation crashed on an Oracle job whose schedule field was null.
 4. Goldman Sachs titles were rewritten, so LinkedIn copies weren't recognised as duplicates; Goldman's own titles are kept now.
 
+## Round two: companies we still couldn't read
+
+After round one, 931 companies still had no direct source. We sampled 47 of them across every failure type:
+- Phenom, iCIMS, Avature and SuccessFactors sites;
+- Eightfold tenants we couldn't locate;
+- Keka, Zoho Recruit and Kula pages;
+- big names whose site a plain fetch couldn't reach (Meta, Netflix, Flipkart, SAP, Mastercard…);
+- custom sites (Zerodha, Media.net, trading firms, BlackRock…).
+
+### What existing tools do
+
+- Hosted scrapers (Apify actors) cover these platforms commercially; we didn't use them.
+- The open-source [strata-harvest](https://github.com/andrewcrenshaw/strata-harvest) (MIT) has parsers for Phenom, iCIMS, SuccessFactors and Eightfold. Its key idea: Phenom has no public list API, but job pages carry schema.org `JobPosting` data and sites list every job in a sitemap. SuccessFactors serves its sitemap at `/sitemal.xml`, a typo in SAP's platform that is kept on purpose.
+- We took the idea, not the code. strata-harvest also ships "stealth" and "impersonating" fetchers that get past bot protection; **we did not use them**.
+
+### Methods tried on the sample
+
+| Method | Worked for |
+|---|---|
+| **Sitemap → job URLs → schema.org JobPosting on each job page** | 19 of the sample: Phenom (Fiserv, Lowe's, GE HealthCare, Philips, WEX, Cisco), iCIMS (Arm, MSCI, DocuSign), Avature (Synopsys), SuccessFactors (Moody's), SAP, AMD, NetApp, Mastercard, BlackRock, Optiver, Akuna, Quadeye |
+| **iCIMS Jibe search feed** (`/api/jobs?keywords=&location=`) | AMD (97 India software results) and DocuSign (39), whose job URLs are bare IDs the sitemap method can't pre-filter |
+| **Keka feed** (`<co>.keka.com/careers/api/jobs/default/active`) | Wingify, WebEngage, GoKwik |
+| **Zoho Recruit**: list embedded in the careers page (hidden `jobs` field) | GeeksForGeeks, Increff |
+| **Kula**: server-rendered job links, with JobPosting data on each job page | Slice, Acko, Cashfree |
+| **Eightfold tenant checked with the company's own domain** | Micron (183 India results), Lam Research (59), Citi (304). Millennium returned 403, so it stays blocked. |
+| **Oracle behind a company's own domain**: the page's scripts name the real tenant | American Express (`careers.americanexpress.com` fronts `egug.fa.us2.oraclecloud.com`) |
+| Nothing found | Meta, Netflix, Flipkart, Citadel, Two Sigma, DRW, Bloomberg, Zerodha, Media.net, AlphaGrep, iRage, Chargebee |
+
+### Built and run at scale
+
+- `portals/sitemap.py`: the generic sitemap + JobPosting reader. It works like this:
+  - Job URLs are kept only if their wording reads like a software role and not a senior one, so pages are filtered before they are fetched.
+  - URLs naming an Indian city come first, then the newest; at most 150 pages per run.
+  - robots.txt is honoured, and roles past their `validThrough` closing date are dropped.
+- `portals/jibe.py`, `portals/keka.py`, `portals/zohorecruit.py` and `portals/kula.py`. The links reader now uses job-page JobPosting data when it's present, and can read titles from URLs.
+- Discovery learned Oracle-on-own-domain and Kula patterns.
+- **`find_careers.py --more`**: a second pass over every cached company without a source. It tries Keka, Zoho and Kula pages, Eightfold tenants with the company's domain, Jibe feeds and sitemaps on the careers host and on `careers.`/`jobs.<domain>`.
+  - It ran over 690 companies and found **98 readable sources**: 39 sitemaps, 27 Keka, 10 Zoho, 10 Jibe, 8 Kula and 4 Eightfold.
+  - After removing job portals (Apna and GoodSpace list other employers' jobs) and aliases (Cisco/Splunk/Duo, Cvent/Jifflenow…), **89 were added**, plus AmEx by hand. Citi moved from its Workday board to its Eightfold tenant: 31 fitting roles instead of 8.
+- **Pay checked on levels.fyi** for the companies with the most new leads:
+  - Now likely: AMD (L5 ₹27.9L), Citi (C10 ₹22.4L), Arm (Grade 2 ₹21.9L), Disney (median ₹38.7L).
+  - Below the bar at junior levels: Lowe's (L3/L4 ₹14.5/18.9L), GE HealthCare (₹16.7L), Viasat (SE1 ₹13.0L).
+  - Borderline: Micron (E1 ₹13.9L, E2 ₹24.2L) and Lam Research (median ₹22.3L).
+
+### Round-two results
+
+| | After round one | After round two |
+|---|---|---|
+| Direct sources (boards, feeds, portals) | ~245 | **335** |
+| Shortlist | 335 | **356** |
+| Sweet-spot roles | 83 | **94** |
+| Shortlist roles from company sources (not LinkedIn) | 265 | **295** |
+| Leads | 278 | 293 |
+
+New sweet-spot roles include DocuSign "Software Engineer", WEX "SDE 1" (two openings), American Express "Software Engineer II" and Acko "SDE-1". Some LinkedIn copies (DocuSign, AmEx) now match their company's own posting and are deduplicated.
+
+### Round-two audit
+
+One top role per new company, 20 companies. Each was opened in headless Chrome, or fetched directly where robots.txt disallows automated page loads.
+
+| Company (reader) | Link live, title on page | India | Years: page vs band |
+|---|---|---|---|
+| WEX (sitemap) | ✓ | ✓ | 3 = 3 |
+| DocuSign (Jibe) | ✓ | ✓ | 2 = 2 |
+| American Express (Oracle) | ✓ | ✓ | 2 = 2 |
+| Acko (Kula) | ✓ | ✓ | 1 = 0–1 |
+| Slice (Kula) | ✓ | ✓ | 3 = 3 |
+| BlackRock (sitemap) | ✓ | ✓ | not stated |
+| Citi (Eightfold) | ✓ | ✓ | 2 = 2 |
+| Disney (sitemap) | ✓ | ✓ | 3 = 3 |
+| Fiserv (sitemap) | ✓ | ✓ | 3 = 3 |
+| BCG (sitemap) | ✓ | ✓ | 2 = 2 |
+| Cashfree (Kula) | ✓ | ✓ | 3 = 3 |
+| Testsigma (Keka) | ✓ | ✓ | 3 = 3 |
+| Arm (sitemap) | ✓ | ✓ | not stated |
+| Viasat (Jibe) | ✓ | ✓ | 3 = 3 |
+| GE HealthCare (sitemap) | ✓ | ✓ | 2 = 2 |
+| Lowe's (sitemap) | ✓ | ✓ | 2 = 2 |
+| Scimplify (Keka) | ✓ | ✓ | 3 = 3 |
+| Franklin Templeton (sitemap) | ✓ | ✓ | 2 = 2 |
+| **Lam Research (Eightfold)** | ✓ | ✓ | **✗: page asks 6–8 yrs, band said "not stated"** |
+| **Renesas (sitemap)** | ✓ | ✓ | **✗: "Mgr, Software Engineering" should not have passed the title filter** |
+
+Both failures were fixed and tested:
+- The experience parser now reads labelled requirements ("Years of Experience: Minimum 6-8 years", "Experience: 2+ yrs"). A first version also read a bullet dash as a label and moved 105 Amazon roles from 3 to 2 years; a before/after diff caught it, it was fixed, and a test now covers it.
+- The title filter now excludes "Mgr" and titles ending in level 3 ("Software Engineer Apps 3"), while keeping "Web3" titles.
+- A Gartner page giving its address as a list crashed the sitemap reader; that's fixed and tested too.
+
 ## Where we still can't get data
 
-931 bank companies still have no direct source and rely on LinkedIn. Why, from the discovery cache (`output/careers-sites.json`):
+**819 bank companies** still have no direct source after both rounds (931 after round one). Their roles still reach the dashboard through LinkedIn's public search.
 
 | Reason | Companies | Examples (good payers in bold) |
 |---|---|---|
-| **Website not reachable by a plain fetch** (bot protection, robots.txt, or not found) | 228 | **Meta, Netflix, LinkedIn, Flipkart, Zomato, Blinkit, SAP, NetApp, Dropbox, Bloomberg, Citadel, Revolut, Wayfair, Mastercard, Arista, Indeed** |
-| Website found, no careers page found | 146 | **Games24x7, Couchbase, Moj** |
-| Careers page found but no platform named (custom site, or JavaScript the renderer couldn't resolve) | 329 | **Walmart (store site), Zerodha, Media.net, Dream11, Myntra (bot protection), BlackRock, Chargebee, Confluent, HubSpot, VMware, Spotify, HashiCorp, Ramp, Deel, Two Sigma, DRW, Akuna, Optiver, Quadeye, AlphaGrep, iRage** |
-| Darwinbox (job feed returns 403 to scripts) | 34 | **Zepto**, BharatPe, MobiKwik, KreditBee, Moneyview, Perfios, Go Digit |
-| Keka (no reader yet) | 27 | GoKwik, WebEngage, Zluri, Scrut, Wingify/VWO |
-| Phenom (no reader yet) | 20 | **Splunk, WEX**, Philips, GE HealthCare, Lowe's, Fiserv, Disney, Franklin Templeton |
-| iCIMS (no reader yet) | 14 | **DocuSign, Booking.com, Planview**, AMD, Arm, MSCI, ICE, Highspot, Cvent |
-| Eightfold tenants (reader exists, but the API host/domain wasn't found automatically) | 11 | **American Express, Millennium**, Micron, NAB, Lam Research |
-| SuccessFactors (no reader yet) | 11 | Moody's, OneCard (FPL), Seagate, Alstom |
-| Zoho Recruit (no reader yet) | 11 | Increff, e6data, Fyers, GeeksForGeeks |
+| **Website not reachable by a plain fetch** (bot protection, robots.txt, or not found) | 220 | **Meta, Netflix, LinkedIn, Flipkart, Zomato, Blinkit, NetApp main site, Dropbox, Bloomberg, Citadel, Revolut, Wayfair, Indeed** |
+| Website found, no careers page found | 144 | **Games24x7, Couchbase, Moj** |
+| Careers page found but no platform, feed or JobPosting sitemap (custom or JavaScript-only) | 311 | **Eternal/Zomato, Myntra (bot protection), Zerodha, Dream11, Media.net, Rippling, VMware, Chargebee, Confluent (now IBM careers), HubSpot, Spotify, HashiCorp, Ramp, Deel, Two Sigma, DRW, Da Vinci, AlphaGrep, iRage, Dolat** |
+| Darwinbox (job feed returns 403 to scripts) | 33 | **Zepto**, BharatPe, MobiKwik, KreditBee, Moneyview, Perfios, Go Digit, InsuranceDekho, Delhivery, Tata 1mg |
+| Boards found but with no India roles today (Greenhouse 17, Workday 11, Ashby 9, Lever 5) | ~40 | They are checked again on every discovery run |
+| SuccessFactors without a sitemap | 10 | Seagate, Alstom, OneCard (FPL) |
 | TurboHire (feed needs a session token) | 8 | **Navi**, Flipkart, Cleartrip, Ola Electric, Purplle, Khatabook |
-| Kula (jobs in the page's streamed data; no reader yet) | 8 | **Slice, Acko**, CleverTap, MoEngage, Cashfree |
-| Avature (no reader yet) | 6 | **CommBank (main site)**, Synopsys, Ansys, MetLife |
-| Others: Workable, RippleHire, MyNextHire, Gem, BambooHR, Jobvite, Recruiterflow, Freshteam, Skillate, Taleo, PeopleStrong | 1–5 each | **Trexquant, Innovaccer, Hasura**, HDFC Bank, Axis Bank, CoinSwitch |
+| Eightfold tenants that refuse scripts or weren't found | 5 | **Millennium (403)**, NAB |
+| Phenom / Avature without a usable sitemap | 9 | Franklin Templeton (corporate site), Bloomberg, MetLife, Ansys |
+| RippleHire, MyNextHire, Workable and others | 1–5 each | HDFC Bank, Axis Bank, Licious, Amagi, **Trexquant, Innovaccer** |
 
-Some rows include aliases of companies already covered (e.g. AWS, Google Cloud, Microsoft Research under "not reachable"). Those are covered through their parent's board.
-
-Roles at these companies still reach the dashboard through LinkedIn's public search, as before.
+Some rows include aliases of companies already covered (e.g. AWS under "not reachable"); those are covered through the parent company's board.
 
 ## Dead ends (don't retry)
 
 | Idea | Why not |
 |---|---|
 | Darwinbox (Zepto, Unacademy…) | The job feed returns 403 to scripts |
+| Millennium's Eightfold tenant | 403 to scripts |
+| Job portals as a source for their listed companies (Apna, GoodSpace) | Their sitemaps list other employers' jobs, which would be mislabelled |
+| strata-harvest's "stealth"/"impersonating" fetchers, hosted scraping services | They get around bot protection, or are commercial. Only the sitemap + JobPosting idea was adopted. |
 | JioStar (Disney+ Hotstar) Workday | 403 to scripts |
 | Walmart's new careers site | Ignores the search and lists US store jobs. (Walmart's tech roles are now read from its Workday board, `walmart.wd504`, which discovery found answering again.) |
 | Myntra's portal | Bot detection |
@@ -210,11 +298,12 @@ Roles at these companies still reach the dashboard through LinkedIn's public sea
 3. Otherwise copy the smallest module (`juspay.py`, `uber.py`) and adapt it.
 4. Add a fixture test, then crawl with `--only`.
 
+**E. Run the second pass.** After a discovery run, `python3 find_careers.py --more` finds Keka/Zoho/Kula pages, Eightfold tenants, Jibe feeds and JobPosting sitemaps. Review `output/discovered-more.json`, drop job portals and aliases, and add the rest.
+
 **Next candidates, by expected payoff:**
-1. A **Phenom** reader (Splunk, WEX, Fiserv, Lowe's, Disney… 20 companies) and an **iCIMS** reader (DocuSign, Booking.com, AMD, Arm, MSCI… 14). Check first that their feeds are public.
-2. **Eightfold host lookup**: try `<tenant>.eightfold.ai` with the company's domain, as with AmEx, Millennium and Micron.
-3. **Pay checks for the new leads** (Citi, Cadence, Emerson, Qualys, BNY, Northern Trust…) on levels.fyi, recorded in `tiers.json`. They move to the shortlist once pay is evidenced.
-4. **Record `site` for good payers whose website wasn't reachable** (see the table above) and re-run with `--only`.
+1. **Pay checks for the remaining leads** on levels.fyi, recorded in `tiers.json`: Cadence, Emerson, Qualys, BNY, Northern Trust, BCG, Cigna, Renesas, Franklin Templeton, plus the Keka/Zoho/Kula startups. They move to the shortlist once pay is evidenced.
+2. **Small readers for the biggest custom sites still LinkedIn-only:** Zerodha, Media.net, Dream11, Upstox and the trading firms (Two Sigma, DRW, AlphaGrep, iRage). Check each in the browser's network panel first.
+3. **Record `site` for good payers whose website wasn't reachable** (Meta, Netflix, Bloomberg…) and re-run with `--only`. Some will stay blocked, and that's fine.
 
 **Other good payers still LinkedIn-only:**
 - Indian product companies: Navi (TurboHire, token-gated like Flipkart), Slice (Kula; jobs are in the page's streamed data), Zepto (Darwinbox, blocked).

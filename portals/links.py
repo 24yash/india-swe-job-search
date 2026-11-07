@@ -5,7 +5,7 @@
    "list_urls": ["https://careers.nutanix.com/en/jobs/?search=software+engineer&country=India&page={page}"],
    "job_link": "/en/jobs/\\d+/[^\"/]+/", "max_pages": 10, "location": "India"}
 
-The title is the link text (cut at a ':' or a run of spaces); detail pages are fetched only for India-fitting
+The title is the link text (cut at a ':' or a run of spaces), or the URL slug with "title_from_url"; detail pages are fetched only for India-fitting
 titles. "location" is used when the detail page names no Indian city (only set it when the list URL is
 already filtered to India)."""
 import html as htmllib
@@ -36,6 +36,9 @@ def fetch(c, h):
                 named = re.search(r'class="[^"]*(?:title|name)[^"]*"[^>]*>(.*?)<', inner, re.S | re.I)
                 name = htmllib.unescape(re.sub(r"<[^>]+>", " ", named.group(1) if named else inner))
                 title = re.split(r"\s{3,}|:\s", name.strip())[0].strip()
+                if c.get("title_from_url"):  # link text is just "Apply Now": read the title from the URL slug
+                    slug = re.sub(r"[?#].*", "", link).rstrip("/").rsplit("/", 1)[-1]
+                    title = re.sub(r"^\d+-|-\d+$", "", slug).replace("-", " ")
                 found += 1
                 if link in seen or not title or not h.title_ok(title):
                     continue
@@ -50,6 +53,12 @@ def fetch(c, h):
             body = page_text(h, link)
         except Exception:
             return None
+        from portals.sitemap import job_postings, place  # job pages with schema.org JobPosting data (e.g. Kula)
+        for jp in job_postings(body):
+            locs = [l for l in place(jp) if h.in_india(l)]
+            if jp.get("title") and (locs or c.get("location")):
+                return h.Job(c["name"], jp["title"].strip(), " / ".join(locs) or c["location"], link, h.parse_ts(jp.get("datePosted")),
+                             h.strip_html(jp.get("description") or ""), meta={"employmentType": str(jp.get("employmentType") or "")})
         main = re.search(r"<main.*?</main>", body, re.S | re.I)
         text = h.strip_html(main.group(0) if main else body)
         cities = [x for x in CITIES if re.search(rf"\b{x}\b", text[:4000])]

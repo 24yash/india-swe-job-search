@@ -174,6 +174,9 @@ ATS_LINKS = [
     ("icims", r"(?<![a-z0-9-])careers-([a-z0-9-]{1,63})\.icims\.com"),
     ("jobvite", r"jobs\.jobvite\.com/([a-z0-9_-]{1,100})"),
     ("phenom", r"(phenompeople\.com|phenom\.com/[a-z])"),
+    ("kula", r"careers\.kula\.ai/([a-z0-9_-]{1,100})"),
+    # Oracle behind a company's own domain: the page's scripts still name the real tenant
+    ("oracle", r"(?<![a-z0-9.])([a-z0-9]{1,63}\.fa(?:\.[a-z0-9]+)?\.oraclecloud\.com)/hcmRestApi/CandidateExperience/[a-z]{2}/(?:siteSettings|sites)/([A-Za-z0-9_]{1,100})"),
 ]
 NOT_A_BOARD = {"embed", "jobs", "careers", "api", "www", "boards", "apply", "app", "static"}
 

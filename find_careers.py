@@ -4,6 +4,8 @@ job platform its openings come from.
 Usage: python3 find_careers.py                 # all bank companies without a direct board (cached; ~20-40 min)
        python3 find_careers.py --only "Upstox" "JPMorgan Chase & Co."
        python3 find_careers.py --refresh       # ignore the cache
+       python3 find_careers.py --more          # second pass: Keka/Zoho/Kula pages, Eightfold tenants, Jibe feeds,
+                                               # sitemaps with JobPosting pages (writes output/discovered-more.json)
 Writes output/careers-sites.json (one entry per company, reused for 30 days) and output/discovered-sites.json
 (verified boards a crawler can read, to copy into companies.json). Read-only: plain page loads, robots.txt
 respected, nothing submitted, no sign-ins, nothing that gets around bot protection.
@@ -269,5 +271,116 @@ def main(argv):
               "verified" if h["name_verified"] else "CHECK NAME")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and "--more" not in sys.argv:
     main(sys.argv[1:])
+
+
+# --- second pass: sources beyond the classic job boards ---------------------------------------------------
+# For companies discovery found but couldn't read: Keka / Zoho Recruit / Kula pages, Eightfold tenants (checked with
+# the company's own domain), iCIMS Jibe search feeds, and sitemaps whose job pages carry schema.org JobPosting data.
+
+def _domain(url):
+    host = urlparse(url or "").netloc.lower()
+    return re.sub(r"^(www|careers|jobs|career)\.", "", host)
+
+
+def more_sources(entry):
+    """Candidate readers for one company: [{"ats": ..., config..., "india": count or None, "how": ...}]."""
+    import crawl
+    from portals import sitemap as sm
+    out = []
+    boards = [(b[0], b[1]) for b in entry.get("boards") or []]
+    for ats, slug in boards:
+        try:
+            if ats == "keka":
+                jobs = crawl.get(f"https://{slug}.keka.com/careers/api/jobs/default/active")
+                n = sum(1 for j in jobs if any("india" in json.dumps(l).lower() or l.get("countryCode") == "IN" for l in j.get("jobLocations") or []))
+                out.append({"ats": "portal", "portal": "keka", "slug": slug, "india": n, "how": "keka feed"})
+            elif ats == "zohorecruit":
+                for tld in ("com", "in"):
+                    r = S.get(f"https://{slug}.zohorecruit.{tld}/careers", timeout=20)
+                    if r.ok and 'id="jobs"' in r.text:
+                        out.append({"ats": "portal", "portal": "zohorecruit", "slug": slug, "tld": tld, "india": r.text.count("India"), "how": "zoho page"})
+                        break
+            elif ats == "kula":
+                r = S.get(f"https://careers.kula.ai/{slug}?jobs=true", timeout=20)
+                n = len(set(re.findall(rf'/{slug}/\d+-[a-z0-9-]+', r.text))) if r.ok else 0
+                if n:
+                    out.append({"ats": "portal", "portal": "kula", "slug": slug, "india": n, "how": "kula page"})
+            elif ats == "eightfold":
+                dom = _domain(entry.get("site"))
+                s2 = session()
+                s2.get(f"https://{slug}.eightfold.ai/careers?domain={dom}", timeout=15)
+                r = s2.get(f"https://{slug}.eightfold.ai/api/pcsx/search", timeout=15,
+                           params={"domain": dom, "query": "software engineer", "location": "India", "start": 0, "num": 10})
+                if r.ok and "json" in r.headers.get("content-type", ""):
+                    n = (r.json().get("data") or {}).get("count")
+                    if n:
+                        out.append({"ats": "eightfold", "host": f"{slug}.eightfold.ai", "domain": dom, "india": n, "how": "eightfold pcsx"})
+        except (requests.RequestException, ValueError, AttributeError):
+            continue
+    if "kula" in (entry.get("platforms") or []) and not any(o["portal"] == "kula" for o in out if o.get("portal")):
+        for slug in dict.fromkeys([_domain(entry.get("site")).split(".")[0]] + da.slug_variants(entry["company"])[:3]):
+            try:
+                r = S.get(f"https://careers.kula.ai/{slug}?jobs=true", timeout=20)
+            except requests.RequestException:
+                continue
+            n = len(set(re.findall(rf'/{re.escape(slug)}/\d+-[a-z0-9-]+', r.text))) if r.ok else 0
+            if n:
+                out.append({"ats": "portal", "portal": "kula", "slug": slug, "india": n, "how": "kula page"})
+                break
+    if out:
+        return out
+    dom = _domain(entry.get("site") or entry.get("careers"))
+    hosts = [urlparse(entry.get("careers") or "").netloc, urlparse(entry.get("site") or "").netloc]
+    hosts += [f"careers.{dom}", f"jobs.{dom}"] if dom else []
+    hosts = list(dict.fromkeys(h for h in hosts if h and resolves(h)))
+    for host in hosts:
+        try:
+            r = S.get(f"https://{host}/api/jobs", params={"location": "India", "keywords": "software", "limit": 1}, timeout=15)
+            if r.ok and "json" in r.headers.get("content-type", "") and "jobs" in r.json():
+                n = r.json().get("totalCount") or r.json().get("count")
+                if n:
+                    return [{"ats": "portal", "portal": "jibe", "host": host, "india": n, "how": "jibe feed"}]
+        except (requests.RequestException, ValueError):
+            pass
+        import crawl as _c
+        robots = {}
+        urls = sm.job_urls(_c, {"host": host}, robots, max_maps=12)
+        if not urls:
+            continue
+        sample = ([u for u, _ in urls if sm.INDIA.search(u)] or [u for u, _ in urls])[:2]
+        if any(sm.job_postings(sm._get(_c, u, robots, 3_000_000) or "") for u in sample):
+            india = sum(1 for u, _ in urls if sm.INDIA.search(u))
+            return [{"ats": "portal", "portal": "sitemap", "host": host, "india": india or None, "jobs": len(urls), "how": "sitemap + JobPosting"}]
+    return []
+
+
+def more(argv):
+    """python3 find_careers.py --more: second pass over cached companies without a direct source."""
+    import crawl
+    cache = json.loads(CACHE.read_text())
+    companies = json.loads((ROOT / "companies.json").read_text())["companies"]
+    direct = {crawl.norm(c["name"]) for c in companies if c["ats"] != "linkedin"}
+    tiers = {c["name"]: c for c in json.loads((ROOT / "tiers.json").read_text())["known"]}
+    todo = [e for e in cache.values() if (e.get("careers") or e.get("site")) and crawl.norm(e["company"]) not in direct
+            and not any(crawl.same_or_alias(crawl.norm(e["company"]), d) for d in direct) and tiers.get(e["company"], {}).get("pay") != "below"]
+    print(f"second pass over {len(todo)} companies", file=sys.stderr)
+    hits = []
+    with ThreadPoolExecutor(8) as pool:
+        for i, (e, found) in enumerate(zip(todo, pool.map(more_sources, todo)), 1):
+            for f in found:
+                hits.append({"company": e["company"], **f})
+            if i % 50 == 0:
+                print(f"  {i}/{len(todo)}, {len(hits)} sources so far", file=sys.stderr)
+    (OUT / "discovered-more.json").write_text(json.dumps(hits, indent=1))
+    tally = {}
+    for h in hits:
+        tally[h["how"]] = tally.get(h["how"], 0) + 1
+    print(f"\n{len(hits)} readable sources found:", tally)
+    for h in sorted(hits, key=lambda h: -(h.get("india") or 0)):
+        print(" ", h["company"], h["how"], h.get("slug") or h.get("host"), "india:", h.get("india"))
+
+
+if __name__ == "__main__" and "--more" in sys.argv:
+    more(sys.argv[1:])
