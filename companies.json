@@ -2,6 +2,544 @@
  "_comment": "quality = 0-15 company-quality score. pay = likely | unclear. pay_note = why. funding = startup round hint; 'unverified' until checked against a source. Find slugs with discover_ats.py.",
  "companies": [
   {
+   "name": "Rigi",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "rigi",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Peoplebox.ai",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "peoplebox",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Mintoak",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "mintoak",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Impact Analytics",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "impactanalytics",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Cognida.ai",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "cognida",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Kotak Securities",
+   "ats": "portal",
+   "portal": "darwinbox",
+   "slug": "kotaksecurities",
+   "tld": "in",
+   "type": "Trading",
+   "quality": 8,
+   "pay": "likely",
+   "pay_note": "Kotak India SE median TC 46.9 LPA (levels.fyi, Nov 2026)",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Unicommerce",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "unicommerce",
+   "type": "SaaS (listed)",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "Bands vary",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Meolaa",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "meolaa",
+   "type": "General Catalyst-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "MaxIQ",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "maxiq",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Jiraaf",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "jiraaf",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Curefit",
+   "ats": "portal",
+   "portal": "darwinbox",
+   "slug": "curefit",
+   "tld": "in",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "AssetPlus",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "assetplus",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Zolve",
+   "ats": "portal",
+   "portal": "freshteam",
+   "slug": "zolve",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Zetwerk",
+   "ats": "portal",
+   "portal": "freshteam",
+   "slug": "zetwerk",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "TripJack",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "tripjack",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Stanza Living",
+   "ats": "portal",
+   "portal": "darwinbox",
+   "slug": "stanzaliving",
+   "tld": "in",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "RapidCanvas",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "rapidcanvas",
+   "type": "Series B AI startup",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "OneAssist",
+   "ats": "portal",
+   "portal": "darwinbox",
+   "slug": "oneassist",
+   "tld": "in",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "MyGlamm",
+   "ats": "portal",
+   "portal": "freshteam",
+   "slug": "myglamm",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Meragi",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "meragi",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Haptik",
+   "ats": "portal",
+   "portal": "freshteam",
+   "slug": "haptik",
+   "type": "Conversational AI",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Falcon",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "falcon",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Detect Technologies",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "detecttechnologies",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Decentro",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "decentro",
+   "type": "Indian fintech",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Angel One",
+   "ats": "portal",
+   "portal": "mynexthire",
+   "slug": "angelone",
+   "type": "Broking fintech (listed)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary",
+   "found_by": "board-name sweep (Keka/Darwinbox/Freshteam/MyNextHire)"
+  },
+  {
+   "name": "Yulu Bikes",
+   "ats": "portal",
+   "portal": "mynexthire",
+   "slug": "yulu",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "MyNextHire reader (hand check)"
+  },
+  {
+   "name": "Licious",
+   "ats": "portal",
+   "portal": "mynexthire",
+   "slug": "licious",
+   "jd_page": "https://www.licious.in/careers/jobs",
+   "type": "D2C",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary",
+   "found_by": "MyNextHire reader (hand check)"
+  },
+  {
+   "name": "Daloopa",
+   "ats": "rippling",
+   "slug": "daloopa",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "sample audit (hand check)"
+  },
+  {
+   "name": "Amagi",
+   "ats": "portal",
+   "portal": "mynexthire",
+   "slug": "amagi",
+   "jd_page": "https://www.amagi.com/job-description",
+   "type": "Indian product",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "India SE median 29.3 LPA, no level split: borderline (levels.fyi, Nov 2026)",
+   "found_by": "sample audit (hand check)"
+  },
+  {
+   "name": "CloudBees",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://www.cloudbees.com/careers"
+   ],
+   "job_link": "/Recruiting/Jobs/Details/[^/\\\"'?#]+",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "job-list pass (custom careers pages)"
+  },
+  {
+   "name": "Syfe",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://syfe.careers-page.com/"
+   ],
+   "job_link": "/jobs/[^/\\\"'?#]+",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "job-list pass (custom careers pages)"
+  },
+  {
+   "name": "Seismic",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://www.seismic.com/careers/job-listings/"
+   ],
+   "job_link": "/careers/job\\-detail/\\?jid=\\d+\\&amp;pid=\\d+",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "job-list pass (custom careers pages)"
+  },
+  {
+   "name": "dunnhumby",
+   "ats": "greenhouse",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "job-list pass (custom careers pages)",
+   "slug": "dunnhumby"
+  },
+  {
+   "name": "Xplor Technologies",
+   "ats": "smartrecruiters",
+   "slug": "Xplor",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "job-list pass (custom careers pages)"
+  },
+  {
+   "name": "Magellan",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://magellan-ai.breezy.hr/"
+   ],
+   "job_link": "/p/[^/\\\"'?#]+",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "job-list pass (custom careers pages)"
+  },
+  {
+   "name": "Deutsche Bahn",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://db.jobs/de-de?utm_source=deutschebahn.com&utm_content=header"
+   ],
+   "job_link": "/en\\-en/job/[^/\\\"'?#]+",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "job-list pass (custom careers pages)"
+  },
+  {
+   "name": "Gather AI",
+   "ats": "greenhouse",
+   "slug": "gatherai",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "job-list pass (custom careers pages)"
+  },
+  {
+   "name": "vCommission",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://recruit.vcommission.com/jobs/careers/"
+   ],
+   "job_link": "/jobs/careers/[^/\\\"'?#]+/[^/\\\"'?#]+\\?source=CareerSite",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "job-list pass (custom careers pages)"
+  },
+  {
+   "name": "Playlist",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://www.playlist.com/careers"
+   ],
+   "job_link": "/careers/opportunities\\?team\\[\\]=\\d+",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "job-list pass (custom careers pages)"
+  },
+  {
+   "name": "Beghou",
+   "ats": "lever",
+   "slug": "beghouconsulting",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "job-list pass (custom careers pages)"
+  },
+  {
+   "name": "Cognite",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://job-boards.eu.greenhouse.io/cognite"
+   ],
+   "job_link": "/cognite/jobs/[^/\\\"'?#]+",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "job-list pass (custom careers pages)"
+  },
+  {
+   "name": "Cin7",
+   "ats": "lever",
+   "slug": "cin7",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "job-list pass (custom careers pages)"
+  },
+  {
+   "name": "Logile, Inc.",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://www.logile.com/careers"
+   ],
+   "job_link": "/logile/jobs/[^/\\\"'?#]+",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "job-list pass (custom careers pages)"
+  },
+  {
+   "name": "Loylogic",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://www.loylogic.com/careers"
+   ],
+   "job_link": "/jobs/[^/\\\"'?#]+",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "job-list pass (custom careers pages)"
+  },
+  {
+   "name": "Foxit",
+   "ats": "lever",
+   "slug": "foxitsoftware",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "job-list pass (custom careers pages)"
+  },
+  {
+   "name": "Smith Detection",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://www.smithsdetection.com/careers/job-search-results/"
+   ],
+   "job_link": "/careers/job\\-search\\-results/[^/\\\"'?#]+/",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "job-list pass (custom careers pages)"
+  },
+  {
    "name": "Amazon",
    "ats": "amazon",
    "type": "Global product MNC (public)",

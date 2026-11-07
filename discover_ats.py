@@ -160,8 +160,10 @@ ATS_LINKS = [
     ("freshteam", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.freshteam\.com"),
     ("zohorecruit", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.zohorecruit\.(?:in|com)"),
     ("turbohire", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.turbohire\.co"),
+    ("mynexthire", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.mynexthire\.com"),
     ("workable", r"(?:apply|jobs)\.workable\.com/(?!api\b|company\b)([a-z0-9_-]{1,100})"),
     ("rippling", r"ats\.rippling\.com/([a-z0-9_-]{1,100})"),
+    ("rippling", r"id=\"rr-job-board\"\s+data-job-board-id=\"([a-z0-9_-]{1,100})\""),  # Rippling's embedded job board (Daloopa)
     ("oracle", r"(?<![a-z0-9.-])([a-z0-9][a-z0-9-]{0,62}\.fa(?:\.[a-z0-9]+)?\.oraclecloud\.com)/hcmUI/CandidateExperience/[a-z]{2}/sites/([A-Za-z0-9_]{1,100})"),
     ("eightfold", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.eightfold\.ai"),
     ("successfactors", r"career\d*\.successfactors\.(?:com|eu)/career\?company=([A-Za-z0-9_]{1,100})"),

@@ -192,16 +192,14 @@
   "by": "scripted probe"
  },
  "Box": {
-  "status": "nothing_to_read",
-  "reason": "apply by email only",
-  "checked": "2026-11-07",
-  "by": "scripted probe"
+  "status": "pending",
+  "by": "checked by hand",
+  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
  },
  "Electronic Arts": {
-  "status": "nothing_to_read",
-  "reason": "apply by email only",
-  "checked": "2026-11-07",
-  "by": "scripted probe"
+  "status": "pending",
+  "by": "checked by hand",
+  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
  },
  "Warner Bros. Discovery": {
   "status": "blocked",
@@ -979,9 +977,8 @@
  },
  "Fidelity Investments": {
   "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "by": "checked by hand",
+  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
  },
  "Finarkein Analytics": {
   "status": "pending",
@@ -2134,5 +2131,20 @@
   "reason": "Darwinbox candidate API errors (500)",
   "checked": "2026-11-07",
   "by": "checked by hand"
+ },
+ "Liebherr": {
+  "status": "pending",
+  "by": "checked by hand",
+  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
+ },
+ "Flight Centre Travel Group": {
+  "status": "pending",
+  "by": "checked by hand",
+  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
+ },
+ "Macquarie Group": {
+  "status": "pending",
+  "by": "checked by hand",
+  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
  }
 }

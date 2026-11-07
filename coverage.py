@@ -8,7 +8,7 @@ row per company (status, detail, reason) and prints the summary.
 
 Statuses:
   A  have a source: A1 fitting roles on the shortlist · A2 fitting roles, pay unverified (leads) ·
-     A3 India software openings, none fit (years / seniority / pay) · A4 no India software openings today ·
+     A3 software openings at your level by title, none fit (years / pay) · A4 none at your level today ·
      A5 source failing on the last crawl · A6 not crawled yet
   B  not pursued (pay below the bar, services / staffing, your employer)
   C  checked, nothing to read (email-only, LinkedIn-only, forms, referral-only, 0 openings, no India roles)
@@ -51,13 +51,16 @@ def main():
             return direct[k]
         return next((c for d, c in direct.items() if crawl.same_or_alias(k, d)), None)
 
-    rows = []
+    rows, seen_src = [], set()
     for b in bank:
         n = b["company"]
         if "<" in n:
             continue  # parser debris from an old LinkedIn crawl (fixed)
         src, note = source_of(n), notes.get(n, {})
         if src:
+            if src["name"] in seen_src:
+                continue  # another bank name for the same company (Mastercard / Mastercard Incorporated): count it once
+            seen_src.add(src["name"])
             raw = crawl.raw_path(src["name"])
             d = json.loads(raw.read_text()) if raw.exists() else None
             names = {n, src["name"]}
@@ -70,10 +73,10 @@ def main():
                 st, detail = "A1", f"{s} shortlisted"
             elif l:
                 st, detail = "A2", f"{l} leads (pay not yet evidenced)"
-            elif r or d["jobs"]:
-                st, detail = "A3", f"{len(d['jobs'])} India software openings read, none fit"
+            elif r or (sw := sum(1 for j in d["jobs"] if crawl.title_ok(j.get("title", "")) and crawl.in_india(j.get("location") or ""))):
+                st, detail = "A3", f"{r or sw} India software openings at your level by title, none fit (years / pay)"
             else:
-                st, detail = "A4", "source works; no India software openings today"
+                st, detail = "A4", f"source works; no India software openings at your level today ({len(d['jobs'])} other roles read)"
             rows.append({"company": n, "status": st, "detail": detail, "source": f"{src['ats']}:{src.get('portal') or src.get('slug') or src.get('host') or src.get('tenant', '')}"})
             continue
         t = tiers.get(n, {})
@@ -111,8 +114,8 @@ def main():
         w.writeheader()
         w.writerows(sorted(rows, key=lambda r: (r["status"], r["company"].lower())))
     c = collections.Counter(r["status"] for r in rows)
-    labels = {"A1": "fitting roles on the shortlist", "A2": "fitting roles, pay unverified (leads)", "A3": "India software openings, none fit",
-              "A4": "no India software openings today", "A5": "source failing on last crawl", "A6": "not crawled yet",
+    labels = {"A1": "fitting roles on the shortlist", "A2": "fitting roles, pay unverified (leads)", "A3": "openings at your level, none fit (years/pay)",
+              "A4": "no openings at your level today", "A5": "source failing on last crawl", "A6": "not crawled yet",
               "B": "not pursued (pay below / excluded)", "C": "checked, nothing to read", "D": "blocked",
               "F-retryable": "website unreachable, retryable", "F-dead": "website dead / wrong / no domain",
               "E1": "careers page found, no source yet", "E2": "searched by hand, not readable yet",

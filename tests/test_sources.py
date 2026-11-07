@@ -303,6 +303,34 @@ check("domains merely ending in 'x.com' are not mistaken for x.com (netflix.com,
       not any(fc.not_own(u) for u in ("https://jobs.netflix.com/", "https://www.dropbox.com/", "https://www.nutanix.com/", "https://careers.equinix.com/")))
 check("a company's own domain on an aggregator list is its own site (careers.linkedin.com for LinkedIn)",
       not fc.not_own("https://careers.linkedin.com/", "LinkedIn") and fc.not_own("https://www.linkedin.com/company/acme/jobs", "Acme"))
+check("boards_in: MyNextHire iframe boards and Rippling's embedded job board are detected",
+      ("mynexthire", "amagi") in da.boards_in('<iframe src="https://amagi.mynexthire.com/employer/jobs/careers#?src=careers">')
+      and ("rippling", "daloopa") in da.boards_in('<div id="rr-job-board" data-job-board-id="daloopa"></div>'))
+
+# MyNextHire: board feed -> Job, with the board's own experience range carried into the text for the years parser
+import base64
+from types import SimpleNamespace
+from portals import mynexthire as mnh
+
+
+class _Resp:
+    def __init__(self, data): self.data = data
+    def raise_for_status(self): pass
+    def json(self): return self.data
+
+
+feed = {"reqDetailsBOList": [
+    {"reqId": 459, "reqTitle": "Software Development Engineer II", "expMin": 2.0, "expMax": 5.0, "location": "Bangalore",
+     "locationList": [{"office": "Bangalore"}], "jdDisplay": "Build playout services.", "approvedOn": "2026-10-23T05:04:12.345+0000"},
+    {"reqId": 460, "reqTitle": "Head of Global Growth Marketing", "expMin": 10.0, "expMax": 15.0, "locationList": [{"office": "Bangalore"}]},
+    {"reqId": 461, "reqTitle": "Software Engineer II", "expMin": 2.0, "expMax": 4.0, "locationList": [{"office": "United Kingdom"}]}]}
+h = SimpleNamespace(**{k: getattr(crawl, k) for k in ("Job", "title_ok", "in_india", "parse_ts")},
+                    SESSION=SimpleNamespace(post=lambda url, json, timeout: _Resp(feed)))
+jobs = list(mnh.fetch({"name": "Amagi", "slug": "amagi", "jd_page": "https://www.amagi.com/job-description"}, h))
+check("MyNextHire: only India roles with fitting titles", [j.title for j in jobs] == ["Software Development Engineer II"], [j.title for j in jobs])
+check("MyNextHire: experience range carried into the text", jobs and jobs[0].text.startswith("Experience: 2-5 years"))
+p = jobs[0].url.split("p%3D")[1] if jobs else ""
+check("MyNextHire: job link is the company's JD page with the board's encoded request", '"reqId":459' in base64.b64decode(p).decode() if p else False, jobs and jobs[0].url)
 
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)

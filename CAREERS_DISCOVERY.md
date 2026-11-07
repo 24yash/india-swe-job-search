@@ -333,6 +333,46 @@ Hand-checked findings recorded in the notes:
 - Netflix's India roles are content and business only.
 - GreyOrange and Snapmint use Zwayam, whose feed isn't cracked yet.
 
+## Round four: a random-sample audit, MyNextHire, and a board-name sweep (8 Nov 2026)
+
+### Sample audit (30 companies)
+Six companies were drawn at random from each of five groups (global big tech, banks and finance, global startups and
+SaaS, Indian companies, Indian startups), weighted towards companies that post a lot in India, and each was checked by hand.
+
+- **28 of 30 were handled correctly.** One random shortlisted role from each of 14 companies (Amazon, Microsoft,
+  Atlassian, JPMorgan, Goldman, Mastercard, KLA, CrowdStrike, Tekion, Saviynt, Juspay, InMobi, QuantBox, Franklin
+  Templeton) was opened: all 14 are live. Two "closed?" flags were false alarms (a hidden status list on Microsoft's page, a
+  template card on every Phenom page). Paytm (201 roles), Meesho (53), Druva, Tekion and Atlassian really have only
+  Senior / Lead / SDE III or 4+ year openings. Truemeds is still blocked; Airmeet hires through Typeform.
+- **Two misses, both fixed:** Amagi runs **MyNextHire** in an iframe (3 fitting roles: SDE II, SDE II C++, Platform
+  Engineer II); Daloopa embeds **Rippling's job board** (`<div id="rr-job-board" data-job-board-id="…">`), which the
+  detector didn't know.
+- **Report fixes:** the A3 count included every role read (sales, finance), so it now counts only India roles with a
+  fitting title; companies listed twice under alias names (Mastercard / Mastercard Incorporated, four JPMorgans) are
+  counted once (1,353 → 1,323 companies).
+- BookMyShow's careers page loads again, but its job feed sits behind a Cloudflare challenge: still blocked.
+
+### Built
+- `portals/mynexthire.py`: POST `/employer/careers/reqlist/get` on `<slug>.mynexthire.com` (the board's own call)
+  returns every requisition with title, location, min/max experience and description. Used for Amagi, Licious, Yulu,
+  Angel One. Optional `jd_page` builds the company's own job link.
+- Detector patterns for MyNextHire boards and Rippling's embedded board; `find_careers.more_sources` now guesses
+  MyNextHire slugs.
+- **Board-name sweep:** for every pending company, guess slugs (domain label + name variants) on six platforms with
+  open feeds (MyNextHire, Keka, Darwinbox, Freshteam, Workable, Recruitee). 82 of 483 companies answered; every hit was
+  run through the real reader and checked by hand. Rejected: Workable answers for almost any name; "talent", "global",
+  "meta" belonged to other companies; empty Darwinbox tenants (PayU, OYO, Ola, Games24x7, Gupshup) look abandoned
+  rather than proof of no openings, so they stay pending. **25 boards added** (Haptik, Angel One, Decentro, Falcon,
+  MyGlamm, TripJack, Zetwerk, Curefit, MaxIQ, Kotak Securities, Zolve, Unicommerce…).
+- **Job-list pass** (custom careers pages): 30 lists; 17 added, mostly Lever/Greenhouse/SmartRecruiters boards hiding
+  behind custom pages (Beghou, Cin7, Foxit, Cognite, Seismic, dunnhumby). Fidelity, Box, EA, Macquarie, Liebherr and
+  Flight Centre were left pending: their pages show only the first page of jobs and would have looked like "no openings".
+
+### Results
+- **+33 fitting roles** from the new sources, all on the dashboard as leads (pay not yet checked): Amagi, Angel One
+  (3 × SDE 2), TripJack (SDE 1 Java), Haptik, Decentro, Curefit, Zetwerk, MyGlamm, MaxIQ, Cin7, Foxit, Gather AI, Seismic…
+- Coverage: A 600 (A1 94, A2 112, A3 59, A4 333), pending E 490 → 456 (E1 366 → 339).
+
 ## Where we still can't get data
 
 **819 bank companies** still have no direct source after both rounds (931 after round one). Their roles still reach the dashboard through LinkedIn's public search.
@@ -348,7 +388,7 @@ Hand-checked findings recorded in the notes:
 | TurboHire (feed needs a session token) | 8 | **Navi**, Flipkart, Cleartrip, Ola Electric, Purplle, Khatabook |
 | Eightfold tenants that refuse scripts or weren't found | 5 | **Millennium (403)**, NAB |
 | Phenom / Avature without a usable sitemap | 9 | Franklin Templeton (corporate site), Bloomberg, MetLife, Ansys |
-| RippleHire, MyNextHire, Workable and others | 1–5 each | HDFC Bank, Axis Bank, Licious, Amagi, **Trexquant, Innovaccer** |
+| RippleHire and others | 1–5 each | HDFC Bank, Axis Bank (MyNextHire and Workable now have readers) |
 
 Some rows include aliases of companies already covered (e.g. AWS under "not reachable"); those are covered through the parent company's board.
 

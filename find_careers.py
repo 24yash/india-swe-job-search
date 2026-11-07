@@ -365,6 +365,24 @@ def _domain(url):
     return re.sub(r"^(www|careers|jobs|career)\.", "", host)
 
 
+def mynexthire_slug(entry, known=()):
+    """MyNextHire board for a company: known slugs first, then guesses from its domain and name. The board's own
+    list call (POST reqlist/get) answers JSON only for a real board."""
+    from portals.mynexthire import BODY
+    guesses = list(known) + [_domain(entry.get("site") or entry.get("careers")).split(".")[0]] + da.slug_variants(entry["company"])[:3]
+    for slug in dict.fromkeys(g for g in guesses if g):
+        try:
+            r = S.post(f"https://{slug}.mynexthire.com/employer/careers/reqlist/get", json=BODY, timeout=20)
+            reqs = r.json().get("reqDetailsBOList") if r.ok and r.text.startswith("{") else None
+        except (requests.RequestException, ValueError):
+            continue
+        if reqs is not None:
+            india = sum(1 for j in reqs if re.search(r"india|bangalore|bengaluru|hyderabad|pune|mumbai|gurgaon|gurugram|noida|chennai|delhi",
+                                                     json.dumps(j.get("locationList") or j.get("location") or ""), re.I))
+            return {"ats": "portal", "portal": "mynexthire", "slug": slug, "india": india, "how": "mynexthire board"}
+    return None
+
+
 def more_sources(entry):
     """Candidate readers for one company: [{"ats": ..., config..., "india": count or None, "how": ...}]."""
     import crawl
@@ -418,6 +436,11 @@ def more_sources(entry):
             if n:
                 out.append({"ats": "portal", "portal": "kula", "slug": slug, "india": n, "how": "kula page"})
                 break
+    mnh = [s for a, s in boards if a == "mynexthire"]
+    if mnh or "mynexthire" in (entry.get("platforms") or []):
+        found = mynexthire_slug(entry, mnh)
+        if found:
+            out.append(found)
     if out:
         return out
     dom = _domain(entry.get("site") or entry.get("careers"))
@@ -599,6 +622,8 @@ def source_from_urls(name, urls):
                 out.append({"ats": "portal", "portal": "workable", "slug": slug, "how": "workable link"})
             elif ats == "freshteam":
                 out.append({"ats": "portal", "portal": "freshteam", "slug": slug, "how": "freshteam link"})
+            elif ats == "mynexthire":
+                out.append({"ats": "portal", "portal": "mynexthire", "slug": slug, "how": "mynexthire link"})
             elif ats == "zohorecruit":
                 out.append({"ats": "portal", "portal": "zohorecruit", "slug": slug, "tld": "com", "how": "zoho link"})
             elif ats == "darwinbox":
@@ -647,4 +672,4 @@ def _ref_url(ats, slug):
     return {"greenhouse": "https://boards.greenhouse.io/{}", "lever": "https://jobs.lever.co/{}", "ashby": "https://jobs.ashbyhq.com/{}",
             "smartrecruiters": "https://jobs.smartrecruiters.com/{}", "recruitee": "https://{}.recruitee.com", "rippling": "https://ats.rippling.com/{}",
             "keka": "https://{}.keka.com", "kula": "https://careers.kula.ai/{}", "workable": "https://apply.workable.com/{}",
-            "freshteam": "https://{}.freshteam.com", "jazzhr": "https://{}.applytojob.com/apply", "teamtailor": "https://{}.teamtailor.com/jobs", "zohorecruit": "https://{}.zohorecruit.com", "darwinbox": "https://{}.darwinbox.in"}.get(ats, "https://{}").format(slug if isinstance(slug, str) else "")
+            "freshteam": "https://{}.freshteam.com", "mynexthire": "https://{}.mynexthire.com", "jazzhr": "https://{}.applytojob.com/apply", "teamtailor": "https://{}.teamtailor.com/jobs", "zohorecruit": "https://{}.zohorecruit.com", "darwinbox": "https://{}.darwinbox.in"}.get(ats, "https://{}").format(slug if isinstance(slug, str) else "")
