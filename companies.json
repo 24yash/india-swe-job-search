@@ -354,8 +354,8 @@
    "slug": "highradius",
    "type": "Late-stage fintech SaaS",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Entry bands often below bar"
+   "pay": "below",
+   "pay_note": "India Associate SE1 7.2, SE1 9.8 LPA; median 9.3 (levels.fyi, Nov 2026)"
   },
   {
    "name": "Agoda",
@@ -911,7 +911,7 @@
    "type": "Work-management SaaS",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "Levels.fyi India overall 25.2 LPA — borderline (overall medians lean senior)"
+   "pay_note": "India SE median 25.0 LPA, level labels unreliable: borderline (levels.fyi, Nov 2026)"
   },
   {
    "name": "Truveta",
@@ -955,8 +955,9 @@
    "slug": "sophos",
    "type": "Security product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "India SE1 15.6 (below), SE2 22.4 LPA; median 45.2 (levels.fyi, Nov 2026)",
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate"
   },
   {
    "name": "NK Securities Research",
@@ -1522,7 +1523,7 @@
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "India SE median 23.8 LPA, no level split: borderline (levels.fyi, Nov 2026)"
   },
   {
    "name": "KredX",
@@ -1638,8 +1639,8 @@
    "slug": "socure",
    "type": "Accel-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "India SE median TC 38.4 LPA (levels.fyi, Nov 2026)"
   },
   {
    "name": "Entropik",
@@ -1885,9 +1886,10 @@
    "site": "External_Careers",
    "type": "EDA software MNC",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "Software roles vary",
-   "found_by": "find_careers.py"
+   "pay": "likely",
+   "pay_note": "India SE I 16.6 (below), SE II 21.2 LPA; median 33.9 (levels.fyi, Nov 2026)",
+   "found_by": "find_careers.py",
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate"
   },
   {
    "name": "Honeywell",
@@ -1907,8 +1909,8 @@
    "host": "hdjq.fa.us2.oraclecloud.com",
    "type": "Industrial technology MNC (owns National Instruments)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Board found via National Instruments' careers page",
+   "pay": "below",
+   "pay_note": "India SE median TC 12.2 LPA (levels.fyi, Nov 2026)",
    "found_by": "find_careers.py"
   },
   {
@@ -1928,8 +1930,8 @@
    "host": "eofe.fa.us2.oraclecloud.com",
    "type": "Global bank tech centre",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary",
+   "pay": "likely",
+   "pay_note": "India level E 19.9, F 21.7 LPA; median 21.1 (levels.fyi, Nov 2026)",
    "found_by": "find_careers.py"
   },
   {
@@ -1986,9 +1988,10 @@
    "slug": "sigmoid",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
-   "found_by": "find_careers.py"
+   "pay": "likely",
+   "pay_note": "India SE1 14.6 (below), SE2 23.4 LPA; median 22.8 (levels.fyi, Nov 2026)",
+   "found_by": "find_careers.py",
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate"
   },
   {
    "name": "Thomson Reuters",
@@ -2185,7 +2188,7 @@
    "type": "Security SaaS (Pune)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Levels.fyi India overall 24.3 LPA — borderline",
+   "pay_note": "India SE median 24.1 LPA, no level split: borderline (levels.fyi, Nov 2026)",
    "found_by": "find_careers.py"
   },
   {
@@ -2340,8 +2343,8 @@
    "slug": "eurofins",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "India SE median TC 13.0 LPA (levels.fyi, Nov 2026)",
    "found_by": "find_careers.py"
   },
   {
@@ -2959,7 +2962,7 @@
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "India L1 17.2, L2 28.6 LPA: depends on level (levels.fyi, Nov 2026)",
    "found_by": "find_careers.py --more"
   },
   {
@@ -2981,8 +2984,8 @@
    "slug": "cashfree",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "India SDE1 25.4, SDE2 30.0 LPA (levels.fyi, Nov 2026)",
    "found_by": "find_careers.py --more"
   },
   {

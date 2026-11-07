@@ -783,7 +783,7 @@
    "type": "Infra product MNC",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "India entry 14.9, intermediate 24.6 LPA: depends on level (levels.fyi, Nov 2026)"
   },
   {
    "name": "HP",
@@ -840,8 +840,9 @@
    "name": "Cadence Design Systems",
    "type": "EDA software MNC",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "Software roles vary"
+   "pay": "likely",
+   "pay_note": "India SE I 16.6 (below), SE II 21.2 LPA; median 33.9 (levels.fyi, Nov 2026)",
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate"
   },
   {
    "name": "Arm",
@@ -1051,8 +1052,9 @@
    "name": "Sophos",
    "type": "Security product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "India SE1 15.6 (below), SE2 22.4 LPA; median 45.2 (levels.fyi, Nov 2026)",
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate"
   },
   {
    "name": "Akamai",
@@ -1127,7 +1129,7 @@
    "type": "Security SaaS (Pune)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Levels.fyi India overall 24.3 LPA — borderline"
+   "pay_note": "India SE median 24.1 LPA, no level split: borderline (levels.fyi, Nov 2026)"
   },
   {
    "name": "Tekion",
@@ -1269,8 +1271,8 @@
    "name": "BNY",
    "type": "Global bank tech centre",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "India level E 19.9, F 21.7 LPA; median 21.1 (levels.fyi, Nov 2026)"
   },
   {
    "name": "BNY Mellon",
@@ -1369,8 +1371,8 @@
    "name": "FIS",
    "type": "Fintech infra",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Bands often below bar"
+   "pay": "below",
+   "pay_note": "India SE1 9.6, SE2 16.7 LPA; median 15.6 (levels.fyi, Nov 2026)"
   },
   {
    "name": "Fiserv",
@@ -2285,8 +2287,8 @@
    "name": "HighRadius",
    "type": "Fintech SaaS",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Entry bands often below bar"
+   "pay": "below",
+   "pay_note": "India Associate SE1 7.2, SE1 9.8 LPA; median 9.3 (levels.fyi, Nov 2026)"
   },
   {
    "name": "CleverTap",
@@ -2796,7 +2798,7 @@
    "type": "Work-management SaaS",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "Levels.fyi India overall 25.2 LPA — borderline (overall medians lean senior)"
+   "pay_note": "India SE median 25.0 LPA, level labels unreliable: borderline (levels.fyi, Nov 2026)"
   },
   {
    "name": "Clearwater Analytics",
@@ -3589,7 +3591,7 @@
    "type": "Indian product",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "Levels.fyi India overall 29.5 LPA — borderline"
+   "pay_note": "India SE median 29.3 LPA, no level split: borderline (levels.fyi, Nov 2026)"
   },
   {
    "name": "Pixis",
@@ -4354,7 +4356,7 @@
    "type": "Accounting SaaS",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Levels.fyi India overall 27.5 LPA, no level split — borderline"
+   "pay_note": "India SE median 27.3 LPA, no level split: borderline (levels.fyi, Nov 2026)"
   },
   {
    "name": "MetLife",
@@ -4816,7 +4818,7 @@
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "India L1 17.2, L2 28.6 LPA: depends on level (levels.fyi, Nov 2026)",
    "careers_url": "https://careers.bcg.com/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -5022,8 +5024,8 @@
    "name": "Cashfree",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "India SDE1 25.4, SDE2 30.0 LPA (levels.fyi, Nov 2026)",
    "careers_url": "https://www.cashfree.com/careers",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -5409,8 +5411,8 @@
    "name": "Eurofins",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "India SE median TC 13.0 LPA (levels.fyi, Nov 2026)",
    "careers_url": "https://careers.eurofins.com/in/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -6444,10 +6446,11 @@
    "name": "Sigmoid",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "India SE1 14.6 (below), SE2 23.4 LPA; median 22.8 (levels.fyi, Nov 2026)",
    "careers_url": "https://www.sigmoid.com/careers/",
-   "source": "moreThanFAANGM (product companies list)"
+   "source": "moreThanFAANGM (product companies list)",
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate"
   },
   {
    "name": "SkillVertex",
@@ -7704,8 +7707,8 @@
    "name": "Socure",
    "type": "Accel-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "India SE median TC 38.4 LPA (levels.fyi, Nov 2026)",
    "careers_url": "https://socure.com",
    "source": "Accel-backed startup (ISJB)"
   },
@@ -9621,6 +9624,84 @@
    "quality": 12,
    "pay": "likely",
    "pay_note": "Tier judgement: Indian HFT firms report entry pay far above 20 LPA (Business Today, Sep 2025); no reliable per-level data"
+  },
+  {
+   "name": "Applied Materials India",
+   "type": "Semiconductor equipment MNC",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "India SE I 14.3 (below), SE II 25.6 LPA; median 24.9 (levels.fyi, Nov 2026)",
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate"
+  },
+  {
+   "name": "Guidewire Software",
+   "type": "Insurance software product",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "India Software Engineer 22.2 LPA; median 26.2 (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Safe Security",
+   "type": "Cyber-risk SaaS",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "India SE median TC 31.5 LPA (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Emerson",
+   "type": "Industrial technology MNC (owns National Instruments)",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "India SE median TC 12.2 LPA (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "NCR Voyix",
+   "type": "Retail/restaurant tech",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "India (NCR) Grade 9 12.3, Grade 10 18.2 LPA; median 16.5 (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "UPS",
+   "type": "Logistics tech centre",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "India L1 8.7 LPA at entry; median 32.3 leans senior (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Wolters Kluwer",
+   "type": "Information services",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "India T1 8.3, T2 16.0 LPA; median 12.8 (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "GE Vernova",
+   "type": "Energy tech",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "India SE median 21.2 LPA, no level split: borderline (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "DHL",
+   "type": "Logistics tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "India SE median 22.9 LPA, no level split: borderline (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "LogicMonitor",
+   "type": "Observability SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "India SE median 23.8 LPA, no level split: borderline (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Flexera",
+   "type": "IT asset SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "India SE median 26.8 LPA, no level split: borderline (levels.fyi, Nov 2026)"
   }
  ],
  "services_and_staffing": [
@@ -9766,7 +9847,13 @@
   "CADOpt",
   "Tech Data",
   "InstantDM",
-  "BHIVE"
+  "BHIVE",
+  "HTC Global Services",
+  "Kumaran Systems",
+  "Kanerika",
+  "NonStop io Technologies",
+  "HYrEzy Tech Solutions",
+  "Searchjob.ai"
  ],
  "staffing_keywords": [
   "Recruitment",

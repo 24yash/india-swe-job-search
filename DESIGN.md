@@ -100,7 +100,7 @@ Supporting tools: `discover_ats.py` (find direct boards), `find_careers.py` (fin
 
 ## Improvement backlog
 
-1. Pay-check the leads in bulk (an agent loop over levels.fyi, recorded in `tiers.json`), starting with the companies that have the most leads, including the boards discovery added (Citi, Cadence, Emerson, Qualys, BNY…).
+1. Pay-check the remaining single-lead companies on levels.fyi, recorded in `tiers.json`. Every company with two or more leads was checked on 7 Nov; see `CAREERS_DISCOVERY.md`.
 2. More platform readers where discovery finds many companies (counts in `CAREERS_DISCOVERY.md`, "Where we still can't get data"): iCIMS, Phenom, Avature, SuccessFactors; and Keka, Zoho Recruit, TurboHire, MyNextHire, Kula if their feeds are public (Darwinbox is not).
 3. An importer for result pages the user saves from Naukri, Instahyre or Hirist.
 4. Use posted salary ranges more (Ashby and some Greenhouse boards publish INR ranges).

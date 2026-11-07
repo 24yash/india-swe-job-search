@@ -210,6 +210,30 @@ After round one, 931 companies still had no direct source. We sampled 47 of them
 
 New sweet-spot roles include DocuSign "Software Engineer", WEX "SDE 1" (two openings), American Express "Software Engineer II" and Acko "SDE-1". Some LinkedIn copies (DocuSign, AmEx) now match their company's own posting and are deduplicated.
 
+### Pay checks for the leads (7 Nov 2026)
+
+Leads are roles with no salary evidence for their company. We checked levels.fyi India software-engineer pay for every lead company with two or more leads, and for the notable single-lead product companies: about 40 companies. Each result is recorded in `tiers.json` with its figures.
+
+| Result | Companies |
+|---|---|
+| **Above the ₹20 LPA bar** (now shortlisted) | Guidewire (SE ₹22.2L), Cashfree (SDE1 ₹25.4L), BNY (E ₹19.9L / F ₹21.7L), Safe Security (median ₹31.5L), Socure (median ₹38.4L) |
+| **Above the bar except entry level** (`below_title` drops "Engineer I"/"Associate" titles) | Cadence (SE I ₹16.6L, SE II ₹21.2L), Applied Materials (SE I ₹14.3L, SE II ₹25.6L), Sigmoid (SE1 ₹14.6L, SE2 ₹23.4L), Sophos (SE1 ₹15.6L, SE2 ₹22.4L) |
+| **Below the bar** (now rejected, with the reason) | Emerson (₹12.2L), Eurofins (₹13.0L), NCR Voyix (Grade 10 ₹18.2L), HighRadius (₹9.3L), UPS (L1 ₹8.7L), Wolters Kluwer (T2 ₹16.0L), FIS (SE2 ₹16.7L) |
+| **Borderline or level-dependent** (stay leads) | HPE, BCG, Qualys, Amagi, Smartsheet, GE Vernova, DHL, Sage, LogicMonitor, Flexera, Micron, Lam Research |
+| **No India data on levels.fyi** (stay leads) | Proofpoint, PAR Technology, QuinStreet, Nationwide, Fampay, Spreetail, Truveta, isolved, Moneyview |
+
+Six lead companies turned out to be IT-services, staffing or job-board firms, which the brief excludes. They were added to `services_and_staffing`: HTC Global Services, Kumaran Systems, Kanerika, NonStop io, HYrEzy, Searchjob.ai.
+
+**Result:**
+- Shortlist 356 → **375**; sweet-spot roles 94 → **104**; leads 293 → **242**.
+- New fits include Safe Security SDE I (×3, 0–1 yrs), Guidewire "Software Engineer II (Java, backend)", Cadence SE II, Socure SE II, Cashfree SDE 2 and BNY.
+
+The 242 remaining leads:
+- 138 are from small companies seen only on LinkedIn, mostly one role each;
+- 37 are borderline or level-dependent after checking;
+- 25 have no levels.fyi India data;
+- 42 are single-lead bank companies not yet checked.
+
 ### Round-two audit
 
 One top role per new company, 20 companies. Each was opened in headless Chrome, or fetched directly where robots.txt disallows automated page loads.
@@ -301,7 +325,7 @@ Some rows include aliases of companies already covered (e.g. AWS under "not reac
 **E. Run the second pass.** After a discovery run, `python3 find_careers.py --more` finds Keka/Zoho/Kula pages, Eightfold tenants, Jibe feeds and JobPosting sitemaps. Review `output/discovered-more.json`, drop job portals and aliases, and add the rest.
 
 **Next candidates, by expected payoff:**
-1. **Pay checks for the remaining leads** on levels.fyi, recorded in `tiers.json`: Cadence, Emerson, Qualys, BNY, Northern Trust, BCG, Cigna, Renesas, Franklin Templeton, plus the Keka/Zoho/Kula startups. They move to the shortlist once pay is evidenced.
+1. **Pay checks for the single-lead companies** still unchecked (42 in the bank, 138 seen only on LinkedIn). Companies with two or more leads were all checked on 7 Nov.
 2. **Small readers for the biggest custom sites still LinkedIn-only:** Zerodha, Media.net, Dream11, Upstox and the trading firms (Two Sigma, DRW, AlphaGrep, iRage). Check each in the browser's network panel first.
 3. **Record `site` for good payers whose website wasn't reachable** (Meta, Netflix, Bloomberg…) and re-run with `--only`. Some will stay blocked, and that's fine.
 
