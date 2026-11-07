@@ -85,7 +85,7 @@ def probe_workday(tenant):
 
 # Platforms crawl.py can read. Discovery also probes Workable and Recruitee so they show up, but their
 # boards can't be added to companies.json until crawl.py has a fetcher for them.
-CRAWLED = {"greenhouse", "lever", "ashby", "smartrecruiters"}
+CRAWLED = {"greenhouse", "lever", "ashby", "smartrecruiters", "recruitee"}
 
 SUFFIX = r"\b(pvt|private|ltd|limited|inc|llc|corp|corporation|technologies|technology|tech|india|solutions|labs|software|group|global|the|ai|\.ai|hq)\b"
 
@@ -160,9 +160,9 @@ ATS_LINKS = [
     ("freshteam", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.freshteam\.com"),
     ("zohorecruit", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.zohorecruit\.(?:in|com)"),
     ("turbohire", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.turbohire\.co"),
-    ("workable", r"apply\.workable\.com/([a-z0-9_-]{1,100})"),
+    ("workable", r"(?:apply|jobs)\.workable\.com/(?!api\b|company\b)([a-z0-9_-]{1,100})"),
     ("rippling", r"ats\.rippling\.com/([a-z0-9_-]{1,100})"),
-    ("oracle", r"(?<![a-z0-9.])([a-z0-9]{1,63}\.fa(?:\.[a-z0-9]+)?\.oraclecloud\.com)/hcmUI/CandidateExperience/[a-z]{2}/sites/([A-Za-z0-9_]{1,100})"),
+    ("oracle", r"(?<![a-z0-9.-])([a-z0-9][a-z0-9-]{0,62}\.fa(?:\.[a-z0-9]+)?\.oraclecloud\.com)/hcmUI/CandidateExperience/[a-z]{2}/sites/([A-Za-z0-9_]{1,100})"),
     ("eightfold", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.eightfold\.ai"),
     ("successfactors", r"career\d*\.successfactors\.(?:com|eu)/career\?company=([A-Za-z0-9_]{1,100})"),
     ("bamboohr", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.bamboohr\.com"),
@@ -175,8 +175,9 @@ ATS_LINKS = [
     ("jobvite", r"jobs\.jobvite\.com/([a-z0-9_-]{1,100})"),
     ("phenom", r"(phenompeople\.com|phenom\.com/[a-z])"),
     ("kula", r"careers\.kula\.ai/([a-z0-9_-]{1,100})"),
+    ("jazzhr", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.applytojob\.com"),
     # Oracle behind a company's own domain: the page's scripts still name the real tenant
-    ("oracle", r"(?<![a-z0-9.])([a-z0-9]{1,63}\.fa(?:\.[a-z0-9]+)?\.oraclecloud\.com)/hcmRestApi/CandidateExperience/[a-z]{2}/(?:siteSettings|sites)/([A-Za-z0-9_]{1,100})"),
+    ("oracle", r"(?<![a-z0-9.-])([a-z0-9][a-z0-9-]{0,62}\.fa(?:\.[a-z0-9]+)?\.oraclecloud\.com)/hcmRestApi/CandidateExperience/[a-z]{2}/(?:siteSettings|sites)/([A-Za-z0-9_]{1,100})"),
 ]
 NOT_A_BOARD = {"embed", "jobs", "careers", "api", "www", "boards", "apply", "app", "static"}
 

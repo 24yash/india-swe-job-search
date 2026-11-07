@@ -21,7 +21,7 @@ crawl.py ── fast phase: boards, platform feeds, portals/, 16 at a time (~1 m
            jobs / leads / rejected / company-bank CSVs, report.py table, build_dashboard.py → dashboard.html
 ```
 
-Supporting tools: `discover_ats.py` (find direct boards), `find_careers.py` (find each company's careers site and the platform behind it; see `CAREERS_DISCOVERY.md`), `import_lists.py` (grow the bank from public lists), `refresh.sh` (fast phase, then LinkedIn in the background).
+Supporting tools: `discover_ats.py` (find direct boards), `coverage.py` (per-company coverage status), `find_careers.py` (find each company's careers site and the platform behind it; see `CAREERS_DISCOVERY.md`), `import_lists.py` (grow the bank from public lists), `refresh.sh` (fast phase, then LinkedIn in the background).
 
 ## Key decisions
 
@@ -33,6 +33,8 @@ Supporting tools: `discover_ats.py` (find direct boards), `find_careers.py` (fin
 | **Sitemaps + job-page JobPosting data as a generic reader** (`portals/sitemap.py`) | Phenom, iCIMS, Avature, SuccessFactors and many custom sites have no public list feed, but their sitemaps list every job and each job page carries schema.org JobPosting data (for Google for Jobs). One reader covers them all: URLs are filtered by wording before any page is fetched, robots.txt is honoured, and expired `validThrough` dates are dropped. The idea came from strata-harvest (MIT); its "stealth"/"impersonating" fetchers were deliberately not used. |
 | **Small readers for Indian ATS pages: Keka, Zoho Recruit, Kula; iCIMS Jibe feeds** | Each careers page loads a public feed or embeds its list. One reader per platform covers dozens of Indian startups that were LinkedIn-only. |
 | **Job portals are never taken as an employer's source** | Apna's and GoodSpace's sitemaps list other employers' jobs; reading them would mislabel roles. |
+| **Company domains from Clearbit's autocomplete, careers URLs from search** | Guessed domains picked other companies; Clearbit's keyless lookup (exact name match) is accurate. Search in the user's browser finds careers sites the scripts can't; scripted DuckDuckGo and LinkedIn company pages refuse automated use. |
+| **`coverage.py` keeps a per-company status** | Every bank company gets a status: source with/without fitting roles, nothing to read, blocked, dead/retryable, or pending, so gaps are measured instead of guessed. |
 | **Discovery renders careers pages in headless Chrome** | Plain HTML of modern careers pages rarely names the job platform (the list is built by JavaScript); rendering found boards the plain fetch missed. Bounded regexes keep huge pages fast. |
 | **LinkedIn public guest search as the second source** | Covers companies with no readable board (Flipkart, Meta, Netflix, Zepto…). In a measured run it supplied 6 of the top 10 roles. |
 | **Two speeds** (`--sources fast` vs `linkedin`) | LinkedIn must be slow (rate limits). Company boards give a usable dashboard in ~1 min, and LinkedIn fills in every ~40 postings. |

@@ -280,6 +280,21 @@ def amazon(c):
                 break
 
 
+def recruitee(c):
+    """Recruitee careers sites (<slug>.recruitee.com): the public offers feed the careers page uses."""
+    d = get(f"https://{c['slug']}.recruitee.com/api/offers/")
+    for o in d.get("offers") or []:
+        locs = [", ".join(x for x in (l.get("city"), l.get("state"), l.get("country")) if x) for l in o.get("locations") or []] \
+            or [", ".join(x for x in (o.get("city"), o.get("country")) if x)]
+        india = [l for l in locs if in_india(l) or "india" in l.lower()]
+        if not title_ok(o.get("title", "")) or not (india or (o.get("country_code") or "").upper() == "IN"):
+            continue
+        text = strip_html((o.get("description") or "") + "\n" + (o.get("requirements") or ""))
+        yield Job(c["name"], o["title"], " / ".join(india) or "India", o.get("careers_url") or f"https://{c['slug']}.recruitee.com/o/{o['slug']}",
+                  parse_ts(o.get("published_at") or o.get("created_at")), text, remote=bool(o.get("remote")),
+                  meta={"employmentType": o.get("employment_type_code") or ""})
+
+
 def eightfold(c):
     """Eightfold PCSX careers sites (Microsoft, Qualcomm, Autodesk…): the public search API behind the site."""
     host, domain = c["host"], c["domain"]
@@ -382,7 +397,7 @@ def li_get(url, **params):
 
 
 def linkedin_cards(params, max_results):
-    """One LinkedIn guest search, paged. Yields (job id, title, company, location, date) per card."""
+    """One LinkedIn guest search, paged. Yields (job id, title, company, location, date, company LinkedIn page) per card."""
     for start in range(0, max_results, 25):
         r = li_get(f"{LI_API}/seeMoreJobPostings/search", **params, start=start)
         if r.status_code != 200 or "base-card" not in r.text:
@@ -390,13 +405,15 @@ def linkedin_cards(params, max_results):
         for card in r.text.split("<li>")[1:]:
             jid = re.search(r"jobPosting:(\d+)", card)
             title = re.search(r'base-search-card__title">\s*(.*?)\s*</h3>', card, re.S)
-            sub = re.search(r'base-search-card__subtitle">(.*?)</h4>', card, re.S)  # company is usually a link, sometimes plain text
-            comp = re.search(r"\S.*\S|\S", re.sub(r"<[^>]+>", " ", sub.group(1))) if sub else None
+            sub = re.search(r'base-search-card__subtitle">(.{0,600}?)</h4>', card, re.S)  # company is usually a link, sometimes plain text
+            link = re.search(r'href="(https://[a-z]{2,3}\.linkedin\.com/company/[^"?]+)', sub.group(1)) if sub else None
+            name = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>|<!--.*?-->", " ", sub.group(1)))).strip() if sub else ""
+            comp = re.search(r"\S.*\S|\S", name) if name and "<" not in name and len(name) <= 120 else None  # never an HTML fragment
             loc = re.search(r'job-search-card__location">\s*(.*?)\s*</span>', card, re.S)
             date = re.search(r'datetime="([\d-]+)"', card)
             if jid and title and comp:
-                yield (jid.group(1), html.unescape(title.group(1)), html.unescape(re.sub(r"\s+", " ", comp.group(0))),
-                       loc.group(1) if loc else "India", date.group(1) if date else None)
+                yield (jid.group(1), html.unescape(title.group(1)), comp.group(0),
+                       loc.group(1) if loc else "India", date.group(1) if date else None, link.group(1) if link else "")
 
 
 def linkedin(c):
@@ -426,7 +443,7 @@ def linkedin(c):
             print(f"  LinkedIn {label}: {n}/{len(searches)} searches, {len(seen)} postings so far", file=sys.stderr, flush=True)
         if only:
             c["searched"].extend(only)
-        for jid, title, comp, loc, date in linkedin_cards(params, limit):
+        for jid, title, comp, loc, date, company_page in linkedin_cards(params, limit):
             nc = norm(comp)
             if jid in seen or (only and not any(nc.startswith(o) or o.startswith(nc) for o in only)):
                 continue
@@ -439,10 +456,10 @@ def linkedin(c):
                 i = d.text.find("show-more-less-html__markup") if d.ok else -1
                 LI_DETAILS[jid] = strip_html(d.text[i:i + 20000]) if i > 0 else ""
             yield Job(comp, title, loc, f"https://www.linkedin.com/jobs/view/{jid}/", parse_ts(date),
-                      LI_DETAILS[jid], remote="remote" in loc.lower(), meta={"source": "LinkedIn (aggregator)"})
+                      LI_DETAILS[jid], remote="remote" in loc.lower(), meta={"source": "LinkedIn (aggregator)", "company_page": company_page})
 
 
-FETCHERS = {f.__name__: f for f in (greenhouse, lever, ashby, smartrecruiters, workday, oracle, rippling, eightfold, portal, amazon, microsoft, atlassian, google, linkedin)}
+FETCHERS = {f.__name__: f for f in (greenhouse, lever, ashby, smartrecruiters, workday, oracle, rippling, eightfold, recruitee, portal, amazon, microsoft, atlassian, google, linkedin)}
 
 
 def title_key(title):
@@ -590,6 +607,8 @@ def fresh_score(posted):
 
 
 def evaluate(job, company, max_age):
+    if "<" in job.company or len(job.company) > 120:
+        return None, "malformed company name (parser)"
     if not title_ok(job.title):
         return None, "title/level"
     ok, mode = location_mode(job, company)

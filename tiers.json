@@ -118,7 +118,7 @@
    "quality": 12,
    "pay": "likely",
    "pay_note": "Eternal group; Levels.fyi (Zomato) SWE median TC 50.4 LPA, all levels",
-   "site": "blinkit.com"
+   "site": "jobs.blinkit.com"
   },
   {
    "name": "Zepto",
@@ -633,14 +633,16 @@
    "type": "Indian insurtech (listed)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "site": "policybazaar.com"
   },
   {
    "name": "Info Edge",
    "type": "Indian internet (listed)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "site": "infoedge.in"
   },
   {
    "name": "Airtel",
@@ -1500,8 +1502,8 @@
    "name": "Kotak Mahindra Bank",
    "type": "Indian bank tech",
    "quality": 8,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "Kotak India SE median TC 46.9 LPA (levels.fyi, Nov 2026); overall median leans senior, entry bands may be lower"
   },
   {
    "name": "HDFC Bank",
@@ -1797,8 +1799,8 @@
    "name": "Yubi",
    "type": "Debt fintech",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "India SE median TC 34.8 LPA (levels.fyi, Nov 2026)"
   },
   {
    "name": "Credgenics",
@@ -1999,8 +2001,8 @@
    "name": "Lenskart",
    "type": "Eyewear omnichannel (listed)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "below",
+   "pay_note": "India SE median TC 13.8 LPA (levels.fyi, Nov 2026)"
   },
   {
    "name": "Delhivery",
@@ -3062,7 +3064,7 @@
    "type": "Global product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "India Grade 5 17.2, Grade 6 25.3 LPA: depends on level (levels.fyi, Nov 2026)"
   },
   {
    "name": "Trellix",
@@ -3226,8 +3228,8 @@
    "name": "FedEx",
    "type": "Global product",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "India L1 12.0, L2 18.9 LPA; median 19.6 (levels.fyi, Nov 2026)"
   },
   {
    "name": "Maersk",
@@ -3436,8 +3438,8 @@
    "name": "Motorola Solutions",
    "type": "Global product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "India E06 10.3, E07 16.3 LPA; median 11.5 (levels.fyi, Nov 2026)"
   },
   {
    "name": "BCG X",
@@ -3451,7 +3453,8 @@
    "type": "Indian product",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "oyorooms.com"
   },
   {
    "name": "Purplle",
@@ -3465,7 +3468,8 @@
    "type": "Indian product",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "firstcry.com"
   },
   {
    "name": "Rebel Foods",
@@ -3479,7 +3483,8 @@
    "type": "Indian product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "cult.fit"
   },
   {
    "name": "Curefit",
@@ -3528,7 +3533,8 @@
    "type": "Indian product",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "testbook.com"
   },
   {
    "name": "Vedantu",
@@ -3549,14 +3555,16 @@
    "type": "Indian product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "winzogames.com"
   },
   {
    "name": "MPL",
    "type": "Indian product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "mpl.live"
   },
   {
    "name": "Mobile Premier League",
@@ -3570,49 +3578,56 @@
    "type": "Indian product",
    "quality": 8,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "nazara.com"
   },
   {
    "name": "Dailyhunt",
    "type": "Indian product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "dailyhunt.in"
   },
   {
    "name": "Josh",
    "type": "Indian product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "myjosh.in"
   },
   {
    "name": "Amagi",
    "type": "Indian product",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "India SE median 29.3 LPA, no level split: borderline (levels.fyi, Nov 2026)"
+   "pay_note": "India SE median 29.3 LPA, no level split: borderline (levels.fyi, Nov 2026)",
+   "site": "amagi.com"
   },
   {
    "name": "Pixis",
    "type": "Indian product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "pixis.ai"
   },
   {
    "name": "GreyOrange",
    "type": "Indian product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "greyorange.com"
   },
   {
    "name": "Ather Energy",
    "type": "Indian product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "careers.atherenergy.com"
   },
   {
    "name": "District",
@@ -3675,14 +3690,16 @@
    "type": "Indian product",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "careers.snapmint.com"
   },
   {
    "name": "Fynd",
    "type": "Indian product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "India SDE1 20.9, SDE2 33.8 LPA; median 33.1 (levels.fyi, Nov 2026)",
+   "site": "fynd.com"
   },
   {
    "name": "Shopsy",
@@ -3726,21 +3743,24 @@
    "type": "Indian product",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "olakrutrim.com"
   },
   {
    "name": "Stable Money",
    "type": "Indian fintech",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "stablemoney.in"
   },
   {
    "name": "Jiraaf",
    "type": "Indian fintech",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "jiraaf.com"
   },
   {
    "name": "Kiwi",
@@ -3754,14 +3774,16 @@
    "type": "Indian fintech",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "freo.money"
   },
   {
    "name": "Vayana",
    "type": "Indian fintech",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "vayana.com"
   },
   {
    "name": "Open Financial Technologies",
@@ -3796,7 +3818,8 @@
    "type": "Indian fintech",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "leapfinance.com"
   },
   {
    "name": "Lendingkart",
@@ -3810,7 +3833,8 @@
    "type": "Indian fintech",
    "quality": 8,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "indifi.com"
   },
   {
    "name": "Mswipe",
@@ -3824,7 +3848,8 @@
    "type": "Indian fintech",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "hyperverge.co"
   },
   {
    "name": "Signzy",
@@ -3859,7 +3884,8 @@
    "type": "Indian fintech",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "mintoak.com"
   },
   {
    "name": "Decentro",
@@ -3908,7 +3934,8 @@
    "type": "Indian fintech",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "site": "sensibull.com"
   },
   {
    "name": "Hudson River Trading",
@@ -3952,8 +3979,8 @@
    "name": "Kotak Securities",
    "type": "Trading",
    "quality": 8,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "Kotak India SE median TC 46.9 LPA (levels.fyi, Nov 2026)"
   },
   {
    "name": "Two Sigma",
@@ -5420,8 +5447,8 @@
    "name": "Equinix",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "India SE median TC 41.1 LPA; T3 56.8 (levels.fyi, Nov 2026)",
    "careers_url": "https://careers.equinix.com/homepage",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -6041,8 +6068,8 @@
    "name": "NCR Corporation",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "NCR India Grade 9 12.3, Grade 10 18.2 LPA (levels.fyi, Nov 2026)",
    "careers_url": "https://www.ncr.com/careers",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -9631,21 +9658,24 @@
    "quality": 10,
    "pay": "likely",
    "pay_note": "India SE I 14.3 (below), SE II 25.6 LPA; median 24.9 (levels.fyi, Nov 2026)",
-   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate"
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate",
+   "site": "appliedmaterials.com"
   },
   {
    "name": "Guidewire Software",
    "type": "Insurance software product",
    "quality": 10,
    "pay": "likely",
-   "pay_note": "India Software Engineer 22.2 LPA; median 26.2 (levels.fyi, Nov 2026)"
+   "pay_note": "India Software Engineer 22.2 LPA; median 26.2 (levels.fyi, Nov 2026)",
+   "site": "guidewire.com"
   },
   {
    "name": "Safe Security",
    "type": "Cyber-risk SaaS",
    "quality": 10,
    "pay": "likely",
-   "pay_note": "India SE median TC 31.5 LPA (levels.fyi, Nov 2026)"
+   "pay_note": "India SE median TC 31.5 LPA (levels.fyi, Nov 2026)",
+   "site": "safe.security"
   },
   {
    "name": "Emerson",
@@ -9702,6 +9732,83 @@
    "quality": 10,
    "pay": "unclear",
    "pay_note": "India SE median 26.8 LPA, no level split: borderline (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Atlys",
+   "type": "Travel/visa tech startup",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "India SE median TC 45.0 LPA (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Copart",
+   "type": "",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "India SE median TC 18.3 LPA (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Contentstack",
+   "type": "",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "India SE median TC 16.3 LPA (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Aspen Technology",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No India SE data on levels.fyi (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Anaplan",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No India SE data on levels.fyi (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Anyscale",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No India SE data on levels.fyi (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Dassault Systèmes",
+   "type": "Engineering software MNC",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "India Level 100 8.7, Level 200 12.0 LPA; median 10.5 (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "ION",
+   "type": "Trading/fintech software",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "India SE median TC 17.4 LPA (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Spreetail",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No India SE data on levels.fyi (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Resideo",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No India SE data on levels.fyi (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "U.S. Bank",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No India SE data on levels.fyi (levels.fyi, Nov 2026)"
   }
  ],
  "services_and_staffing": [
@@ -9853,7 +9960,11 @@
   "Kanerika",
   "NonStop io Technologies",
   "HYrEzy Tech Solutions",
-  "Searchjob.ai"
+  "Searchjob.ai",
+  "VRINDA INTERNATIONAL",
+  "Wissen Technology",
+  "Mako IT Lab",
+  "TVS Next"
  ],
  "staffing_keywords": [
   "Recruitment",

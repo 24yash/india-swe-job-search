@@ -266,6 +266,73 @@ Both failures were fixed and tested:
 - The title filter now excludes "Mgr" and titles ending in level 3 ("Software Engineer Apps 3"), while keeping "Web3" titles.
 - A Gartner page giving its address as a list crashed the sitemap reader; that's fixed and tested too.
 
+## Round three: finding the right careers site, and a coverage report
+
+Two findings drove this round:
+- Many companies seen only in LinkedIn results had never been studied.
+- Guessed domains were often wrong (S&P Global → s-p.in, Rapido → recharge.com, Mamaearth → its Canadian namesake).
+
+### What changed
+
+- **Clearbit's free, keyless company autocomplete supplies each company's domain** (exact name match only); `find_careers.py` tries the homepage, then `careers.` and `jobs.` on that domain.
+  - Results are cached in `output/company-domains.json`.
+  - `--linkedin-companies` also studies companies seen only on LinkedIn.
+- **Google searches in the user's own browser**, about 150 companies, "<company> careers jobs". They stopped on any CAPTCHA (none appeared).
+  - Each found URL goes through `find_careers.source_from_urls`, which tries in order: platform links, Zoho on the company's own domain, Jibe, the rendered page (Oracle tenants behind vanity domains, e.g. Akamai, AmEx), job sitemaps, then plain job lists.
+- **Other search routes, and why they're out:**
+  - Scripted DuckDuckGo answers with a bot check after two queries.
+  - LinkedIn company pages answer 999 to automated requests.
+  - Scraping Google or Bing directly breaks their terms.
+  - A free Brave Search or Google Programmable Search API key would scale this to every run.
+- **New readers:**
+  - Recruitee (Lenskart, Aftershoot), Workable (Innovaccer, Trexquant), Freshteam (Cashflo, Log9, CityMall, Akridata), Darwinbox (27 companies).
+  - Darwinbox: the careers page's own `job/alljobs` call is open; the endpoint tried before answered 403.
+- **Recognised as links-reader sites:** JazzHR (`applytojob.com`), Teamtailor, Avature (Tesco), job lists on custom pages (iRage, AlphaGrep) and Zoho Recruit on a company's own domain (Fyers, Securin).
+- **`find_careers.py --lists`:** finds custom careers pages that list jobs as plain links, groups links by URL shape, and configures the links reader.
+- **`coverage.py`:** status for every bank company in `output/coverage-<date>.csv`, using `output/coverage-notes.json` for hand-checked findings.
+
+### Bugs found and fixed
+
+- **The social-site exclusion matched any domain ending in "x.com".** It silently threw away netflix.com, dropbox.com, nutanix.com, equinix.com and others. It now matches whole hostnames.
+- **A run during a network drop cached "nothing found" for many companies.** Discovery now checks the connection and stops.
+- **Single-quoted `href`s** (AlphaGrep) and **hyphenated Oracle hosts** (Akamai's `fa-extu-saasfaprod1…`) were missed.
+- **The LinkedIn card parser** produced HTML fragments as company names when the company wasn't a link. It now also records each company's LinkedIn page.
+- **URL titles ending in a numeric id** (Avature `/Title-Words/216221`) became the id.
+
+### Results (7 Nov 2026)
+
+| | Before round three | After |
+|---|---|---|
+| Direct sources | 335 | ~550 |
+| Shortlist | 375 | 418 |
+| Sweet-spot roles | 104 | 112 |
+| Companies pending (no source, not blocked, no explained reason) | 630 | 490 |
+
+Coverage now, from `coverage.py`:
+
+| Group | Companies |
+|---|---|
+| A. Have a source | 586 |
+| B. Not pursued | 37 |
+| C. Checked, nothing to read | 113 |
+| D. Blocked | 46 |
+| F. Dead or unreachable | 73 (39 retryable) |
+| E. Pending | 490 (E1 careers page, no source 366; E2 searched, not readable 46; E3 no careers page 19; E4 not studied 59) |
+
+Within A:
+- 109 companies have shortlisted roles today.
+- 95 have fitting roles awaiting pay evidence.
+- 120 have India software openings that don't fit.
+- 260 have none today.
+
+Hand-checked findings recorded in the notes:
+- Eternal (Zomato, Blinkit) hires by referral only.
+- Chargebee posts only on LinkedIn.
+- Citadel, Citadel Securities and HRT answer 403 / Cloudflare.
+- Wayfair uses PerimeterX.
+- Netflix's India roles are content and business only.
+- GreyOrange and Snapmint use Zwayam, whose feed isn't cracked yet.
+
 ## Where we still can't get data
 
 **819 bank companies** still have no direct source after both rounds (931 after round one). Their roles still reach the dashboard through LinkedIn's public search.
