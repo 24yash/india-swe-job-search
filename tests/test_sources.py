@@ -332,5 +332,48 @@ check("MyNextHire: experience range carried into the text", jobs and jobs[0].tex
 p = jobs[0].url.split("p%3D")[1] if jobs else ""
 check("MyNextHire: job link is the company's JD page with the board's encoded request", '"reqId":459' in base64.b64decode(p).decode() if p else False, jobs and jobs[0].url)
 
+# --- round five readers (fed canned responses; no network) ---
+check("in_india: whole words (North Dakota is not Kota; Kota Kinabalu is Malaysia), city list widened",
+      crawl.in_india("Kota") and crawl.in_india("Mysuru") and crawl.in_india("Bangalore, IN")
+      and not crawl.in_india("North Dakota, US") and not crawl.in_india("Kota Kinabalu, Malaysia") and not crawl.in_india("Indianapolis"))
+
+from portals import avature, xmlfeed
+ea_page = ('<article class="article article--result x"><h3><a class="link link_result" href="https://jobs.example.com/en_US/careers/JobDetail/SE/1">'
+           ' Software Engineer II </a></h3><div class="article__header__text__subtitle"><span class="list-item-location">Hyderabad, India</span></div></article>')
+mq_page = ('<article class="article article--result clearfix "><h3><a class="link" href="https://r.example.com/en_US/careers/JobDetail?jobId=9">'
+           ' Full Stack Developer </a></h3><div class="article__details__data"><img class="icon" src="x.svg" alt="Office Location:" /> <p> Gurugram Office </p></div></article>')
+check("Avature: list items parsed from both theme layouts (span location / icon + <p> location)",
+      avature.items(ea_page) == [("https://jobs.example.com/en_US/careers/JobDetail/SE/1", "Software Engineer II", "Hyderabad, India")]
+      and avature.items(mq_page) == [("https://r.example.com/en_US/careers/JobDetail?jobId=9", "Full Stack Developer", "Gurugram Office")],
+      (avature.items(ea_page), avature.items(mq_page)))
+check("XML feed: CDATA fields read", xmlfeed.field("<job><title><![CDATA[Software Engineer & Co]]></title></job>", "title") == "Software Engineer & Co")
+
+
+def fake(get=None, post=None):
+    class R:
+        def __init__(self, d): self.d, self.status_code, self.text = d, 200, ""
+        def raise_for_status(self): pass
+        def json(self): return self.d
+    return SimpleNamespace(**{k: getattr(crawl, k) for k in ("Job", "title_ok", "in_india", "parse_ts", "strip_html")},
+                           get=lambda url, *a, **k: get(url), SESSION=SimpleNamespace(post=lambda url, **k: R(post(url)), get=lambda url, **k: R(get(url))))
+
+
+rb = {"meta": {"total": 2}, "objects": [
+    {"title": "Full Stack Developer", "location": {"city": "Kota", "state": None, "country": None}, "hosted_url": "u1", "description": "<p>x</p>"},
+    {"title": "Software Engineer", "location": {"city": "Austin", "state": "TX", "country": "United States"}, "hosted_url": "u2"}]}
+from portals import recruiterbox, peoplestrong, pinpoint
+got = list(recruiterbox.fetch({"name": "ALLEN Digital", "slug": "allendigital"}, fake(get=lambda u: rb)))
+check("Trakstar/Recruiterbox: India roles by city even without a country", [(j.title, j.location) for j in got] == [("Full Stack Developer", "Kota")], got)
+ps = {"totalRecords": 2, "response": [
+    {"jobTitle": "Software Engineer", "locationHierarchyComplete": "India>Karnataka>Bengaluru", "expRange": "2-4 years", "jobPostedDate": "2026-10-07", "jobDetailUrl": "u"},
+    {"jobTitle": "Site Manager", "locationHierarchyComplete": "India>Gujarat>Hazira"}]}
+got = list(peoplestrong.fetch({"name": "L&T", "host": "x.peoplestrong.com"}, fake(post=lambda u: ps)))
+check("PeopleStrong: fitting India roles, experience range kept for the years parser",
+      len(got) == 1 and got[0].location == "India, Karnataka, Bengaluru" and got[0].text.startswith("Experience: 2-4 years"), got)
+pp = {"data": [{"title": "Software Developer 2", "location": {"city": "Pune", "province": "Maharashtra", "name": "India - Pune"}, "url": "u",
+                "description": "d", "compensation_visible": True, "compensation": "Rs3,334,976 - Rs4,512,026 / year"}]}
+got = list(pinpoint.fetch({"name": "Vena", "slug": "vena"}, fake(get=lambda u: pp)))
+check("Pinpoint: India role with posted pay carried into the text", len(got) == 1 and "Rs3,334,976" in got[0].text, got)
+
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)

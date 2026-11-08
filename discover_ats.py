@@ -161,6 +161,8 @@ ATS_LINKS = [
     ("zohorecruit", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.zohorecruit\.(?:in|com)"),
     ("turbohire", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.turbohire\.co"),
     ("mynexthire", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.mynexthire\.com"),
+    ("recruiterbox", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.(?:recruiterbox\.com|hire\.trakstar\.com)"),
+    ("pinpoint", r"(?<![a-z0-9-])([a-z0-9-]{1,63})\.pinpointhq\.com"),
     ("workable", r"(?:apply|jobs)\.workable\.com/(?!api\b|company\b)([a-z0-9_-]{1,100})"),
     ("rippling", r"ats\.rippling\.com/([a-z0-9_-]{1,100})"),
     ("rippling", r"id=\"rr-job-board\"\s+data-job-board-id=\"([a-z0-9_-]{1,100})\""),  # Rippling's embedded job board (Daloopa)
@@ -181,7 +183,7 @@ ATS_LINKS = [
     # Oracle behind a company's own domain: the page's scripts still name the real tenant
     ("oracle", r"(?<![a-z0-9.-])([a-z0-9][a-z0-9-]{0,62}\.fa(?:\.[a-z0-9]+)?\.oraclecloud\.com)/hcmRestApi/CandidateExperience/[a-z]{2}/(?:siteSettings|sites)/([A-Za-z0-9_]{1,100})"),
 ]
-NOT_A_BOARD = {"embed", "jobs", "careers", "api", "www", "boards", "apply", "app", "static"}
+NOT_A_BOARD = {"embed", "jobs", "careers", "api", "www", "boards", "apply", "app", "static", "jsapi", "resources", "staticfe", "bhrpendo", "__assets__", "assets"}
 
 
 def boards_in(text):

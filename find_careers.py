@@ -622,8 +622,8 @@ def source_from_urls(name, urls):
                 out.append({"ats": "portal", "portal": "workable", "slug": slug, "how": "workable link"})
             elif ats == "freshteam":
                 out.append({"ats": "portal", "portal": "freshteam", "slug": slug, "how": "freshteam link"})
-            elif ats == "mynexthire":
-                out.append({"ats": "portal", "portal": "mynexthire", "slug": slug, "how": "mynexthire link"})
+            elif ats in ("mynexthire", "recruiterbox", "pinpoint", "bamboohr", "gem"):
+                out.append({"ats": "portal", "portal": ats, "slug": slug, "how": f"{ats} link"})
             elif ats == "zohorecruit":
                 out.append({"ats": "portal", "portal": "zohorecruit", "slug": slug, "tld": "com", "how": "zoho link"})
             elif ats == "darwinbox":

@@ -102,9 +102,14 @@ def workday_age(s):
     return NOW - timedelta(days=int(m.group(1))) if m else None
 
 
+# Whole words only: substring matching took "North Dakota" for Kota (Rajasthan). Kota Kinabalu is in Malaysia.
+INDIA_RE = re.compile("|".join(("(?<![a-z])" if k[:1].isalpha() else "") + re.escape(k) + ("(?![a-z])" if k[-1:].isalpha() else "")
+                               for k in INDIA), re.I)
+
+
 def in_india(loc):
-    l = loc.lower()
-    return any(k in l for k in INDIA)
+    l = (loc or "").lower()
+    return bool(INDIA_RE.search(l)) and "kota kinabalu" not in l
 
 
 def title_ok(title):

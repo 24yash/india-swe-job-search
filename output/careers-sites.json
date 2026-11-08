@@ -1,7 +1,7 @@
 {
  "Meta": {
   "company": "Meta",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -2545,7 +2545,7 @@
  },
  "Revolut": {
   "company": "Revolut",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -4174,7 +4174,7 @@
  },
  "T. Rowe Price": {
   "company": "T. Rowe Price",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -4656,7 +4656,7 @@
  },
  "Rebel Foods": {
   "company": "Rebel Foods",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -5002,13 +5002,13 @@
  },
  "Indeed": {
   "company": "Indeed",
-  "checked": "2026-11-07",
-  "site": null,
-  "careers": null,
+  "checked": "2026-11-08",
+  "site": "https://www.indeed.com/careers",
+  "careers": "https://www.indeed.com/careers",
   "boards": [],
   "platforms": [],
-  "rendered": false,
-  "how": ""
+  "rendered": true,
+  "how": "recorded"
  },
  "Unstop": {
   "company": "Unstop",
@@ -5172,7 +5172,7 @@
  },
  "Indifi": {
   "company": "Indifi",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -6137,7 +6137,7 @@
  },
  "Accredible": {
   "company": "Accredible",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -6333,7 +6333,7 @@
  },
  "Aptiv": {
   "company": "Aptiv",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -6343,7 +6343,7 @@
  },
  "Aryaka networks": {
   "company": "Aryaka networks",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -6410,7 +6410,7 @@
  },
  "Avalara": {
   "company": "Avalara",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -6499,7 +6499,7 @@
  },
  "Bellatrix Aerospace": {
   "company": "Bellatrix Aerospace",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -6536,7 +6536,7 @@
  },
  "bitdefender": {
   "company": "bitdefender",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -6561,7 +6561,7 @@
  },
  "BlackBuck": {
   "company": "BlackBuck",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -6850,7 +6850,7 @@
  },
  "CodeParva Technologies Pvt Ltd": {
   "company": "CodeParva Technologies Pvt Ltd",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -7020,7 +7020,7 @@
  },
  "DealShare": {
   "company": "DealShare",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -7570,7 +7570,7 @@
  },
  "Hashnode": {
   "company": "Hashnode",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -7580,7 +7580,7 @@
  },
  "HBO": {
   "company": "HBO",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -7590,7 +7590,7 @@
  },
  "HERE": {
   "company": "HERE",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -7805,7 +7805,7 @@
  },
  "Kesari bharat": {
   "company": "Kesari bharat",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -8114,7 +8114,7 @@
  },
  "nurture.farm": {
   "company": "nurture.farm",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -8164,7 +8164,7 @@
  },
  "Oneplus": {
   "company": "Oneplus",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -8221,7 +8221,7 @@
  },
  "PeopleStrong": {
   "company": "PeopleStrong",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -8325,7 +8325,7 @@
  },
  "Prodapt": {
   "company": "Prodapt",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -8589,7 +8589,7 @@
  },
  "SkillVertex": {
   "company": "SkillVertex",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -8599,7 +8599,7 @@
  },
  "Sling Media": {
   "company": "Sling Media",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -8711,7 +8711,7 @@
  },
  "Topcoder": {
   "company": "Topcoder",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -8809,7 +8809,7 @@
  },
  "Valuefy": {
   "company": "Valuefy",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -8896,7 +8896,7 @@
  },
  "Yahoo": {
   "company": "Yahoo",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -9557,7 +9557,7 @@
  },
  "KGEN": {
   "company": "KGEN",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -9577,13 +9577,13 @@
  },
  "Knight FinTech": {
   "company": "Knight FinTech",
-  "checked": "2026-11-07",
-  "site": null,
-  "careers": null,
+  "checked": "2026-11-08",
+  "site": "https://knightfintech.com/",
+  "careers": "https://knightfintech.com/careers",
   "boards": [],
   "platforms": [],
-  "rendered": false,
-  "how": ""
+  "rendered": true,
+  "how": "imported"
  },
  "LetsVenture": {
   "company": "LetsVenture",
@@ -10195,7 +10195,7 @@
  },
  "Tracxn": {
   "company": "Tracxn",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -10500,7 +10500,7 @@
  },
  "Fi": {
   "company": "Fi",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -10678,7 +10678,7 @@
  },
  "Bira 91": {
   "company": "Bira 91",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -10688,7 +10688,7 @@
  },
  "Cloudnine Group of Hospitals": {
   "company": "Cloudnine Group of Hospitals",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -10758,7 +10758,7 @@
  },
  "Innovcare Lifesciences": {
   "company": "Innovcare Lifesciences",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -11180,7 +11180,7 @@
  },
  "Sumosave Retail Ventures": {
   "company": "Sumosave Retail Ventures",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -11190,7 +11190,7 @@
  },
  "Craftsvilla": {
   "company": "Craftsvilla",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -11291,7 +11291,7 @@
  },
  "Nexprt": {
   "company": "Nexprt",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -11311,7 +11311,7 @@
  },
  "People Home Finance Limited": {
   "company": "People Home Finance Limited",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -11510,7 +11510,7 @@
  },
  "HyperTrack": {
   "company": "HyperTrack",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -11547,7 +11547,7 @@
  },
  "Agilitas": {
   "company": "Agilitas",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -11567,7 +11567,7 @@
  },
  "Tijoree": {
   "company": "Tijoree",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -11632,7 +11632,7 @@
  },
  "Finarkein Analytics": {
   "company": "Finarkein Analytics",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],
@@ -11662,7 +11662,7 @@
  },
  "MoveInSync": {
   "company": "MoveInSync",
-  "checked": "2026-11-07",
+  "checked": "2026-11-08",
   "site": null,
   "careers": null,
   "boards": [],

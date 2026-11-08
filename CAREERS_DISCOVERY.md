@@ -373,6 +373,32 @@ SaaS, Indian companies, Indian startups), weighted towards companies that post a
   (3 × SDE 2), TripJack (SDE 1 Java), Haptik, Decentro, Curefit, Zetwerk, MyGlamm, MaxIQ, Cin7, Foxit, Gather AI, Seismic…
 - Coverage: A 600 (A1 94, A2 112, A3 59, A4 333), pending E 490 → 456 (E1 366 → 339).
 
+## Round five: overnight push on pending companies (8 Nov 2026)
+
+- **Pending (E) 456 -> 317**, companies with a source (A) 600 -> 672, shortlist 415 -> 437 (after pay checks), leads ~300.
+- **New readers** (`portals/`): `avature` (EA, Macquarie: paged list + site keyword search, ~2x fewer requests),
+  `xmlfeed` (Fidelity, Box: one request for the whole list), `recruiterbox` (Trakstar Hire: ALLEN Digital, Drip Capital,
+  WinZO), `pinpoint` (Vena), `bamboohr` (Nexthop AI, Bitly, XFlow), `gem` (Groq, PromptQL), `peoplestrong` (L&T),
+  `spire2grow` (Tata Communications), `csod` (Cornerstone: Linde), `filterstream` (Keywords Studios / Helpshift), `qubrid`.
+  The sitemap reader now loads classic iCIMS job pages in their iframe view (Kinaxis); the Darwinbox reader sends the
+  company id in the body (PhysicsWallah's hex-id tenant).
+- **E1 triage** (rendered careers page + one hop for 339 companies) found boards on 72 pages; reviewed dead ends
+  (says "no openings", email-only) were recorded as C. Discovery-cache boards that had never been added (SonicWall,
+  NielsenIQ, GE Vernova, Airbus, Light & Wonder…) were added.
+- **Research agents** (5 batches, ~130 companies) checked companies by hand: tested configs were merged, honest
+  verdicts recorded in `output/coverage-notes.json` (blocked, nothing to read, alias + parent).
+- **Pay checks** (levels.fyi): 16 likely, 16 below, rest unclear; merged into tiers.json.
+- **Fixes:** India matching is whole-word (North Dakota is not Kota) with more Indian cities; alias names are counted once
+  in the coverage report (`alias` notes point to the parent source).
+
+**Resume here next time:** the second slug sweep (Trakstar, BambooHR, Gem, Pinpoint, PeopleStrong) found 65 candidate
+boards, not yet verified by hand (Gem/BambooHR answer for unrelated slugs). Six research batches (E1 ×4, E4 ×2) were
+cut off by the usage limit before writing results. Platform specs still unbuilt: RippleHire (Cimpress, HDFC/Axis),
+PyjamaHR (Zoid, smallcase), Zwayam (GreyOrange, Snapmint).
+
+**Refreshes:** `refresh.sh` re-reads every source; readers read whole lists in as few requests as the site allows
+(one feed where there is one, keyword-filtered pages for Avature, detail pages only for fitting India roles).
+
 ## Where we still can't get data
 
 **819 bank companies** still have no direct source after both rounds (931 after round one). Their roles still reach the dashboard through LinkedIn's public search.
