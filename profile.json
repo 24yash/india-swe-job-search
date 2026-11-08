@@ -1,7 +1,7 @@
 {
   "_comment": "YOUR requirements. Shipped as an example: backend/platform SWE in India, 0-3 years asked, >= 20 LPA, Java-leaning stack. Edit title include/exclude, max_min_years, min_pay_lpa, max_age_days, stack weights, gaps and exclude_companies (add your current employer here). Regexes are matched case-insensitively against lower-cased text.",
   "title": {
-    "include": "software (development |dev )?engineer|software developer|\\bsde\\b|sde[- ]?(i|1|ii|2)\\b|backend|back-end|back end|platform engineer|infrastructure engineer|member of technical staff|\\bmts\\b|full[- ]?stack|engineer[- ,]*(i|ii|1|2)\\b|java (developer|engineer)|spring boot|application (developer|engineer)|python (backend )?developer|api (developer|engineer)|distributed systems engineer|cloud (software|platform) engineer|associate software",
+    "include": "software (development |dev )?engineer|software developer|\\bsde\\b|sde[- ]?(i|1|ii|2)\\b|backend|back-end|back end|platform engineer|infrastructure engineer|member of technical staff|\\bmts\\b|full[- ]?stack|engineer[- ,]*(i|ii|1|2)\\b|java (developer|engineer)|spring boot|application (developer|engineer)|python (backend )?developer|api (developer|engineer)|distributed systems engineer|cloud (software|platform) engineer|associate software|junior (software|backend|java|python|full[- ]?stack|application) (developer|engineer)|associate (software )?developer|software engineer[- ]?(i|1)\\b|sde[- ]?i\\b",
     "exclude": "senior|\\bmgr\\b|[\\s-](3|iii)\\s*$|\\bsr\\b\\.?|staff|\\blead\\b|principal|architect|manager|director|\\bhead\\b|vice president|\\bvp\\b|\\bavp\\b|\\bintern\\b|internship|new ?grad|\\bgraduate\\b|campus|fresher|university|early career|\\bbatch\\b|apprentice|distinguished|fellow|\\bphd\\b|\\bsse\\b|\\biii\\b|\\biv\\b|sde[- ]?(3|iii)\\b|engineer[- ]?(3|iii)\\b|\\bl[5-9]\\b|front[- ]?end|android|\\bios\\b|\\bmobile\\b|\\bqa\\b|sdet|\\btest\\b|in test|testing|quality (assurance|engineer)|data scientist|machine learning engineer|\\bml engineer|research (engineer|scientist)|sales engineer|solutions? (engineer|architect|consultant)|support engineer|customer (success|support) engineer|field (engineer|application)|hardware|firmware|embedded|asic|verification|silicon|analog|physical design|\\brtl\\b|security engineer|salesforce (developer|engineer)|servicenow developer|consultant|trainee|contract|\\bftc\\b|fixed term|graphics|gpu|compiler|kernel|device driver|\\bsap\\b|mainframe|cobol"
   },
   "location": {
@@ -100,7 +100,13 @@
       "software engineer 1",
       "associate software engineer",
       "junior backend developer",
-      "backend developer 1-3 years"
+      "backend developer 1-3 years",
+      "SDE I",
+      "junior software engineer",
+      "software engineer 0-2 years",
+      "associate software developer",
+      "java developer 1-2 years",
+      "backend engineer 1 year experience"
     ],
     "max_results_per_query": 100,
     "company_sweep": {

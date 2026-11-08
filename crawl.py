@@ -591,12 +591,12 @@ def stack_score(text):
 def level_score(title, years):
     t = title.lower()
     if years is None:
-        if re.search(r"\b(i|1|associate)\b", t):
-            return 17
+        if re.search(r"\b(i|1|associate|junior)\b", t):
+            return 19
         if re.search(r"\b(ii|2)\b", t):
             return 16
         return 13
-    return {0: 17, 1: 20, 2: 19, 3: 13}.get(years, 0)  # ~1-2 years is the sweet spot; 3+ is a stretch
+    return {0: 19, 1: 20, 2: 20, 3: 12}.get(years, 0)  # 0-2 years (SDE1 with ~1 yr, SDE2) is the target; 3+ is a stretch
 
 
 def exp_band(years):
