@@ -191,16 +191,6 @@
   "checked": "2026-11-07",
   "by": "scripted probe"
  },
- "Box": {
-  "status": "pending",
-  "by": "checked by hand",
-  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
- },
- "Electronic Arts": {
-  "status": "pending",
-  "by": "checked by hand",
-  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
- },
  "Warner Bros. Discovery": {
   "status": "blocked",
   "reason": "blocked (403/challenge)",
@@ -975,11 +965,6 @@
   "checked": "2026-11-07",
   "by": "re-probe with Clearbit domains"
  },
- "Fidelity Investments": {
-  "status": "pending",
-  "by": "checked by hand",
-  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
- },
  "Finarkein Analytics": {
   "status": "pending",
   "reason": "ok now: site reachable (re-run discovery)",
@@ -1173,10 +1158,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "Mobile Premier League": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "alias",
+  "parent": "MPL",
+  "reason": "same company as MPL",
+  "by": "checked by hand"
  },
  "Mount talent": {
   "status": "retryable",
@@ -1347,10 +1332,9 @@
   "by": "re-probe with Clearbit domains"
  },
  "Rephrase.ai": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "careers page says 'No open roles right now' (email careers@rephraseai.com) — https://www.rephraseai.com/careers",
+  "by": "E1 triage, reviewed by hand"
  },
  "Rivigo": {
   "status": "retryable",
@@ -1414,9 +1398,8 @@
  },
  "Standard Chartered": {
   "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "reason": "needs a reader: SuccessFactors CSB RSS ('successfactors'): GET https://<host>/sitemal.xml (robots allows; /services/ is disallowed so don't use the CSB JSON/RSS search). RSS 2.0 with xmlns:g; each <item>: <title>'Job",
+  "by": "checked by hand"
  },
  "STMicroelectronics": {
   "status": "retryable",
@@ -1473,10 +1456,9 @@
   "by": "re-probe with Clearbit domains"
  },
  "VerSe Innovation": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "no job list; applications by email (email careers@verse.in) — https://verse.in/career.php",
+  "by": "E1 triage, reviewed by hand"
  },
  "Vicara": {
   "status": "retryable",
@@ -1660,14 +1642,12 @@
  },
  "GreyOrange": {
   "status": "pending",
-  "reason": "Zwayam ATS; feed request not yet cracked",
-  "checked": "2026-11-07",
+  "reason": "needs a reader: Zwayam reader (spec under Snapmint). Config {\"ats\":\"portal\",\"portal\":\"zwayam\",\"domain\":\"careers.greyorange.com\",\"path\":\"greyorange\",\"company_id\":\"MTYwOTA=\"}",
   "by": "checked by hand"
  },
  "Snapmint": {
   "status": "pending",
-  "reason": "Zwayam ATS; feed request not yet cracked",
-  "checked": "2026-11-07",
+  "reason": "needs a reader: Zwayam ('zwayam'): POST https://public.zwayam.com/jobs/search as multipart/form-data with fields filterCri={\"paginationStartNo\":<row offset>,\"selectedCall\":\"sort\",\"sortCriteria\":{\"name\":\"modifiedDate\"",
   "by": "checked by hand"
  },
  "Salesken": {
@@ -1947,10 +1927,9 @@
   "by": "checked by hand"
  },
  "hoichoi": {
-  "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "blocked",
+  "reason": "hoichoi.tv returns 403 to scripted requests, so I stopped there. A web search found no hoichoi careers page or ATS, only aggregator copies (Foundit, Weekday, Cutshort) of its Kolkata engineering roles.",
+  "by": "research agent (batch C)"
  },
  "Fintrac": {
   "status": "pending",
@@ -1971,10 +1950,9 @@
   "by": "checked by hand"
  },
  "Recrew AI": {
-  "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "Recrew AI (recrew.ai) is a recruiting/talent platform. Its board talent.recrew.ai/careers lists ~30 roles for client companies (SoC verification, EOR sales, Delhi fintech roles...), not Recrew's own jobs, so its LinkedIn posts are agency po",
+  "by": "research agent (batch C)"
  },
  "Uppercase": {
   "status": "pending",
@@ -1984,8 +1962,7 @@
  },
  "ZOOP": {
   "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
+  "reason": "The LinkedIn post (Golang SDE 2, Pune) describes an EV-charging/energy-management company. zoop.com is an unrelated social app, and zoop.one is a KYC firm (no careers page answered). A web search found no site for the EV company, so I could",
   "by": "checked by hand"
  },
  "Boldfit": {
@@ -2002,20 +1979,17 @@
  },
  "The Alter Office": {
   "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
+  "reason": "needs a reader: Custom one-company: GET https://assessment-backend-prod.altergame.click/api/public/roles -> list of {id,name,slug,location_text,employment_type,department_name,posted_at,closes_at,is_closed}. Detail G",
   "by": "checked by hand"
  },
  "AtomicAds": {
-  "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "Real site is atomicads.ai (discovery guessed atomicads.io, which is AtomicHub, an unrelated NFT site). atomicads.ai/careers lists 5 roles statically (Head of Engineering and Member of Technical Staff in Bangalore, 3 media ops roles) with ap",
+  "by": "research agent (batch C)"
  },
  "Elements Energy": {
   "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
+  "reason": "needs a reader: Small extension, no new platform: either (a) links reader option to skip the list-title filter and take the title from the detail page's JobPosting (list https://elementsenergies.com/talent, job_link ",
   "by": "checked by hand"
  },
  "Faces Canada": {
@@ -2133,18 +2107,419 @@
   "by": "checked by hand"
  },
  "Liebherr": {
-  "status": "pending",
-  "by": "checked by hand",
-  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
+  "status": "nothing_to_read",
+  "reason": "India careers page (en-in) lists 27 roles; the 10 readable without JavaScript are all industrial (service engineer, PLM, technical writer), no software roles",
+  "by": "checked by hand"
  },
- "Flight Centre Travel Group": {
-  "status": "pending",
-  "by": "checked by hand",
-  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
+ "BNY Mellon": {
+  "status": "alias",
+  "parent": "BNY",
+  "reason": "another name for BNY (read from BNY's own source)",
+  "by": "checked by hand"
  },
- "Macquarie Group": {
+ "Citi Bank": {
+  "status": "alias",
+  "parent": "Citi",
+  "reason": "another name for Citi (read from Citi's own source)",
+  "by": "checked by hand"
+ },
+ "Citigroup": {
+  "status": "alias",
+  "parent": "Citi",
+  "reason": "another name for Citi (read from Citi's own source)",
+  "by": "checked by hand"
+ },
+ "duo": {
+  "status": "alias",
+  "parent": "Cisco",
+  "reason": "another name for Cisco (read from Cisco's own source)",
+  "by": "checked by hand"
+ },
+ "Splunk": {
+  "status": "alias",
+  "parent": "Cisco",
+  "reason": "another name for Cisco (read from Cisco's own source)",
+  "by": "checked by hand"
+ },
+ "App Dynamics": {
+  "status": "alias",
+  "parent": "Cisco",
+  "reason": "another name for Cisco (read from Cisco's own source)",
+  "by": "checked by hand"
+ },
+ "Cerner": {
+  "status": "alias",
+  "parent": "Oracle",
+  "reason": "another name for Oracle (read from Oracle's own source)",
+  "by": "checked by hand"
+ },
+ "Phillips": {
+  "status": "alias",
+  "parent": "Philips",
+  "reason": "another name for Philips (read from Philips's own source)",
+  "by": "checked by hand"
+ },
+ "National instruments": {
+  "status": "alias",
+  "parent": "Emerson",
+  "reason": "another name for Emerson (read from Emerson's own source)",
+  "by": "checked by hand"
+ },
+ "Jifflenow": {
+  "status": "alias",
+  "parent": "Cvent",
+  "reason": "another name for Cvent (read from Cvent's own source)",
+  "by": "checked by hand"
+ },
+ "VWO": {
+  "status": "alias",
+  "parent": "Wingify",
+  "reason": "another name for Wingify (read from Wingify's own source)",
+  "by": "checked by hand"
+ },
+ "unacadamy": {
+  "status": "alias",
+  "parent": "Unacademy",
+  "reason": "another name for Unacademy (read from Unacademy's own source)",
+  "by": "checked by hand"
+ },
+ "1 mg": {
+  "status": "alias",
+  "parent": "Tata 1mg",
+  "reason": "another name for Tata 1mg (read from Tata 1mg's own source)",
+  "by": "checked by hand"
+ },
+ "Freshdesk": {
+  "status": "alias",
+  "parent": "Freshworks",
+  "reason": "another name for Freshworks (read from Freshworks's own source)",
+  "by": "checked by hand"
+ },
+ "NSE": {
+  "status": "nothing_to_read",
+  "reason": "own careers page (nseindia.com/careers-at-nse/jobs) says no active vacancies; CVs by email to career@nse.co.in",
+  "by": "checked by hand"
+ },
+ "Moj": {
+  "status": "alias",
+  "parent": "ShareChat",
+  "reason": "Moj is ShareChat's (Mohalla Tech) app",
+  "by": "checked by hand"
+ },
+ "Alibaba Group": {
+  "status": "nothing_to_read",
+  "reason": "talent.alibaba.com lists China/global roles; no India engineering hiring",
+  "by": "checked by hand"
+ },
+ "Cimpress": {
   "status": "pending",
-  "by": "checked by hand",
-  "reason": "careers site lists only the first page of jobs; needs a paginated reader"
+  "reason": "needs a reader: RippleHire: POST https://cimpress.ripplehire.com/candidate/candidatejobsearch form-encoded careerSiteUrlParams={\"page\":0,\"search\":\"*:*\",\"token\":\"<redacted>,\"source\":\"DIRECTCHANNEL\",\"pagesiz",
+  "by": "checked by hand"
+ },
+ "Riverbed Technology": {
+  "status": "blocked",
+  "reason": "riverbed.com/careers links iCIMS boards careers-riverbed.icims.com and emea-apj-riverbed.icims.com (the latter lists India roles e.g. 'Software Engineer, NetIM'), but both hosts' robots.txt is 'Disallow: /', so not crawlable under the rules",
+  "by": "research agent (batch C)"
+ },
+ "Zoid Technologies Private Limited": {
+  "status": "pending",
+  "reason": "needs a reader: PyjamaHR: list GET https://api.pyjamahr.com/api/career/jobs/?company_slug=<slug>&page=<n> -> {count,next,results:[{id,slug,title,min_experience,max_experience,country,location,other_locations,departme",
+  "by": "checked by hand"
+ },
+ "TechDoQuest": {
+  "status": "nothing_to_read",
+  "reason": "techdoquest.com/careers (Wix) has no job list; only 'Send Your Profile' to careers@techdoquest.com (email-only).",
+  "by": "research agent (batch C)"
+ },
+ "SAMS DIGITAL": {
+  "status": "nothing_to_read",
+  "reason": "samsdigital.in/careers is a static culture page with no openings, no ATS link, no form; only 'Get in Touch'.",
+  "by": "research agent (batch C)"
+ },
+ "Third Wave Coffee": {
+  "status": "nothing_to_read",
+  "reason": "thirdwavecoffee.in/pages/career (Shopify) says 'Watch this space for future openings' with no listed roles or ATS link.",
+  "by": "research agent (batch C)"
+ },
+ "Quanteon Solutions": {
+  "status": "nothing_to_read",
+  "reason": "quanteonsolutions.com/careers is a Replit-built SPA; its 4 Hyderabad roles (AI/ML Engineer, React Native Developer, Technical Lead, Full Stack Developer) are hardcoded in the JS bundle /assets/index-*.js, with no job pages or feed; applying",
+  "by": "research agent (batch C)"
+ },
+ "Wonder Worth Solutions": {
+  "status": "pending",
+  "reason": "wonderws.com/careers is a 404; homepage links careers.wonderws.com (also named in the LinkedIn JD for 'L1 Junior Software Developer', Vellore), but that host (Cloudflare) connects and then never answers, from curl or headless Chrome. Try ag",
+  "by": "checked by hand"
+ },
+ "AiSensy": {
+  "status": "pending",
+  "reason": "needs a reader: AiSensy Recruitment OS: GET https://hiring.aisensy.com/api/public/application-pool/DXkRc0pQuJNRBwWQX0uDS6qTVpd79vnr -> {workspaceName, roles:[{id,title,department,location (Gurgaon/Gurugram or null),d",
+  "by": "checked by hand"
+ },
+ "Archer": {
+  "status": "blocked",
+  "reason": "Archer IRM (archerirm.com/careers) uses UKG Pro Recruiting at gusea1p01.rec.pro.ukg.net/ARC1037ARCHT/JobBoard/7b869dcd-0d1e-4fe4-be7d-df83dc5a593a. The board page embeds only 2 featured jobs; the full list comes from JobBoardView/LoadSearch",
+  "by": "research agent (batch A)"
+ },
+ "Alluraa": {
+  "status": "nothing_to_read",
+  "reason": "alluraa.com/careers is a Vue SPA reading POST https://www.alluraa.com:3000/webapi/getCarearlist; it returns 6 roles (incl. Full Stack Developer, Delhi) but all were created 15-18 Sept 2021 and never changed, so the page is a stale placehold",
+  "by": "research agent (batch A)"
+ },
+ "Fintel Research Labs Pvt Ltd": {
+  "status": "nothing_to_read",
+  "reason": "fintelresearch.com/#careers has no job list; it says open roles are posted on LinkedIn first and links there, plus a contact form/email (support@fintelresearch.com). LinkedIn-only.",
+  "by": "research agent (batch A)"
+ },
+ "Dev Satva": {
+  "status": "nothing_to_read",
+  "reason": "devsatva.com (data-engineering/AI consultancy) has no careers page: /careers just serves the SPA home, sitemap.xml lists only about/services/projects/faq/blog/contact. No openings published on its own site; LinkedIn-only.",
+  "by": "research agent (batch A)"
+ },
+ "Delta Technology Hub": {
+  "status": "blocked",
+  "reason": "Discovery's deltahub.in is an unrelated options-trading app. Delta Technology Hub (Bengaluru) is Delta Air Lines' India unit; delta.com/careers -> delta.avature.net/en_US/careers, which answers HTTP 202 with x-amzn-waf-action: challenge (AW",
+  "by": "research agent (batch A)"
+ },
+ "Collegedunia": {
+  "status": "nothing_to_read",
+  "reason": "collegedunia.com/careers is 404 (discovery's URL is an unrelated article). A Workable account 'collegedunia' exists but lists 0 jobs (widget and v3 API), and a Trakstar/Recruiterbox account has a single years-old post ('Sr. Software Enginee",
+  "by": "research agent (batch A)"
+ },
+ "Battery Smart": {
+  "status": "nothing_to_read",
+  "reason": "batterysmart.in/careers (Next.js) is culture/values content only, with no job list or ATS link (checked page and its JS chunk). Workable account 'battery-smart' exists but has 0 jobs; batterysmart.darwinbox.in exists but its job API answers",
+  "by": "research agent (batch A)"
+ },
+ "Miamin Systems": {
+  "status": "pending",
+  "reason": "needs a reader: Miamin custom PHP: GET https://miamincorp.com/fetch_jobs.php -> JSON list [{id,title,company,location ('Bangalore, Karnataka'),type ('Full-Time'|'Internship'...),created_at ('YYYY-MM-DD HH:MM:SS')}]. ",
+  "by": "checked by hand"
+ },
+ "Fancall Private Limited": {
+  "status": "nothing_to_read",
+  "reason": "fancall.in/careers says 'No open roles right now' and asks people to email careers@fancall.in; no ATS or feed behind the page.",
+  "by": "research agent (batch A)"
+ },
+ "Digichorus Technologies Pvt Ltd": {
+  "status": "nothing_to_read",
+  "reason": "digichorus.com/about/careers is a Wix page that renders the About page only (values, NASSCOM, Pune HQ) with no openings, form or ATS link; only contact is connect@digichorus.com. LinkedIn-only.",
+  "by": "research agent (batch A)"
+ },
+ "Geojit Technologies": {
+  "status": "nothing_to_read",
+  "reason": "Geojit Technologies (Kochi subsidiary of Geojit Financial Services) has no live website of its own (geojittechnologies.com and variants don't resolve). Parent geojit.com/career is an ASP.NET postback form listing only branch roles (Dealer, ",
+  "by": "research agent (batch A)"
+ },
+ "Heads Up For Tails": {
+  "status": "nothing_to_read",
+  "reason": "headsupfortails.com/pages/careers (Shopify) has no openings list: a generic application form (/pages/submit-job-application, formbuilder) plus hireme@headsupfortails.com. No ATS found (greenhouse/lever/ashby/keka/darwinbox/workable/zoho pro",
+  "by": "research agent (batch A)"
+ },
+ "Helpshift": {
+  "status": "alias",
+  "parent": "Keywords Studios",
+  "reason": "Helpshift's roles are posted on its parent Keywords Studios' careers site",
+  "by": "research agent (batch A)"
+ },
+ "Interactive Brokers": {
+  "status": "blocked",
+  "reason": "interactivebrokers.com careers page links only to Dayforce HCM (jobs.dayforcehcm.com/en-US/ibgllc/CANDIDATEPORTAL). The Next.js app's search call POST /api/geo/ibgllc/jobposting/search answered 403 to a plain script request, so stopped. Old",
+  "by": "research agent (batch B)"
+ },
+ "Mizuho": {
+  "status": "nothing_to_read",
+  "reason": "Mizuho Global Services (India, Chennai) careers page mizuhogroup.com/asia-pacific/mizuho-global-services/careers links only to a LinkedIn job search; Americas Workday (mizuho.wd1/mizuhoamericas, 114 jobs) has no India roles (reader test: 0)",
+  "by": "research agent (batch B)"
+ },
+ "Nuaav": {
+  "status": "pending",
+  "reason": "needs a reader: Own page, one GET https://www.nuaav.com/careers: each role is <span class=\"acc-title\">TITLE</span><span class=\"acc-meta t-sm\">TEAM · Noida, India · Full time</span>; description is client-rendered on ",
+  "by": "checked by hand"
+ },
+ "ServiceChannel": {
+  "status": "blocked",
+  "reason": "servicechannel.com/about/careers/ links only to its parent's site https://careers.fortive.com/servicechannel, which answers 403 to scripts, so stopped. Guessed Fortive Workday tenants (fortive.wd1/wd5 Fortive/FortiveCareers) are not valid (",
+  "by": "research agent (batch B)"
+ },
+ "Servify": {
+  "status": "nothing_to_read",
+  "reason": "servify.com/careers and servify.com/in/careers list no openings: the only call to action is 'share your application ... to careers@servify.com' (email-only). No ATS embed; probed keka/darwinbox/greenhouse/lever/freshteam/zoho slugs 'servify",
+  "by": "research agent (batch B)"
+ },
+ "Sage": {
+  "status": "blocked",
+  "reason": "sage.com/en-gb/company/careers/ (and en-us job-search) answer 403 'Attention Required! | Cloudflare' to scripts, so stopped. Could not find the ATS host another way: guessed Workday tenants (sage.wd1/wd3/wd5 'Sage'/'External') return 422, G",
+  "by": "research agent (batch B)"
+ },
+ "Park Place Technologies": {
+  "status": "blocked",
+  "reason": "parkplacetechnologies.com/careers/ answers 403 Cloudflare 'Attention Required' to scripts, so stopped. No public ATS found by slug probes (greenhouse/lever/ashby/smartrecruiters/workable/keka/darwinbox/zoho/recruitee) or Workday guesses. Hy",
+  "by": "research agent (batch B)"
+ },
+ "Sun King": {
+  "status": "blocked",
+  "reason": "in.sunking.com/work-with-us/ answers 403 Cloudflare 'Attention Required' to scripts, so stopped. Slug probes (sunking/sunkingsolar/greenlightplanet on greenhouse/lever/ashby/smartrecruiters/workable/keka/darwinbox/zoho) found nothing. Gurug",
+  "by": "research agent (batch B)"
+ },
+ "Star Software": {
+  "status": "blocked",
+  "reason": "starsoftware.co/career/ answers 406 'Not Acceptable!' (Apache mod_security) to scripts, so stopped. No ATS found by slug probes (keka/darwinbox/zoho/greenhouse/lever/ashby/smartrecruiters/workable).",
+  "by": "research agent (batch B)"
+ },
+ "1% Club": {
+  "status": "nothing_to_read",
+  "reason": "careers page says 'no jobs available' — https://1club.ai/careers",
+  "by": "E1 triage, reviewed by hand"
+ },
+ "3i Infotech": {
+  "status": "nothing_to_read",
+  "reason": "no job list; applications by email (email careers@3i-infotech.com) — https://www.3i-infotech.com/careers/",
+  "by": "E1 triage, reviewed by hand"
+ },
+ "Infra.Market": {
+  "status": "nothing_to_read",
+  "reason": "careers page says 'NO VACANCIES' — https://infra.market/careers/",
+  "by": "E1 triage, reviewed by hand"
+ },
+ "Joveo": {
+  "status": "pending",
+  "reason": "needs a reader: Joveo career-site CMS ('joveo'): GET https://careers.joveo.com/job-sitemap-0.xml (via robots Sitemap: job-sitemap.xml index) -> for each https://careers.joveo.com/job/<uuid> page, parse <script id=__N",
+  "by": "checked by hand"
+ },
+ "M2P Fintech": {
+  "status": "nothing_to_read",
+  "reason": "careers page says 'No Jobs' — https://careers.m2pfintech.com/",
+  "by": "E1 triage, reviewed by hand"
+ },
+ "Moonfrog": {
+  "status": "nothing_to_read",
+  "reason": "careers page says 'No Open Positions Currently' (email hr@moonfroglabs.com) — https://moonfroglabs.com/careers/",
+  "by": "E1 triage, reviewed by hand"
+ },
+ "Octro": {
+  "status": "nothing_to_read",
+  "reason": "no job list; applications by email (email hr@octro.com) — https://www.octro.com/career.html",
+  "by": "E1 triage, reviewed by hand"
+ },
+ "OneCard": {
+  "status": "nothing_to_read",
+  "reason": "no job list; applications by email (email careers@getonecard.app) — https://getonecard.app/careers/",
+  "by": "E1 triage, reviewed by hand"
+ },
+ "Pice": {
+  "status": "nothing_to_read",
+  "reason": "careers page says 'No open positions at the moment' — https://jobs.reczee.com/pice",
+  "by": "E1 triage, reviewed by hand"
+ },
+ "Primus": {
+  "status": "nothing_to_read",
+  "reason": "no job list; applications by email (email hr@primuslife.in) — https://www.primuslife.in/careers/",
+  "by": "E1 triage, reviewed by hand"
+ },
+ "Shadowfax": {
+  "status": "nothing_to_read",
+  "reason": "careers page says 'No job openings' — https://shadowfax.in/careers",
+  "by": "E1 triage, reviewed by hand"
+ },
+ "Shyft": {
+  "status": "nothing_to_read",
+  "reason": "no job list; applications by email (email careers@betheshyft.com) — https://www.betheshyft.com/careers/",
+  "by": "E1 triage, reviewed by hand"
+ },
+ "Skillmatics": {
+  "status": "nothing_to_read",
+  "reason": "no job list; applications by email (email careers@skillmaticsworld.com) — https://skillmaticsworld.com/pages/careers",
+  "by": "E1 triage, reviewed by hand"
+ },
+ "smallcase": {
+  "status": "nothing_to_read",
+  "reason": "careers page says 'There are no jobs' — https://app.pyjamahr.com/careers?company=smallcase&company_uuid=261558",
+  "by": "E1 triage, reviewed by hand"
+ },
+ "Suburban Diagnostics": {
+  "status": "nothing_to_read",
+  "reason": "careers page says 'No jobs' — https://www.suburbandiagnostics.com/career",
+  "by": "E1 triage, reviewed by hand"
+ },
+ "Vayana": {
+  "status": "nothing_to_read",
+  "reason": "careers page says 'No open roles at the moment' — https://www.vayana.com/careers/",
+  "by": "E1 triage, reviewed by hand"
+ },
+ "Grofers": {
+  "status": "nothing_to_read",
+  "reason": "no job list; applications by email (email hr@eternal.com) — https://www.eternal.com/careers/",
+  "by": "E1 triage, reviewed by hand"
+ },
+ "Games24x7": {
+  "status": "nothing_to_read",
+  "reason": "games24x7.com/life 'Join us' links games24x7.darwinbox.in/ms/candidate/a6150564417204/careers, which renders blank; getCompanyConfig for that tenant says recruitment_enabled:false and alljobs returns job_counts 0 (with companyId in body too",
+  "by": "research agent (batch E)"
+ },
+ "FirstCry": {
+  "status": "nothing_to_read",
+  "reason": "Own PHP careers page firstcry.com/careers; career_listing.min.js loads jobs via POST https://www.firstcry.com/careers/offers/getjobs (form: page,pageSize,department,location,title,minexp,maxexp) which returns null, and every department 'Rea",
+  "by": "research agent (batch E)"
+ },
+ "Dailyhunt": {
+  "status": "nothing_to_read",
+  "reason": "Parent VerSe Innovation's careers page verse.in/career.php is a 'Talent Network' resume form plus careers@verse.in; its 'jobs' link https://jobs.careerswith-us.com/verse is dead (DNS resolves to 127.0.0.1). dailyhunt.in redirects to the new",
+  "by": "research agent (batch E)"
+ },
+ "Cuemath": {
+  "status": "nothing_to_read",
+  "reason": "cuemath.com footer has no careers link; /careers, /en-in/careers/, /en-us/careers/, /jobs/, /join-us/ all 404; careers./jobs.cuemath.com don't resolve. Only 'Apply Now' -> tutorhiring.cuemath.com/signup (tutor sign-up form, not staff jobs).",
+  "by": "research agent (batch E)"
+ },
+ "Ola Krutrim": {
+  "status": "nothing_to_read",
+  "reason": "olakrutrim.com has no careers page (/careers 404, sitemap has none). ai-labs.olakrutrim.com 'Career Opportunities -> Open Positions' button opens https://www.linkedin.com/company/krutrim/jobs/ : LinkedIn-only. No ATS board under krutrim/ola",
+  "by": "research agent (batch E)"
+ },
+ "Scapia": {
+  "status": "nothing_to_read",
+  "reason": "scapia.cards (rendered) footer has no careers/jobs link, sitemaps list no careers page, /careers 404, careers.scapia.cards doesn't resolve. scapia.freshteam.com exists but its widget feed has 0 jobs. Only LinkedIn link. Re-check freshteam s",
+  "by": "research agent (batch E)"
+ },
+ "Croma": {
+  "status": "blocked",
+  "reason": "Real site is croma.com (Infiniti Retail, Tata), not wearecroma.it. croma.com answers 403 to scripts site-wide (bot protection), so stopped there. careers./jobs.croma.com don't resolve; no Darwinbox/Keka/Zoho/Greenhouse/Lever board under cro",
+  "by": "research agent (batch E)"
+ },
+ "Alstom": {
+  "status": "pending",
+  "reason": "needs a reader: Same SuccessFactors CSB RSS reader as Standard Chartered: GET https://jobsearch.alstom.com/sitemal.xml; config {\"ats\":\"portal\",\"portal\":\"successfactors\",\"host\":\"jobsearch.alstom.com\"}",
+  "by": "checked by hand"
+ },
+ "Fujitsu": {
+  "status": "pending",
+  "reason": "needs a reader: Same SuccessFactors CSB RSS reader: GET https://www.jobs.global.fujitsu.com/sitemal.xml; config {\"ats\":\"portal\",\"portal\":\"successfactors\",\"host\":\"www.jobs.global.fujitsu.com\"}",
+  "by": "checked by hand"
+ },
+ "Axis Bank": {
+  "status": "pending",
+  "reason": "needs a reader: RippleHire ('ripplehire'): POST https://<slug>.ripplehire.com/candidate/candidatejobsearch, form-encoded body careerSiteUrlParams={\"page\":0,\"search\":\"*:*\",\"token\":\"<token>\",\"source\":\"CAREERSITE\",\"page",
+  "by": "checked by hand"
+ },
+ "HDFC Bank": {
+  "status": "pending",
+  "reason": "needs a reader: RippleHire reader (spec under Axis Bank). Config {\"ats\":\"portal\",\"portal\":\"ripplehire\",\"slug\":\"hdfcbank\",\"token\":\"<redacted>}",
+  "by": "checked by hand"
+ },
+ "FreeCharge": {
+  "status": "pending",
+  "reason": "needs a reader: RippleHire reader (spec under Axis Bank). Config {\"ats\":\"portal\",\"portal\":\"ripplehire\",\"slug\":\"freecharge\",\"token\":\"<redacted>}",
+  "by": "checked by hand"
+ },
+ "Darwinbox": {
+  "status": "blocked",
+  "reason": "darwinbox.com/careers links dbx.darwinbox.in/ms/candidatev2/main/careers/allJobs (Darwinbox's own tenant, Cloudflare). The public POST /ms/candidateapi/job/alljobs?companyId=main that the existing darwinbox reader uses answers 403 for this ",
+  "by": "research agent (batch d)"
+ },
+ "Pristyn Care": {
+  "status": "dead",
+  "reason": "pristyncare.com/company/careers links only pristyncare.skillate.com; that host (52.149.26.167) and skillate.com time out (connection timeout after 40s, twice). No Lever/Greenhouse/Keka board; pristyncare.darwinbox.in API returns a Cloudflar",
+  "by": "research agent (batch d)"
  }
 }

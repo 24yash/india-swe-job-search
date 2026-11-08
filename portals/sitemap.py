@@ -134,6 +134,8 @@ def fetch(c, h):
 
     def detail(item):
         url, _ = item
+        if ".icims.com" in url and "in_iframe=1" not in url:  # classic iCIMS: JobPosting data only in the iframe view
+            url += ("&" if "?" in url else "?") + "in_iframe=1"
         page = _get(h, url, robots, 3_000_000)
         if not page:
             return None

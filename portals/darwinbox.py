@@ -12,7 +12,8 @@ def fetch(c, h):
     now = datetime.now(timezone.utc).timestamp()
     page, seen = 1, 0
     while page <= 20:
-        d = h.post(f"{base}/ms/candidateapi/job/alljobs?companyId={company_id}", {"page": page, "limit": 100},
+        # the careers page also sends companyId in the body; tenants with a hex id (PhysicsWallah) need it there
+        d = h.post(f"{base}/ms/candidateapi/job/alljobs?companyId={company_id}", {"companyId": company_id, "page": page, "limit": 100},
                    headers={"Accept": "application/json"})
         rows = d.get("data") or []
         for j in rows:

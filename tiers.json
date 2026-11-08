@@ -784,8 +784,8 @@
    "name": "Hewlett Packard Enterprise",
    "type": "Infra product MNC",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "India entry 14.9, intermediate 24.6 LPA: depends on level (levels.fyi, Nov 2026)"
+   "pay": "likely",
+   "pay_note": "India Entry 14.8 (below), Intermediate 24.5 LPA; median 21.8 (levels.fyi, Nov 2026)"
   },
   {
    "name": "HP",
@@ -864,8 +864,8 @@
    "name": "Micron Technology",
    "type": "Semiconductor MNC",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "Levels.fyi India SE median TC 29.8 LPA; E1 13.9 (below floor), E2 24.2, E3 30.0 LPA: level-dependent (Nov 2026)"
+   "pay": "likely",
+   "pay_note": "India E1 13.9 (yoe 1), E2 24.1 LPA (yoe 2); median 29.8 (levels.fyi, Nov 2026)"
   },
   {
    "name": "KLA",
@@ -1189,8 +1189,8 @@
    "name": "Nike",
    "type": "Retail tech centre",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "India SWE I 15.8 (below), SWE II 32.1 LPA; median 36.4 (levels.fyi, Nov 2026)"
   },
   {
    "name": "McDonald's",
@@ -1203,8 +1203,8 @@
    "name": "Sabre",
    "type": "Travel tech",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Levels.fyi India L2 19.6, L3 21.2 LPA — borderline"
+   "pay": "below",
+   "pay_note": "India L1 14.4, L2 19.4, L3 21.0 LPA; median 20.5 (levels.fyi, Nov 2026)"
   },
   {
    "name": "Amadeus",
@@ -1322,8 +1322,8 @@
    "name": "Bank of America",
    "type": "Global bank tech centre",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Levels.fyi India Band 6 13.2, Band 5 23.5 LPA — band-dependent"
+   "pay": "below",
+   "pay_note": "India SE1 13.1 (yoe 4), SE2 23.3 LPA (yoe 8); median 12.6 (levels.fyi, Nov 2026)"
   },
   {
    "name": "BlackRock",
@@ -1380,22 +1380,22 @@
    "name": "Fiserv",
    "type": "Fintech infra",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Bands often below bar"
+   "pay": "below",
+   "pay_note": "India L1 10.1, L2 16.8 LPA; median 15.1 (levels.fyi, Nov 2026)"
   },
   {
    "name": "Broadridge",
    "type": "Fintech infra",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "below",
+   "pay_note": "India Software Engineer 19.7, Senior SE 17.8 LPA; median 16.4 (levels.fyi, Nov 2026)"
   },
   {
    "name": "S&P Global",
    "type": "Financial data",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "below",
+   "pay_note": "India L8 12.9, L9 19.0 LPA (L9 ~4-5 yoe); median 21.3 (levels.fyi, Nov 2026)"
   },
   {
    "name": "Moody's",
@@ -1408,8 +1408,8 @@
    "name": "MSCI",
    "type": "Financial data",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "India Analyst 18.4 (below), Associate 31.4 LPA; median 36.0 (levels.fyi, Nov 2026)"
   },
   {
    "name": "Morningstar",
@@ -1429,8 +1429,8 @@
    "name": "LSEG",
    "type": "Financial data",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "India SE median TC 40.9 LPA, no level split (levels.fyi, Nov 2026)"
   },
   {
    "name": "Intercontinental Exchange",
@@ -1443,8 +1443,8 @@
    "name": "CME Group",
    "type": "Exchange tech",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "below",
+   "pay_note": "India SE II 18.0, SE III 27.8 LPA; median 21.5 (levels.fyi, Nov 2026)"
   },
   {
    "name": "Arcesium",
@@ -1708,8 +1708,8 @@
    "name": "Jupiter",
    "type": "Neobank",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "India SE median TC 32.3 LPA, no level split (levels.fyi, Nov 2026)"
   },
   {
    "name": "Fi Money",
@@ -1757,8 +1757,8 @@
    "name": "Moneyview",
    "type": "Lending fintech",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "India SE TC range 24.5-34.8 LPA, few data points, no level split (levels.fyi, Nov 2026)"
   },
   {
    "name": "Dhan",
@@ -1785,8 +1785,8 @@
    "name": "Angel One",
    "type": "Broking fintech (listed)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "India SDE 1 23.1, SDE 2 35.8 LPA; median 39.4 (levels.fyi, Nov 2026)"
   },
   {
    "name": "Perfios",
@@ -2141,8 +2141,8 @@
    "name": "Unacademy",
    "type": "Edtech",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "below",
+   "pay_note": "India Software Engineer 17.1, Senior SE 31.6 LPA; median 14.0 (levels.fyi, Nov 2026)"
   },
   {
    "name": "upGrad",
@@ -2373,8 +2373,8 @@
    "name": "Increff",
    "type": "SaaS",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "below",
+   "pay_note": "India SE median TC 16.8 LPA (levels.fyi, Nov 2026)"
   },
   {
    "name": "Shiprocket",
@@ -2508,8 +2508,8 @@
    "name": "TrueFoundry",
    "type": "AI infra startup",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "India SE median TC 30.8 LPA, no level split, thin data (levels.fyi, Nov 2026)"
   },
   {
    "name": "Composio",
@@ -2913,8 +2913,8 @@
    "name": "Sumo Logic",
    "type": "Global product",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "India SE II 32.0, Senior SE I 45.3 LPA; median 44.3 (levels.fyi, Nov 2026)"
   },
   {
    "name": "Wingify",
@@ -2955,8 +2955,8 @@
    "name": "Comcast",
    "type": "Global product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "India Eng I 8.0, II 13.2, III 22.3 LPA; median 14.5 (levels.fyi, Nov 2026)"
   },
   {
    "name": "Disney",
@@ -3063,8 +3063,8 @@
    "name": "McAfee",
    "type": "Global product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "India Grade 5 17.2, Grade 6 25.3 LPA: depends on level (levels.fyi, Nov 2026)"
+   "pay": "likely",
+   "pay_note": "India Grade 5 17.2 (below), Grade 6 25.3 LPA; median 22.5 (levels.fyi, Nov 2026)"
   },
   {
    "name": "Trellix",
@@ -3312,8 +3312,8 @@
    "name": "Siemens",
    "type": "Global product",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "India T7 12.7 (below), T8 27.6 LPA; median 24.7 (levels.fyi, Nov 2026)"
   },
   {
    "name": "Bosch",
@@ -3333,8 +3333,8 @@
    "name": "ABB",
    "type": "Global product",
    "quality": 8,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "India Software Engineer 16.7, Senior SE 23.4 LPA; median 18.8 (levels.fyi, Nov 2026)"
   },
   {
    "name": "Schneider Electric",
@@ -3417,8 +3417,8 @@
    "name": "Trimble",
    "type": "Global product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "India L2 14.0 (below), L3 28.9 LPA; median 22.0 (levels.fyi, Nov 2026)"
   },
   {
    "name": "Hexagon",
@@ -3825,8 +3825,8 @@
    "name": "Lendingkart",
    "type": "Indian fintech",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "India SE median TC 37.1 LPA, no level split (levels.fyi, Nov 2026)"
   },
   {
    "name": "Indifi",
@@ -4844,8 +4844,8 @@
    "name": "BCG",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "India L1 17.2, L2 28.6 LPA: depends on level (levels.fyi, Nov 2026)",
+   "pay": "likely",
+   "pay_note": "India L1 17.2 (below), L2 28.6 LPA; median 28.3 (levels.fyi, Nov 2026)",
    "careers_url": "https://careers.bcg.com/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -5231,8 +5231,8 @@
    "name": "DBS",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "India (DBS Bank) Analyst 13.2, Associate 17.7 LPA; median 18.9 (levels.fyi, Nov 2026)",
    "careers_url": "https://www.dbs.com/careers/default.page",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -5411,8 +5411,8 @@
    "name": "Enfussion",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "India (Enfusion) SE median TC 14.8 LPA (levels.fyi, Nov 2026)",
    "careers_url": "https://enfusion.com/careers/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -6149,8 +6149,8 @@
    "name": "OpenText",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "India Associate SE 11.7, SE 19.2 LPA; median 19.8 (levels.fyi, Nov 2026)",
    "careers_url": "https://careers.opentext.com/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -6528,8 +6528,8 @@
    "name": "Sureify",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "India SE median TC 13.6 LPA (levels.fyi, Nov 2026)",
    "careers_url": "https://sureify.com/careers/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -6618,8 +6618,8 @@
    "name": "Treebo Hotels",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "India SE median TC 17.2 LPA (levels.fyi, Nov 2026)",
    "careers_url": "https://www.linkedin.com/company/treebohotels/jobs/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -7806,8 +7806,8 @@
    "name": "Testsigma",
    "type": "Accel-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "India SE median 6.5 LPA, thin data (levels.fyi, Nov 2026)",
    "careers_url": "https://testsigma.com",
    "source": "Accel-backed startup (ISJB)"
   },
@@ -9809,6 +9809,237 @@
    "quality": 10,
    "pay": "unclear",
    "pay_note": "No India SE data on levels.fyi (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Nationwide",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+  },
+  {
+   "name": "TripJack",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+  },
+  {
+   "name": "Seismic",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+  },
+  {
+   "name": "QuinStreet",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+  },
+  {
+   "name": "Rohde & Schwarz",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+  },
+  {
+   "name": "Vontier",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+  },
+  {
+   "name": "isolved",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+  },
+  {
+   "name": "Ares Management",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+  },
+  {
+   "name": "Cognite",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+  },
+  {
+   "name": "Commure",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+  },
+  {
+   "name": "Beghou",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi company page (beghou-consulting) (Nov 2026)"
+  },
+  {
+   "name": "Foxit",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+  },
+  {
+   "name": "Arcadia",
+   "type": "",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "India IC2 25.0, IC3 39.2 LPA; median 27.9 (levels.fyi, Nov 2026)"
+  },
+  {
+   "name": "Cin7",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+  },
+  {
+   "name": "Transaction Network Services (TNS)",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+  },
+  {
+   "name": "Securin Inc.",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi company page (Nov 2026)"
+  },
+  {
+   "name": "Air Arabia",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi company page (Nov 2026)"
+  },
+  {
+   "name": "Aftershoot",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi company page (Nov 2026)"
+  },
+  {
+   "name": "Gather AI",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+  },
+  {
+   "name": "WisdomAI",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi company page (Nov 2026)"
+  },
+  {
+   "name": "Playlist",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+  },
+  {
+   "name": "Axiamatic",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "small startup, not checked in depth; no pay data found (Nov 2026)"
+  },
+  {
+   "name": "CleanStart",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "small startup, not checked in depth; no pay data found (Nov 2026)"
+  },
+  {
+   "name": "CLO Virtual Fashion",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "small startup, not checked in depth; no pay data found (Nov 2026)"
+  },
+  {
+   "name": "Kulfi",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "small startup, not checked in depth; no pay data found (Nov 2026)"
+  },
+  {
+   "name": "Loylogic",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "small startup, not checked in depth; no pay data found (Nov 2026)"
+  },
+  {
+   "name": "MaxIQ",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "small startup, not checked in depth; no pay data found (Nov 2026)"
+  },
+  {
+   "name": "Mobility Global",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "small startup, not checked in depth; no pay data found (Nov 2026)"
+  },
+  {
+   "name": "NewSpace Research and Technologies",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "small startup, not checked in depth; no pay data found (Nov 2026)"
+  },
+  {
+   "name": "Payfinia",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "small startup, not checked in depth; no pay data found (Nov 2026)"
+  },
+  {
+   "name": "Rox",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "small startup, not checked in depth; no pay data found (Nov 2026)"
+  },
+  {
+   "name": "The ePlane Company",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "small startup, not checked in depth; no pay data found (Nov 2026)"
+  },
+  {
+   "name": "vCommission",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "small startup, not checked in depth; no pay data found (Nov 2026)"
   }
  ],
  "services_and_staffing": [
@@ -9964,7 +10195,8 @@
   "VRINDA INTERNATIONAL",
   "Wissen Technology",
   "Mako IT Lab",
-  "TVS Next"
+  "TVS Next",
+  "WNS"
  ],
  "staffing_keywords": [
   "Recruitment",

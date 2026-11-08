@@ -57,6 +57,8 @@ def main():
         if "<" in n:
             continue  # parser debris from an old LinkedIn crawl (fixed)
         src, note = source_of(n), notes.get(n, {})
+        if note.get("status") == "alias" and source_of(note.get("parent", "")):
+            src = source_of(note["parent"])  # another name for a company we read (Citi Bank -> Citi, Splunk -> Cisco)
         if src:
             if src["name"] in seen_src:
                 continue  # another bank name for the same company (Mastercard / Mastercard Incorporated): count it once
