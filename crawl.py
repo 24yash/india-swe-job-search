@@ -107,9 +107,16 @@ INDIA_RE = re.compile("|".join(("(?<![a-z])" if k[:1].isalpha() else "") + re.es
                                for k in INDIA), re.I)
 
 
+ONLY_IN_CODE = re.compile(r"(?:^|/)\s*[^,/]+,\s*in\s*(?:$|/)")  # "Greenwood, IN" = Indiana; "Pune, MH, IN" stays India
+
+
 def in_india(loc):
     l = (loc or "").lower()
-    return bool(INDIA_RE.search(l)) and "kota kinabalu" not in l
+    if not INDIA_RE.search(l) or "kota kinabalu" in l:
+        return False
+    # ", in" alone is ambiguous: a two-part "City, IN" is the US state code, so it needs another India marker
+    hits = {m.group(0).lower() for m in INDIA_RE.finditer(l)}
+    return not (hits <= {", in"} and ONLY_IN_CODE.search(l))
 
 
 def title_ok(title):
@@ -303,6 +310,23 @@ def recruitee(c):
 def eightfold(c):
     """Eightfold PCSX careers sites (Microsoft, Qualcomm, Autodesk…): the public search API behind the site."""
     host, domain = c["host"], c["domain"]
+    if c.get("api") == "v2":  # older Eightfold sites (Netflix): public list API, description from the detail call
+        v2 = f"https://{host}/api/apply/v2/jobs"
+        for start in range(0, 500, 10):
+            pos = get(v2, params={"domain": domain, "location": "India", "start": start, "num": 10}).get("positions", [])
+            for p in pos:
+                if not title_ok(p["name"]):
+                    continue
+                try:
+                    text = strip_html(get(f"{v2}/{p['id']}", params={"domain": domain}).get("job_description"))
+                except requests.RequestException:
+                    continue  # closed between the list and the detail call
+                yield Job(c["name"], p["name"], " / ".join(p.get("locations") or [p.get("location", "")]),
+                          p.get("canonicalPositionUrl") or f"https://{host}/careers/job/{p['id']}",
+                          parse_ts(p.get("t_create")), text, remote=(p.get("work_location_option") or "") == "remote")
+            if len(pos) < 10:
+                return
+        return
     api = f"https://{host}/api/pcsx"
     SESSION.get(f"https://{host}/careers?domain={domain}")  # sets the cookies the API expects
     seen = set()

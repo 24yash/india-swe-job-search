@@ -399,6 +399,79 @@ PyjamaHR (Zoid, smallcase), Zwayam (GreyOrange, Snapmint).
 **Refreshes:** `refresh.sh` re-reads every source; readers read whole lists in as few requests as the site allows
 (one feed where there is one, keyword-filtered pages for Avature, detail pages only for fitting India roles).
 
+## Round six: watch list for good payers with nothing fitting today (10 Nov 2026)
+
+A company whose readable feed lists no fitting India role today is still a source: every fast run reads it, so a new
+India opening shows up the same day instead of waiting for LinkedIn. Six good payers that coverage had marked
+"nothing to read" (no India engineering roles, or 0 openings) are now sources:
+
+| Company | Source | Note |
+|---|---|---|
+| Netflix | Eightfold, older public API (`"api": "v2"`) | The PCSX API returns 403 to scripts; the v2 list API the site itself uses answers. India roles today are Mumbai content/business only. |
+| Spotify | Lever `spotify` | No India roles today |
+| HubSpot | Greenhouse `hubspotjobs` (board name verified "HubSpot") | No India roles today |
+| Bloomberg | Avature `bloomberg.avature.net/careers` | No India roles today |
+| Two Sigma | Avature, list page `ExperiencedRoles` (new `list_path` option) | Location in a bare `paragraph_inner-span` (new pattern) |
+| Media.net | `links` reader over the Engineering / System Ops / IT / Data Science pages | Engineering lists 0 positions today |
+
+Not added: **Zerodha** (the careers SPA shows a Cloudflare challenge in a browser; stop there), **Deel** (Ashby board empty,
+jobs hosted elsewhere), and pages that only say "no openings" with no list behind them (1% Club, Infra.Market, M2P, Pice,
+Shadowfax, smallcase, Vayana…).
+
+### Wrong careers links (10 Nov 2026)
+
+Every pending company's careers link was fetched and its page title compared with the company name; 77 were flagged, and
+each was checked by hand (web search, the page in a browser, its network requests).
+
+- **New sources (9):** Global Payments (Workday `tsys/TSYS`; the old link was payments.in), Caterpillar (Workday
+  `cat/CaterpillarCareers`; old link was a domain-sale page), Ericsson (Eightfold `jobs.ericsson.com`), Eightfold AI
+  (Eightfold `app.eightfold.ai`), Qure.ai (Zoho Recruit on `career.qure.ai`), Wayground/Quizizz (Lever), Aryaka
+  (Jobvite list via `links`), Seekho (Workable), Concurrence (formerly Amigo; Ashby, US roles only).
+- **Aliases** (read through the parent's source): AWS and Prime Video -> Amazon, Kaleyra -> Tata Communications,
+  Informatica -> Salesforce, Plum -> Plum HQ, Eightfold -> Eightfold AI, Cradlepoint -> Ericsson, Amigo -> Concurrence.
+- **Correct after all:** acquired companies whose link points to the acquirer (Vue.ai -> M2P, Playment -> TELUS Digital,
+  Airbase -> Paylocity, Khoros -> IgniteTech).
+- **No careers page of their own** (`/careers` redirects to the homepage): Acalvio, FITTR, OkCredit, Probe42, Prosimo,
+  ZYOD, fincover, Simplismart, OYO; Hungama's is a 404; Dukaan's "jobs" URL is a store. Their earlier links (often VC
+  portfolio boards) were kept. Dream11/Dream Sports links only to a dead Lever board. Last9's Lever board is gone.
+- **Excluded:** Yatra (SE pay ₹5.5-10 LPA). Shopsy is Flipkart's (old link was an unrelated German company).
+- **Still pending:** FPL Technologies/OneCard (careers page loads jobs from a hosted API; none listed today) and
+  Simplilearn (CEIPAL widget). Reading either needs a new reader; not done.
+
+### New platform readers (10 Nov 2026)
+
+| Reader | How it reads | Companies |
+|---|---|---|
+| `jobvite` | the server-rendered "view all" page (table or list theme); multi-location rows ("2 Locations") resolved from the job page's JobPosting data | Aryaka (moved from `links`), Forescout, IP Infusion |
+| `zappyhire` | the tenant's public search API the page uses (12 per page) + one detail call for description and years asked | Credgenics |
+| `pyjamahr` | api.pyjamahr.com career list + the job page's JobPosting data. Unknown slugs answer "0 jobs", so take the slug from a job link on the company's site | Zoid, smallcase |
+| `zwayam` | the POST the page sends to public.zwayam.com/jobs/search (domain + base64 company id from the page's sessionStorage); descriptions included; salary used only when the site shows it (`showSal`) | Snapmint, GreyOrange |
+| `successfactors` | the site's `/sitemal.xml` RSS feed (robots allows it, `/services/` is disallowed); India and title checked before decoding descriptions | Standard Chartered, Fujitsu, Alstom, JLR |
+| `avature` (extended) | labelled "Location:" field (Koch theme); per-company `searches` keeps big sites fast (Koch: 178 s -> 15 s with `["India", "Bengaluru"]`) | Koch |
+
+Config only: Celigo (Greenhouse `celigo`). Aliases: Land rover -> Jaguar, Ansys -> Synopsys.
+Checked and closed: Teabox (Freshteam account deleted), Nabhdrishti (no software roles; the "Dover" hit was the word "handover"),
+Appwrite (no open roles; Bessemer only mirrors it), Rattle (Greenhouse 404). CTERA and Klook: only a Bessemer listing.
+**RippleHire** (built after the user's OK): `ripplehire` reads the token from the company's own careers page on each run
+(HDFC Bank's link redirects to a tokened page), posts the site's own search, and loads details only for fitting India or
+remote roles. HDFC Bank, Axis Bank, FreeCharge, Cimpress. Pay: HDFC and Axis below the bar; Cimpress PR2 27.4 LPA.
+Result: A 687 -> 704, pending 308 -> 286, shortlist 445 -> 451 after pay checks.
+
+### Pay-first hand-built readers (10 Nov 2026)
+
+75 pending companies were pay-checked on levels.fyi (results in `tiers.json`): 20 likely, 13 borderline (overall-only
+20-30 LPA), 12 below the bar, the rest no data. Every likely or borderline company was then checked in the browser:
+
+| Result | Companies |
+|---|---|
+| New readers | `turbohire_feed` (Khatabook: its own careers page passes TurboHire's public list through; use a category view, the unfiltered list stops at 10), `mediatek` (the site's tRPC `job.getJobs`) |
+| Existing readers, new config | PayU and Nomura (SuccessFactors `sitemal.xml`), DTCC and Kroger (Oracle), MiQ (Greenhouse `miqdigital`), HSBC (Eightfold v2; PCSX is 403), Yahoo and T. Rowe Price (Workday), cult.fit (Zwayam), Avalara (sitemap), Ramp (Ashby) |
+| Nothing public to read | INDmoney (login), Uni Cards, Udaan, HERE (404s), HyperVerge (LinkedIn links only), Livspace, Scaler, Gupshup, Paysafe, Fyle (now Sage), Netcracker and John Deere and Sony (found boards have no India roles) |
+| Blocked or not built | Revolut (403), Best Buy and UBS (IBM BrassRing needs a session), ASML (Sitecore search token), Jio (ASP.NET postbacks), IBM/HashiCorp (internal search API), Ola and Setu (TurboHire), BMC (tenant not found) |
+
+Found while testing: `in_india` took "West Lafayette, IN" and "Greenwood, IN" (Indiana) for India; fixed with a test.
+Result: A 704 -> 717, pending 286 -> 245, shortlist 451 -> 461; Khatabook's SDE-I (1-2 yrs) scores 89.
+
 ## Where we still can't get data
 
 **819 bank companies** still have no direct source after both rounds (931 after round one). Their roles still reach the dashboard through LinkedIn's public search.
