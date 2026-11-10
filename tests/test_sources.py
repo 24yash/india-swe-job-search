@@ -95,6 +95,15 @@ patched({"position_details": {"data": {"jobDescription": "<p>2+ years</p>", "pub
 crawl.time = SimpleNamespace(sleep=lambda s: None, time=time.time)
 jobs = list(crawl.eightfold({"name": "Qualcomm", "host": "careers.qualcomm.com", "domain": "qualcomm.com"}))
 check("eightfold: reads search + details for the given host/domain", len(jobs) == 1 and jobs[0].url.endswith("/job/9"))
+patched({"/api/apply/v2/jobs/7": {"job_description": "<p>1-3 years of Java</p>"},
+         "/api/apply/v2/jobs/8": crawl.requests.RequestException("closed"),
+         "/api/apply/v2/jobs": lambda k: {"positions": [
+             {"id": 7, "name": "Software Engineer", "locations": ["Mumbai,India"], "t_create": 1793000000, "canonicalPositionUrl": "https://n.example/job/7"},
+             {"id": 8, "name": "Software Engineer", "locations": ["Mumbai,India"], "t_create": 1793000000},
+             {"id": 9, "name": "Publicity Manager - India", "locations": ["Mumbai,India"]}] if '"start": 0' in k else []}})
+jobs = list(crawl.eightfold({"name": "Netflix", "host": "explore.jobs.netflix.net", "domain": "netflix.com", "api": "v2"}))
+check("eightfold v2 (Netflix): India list, fitting titles only, description from the detail call, closed detail skipped",
+      [(j.url, j.text.strip()) for j in jobs] == [("https://n.example/job/7", "1-3 years of Java")], [(j.url, j.text) for j in jobs])
 check("microsoft still works through the eightfold reader", "microsoft" in crawl.FETCHERS and "eightfold" in crawl.FETCHERS and "portal" in crawl.FETCHERS)
 
 # --- portals: generic links reader ----------------------------------------------------------------------
@@ -346,6 +355,18 @@ check("Avature: list items parsed from both theme layouts (span location / icon 
       avature.items(ea_page) == [("https://jobs.example.com/en_US/careers/JobDetail/SE/1", "Software Engineer II", "Hyderabad, India")]
       and avature.items(mq_page) == [("https://r.example.com/en_US/careers/JobDetail?jobId=9", "Full Stack Developer", "Gurugram Office")],
       (avature.items(ea_page), avature.items(mq_page)))
+ts_page = ('<article class="article article--result" id="article--1"><h3 class="article__header__text__title"><a class="link" '
+           'href="https://c.example.com/careers/JobDetail/Software-Engineer/1"> Software Engineer </a></h3>'
+           '<div class="article__header__content__text"><span class="paragraph_inner-span">India - Bengaluru</span></div></article>')
+check("Avature: bare paragraph_inner-span location (Two Sigma theme)",
+      avature.items(ts_page) == [("https://c.example.com/careers/JobDetail/Software-Engineer/1", "Software Engineer", "India - Bengaluru")], avature.items(ts_page))
+asked = []
+_av = SimpleNamespace(SESSION=SimpleNamespace(get=lambda url, **k: (asked.append(url), SimpleNamespace(status_code=200, text="", raise_for_status=lambda: None))[1]),
+                      title_ok=crawl.title_ok, in_india=crawl.in_india, strip_html=crawl.strip_html, Job=crawl.Job)
+list(avature.fetch({"name": "T", "base": "https://c.example.com/careers", "list_path": "ExperiencedRoles", "searches": ["engineer"]}, _av))
+list(avature.fetch({"name": "E", "base": "https://e.example.com/careers", "searches": ["engineer"]}, _av))
+check("Avature: list_path picks the list page, SearchJobs by default",
+      asked[0].startswith("https://c.example.com/careers/ExperiencedRoles/?") and asked[1].startswith("https://e.example.com/careers/SearchJobs/?"), asked)
 check("XML feed: CDATA fields read", xmlfeed.field("<job><title><![CDATA[Software Engineer & Co]]></title></job>", "title") == "Software Engineer & Co")
 
 
@@ -374,6 +395,170 @@ pp = {"data": [{"title": "Software Developer 2", "location": {"city": "Pune", "p
                 "description": "d", "compensation_visible": True, "compensation": "Rs3,334,976 - Rs4,512,026 / year"}]}
 got = list(pinpoint.fetch({"name": "Vena", "slug": "vena"}, fake(get=lambda u: pp)))
 check("Pinpoint: India role with posted pay carried into the text", len(got) == 1 and "Rs3,334,976" in got[0].text, got)
+
+# --- readers added 10 Nov 2026: Jobvite, Zappyhire, PyjamaHR, Zwayam, SuccessFactors, Avature labelled location ------
+from portals import jobvite, zappyhire, pyjamahr, zwayam, successfactors
+
+
+def page_h(pages=None, json_by_url=None, post=None):
+    """h for readers that read pages (SESSION.get -> .text) and JSON (h.get); the first matching key wins."""
+    def pick(table, url):
+        for k, v in (table or {}).items():
+            if k in url:
+                if isinstance(v, Exception):
+                    raise v
+                return v
+        raise crawl.requests.RequestException(f"no fixture for {url}")
+    resp = lambda text: SimpleNamespace(text=text, status_code=200, raise_for_status=lambda: None)  # noqa: E731
+    return SimpleNamespace(Job=crawl.Job, title_ok=crawl.title_ok, in_india=crawl.in_india, strip_html=crawl.strip_html, parse_ts=crawl.parse_ts,
+                           get=lambda url, params=None, **k: pick(json_by_url, url + " " + json.dumps(params or {})),
+                           SESSION=SimpleNamespace(get=lambda url, **k: resp(pick(pages, url)),
+                                                   post=lambda url, **k: SimpleNamespace(json=lambda: post(k), raise_for_status=lambda: None)))
+
+
+ld_jobvite = ('<script type="application/ld+json">{"@type":"JobPosting","title":"Software Engineer","datePosted":"2026-11-01",'
+              '"description":"<p>2+ years Java</p>","jobLocation":[{"address":{"addressLocality":"Pune","addressCountry":"India"}},'
+              '{"address":{"addressLocality":"Pune","addressCountry":"India"}}]}</script>')
+table_theme = ('<tr><td class="jv-job-list-name"><a href="/acme/job/oA1">Software Engineer</a></td><td class="jv-job-list-location"> Bengaluru, Karnataka </td></tr>'
+               '<tr><td class="jv-job-list-name"><a href="/acme/job/oB2">Software Engineer</a></td><td class="jv-job-list-location"> <div class="jv-meta"> 2 Locations </div> </td></tr>'
+               '<tr><td class="jv-job-list-name"><a href="/acme/job/oC3">Software Engineer</a></td><td class="jv-job-list-location"> Austin, Texas </td></tr>'
+               '<tr><td class="jv-job-list-name"><a href="/acme/job/oD4">Software Engineer</a></td><td class="jv-job-list-location"> Pune, India </td></tr>')
+list_theme = ('<li><a class="flex-row" href="/acme/job/oE5"> <div class="flex-col"> <div class="jv-job-list-name"> Backend Engineer </div>'
+              ' <div class="jv-job-list-location"> Hyderabad, Telangana </div> </div></a></li>')
+check("Jobvite: both themes parsed; a '2 Locations' cell becomes an empty location",
+      jobvite.items(table_theme + list_theme) == [("/acme/job/oA1", "Software Engineer", "Bengaluru, Karnataka"), ("/acme/job/oB2", "Software Engineer", ""),
+                                                  ("/acme/job/oC3", "Software Engineer", "Austin, Texas"), ("/acme/job/oD4", "Software Engineer", "Pune, India"),
+                                                  ("/acme/job/oE5", "Backend Engineer", "Hyderabad, Telangana")], jobvite.items(table_theme + list_theme))
+got = list(jobvite.fetch({"name": "Acme", "slug": "acme"},
+                         page_h(pages={"/jobs/viewall": table_theme, "/job/oA1": ld_jobvite, "/job/oB2": ld_jobvite,
+                                       "/job/oD4": crawl.requests.RequestException("closed")})))
+check("Jobvite: India rows read, multi-location job kept via its JobPosting places (deduped), US row skipped, failed detail skips one job",
+      [(j.url.rsplit("/", 1)[1], j.location, j.text.strip(), str(j.posted)[:10]) for j in got]
+      == [("oA1", "Bengaluru, Karnataka", "2+ years Java", "2026-11-01"), ("oB2", "Pune, India", "2+ years Java", "2026-11-01")],
+      [(j.url, j.location, j.text) for j in got])
+
+zh_page = lambda n, total: {"results": {"total": {"value": total}, "hits": [  # noqa: E731
+    {"_source": {"job": i, "title": "Software Engineer" if i % 2 else "Sales Manager", "location": "Noida,Chennai"}, "sort": [1793000000000]}
+    for i in range(n)]}}
+got = list(zappyhire.fetch({"name": "Cg", "slug": "cg"}, page_h(json_by_url={
+    '"page": 1': zh_page(12, 13), '"page": 2': {"results": {"total": {"value": 13}, "hits": [{"_source": {"job": 99, "title": "Backend Engineer", "location": "Pune"}}]}},
+    "/careers/jobs/3/": crawl.requests.RequestException("closed"),
+    "/careers/jobs/": {"results": {"description": "<p>Build APIs</p>", "experience": "1.0", "max_experience": "3.0", "job_publish_date": "2026-10-16T10:24:40Z"}}})))
+check("Zappyhire: pages until the total, fitting India titles only, years asked in the text, closed detail skipped",
+      len(got) == 6 and got[-1].title == "Backend Engineer" and got[0].text.startswith("Experience: 1.0-3.0 years") and "apply?job=1" in got[0].url
+      and got[0].location == "Noida / Chennai" and str(got[0].posted)[:10] == "2026-10-16", [(j.title, j.url, j.text[:30]) for j in got])
+
+pj = {"count": 3, "next": None, "results": [
+    {"id": 1, "slug": "se", "title": "Software Engineer", "location": "Remote", "country": "", "other_locations": '[{"location": "Noida, India"}]',
+     "min_experience": "2.0", "max_experience": "4.0", "workplace_type": "REMOTE"},
+    {"id": 2, "slug": "be", "title": "Backend Engineer", "location": "Dubai, UAE", "other_locations": "[]"},
+    {"id": 3, "slug": "bd", "title": "Business Development Associate", "location": "Noida, India", "other_locations": "[]"}]}
+got = list(pyjamahr.fetch({"name": "Z", "slug": "z"}, page_h(json_by_url={"company_slug": pj},
+                                                            pages={"/z/se": '<script type="application/ld+json">{"@type":"JobPosting","description":"Go","datePosted":"2026-10-23"}</script>'})))
+check("PyjamaHR: India found in other_locations, non-India and non-fitting titles skipped, years asked in the text",
+      [(j.title, j.location, j.text.split("\n")[0], j.remote) for j in got] == [("Software Engineer", "Noida, India", "Experience: 2-4 years", True)], got)
+
+zw_rows = lambda start: [{"_source": {"jobTitle": t, "location": loc, "minYearOfExperience": 1, "maxYearOfExperience": 3, "jobUrl": f"j{start + i}",  # noqa: E731
+                                      "mediumDescription": "<p>Java</p>", "jobCreatedDate": 1793000000000, "showSal": sal, "minJobSalary": "2500000",
+                                      "maxJobSalary": "4000000", "currencyType": "INR"}}
+                         for i, (t, loc, sal) in enumerate([("Backend SDE 1", "Bengaluru, Karnataka, India", True),
+                                                            ("Backend SDE 2", "Dubai, UAE;Gurugram, Haryana, India", False)])]
+sent = []
+def zw_post(k):  # noqa: E302
+    crit = json.loads(k["files"]["filterCri"][1]); sent.append((crit["paginationStartNo"], k["files"]["companyId"][1]))
+    return {"data": {"data": zw_rows(crit["paginationStartNo"]), "totalCount": 4, "hasMoreData": crit["paginationStartNo"] == 0}}
+got = list(zwayam.fetch({"name": "S", "base": "https://careers.s.com/s/", "domain": "careers.s.com", "company_id": "MTE="}, page_h(post=zw_post)))
+check("Zwayam: pages by offset until hasMoreData ends, India part of multi-locations kept, salary only when the site shows it",
+      sent == [(0, "MTE="), (2, "MTE=")] and [(j.location, j.url, bool(j.pay_posted)) for j in got][:2]
+      == [("Bengaluru, Karnataka, India", "https://careers.s.com/s/job/j0", True), ("Gurugram, Haryana, India", "https://careers.s.com/s/job/j1", False)]
+      and crawl.posted_pay_lpa(got[0].pay_posted) == 25 and got[0].text.startswith("Experience: 1-3 years"), (sent, [(j.location, j.url, j.pay_posted) for j in got]))
+
+sf_feed = ('<rss><channel>'
+           '<item><title>Java Developer (Bangalore, IN)</title><description>&lt;p&gt;2+ years&lt;/p&gt;</description><link>https://x/job/1/</link>'
+           '<g:expiration_date>2099-01-01</g:expiration_date><g:location>Bangalore, IN</g:location></item>'
+           '<item><title>Java Developer (Bangalore, IN)</title><description>old</description><link>https://x/job/2/</link>'
+           '<g:expiration_date>2020-01-01</g:expiration_date><g:location>Bangalore, IN</g:location></item>'
+           '<item><title>Java Developer (London, GB)</title><description>x</description><link>https://x/job/3/</link><g:location>London, GB</g:location></item>'
+           '<item><title><![CDATA[Software Engineer & Co (Pune, MH, IN)]]></title><description>y</description><link>https://x/job/4/</link><g:location>Pune, MH, IN</g:location></item>'
+           '</channel></rss>')
+got = list(successfactors.fetch({"name": "SC", "host": "x"}, page_h(pages={"/sitemal.xml": sf_feed})))
+check("SuccessFactors feed: India only, expired jobs dropped, '(City, CC)' cut from titles, CDATA read",
+      [(j.title, j.url) for j in got] == [("Java Developer", "https://x/job/1/"), ("Software Engineer & Co", "https://x/job/4/")] and "2+ years" in got[0].text,
+      [(j.title, j.url) for j in got])
+check("SuccessFactors feed: country code IN spelled out, so the scorer's India check keeps small cities",
+      [j.location for j in got] == ["Bangalore, India", "Pune, MH, India"] and crawl.in_india(got[0].location), [j.location for j in got])
+check("PyjamaHR: other_locations read from JSON, Python-literal or broken strings without crashing",
+      pyjamahr.parse_list('[{"location": "Pune"}]') == [{"location": "Pune"}] and pyjamahr.parse_list("[{'location': 'Pune'}]") == [{"location": "Pune"}]
+      and pyjamahr.parse_list("[broken") == [] and pyjamahr.parse_list(None) == [] and pyjamahr.parse_list([1]) == [1])
+
+koch = ('<article class="article article--result"><h3><a href="https://k.example/careers/JobDetail/SE/1"> Software Engineer </a></h3>'
+        '<div class="article__content__field__label"> Location: </div> <div class="article__content__field__value"> Bengaluru, Karnataka </div></article>')
+check("Avature: labelled 'Location:' field (Koch theme)", avature.items(koch) == [("https://k.example/careers/JobDetail/SE/1", "Software Engineer", "Bengaluru, Karnataka")],
+      avature.items(koch))
+
+from portals import ripplehire
+rh_jobs = {"*:*": [("1", "Software Engineer", "Gurgaon"), ("2", "Software Engineer", "Remote"), ("3", "Branch:Teller", "Pune"),
+                   ("4", "Software Engineer", "Dubai"), ("5", "Software Engineer", "Mumbai")],
+           "engineer": [("1", "Software Engineer", "Gurgaon"), ("6", "Backend Engineer", "Pune")]}
+rh_calls = []
+def rh_post(url, data=None, **k):  # noqa: E302
+    p = json.loads(data["careerSiteUrlParams"]); rh_calls.append((p["search"], p["page"], p["token"]))
+    rows = rh_jobs[p["search"]][p["page"] * 2:p["page"] * 2 + 2]  # pages of 2 to exercise paging
+    body = "".join(f"<jobVoList><jobSeq>{s}</jobSeq><jobTitle>{t}</jobTitle><locations>{l}</locations><jobMinExp>1</jobMinExp><jobMaxExp>3</jobMaxExp></jobVoList>"
+                   for s, t, l in rows)
+    return SimpleNamespace(text=f"<JobPageVO><totalJobCount>{len(rh_jobs[p['search']])}</totalJobCount><jobVoList>{body}</jobVoList></JobPageVO>",
+                           raise_for_status=lambda: None)
+def rh_get(url, params=None, **k):  # noqa: E302
+    if "candidatejobdetail" not in url:  # the published careers link redirects to the tokened list page
+        return SimpleNamespace(url="https://x.ripplehire.com/candidate/?token=TOK1&source=CAREERSITE#list", text="", raise_for_status=lambda: None)
+    seq = params["jobSeq"]
+    status = "CLOSED" if seq == "5" else "ACTIVE"
+    desc = "&lt;p&gt;Remote, India. Java&lt;/p&gt;" if seq == "2" else "&lt;p&gt;Java&lt;/p&gt;"
+    return SimpleNamespace(text=f"<x><jobDesc>{desc}</jobDesc><jobPostingDate>03-Sep-2026</jobPostingDate><jobStatus>{status}</jobStatus></x>")
+rh_h = SimpleNamespace(Job=crawl.Job, title_ok=crawl.title_ok, in_india=crawl.in_india, strip_html=crawl.strip_html,
+                       SESSION=SimpleNamespace(get=rh_get, post=rh_post))
+got = list(ripplehire.fetch({"name": "Bank", "slug": "x", "careers_link": "https://x.ripplehire.com/candidate/careers", "searches": ["*:*", "engineer"]}, rh_h))
+check("RippleHire: token read from the published link's redirect, every page of every search, duplicates across searches once, "
+      "India/remote only, closed jobs skipped, years and posting date read",
+      [(j.url.rsplit("/", 1)[1], j.location, j.remote) for j in got] == [("1", "Gurgaon", False), ("2", "India (remote)", True), ("6", "Pune", False)]
+      and {t for _, _, t in rh_calls} == {"TOK1"} and [(s, p) for s, p, _ in rh_calls] == [("*:*", 0), ("*:*", 1), ("*:*", 2), ("engineer", 0)]
+      and got[0].text.startswith("Experience: 1-3 years") and str(got[0].posted)[:10] == "2026-09-03",
+      ([(j.url, j.location) for j in got], rh_calls))
+
+# --- hand-built readers round: TurboHire pass-through feed, MediaTek tRPC, Indiana vs India --------------------------
+check("in_india: two-part 'City, IN' is Indiana unless another India marker is present; 'City, ST, IN' stays India",
+      not crawl.in_india("Greenwood, IN") and not crawl.in_india("Greenwood, IN / Savannah, GA") and crawl.in_india("Hubli, KA, IN")
+      and crawl.in_india("Bengaluru, IN") and crawl.in_india("India"))
+
+from portals import turbohire_feed, mediatek
+th = {"data": {"FilteredCount": 3, "Jobs": [
+    {"JobTitle": "Full Stack Developer - SDE - I", "Location": '[{"Address":"Bengaluru, Karnataka, India"}]', "Experience": "{'MinExp': 1, 'MaxExp': 2}",
+     "JobDescription": "<p>Java</p>", "ApplyUrl": "https://k.turbohire.co/job/1", "PublishedDate": "2026-11-07T11:12:29.3555867Z"},
+    {"JobTitle": "Product Manager", "Location": '[{"Address":"Bengaluru, Karnataka, India"}]'},
+    {"JobTitle": "Backend Engineer", "Location": '[{"Address":"Dubai, UAE"}]'}]}}
+got = list(turbohire_feed.fetch({"name": "K", "feed": "https://k.com/list?category=Technology"}, page_h(json_by_url={"k.com/list": th})))
+check("TurboHire feed: JSON and Python-literal fields parsed, India + fitting titles only, years in the text",
+      [(j.title, j.url, j.text.split("\n")[0], str(j.posted)[:10]) for j in got]
+      == [("Full Stack Developer - SDE - I", "https://k.turbohire.co/job/1", "Experience: 1-2 years", "2026-11-07")], got)
+try:
+    list(turbohire_feed.fetch({"name": "K", "feed": "https://k.com/list"}, page_h(json_by_url={"k.com/list": {"data": {"FilteredCount": 17, "Jobs": th["data"]["Jobs"]}}})))
+    truncated = False
+except ValueError:
+    truncated = True
+check("TurboHire feed: fewer jobs than FilteredCount raises (truncated feed is visible, not silent)", truncated)
+
+mt_pages = {1: {"pagination": {"total_pages": 2}, "jobs": [
+                {"id": "MIN1", "title": "Software Engineer", "jobPostStatus": "posted", "publishedDate": "2026-11-09T16:00:00.000+00:00", "description": "<p>C++</p>",
+                 "properties": {"location": {"code": "Bangalore\t"}, "workExperience": {"code": "1~3 Years"}}},
+                {"id": "MUS1", "title": "Software Engineer", "jobPostStatus": "posted", "properties": {"location": {"code": "West Lafayette, IN"}}}]},
+            2: {"pagination": {"total_pages": 2}, "jobs": [
+                {"id": "MIN2", "title": "Software Engineer", "jobPostStatus": "closed", "properties": {"location": {"code": "Noida"}}},
+                {"id": "MIN3", "title": "Backend Engineer", "jobPostStatus": "posted", "properties": {"location": {"code": "Noida"}}}]}}
+mt_h = page_h(); mt_h.get = lambda url, params=None, **k: [{"result": {"data": {"json": mt_pages[json.loads(params["input"])["0"]["json"]["page"]]}}}]
+got = list(mediatek.fetch({"name": "MediaTek"}, mt_h))
+check("MediaTek: every page read, Indiana ('City, IN') and closed jobs skipped, city trimmed, experience band in the text",
+      [(j.url.rsplit("/", 1)[1], j.location) for j in got] == [("MIN1", "Bangalore"), ("MIN3", "Noida")] and got[0].text.startswith("Experience: 1~3 Years"),
+      [(j.url, j.location) for j in got])
 
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)

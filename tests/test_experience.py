@@ -59,5 +59,16 @@ check("'Mgr' and trailing level-3 titles are senior; Web3 and level-2 titles are
       and crawl.title_ok("Web3 Backend Engineer") and crawl.title_ok("SDE 2 - Data Platform"))
 check("level score favours 1-2 years over 3", crawl.level_score("x", 1) > crawl.level_score("x", 3) and crawl.level_score("x", 2) > crawl.level_score("x", 3))
 
+# Score weights: pay and level first, stack never above company quality (a stack can be learned).
+W = crawl.WEIGHTS
+check("score weights sum to 100, pay is the largest part, stack weighs no more than company quality",
+      sum(W.values()) == 100 and W["pay"] == max(W.values()) and W["stack"] <= W["company"], W)
+best = crawl.score_parts(stack=35, level=20, pay_frac=1.0, quality=15, fresh=10)
+check("a perfect role scores 100, each part capped at its weight", round(sum(best.values())) == 100 and all(best[k] == W[k] for k in W), best)
+pay_first = sum(crawl.score_parts(stack=5, level=20, pay_frac=0.8, quality=12, fresh=8).values())   # evidenced pay, little stack overlap
+stack_first = sum(crawl.score_parts(stack=35, level=20, pay_frac=0.5, quality=12, fresh=8).values())  # full stack match, pay only a guess
+check("evidenced pay with a weak stack match outranks a full stack match with pay only judged likely", pay_first > stack_first,
+      (pay_first, stack_first))
+
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)

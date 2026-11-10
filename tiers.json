@@ -179,7 +179,8 @@
    "quality": 12,
    "pay": "likely",
    "pay_note": "Levels.fyi India SDE 1 median TC 25.1, SDE 2 55.6 LPA",
-   "site": "dream11.com"
+   "site": "dreamsports.group",
+   "careers_url": "https://www.dreamsports.group/lifeatdreamsports"
   },
   {
    "name": "Dream Sports",
@@ -209,7 +210,7 @@
    "type": "Adtech product company",
    "quality": 12,
    "pay": "likely",
-   "pay_note": "Levels.fyi India SE1 19.7 LPA (below bar), higher levels above; AmbitionBox dev 18.5-21.1",
+   "pay_note": "Levels.fyi India SE2 median TC 41.3 LPA; SE1 18.2 is below the bar and excluded by title (checked 10 Nov 2026)",
    "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate",
    "site": "media.net"
   },
@@ -655,8 +656,9 @@
    "name": "Jio",
    "type": "Telecom/digital",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Entry bands often below bar"
+   "pay": "likely",
+   "pay_note": "L2 median TC 24.9 LPA; L1 14.0 below (levels.fyi India, checked 10 Nov 2026)",
+   "below_title": "associate|junior|graduate|trainee"
   },
   {
    "name": "Optum",
@@ -1225,14 +1227,14 @@
    "type": "Travel tech",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)"
   },
   {
    "name": "Cleartrip",
    "type": "Travel tech (Flipkart)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)"
   },
   {
    "name": "Ixigo",
@@ -1287,29 +1289,33 @@
    "name": "Nomura",
    "type": "Global bank tech centre",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "L2 median TC 25.6 LPA; L1 15.5 below (levels.fyi India, checked 10 Nov 2026)",
+   "below_title": "associate|junior|graduate|trainee"
   },
   {
    "name": "UBS",
    "type": "Global bank tech centre",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "Authorized Officer median TC 22.7 LPA; Employee 14.6 below (levels.fyi India, checked 10 Nov 2026)",
+   "below_title": "associate|junior|graduate|trainee"
   },
   {
    "name": "HSBC",
    "type": "Global bank tech centre",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "GCB5 median TC 24.1 LPA; GCB6 12.5 below (levels.fyi India, checked 10 Nov 2026)",
+   "below_title": "associate|junior|graduate|trainee"
   },
   {
    "name": "Standard Chartered",
    "type": "Global bank tech centre",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "Levels.fyi India Senior SE median TC 25.3 LPA; Software Engineer 15.9 is below the bar, so Associate titles are excluded (checked 10 Nov 2026)",
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate|\\bassoc\\b"
   },
   {
    "name": "Societe Generale",
@@ -1509,22 +1515,22 @@
    "name": "HDFC Bank",
    "type": "Indian bank tech",
    "quality": 7,
-   "pay": "unclear",
-   "pay_note": "Bands often below bar"
+   "pay": "below",
+   "pay_note": "AmbitionBox software engineer 3.9-18.3 LPA (68 salaries), SDE estimate 14.4-18.4; no levels.fyi page (checked 10 Nov 2026)"
   },
   {
    "name": "ICICI Bank",
    "type": "Indian bank tech",
    "quality": 7,
-   "pay": "unclear",
-   "pay_note": "Bands often below bar"
+   "pay": "below",
+   "pay_note": "overall 11.7 (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "Axis Bank",
    "type": "Indian bank tech",
    "quality": 7,
-   "pay": "unclear",
-   "pay_note": "Bands often below bar"
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE overall median TC 12.3 LPA (checked 10 Nov 2026)"
   },
   {
    "name": "NPCI",
@@ -1667,7 +1673,7 @@
    "type": "Fintech infra (Pine Labs)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "borderline: Pine Labs SE 17.6, Senior 22.9; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "Pine Labs",
@@ -1687,8 +1693,9 @@
    "name": "PayU",
    "type": "Payments",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "Software Engineer median TC 23.0 LPA; Associate 12.9 below (levels.fyi India, checked 10 Nov 2026)",
+   "below_title": "associate|junior|graduate|trainee"
   },
   {
    "name": "BharatPe",
@@ -1737,14 +1744,16 @@
    "type": "Credit card fintech",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "careers_url": "https://www.fplabs.tech/careers/",
+   "site": "fplabs.tech"
   },
   {
    "name": "Uni Cards",
    "type": "Credit card fintech",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "overall median TC 63.9 LPA (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "KreditBee",
@@ -1771,8 +1780,8 @@
    "name": "INDmoney",
    "type": "Wealth fintech",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "overall median TC 31.0 LPA (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "smallcase",
@@ -2036,15 +2045,15 @@
    "name": "Ola",
    "type": "Mobility",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "SWE1 median TC 22.3 LPA (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "Ola Electric",
    "type": "EV (listed)",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "below",
+   "pay_note": "overall 19.9 (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "Krutrim",
@@ -2057,8 +2066,8 @@
    "name": "Udaan",
    "type": "B2B commerce",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "L1 median TC 30.2 LPA (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "BigBasket",
@@ -2079,7 +2088,7 @@
    "type": "Digital commerce (Tata Neu)",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "borderline: overall 22.5; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "PharmEasy",
@@ -2156,7 +2165,7 @@
    "type": "Edtech",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "borderline: overall 23.8; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "Moj",
@@ -2199,7 +2208,7 @@
    "type": "Streaming",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)"
   },
   {
    "name": "Disney+ Hotstar",
@@ -2229,7 +2238,7 @@
    "type": "Home interiors tech",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "borderline: overall 29.4; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "Eightfold AI",
@@ -2317,15 +2326,15 @@
    "name": "Netcore Cloud",
    "type": "Martech SaaS",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "below",
+   "pay_note": "overall 19.7 (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "Gupshup",
    "type": "Conversational SaaS",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "borderline: overall 24.8; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "Yellow.ai",
@@ -2345,8 +2354,8 @@
    "name": "Exotel",
    "type": "CPaaS",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "below",
+   "pay_note": "overall 13.6 (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "LeadSquared",
@@ -2387,8 +2396,8 @@
    "name": "Zoho",
    "type": "SaaS (bootstrapped)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary; often below bar at entry"
+   "pay": "below",
+   "pay_note": "L1 12.8, L2 18.1 (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "LambdaTest",
@@ -2452,7 +2461,7 @@
    "type": "Fintech SaaS",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "borderline: overall 21.7; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "Hevo Data",
@@ -3085,8 +3094,11 @@
    "name": "Ericsson",
    "type": "Global product",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "Levels.fyi India JS5 median TC 22.1 LPA, JS6 44.0; JS4 10.5 is below the bar and titles don't show grades (checked 10 Nov 2026)",
+   "careers_url": "https://www.ericsson.com/en/careers",
+   "site": "ericsson.com",
+   "below_title": "associate|junior|graduate"
   },
   {
    "name": "Nokia",
@@ -3130,8 +3142,8 @@
    "name": "ANZ",
    "type": "Global product",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "SWE 17.2, Junior 18.3 (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "Macquarie Group",
@@ -3173,7 +3185,7 @@
    "type": "Global product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)"
   },
   {
    "name": "Western Union",
@@ -3187,7 +3199,7 @@
    "type": "Global product",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "borderline: overall 24.8; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "Rapyd",
@@ -3250,14 +3262,15 @@
    "type": "Global product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)"
   },
   {
    "name": "Best Buy",
    "type": "Global product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "GL8 median TC 28.0 LPA; GL7 18.2 (levels.fyi India, checked 10 Nov 2026)",
+   "below_title": "associate|junior|graduate|trainee"
   },
   {
    "name": "Cigna",
@@ -3298,15 +3311,17 @@
    "name": "Caterpillar",
    "type": "Global product",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "Levels.fyi India Grade 22 median TC 20.9 LPA (just above), Grade 23 36.9; Grade 21 16.0 below the bar (checked 10 Nov 2026)",
+   "below_title": "associate|junior|graduate"
   },
   {
    "name": "John Deere",
    "type": "Global product",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "Grade 7 median TC 28.3 LPA; Grade 6 19.2 (levels.fyi India, checked 10 Nov 2026)",
+   "below_title": "associate|junior|graduate|trainee"
   },
   {
    "name": "Siemens",
@@ -3320,7 +3335,7 @@
    "type": "Global product",
    "quality": 8,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)"
   },
   {
    "name": "Continental",
@@ -3361,8 +3376,8 @@
    "name": "MediaTek",
    "type": "Global product",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "E7 median TC 23.6 LPA (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "Microchip",
@@ -3397,7 +3412,7 @@
    "type": "Global product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)"
   },
   {
    "name": "Lam Research",
@@ -3424,8 +3439,8 @@
    "name": "Hexagon",
    "type": "Global product",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "overall 14.3 (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "Zebra Technologies",
@@ -3475,15 +3490,15 @@
    "name": "Rebel Foods",
    "type": "Indian product",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "overall 11.0 (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "cult.fit",
    "type": "Indian product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "borderline: overall 25.8; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)",
    "site": "cult.fit"
   },
   {
@@ -3504,15 +3519,15 @@
    "name": "Practo",
    "type": "Indian product",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "overall 15.8 (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "Classplus",
    "type": "Indian product",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)"
   },
   {
    "name": "Teachmint",
@@ -3548,7 +3563,9 @@
    "type": "Indian product",
    "quality": 8,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "careers_url": "https://www.simplilearn.com/job-openings/",
+   "site": "simplilearn.com"
   },
   {
    "name": "WinZO",
@@ -3594,7 +3611,7 @@
    "type": "Indian product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "borderline: VerSe overall 23.7; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)",
    "site": "myjosh.in"
   },
   {
@@ -3617,8 +3634,8 @@
    "name": "GreyOrange",
    "type": "Indian product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE overall median TC 35.3 LPA (base 33.8); overall-only, >= 30 counts as likely (checked 10 Nov 2026)",
    "site": "greyorange.com"
   },
   {
@@ -3654,8 +3671,9 @@
    "name": "Jio Platforms",
    "type": "Indian product",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "L2 median TC 24.9 LPA; L1 14.0 below (levels.fyi India, checked 10 Nov 2026)",
+   "below_title": "associate|junior|graduate|trainee"
   },
   {
    "name": "Airtel Digital",
@@ -3689,9 +3707,10 @@
    "name": "Snapmint",
    "type": "Indian product",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
-   "site": "careers.snapmint.com"
+   "pay": "likely",
+   "pay_note": "Weekday (thin, 6 salaries): SDE-2 median 21.3 LPA (14.1-26.1); SDE-1 ~9-10 LPA is below the bar and excluded by title. No levels.fyi data (checked 10 Nov 2026)",
+   "site": "careers.snapmint.com",
+   "below_title": "(engineer|sde)\\s*[-–]?\\s*(1|i)\\b|associate|\\bassoc\\b"
   },
   {
    "name": "Fynd",
@@ -3847,8 +3866,8 @@
    "name": "HyperVerge",
    "type": "Indian fintech",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "overall median TC 49.9 LPA (levels.fyi India, checked 10 Nov 2026)",
    "site": "hyperverge.co"
   },
   {
@@ -3862,8 +3881,8 @@
    "name": "IDfy",
    "type": "Indian fintech",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "overall 18.7 (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "Recko",
@@ -4102,8 +4121,8 @@
    "name": "MiQ",
    "type": "SaaS",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "overall median TC 30.3 LPA (levels.fyi India, checked 10 Nov 2026)"
   },
   {
    "name": "Unifize",
@@ -4175,7 +4194,7 @@
    "type": "SaaS",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)"
   },
   {
    "name": "Aerospike",
@@ -4755,7 +4774,7 @@
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)",
    "careers_url": "https://www.asml.com/en/careers",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -4790,8 +4809,8 @@
    "name": "Avalara",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "SE I median TC 22.9 LPA, SE II 26.3 (levels.fyi India, checked 10 Nov 2026)",
    "careers_url": "https://www.avalara.com/us/en/about/jobs/job-openings.html",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -4899,7 +4918,7 @@
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)",
    "careers_url": "https://www.bitdefender.com/company/job-opportunities/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -4980,7 +4999,7 @@
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "borderline: overall 23.0; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)",
    "careers_url": "https://www.bmc.com/careers/careers.html",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -5060,10 +5079,11 @@
    "name": "Cimpress",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "Levels.fyi India PR2 median TC 27.4 LPA, PR3 39.8; PR1 13.2 is below the bar (checked 10 Nov 2026)",
    "careers_url": "https://cimpress.com/careers/",
-   "source": "moreThanFAANGM (product companies list)"
+   "source": "moreThanFAANGM (product companies list)",
+   "below_title": "associate|junior|graduate"
   },
   {
    "name": "Celigo",
@@ -5267,8 +5287,8 @@
    "name": "Directi",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "overall median TC 53.6 LPA (levels.fyi India, checked 10 Nov 2026)",
    "careers_url": "https://careers.directi.com/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -5420,8 +5440,8 @@
    "name": "Envestnet Yoodlee",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "overall 14.0 (levels.fyi India, checked 10 Nov 2026)",
    "careers_url": "https://www.yodlee.com/oceania/india-careers",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -5511,7 +5531,7 @@
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "no levels.fyi page (checked 10 Nov 2026)",
    "careers_url": "https://careers.freecharge.in/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -5528,8 +5548,8 @@
    "name": "Fujitsu",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "Levels.fyi India Software Engineer median TC 28.6 LPA, Senior 31.9 (checked 10 Nov 2026)",
    "careers_url": "https://www.fujitsu.com/global/about/careers/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -5718,7 +5738,7 @@
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "borderline: overall 25.0; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)",
    "careers_url": "https://www.here.com/careers",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -5735,10 +5755,11 @@
    "name": "HSBC Bank",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "GCB5 median TC 24.1 LPA; GCB6 12.5 below (levels.fyi India, checked 10 Nov 2026)",
    "careers_url": "https://www.hsbc.com/careers",
-   "source": "moreThanFAANGM (product companies list)"
+   "source": "moreThanFAANGM (product companies list)",
+   "below_title": "associate|junior|graduate|trainee"
   },
   {
    "name": "Huggingface",
@@ -5897,8 +5918,8 @@
    "name": "Khatabook",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "overall median TC 48.9 LPA (levels.fyi India, checked 10 Nov 2026)",
    "careers_url": "https://khatabook.com/hiring",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -5942,8 +5963,8 @@
    "name": "Lenovo",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "overall 4.6 (levels.fyi India, checked 10 Nov 2026)",
    "careers_url": "https://jobs.lenovo.com/en_US/careers",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -6078,7 +6099,7 @@
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "borderline: overall 23.6; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)",
    "careers_url": "https://www.netcracker.com/careers/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -6464,8 +6485,8 @@
    "name": "Shopify",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "overall median TC 50.6 LPA (levels.fyi India, checked 10 Nov 2026)",
    "careers_url": "https://www.shopify.com/careers",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -6510,10 +6531,11 @@
    "name": "Sony",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "L4 median TC 32.1 LPA; L3 13.6 below (levels.fyi India, checked 10 Nov 2026)",
    "careers_url": "https://www.sonyjobs.com/careers.html",
-   "source": "moreThanFAANGM (product companies list)"
+   "source": "moreThanFAANGM (product companies list)",
+   "below_title": "associate|junior|graduate|trainee"
   },
   {
    "name": "Squadstack",
@@ -6753,8 +6775,8 @@
    "name": "Yahoo",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "IC3 median TC 34.9 LPA (levels.fyi India, checked 10 Nov 2026)",
    "careers_url": "https://research.yahoo.com/careers",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -7402,7 +7424,7 @@
    "type": "Accel-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)",
    "careers_url": "https://moglix.com",
    "source": "Accel-backed startup (ISJB)"
   },
@@ -8050,7 +8072,7 @@
    "type": "Peak XV-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)",
    "careers_url": "https://careers.peakxv.com/jobs/fi",
    "source": "Peak XV-backed startup (ISJB)"
   },
@@ -8599,7 +8621,7 @@
    "type": "Lightspeed-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "No levels.fyi page; AmbitionBox thin: SDE 9-11.5 LPA (1 report), software developer 16.9-21.6 LPA (checked 10 Nov 2026)",
    "careers_url": "https://jobs.lsvp.com/jobs/seekho",
    "source": "Lightspeed-backed startup (ISJB)"
   },
@@ -8841,8 +8863,8 @@
    "name": "Aryaka",
    "type": "Nexus-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE overall median TC 31.5 LPA (base 29.7); overall-only, >= 30 counts as likely (checked 10 Nov 2026)",
    "careers_url": "https://aryaka.com",
    "source": "Nexus-backed startup (ISJB)"
   },
@@ -8941,7 +8963,7 @@
    "type": "Nexus-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)",
    "careers_url": "https://pratilipi.com",
    "source": "Nexus-backed startup (ISJB)"
   },
@@ -9356,8 +9378,9 @@
    "quality": 11,
    "pay": "unclear",
    "pay_note": "not yet checked",
-   "careers_url": "https://amigo.ai",
-   "source": "General Catalyst-backed startup (ISJB)"
+   "careers_url": "https://www.concurrence.com/careers",
+   "source": "General Catalyst-backed startup (ISJB)",
+   "site": "concurrence.com"
   },
   {
    "name": "Billion Hearts",
@@ -10040,6 +10063,35 @@
    "quality": 10,
    "pay": "unclear",
    "pay_note": "small startup, not checked in depth; no pay data found (Nov 2026)"
+  },
+  {
+   "name": "Global Payments Inc.",
+   "type": "Global payments (fintech MNC)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India SE overall median TC 21.3 LPA (overall-only, 20-30 stays borderline) (checked 10 Nov 2026)",
+   "site": "globalpayments.com"
+  },
+  {
+   "name": "Zoid Technologies Private Limited",
+   "type": "Defence/aerospace deep-tech startup",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi or AmbitionBox data found (checked 10 Nov 2026)"
+  },
+  {
+   "name": "The Depository Trust & Clearing Corporation (DTCC)",
+   "type": "Financial market infrastructure",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "borderline: overall 22.6; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)"
+  },
+  {
+   "name": "Health Catalyst",
+   "type": "Healthcare data SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)"
   }
  ],
  "services_and_staffing": [

@@ -107,9 +107,16 @@ INDIA_RE = re.compile("|".join(("(?<![a-z])" if k[:1].isalpha() else "") + re.es
                                for k in INDIA), re.I)
 
 
+ONLY_IN_CODE = re.compile(r"(?:^|/)\s*[^,/]+,\s*in\s*(?:$|/)")  # "Greenwood, IN" = Indiana; "Pune, MH, IN" stays India
+
+
 def in_india(loc):
     l = (loc or "").lower()
-    return bool(INDIA_RE.search(l)) and "kota kinabalu" not in l
+    if not INDIA_RE.search(l) or "kota kinabalu" in l:
+        return False
+    # ", in" alone is ambiguous: a two-part "City, IN" is the US state code, so it needs another India marker
+    hits = {m.group(0).lower() for m in INDIA_RE.finditer(l)}
+    return not (hits <= {", in"} and ONLY_IN_CODE.search(l))
 
 
 def title_ok(title):
@@ -303,6 +310,23 @@ def recruitee(c):
 def eightfold(c):
     """Eightfold PCSX careers sites (Microsoft, Qualcomm, Autodesk…): the public search API behind the site."""
     host, domain = c["host"], c["domain"]
+    if c.get("api") == "v2":  # older Eightfold sites (Netflix): public list API, description from the detail call
+        v2 = f"https://{host}/api/apply/v2/jobs"
+        for start in range(0, 500, 10):
+            pos = get(v2, params={"domain": domain, "location": "India", "start": start, "num": 10}).get("positions", [])
+            for p in pos:
+                if not title_ok(p["name"]):
+                    continue
+                try:
+                    text = strip_html(get(f"{v2}/{p['id']}", params={"domain": domain}).get("job_description"))
+                except requests.RequestException:
+                    continue  # closed between the list and the detail call
+                yield Job(c["name"], p["name"], " / ".join(p.get("locations") or [p.get("location", "")]),
+                          p.get("canonicalPositionUrl") or f"https://{host}/careers/job/{p['id']}",
+                          parse_ts(p.get("t_create")), text, remote=(p.get("work_location_option") or "") == "remote")
+            if len(pos) < 10:
+                return
+        return
     api = f"https://{host}/api/pcsx"
     SESSION.get(f"https://{host}/careers?domain={domain}")  # sets the cookies the API expects
     seen = set()
@@ -611,6 +635,20 @@ def fresh_score(posted):
     return base + 3  # +3 for a company careers/ATS link; main() takes it back for aggregator links
 
 
+# Points per part of the 0-100 score (profile.json "score_weights"). Pay and level come first: they decide whether a
+# role is worth applying to at all. Stack weighs less than company quality, because a stack can be learned; the gap
+# between Strong and Likely pay evidence (0.3 x pay) is larger than the whole stack range, so stack never beats pay.
+WEIGHTS = {"pay": 35, "level": 30, "company": 15, "stack": 10, "fresh": 10} | PROFILE.get("score_weights", {})
+RAW_MAX = {"stack": 35, "level": 20, "company": 15, "fresh": 10}  # the scales stack_score, level_score etc. return
+
+
+def score_parts(stack, level, pay_frac, quality, fresh):
+    """Each raw part scaled to its weight (pay_frac is already 0-1: Posted 1, Strong 0.8, Likely 0.5, Unverified 0)."""
+    raw = {"pay": pay_frac, "level": level / RAW_MAX["level"], "company": quality / RAW_MAX["company"],
+           "stack": stack / RAW_MAX["stack"], "fresh": fresh / RAW_MAX["fresh"]}
+    return {k: WEIGHTS[k] * raw[k] for k in ("pay", "level", "company", "stack", "fresh")}
+
+
 def evaluate(job, company, max_age):
     if "<" in job.company or len(job.company) > 120:
         return None, "malformed company name (parser)"
@@ -635,17 +673,17 @@ def evaluate(job, company, max_age):
     if pay_lpa is not None and pay_lpa < PROFILE["min_pay_lpa"]:
         return None, f"posted pay {pay_lpa:.0f} LPA below bar"
     if pay_lpa is not None:
-        pay_conf, pay_pts, pay_txt = "Posted", 20, f"≥{pay_lpa:.0f} (Posted: {job.pay_posted[:60] or 'JD'})"
+        pay_conf, pay_frac, pay_txt = "Posted", 1.0, f"≥{pay_lpa:.0f} (Posted: {job.pay_posted[:60] or 'JD'})"
     elif company["pay"] == "likely" and "levels.fyi" in company["pay_note"].lower():
-        pay_conf, pay_pts, pay_txt = "Strong evidence", 16, f"Strong — {company['pay_note']} (total comp, not fixed CTC)"
+        pay_conf, pay_frac, pay_txt = "Strong evidence", 0.8, f"Strong — {company['pay_note']} (total comp, not fixed CTC)"
     elif company["pay"] == "likely":
-        pay_conf, pay_pts, pay_txt = "Likely", 10, f"Likely ≥20 — {company['pay_note']} (tier judgement, no direct data)"
+        pay_conf, pay_frac, pay_txt = "Likely", 0.5, f"Likely ≥20 — {company['pay_note']} (tier judgement, no direct data)"
     else:  # no evidence either way: goes to the leads file, not the shortlist
-        pay_conf, pay_pts, pay_txt = "Unverified", 0, f"Unverified — {company['pay_note']}"
+        pay_conf, pay_frac, pay_txt = "Unverified", 0.0, f"Unverified — {company['pay_note']}"
     stale = job.posted is not None and (NOW - job.posted).days > max_age
     s_stack, hits, gaps = stack_score(job.text)
-    s_level = level_score(job.title, years)
-    score = s_stack + s_level + pay_pts + company["quality"] + fresh_score(job.posted)
+    parts = score_parts(s_stack, level_score(job.title, years), pay_frac, company["quality"], fresh_score(job.posted))
+    score = round(sum(parts.values()))
     return {
         "score": score,
         "company": job.company,
@@ -666,7 +704,7 @@ def evaluate(job, company, max_age):
         "posted": job.posted.date().isoformat() if job.posted else "unknown",
         "listed_open": "yes (live on ATS)",
         "older_than_window": "yes" if stale else "",
-        "breakdown": f"stack {s_stack}/35, level {s_level}/20, pay {pay_pts}/20, company {company['quality']}/15, fresh {fresh_score(job.posted)}/10",
+        "breakdown": ", ".join(f"{k} {v:.0f}/{WEIGHTS[k]}" for k, v in parts.items()),
     }, ""
 
 
@@ -922,7 +960,7 @@ def evaluate_all(ctx, quiet=False):
             act["fitting"] += bool(row) and row["pay_conf"] != "Unverified"
             act["leads"] += bool(row) and row["pay_conf"] == "Unverified"
             if row and source["ats"] == "linkedin":  # both LinkedIn passes
-                row["score"] -= 3  # aggregator link, not the company's own page
+                row["score"] -= round(WEIGHTS["fresh"] * 3 / RAW_MAX["fresh"])  # aggregator link, not the company's own page
                 row["company"] = job.company
             if row and row["pay_conf"] == "Unverified":
                 leads.append(row)

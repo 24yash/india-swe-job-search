@@ -672,10 +672,11 @@
   "by": "scripted probe"
  },
  "Amigo": {
-  "status": "nothing_to_read",
-  "reason": "other job platform: wellfound",
-  "checked": "2026-11-07",
-  "by": "scripted probe"
+  "status": "alias",
+  "reason": "renamed Concurrence (amigo.ai redirects to concurrence.com); Ashby board read as Concurrence",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026",
+  "parent": "Concurrence"
  },
  "Pronto": {
   "status": "nothing_to_read",
@@ -690,10 +691,11 @@
   "by": "scripted probe"
  },
  "Prime Video & Amazon MGM Studios": {
-  "status": "dead",
-  "reason": "no domain known (Clearbit has none either)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "alias",
+  "parent": "Amazon",
+  "reason": "Amazon subsidiary; roles are on amazon.jobs",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
  },
  "Hewlett Packard Enterprise": {
   "status": "retryable",
@@ -930,10 +932,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "Dukaan": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "no careers page found (mydukaan.io/jobs is a store named 'Jobs', not Dukaan's careers)",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
  },
  "Dunzo": {
   "status": "retryable",
@@ -1008,10 +1010,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "HERE": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "here.com/careers is a 404; careers.here.com is only a talent-community form",
+  "checked": "2026-11-10",
+  "by": "hand-built readers round, checked 10 Nov 2026"
  },
  "Holidayme": {
   "status": "retryable",
@@ -1062,10 +1064,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "INDmoney": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "indmoney.com/careers redirects to the app login; no public job list",
+  "checked": "2026-11-10",
+  "by": "hand-built readers round, checked 10 Nov 2026"
  },
  "Investmint": {
   "status": "retryable",
@@ -1248,10 +1250,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "OYO": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "no careers page on its own site (/careers redirects to the homepage); LinkedIn only",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
  },
  "Park+": {
   "status": "dead",
@@ -1432,10 +1434,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "Uni Cards": {
-  "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "uni.cards/careers is a 404; no public job list found",
+  "checked": "2026-11-10",
+  "by": "hand-built readers round, checked 10 Nov 2026"
  },
  "Unicommerce": {
   "status": "pending",
@@ -1527,10 +1529,10 @@
   "by": "checked by hand"
  },
  "Zerodha": {
-  "status": "nothing_to_read",
-  "reason": "own feed lists 0 openings",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "blocked",
+  "reason": "careers SPA shows a Cloudflare challenge in a browser (10 Nov); no public feed found in its bundle; LinkedIn only",
+  "checked": "2026-11-10",
+  "by": "checked in the built-in browser"
  },
  "Netflix": {
   "status": "nothing_to_read",
@@ -2211,11 +2213,6 @@
   "reason": "talent.alibaba.com lists China/global roles; no India engineering hiring",
   "by": "checked by hand"
  },
- "Cimpress": {
-  "status": "pending",
-  "reason": "needs a reader: RippleHire: POST https://cimpress.ripplehire.com/candidate/candidatejobsearch form-encoded careerSiteUrlParams={\"page\":0,\"search\":\"*:*\",\"token\":\"<redacted>,\"source\":\"DIRECTCHANNEL\",\"pagesiz",
-  "by": "checked by hand"
- },
  "Riverbed Technology": {
   "status": "blocked",
   "reason": "riverbed.com/careers links iCIMS boards careers-riverbed.icims.com and emea-apj-riverbed.icims.com (the latter lists India roles e.g. 'Software Engineer, NetIM'), but both hosts' robots.txt is 'Disallow: /', so not crawlable under the rules",
@@ -2497,21 +2494,6 @@
   "reason": "needs a reader: Same SuccessFactors CSB RSS reader: GET https://www.jobs.global.fujitsu.com/sitemal.xml; config {\"ats\":\"portal\",\"portal\":\"successfactors\",\"host\":\"www.jobs.global.fujitsu.com\"}",
   "by": "checked by hand"
  },
- "Axis Bank": {
-  "status": "pending",
-  "reason": "needs a reader: RippleHire ('ripplehire'): POST https://<slug>.ripplehire.com/candidate/candidatejobsearch, form-encoded body careerSiteUrlParams={\"page\":0,\"search\":\"*:*\",\"token\":\"<token>\",\"source\":\"CAREERSITE\",\"page",
-  "by": "checked by hand"
- },
- "HDFC Bank": {
-  "status": "pending",
-  "reason": "needs a reader: RippleHire reader (spec under Axis Bank). Config {\"ats\":\"portal\",\"portal\":\"ripplehire\",\"slug\":\"hdfcbank\",\"token\":\"<redacted>}",
-  "by": "checked by hand"
- },
- "FreeCharge": {
-  "status": "pending",
-  "reason": "needs a reader: RippleHire reader (spec under Axis Bank). Config {\"ats\":\"portal\",\"portal\":\"ripplehire\",\"slug\":\"freecharge\",\"token\":\"<redacted>}",
-  "by": "checked by hand"
- },
  "Darwinbox": {
   "status": "blocked",
   "reason": "darwinbox.com/careers links dbx.darwinbox.in/ms/candidatev2/main/careers/allJobs (Darwinbox's own tenant, Cloudflare). The public POST /ms/candidateapi/job/alljobs?companyId=main that the existing darwinbox reader uses answers 403 for this ",
@@ -2521,5 +2503,345 @@
   "status": "dead",
   "reason": "pristyncare.com/company/careers links only pristyncare.skillate.com; that host (52.149.26.167) and skillate.com time out (connection timeout after 40s, twice). No Lever/Greenhouse/Keka board; pristyncare.darwinbox.in API returns a Cloudflar",
   "by": "research agent (batch d)"
+ },
+ "AWS": {
+  "status": "alias",
+  "parent": "Amazon",
+  "reason": "AWS roles are on amazon.jobs (read from Amazon's source); the old link was aws.training",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Kaleyra": {
+  "status": "alias",
+  "parent": "Tata Communications",
+  "reason": "acquired by Tata Communications; hires through jobs.tatacommunications.com",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Informatica": {
+  "status": "alias",
+  "parent": "Salesforce",
+  "reason": "acquired by Salesforce; careers link points to Salesforce careers",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Plum": {
+  "status": "alias",
+  "parent": "Plum HQ",
+  "reason": "same company as Plum HQ (careers.kula.ai/plumhq); the old link was a Phenom blog about a different Plum",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Eightfold": {
+  "status": "alias",
+  "parent": "Eightfold AI",
+  "reason": "same company as Eightfold AI",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Cradlepoint": {
+  "status": "alias",
+  "reason": "Ericsson company; careers link goes to Ericsson careers (jobs.ericsson.com)",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026",
+  "parent": "Ericsson"
+ },
+ "Vue.ai": {
+  "status": "nothing_to_read",
+  "reason": "acquired by M2P Fintech (Mar 2025); hiring via careers.m2pfintech.com, which says 'No Jobs'",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Shopsy": {
+  "status": "blocked",
+  "reason": "Flipkart's app (old link was shopsy.de, an unrelated German firm); Flipkart's TurboHire is token-gated, so LinkedIn only",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Playment": {
+  "status": "nothing_to_read",
+  "reason": "acquired by TELUS Digital; no own listings",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Airbase": {
+  "status": "nothing_to_read",
+  "reason": "acquired by Paylocity; no India roles of its own",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Last9": {
+  "status": "nothing_to_read",
+  "reason": "its Lever board (jobs.lever.co/last9) no longer exists (404); no other listing found",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Wingreens Farms": {
+  "status": "nothing_to_read",
+  "reason": "FMCG brand; no careers page or job list found (old link was a Vogue interview)",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Yatra": {
+  "status": "excluded",
+  "reason": "software engineer pay ₹5.5-10 LPA on Talentd/Hyring, below the ₹20 LPA bar; old link yatra.ai is a different site",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Acalvio Technologies": {
+  "status": "nothing_to_read",
+  "reason": "no careers page on its own site (/careers redirects to the homepage); LinkedIn only",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "FITTR": {
+  "status": "nothing_to_read",
+  "reason": "no careers page on its own site (/careers redirects to the homepage); LinkedIn only",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "OkCredit": {
+  "status": "nothing_to_read",
+  "reason": "no careers page on its own site (/careers redirects to the homepage); LinkedIn only",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Probe42": {
+  "status": "nothing_to_read",
+  "reason": "no careers page on its own site (/careers redirects to the homepage); LinkedIn only",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Prosimo.io": {
+  "status": "nothing_to_read",
+  "reason": "no careers page on its own site (/careers redirects to the homepage); LinkedIn only",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "ZYOD": {
+  "status": "nothing_to_read",
+  "reason": "no careers page on its own site (/careers redirects to the homepage); LinkedIn only",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "fincover": {
+  "status": "nothing_to_read",
+  "reason": "no careers page on its own site (/careers redirects to the homepage); LinkedIn only",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Simplismart": {
+  "status": "nothing_to_read",
+  "reason": "no careers page on its own site (/careers redirects to the homepage); LinkedIn only",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Hungama": {
+  "status": "nothing_to_read",
+  "reason": "hungama.com/careers is a 404; no other careers page found",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "Dream11": {
+  "status": "nothing_to_read",
+  "reason": "careers page dreamsports.group links only to jobs.lever.co/dreamsports, which is a 404; LinkedIn only",
+  "checked": "2026-11-10",
+  "by": "careers-link fix, checked 10 Nov 2026"
+ },
+ "FPL Technologies": {
+  "status": "pending",
+  "reason": "OneCard's employer; careers page fplabs.tech/careers loads jobs from a hosted API (none listed 10 Nov); not read yet",
+  "checked": "2026-11-10",
+  "by": "checked by hand"
+ },
+ "Simplilearn": {
+  "status": "pending",
+  "reason": "job list at simplilearn.com/job-openings is a CEIPAL widget; no reader for CEIPAL",
+  "checked": "2026-11-10",
+  "by": "checked by hand"
+ },
+ "Land rover": {
+  "status": "alias",
+  "reason": "same employer as Jaguar (JLR careers, SuccessFactors feed)",
+  "checked": "2026-11-10",
+  "by": "new readers round, checked 10 Nov 2026",
+  "parent": "Jaguar"
+ },
+ "Ansys": {
+  "status": "alias",
+  "reason": "acquired by Synopsys; Ansys roles are listed on careers.synopsys.com",
+  "checked": "2026-11-10",
+  "by": "new readers round, checked 10 Nov 2026",
+  "parent": "Synopsys"
+ },
+ "Teabox": {
+  "status": "dead",
+  "reason": "teabox.freshteam.com account no longer exists (Freshteam 404 'claim it now')",
+  "checked": "2026-11-10",
+  "by": "new readers round, checked 10 Nov 2026"
+ },
+ "Nabhdrishti Aerospace Private Limited": {
+  "status": "nothing_to_read",
+  "reason": "micro gas turbine maker; careers page lists only mechanical/aerothermal/production roles (the earlier 'Dover' hit was the word 'handover' in Framer's code)",
+  "checked": "2026-11-10",
+  "by": "new readers round, checked 10 Nov 2026"
+ },
+ "Appwrite": {
+  "status": "nothing_to_read",
+  "reason": "careers moved to appwrite.io/company#careers, which says 'No open roles right now'; Bessemer board only mirrors it",
+  "checked": "2026-11-10",
+  "by": "new readers round, checked 10 Nov 2026"
+ },
+ "Rattle": {
+  "status": "dead",
+  "reason": "its Greenhouse board (rattle) returns 404; site has no careers page",
+  "checked": "2026-11-10",
+  "by": "new readers round, checked 10 Nov 2026"
+ },
+ "CTERA": {
+  "status": "pending",
+  "reason": "only a Bessemer (Consider) portfolio listing; no own board found on Greenhouse/Lever/Ashby/SmartRecruiters",
+  "checked": "2026-11-10",
+  "by": "checked by hand"
+ },
+ "Klook": {
+  "status": "pending",
+  "reason": "only a Bessemer (Consider) portfolio listing; no own board found on Greenhouse/Lever/Ashby/SmartRecruiters",
+  "checked": "2026-11-10",
+  "by": "checked by hand"
+ },
+ "Booking Holdings": {
+  "status": "alias",
+  "reason": "Booking.com is read directly (Booking Holdings' tech hiring)",
+  "checked": "2026-11-10",
+  "by": "hand-built readers round, checked 10 Nov 2026",
+  "parent": "Booking.com"
+ },
+ "HSBC Bank": {
+  "status": "alias",
+  "reason": "same employer as HSBC (portal.careers.hsbc.com, Eightfold)",
+  "checked": "2026-11-10",
+  "by": "hand-built readers round, checked 10 Nov 2026",
+  "parent": "HSBC"
+ },
+ "Revolut": {
+  "status": "blocked",
+  "reason": "revolut.com/careers answers scripts with 403",
+  "checked": "2026-11-10",
+  "by": "hand-built readers round, checked 10 Nov 2026"
+ },
+ "Udaan": {
+  "status": "nothing_to_read",
+  "reason": "udaan.com/jobs is a 404; no public job list found",
+  "checked": "2026-11-10",
+  "by": "hand-built readers round, checked 10 Nov 2026"
+ },
+ "HyperVerge": {
+  "status": "nothing_to_read",
+  "reason": "careers page lists LinkedIn job links only (LinkedIn covers it)",
+  "checked": "2026-11-10",
+  "by": "hand-built readers round, checked 10 Nov 2026"
+ },
+ "Livspace": {
+  "status": "nothing_to_read",
+  "reason": "careers page has no job list (only a GraphQL site config)",
+  "checked": "2026-11-10",
+  "by": "hand-built readers round, checked 10 Nov 2026"
+ },
+ "Scaler": {
+  "status": "nothing_to_read",
+  "reason": "careers page loads no job list",
+  "checked": "2026-11-10",
+  "by": "hand-built readers round, checked 10 Nov 2026"
+ },
+ "Gupshup": {
+  "status": "nothing_to_read",
+  "reason": "careers page data has no job links",
+  "checked": "2026-11-10",
+  "by": "hand-built readers round, checked 10 Nov 2026"
+ },
+ "Fyle": {
+  "status": "nothing_to_read",
+  "reason": "now Sage Expense Management; join page lists no jobs",
+  "checked": "2026-11-10",
+  "by": "hand-built readers round, checked 10 Nov 2026"
+ },
+ "Netcracker": {
+  "status": "nothing_to_read",
+  "reason": "netcracker.com/api/open-positions lists 13 jobs, none in India",
+  "checked": "2026-11-10",
+  "by": "hand-built readers round, checked 10 Nov 2026"
+ },
+ "Paysafe": {
+  "status": "nothing_to_read",
+  "reason": "careers page links no job list",
+  "checked": "2026-11-10",
+  "by": "hand-built readers round, checked 10 Nov 2026"
+ },
+ "John Deere": {
+  "status": "nothing_to_read",
+  "reason": "jobs.deere.com feed (393 jobs) has no India roles; India hiring is elsewhere",
+  "checked": "2026-11-10",
+  "by": "hand-built readers round, checked 10 Nov 2026"
+ },
+ "Sony": {
+  "status": "nothing_to_read",
+  "reason": "sonyglobal Workday board is US entertainment only; Sony India hires elsewhere",
+  "checked": "2026-11-10",
+  "by": "hand-built readers round, checked 10 Nov 2026"
+ },
+ "Jio": {
+  "status": "pending",
+  "reason": "careers.jio.com is ASP.NET postback forms; no plain feed",
+  "checked": "2026-11-10",
+  "by": "checked by hand"
+ },
+ "Jio Platforms": {
+  "status": "pending",
+  "reason": "same site as Jio (careers.jio.com, ASP.NET postbacks)",
+  "checked": "2026-11-10",
+  "by": "checked by hand"
+ },
+ "Best Buy": {
+  "status": "pending",
+  "reason": "IBM BrassRing (sjobs.brassring.com) needs a session for its search",
+  "checked": "2026-11-10",
+  "by": "checked by hand"
+ },
+ "UBS": {
+  "status": "pending",
+  "reason": "IBM BrassRing (jobs.ubs.com/TGnewUI) needs a session for its search",
+  "checked": "2026-11-10",
+  "by": "checked by hand"
+ },
+ "ASML": {
+  "status": "pending",
+  "reason": "site search uses a per-session Sitecore token",
+  "checked": "2026-11-10",
+  "by": "checked by hand"
+ },
+ "HashiCorp": {
+  "status": "pending",
+  "reason": "now IBM; IBM careers search is an internal API, not built",
+  "checked": "2026-11-10",
+  "by": "checked by hand"
+ },
+ "BMC software": {
+  "status": "pending",
+  "reason": "Workday tenant not found (the 'bmc' tenant is a different company)",
+  "checked": "2026-11-10",
+  "by": "checked by hand"
+ },
+ "Ola": {
+  "status": "pending",
+  "reason": "TurboHire (olacareers.turbohire.co) is token-gated",
+  "checked": "2026-11-10",
+  "by": "checked by hand"
+ },
+ "Setu": {
+  "status": "pending",
+  "reason": "TurboHire (pinelabsgroup.turbohire.co) is token-gated",
+  "checked": "2026-11-10",
+  "by": "checked by hand"
  }
 }

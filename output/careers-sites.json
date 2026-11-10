@@ -201,12 +201,17 @@
  },
  "Dream11": {
   "company": "Dream11",
-  "checked": "2026-11-07",
-  "site": "https://dream11.com/",
-  "careers": "https://dream11.com/",
-  "boards": [],
+  "checked": "2026-11-10",
+  "site": "https://www.dreamsports.group/",
+  "careers": "https://www.dreamsports.group/lifeatdreamsports",
+  "boards": [
+   [
+    "lever",
+    "dreamsports"
+   ]
+  ],
   "platforms": [],
-  "rendered": true,
+  "rendered": false,
   "how": "recorded"
  },
  "Dream Sports": {
@@ -2258,15 +2263,13 @@
  },
  "FPL Technologies": {
   "company": "FPL Technologies",
-  "checked": "2026-11-07",
-  "site": "https://www.fpl.com/",
-  "careers": "https://www.nexteraenergy.com/careers.html",
+  "checked": "2026-11-10",
+  "site": "https://fplabs.tech/",
+  "careers": "https://fplabs.tech/careers",
   "boards": [],
-  "platforms": [
-   "successfactors"
-  ],
+  "platforms": [],
   "rendered": true,
-  "how": "guessed"
+  "how": "recorded"
  },
  "Uni Cards": {
   "company": "Uni Cards",
@@ -3446,13 +3449,13 @@
  },
  "Simplismart": {
   "company": "Simplismart",
-  "checked": "2026-11-07",
+  "checked": "2026-11-10",
   "site": "https://simplismart.ai/",
   "careers": "https://simplismart.ai/",
   "boards": [],
   "platforms": [],
   "rendered": true,
-  "how": "clearbit"
+  "how": "recorded"
  },
  "Portkey": {
   "company": "Portkey",
@@ -3994,13 +3997,13 @@
  },
  "Ericsson": {
   "company": "Ericsson",
-  "checked": "2026-11-07",
+  "checked": "2026-11-10",
   "site": "https://www.ericsson.com/en",
   "careers": "https://www.ericsson.com/en/careers",
   "boards": [],
   "platforms": [],
   "rendered": true,
-  "how": "clearbit"
+  "how": "recorded"
  },
  "Nokia": {
   "company": "Nokia",
@@ -4619,7 +4622,7 @@
  },
  "OYO": {
   "company": "OYO",
-  "checked": "2026-11-07",
+  "checked": "2026-11-10",
   "site": "https://www.oyorooms.com/",
   "careers": "https://www.oyorooms.com/",
   "boards": [],
@@ -4770,13 +4773,13 @@
  },
  "Simplilearn": {
   "company": "Simplilearn",
-  "checked": "2026-11-07",
+  "checked": "2026-11-10",
   "site": "https://www.simplilearn.com/",
   "careers": "https://www.simplilearn.com/career-roadmap/ai-engineer",
   "boards": [],
   "platforms": [],
   "rendered": true,
-  "how": "clearbit"
+  "how": "recorded"
  },
  "WinZO": {
   "company": "WinZO",
@@ -7174,13 +7177,13 @@
  },
  "Dukaan": {
   "company": "Dukaan",
-  "checked": "2026-11-07",
+  "checked": "2026-11-10",
   "site": "https://mydukaan.io/",
-  "careers": "https://mydukaan.io/careers",
+  "careers": "https://mydukaan.io/jobs",
   "boards": [],
   "platforms": [],
   "rendered": true,
-  "how": "clearbit"
+  "how": "recorded"
  },
  "Dunzo": {
   "company": "Dunzo",
@@ -7322,7 +7325,7 @@
  },
  "fincover": {
   "company": "fincover",
-  "checked": "2026-11-07",
+  "checked": "2026-11-10",
   "site": "https://www.fincover.com/",
   "careers": "https://www.fincover.com/",
   "boards": [],
@@ -9034,13 +9037,13 @@
  },
  "Acalvio Technologies": {
   "company": "Acalvio Technologies",
-  "checked": "2026-11-07",
+  "checked": "2026-11-10",
   "site": "https://www.acalvio.com/",
   "careers": "https://www.acalvio.com/",
   "boards": [],
   "platforms": [],
   "rendered": true,
-  "how": "imported"
+  "how": "recorded"
  },
  "Accacia": {
   "company": "Accacia",
@@ -9821,13 +9824,13 @@
  },
  "Probe42": {
   "company": "Probe42",
-  "checked": "2026-11-07",
+  "checked": "2026-11-10",
   "site": "https://probe42.in/",
   "careers": "https://probe42.in/",
   "boards": [],
   "platforms": [],
   "rendered": true,
-  "how": "imported"
+  "how": "recorded"
  },
  "Productiv": {
   "company": "Productiv",
@@ -10728,13 +10731,13 @@
  },
  "FITTR": {
   "company": "FITTR",
-  "checked": "2026-11-07",
+  "checked": "2026-11-10",
   "site": "https://fittr.com/",
   "careers": "https://fittr.com/",
   "boards": [],
   "platforms": [],
   "rendered": true,
-  "how": "clearbit"
+  "how": "recorded"
  },
  "FOXY": {
   "company": "FOXY",
@@ -11301,13 +11304,13 @@
  },
  "OkCredit": {
   "company": "OkCredit",
-  "checked": "2026-11-07",
+  "checked": "2026-11-10",
   "site": "https://okcredit.in/",
   "careers": "https://okcredit.in/",
   "boards": [],
   "platforms": [],
   "rendered": true,
-  "how": "clearbit"
+  "how": "recorded"
  },
  "People Home Finance Limited": {
   "company": "People Home Finance Limited",
@@ -11348,13 +11351,13 @@
  },
  "ZYOD": {
   "company": "ZYOD",
-  "checked": "2026-11-07",
+  "checked": "2026-11-10",
   "site": "https://zyod.com/",
   "careers": "https://zyod.com/",
   "boards": [],
   "platforms": [],
   "rendered": true,
-  "how": "clearbit"
+  "how": "recorded"
  },
  "Newton School": {
   "company": "Newton School",
@@ -11962,13 +11965,13 @@
  },
  "Hungama": {
   "company": "Hungama",
-  "checked": "2026-11-07",
+  "checked": "2026-11-10",
   "site": "https://www.hungama.com/",
   "careers": "https://www.hungama.com/careers",
   "boards": [],
   "platforms": [],
   "rendered": true,
-  "how": "imported"
+  "how": "recorded"
  },
  "InRisk Labs": {
   "company": "InRisk Labs",
@@ -12017,13 +12020,13 @@
  },
  "Amigo": {
   "company": "Amigo",
-  "checked": "2026-11-07",
+  "checked": "2026-11-10",
   "site": "https://www.concurrence.com/",
   "careers": "https://www.concurrence.com/careers",
   "boards": [],
   "platforms": [],
   "rendered": true,
-  "how": "imported"
+  "how": "recorded"
  },
  "Billion Hearts": {
   "company": "Billion Hearts",
@@ -12204,13 +12207,13 @@
  },
  "Prosimo.io": {
   "company": "Prosimo.io",
-  "checked": "2026-11-07",
+  "checked": "2026-11-10",
   "site": "https://prosimo.io/",
   "careers": "https://prosimo.io/",
   "boards": [],
   "platforms": [],
   "rendered": true,
-  "how": "imported"
+  "how": "recorded"
  },
  "Raphe mPhibr": {
   "company": "Raphe mPhibr",
