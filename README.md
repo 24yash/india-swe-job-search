@@ -110,11 +110,13 @@ Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `-
 ### Score (0–100)
 | Part | Points | How |
 |---|---|---|
-| Stack match | 35 | weighted keywords; capped at 20 if the JD centres on a language you don't list |
-| Level fit | 20 | years asked vs `max_min_years`; title signals when years aren't stated |
-| Pay confidence | 20 | Posted 20, Strong 16, Likely 10, Unverified 0 |
+| Pay confidence | 35 | Posted 35, Strong 28, Likely 17.5, Unverified 0 |
+| Level fit | 30 | years asked vs `max_min_years`; title signals when years aren't stated |
 | Company quality | 15 | from the bank, 0–15 |
+| Stack match | 10 | weighted keywords; reduced if the JD centres on a language you don't list |
 | Freshness and link | 10 | newer is better; the company's own careers link beats LinkedIn |
+
+Pay and years asked are prerequisites, while a stack can be learned, so stack weighs less than company quality and less than the gap between Strong and Likely pay. Change the weights in `profile.json` → `score_weights`.
 
 ### The company bank
 `tiers.json` (~600) and `companies.json` (~90) form the bank. Companies are **never dropped for not hiring right now**. Each run writes `company-bank-<date>.csv` and appends to `bank-history.json`, so a quiet company that starts hiring shows up as "hiring now (new since last run)".

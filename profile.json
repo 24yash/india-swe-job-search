@@ -258,5 +258,13 @@
     "Kotlin": "kotlin",
     "C#/.NET": "c#|\\.net\\b"
   },
-  "_comment_experience": "Roles asking up to max_min_years are kept; 0-2 years with salary evidence is flagged as the sweet spot. Campus, new-grad and fresher hiring is excluded (title and description)."
+  "_comment_experience": "Roles asking up to max_min_years are kept; 0-2 years with salary evidence is flagged as the sweet spot. Campus, new-grad and fresher hiring is excluded (title and description).",
+  "score_weights": {
+    "pay": 35,
+    "level": 30,
+    "company": 15,
+    "stack": 10,
+    "fresh": 10
+  },
+  "_comment_score_weights": "Points per part of the 0-100 score. Pay and level fit come first (prerequisites); stack weighs less than company quality because a stack can be learned, and less than the gap between Strong and Likely pay evidence."
 }
