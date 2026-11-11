@@ -33,9 +33,11 @@ INDIA = re.compile(r"\b(india|bengaluru|bangalore|hyderabad|pune|mumbai|gurugram
 
 
 class Robots:
-    """robots.txt rules as RFC 9309 (and Google) read them: the group naming our user agent, else '*'; the longest
-    matching rule wins and Allow wins a tie. Python's urllib.robotparser applies the first matching line instead, so
-    'Disallow: /' followed by 'Allow: /careers' (Eightfold sites such as Millennium's) wrongly blocked every job page."""
+    """robots.txt rules as RFC 9309 (and Google) read them: the group whose user-agent equals our product token (the
+    User-Agent's first word, case-insensitive), else '*'; the longest matching rule wins and Allow wins a tie. Python's
+    urllib.robotparser applies the first matching line instead, so 'Disallow: /' followed by 'Allow: /careers'
+    (Eightfold sites such as Millennium's) wrongly blocked every job page. Use Robots.load() to fetch one: a missing
+    robots.txt (4xx) allows everything; a server error or an unreachable host disallows everything for this run."""
 
     def __init__(self, text, agent):
         self.text = text or ""
@@ -57,10 +59,28 @@ class Robots:
                 if val or key == "allow":
                     for a in current:
                         groups[a].append((key == "allow", val))
-        ua = agent.lower()
-        named = [a for a in groups if a != "*" and a and a in ua]
+        m = re.match(r"[a-z0-9_-]+", agent.lower())
+        token = m.group(0) if m else ""
+        named = [a for a in groups if a != "*" and a == token]
         rules = [r for a in named for r in groups[a]] if named else groups.get("*", [])
         self.rules = [(allow, len(rule), self._pattern(rule)) for allow, rule in rules]
+
+    @classmethod
+    def load(cls, get, base, agent, timeout=15):
+        """robots.txt for base ('https://host') through get(url, timeout=...)."""
+        try:
+            r = get(f"{base}/robots.txt", timeout=timeout)
+        except Exception:
+            return cls.disallow_all(agent)
+        if r.status_code >= 500:
+            return cls.disallow_all(agent)
+        return cls(r.text if r.status_code < 400 else "", agent)
+
+    @classmethod
+    def disallow_all(cls, agent):
+        robots = cls("User-agent: *\nDisallow: /", agent)
+        robots.text = ""  # nothing to read sitemaps from
+        return robots
 
     @staticmethod
     def _pattern(rule):
@@ -83,12 +103,7 @@ class Robots:
 def _get(h, url, robots, limit=8_000_000):
     host = urlparse(url).netloc
     if host not in robots:
-        try:
-            r = h.SESSION.get(f"https://{host}/robots.txt", timeout=15)
-            text = r.text if r.status_code < 400 else ""
-        except Exception:
-            text = ""
-        robots[host] = Robots(text, h.SESSION.headers.get("User-Agent", "*"))
+        robots[host] = Robots.load(h.SESSION.get, f"https://{host}", h.SESSION.headers.get("User-Agent", "*"))
     if urlparse(url).path == "/robots.txt":
         return robots[host].text or None  # already fetched for the rules above
     if not robots[host].can_fetch(url):
@@ -117,24 +132,32 @@ def sitemap_urls(h, c, robots):
     return list(dict.fromkeys(found))
 
 
+JOB_MAP = re.compile(r"job|career|posting|position|vacanc", re.I)
+
+
 def job_urls(h, c, robots, max_maps=40):
-    """[(url, lastmod)] for job pages listed in the site's sitemaps. Raises when no sitemap could be read at all
-    (network, 4xx/5xx, robots.txt): an empty answer would otherwise count as every role on the board having closed,
-    and would empty the page cache."""
+    """[(url, lastmod)] for job pages listed in the site's sitemaps. Raises when no sitemap could be read at all, or
+    when a sitemap the jobs come from failed (one named in companies.json, or a job sitemap an index points to):
+    a missing list would otherwise count as every role on that board having closed, and would empty the page cache.
+    The guessed /sitemap.xml and /sitemal.xml may fail; a sitemap that loads and lists nothing means no openings."""
     todo, seen, jobs, read = sitemap_urls(h, c, robots), set(), {}, 0
+    required, failed = set(c.get("sitemaps") or []), []
     while todo and len(seen) < max_maps:
         sm = todo.pop(0)
         if sm in seen:
             continue
         seen.add(sm)
         xml = _get(h, sm, robots)
-        if not xml or "<loc>" not in xml:
+        if not xml or not re.search(r"<(urlset|sitemapindex)\b", xml[:5000]):
+            if sm in required:
+                failed.append(sm)
             continue
         read += 1
         if "<sitemapindex" in xml:
             subs = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", xml)
+            required |= {u for u in subs if JOB_MAP.search(urlparse(u).path)}
             # job sitemaps first; skip other languages' copies when an English one exists
-            subs.sort(key=lambda u: (not re.search(r"job|career|posting|position|vacanc", u, re.I), bool(re.search(r"/(?!en)[a-z]{2}[-_][a-z]{2}/", u, re.I))))
+            subs.sort(key=lambda u: (not JOB_MAP.search(u), bool(re.search(r"/(?!en)[a-z]{2}[-_][a-z]{2}/", u, re.I))))
             todo = subs + todo
             continue
         for block in re.findall(r"<url>(.*?)</url>", xml, re.S):
@@ -143,8 +166,9 @@ def job_urls(h, c, robots, max_maps=40):
                 continue
             mod = re.search(r"<lastmod>\s*([^<\s]+)\s*</lastmod>", block)
             jobs.setdefault(loc.group(1), mod.group(1) if mod else "")
-    if not read:
-        raise RuntimeError(f"no sitemap could be read for {c['host']} (network, HTTP error or robots.txt)")
+    if not read or failed:
+        raise RuntimeError(f"{'job sitemap ' + failed[0] if failed else 'no sitemap'} could not be read for {c['host']} "
+                           "(network, HTTP error or robots.txt)")
     return list(jobs.items())
 
 
@@ -181,13 +205,20 @@ def place(jp):
     return [o for o in out if o]
 
 
+def _str(v):
+    """A JobPosting field as text: some sites give a list or a number where a string belongs."""
+    if isinstance(v, list):
+        v = next((x for x in v if isinstance(x, str)), "")
+    return v.strip() if isinstance(v, str) else "" if v is None or isinstance(v, dict) else str(v)
+
+
 def summary(jp, url):
     """What a run needs from one JobPosting, kept small enough to cache."""
-    return {"title": (jp.get("title") or jp.get("name") or "").strip(), "locs": place(jp), "url": jp.get("url") or url,
-            "posted": jp.get("datePosted") or "", "until": jp.get("validThrough") or "",
+    return {"title": _str(jp.get("title")) or _str(jp.get("name")), "locs": place(jp), "url": _str(jp.get("url")) or url,
+            "posted": _str(jp.get("datePosted")), "until": _str(jp.get("validThrough")),
             "remote": "TELECOMMUTE" in str(jp.get("jobLocationType", "")).upper(),
             "remote_india": "india" in json.dumps(jp.get("applicantLocationRequirements", "")).lower(),
-            "text": jp.get("description") or "", "type": str(jp.get("employmentType") or "")}
+            "text": _str(jp.get("description")), "type": str(jp.get("employmentType") or "")}
 
 
 def to_job(c, h, s, now):
@@ -203,24 +234,38 @@ def to_job(c, h, s, now):
 
 
 def page_summaries(h, url, robots):
+    """JobPosting summaries on one job page, or None when the page couldn't be read or parsed (try again next run)."""
     if ".icims.com" in url and "in_iframe=1" not in url:  # classic iCIMS: JobPosting data only in the iframe view
         url += ("&" if "?" in url else "?") + "in_iframe=1"
     page = _get(h, url, robots, 3_000_000)
-    return None if page is None else [summary(jp, url) for jp in job_postings(page)]
+    if page is None:
+        return None
+    try:
+        return [summary(jp, url) for jp in job_postings(page)]
+    except Exception:  # one malformed page must not cost the rest of the run
+        return None
 
 
 def cache_path(h, c):
     return h.OUT / "sitemap-cache" / (re.sub(r"[^a-z0-9]+", "-", c["name"].lower()).strip("-") + ".json")
 
 
+EMPTY_RECHECK_DAYS = 7
+
+
 def fetch_cached(c, h, robots, urls, now):
     """Bare-ID job URLs: read each page once, keep its summary (description only for India roles), reuse it while
-    the URL stays in the sitemap. A failed page is retried next run; a page with no JobPosting is remembered as such."""
+    the URL stays in the sitemap. A page that couldn't be read is retried next run. A page that loaded without any
+    JobPosting data (possibly a block or rate-limit page) is stored as {"empty": date} and read again after
+    EMPTY_RECHECK_DAYS days. New URLs come first, then those rechecks, at most max_pages in all."""
     path = cache_path(h, c)
     old = json.loads(path.read_text()) if path.exists() else {}
     listed = dict(urls)
-    cache = {u: v for u, v in old.items() if u in listed}  # gone from the sitemap = closed
-    new = [u for u, _ in sorted(urls, key=lambda x: x[1], reverse=True) if u not in cache][: c.get("max_pages", 150)]
+    cache = {u: ({"empty": "2000-01-01"} if v == [] else v) for u, v in old.items() if u in listed}  # gone = closed
+    due = (now.date().toordinal() - EMPTY_RECHECK_DAYS)
+    stale = [u for u, v in cache.items() if isinstance(v, dict) and datetime.fromisoformat(v["empty"]).toordinal() <= due]
+    new = [u for u, _ in sorted(urls, key=lambda x: x[1], reverse=True) if u not in cache]
+    todo = (new + stale)[: c.get("max_pages", 150)]
 
     def read(u):
         got = page_summaries(h, u, robots)
@@ -232,14 +277,14 @@ def fetch_cached(c, h, robots, urls, now):
         return u, got
 
     with ThreadPoolExecutor(4) as pool:
-        for u, got in pool.map(read, new):
+        for u, got in pool.map(read, todo):
             if got is not None:
-                cache[u] = got
+                cache[u] = got or {"empty": now.date().isoformat()}
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(cache, indent=0))
     seen = set()
     for summaries in cache.values():
-        for s in summaries:
+        for s in summaries if isinstance(summaries, list) else []:
             job = to_job(c, h, s, now)
             if job and (job.title.lower(), job.location.lower()) not in seen:
                 seen.add((job.title.lower(), job.location.lower()))

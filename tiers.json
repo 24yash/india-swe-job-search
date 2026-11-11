@@ -10202,8 +10202,8 @@
    "name": "Amgen",
    "type": "Biotech MNC",
    "quality": 10,
-   "pay": "below",
-   "pay_note": "Levels.fyi India L3 15.2, L4 21.1 LPA; overall 16.9 (checked 11 Nov 2026)"
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India L3 15.2, L4 21.1 LPA; overall 16.9 — level-dependent (checked 11 Nov 2026)"
   },
   {
    "name": "ValGenesis",

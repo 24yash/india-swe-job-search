@@ -1,6 +1,6 @@
 # Shortlist table — 2026-11-11
 
-482 roles passed every filter; showing the top 40 (max 3 per company). 287 more pass everything except pay evidence (leads file).
+482 roles passed every filter; showing the top 40 (max 3 per company). 290 more pass everything except pay evidence (leads file).
 
 | # | Company | Company type / stage (latest round) | Role title | Location / mode | Exp asked | Pay (₹ LPA) + confidence + source | Key stack from JD | Score | Gaps vs my profile | Apply link | Posted date |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -78,11 +78,11 @@
 ## Rejected after the title filter, by reason
 
 - 4+ yrs asked: 165
-- pay below bar: 155
+- pay below bar: 152
 - 5+ yrs asked: 101
 - 6+ yrs asked: 48
 - 7+ yrs asked: 35
-- 8+ yrs asked: 27
+- 8+ yrs asked: 26
 - 10+ yrs asked: 10
 - pay below bar at this level: 4
 - posted pay 5 LPA below bar: 3

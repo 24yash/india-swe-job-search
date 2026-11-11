@@ -87,16 +87,11 @@ ROBOTS = {}
 
 
 def allowed(url):
-    """robots.txt check for our page loads (cached per host; unreadable robots.txt = allowed)."""
+    """robots.txt check for our page loads (cached per host; no robots.txt = allowed, server error or unreachable = not)."""
     p = urlparse(url)
     host = f"{p.scheme}://{p.netloc}"
     if host not in ROBOTS:
-        try:
-            r = S.get(host + "/robots.txt", timeout=8)
-            text = r.text if r.ok else ""
-        except requests.RequestException:
-            text = ""
-        ROBOTS[host] = Robots(text, UA)  # longest-match rules (RFC 9309), see portals/sitemap.py
+        ROBOTS[host] = Robots.load(S.get, host, UA, timeout=8)  # RFC 9309 rules and status handling, see portals/sitemap.py
     return ROBOTS[host].can_fetch(url)
 
 

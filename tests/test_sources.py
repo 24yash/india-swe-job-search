@@ -630,6 +630,122 @@ got = list(portals.fetch({"name": "EF", "portal": "sitemap", "host": "x.eightfol
 check("sitemap: india_in_url reads only job pages whose URL names an Indian city",
       len(got) == 1 and read_pages == ["https://x.eightfold.ai/careers/job/1-software-engineer-bangalore-karnataka-india"], read_pages)
 
+# --- review fixes (PR #6): robots rules and status codes, partial sitemap failures, rechecked empty pages --------
+from portals import sitemap as sm  # noqa: E402
+UA_T = "Mozilla/5.0 (job-search research script; read-only)"
+check("robots: Allow wins a tie between rules of the same length",
+      Robots("User-agent: *\nDisallow: /jobs\nAllow: /jobs\n", UA_T).can_fetch("https://a.com/jobs/1"))
+named = Robots("User-agent: Mozilla\nDisallow: /x\n\nUser-agent: *\nDisallow: /\n", UA_T)
+check("robots: the group naming our product token is used and the '*' group ignored",
+      named.can_fetch("https://a.com/y") and not named.can_fetch("https://a.com/x/1"))
+check("robots: a group only containing a word of our User-Agent ('search') doesn't apply to us",
+      Robots("User-agent: search\nDisallow: /\n\nUser-agent: *\nAllow: /\n", UA_T).can_fetch("https://a.com/jobs"))
+
+
+def resp(status, text=""):
+    return SimpleNamespace(status_code=status, text=text, content=text.encode(), ok=status < 400)
+
+
+def boom(url, **kw):
+    raise crawl.requests.ConnectionError("down")
+
+
+check("robots: missing robots.txt (404) allows everything; a 5xx or an unreachable host disallows everything",
+      Robots.load(lambda u, **k: resp(404), "https://a.com", UA_T).can_fetch("https://a.com/x")
+      and not Robots.load(lambda u, **k: resp(503), "https://a.com", UA_T).can_fetch("https://a.com/x")
+      and not Robots.load(boom, "https://a.com", UA_T).can_fetch("https://a.com/x"))
+real_fc_s = fc.S
+fc.S, fc.ROBOTS = SimpleNamespace(get=lambda u, **k: resp(200, "User-agent: *\nDisallow: /private\n")), {}
+check("find_careers: page loads honour robots.txt (longest-match rules)",
+      not fc.allowed("https://z.com/private/x") and fc.allowed("https://z.com/careers"))
+fc.S, fc.ROBOTS = SimpleNamespace(get=lambda u, **k: resp(503)), {}
+check("find_careers: a robots.txt server error means nothing is loaded from that host", not fc.allowed("https://z.com/careers"))
+fc.S, fc.ROBOTS = real_fc_s, {}
+
+
+def site(table):
+    """SESSION whose get answers from {url suffix: (status, body)}; anything else is a 404."""
+    def get(url, **kw):
+        for k, (st, body) in table.items():
+            if url.endswith(k):
+                return resp(st, body)
+        return resp(404)
+    return SimpleNamespace(get=get, headers={"User-Agent": UA_T})
+
+
+urlset = lambda *ids: "<urlset>" + "".join(f"<url><loc>https://m.test/job_details/{i}/</loc></url>" for i in ids) + "</urlset>"  # noqa: E731
+crawl.SESSION = site({"/robots.txt": (200, ""), "/jobs.xml": (503, ""), "/sitemap.xml": (200, "<urlset><url><loc>https://m.test/about</loc></url></urlset>")})
+try:
+    list(portals.fetch({"name": "M", "portal": "sitemap", "host": "m.test", "sitemaps": ["https://m.test/jobs.xml"], "cache_pages": True}, crawl))
+    raised = False
+except RuntimeError:
+    raised = True
+check("sitemap: the configured job sitemap failing raises even when the guessed /sitemap.xml loads (no silent 'all closed')", raised)
+crawl.SESSION = site({"/robots.txt": (200, "Sitemap: https://m.test/index.xml"), "/index.xml": (200, "<sitemapindex><sitemap><loc>https://m.test/job-sitemap.xml</loc></sitemap></sitemapindex>"),
+                      "/job-sitemap.xml": (500, "")})
+try:
+    list(portals.fetch({"name": "M", "portal": "sitemap", "host": "m.test"}, crawl))
+    raised = False
+except RuntimeError:
+    raised = True
+check("sitemap: a job sitemap that an index points to failing raises", raised)
+crawl.SESSION = site({"/robots.txt": (200, ""), "/jobs.xml": (200, "<urlset></urlset>")})
+try:
+    empty = list(portals.fetch({"name": "M", "portal": "sitemap", "host": "m.test", "sitemaps": ["https://m.test/jobs.xml"]}, crawl))
+except RuntimeError as e:
+    empty = e
+check("sitemap: a sitemap that loads and lists no jobs means no openings (no error)", empty == [], empty)
+
+mc2 = {"name": "M2", "portal": "sitemap", "host": "m.test", "sitemaps": ["https://m.test/jobs.xml"], "cache_pages": True}
+hits = []
+pages = {"/robots.txt": (200, ""), "/jobs.xml": (200, urlset(1, 2)), "/job_details/1/": (200, "<html>Please verify you are human</html>"),
+         "/job_details/2/": (200, ld("Software Engineer", "Pune"))}
+
+
+def counted(table):
+    s = site(table)
+    inner = s.get
+    s.get = lambda url, **kw: (hits.append(url), inner(url, **kw))[1]
+    return s
+
+
+crawl.SESSION = counted(pages)
+first = [j.title for j in portals.fetch(mc2, crawl)]
+pages["/job_details/1/"] = (200, ld("Backend Engineer", "Pune"))
+hits.clear()
+crawl.SESSION = counted(pages)
+second = [j.title for j in portals.fetch(mc2, crawl)]
+check("sitemap cache: a page with no JobPosting (block page) is stored as empty and not re-read within a week",
+      first == ["Software Engineer"] and second == ["Software Engineer"] and not any("/job_details/" in u for u in hits), (first, second, hits))
+cpath = sm.cache_path(crawl, mc2)
+cdata = json.loads(cpath.read_text())
+cdata["https://m.test/job_details/1/"] = {"empty": "2026-01-01"}
+cpath.write_text(json.dumps(cdata))
+crawl.SESSION = counted(pages)
+third = sorted(j.title for j in portals.fetch(mc2, crawl))
+check("sitemap cache: an empty page is read again after EMPTY_RECHECK_DAYS and its job appears", third == ["Backend Engineer", "Software Engineer"], third)
+old_cache = json.loads(cpath.read_text())
+old_cache["https://m.test/job_details/2/"] = []  # the format before this fix
+cpath.write_text(json.dumps(old_cache))
+crawl.SESSION = counted(pages)
+check("sitemap cache: entries in the old empty-list format are rechecked, not trusted",
+      sorted(j.title for j in portals.fetch(mc2, crawl)) == ["Backend Engineer", "Software Engineer"])
+
+mc3 = {"name": "M3", "portal": "sitemap", "host": "m.test", "sitemaps": ["https://m.test/jobs.xml"], "cache_pages": True}
+odd = ('<script type="application/ld+json">{"@type":"JobPosting","title":["Software Engineer II"],"datePosted":20261101,'
+       '"jobLocation":{"address":{"addressLocality":"Pune","addressCountry":"India"}}}</script>')
+crawl.SESSION = site({"/robots.txt": (200, ""), "/jobs.xml": (200, urlset(1, 2, 3)), "/job_details/1/": (200, odd),
+                      "/job_details/2/": (200, ld("Software Engineer", "Pune")), "/job_details/3/": (200, ld("Backend Engineer", "Pune"))})
+real_summary = sm.summary
+sm.summary = lambda jp, url: (_ for _ in ()).throw(ValueError("bad page")) if url.endswith("/3/") else real_summary(jp, url)
+try:
+    got = sorted(j.title for j in portals.fetch(mc3, crawl))
+except ValueError as e:
+    got = e
+sm.summary = real_summary
+check("sitemap cache: odd field types (a list title) are read, and one page that fails to parse doesn't lose the others",
+      got == ["Software Engineer", "Software Engineer II"] and "https://m.test/job_details/3/" not in json.loads(sm.cache_path(crawl, mc3).read_text()), got)
+
 crawl.OUT, crawl.ROOT, crawl.SESSION = real_out, real_root, real_session
 
 # --- Navi (TurboHire list without the "data" wrapper), Zerodha ------------------------------------------

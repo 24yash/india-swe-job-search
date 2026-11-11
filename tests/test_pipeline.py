@@ -185,11 +185,15 @@ crawl.ROOT = tmp
 crawl.PROFILE = json.loads(json.dumps(real_profile))
 crawl.PROFILE["linkedin"]["company_sweep"]["companies_per_run"] = 2
 crawl.TIERS = {"known": [{"name": f"Co{i}", "quality": 14, "pay": "likely"} for i in range(5)] +
-                        [{"name": "Walled", "quality": 10, "pay": "likely", "linkedin_every_run": True}], "services_and_staffing": []}
+                        [{"name": "Walled", "quality": 10, "pay": "likely", "linkedin_every_run": True},
+                         {"name": "Lowq", "quality": 5, "pay": "unclear", "linkedin_every_run": True},
+                         {"name": "Payslow", "quality": 12, "pay": "below", "linkedin_every_run": True}], "services_and_staffing": []}
 (tmp / "output" / "sweep-state.json").write_text(json.dumps({"walled": "2026-11-10"}))  # searched recently: would rotate to the back
 sw = crawl.build_context(argparse.Namespace(max_age=30))["sweep"]
 check("sweep: companies whose board no script can read are searched every run, on top of the rotating budget",
-      sw[0] == "Walled" and len(sw) == 3, sw)
+      set(sw[:2]) == {"Walled", "Lowq"} and len(sw) == 4, sw)
+check("sweep: the every-run flag works below the quality bar, but not for a company that pays below the bar",
+      "Lowq" in sw and "Payslow" not in sw, sw)
 crawl.ROOT, crawl.PROFILE = real_root, real_profile
 shutil.rmtree(tmp)
 

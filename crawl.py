@@ -887,7 +887,8 @@ def build_context(args):
     direct = {norm(c["name"]) for c in companies if c["ats"] != "linkedin"}
     sweep = sorted({c["name"] for c in TIERS["known"]
                     if not any(same_or_alias(norm(c["name"]), d) for d in direct) and c.get("pay") in ("likely", "unclear")
-                    and (c.get("pay") == "likely" or c.get("quality", 0) >= PROFILE["linkedin"]["company_sweep"]["min_quality"])},
+                    and (c.get("pay") == "likely" or c.get("linkedin_every_run")
+                         or c.get("quality", 0) >= PROFILE["linkedin"]["company_sweep"]["min_quality"])},
                    key=norm)
     sweep = list({norm(n): n for n in sweep}.values())  # one search per company, not per alias
     # Rotating sweep: LinkedIn rate-limits unsigned clients, so each run searches a budget of companies.
@@ -908,6 +909,7 @@ def build_context(args):
                               state.get(norm(n), ""), -quality.get(norm(n), 0)))
     # Companies whose own board no script can read (bot walls, robots.txt, sign-in, token-gated search) are searched
     # every run, on top of the rotating budget: LinkedIn is the only way the pipeline reads them (tiers.json "linkedin_every_run").
+    # They are sweep candidates whatever their quality; one that gains a direct source or turns out to pay below the bar drops out.
     every = {norm(c["name"]) for c in TIERS["known"] if c.get("linkedin_every_run")}
     budget = PROFILE["linkedin"]["company_sweep"]["deep_companies_per_run" if DEEP else "companies_per_run"]
     sweep = [n for n in sweep if norm(n) in every] + [n for n in sweep if norm(n) not in every][:budget]
