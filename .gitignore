@@ -4,3 +4,5 @@ output/linkedin-details.json
 output/*.log
 __pycache__/
 .DS_Store
+# job-page summaries for bare-ID sitemaps (Meta): rebuilt on the first crawl
+output/sitemap-cache/

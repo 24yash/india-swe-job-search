@@ -1,4 +1,5 @@
-"""TurboHire job lists that a company's own careers page serves as JSON (Khatabook: khatabook.com/hiring/recruiter/list).
+"""TurboHire job lists that a company's own careers page serves as JSON (Khatabook: khatabook.com/hiring/recruiter/list;
+Navi: navi.com/api/careers/jobs, every job in one response).
 TurboHire's own feed needs a session token, but these pages pass the public list through: title, locations, years asked,
 description and apply link in one response, so no detail calls are needed.
 
@@ -23,7 +24,8 @@ def _load(v, default):
 
 
 def fetch(c, h):
-    data = (h.get(c["feed"]) or {}).get("data") or {}
+    raw = h.get(c["feed"]) or {}
+    data = raw.get("data") or raw  # Khatabook wraps the list in "data"; Navi's own careers API (navi.com/api/careers/jobs) doesn't
     jobs = data.get("Jobs") or []
     yield from _jobs(c, h, jobs)
     if len(jobs) < (data.get("FilteredCount") or 0):

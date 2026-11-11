@@ -87,12 +87,12 @@ profile.json  companies.json  tiers.json          ← your criteria, boards craw
 | Workday search API | Cisco, Salesforce, Adobe, eBay, Mastercard, Target, PayPal, Walmart Global Tech, Citi, Capital One, Cadence… |
 | Oracle Recruiting Cloud, Eightfold (PCSX and the older v2 API), Rippling public feeds | JPMorgan Chase, American Express, Oracle, Honeywell, BNY, Citi, Qualcomm, Micron, Autodesk, Microsoft, ThoughtSpot, DTCC, HSBC, Netflix, Ericsson |
 | Company portals (`portals/`: one small reader per site, plus a generic job-links reader) | Apple, Goldman Sachs, Uber, Juspay, Urban Company, ShareChat, Nutanix, Intuit, D. E. Shaw India |
-| Careers-site sitemaps + schema.org JobPosting pages (`portals/sitemap.py`) | Phenom, iCIMS, Avature and SuccessFactors sites and custom ones: Fiserv, WEX, Disney, Arm, BlackRock, Moody's, BCG, Lowe's… |
+| Careers-site sitemaps + schema.org JobPosting pages (`portals/sitemap.py`) | Phenom, iCIMS, Avature and SuccessFactors sites and custom ones: Fiserv, WEX, Disney, Arm, BlackRock, Moody's, BCG, Lowe's…; Meta (every job page read once, then cached by ID) and Millennium |
 | iCIMS Jibe feeds; Keka, Zoho Recruit, Kula, Darwinbox, Workable, Freshteam and Recruitee pages | AMD, DocuSign, Cvent, ICE; Slice, Acko, Cashfree, Fynd, Jupiter, Zepto, MobiKwik, KreditBee, Delhivery, Innovaccer, Trexquant, Lenskart, Log9… |
 | JazzHR, Teamtailor, Avature and custom job-link pages (generic links reader) | Tesco, iRage, AlphaGrep, Jar, FrontRow, D. E. Shaw India… |
-| SuccessFactors job feeds (`sitemal.xml`), Jobvite, Zwayam, RippleHire, PyjamaHR, Zappyhire, TurboHire pass-through feeds, MediaTek's job API | Standard Chartered, Nomura, PayU, Fujitsu; Aryaka, Forescout; Snapmint, GreyOrange, cult.fit; HDFC Bank, Axis Bank, FreeCharge, Cimpress; Zoid, smallcase; Credgenics; Khatabook; MediaTek |
+| SuccessFactors job feeds (`sitemal.xml`), Jobvite, Zwayam, RippleHire, PyjamaHR, Zappyhire, TurboHire pass-through feeds, Spire2Grow, MediaTek's and Zerodha's job APIs | Standard Chartered, Nomura, PayU, Fujitsu; Aryaka, Forescout; Snapmint, GreyOrange, cult.fit; HDFC Bank, Axis Bank, FreeCharge, Cimpress; Zoid, smallcase; Credgenics; Khatabook, Navi; Myntra; MediaTek; Zerodha |
 | Amazon, Atlassian, Google careers | their own endpoints |
-| LinkedIn public guest search (no login) | **light (default):** role keywords across India + a 40-company sweep (companies active last run and top-tier employers with no readable board: Flipkart, Meta, Netflix, Zepto…). **`--deep`:** adds 7-city searches and a 180-company rotating sweep |
+| LinkedIn public guest search (no login) | **light (default):** role keywords across India + a 40-company sweep (companies active last run and top-tier employers with no readable board), plus every run the companies whose own board no script can read (`linkedin_every_run` in `tiers.json`: Flipkart, Ola, Revolut, Wayfair, Citadel, UBS, Jio…). **`--deep`:** adds 7-city searches and a 180-company rotating sweep |
 
 Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `--workday <tenant>`). **`python3 discover_ats.py --bank`** does this for every company in the bank that has no direct board. It tries likely board names on Greenhouse, Lever, Ashby and SmartRecruiters (and reports Workable and Recruitee boards, which `crawl.py` can't read yet), checks the board's company name, and writes `output/discovered-boards.json` for review. One run turned 42 LinkedIn-only companies into direct sources. **`--careers`** reads boards straight from the careers URLs in the bank and from VC portfolio job boards' apply links, and names companies on platforms the crawler can't read yet (Darwinbox, Keka, Zoho Recruit). **`python3 import_lists.py`** grows the bank from public lists ([moreThanFAANGM](https://github.com/Kaustubh-Natuskar/moreThanFAANGM), [ISJB](https://github.com/pHequals7/isjb) VC portfolios). Put hits in `companies.json`; otherwise add it to `tiers.json` and the LinkedIn sweep will cover it.
 
@@ -152,10 +152,10 @@ Pay and years asked are prerequisites, while a stack can be learned, so stack we
 - **Not covered:**
   - Naukri (reCAPTCHA);
   - Instahyre, Hirist and Cutshort (login required);
-  - Myntra's portal (bot protection);
-  - Darwinbox careers sites (Zepto, Unacademy…), JioStar's Workday, Millennium's Eightfold and Revolut (403 to scripts);
-  - TurboHire boards (Flipkart, Ola, Navi; token-gated) and IBM BrassRing (UBS, Best Buy; needs a session);
-  - sites behind bot protection (Meta, Flipkart, Zerodha…) and job portals listing other employers' jobs (Apna, GoodSpace);
+  - some Darwinbox careers sites (Unacademy, BharatPe…), JioStar's Workday and Revolut (403 or a bot challenge to scripts);
+  - TurboHire's own boards (Flipkart, Ola: robots.txt allows only Googlebot, and the list needs a token) and IBM BrassRing (UBS; needs a session);
+  - sites behind bot protection (Wayfair, Citadel…) and job portals listing other employers' jobs (Apna, GoodSpace);
+  - these companies are searched on LinkedIn on every run instead;
 - **Expiry:** company-board roles count as open while the board lists them, at any age. LinkedIn roles not seen again are checked on LinkedIn: closed ones are dropped, open ones kept at any age, and unchecked ones are kept only while younger than `max_age_days`.
 - **Snapshot age:** the shipped data is from the crawl date shown in the dashboard header. Job data belongs to the respective employers; check every role on the employer's site before applying.
 

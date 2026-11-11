@@ -85,9 +85,9 @@
  },
  "Wayfair": {
   "status": "blocked",
-  "reason": "PerimeterX bot protection",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "reason": "PerimeterX blocks the job-search call; searched on LinkedIn every run",
+  "checked": "2026-11-11",
+  "by": "checked in the user's Chrome + scripted probe"
  },
  "Tesco": {
   "status": "blocked",
@@ -139,9 +139,9 @@
  },
  "Citadel": {
   "status": "blocked",
-  "reason": "403 to the crawler",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "reason": "careers pages behind Cloudflare; sitemap has titles but no locations; searched on LinkedIn every run",
+  "checked": "2026-11-11",
+  "by": "checked in the user's Chrome + scripted probe"
  },
  "Pine Labs": {
   "status": "blocked",
@@ -1529,10 +1529,10 @@
   "by": "checked by hand"
  },
  "Zerodha": {
-  "status": "blocked",
-  "reason": "careers SPA shows a Cloudflare challenge in a browser (10 Nov); no public feed found in its bundle; LinkedIn only",
-  "checked": "2026-11-10",
-  "by": "checked in the built-in browser"
+  "status": "source",
+  "reason": "read directly since 11 Nov 2026 (public feed / sitemap)",
+  "checked": "2026-11-11",
+  "by": "checked in the user's Chrome"
  },
  "Netflix": {
   "status": "nothing_to_read",
@@ -1578,27 +1578,27 @@
  },
  "Citadel Securities": {
   "status": "blocked",
-  "reason": "403 to the crawler",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "reason": "careers pages behind Cloudflare; sitemap has titles but no locations; searched on LinkedIn every run",
+  "checked": "2026-11-11",
+  "by": "checked in the user's Chrome + scripted probe"
  },
  "Myntra": {
-  "status": "blocked",
-  "reason": "bot detection",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "source",
+  "reason": "read directly since 11 Nov 2026 (public feed / sitemap)",
+  "checked": "2026-11-11",
+  "by": "checked in the user's Chrome"
  },
  "Flipkart": {
   "status": "blocked",
-  "reason": "TurboHire token; drops connections",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "reason": "TurboHire: robots.txt disallows all non-Google bots; list API needs an auth token; searched on LinkedIn every run",
+  "checked": "2026-11-11",
+  "by": "checked in the user's Chrome + scripted probe"
  },
  "Navi": {
-  "status": "blocked",
-  "reason": "TurboHire token",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "source",
+  "reason": "read directly since 11 Nov 2026 (public feed / sitemap)",
+  "checked": "2026-11-11",
+  "by": "checked in the user's Chrome"
  },
  "Purplle": {
   "status": "blocked",
@@ -1613,16 +1613,16 @@
   "by": "checked by hand"
  },
  "Millennium": {
-  "status": "blocked",
-  "reason": "Eightfold 403",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "source",
+  "reason": "read directly since 11 Nov 2026 (public feed / sitemap)",
+  "checked": "2026-11-11",
+  "by": "checked in the user's Chrome"
  },
  "Hotstar": {
   "status": "blocked",
-  "reason": "JioStar Workday 403",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "reason": "JioStar Workday answers scripts with 403; searched on LinkedIn every run",
+  "checked": "2026-11-11",
+  "by": "checked in the user's Chrome + scripted probe"
  },
  "Disney+ Hotstar": {
   "status": "blocked",
@@ -2726,9 +2726,9 @@
  },
  "Revolut": {
   "status": "blocked",
-  "reason": "revolut.com/careers answers scripts with 403",
-  "checked": "2026-11-10",
-  "by": "hand-built readers round, checked 10 Nov 2026"
+  "reason": "careers pages answer scripts with a bot challenge; searched on LinkedIn every run",
+  "checked": "2026-11-11",
+  "by": "checked in the user's Chrome + scripted probe"
  },
  "Udaan": {
   "status": "nothing_to_read",
@@ -2791,28 +2791,28 @@
   "by": "hand-built readers round, checked 10 Nov 2026"
  },
  "Jio": {
-  "status": "pending",
-  "reason": "careers.jio.com is ASP.NET postback forms; no plain feed",
-  "checked": "2026-11-10",
-  "by": "checked by hand"
+  "status": "blocked",
+  "reason": "job lists open only through ASP.NET form postbacks; searched on LinkedIn every run",
+  "checked": "2026-11-11",
+  "by": "checked in the user's Chrome + scripted probe"
  },
  "Jio Platforms": {
-  "status": "pending",
+  "status": "blocked",
   "reason": "same site as Jio (careers.jio.com, ASP.NET postbacks)",
-  "checked": "2026-11-10",
-  "by": "checked by hand"
+  "checked": "2026-11-11",
+  "by": "checked in the user's Chrome"
  },
  "Best Buy": {
-  "status": "pending",
-  "reason": "IBM BrassRing (sjobs.brassring.com) needs a session for its search",
-  "checked": "2026-11-10",
-  "by": "checked by hand"
+  "status": "blocked",
+  "reason": "job pages carry no location; list API is token-protected; searched on LinkedIn every run",
+  "checked": "2026-11-11",
+  "by": "checked in the user's Chrome + scripted probe"
  },
  "UBS": {
-  "status": "pending",
-  "reason": "IBM BrassRing (jobs.ubs.com/TGnewUI) needs a session for its search",
-  "checked": "2026-11-10",
-  "by": "checked by hand"
+  "status": "blocked",
+  "reason": "careers site redirects to sign-in; BrassRing search needs a session; searched on LinkedIn every run",
+  "checked": "2026-11-11",
+  "by": "checked in the user's Chrome + scripted probe"
  },
  "ASML": {
   "status": "pending",
@@ -2833,10 +2833,10 @@
   "by": "checked by hand"
  },
  "Ola": {
-  "status": "pending",
-  "reason": "TurboHire (olacareers.turbohire.co) is token-gated",
-  "checked": "2026-11-10",
-  "by": "checked by hand"
+  "status": "blocked",
+  "reason": "TurboHire (Ola Electric): robots.txt disallows all non-Google bots; searched on LinkedIn every run",
+  "checked": "2026-11-11",
+  "by": "checked in the user's Chrome + scripted probe"
  },
  "Setu": {
   "status": "pending",
