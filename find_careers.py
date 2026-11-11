@@ -31,7 +31,6 @@ import subprocess
 import sys
 import tempfile
 import time
-import urllib.robotparser
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -40,6 +39,7 @@ from urllib.parse import urljoin, urlparse
 import requests
 
 import discover_ats as da
+from portals.sitemap import Robots
 
 # Bounded patterns: an unclosed <a> on a multi-megabyte page made an unbounded (.*?)</a> backtrack for minutes.
 ANCHOR = re.compile(r'<a\b[^>]{0,1500}?href=["\']([^"\'#]{1,600})["\'][^>]{0,1500}>(.{0,1500}?)</a>', re.S | re.I)  # either quote style
@@ -91,14 +91,13 @@ def allowed(url):
     p = urlparse(url)
     host = f"{p.scheme}://{p.netloc}"
     if host not in ROBOTS:
-        rp = urllib.robotparser.RobotFileParser()
         try:
             r = S.get(host + "/robots.txt", timeout=8)
-            rp.parse(r.text.splitlines() if r.ok else [])
+            text = r.text if r.ok else ""
         except requests.RequestException:
-            rp.parse([])
-        ROBOTS[host] = rp
-    return ROBOTS[host].can_fetch(UA, url)
+            text = ""
+        ROBOTS[host] = Robots(text, UA)  # longest-match rules (RFC 9309), see portals/sitemap.py
+    return ROBOTS[host].can_fetch(url)
 
 
 def fetch(url):

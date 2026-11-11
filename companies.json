@@ -7832,6 +7832,69 @@
    "pay": "likely",
    "pay_note": "SE I median TC 22.9 LPA, SE II 26.3 (levels.fyi India, checked 10 Nov 2026)",
    "found_by": "hand-built readers round (10 Nov 2026)"
+  },
+  {
+   "name": "Meta",
+   "ats": "portal",
+   "portal": "sitemap",
+   "host": "www.metacareers.com",
+   "sitemaps": [
+    "https://www.metacareers.com/jobsearch/sitemap.xml"
+   ],
+   "cache_pages": true,
+   "max_pages": 1500,
+   "type": "Global product MNC (public)",
+   "quality": 15,
+   "pay": "likely",
+   "pay_note": "Big-tech bands",
+   "found_by": "unblockers 11 Nov 2026: public sitemap + JobPosting pages"
+  },
+  {
+   "name": "Millennium",
+   "ats": "portal",
+   "portal": "sitemap",
+   "host": "mlp.eightfold.ai",
+   "sitemaps": [
+    "https://mlp.eightfold.ai/careers/sitemap_index.xml?domain=mlp.com"
+   ],
+   "type": "Hedge fund tech",
+   "quality": 14,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE 68.7 LPA median TC",
+   "found_by": "unblockers 11 Nov 2026: public sitemap + JobPosting pages",
+   "india_in_url": true
+  },
+  {
+   "name": "Myntra",
+   "ats": "portal",
+   "portal": "spire2grow",
+   "domain": "jobs.myntra.com",
+   "type": "Indian e-commerce (Flipkart)",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE median TC 22.1 LPA",
+   "found_by": "unblockers 11 Nov 2026: public feed the careers page calls (found in the user's Chrome)"
+  },
+  {
+   "name": "Navi",
+   "ats": "portal",
+   "portal": "turbohire_feed",
+   "feed": "https://navi.com/api/careers/jobs",
+   "type": "Indian fintech",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "High startup bands",
+   "found_by": "unblockers 11 Nov 2026: public feed the careers page calls (found in the user's Chrome)"
+  },
+  {
+   "name": "Zerodha",
+   "ats": "portal",
+   "portal": "zerodha",
+   "type": "Profitable Indian fintech",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "Known to pay well for engineers",
+   "found_by": "unblockers 11 Nov 2026: public feed the careers page calls (found in the user's Chrome)"
   }
  ]
 }

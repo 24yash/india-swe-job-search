@@ -176,6 +176,21 @@ check("evaluate: alias duplicate dropped", "li-alias" not in urls, sorted(urls))
 check("evaluate: staffing firm dropped", "li-staff" not in urls)
 check("evaluate: board roles present", {"acme-board-1", "amzn-1"} <= urls, sorted(urls))
 check("evaluate: shared holder updated for LinkedIn readers", "acme" in ctx["boards"]["titles"])
+
+# ---------------------------------------------------------------- LinkedIn sweep: unreadable boards every run
+import argparse  # noqa: E402
+(tmp / "companies.json").write_text(json.dumps({"companies": [{"name": "LinkedIn sweep", "ats": "linkedin", "mode": "sweep"}]}))
+real_root, real_profile = crawl.ROOT, crawl.PROFILE
+crawl.ROOT = tmp
+crawl.PROFILE = json.loads(json.dumps(real_profile))
+crawl.PROFILE["linkedin"]["company_sweep"]["companies_per_run"] = 2
+crawl.TIERS = {"known": [{"name": f"Co{i}", "quality": 14, "pay": "likely"} for i in range(5)] +
+                        [{"name": "Walled", "quality": 10, "pay": "likely", "linkedin_every_run": True}], "services_and_staffing": []}
+(tmp / "output" / "sweep-state.json").write_text(json.dumps({"walled": "2026-11-10"}))  # searched recently: would rotate to the back
+sw = crawl.build_context(argparse.Namespace(max_age=30))["sweep"]
+check("sweep: companies whose board no script can read are searched every run, on top of the rotating budget",
+      sw[0] == "Walled" and len(sw) == 3, sw)
+crawl.ROOT, crawl.PROFILE = real_root, real_profile
 shutil.rmtree(tmp)
 
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")

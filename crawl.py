@@ -906,7 +906,11 @@ def build_context(args):
     tier = PROFILE["linkedin"]["company_sweep"]["top_tier_quality"]
     sweep.sort(key=lambda n: (not active(n), not DEEP and quality.get(norm(n), 0) < tier, norm(n) in state,
                               state.get(norm(n), ""), -quality.get(norm(n), 0)))
-    sweep = sweep[:PROFILE["linkedin"]["company_sweep"]["deep_companies_per_run" if DEEP else "companies_per_run"]]
+    # Companies whose own board no script can read (bot walls, robots.txt, sign-in, token-gated search) are searched
+    # every run, on top of the rotating budget: LinkedIn is the only way the pipeline reads them (tiers.json "linkedin_every_run").
+    every = {norm(c["name"]) for c in TIERS["known"] if c.get("linkedin_every_run")}
+    budget = PROFILE["linkedin"]["company_sweep"]["deep_companies_per_run" if DEEP else "companies_per_run"]
+    sweep = [n for n in sweep if norm(n) in every] + [n for n in sweep if norm(n) not in every][:budget]
     below = {norm(c["name"]) for c in TIERS["known"] if c.get("pay") == "below"}
     # Titles each company lists on its own board: a LinkedIn posting is a duplicate only if its title is
     # there too (some companies post roles on LinkedIn that their board doesn't show).
