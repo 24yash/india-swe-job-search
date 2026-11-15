@@ -74,6 +74,7 @@ profile.json  companies.json  tiers.json          ← your criteria, boards craw
         ├─ output/jobs-<date>.csv              roles passing every filter, ranked
         ├─ output/leads-unverified-pay-<date>.csv   pass everything except pay evidence
         ├─ output/rejected-<date>.csv          dropped roles + reason (to audit the filters)
+        ├─ output/rejected-titles-<date>.csv   roles dropped by title alone
         ├─ output/company-bank-<date>.csv      every tracked company: hiring now / quiet / below bar
         └─ output/raw/<source>.json            latest raw data per source (git-ignored); a failed or slow
                                                source keeps its previous data instead of emptying the results
@@ -102,7 +103,9 @@ Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `-
 ### Filters (in order; each rejection records its reason)
 1. India location.
 2. Title, in this order (all regexes in `profile.json` `title`):
-   - `exclude`: seniority (including MTS-3+ and SDE-4+), intern/contract, and work that isn't development (SRE/DevOps, system/DB admin, QA/SDET, recruiters, technical writers, production support);
+   - `exclude`: seniority (including MTS-3+ and SDE-4+), intern/contract, and work that isn't development (SRE/DevOps, data engineering, QA/SDET, recruiters, technical writers, production support), on the whole title;
+   - `exclude_head`: words that also name teams or products (manager, lead, director, architect, test, security engineer…), checked only against the title's head when the head is a core title, so "SWE II, Ads Manager" stays and "Engineering Manager" goes;
+   - `exclude_level`: III / 3 numerals don't drop a title; the role is dropped only if the job description states no years or more than `max_min_years`;
    - `exclude_client` / `exclude_domain`: stack or domain words (frontend, mobile, hardware design…) that drop a title unless it also carries a strong developer marker (`client_override`, `core_override`, or any core title). Empty `exclude_client` keeps frontend and mobile roles;
    - `include`: core development titles (software engineer/developer in any spelling, SDE/SWE, backend, full stack, MTS, FDE, Programmer Analyst, "<language> developer"…);
    - `exclude_unless_core`: drops a *non*-core title that names non-development work (data engineering, data science, sales, security operations, network, electrical…): "Security Engineer" goes, "Software Engineer - Security" stays;

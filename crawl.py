@@ -189,6 +189,12 @@ def title_family(title):
     t = re.sub(r"\s+", " ", title.lower()).strip()  # "Software  Engineer" (double space) is still a software engineer
     if re.search(T["exclude"], t):  # seniority, eligibility, non-developer role types
         return None
+    # words that also name teams or products ('Ads Manager', 'Security Engineering', 'Test Infrastructure'): when the
+    # title's head (before ' - ', ',', '(' …) is a core development title, only the head can disqualify it
+    head = re.split(r"\s+[-–—|:/]\s+|\s*[,(]\s*|\s*[–—]\s*", t, maxsplit=1)[0]
+    scope = head if re.search(T["include"], head) else t
+    if re.search(T.get("exclude_head", r"(?!)"), scope):
+        return None
     if re.search(T.get("exclude_client", r"(?!)"), t) and not re.search(T.get("client_override", r"(?!)"), t):
         return None  # client-side stack words (empty by default: frontend and mobile roles are kept)
     if (re.search(T.get("exclude_domain", r"(?!)"), t) and not re.search(T.get("core_override", r"(?!)"), t)
@@ -246,7 +252,9 @@ def software_jd(text, strict=True, allow_empty=True):
     sw = len(jd_terms(dev_vocabulary(), text))
     hw = len(jd_terms(cfg.get("hardware_signals", r"(?!)"), text))
     if not strict:  # boilerplate JDs (Citi, Pure Storage MTS): only clear hardware/ops evidence rejects
-        return sw > hw or (allow_empty and hw == 0 and sw == 0)
+        # no terms at all: give the benefit of the doubt only when there's barely any text (a truncated JD), not when a
+        # full description says nothing about development (payments operations under a 'Team Developer' title)
+        return sw > hw or (hw == 0 and sw == 0 and (allow_empty == "always" or (allow_empty and len((text or "").strip()) < 400)))
     strong = len(jd_terms(cfg.get("strong_signals", cfg["signals"]), text))
     # dominance, not subtraction (one stray word can't cancel the evidence), and at least one term that means building software
     return sw >= cfg["min_signals"] and sw > hw and strong >= 1
@@ -265,8 +273,8 @@ def off_profile_track(title, text, family, company=""):
     dev = len(jd_terms(fit.get("app_terms", r"(?!)"), text, group=False))
     vendor = bool(re.search(fit.get("vendor_employers", r"(?!)"), company.lower())) if company else False
     for name, tr in fit.get("exclude_tracks", {}).items():
-        if re.search(tr["title"], t):
-            return name
+        if re.search(tr["title"], t) and not (vendor and name == "crm_platform" and family == "core"):
+            return name  # (Workday's own 'Software Engineer, Workday Extend' builds the platform)
         if name == "crm_platform" and vendor:  # the vendor's own engineers build the platform: only a title can say otherwise
             continue
         need = tr["jd_min"] if family == "core" else tr.get("jd_min_non_core", tr["jd_min"])
@@ -892,7 +900,9 @@ def evaluate(job, company, max_age):
         return None, "title/level"
     says_developer = bool(re.search(r"\bdevelopers?\b|\bprogrammers?\b", job.title.lower()))
     lenient = family == "core" or says_developer
-    if needs_software_jd(job.title, family) and not software_jd(job.text, strict=not lenient, allow_empty=family == "core"):
+    # core titles (MTS, Programmer Analyst) carry their own evidence: a boilerplate JD with no tech words keeps them (Citi);
+    # a generic title that merely says 'developer' gets that benefit only when the JD is too short to tell (truncated)
+    if needs_software_jd(job.title, family) and not software_jd(job.text, strict=not lenient, allow_empty="always" if family == "core" else lenient):
         return None, f"title doesn't say software ({family}) and the JD doesn't show software work"
     track = off_profile_track(job.title, job.text, family, job.company)
     if track:

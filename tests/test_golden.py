@@ -27,7 +27,6 @@ raw = {}
 for f in (SRC / "output" / "raw").glob("*.json"):
     for j in json.loads(f.read_text())["jobs"]:
         raw[j["url"]] = j
-        raw.setdefault((j["company"], j["title"].strip()), j)
 
 if not texts and not raw:
     print("SKIP: no job descriptions available (no tests/fixtures/golden_texts.json and no output/raw/). Run a crawl first.")
@@ -36,7 +35,7 @@ if not texts and not raw:
 ctx = crawl.build_context(argparse.Namespace(max_age=21))
 failures, checked, skipped = [], 0, []
 for lab in labels:
-    j = texts.get(lab["url"]) or raw.get(lab["url"]) or raw.get((lab["company"], lab["title"]))
+    j = texts.get(lab["url"]) or raw.get(lab["url"])  # by URL only: two postings can share a company and title
     if not j:
         skipped.append(f"{lab['company']} – {lab['title']}")
         continue

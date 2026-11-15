@@ -276,8 +276,8 @@ for t, jd, company in (("Member of Technical Staff", "Build the Glide platform: 
     row, why = ev(t, jd, company)
     check(f"review 4: the platform vendor's own engineers are kept: {company} {t}", row is not None, why)
 for t, jd in (("Business Developer", "Grow revenue with enterprise accounts."), ("Developer Advocate", "Talks, docs and community."),
-              ("Developer Relations Engineer", "Run our developer community."), ("Team Developer", "Payments operations: SWIFT correspondence, MT103 messages."),
-              ("Learning Experience Designer and Developer", ""), ("Developer", "")):
+              ("Developer Relations Engineer", "Run our developer community."), ("Team Developer", "Payments operations team. " + "Process SWIFT correspondence and MT103 messages, reconcile client cash breaks, liaise with custodians, escalate exceptions and prepare daily operations reports for management review. " * 3),
+              ("Learning Experience Designer and Developer", "")):
     row, why = ev(t, jd)
     check(f"review 4: not a development role: {t}", row is None, why)
 check("review 4: SWIFT messages are not the Swift language", not crawl.jd_terms(crawl.dev_vocabulary(), "SWIFT MT103 messaging and SWIFT correspondence"))
@@ -299,6 +299,39 @@ check("qa: a core-titled role whose requirement is years of QA experience is QA"
       crawl.off_profile_track("Specialist - Software Development & Engineering", "3 - 5 years’ experience in quality assurance with distributed applications", "core") == "qa")
 check("qa: a developer JD that says '3+ years of experience in Java' is not QA",
       crawl.off_profile_track("Software Engineer", "3+ years of experience in Java; write unit tests; quality assurance mindset", "core") is None)
+
+row, why = ev("FEA Post-Processor Developer", "Develop post-processing")  # Dassault's JDs come truncated to ~240 chars
+check("review 5: a developer title with a truncated JD is kept", row is not None, why)
+
+# Second fresh review (18fd21c): its reproducers.
+for t_, want in (("Software Development Engineer II – Sensors / Systems & Security Engineering", "core"), ("Software Engineer - Platform Architecture", "core"),
+                 ("SWE II, Ads Manager", "core"), ("Software Engineer - Azure Active Directory", "core"), ("SWE II - Disputes Platform", "core"),
+                 ("SDE II - Lead Management", "core"), ("Software Engineer - Test Infrastructure", "core"), ("Web Solutions Engineer, Tools Automation and Infrastructure", "generic"),
+                 ("Engineering Manager, Payments", None), ("Software Engineering Manager", None), ("Lead Software Engineer", None), ("Security Engineer", None),
+                 ("Software Development Engineer in Test", None), ("Site Reliability Engineer", None)):
+    check(f"review 5: title {t_!r} -> {want}", fam(t_) == want, fam(t_))
+for t_, jd in (("Software Engineer-C++ & CAD", "C++ application development for 3D CAD interoperability"), ("GPU Kernel Engineer", "CUDA kernels in C++"),
+               ("CUDA Kernel Engineer", "CUDA kernels"), ("Software Engineer - Silicon Valley Team", "Java services")):
+    check(f"review 5: not embedded: {t_}", crawl.off_profile_track(t_, jd, crawl.title_family(t_) or "generic") is None, crawl.off_profile_track(t_, jd, "core"))
+for t_, jd in (("Associate Engineer", "Designs and implements small software features for our chipset tools in C++; code reviews."),
+               ("Compiler Engineer", "LLVM compiler backend work in C++; data structures and algorithms."),
+               ("OS Development Engineer", "Operating systems development in C; Linux internals and scheduling.")):
+    row, why = ev(t_, jd)
+    check(f"review 5: systems-software JD kept: {t_}", row is not None, why)
+check("review 5: 'work with the QA engineer' in a developer JD is not a QA role",
+      crawl.off_profile_track("Engineer II", "You will work with the QA engineer to automate releases; Java microservices, REST APIs.", "generic") is None)
+check("review 5: 'partner with sales and pre-sales teams' in a SWE JD is not pre-sales",
+      crawl.off_profile_track("Software Engineer", "Java services; partner with sales and pre-sales teams on requirements.", "core") is None)
+check("review 5: the vendor's own platform engineer is kept by title", crawl.off_profile_track("Software Engineer, Workday Extend", "Java", "core", "Workday") is None)
+check("review 5: a CRM developer at a non-vendor still drops", crawl.off_profile_track("Software Engineer, Workday Extend", "", "core", "Acme") == "crm_platform")
+
+check("review 5: a certification ('as an AWS Solutions Architect') is not a pre-sales role",
+      crawl.off_profile_track("Cloud Software Engineer", "Node.js services. Certification as an AWS Solutions Architect a plus.", "core") is None)
+for t_ in ("Software Development Engineer - Test II, Alexa Endpoint Experience", "Software Engineer - Test", "SDE-T"):
+    check(f"review 5: SDET forms excluded: {t_}", fam(t_) is None, fam(t_))
+check("review 5: 'Software Engineer - Test Infrastructure' is development", fam("Software Engineer - Test Infrastructure") == "core")
+row, why = ev("Apps Dev Intmd Programmer Analyst - C11 - CHENNAI", "Participate in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team. " * 5)
+check("review 5: core title with a long boilerplate JD is kept (Citi)", row is not None, why)
 
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)

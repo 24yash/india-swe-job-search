@@ -41,12 +41,7 @@
       "(?<!technical )\\bstaff\\b",
       "(?<!mts / )(?<!mts/)\\b[slp]mts\\b",
       "(?:technical staff|\\bmts)\\s*[-–]?\\s*(?:[3-9]|iii|iv|v|vi)\\b",
-      "\\blead\\b(?! generation)",
       "principal",
-      "architect",
-      "manager",
-      "director",
-      "\\bhead\\b(?! unit)",
       "vice president",
       "\\bvp\\b",
       "\\bavp\\b",
@@ -70,21 +65,15 @@
       "\\bl[5-9]\\b",
       "\\bqa\\b",
       "sdet",
-      "\\btest\\b",
       "in test",
-      "(?<!a/b )(?<!ab )testing",
-      "quality (assurance|engineer)",
       "research (engineer|scientist)",
       "sales engineer",
-      "solutions? (engineer|architect|consultant)",
+      "(?<!web )solutions? (engineer|architect|consultant)",
       "field (engineer|application)",
-      "security engineer",
-      "consultant",
       "trainee",
       "(?<!smart )\\bcontract(?:ors?|ual)?\\b(?!s?\\s*manag)",
       "\\bftc\\b",
       "fixed term",
-      "\\bchief\\b",
       "consulting engineer",
       "site reliab",
       "\\bsre\\b",
@@ -95,12 +84,8 @@
       "release engineer",
       "build engineer",
       "\\bdba\\b",
-      "(?:system|server|network|windows|linux) administrat",
-      "database administrator",
-      "sys ?admin",
-      "solutions? (?:engineer|architect|consultant)",
+      "(?<!web )solutions? (?:engineer|architect|consultant)",
       "pre-?sales",
-      "security (?:engineer|analyst)",
       "(?:software engineer|software development engineer|\\bsde|\\bswe|engineer)\\s*[-–]?\\s*(?:[4-9]|iv|v|vi)\\b",
       "recruiter\\b",
       "^(?:technical |it )?recruit",
@@ -113,7 +98,6 @@
       "back office (?:executive|associate|operations)",
       "production support (?:engineer|analyst|specialist)\\b",
       "\\b(?:python|scala|java|spark|pyspark|sql)\\s+data engineer",
-      "disputes",
       "physical design",
       "user assistance",
       "technical leadership",
@@ -131,7 +115,8 @@
       "\\bdevrel\\b",
       "learning experience",
       "\\b(?:gpu |k8s |kubernetes )?cluster (?:engineer|administrator|operations)",
-      "content (?:strategy|writer|writing|developer|designer|engineer)"
+      "content (?:strategy|writer|writing|developer|designer|engineer)",
+      "engineer\\s*[-–(,]?\\s*(?:in\\s+)?test\\b(?!\\s*(?:infrastructure|infra|platform|tooling|tools|frameworks?))|\\bsde\\s*[-–]?\\s*t\\b"
     ],
     "families": {
       "infra": [
@@ -370,7 +355,10 @@
         "vector (?:db|database|search|store)",
         "embeddings",
         "\\bin go\\b|\\bgo (?:services|microservices|programming|developer|engineer)|\\bgo(?=\\s*(?:,|/|\\)|and\\b|or\\b))",
-        "jetpack|compose ui|\\bmvvm\\b|retrofit|swiftui|uikit|xcode|asp\\.net|entity framework|\\.net (?:core|mvc|framework|web api)|blazor"
+        "jetpack|compose ui|\\bmvvm\\b|retrofit|swiftui|uikit|xcode|asp\\.net|entity framework|\\.net (?:core|mvc|framework|web api)|blazor",
+        "operating systems?|\\bos internals|linux internals|\\bcompilers?\\b|\\bllvm\\b|\\bmlir\\b|gcc toolchain|gpu architecture|graphics (?:pipeline|drivers?)|\\bvulkan\\b|\\bopengl\\b|\\bdirectx\\b|\\bmesa\\b|storage engine|file ?systems?|networking stack|\\bhypervisor",
+        "\\bas an? (?:\\w+ ){0,3}software (?:engineer|developer)\\b",
+        "(?:design|build|develop|implement)(?:s|ing|ed)? (?:and (?:implement|build|develop|maintain)(?:s|ing)? )?(?:\\w+ ){0,2}software (?:features|components|modules)"
       ]
     },
     "exclude_unless_core": [
@@ -436,7 +424,8 @@
       "product security",
       "demo engineer",
       "implementation engineer",
-      "pre-?sales engineer"
+      "pre-?sales engineer",
+      "\\bgtm\\b|go[- ]to[- ]market"
     ],
     "exclude_domain": [
       "data scientist",
@@ -483,7 +472,26 @@
       "sde[- ]?(3|iii)\\b",
       "engineer[- ]?(3|iii)\\b"
     ],
-    "_comment_level": "exclude_level: title numerals that only sometimes mean senior (Google 'Software Engineer III' is L4 and asks 1-2 yrs). They don't drop a title; evaluate() drops the role only when the JD states no years or more than max_min_years."
+    "_comment_level": "exclude_level: title numerals that only sometimes mean senior (Google 'Software Engineer III' is L4 and asks 1-2 yrs). They don't drop a title; evaluate() drops the role only when the JD states no years or more than max_min_years.",
+    "exclude_head": [
+      "\\blead\\b(?! generation| management)",
+      "\\barchitect\\b",
+      "\\bmanager\\b",
+      "\\bdirector\\b",
+      "\\bhead\\b(?! unit)",
+      "\\btest\\b",
+      "(?<!a/b )(?<!ab )testing",
+      "quality (assurance|engineer)",
+      "security engineer\\b",
+      "consultant",
+      "\\bchief\\b",
+      "(?:system|server|network|windows|linux) administrat",
+      "database administrator",
+      "sys ?admin",
+      "security (?:engineer|analyst)\\b",
+      "disputes"
+    ],
+    "_comment_head": "exclude_head: words that also occur in team or product names ('SWE II, Ads Manager', 'SDE II – Security Engineering', 'Software Engineer - Test Infrastructure', 'Azure Active Directory'). When the title's head (text before ' - ', ',', '(' …) is a core development title, these are checked against the head only; otherwise against the whole title. Seniority, level and hard non-development role types stay in 'exclude' (whole title)."
   },
   "location": {
     "home_markers": [
@@ -771,7 +779,7 @@
         "title": [
           "firmware",
           "\\bembedded\\b(?! finance| payments?| lending| insurance| analytics)",
-          "(?:linux|os|windows|unix) kernel|kernel (?:drivers?|modules?|development|developer|engineer)|(?<!gpu )(?<!cuda )(?<!ml )\\bkernel\\s*$|technical staff, kernel",
+          "(?:linux|os|windows|unix) kernel|(?<!gpu )(?<!cuda )(?<!triton )(?<!ml )(?<!compute )kernel (?:drivers?|modules?|development|developer|engineer)|(?<!gpu )(?<!cuda )(?<!ml )\\bkernel\\s*$|technical staff, kernel",
           "\\bbsp\\b",
           "device drivers?",
           "\\bwlan\\b",
@@ -781,8 +789,8 @@
           "autosar",
           "bootloader",
           "\\bsoc\\b",
-          "silicon",
-          "\\bcad\\b",
+          "silicon(?! valley)",
+          "\\bcad (?:engineer|flow|methodology|tools?|automation)\\b|\\bcad sw\\b",
           "\\beda\\b",
           "\\brtl\\b",
           "\\bfpga\\b",
@@ -880,7 +888,8 @@
           "\\bgosu\\b",
           "\\babap\\b",
           "dataweave",
-          "glide ?(?:script|record)"
+          "glide ?(?:script|record)",
+          "successfactors"
         ],
         "jd_min": 2,
         "jd_min_non_core": 2,
@@ -907,8 +916,8 @@
         "jd_min_non_core": 2,
         "dominance": true,
         "jd_role": [
-          "\\b(?:the|as an?|seeking an?|looking for an?|hiring an?) (?:\\w+ ){0,2}(?:quality|qa|test(?:ing)?|automation test|sdet)(?: automation)? (?:engineer|analyst|lead|specialist)\\b",
-          "\\b(?:as an?|the) sdet\\b",
+          "(?<!certification )(?<!certified )(?<!certificate )\\b(?:as an?|you will be an?|we are (?:seeking|hiring|looking for) an?|join (?:us|our team) as an?|role of an?)\\s+(?:\\w+ ){0,2}(?:quality|qa|test(?:ing)?|automation test|sdet)(?: automation)? (?:engineer|analyst|specialist)\\b",
+          "(?:^|[.!?]\\s+)the (?:\\w+ ){0,2}(?:quality|qa|test) engineer (?:supports|is responsible|will|designs|owns|ensures)",
           "\\d+\\s*(?:[-–]|to)?\\s*\\d*\\s*\\+?\\s*years?\\W{0,3}\\s*(?:of\\s+)?(?:\\w+\\s+){0,2}experience in (?:software )?(?:quality assurance|qa\\b|software testing|test automation|manual testing)"
         ],
         "core_needs_role": true
@@ -936,13 +945,14 @@
         "jd_min": 99,
         "jd_min_non_core": 99,
         "jd_role": [
-          "\\bpre-?sales\\b",
-          "technical sales",
+          "(?<!certification )(?<!certified )(?<!certificate )\\b(?:as an?|you will be an?|we are (?:seeking|hiring|looking for) an?|role of an?)\\s+(?:\\w+ ){0,2}(?:pre-?sales|solutions?|sales|customer success|technical account) (?:engineer|consultant|specialist|architect)\\b",
+          "\\byou will (?:support|drive|lead|own) (?:the |our )?pre-?sales\\b",
           "\\bpartner with (?:\\w+ ){0,4}customers to (?:accelerate|drive|adopt)",
           "customer-facing (?:technical|engineer)",
           "proofs? of concept (?:for|with) (?:customers|prospects)",
           "\\b(?:demos?|demonstrations) (?:to|for) (?:customers|prospects)"
-        ]
+        ],
+        "core_needs_role": true
       }
     },
     "vendor_employers": [
