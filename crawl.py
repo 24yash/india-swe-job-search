@@ -218,7 +218,28 @@ def software_jd(text, strict=True):
     hw = len(jd_terms(cfg.get("hardware_signals", r"$^"), text))
     if not strict:  # boilerplate JDs (Citi, Pure Storage MTS): only clear hardware/ops evidence rejects
         return sw > hw or (hw == 0 and sw == 0)
-    return sw - cfg.get("hardware_weight", 2) * hw >= cfg["min_signals"]
+    strong = len(jd_terms(cfg.get("strong_signals", cfg["signals"]), text))
+    # dominance, not subtraction (one stray word can't cancel the evidence), and at least one term that means building software
+    return sw >= cfg["min_signals"] and sw > hw and strong >= 1
+
+
+def off_profile_track(title, text, family):
+    """The development track a role belongs to when it doesn't fit the profile (profile.json `fit`), else None.
+    Title naming the track → that track; title silent → the JD needs jd_min track terms and more track terms than
+    web/backend terms. A title that says backend / full stack / web / Java overrides both."""
+    fit = PROFILE.get("fit", {})
+    t = re.sub(r"\s+", " ", title.lower())
+    if re.search(fit.get("track_override", r"$^"), t):
+        return None
+    dev = len(jd_terms(fit.get("dev_terms", r"$^"), text))
+    for name, tr in fit.get("exclude_tracks", {}).items():
+        if re.search(tr["title"], t):
+            return name
+        need = tr["jd_min"] if family == "core" else tr.get("jd_min_non_core", tr["jd_min"])
+        n = len(jd_terms(tr["jd"], text))
+        if n >= need and n > dev:  # the track dominates the description; a web/backend-heavy JD stays
+            return name
+    return None
 
 
 def greenhouse(c):
@@ -831,8 +852,12 @@ def evaluate(job, company, max_age):
     family = title_family(job.title)
     if family is None:
         return None, "title/level"
-    if needs_software_jd(job.title, family) and not software_jd(job.text, strict=family != "core"):
+    says_developer = bool(re.search(r"\bdevelopers?\b|\bprogrammers?\b", job.title.lower()))
+    if needs_software_jd(job.title, family) and not software_jd(job.text, strict=family != "core" and not says_developer):
         return None, f"title doesn't say software ({family}) and the JD doesn't show software work"
+    track = off_profile_track(job.title, job.text, family)
+    if track:
+        return None, f"{track.replace('_', ' ')} role (outside the profile's development track)"
     ok, mode = location_mode(job, company)
     if not ok:
         return None, mode

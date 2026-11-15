@@ -108,11 +108,12 @@ Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `-
    - `exclude_unless_core`: drops a *non*-core title that names non-development work (data engineering, data science, sales, security operations, network, electrical…): "Security Engineer" goes, "Software Engineer - Security" stays;
    - `families` + `families_enabled`: titles with no role word ("Engineer - Target India", "AI Engineer") pass only if their family is enabled **and** the job description shows development work (`software_jd`: distinct languages, frameworks, APIs and services, minus hardware/ops terms). A disabled family keeps its titles out even when `generic` would match.
    Every row carries `role_family`, and the dashboard tags non-core rows. `tests/test_titles.py` holds the audited cases.
-3. Contract, contract-to-hire or intern wording.
-4. Company pay below the bar, including per-level floors (`below_title`).
-5. Experience asked: the smallest "N+ years" or "N–M years" in the job description; years in the title override it.
-6. A posted INR pay range below the floor.
-7. Pay confidence: **Posted** (stated in the JD) › **Strong** (levels.fyi evidence in `tiers.json`) › **Likely** (tier judgement) › **Unverified** (goes to leads, not the shortlist).
+3. Profile fit (`profile.json` `fit`): development tracks that don't transfer from your profile are dropped. The shipped example drops embedded/firmware and CRM/low-code platform roles (Salesforce, ServiceNow, Guidewire configuration, SAP ABAP…). A track drops a role when the title names it, or when the job description is dominated by the track's terms; a title saying backend / full stack / web / Java overrides it. Remove a track from `exclude_tracks` to keep those roles. Job descriptions for titles with no role word must show at least one term that means building software, not just Python or C.
+4. Contract, contract-to-hire or intern wording.
+5. Company pay below the bar, including per-level floors (`below_title`).
+6. Experience asked: the smallest "N+ years" or "N–M years" in the job description; years in the title override it.
+7. A posted INR pay range below the floor.
+8. Pay confidence: **Posted** (stated in the JD) › **Strong** (levels.fyi evidence in `tiers.json`) › **Likely** (tier judgement) › **Unverified** (goes to leads, not the shortlist).
 
 ### Score (0–100)
 | Part | Points | How |

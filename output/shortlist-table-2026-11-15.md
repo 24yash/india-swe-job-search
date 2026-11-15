@@ -1,6 +1,6 @@
 # Shortlist table — 2026-11-15
 
-599 roles passed every filter; showing the top 40 (max 3 per company). 465 more pass everything except pay evidence (leads file).
+540 roles passed every filter; showing the top 40 (max 3 per company). 438 more pass everything except pay evidence (leads file).
 
 | # | Company | Company type / stage (latest round) | Role title | Location / mode | Exp asked | Pay (₹ LPA) + confidence + source | Key stack from JD | Score | Gaps vs my profile | Apply link | Posted date |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -77,49 +77,51 @@
 
 ## Rejected after the title filter, by reason
 
-- title doesn't say software: 669
-- 4+ yrs asked: 216
-- 5+ yrs asked: 166
-- pay below bar: 165
-- 6+ yrs asked: 69
-- 8+ yrs asked: 50
-- 7+ yrs asked: 46
-- 10+ yrs asked: 22
-- 12+ yrs asked: 10
+- title doesn't say software: 658
+- 4+ yrs asked: 202
+- pay below bar: 152
+- 5+ yrs asked: 151
+- embedded role: 120
+- 6+ yrs asked: 58
+- 8+ yrs asked: 45
+- crm platform role: 43
+- 7+ yrs asked: 43
+- 10+ yrs asked: 14
+- 12+ yrs asked: 5
 - pay below bar at this level: 5
-- posted pay 5 LPA below bar: 4
-- 9+ yrs asked: 4
 
 Examples:
 
-- Eruditus Executive Education: Salesforce Developer (Mumbai, Maharashtra, India) → 4+ yrs asked
+- Eruditus Executive Education: Salesforce Developer (Mumbai, Maharashtra, India) → crm platform role (outside the profile's development track)
 - Linde: Process Systems Engineer - AI Hub (Bangalore, Karnataka, IN) → title doesn't say software (generic) and the JD doesn't show software work
 - Keywords Studios: AI Engineer (Pune, Maharashtra, India) → title doesn't say software (ai) and the JD doesn't show software work
 - Keywords Studios: Android SE II - Fullstack Engineer (Pune, Maharashtra, India) → 4+ yrs asked
-- Larsen & Toubro: Algorithm Engineer - ADAS Functions (India, Karnataka, Bengaluru) → 6+ yrs asked
+- Keywords Studios: Software Engineer I - Salesforce Developer (Pune, Maharashtra, India) → crm platform role (outside the profile's development track)
 - Larsen & Toubro: Software Engineer - D&DC Land Systems (India, Gujarat, Hazira Mfg Complex) → 8+ yrs asked
-- Larsen & Toubro: Embedded Software Design Engineer (India, Karnataka, Bengaluru) → pay below bar (Levels.fyi India overall median TC 9.2 LPA (checked 11 Nov 2026))
-- Larsen & Toubro: Embedded Software Design Engineer (India, Karnataka, Bengaluru) → pay below bar (Levels.fyi India overall median TC 9.2 LPA (checked 11 Nov 2026))
-- Larsen & Toubro: Algorithm Developer - ADAS (India, Karnataka, Bengaluru) → 5+ yrs asked
+- Larsen & Toubro: Embedded Software Design Engineer (India, Karnataka, Bengaluru) → embedded role (outside the profile's development track)
+- Larsen & Toubro: Embedded Software Design Engineer (India, Karnataka, Bengaluru) → embedded role (outside the profile's development track)
+- Larsen & Toubro: Software engineer for command and control (India, Maharashtra, Powai Campus) → pay below bar (Levels.fyi India overall median TC 9.2 LPA (checked 11 Nov 2026))
+- Larsen & Toubro: software design engineer for command and control (India, Maharashtra, Powai Campus) → pay below bar (Levels.fyi India overall median TC 9.2 LPA (checked 11 Nov 2026))
+- Kinaxis: Backend Developer II, Python (Perungudi, Chennai, TN, IN) → 4+ yrs asked
 - Nexthop AI: Software Engineer - Full Stack Software (Bengaluru, KA) → 5+ yrs asked
 - WinZO: Backend Engineer (New Delhi, Delhi, India) → 6+ yrs asked
-- VMware: R&D Engineer Software 5 (IND-Hyderabad 115 IT Park Area) → 10+ yrs asked
-- VMware: R&D Engineer Software 5 (IND-Hyderabad 115 IT Park Area) → 10+ yrs asked
+- Texas Instruments: Application Developer (Bengaluru, Karnataka, India) → 5+ yrs asked
 - AutoZone: JAVA Developer/Application Support - Systems Engineer (India) → 7+ yrs asked
 - AutoZone: Mainframe Systems Programmer (IBM Z16)- Systems Engineer (India) → 7+ yrs asked
 - ABC Fitness: Software Developer II (Front-End) (Hyderabad Office, India.) → posted pay 5 LPA below bar
 - ABC Fitness: Software Developer II (Front-end) (Hyderabad Office, India.) → posted pay 5 LPA below bar
+- Beghou: Full Stack Developer (Pune / Hyderabad) → 6+ yrs asked
 - Stripe: Software Engineer, Financial Business Insights (Bengaluru, India) → 8+ yrs asked
+- Pure Storage: Cloud Native Escalation Engineer (Bangalore, India) → 10+ yrs asked
 - Cisco: Software Engineering Technical Leader - Backend /. Networking (12+ Years) (Bangalore, India) → 12+ yrs asked
+- Cisco: Software Engineering Technical Leader (GO/Java / 10-15 yrs) (Bangalore, India) → 10+ yrs asked
 - Cisco: Software Engineering Technical Leader - Proxy, Networking + Cloud Security / 12 to 16 yrs (Bangalore, India) → 12+ yrs asked
-- Cisco: Software Engineer Technical Leader - Embedded C, Networking(L2/L3/OSPF/Network Processor/Optical Network/SFP/QSFP - Sonic/ONIE/BMC/IPMI/ Redfish - I2C/SPI/UART/PCIe/GPIO - 13 to 18 years - Bangalore (Bangalore, India) → 13+ yrs asked
 - Cisco: Software Engineering Technical Leader – Full Stack, Ruby on Rails/Python/React.js / 11+ Years / Bangalore (Bangalore, India) → 11+ yrs asked
-- Cisco: Software Engineer :: C/C++, Python scripting, L2/L3 Networking (9-12 Years) (Bangalore, India) → 9+ yrs asked
 - Juspay: Software Development Engineer Backend (Bangalore, India) → contract/intern/temporary
 - Juspay: Software Development Engineer Backend (Mumbai, India) → contract/intern/temporary
 - Goldman Sachs: Compliance  Engineering - Software Engineer - Associate - Bengaluru (Hyderabad, India) → 9+ yrs asked
 - Fiserv: Advisor, Software Development (Pune, Mahārāshtra, India) → 14+ yrs asked
-- Juniper Networks: L2/L3 Datapath Engineer for DNX based platform (Bengaluru, Karnātaka, India) → 14+ yrs asked
+- Franklin Templeton: AI Product Developer (Hyderabad, Telangāna, India) → 9+ yrs asked
 - X-Rite: Service Engineer - Vapi (Vapi, India) → posted pay 7 LPA below bar
 - TravClan: SDE-1 (Backend Developer) (New Delhi, Delhi, India) → posted pay 14 LPA below bar
 - IT Consulting LLP: Software Engineer – Full Stack (.NET 8 / C# / Golang / ReactJS) (Navi Mumbai, Maharashtra, India) → posted pay 8 LPA below bar

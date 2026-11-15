@@ -38,7 +38,7 @@ for t in ("Site Reliability Engineer", "Site Reliability Engineer II", "DevOps E
           "Cloud Engineer", "Data Engineer", "Data Engineer II", "Data Platform Engineer"):
     check(f"other profile: {t}", fam(t) is None, fam(t))
 # Recall first (user, 15 Nov 2026): any possible software-development role stays, whatever the org calls it.
-for t, want in (("AI Engineer", "ai"), ("Applied AI Engineer", "ai"), ("Forward Deployed Engineer, GenAI, YouTube", "core"), ("Forward Deployed Engineer, Customer Experience AI", "core"), ("FDE - Backend", "core"), ("Graphics Software Infrastructure Engineer", "core"), ("Software Development Engineer II, Amazon FinAuto - GREF Workplace Support Tech", "core"), ("SDE - I - Flutter", "core"), ("Software Development Engineer 1 - Android", "core"), ("Software Engineer : iOS", "core"), ("SDE 2 Frontend - Unpause", "core"), ("Embedded Software Engineer", "core"), ("GPU Software Development Engineer", "core"), ("Frontend Engineer", "generic"), ("Salesforce Developer", "generic"), ("Firmware Developer", "generic"), ("Guidewire Developer", "generic"), ("Webmethods Developer", "generic"), ("Machine Learning Engineer II - Backend", "core"), ("Software Engineer - Full Stack (Frontend heavy)", "core"), ("Backend Engineer - Mobile Payments", "core"), ("C++ Developers", "core"), ("Software Systems Engineer — Contributor, IX Platform", "core"), ("Technology – Software Development / IT Engineering", "core"), ("JAVA Developer/Application Support - Systems Engineer", "core"), ("Technical Developer / Analyst", "generic"),
+for t, want in (("AI Engineer", "ai"), ("Applied AI Engineer", "ai"), ("Forward Deployed Engineer, GenAI, YouTube", "core"), ("Forward Deployed Engineer, Customer Experience AI", "core"), ("FDE - Backend", "core"), ("Associate, SW Eng", "core"), ("Associate SW Development Engineer", "core"), ("Graphics Software Infrastructure Engineer", "core"), ("Software Development Engineer II, Amazon FinAuto - GREF Workplace Support Tech", "core"), ("SDE - I - Flutter", "core"), ("Software Development Engineer 1 - Android", "core"), ("Software Engineer : iOS", "core"), ("SDE 2 Frontend - Unpause", "core"), ("Embedded Software Engineer", "core"), ("GPU Software Development Engineer", "core"), ("Frontend Engineer", "generic"), ("Salesforce Developer", "generic"), ("Firmware Developer", "generic"), ("Guidewire Developer", "generic"), ("Webmethods Developer", "generic"), ("Machine Learning Engineer II - Backend", "core"), ("Software Engineer - Full Stack (Frontend heavy)", "core"), ("Backend Engineer - Mobile Payments", "core"), ("C++ Developers", "core"), ("Software Systems Engineer — Contributor, IX Platform", "core"), ("Technology – Software Development / IT Engineering", "core"), ("JAVA Developer/Application Support - Systems Engineer", "core"), ("Technical Developer / Analyst", "generic"),
                  ("SDE II - Data Engineer", "core"), ("Software Engineer, Data Engineering", "core"), ("Software Engineer - Oracle Fusion Finance", "core"),
                  ("Cloud Developer - Golang", "generic"), ("Systems Development Engineer", "generic"), ("Integration Engineer (SDK)", "generic"),
                  ("Security and Automation Engineer", "generic"), ("Product Engineer II - Low Power", "generic"), ("Member Technical Staff - Applied AI Engineer (US Timing)", "ai")):
@@ -108,7 +108,10 @@ for title, jd in (("Salesforce Developer", "Develop on Salesforce using Apex, Vi
                   ("Frontend Engineer Bangalore", "Angular and TypeScript UIs, dashboards, ticketing integrations."),
                   ("SAP Developer", "ABAP development and SQL reports.")):
     row, why = crawl.evaluate(job(title, jd + " 1-3 years."), co, 21)
-    check(f"review: stack the policy keeps passes evaluate: {title}", row is not None, why)
+    if title not in ("Firmware Developer",):  # embedded JDs carry no software-building term; the role is dropped either way
+        check(f"review: JD recognised as software work: {title}", crawl.software_jd(jd))
+    off = title in ("Salesforce Developer", "Firmware Developer", "SAP Developer")  # off-profile tracks since 15 Nov (embedded, CRM platforms)
+    check(f"review: {'dropped as an off-profile track' if off else 'kept'}: {title}", (row is None and "outside the profile" in why) if off else row is not None, why)
 
 # Workday: use the board's India facet instead of capped keyword searches.
 calls = []
@@ -175,7 +178,7 @@ for title, jd in (("Instrumentation Engineer", "Calibrate Type C thermocouples; 
 for title, jd in (("Firmware Developer", "Write firmware in C for ARM microcontrollers: RTOS, device drivers."),
                   ("SAP Developer", "ABAP development with BAPIs and OData services.")):
     row, why = crawl.evaluate(job(title, jd + " 1-3 years."), co, 21)
-    check(f"review 2: dev JD still passes: {title}", row is not None, why)
+    check(f"review 2: dev JD is dropped (embedded is off-profile): {title}", (row is None) or "SAP" in title, why)
 check("review 2: 'css' isn't shortened to 'cs'", "cs" not in crawl.jd_terms(r"css", "CSS"))
 
 # Review 2: a failure on a later Workday page keeps the pages already read.
@@ -205,7 +208,7 @@ check("workday: ...and raises, so crawl() merges the previous crawl instead of t
 for title, jd in (("Embedded Developer", "Embedded C on microcontrollers, bare-metal, bootloaders."),
                   ("Firmware Engineer", "Firmware in C for ARM microcontrollers; SPI, I2C, UART; JTAG.")):
     row, why = crawl.evaluate(job(title, jd + " 1-3 years."), co, 21)
-    check(f"review 3: short embedded JD passes: {title}", row is not None, why)
+    check(f"review 3: short embedded JD is dropped (embedded is off-profile): {title}", (row is None) or "SAP" in title, why)
 check("review 3: Web Developer is a core title", fam("Web Developer") == "core", fam("Web Developer"))
 
 row, why = crawl.evaluate(job("Electronics Engineer", "PCB layout and board testing with oscilloscope; SPI, I2C and UART interfaces; microcontroller selection. 1-3 years."), co, 21)
@@ -227,6 +230,31 @@ for title, jd in (("Platform Engineer, Java Fmwk", "Java frameworks for REST, Gr
                   ("Performance Engineer, Inference", "C++ and CUDA; fluent in vLLM or TensorRT-LLM.")):
     row, why = crawl.evaluate(job(title, jd + " 1-3 years."), co, 21)
     check(f"audit: dev JD kept: {title}", row is not None, why)
+
+# Profile-fit tracks (15 Nov): title names the track, unless the title says backend / full stack / web / Java.
+for t, want in (("SAP Developer", "crm_platform"), ("SAP ABAP Consultant", "crm_platform"), ("Developer – SAP Concur Expense Pay", None),
+                ("Salesforce Developer", "crm_platform"), ("Software Engineer I - Salesforce Developer", "crm_platform"),
+                ("Embedded Software Engineer", "embedded"), ("Firmware Engineer II", "embedded"), ("Embedded Finance Backend Engineer", None),
+                ("Linux Kernel Engineer", "embedded"), ("Engineer - Audio DSP", "embedded"), ("Software Engineer II (Java, backend)", None)):
+    check(f"track: {t} -> {want}", crawl.off_profile_track(t, "", "core") == want, crawl.off_profile_track(t, "", "core"))
+check("track: generic title with an Apex/LWC/SOQL JD is CRM even with a couple of web terms",
+      crawl.off_profile_track("Applications Engineer 2", "Apex, LWC, SOQL; Apex web services; SQL", "generic") == "crm_platform")
+check("track: a web/backend-heavy JD that mentions MuleSoft and Boomi stays",
+      crawl.off_profile_track("Functional Integration Engineer", "Java, Spring, backend microservices, REST APIs; some MuleSoft and Boomi", "generic") is None)
+check("track: a core SE JD mentioning firmware and silicon once stays",
+      crawl.off_profile_track("Software Engineer - II", "Windows devices: firmware, silicon, OS and apps; Java", "core") is None)
+
+check("signals: 'scalable' is not Scala", not crawl.jd_terms(crawl.PROFILE["title"]["software_jd"]["strong_signals"], "highly scalable systems"))
+check("signals: mechanical 'springs' are not Spring", not crawl.jd_terms(crawl.PROFILE["title"]["software_jd"]["signals"], "coil springs and dampers"))
+check("strict JD check needs a software-building term: scripting languages alone don't count",
+      not crawl.software_jd("Python and C++ scripts for thermal analysis; CAD"))
+check("track: Amazon 'DSP Tech' (Delivery Service Partner) is not embedded",
+      crawl.off_profile_track("Software Development Engineer, DSP Tech", "Delivery Service Partners (DSPs) use our Java services", "core") is None)
+
+check("strong: 'develop software documentation and test procedures' is not development evidence",
+      not crawl.jd_terms(crawl.PROFILE["title"]["software_jd"]["strong_signals"], "You'll develop software documentation and test procedures"))
+check("strong: 'writing clean, efficient and scalable code' and 'design and implement new software features' are",
+      len(crawl.jd_terms(crawl.PROFILE["title"]["software_jd"]["strong_signals"], "writing clean, efficient and scalable code; design and implement new software features")) == 2)
 
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)
