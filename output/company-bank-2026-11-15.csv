@@ -21,6 +21,7 @@ Cadence Design Systems,EDA software MNC,likely,"India SE I 16.6 (below), SE II 2
 Google,Global product MNC (public),likely,"Levels.fyi India L3 44.8, L4 71.8 LPA median TC",own job board,80,6,0,2026-11-15,hiring now
 Juspay,Late-stage Indian fintech,likely,Fintech unicorn,own job board,9,6,0,2026-11-15,hiring now
 Oracle,Global product MNC (public),likely,Levels.fyi India IC-2 median TC 26.5 LPA,own job board,10,6,0,2026-11-15,hiring now
+Texas Instruments,Semiconductor MNC,likely,"Levels.fyi India level 24 median TC 26.0, 26 38.2 LPA (checked 11 Nov 2026)",own job board,15,6,0,2026-11-15,hiring now
 AMD,Semiconductor MNC (software roles),likely,Levels.fyi India SE median TC 53.6 LPA; L5 (entry) 27.9 LPA (Nov 2026),own job board,13,5,0,2026-11-15,hiring now
 Arista Networks,Public networking product,likely,"Levels.fyi India grade 2 25.7, 3L 41.3 LPA median TC",own job board,14,5,0,2026-11-15,hiring now
 Arm,Semiconductor IP,likely,"Levels.fyi India SE median TC 67.0 LPA; Grade 2 (entry) 21.9, Grade 3 32.0 LPA (Nov 2026)",own job board,10,5,0,2026-11-15,hiring now
@@ -31,7 +32,6 @@ Micron Technology,Semiconductor MNC,likely,"India E1 13.9 (yoe 1), E2 24.1 LPA (
 NVIDIA,Global product MNC,likely,Top-tier bands,own job board,8,5,0,2026-11-15,hiring now (new since last run)
 PhonePe,Late-stage Indian fintech,likely,Levels.fyi India SE1 median TC 28.9 LPA,own job board,14,5,0,2026-11-15,hiring now
 Safe Security,Cyber-risk SaaS,likely,"India SE median TC 31.5 LPA (levels.fyi, Nov 2026)",own job board,16,5,0,2026-11-15,hiring now
-Texas Instruments,Semiconductor MNC,likely,"Levels.fyi India level 24 median TC 26.0, 26 38.2 LPA (checked 11 Nov 2026)",own job board,15,5,0,2026-11-15,hiring now
 Tower Research Capital,HFT firm,likely,Levels.fyi India overall median TC 72.7 LPA (all levels),own job board,6,5,0,2026-11-15,hiring now
 Yubi,Debt fintech,likely,"India SE median TC 34.8 LPA (levels.fyi, Nov 2026)",own job board,7,5,0,2026-11-15,hiring now
 American Express,Global payments MNC,likely,Levels.fyi India SE II median TC 24.3 LPA,own job board,4,4,0,2026-11-15,hiring now
@@ -40,6 +40,7 @@ Delta Technology Hub,Airline tech centre,likely,"Levels.fyi India (Delta Air Lin
 GitLab,Public devtools (all-remote),likely,Levels.fyi India Intermediate SE 71.5 LPA median TC,own job board,4,4,0,2026-11-15,hiring now
 Millennium,Hedge fund tech,likely,Levels.fyi India SE 68.7 LPA median TC,own job board,8,4,0,2026-11-15,hiring now
 NetApp,Storage/infra product,likely,"Levels.fyi India MTS I 22.7, MTS II 31.0 LPA",own job board,16,4,0,2026-11-15,hiring now
+NK Securities Research,HFT firm,likely,HFT bands,own job board,4,4,0,2026-11-15,hiring now
 Nomura,Global bank tech centre,likely,"L2 median TC 25.6 LPA; L1 15.5 below (levels.fyi India, checked 10 Nov 2026)",own job board,6,4,0,2026-11-15,hiring now
 PayU,Payments,likely,"Software Engineer median TC 23.0 LPA; Associate 12.9 below (levels.fyi India, checked 10 Nov 2026)",own job board,7,4,0,2026-11-15,hiring now
 Prime Video & Amazon MGM Studios,Global product MNC,likely,Levels.fyi L4 median TC 29.7 LPA,LinkedIn company sweep,4,4,0,2026-11-15,hiring now
@@ -58,7 +59,6 @@ LSEG,Global financial data MNC,likely,"India SE median TC 40.9 LPA, no level spl
 MathWorks,Engineering software,likely,"Levels.fyi India Associate 25.1, SE 2 30.5 LPA median TC",own job board,4,3,0,2026-11-15,hiring now
 Media.net,Adtech product company,likely,Levels.fyi India SE2 median TC 41.3 LPA; SE1 18.2 is below the bar and excluded by title (checked 10 Nov 2026),own job board,4,3,0,2026-11-15,hiring now
 Meta,Global product MNC (public),likely,Big-tech bands,own job board,3,3,0,2026-11-15,hiring now
-NK Securities Research,HFT firm,likely,HFT bands,own job board,4,3,0,2026-11-15,hiring now
 Siemens,Global product,likely,"India T7 12.7 (below), T8 27.6 LPA; median 24.7 (levels.fyi, Nov 2026)",LinkedIn generic search only,4,3,0,2026-11-15,hiring now
 Snapmint,Indian product,likely,"Weekday (thin, 6 salaries): SDE-2 median 21.3 LPA (14.1-26.1); SDE-1 ~9-10 LPA is below the bar and excluded by title. No levels.fyi data (checked 10 Nov 2026)",own job board,8,3,0,2026-11-15,hiring now
 Teradata,Data platform,likely,Levels.fyi India SE median TC 22.6 LPA; Associate 10.6 below bar,own job board,3,3,0,2026-11-15,hiring now
@@ -136,6 +136,7 @@ Udaan,B2B commerce,likely,"L1 median TC 30.2 LPA (levels.fyi India, checked 10 N
 UiPath,Product company,likely,Levels.fyi India L3 median TC 44.4 LPA,own job board,10,1,0,2026-11-15,hiring now
 Urban Company,Indian consumer tech (listed),likely,SDE bands above 20,own job board,2,1,0,2026-11-15,hiring now
 VMware,Infra product (Broadcom),likely,Infra MNC,own job board,4,1,0,2026-11-15,hiring now (new since last run)
+Zepto,Late-stage quick-commerce,likely,Levels.fyi India SE1 median TC 34.7 LPA,own job board,1,1,0,2026-11-15,hiring now (new since last run)
 Zscaler,Public security SaaS,likely,Levels.fyi SE I median TC 21.4 LPA,own job board,4,1,0,2026-11-15,hiring now
 GE Vernova,Energy tech,unclear,"India SE median 21.2 LPA, no level split: borderline (levels.fyi, Nov 2026)",own job board,59,0,16,never (so far),pay unverified — check levels.fyi
 Honeywell,Industrial tech R&D,unclear,Bands vary,own job board,29,0,16,never (so far),pay unverified — check levels.fyi
@@ -170,6 +171,7 @@ Solventum,,unclear,no levels.fyi India data (checked 11 Nov 2026),own job board,
 Spreetail,,unclear,"No India SE data on levels.fyi (levels.fyi, Nov 2026)",own job board,6,0,3,never (so far),pay unverified — check levels.fyi
 The Alter Office,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,3,0,3,never (so far),pay unverified — check levels.fyi
 The Depository Trust & Clearing Corporation (DTCC),Financial market infrastructure,unclear,"borderline: overall 22.6; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)",own job board,9,0,3,never (so far),pay unverified — check levels.fyi
+United Airlines,Global product,unclear,not yet checked,own job board,5,0,3,never (so far),pay unverified — check levels.fyi
 Abnormal AI,Email-security AI startup,unclear,no levels.fyi India data (checked 11 Nov 2026),LinkedIn company sweep,3,0,2,never (so far),pay unverified — check levels.fyi
 Aftershoot,,unclear,no levels.fyi company page (Nov 2026),own job board,2,0,2,never (so far),pay unverified — check levels.fyi
 Anyscale,,unclear,"No India SE data on levels.fyi (levels.fyi, Nov 2026)",own job board,5,0,2,never (so far),pay unverified — check levels.fyi
@@ -202,11 +204,11 @@ Resideo,,unclear,"No India SE data on levels.fyi (levels.fyi, Nov 2026)",own job
 Rocketlane,SaaS,unclear,Bands vary,own job board,4,0,2,never (so far),pay unverified — check levels.fyi
 Smartsheet,Work-management SaaS,unclear,"India SE median 25.0 LPA, level labels unreliable: borderline (levels.fyi, Nov 2026)",own job board,2,0,2,never (so far),pay unverified — check levels.fyi
 SonicWall,,unclear,"borderline: overall 24.4; overall-only 20-30 stays unclear (levels.fyi India, checked 11 Nov 2026)",own job board,3,0,2,never (so far),pay unverified — check levels.fyi
+Synopsys,EDA software MNC,unclear,Software roles vary,own job board,5,0,2,never (so far),pay unverified — check levels.fyi
 Tata Communications,,unclear,no levels.fyi India data (checked 11 Nov 2026),own job board,13,0,2,never (so far),pay unverified — check levels.fyi
 The ePlane Company,,unclear,"small startup, not checked in depth; no pay data found (Nov 2026)",own job board,20,0,2,never (so far),pay unverified — check levels.fyi
 Transaction Network Services (TNS),,unclear,levels.fyi India SE page has no salary figures (Nov 2026),own job board,4,0,2,never (so far),pay unverified — check levels.fyi
 U.S. Bank,,unclear,"No India SE data on levels.fyi (levels.fyi, Nov 2026)",own job board,2,0,2,never (so far),pay unverified — check levels.fyi
-United Airlines,Global product,unclear,not yet checked,own job board,5,0,2,never (so far),pay unverified — check levels.fyi
 Vecmocon Technologies,Blume-backed startup (ISJB),unclear,not yet checked,own job board,7,0,2,never (so far),pay unverified — check levels.fyi
 Whitefield Careers,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,2,0,2,never (so far),pay unverified — check levels.fyi
 WinZO,Indian product,unclear,not yet checked,own job board,4,0,2,never (so far),pay unverified — check levels.fyi
@@ -233,6 +235,7 @@ AQR Capital Management,Discovered via LinkedIn — add to tiers.json,unclear,not
 Arcana,SaaS,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Archer,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Ares Management,,unclear,levels.fyi India SE page has no salary figures (Nov 2026),own job board,1,0,1,never (so far),pay unverified — check levels.fyi
+AssetMark Global Wealth,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Astra Security,SaaS,unclear,No usable salary data found,own job board,1,0,1,never (so far),pay unverified — check levels.fyi
 Auric AI Labs,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Babaclick,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
@@ -349,7 +352,9 @@ Rox,Product company,unclear,"small startup, not checked in depth; no pay data fo
 RunnTV,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Sage,Accounting SaaS,unclear,"India SE median 27.3 LPA, no level split: borderline (levels.fyi, Nov 2026)",LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 SAMS DIGITAL,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
+Samsung,R&D centre,unclear,R&D bands vary,own job board,5,0,1,never (so far),pay unverified — check levels.fyi
 Sarla Aviation,Accel-backed startup (ISJB),unclear,not yet checked,own job board,3,0,1,never (so far),pay unverified — check levels.fyi
+SAVA INFO SYSTEMS PVT LTD,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Scimplify,Accel-backed startup (ISJB),unclear,not yet checked,own job board,4,0,1,never (so far),pay unverified — check levels.fyi
 Scoutit,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Secfix,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
@@ -365,7 +370,6 @@ Smallest.ai,AI startup,unclear,Bands vary,own job board,3,0,1,never (so far),pay
 SUNAMY.AI,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 SupplyHouse,US e-commerce,unclear,no levels.fyi India data (checked 11 Nov 2026),LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 SyncMyStudio,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
-Synopsys,EDA software MNC,unclear,Software roles vary,own job board,5,0,1,never (so far),pay unverified — check levels.fyi
 TeamViewer,,unclear,no levels.fyi India data (checked 11 Nov 2026),LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 TechDoQuest,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Third Wave Coffee,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
@@ -1187,7 +1191,6 @@ Sainsbury's,Global product,unclear,not yet checked,LinkedIn generic search only,
 SalaryBox,moreThanFAANGM (product companies list),unclear,not yet checked,own job board,0,0,0,never (so far),quiet — keep watching
 Salesforce,Global SaaS MNC,likely,Levels.fyi India AMTS median TC 26.1 LPA,own job board,2,0,0,2026-11-11,quiet — keep watching
 Salesken,Peak XV-backed startup (ISJB),unclear,not yet checked,LinkedIn generic search only,0,0,0,never (so far),quiet — keep watching
-Samsung,R&D centre,unclear,R&D bands vary,own job board,5,0,0,never (so far),quiet — keep watching
 Samsung R&D Institute,R&D centre (SRIB/SRI-Noida),unclear,R&D bands vary,LinkedIn generic search only,0,0,0,never (so far),quiet — keep watching
 Samunnati,Accel-backed startup (ISJB),unclear,not yet checked,own job board,0,0,0,never (so far),quiet — keep watching
 SanDisk,Global product,unclear,no levels.fyi India data (checked 10 Nov 2026),LinkedIn generic search only,0,0,0,never (so far),quiet — keep watching
@@ -1402,7 +1405,6 @@ zango,Nexus-backed startup (ISJB),unclear,not yet checked,LinkedIn generic searc
 Zebra Technologies,Global product,below,Levels.fyi India SE2 16.2 LPA,LinkedIn generic search only,1,0,0,never (so far),pay below bar
 Zendesk,SaaS,likely,Product bands,own job board,0,0,0,2026-11-08,quiet — keep watching
 Zenoti,Growth-stage SaaS,unclear,Hyderabad SaaS; bands vary,own job board,0,0,0,never (so far),quiet — keep watching
-Zepto,Late-stage quick-commerce,likely,Levels.fyi India SE1 median TC 34.7 LPA,own job board,0,0,0,never (so far),quiet — keep watching
 Zerodha,Profitable Indian fintech,likely,Known to pay well for engineers,own job board,0,0,0,never (so far),quiet — keep watching
 Zinc,Nexus-backed startup (ISJB),unclear,not yet checked,LinkedIn generic search only,0,0,0,never (so far),quiet — keep watching
 Zinier,Accel-backed startup (ISJB),below,Levels.fyi India overall 11.1 LPA,own job board,4,0,0,never (so far),pay below bar

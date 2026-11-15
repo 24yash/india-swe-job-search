@@ -306,7 +306,7 @@ def workday_india_facet(api):
 def workday(c):
     host = f"https://{c['tenant']}.{c['wd']}.myworkdayjobs.com"
     api = f"{host}/wday/cxs/{c['tenant']}/{c['site']}"
-    seen, todo = set(), []
+    seen, todo, failed = set(), [], []
 
     def scan(query, facets, cap):
         offset, total = 0, None
@@ -316,8 +316,7 @@ def workday(c):
             except requests.RequestException as e:  # keep the pages already read instead of losing the whole board
                 if offset == 0:
                     raise
-                print(f"  {c['name']}: Workday page at offset {offset} failed ({type(e).__name__}); keeping {offset} postings read",
-                      file=sys.stderr, flush=True)
+                failed.append(f"Workday page at offset {offset} failed ({type(e).__name__})")
                 break
             posts = d.get("jobPostings", [])
             if total is None:
@@ -360,6 +359,8 @@ def workday(c):
 
     with ThreadPoolExecutor(6) as pool:
         yield from filter(None, pool.map(detail, todo))
+    if failed:  # a partial listing must not look complete: crawl() then merges in the previous crawl's postings
+        raise RuntimeError(f"{failed[0]}; kept the postings read before it")
 
 
 def oracle(c):

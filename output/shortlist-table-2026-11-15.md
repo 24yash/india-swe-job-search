@@ -1,6 +1,6 @@
 # Shortlist table — 2026-11-15
 
-596 roles passed every filter; showing the top 40 (max 3 per company). 426 more pass everything except pay evidence (leads file).
+599 roles passed every filter; showing the top 40 (max 3 per company). 431 more pass everything except pay evidence (leads file).
 
 | # | Company | Company type / stage (latest round) | Role title | Location / mode | Exp asked | Pay (₹ LPA) + confidence + source | Key stack from JD | Score | Gaps vs my profile | Apply link | Posted date |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -77,8 +77,8 @@
 
 ## Rejected after the title filter, by reason
 
-- title doesn't say software: 642
-- 4+ yrs asked: 217
+- title doesn't say software: 635
+- 4+ yrs asked: 218
 - pay below bar: 163
 - 5+ yrs asked: 163
 - 6+ yrs asked: 69
@@ -119,6 +119,7 @@ Examples:
 - Juspay: Software Development Engineer Backend (Mumbai, India) → contract/intern/temporary
 - Goldman Sachs: Compliance  Engineering - Software Engineer - Associate - Bengaluru (Hyderabad, India) → 9+ yrs asked
 - Fiserv: Advisor, Software Development (Pune, Mahārāshtra, India) → 14+ yrs asked
+- X-Rite: Service Engineer - Vapi (Vapi, India) → posted pay 7 LPA below bar
 - TravClan: SDE-1 (Backend Developer) (New Delhi, Delhi, India) → posted pay 14 LPA below bar
 - IT Consulting LLP: Software Engineer – Full Stack (.NET 8 / C# / Golang / ReactJS) (Navi Mumbai, Maharashtra, India) → posted pay 8 LPA below bar
 - Sophos: Software Engineer 1 (Java Developer) (India) → pay below bar at this level (India SE1 15.6 (below), SE2 22.4 LPA; median 45.2 (levels.fyi, Nov 2026))

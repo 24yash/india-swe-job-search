@@ -192,8 +192,21 @@ def flaky_pages(url, body, **kw):
 
 
 crawl.post = flaky_pages
-got = list(crawl.workday({"name": "Target", "tenant": "target", "wd": "wd5", "site": "targetcareers"}))
+got, raised = [], False
+try:
+    for j in crawl.workday({"name": "Target", "tenant": "target", "wd": "wd5", "site": "targetcareers"}):
+        got.append(j)
+except RuntimeError:
+    raised = True
 check("workday: a failed later page keeps the postings already read", [j.title for j in got] == ["Software Engineer"], [j.title for j in got])
+check("workday: ...and raises, so crawl() merges the previous crawl instead of treating the listing as complete", raised)
+
+# Third review round: short embedded-C JDs and HTML/CSS web developers.
+for title, jd in (("Embedded Developer", "Embedded C on microcontrollers, bare-metal, bootloaders."),
+                  ("Firmware Engineer", "Firmware in C for ARM microcontrollers; SPI, I2C, UART; JTAG.")):
+    row, why = crawl.evaluate(job(title, jd + " 1-3 years."), co, 21)
+    check(f"review 3: short embedded JD passes: {title}", row is not None, why)
+check("review 3: Web Developer is a core title", fam("Web Developer") == "core", fam("Web Developer"))
 
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)
