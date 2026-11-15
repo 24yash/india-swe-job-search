@@ -34,7 +34,7 @@ To use your own requirements:
 1. Edit **`profile.json`**, at minimum:
    - `max_min_years`: the highest "N+ years" ask you'll accept;
    - `min_pay_lpa`: your pay floor;
-   - `title.include` / `title.exclude`: which titles count;
+   - `title`: which titles count (see *Filters* below: core `include`, the `exclude` lists, and opt-in `families` such as `ai`, `infra`, `data`);
    - `stack`: keywords and weights for your skills;
    - `gaps`: skills you lack, flagged per role;
    - `exclude_companies`: **add your current employer**;
@@ -46,6 +46,7 @@ To use your own requirements:
    - About 1 minute: every company job board is crawled, and the shortlist and dashboard are rebuilt.
    - Then LinkedIn runs in the background (light mode, ~5–15 min) and rebuilds the dashboard every ~40 postings. Progress: `tail -f output/linkedin.log`.
    - For an occasional exhaustive pass (hours), run `python3 crawl.py --sources linkedin --deep`.
+   - LinkedIn progress is saved every ~2 minutes (`linkedin.checkpoint_seconds`) with atomic writes, network drops are retried for ~16 minutes, and re-running the same command on the same day resumes the company sweep where it stopped. Keep a laptop plugged in for `--deep`: on battery it may sleep.
 3. Open or reload `dashboard.html`; reload again later to see the LinkedIn results. Your marks carry over (see *Dashboard* below).
 
 ## Quick start (AI agent)
@@ -84,7 +85,7 @@ profile.json  companies.json  tiers.json          ← your criteria, boards craw
 | Source | Covers |
 |---|---|
 | Greenhouse, Lever, Ashby, SmartRecruiters public APIs | Stripe, Databricks, Rubrik, MongoDB, Razorpay, Groww, CRED, Meesho, Snowflake, Sarvam, Freshworks, Swiggy… |
-| Workday search API | Cisco, Salesforce, Adobe, eBay, Mastercard, Target, PayPal, Walmart Global Tech, Citi, Capital One, Cadence… |
+| Workday search API (each board's own India facet: every India posting, not a capped keyword search) | Cisco, Salesforce, Adobe, eBay, Mastercard, Target, PayPal, Walmart Global Tech, Citi, Capital One, Cadence… |
 | Oracle Recruiting Cloud, Eightfold (PCSX and the older v2 API), Rippling public feeds | JPMorgan Chase, American Express, Oracle, Honeywell, BNY, Citi, Qualcomm, Micron, Autodesk, Microsoft, ThoughtSpot, DTCC, HSBC, Netflix, Ericsson |
 | Company portals (`portals/`: one small reader per site, plus a generic job-links reader) | Apple, Goldman Sachs, Uber, Juspay, Urban Company, ShareChat, Nutanix, Intuit, D. E. Shaw India |
 | Careers-site sitemaps + schema.org JobPosting pages (`portals/sitemap.py`) | Phenom, iCIMS, Avature and SuccessFactors sites and custom ones: Fiserv, WEX, Disney, Arm, BlackRock, Moody's, BCG, Lowe's…; Meta (every job page read once, then cached by ID) and Millennium |
@@ -100,7 +101,13 @@ Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `-
 
 ### Filters (in order; each rejection records its reason)
 1. India location.
-2. Title include/exclude regexes, with word boundaries so team names like "Research Platform" aren't dropped.
+2. Title, in this order (all regexes in `profile.json` `title`):
+   - `exclude`: seniority, intern/contract, and work that isn't development (SRE/DevOps, data engineering, admin, support, sales, QA);
+   - `exclude_client` / `exclude_domain`: stack or domain words (frontend, mobile, hardware design…) that drop a title unless it also carries a strong developer marker (`client_override`, `core_override`, or any core title). Empty `exclude_client` keeps frontend and mobile roles;
+   - `include`: core development titles (software engineer/developer in any spelling, SDE/SWE, backend, full stack, MTS, FDE, Programmer Analyst, "<language> developer"…);
+   - `exclude_unless_core`: drops a *non*-core title that names non-development work ("Security Engineer"), while "Software Engineer - Security" stays;
+   - `families` + `families_enabled`: titles with no role word ("Engineer - Target India", "AI Engineer") pass only if their family is enabled **and** the job description shows development work (`software_jd`: distinct languages, frameworks, APIs and services, minus hardware/ops terms). A disabled family keeps its titles out even when `generic` would match.
+   Every row carries `role_family`, and the dashboard tags non-core rows. `tests/test_titles.py` holds the audited cases.
 3. Contract, contract-to-hire or intern wording.
 4. Company pay below the bar, including per-level floors (`below_title`).
 5. Experience asked: the smallest "N+ years" or "N–M years" in the job description; years in the title override it.

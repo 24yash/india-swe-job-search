@@ -17,7 +17,7 @@ If the user hasn't set up `profile.json` yet (it still says "Shipped as an examp
 - main stack and skills, plus skills they lack;
 - companies to exclude, **including their current employer**.
 
-Write the answers into `profile.json`: `title.include` / `title.exclude`, `max_min_years`, `min_pay_lpa`, `linkedin.locations`, `stack` (`[label, regex, weight]`, Java-style weights 1–7), `gaps`, `exclude_companies`. Replace the `_comment` "Shipped as an example" text. Don't put the user's name, employer or any other personal detail anywhere else in the repo.
+Write the answers into `profile.json`: `title` (core `include`, the `exclude` lists, which `families` to enable — e.g. turn on `infra` for SRE/DevOps or `data` for data engineering; see README *Filters*), `max_min_years`, `min_pay_lpa`, `linkedin.locations`, `stack` (`[label, regex, weight]`, Java-style weights 1–7), `gaps`, `exclude_companies`. Replace the `_comment` "Shipped as an example" text. Don't put the user's name, employer or any other personal detail anywhere else in the repo.
 
 ## 2. Crawl
 

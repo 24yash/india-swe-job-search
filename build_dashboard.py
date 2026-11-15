@@ -6,11 +6,19 @@ keyed by job link, so rebuilding after a new crawl keeps them. Use Export/Import
 """
 import csv
 import json
+import os
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "output"
+
+
+def write_atomic(path, text):
+    """Temp file + rename: a crash or an overlapping crawl never leaves a half-written archive or page."""
+    tmp = path.with_name(f".{path.name}.{os.getpid()}.tmp")
+    tmp.write_text(text)
+    os.replace(tmp, path)
 
 
 def latest(prefix):
@@ -35,7 +43,8 @@ def job(r, kind):
             "pay": r["pay"], "payConf": r["pay_conf"], "stack": r["stack"], "gaps": r["gaps"], "score": int(r["score"]),
             "posted": r["posted"], "source": r.get("source", ""), "reqs": int(r.get("reqs") or 1),
             "otherLinks": (r.get("other_links") or "").split(), "breakdown": r.get("breakdown", ""), "isNew": r.get("new") == "NEW",
-            "expBand": r.get("exp_band", ""), "sweet": r.get("sweet_spot") == "yes"}
+            "expBand": r.get("exp_band", ""), "sweet": r.get("sweet_spot") == "yes",
+            "family": r.get("role_family") or "core"}
 
 
 def main():
@@ -53,15 +62,17 @@ def main():
     for j in current:
         j |= {"inLatest": True, "firstSeen": archive.get(j["url"], {}).get("firstSeen", date), "lastSeen": date}
         archive[j["url"]] = j
-    archive_file.write_text(json.dumps(archive, ensure_ascii=False))
+    write_atomic(archive_file, json.dumps(archive, ensure_ascii=False))
 
     data = {"generated": date, "jobs": list(archive.values()), "companies": bank}
     page = (ROOT / "dashboard_template.html").read_text().replace(
         "/*__DATA__*/null", json.dumps(data, ensure_ascii=False).replace("</", "<\\/"))
-    (ROOT / "dashboard.html").write_text(page)
+    write_atomic(ROOT / "dashboard.html", page)
     print(f"dashboard.html: {len(jobs)} shortlist, {len(leads)} leads, {len(archive) - len(current)} archived, "
           f"{len(bank)} companies (crawl {date})")
 
 
 if __name__ == "__main__":
-    main()
+    import crawl  # run on its own: wait for any crawl that is rebuilding the outputs right now
+    with crawl.output_lock():
+        main()
