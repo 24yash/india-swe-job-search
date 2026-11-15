@@ -7,6 +7,7 @@ any manual verification notes on top of it.
 import argparse
 import collections
 import csv
+import os
 from datetime import date
 from pathlib import Path
 
@@ -67,7 +68,7 @@ def main(argv=None):
             md.append(f"- {cell(r['company'])}: {cell(r['title'])} ({cell(r['location'])}) → {cell(r['reason'])}")
 
     out = OUT / f"shortlist-table-{date.today().isoformat()}.md"
-    tmp = out.with_name(f".{out.name}.tmp")
+    tmp = out.with_name(f".{out.name}.{os.getpid()}.tmp")
     tmp.write_text("\n".join(md) + "\n")
     tmp.replace(out)  # atomic: never a half-written table
     print(out)

@@ -102,10 +102,10 @@ Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `-
 ### Filters (in order; each rejection records its reason)
 1. India location.
 2. Title, in this order (all regexes in `profile.json` `title`):
-   - `exclude`: seniority, intern/contract, and work that isn't development (SRE/DevOps, data engineering, admin, support, sales, QA);
+   - `exclude`: seniority (including MTS-3+ and SDE-4+), intern/contract, and work that isn't development (SRE/DevOps, system/DB admin, QA/SDET, recruiters, technical writers, production support);
    - `exclude_client` / `exclude_domain`: stack or domain words (frontend, mobile, hardware design…) that drop a title unless it also carries a strong developer marker (`client_override`, `core_override`, or any core title). Empty `exclude_client` keeps frontend and mobile roles;
    - `include`: core development titles (software engineer/developer in any spelling, SDE/SWE, backend, full stack, MTS, FDE, Programmer Analyst, "<language> developer"…);
-   - `exclude_unless_core`: drops a *non*-core title that names non-development work ("Security Engineer"), while "Software Engineer - Security" stays;
+   - `exclude_unless_core`: drops a *non*-core title that names non-development work (data engineering, data science, sales, security operations, network, electrical…): "Security Engineer" goes, "Software Engineer - Security" stays;
    - `families` + `families_enabled`: titles with no role word ("Engineer - Target India", "AI Engineer") pass only if their family is enabled **and** the job description shows development work (`software_jd`: distinct languages, frameworks, APIs and services, minus hardware/ops terms). A disabled family keeps its titles out even when `generic` would match.
    Every row carries `role_family`, and the dashboard tags non-core rows. `tests/test_titles.py` holds the audited cases.
 3. Contract, contract-to-hire or intern wording.

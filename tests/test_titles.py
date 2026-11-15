@@ -33,12 +33,12 @@ for t in ("Software Engineer - Intersight Software and Product Security", "Softw
 # No role word: kept only if the JD shows development work.
 for t in ("Engineer - Target India", "Engineer", "Platform Engineer, Java Fmwk", "Engineer II - Cloud", "Low Latency Developer", "Quantitative Developer"):
     check(f"generic: {t}", fam(t) == "generic", fam(t))
-# The user is a core developer (CV, 15 Nov 2026): SRE/DevOps, data, AI-engineer, FDE and other role types stay out.
+# Not development work (user, 15 Nov 2026): SRE/DevOps, cloud ops and data engineering stay out. (AI engineers and FDEs are kept.)
 for t in ("Site Reliability Engineer", "Site Reliability Engineer II", "DevOps Engineer I", "Software Site Reliability Engineer - AI & Data Platforms",
           "Cloud Engineer", "Data Engineer", "Data Engineer II", "Data Platform Engineer"):
     check(f"other profile: {t}", fam(t) is None, fam(t))
 # Recall first (user, 15 Nov 2026): any possible software-development role stays, whatever the org calls it.
-for t, want in (("AI Engineer", "ai"), ("Applied AI Engineer", "ai"), ("Forward Deployed Engineer, GenAI, YouTube", "core"), ("Forward Deployed Engineer, Customer Experience AI", "core"), ("FDE - Backend", "core"), ("Software Development Engineer II, Amazon FinAuto - GREF Workplace Support Tech", "core"), ("SDE - I - Flutter", "core"), ("Software Development Engineer 1 - Android", "core"), ("Software Engineer : iOS", "core"), ("SDE 2 Frontend - Unpause", "core"), ("Embedded Software Engineer", "core"), ("GPU Software Development Engineer", "core"), ("Frontend Engineer", "generic"), ("Salesforce Developer", "generic"), ("Firmware Developer", "generic"), ("Guidewire Developer", "generic"), ("Webmethods Developer", "generic"), ("Machine Learning Engineer II - Backend", "core"), ("Software Engineer - Full Stack (Frontend heavy)", "core"), ("Backend Engineer - Mobile Payments", "core"), ("C++ Developers", "core"), ("Software Systems Engineer — Contributor, IX Platform", "core"), ("Technology – Software Development / IT Engineering", "core"), ("JAVA Developer/Application Support - Systems Engineer", "core"), ("Technical Developer / Analyst", "generic"),
+for t, want in (("AI Engineer", "ai"), ("Applied AI Engineer", "ai"), ("Forward Deployed Engineer, GenAI, YouTube", "core"), ("Forward Deployed Engineer, Customer Experience AI", "core"), ("FDE - Backend", "core"), ("Graphics Software Infrastructure Engineer", "core"), ("Software Development Engineer II, Amazon FinAuto - GREF Workplace Support Tech", "core"), ("SDE - I - Flutter", "core"), ("Software Development Engineer 1 - Android", "core"), ("Software Engineer : iOS", "core"), ("SDE 2 Frontend - Unpause", "core"), ("Embedded Software Engineer", "core"), ("GPU Software Development Engineer", "core"), ("Frontend Engineer", "generic"), ("Salesforce Developer", "generic"), ("Firmware Developer", "generic"), ("Guidewire Developer", "generic"), ("Webmethods Developer", "generic"), ("Machine Learning Engineer II - Backend", "core"), ("Software Engineer - Full Stack (Frontend heavy)", "core"), ("Backend Engineer - Mobile Payments", "core"), ("C++ Developers", "core"), ("Software Systems Engineer — Contributor, IX Platform", "core"), ("Technology – Software Development / IT Engineering", "core"), ("JAVA Developer/Application Support - Systems Engineer", "core"), ("Technical Developer / Analyst", "generic"),
                  ("SDE II - Data Engineer", "core"), ("Software Engineer, Data Engineering", "core"), ("Software Engineer - Oracle Fusion Finance", "core"),
                  ("Cloud Developer - Golang", "generic"), ("Systems Development Engineer", "generic"), ("Integration Engineer (SDK)", "generic"),
                  ("Security and Automation Engineer", "generic"), ("Product Engineer II - Low Power", "generic"), ("Member Technical Staff - Applied AI Engineer (US Timing)", "ai")):
@@ -83,6 +83,33 @@ check("evaluate: generic title with civil JD rejected with a reason", row is Non
 row, why = crawl.evaluate(job("Software Engineer", "Build things. 1-3 years."), co, 21)
 check("evaluate: core title kept without a software-heavy JD", row is not None and row["role_family"] == "core", why)
 
+# Independent review of PR #7: each reproducer it reported.
+for t in ("Frontend Engineer Bangalore", "Android Engineer Bengaluru", "ML Engineer Python", "Embedded Engineer C++", "Platform Engineer for Payments",
+          "Programmer", "Software Programmer", "Analyst Programmer", "Microservices Engineer", "Web Services Engineer", "Robotics Developer",
+          "CAD Developer", "Sales Cloud Developer", "SailPoint Developer", "Workday Developer"):
+    check(f"review: reaches the JD check: {t}", fam(t) == "generic", fam(t))
+for t in ("Software Engineer - Identity & Access Administration", "Software Engineer - Database Administration Tools",
+          "Software Engineer - Security Operations Platform", "Software Engineer - A/B Testing Platform", "Software Engineer - Workday Integrations",
+          "Software Engineer - Smart Contracts", "Software Engineer - Contract Management", "Software Engineer - Batch Processing",
+          "Software Engineer - University Products", "Software Engineer, Head Unit", "Software Engineer - Lead Generation", "MTS/SMTS Backend"):
+    check(f"review: core title kept: {t}", fam(t) == "core", fam(t))
+for t in ("Technical Recruiter - SDE Hiring", "Recruiter, Software Engineering", "Technical Writer - Software Engineering",
+          "Software Development Representative", "Back End Operations Executive", "Backend Executive",
+          "Python Data Engineer", "Scala Data Engineer", "Java Production Support Engineer", "MTS 5", "Member of Technical Staff 5",
+          "MTS - 3 Backend", "Member of Technical Staff - 3 (Backend)", "Software Engineer 4", "SDE 4", "Software Engineer V",
+          "Contract Java Developer", "2026 Batch Software Engineer", "Software Engineer in Test"):
+    check(f"review: not an eligible dev role: {t}", fam(t) is None, fam(t))
+check("review: 'Go To Market Engineer' is not a core title (goes to the JD check)", fam("Go To Market Engineer") != "core", fam("Go To Market Engineer"))
+for title, jd in (("Salesforce Developer", "Develop on Salesforce using Apex, Visualforce, LWC and SOQL."),
+                  ("iOS Developer", "Build iOS apps in Swift with SwiftUI, UIKit and Xcode."),
+                  ("Firmware Developer", "Write firmware in C for ARM microcontrollers: RTOS, device drivers."),
+                  ("Flutter Developer", "Build cross-platform apps in Flutter and Dart."),
+                  ("ML Engineer Python", "Train and serve models with PyTorch and Python."),
+                  ("Frontend Engineer Bangalore", "Angular and TypeScript UIs, dashboards, ticketing integrations."),
+                  ("SAP Developer", "ABAP development and SQL reports.")):
+    row, why = crawl.evaluate(job(title, jd + " 1-3 years."), co, 21)
+    check(f"review: stack the policy keeps passes evaluate: {title}", row is not None, why)
+
 # Workday: use the board's India facet instead of capped keyword searches.
 calls = []
 
@@ -115,6 +142,23 @@ check("workday: India facet found (city values, Indianapolis left out)",
 check("workday: empty search text, so no keyword decides what we see", facet_calls and facet_calls[0]["searchText"] == "")
 check("workday: title filter applied locally (generic kept, senior dropped)", sorted(j.title for j in got) == ["Engineer - Target India", "Software Engineer"],
       [j.title for j in got])
+
+# Review: if the facet list can't be read, fall back to keyword searches instead of failing the board.
+calls.clear()
+
+
+def failing_facets(url, body, **kw):
+    calls.append(body)
+    if body["limit"] == 1:
+        raise crawl.requests.ConnectionError("facet list down")
+    return {"total": 1 if body["offset"] == 0 else 0,
+            "jobPostings": [{"title": "Software Engineer", "externalPath": "/job/c", "locationsText": "Pune, India"}] if body["offset"] == 0 else []}
+
+
+crawl.post = failing_facets
+got = list(crawl.workday({"name": "Target", "tenant": "target", "wd": "wd5", "site": "targetcareers"}))
+check("workday: facet failure falls back to keyword searches", any(b["searchText"] for b in calls if b["limit"] == 20) and [j.title for j in got] == ["Software Engineer"],
+      [b["searchText"] for b in calls][:3])
 
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)

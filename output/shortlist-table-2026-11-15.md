@@ -1,6 +1,6 @@
 # Shortlist table — 2026-11-15
 
-576 roles passed every filter; showing the top 40 (max 3 per company). 392 more pass everything except pay evidence (leads file).
+595 roles passed every filter; showing the top 40 (max 3 per company). 420 more pass everything except pay evidence (leads file).
 
 | # | Company | Company type / stage (latest round) | Role title | Location / mode | Exp asked | Pay (₹ LPA) + confidence + source | Key stack from JD | Score | Gaps vs my profile | Apply link | Posted date |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -30,7 +30,7 @@
 | 24 | Microsoft | Global product MNC (public) | Software Engineer - II (3 reqs) | Hyderabad, TS, IN (on-site/hybrid (check JD)) | 2+ yrs | Strong — Levels.fyi L59 median TC 27.4 LPA (total comp, not fixed CTC) | Java, Python | 84 | C++, Azure, ML/LLM, C#/.NET | [apply](https://apply.careers.microsoft.com/careers/job/1970393557050455) | 2026-11-03 |
 | 25 | DocuSign | SaaS | Software Engineer (5 reqs) | Bengaluru, hybrid | 2+ yrs | Strong — Levels.fyi India P2 49.5 LPA median TC (total comp, not fixed CTC) | Java, AWS, Distributed systems, Microservices, CI/CD | 84 | C++, GCP, Azure, Terraform, C#/.NET | [apply](https://careers.docusign.com/jobs/30628?lang=en-us) | 2026-11-03 |
 | 26 | JPMorganChase | Global bank tech centre | Software Engineer II - Java - Springboot, React, RDBMS, Kubernetes | Mumbai, Maharashtra, India (on-site/hybrid (check JD)) | 2+ yrs | Strong — Levels.fyi India 601 median TC 27.5, 602 42.4 LPA (502 is 18.2, below bar) (total comp, not fixed CTC) | Java, Spring, PostgreSQL, SQL, Kubernetes, AWS, Microservices, Docker | 84 | Terraform | [apply](https://www.linkedin.com/jobs/view/4487513013/) (via LinkedIn) | 2026-11-04 |
-| 27 | Delta Technology Hub | Airline tech centre | Software Development Engineer (3 reqs) | Bengaluru, on-site/hybrid (check JD) | 2+ yrs | Strong — Levels.fyi India (Delta Air Lines) L2 median TC 27.1, L3 34.7 LPA (checked 11 Nov 2026) (total comp, not fixed CTC) | Java, Spring, PostgreSQL, Kubernetes, AWS, Distributed systems, Microservices, Docker | 84 | ML/LLM, Node.js | [apply](https://www.linkedin.com/jobs/view/4486597418/) (via LinkedIn) | 2026-11-05 |
+| 27 | Delta Technology Hub | Airline tech centre | Software Development Engineer (4 reqs) | Bengaluru, on-site/hybrid (check JD) | 2+ yrs | Strong — Levels.fyi India (Delta Air Lines) L2 median TC 27.1, L3 34.7 LPA (checked 11 Nov 2026) (total comp, not fixed CTC) | Java, Spring, PostgreSQL, Kubernetes, AWS, Distributed systems, Microservices, Docker | 84 | ML/LLM, Node.js | [apply](https://www.linkedin.com/jobs/view/4486597418/) (via LinkedIn) | 2026-11-05 |
 | 28 | Teradata | Data platform | AI Engineer | Bengaluru, hybrid | 1+ yrs | Strong — Levels.fyi India SE median TC 22.6 LPA; Associate 10.6 below bar (total comp, not fixed CTC) | Java, SQL, Kubernetes, Distributed systems, Docker, REST APIs, Python | 84 | Go, Kafka, ML/LLM | [apply](https://careers.teradata.com/jobs/220497/ai-engineer) | 2026-11-10 |
 | 29 | Media.net | Adtech product company | Software Development Engineer/NR-2026-0261 | Bengaluru, on-site/hybrid (check JD) | 1+ yrs | Strong — Levels.fyi India SE2 median TC 41.3 LPA; SE1 18.2 is below the bar and excluded by title (checked 10 Nov 2026) (total comp, not fixed CTC) | Java, PostgreSQL, Kubernetes, AWS, Distributed systems, Docker | 84 | Go, Kafka, GCP, Node.js, C#/.NET | [apply](https://www.linkedin.com/jobs/view/4480398232/) (via LinkedIn) | 2026-11-11 |
 | 30 | WEX | Payments/fintech product | Software Development Engineer 1 | Bengaluru, on-site/hybrid (check JD) | 2+ yrs | Strong — Levels.fyi India SE II median TC 32.1 LPA (total comp, not fixed CTC) | Java, Spring, AWS, CI/CD, Python | 84 | GCP, Azure | [apply](https://careers.wexinc.com/us/en/job/R22749/Software-Development-Engineer-1) | 2026-11-15 |
@@ -38,12 +38,12 @@
 | 32 | Citi | Global bank tech centre | Full Stack Java Developer Junior | Chennai, TN, IN (on-site/hybrid (check JD)) | 2+ yrs | Strong — Levels.fyi India SE median TC 28.8 LPA; C10 22.4, C11 29.4 LPA (Nov 2026) (total comp, not fixed CTC) | Java, Spring, PostgreSQL, SQL, Kubernetes, AWS, Microservices, Docker | 83 | Kafka, GCP, Azure | [apply](https://citi.eightfold.ai/careers/job/859038011313) | 2026-10-06 |
 | 33 | Zscaler | Public security SaaS | Software Development Engineer - Java + Distributed Systems | Hyderabad, IND (hybrid) | 2+ yrs | Strong — Levels.fyi SE I median TC 21.4 LPA (total comp, not fixed CTC) | Java, PostgreSQL, SQL, AWS, Distributed systems, Microservices, REST APIs, CI/CD | 83 | Azure, Terraform, ML/LLM | [apply](https://job-boards.greenhouse.io/zscaler/jobs/5261571007) | 2026-10-14 |
 | 34 | Tower Research Capital | HFT firm | Software Engineer II | Gurgaon (hybrid) | 2+ yrs | Strong — Levels.fyi India overall median TC 72.7 LPA (all levels) (total comp, not fixed CTC) | SQL, CI/CD, Python | 83 | ML/LLM | [apply](https://www.tower-research.com/open-positions/?gh_jid=8232832) | 2026-11-01 |
-| 35 | Google | Global product MNC (public) | Forward Deployed Engineer V, GenAI, Google Cloud | Bengaluru, on-site/hybrid (check JD) | 2+ yrs | Strong — Levels.fyi India L3 44.8, L4 71.8 LPA median TC (total comp, not fixed CTC) | SQL, Python, TypeScript/React | 83 | Go, GCP, ML/LLM | [apply](https://www.google.com/about/careers/applications/jobs/results/85646978259526342) | 2026-11-04 |
-| 36 | JPMorganChase | Global bank tech centre | Software Engineer II - Java, Spring, React, AWS | Bengaluru, on-site/hybrid (check JD) | 2+ yrs | Strong — Levels.fyi India 601 median TC 27.5, 602 42.4 LPA (502 is 18.2, below bar) (total comp, not fixed CTC) | Java, PostgreSQL, SQL, Kubernetes, AWS, Microservices, Docker, CI/CD | 83 | Terraform | [apply](https://www.linkedin.com/jobs/view/4487295783/) (via LinkedIn) | 2026-11-04 |
-| 37 | JPMorganChase | Global bank tech centre | Software Engineer II - Java Full Stack Developer + React + AWS | Bengaluru, on-site/hybrid (check JD) | 2+ yrs | Strong — Levels.fyi India 601 median TC 27.5, 602 42.4 LPA (502 is 18.2, below bar) (total comp, not fixed CTC) | Java, PostgreSQL, SQL, Kubernetes, AWS, Microservices, Docker, CI/CD | 83 | Terraform | [apply](https://www.linkedin.com/jobs/view/4487512050/) (via LinkedIn) | 2026-11-04 |
-| 38 | Amazon | Global product MNC (public) | Software Dev Engineer II, Amazon International Seller Services | Hyderabad, Telangana, IND (on-site/hybrid (check JD)) | 2+ yrs | Strong — Levels.fyi L4 median TC 29.7 LPA (total comp, not fixed CTC) | Java | 83 | C++, C#/.NET | [apply](https://www.amazon.jobs/en/jobs/10598513/software-dev-engineer-ii-amazon-international-seller-services) | 2026-11-06 |
-| 39 | McAfee | Global product | Cloud Software Engineer | Bengaluru, hybrid | 2+ yrs | Strong — India Grade 5 17.2 (below), Grade 6 25.3 LPA; median 22.5 (levels.fyi, Nov 2026) (total comp, not fixed CTC) | Java, Kubernetes, AWS, Microservices, Docker, CI/CD, Python | 83 | C++, GCP, Azure, Node.js | [apply](https://careers.mcafee.com/jobs/1816?lang=en-us) | 2026-11-06 |
-| 40 | Oracle | Global product MNC (public) | Software Developer 4 | Bengaluru, on-site/hybrid (check JD) | 1+ yrs | Strong — Levels.fyi India IC-2 median TC 26.5 LPA (total comp, not fixed CTC) | Java, Distributed systems, Python | 83 | Go, C#/.NET | [apply](https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/jobsearch/job/337472) | 2026-11-10 |
+| 35 | JPMorganChase | Global bank tech centre | Software Engineer II - Java, Spring, React, AWS | Bengaluru, on-site/hybrid (check JD) | 2+ yrs | Strong — Levels.fyi India 601 median TC 27.5, 602 42.4 LPA (502 is 18.2, below bar) (total comp, not fixed CTC) | Java, PostgreSQL, SQL, Kubernetes, AWS, Microservices, Docker, CI/CD | 83 | Terraform | [apply](https://www.linkedin.com/jobs/view/4487295783/) (via LinkedIn) | 2026-11-04 |
+| 36 | JPMorganChase | Global bank tech centre | Software Engineer II - Java Full Stack Developer + React + AWS | Bengaluru, on-site/hybrid (check JD) | 2+ yrs | Strong — Levels.fyi India 601 median TC 27.5, 602 42.4 LPA (502 is 18.2, below bar) (total comp, not fixed CTC) | Java, PostgreSQL, SQL, Kubernetes, AWS, Microservices, Docker, CI/CD | 83 | Terraform | [apply](https://www.linkedin.com/jobs/view/4487512050/) (via LinkedIn) | 2026-11-04 |
+| 37 | Amazon | Global product MNC (public) | Software Dev Engineer II, Amazon International Seller Services | Hyderabad, Telangana, IND (on-site/hybrid (check JD)) | 2+ yrs | Strong — Levels.fyi L4 median TC 29.7 LPA (total comp, not fixed CTC) | Java | 83 | C++, C#/.NET | [apply](https://www.amazon.jobs/en/jobs/10598513/software-dev-engineer-ii-amazon-international-seller-services) | 2026-11-06 |
+| 38 | McAfee | Global product | Cloud Software Engineer | Bengaluru, hybrid | 2+ yrs | Strong — India Grade 5 17.2 (below), Grade 6 25.3 LPA; median 22.5 (levels.fyi, Nov 2026) (total comp, not fixed CTC) | Java, Kubernetes, AWS, Microservices, Docker, CI/CD, Python | 83 | C++, GCP, Azure, Node.js | [apply](https://careers.mcafee.com/jobs/1816?lang=en-us) | 2026-11-06 |
+| 39 | Oracle | Global product MNC (public) | Software Developer 4 | Bengaluru, on-site/hybrid (check JD) | 1+ yrs | Strong — Levels.fyi India IC-2 median TC 26.5 LPA (total comp, not fixed CTC) | Java, Distributed systems, Python | 83 | Go, C#/.NET | [apply](https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/jobsearch/job/337472) | 2026-11-10 |
+| 40 | Goldman Sachs | Global bank engineering | Asset & Wealth Management-AM Mosaic Technology-Hyderabad-Associate-Software Engineering | Hyderabad, India (on-site/hybrid (check JD)) | not stated | Strong — Levels.fyi India Analyst median TC 32.9 LPA (total comp, not fixed CTC) | Java, Spring, SQL, AWS, Distributed systems, Microservices, REST APIs, TypeScript/React | 83 | Kafka, ML/LLM | [apply](https://higher.gs.com/roles/186503) | unknown |
 
 ## Leads: pass every filter except pay evidence
 
@@ -62,6 +62,7 @@
 | Ares Management | Analyst, Full Stack Developer (Credit Technology) | Mumbai, India (on-site/hybrid (check JD)) | 1+ yrs | 54 | [link](https://aresmgmt.wd1.myworkdayjobs.com/External/job/Mumbai-India/Analyst--Full-Stack-Developer--Credit-Technology-_R8709) |
 | United Airlines | Associate Engineer - Digital Technology | Gurugram, Haryana, India (on-site/hybrid (check JD)) | 1+ yrs | 54 | [link](https://careers.united.com/us/en/job/GGN00002634/Associate-Engineer-Digital-Technology) |
 | Qubrid AI | Full Stack AI Engineer | Remote (India) | 2+ yrs | 53 | [link](https://www.qubrid.com/careers/jobs/35a677912add483a96497023cb47e0f6) |
+| Flexiple | SDE I - Java | Bengaluru, hybrid | 1+ yrs | 53 | [link](https://www.linkedin.com/jobs/view/4491093762/) |
 | Flexiple | SDE I - Java | Bengaluru, hybrid | 1+ yrs | 53 | [link](https://www.linkedin.com/jobs/view/4490778771/) |
 | The Alter Office | SDE II | Bengaluru, on-site/hybrid (check JD) | 2+ yrs | 53 | [link](https://www.linkedin.com/jobs/view/4490735612/) |
 | Pallav Technologies | Backend Engineer (Java) | Gurugram, Haryana, India (on-site/hybrid (check JD)) | 2+ yrs | 53 | [link](https://www.linkedin.com/jobs/view/4488313572/) |
@@ -73,40 +74,39 @@
 | Aatmunn | Software Engineer - Java in Bangalore, Bangalore (Hybrid) | Bengaluru, on-site/hybrid (check JD) | 2+ yrs | 52 | [link](https://www.linkedin.com/jobs/view/4487860422/) |
 | Pluang | Software Engineer (SDE-1) | Gurgaon, Haryana, India (hybrid) | 0+ yrs | 52 | [link](https://www.linkedin.com/jobs/view/4489341033/) |
 | Pluang | Software Engineer | Gurugram, Haryana, India (hybrid) | 0+ yrs | 52 | [link](https://www.linkedin.com/jobs/view/4489342033/) |
-| Auric AI Labs | Backend Engineer | Bengaluru, on-site/hybrid (check JD) | 1+ yrs | 52 | [link](https://www.linkedin.com/jobs/view/4477588841/) |
 
 ## Rejected after the title filter, by reason
 
-- title doesn't say software: 709
-- 4+ yrs asked: 214
-- 5+ yrs asked: 155
-- pay below bar: 151
-- 6+ yrs asked: 68
-- 8+ yrs asked: 50
+- title doesn't say software: 637
+- 4+ yrs asked: 217
+- pay below bar: 163
+- 5+ yrs asked: 163
+- 6+ yrs asked: 69
+- 8+ yrs asked: 49
 - 7+ yrs asked: 45
-- 10+ yrs asked: 16
+- 10+ yrs asked: 21
 - 12+ yrs asked: 10
-- posted pay 5 LPA below bar: 5
 - pay below bar at this level: 5
+- posted pay 5 LPA below bar: 4
 - 9+ yrs asked: 4
 
 Examples:
 
-- Eruditus Executive Education: Salesforce Developer (Mumbai, Maharashtra, India) → title doesn't say software (generic) and the JD doesn't show software work
+- Eruditus Executive Education: Salesforce Developer (Mumbai, Maharashtra, India) → 4+ yrs asked
 - Linde: Process Systems Engineer - AI Hub (Bangalore, Karnataka, IN) → title doesn't say software (generic) and the JD doesn't show software work
+- Qubrid AI: GPU Kubernetes Cluster Engineer (India (remote)) → title doesn't say software (generic) and the JD doesn't show software work
 - Keywords Studios: Android SE II - Fullstack Engineer (Pune, Maharashtra, India) → 4+ yrs asked
+- Larsen & Toubro: Algorithm Engineer - ADAS Functions (India, Karnataka, Bengaluru) → 6+ yrs asked
 - Larsen & Toubro: Software Engineer - D&DC Land Systems (India, Gujarat, Hazira Mfg Complex) → 8+ yrs asked
 - Larsen & Toubro: Embedded Software Design Engineer (India, Karnataka, Bengaluru) → pay below bar (Levels.fyi India overall median TC 9.2 LPA (checked 11 Nov 2026))
 - Larsen & Toubro: Embedded Software Design Engineer (India, Karnataka, Bengaluru) → pay below bar (Levels.fyi India overall median TC 9.2 LPA (checked 11 Nov 2026))
-- Kinaxis: Backend Developer II, Python (Perungudi, Chennai, TN, IN) → 4+ yrs asked
+- Larsen & Toubro: Algorithm Developer - ADAS (India, Karnataka, Bengaluru) → 5+ yrs asked
 - Nexthop AI: Software Engineer - Full Stack Software (Bengaluru, KA) → 5+ yrs asked
 - WinZO: Backend Engineer (New Delhi, Delhi, India) → 6+ yrs asked
-- Texas Instruments: Embedded Software Engineer - Security (Bengaluru, Karnataka, India) → 5+ yrs asked
 - AutoZone: JAVA Developer/Application Support - Systems Engineer (India) → 7+ yrs asked
 - AutoZone: Mainframe Systems Programmer (IBM Z16)- Systems Engineer (India) → 7+ yrs asked
 - ABC Fitness: Software Developer II (Front-End) (Hyderabad Office, India.) → posted pay 5 LPA below bar
 - ABC Fitness: Software Developer II (Front-end) (Hyderabad Office, India.) → posted pay 5 LPA below bar
-- Airbus: Avionics Software Developer for Air Traffic Products (Bangalore Area) → 6+ yrs asked
 - Stripe: Software Engineer, Financial Business Insights (Bengaluru, India) → 8+ yrs asked
 - Pure Storage: Cloud Native Escalation Engineer (Bangalore, India) → 10+ yrs asked
 - Cisco: Software Engineering Technical Leader - Backend /. Networking (12+ Years) (Bangalore, India) → 12+ yrs asked
@@ -119,7 +119,6 @@ Examples:
 - Juspay: Software Development Engineer Backend (Mumbai, India) → contract/intern/temporary
 - Goldman Sachs: Compliance  Engineering - Software Engineer - Associate - Bengaluru (Hyderabad, India) → 9+ yrs asked
 - Fiserv: Advisor, Software Development (Pune, Mahārāshtra, India) → 14+ yrs asked
-- WEX: Software Development Engineer 5 (Bengaluru, Karnātaka, India) → 15+ yrs asked
 - TravClan: SDE-1 (Backend Developer) (New Delhi, Delhi, India) → posted pay 14 LPA below bar
 - IT Consulting LLP: Software Engineer – Full Stack (.NET 8 / C# / Golang / ReactJS) (Navi Mumbai, Maharashtra, India) → posted pay 8 LPA below bar
 - Sophos: Software Engineer 1 (Java Developer) (India) → pay below bar at this level (India SE1 15.6 (below), SE2 22.4 LPA; median 45.2 (levels.fyi, Nov 2026))

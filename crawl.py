@@ -99,7 +99,18 @@ def get(url, **kw):
 
 
 def post(url, body, **kw):
-    r = SESSION.post(url, json=body, timeout=30, **kw)
+    """POST with the same patience as get(): back off on 429 and 5xx, retry dropped connections."""
+    for attempt in range(5):
+        try:
+            r = SESSION.post(url, json=body, timeout=30, **kw)
+        except (requests.ConnectionError, requests.Timeout):
+            if attempt == 4:
+                raise
+            time.sleep(2 ** attempt * 3)
+            continue
+        if r.status_code != 429 and r.status_code < 500:
+            break
+        time.sleep(2 ** attempt * 3)
     r.raise_for_status()
     return r.json()
 
@@ -153,16 +164,18 @@ def in_india(loc):
 
 
 def title_family(title):
-    """'core', an enabled family from profile.json ('infra', 'generic', 'data'), or None if the title doesn't fit."""
+    """'core', an enabled family from profile.json `title.families` (currently 'ai', 'generic'), or None if the title
+    doesn't fit. Order: exclude (always) → exclude_client / exclude_domain (unless a developer marker or core title)
+    → include (core) → exclude_unless_core → families (a disabled family keeps its titles out)."""
     T = PROFILE["title"]
     t = re.sub(r"\s+", " ", title.lower()).strip()  # "Software  Engineer" (double space) is still a software engineer
     if re.search(T["exclude"], t):  # seniority, eligibility, non-developer role types
         return None
     if re.search(T.get("exclude_client", r"$^"), t) and not re.search(T.get("client_override", r"$^"), t):
-        return None  # mobile / frontend-only roles, unless the title also says backend or full stack
+        return None  # client-side stack words (empty by default: frontend and mobile roles are kept)
     if (re.search(T.get("exclude_domain", r"$^"), t) and not re.search(T.get("core_override", r"$^"), t)
             and not re.search(T["include"], t)):  # any core title wins: 'Software Development Engineer II, ... Workplace Support Tech'
-        return None  # 'Embedded Software Engineer' out; 'ML Engineer II - Backend' kept by its backend marker
+        return None  # support / hardware-design titles out; 'ML Engineer II - Backend' kept by its marker
     if re.search(T["include"], t):
         return "core"
     if re.search(T.get("exclude_unless_core", r"$^"), t):  # 'Security Engineer' out, 'Software Engineer - Security' kept above
@@ -189,8 +202,8 @@ def jd_terms(pattern, text):
 
 
 def software_jd(text, strict=True):
-    """Does the description show software work? Distinct software terms (languages, APIs, databases, cloud, CI/CD)
-    minus a penalty per hardware/plant term must reach min_signals. strict=False (core titles that hardware firms
+    """Does the description show development work? Distinct development terms (languages, frameworks, APIs, services;
+    not ops tooling) minus a penalty per hardware / plant / ops-admin term must reach min_signals. strict=False (core titles that hardware firms
     also use, like MTS) only rejects when the hardware terms outweigh the software ones."""
     cfg = PROFILE["title"]["software_jd"]
     sw = len(jd_terms(cfg["signals"], text))
@@ -259,6 +272,9 @@ def smartrecruiters(c):
             break
 
 
+WORKDAY_INDIA_CAP = 3000  # postings per board through the India facet; larger boards are logged
+
+
 def workday_india_facet(api):
     """The board's own India filter: a country facet ('India'), else every location value in India.
     Its values are listed in the response's facets; None if the board has neither."""
@@ -307,10 +323,17 @@ def workday(c):
             offset += 20
             if not posts or offset >= total:
                 break
+        return total
 
-    india = workday_india_facet(api)
+    try:
+        india = workday_india_facet(api)
+    except (requests.RequestException, ValueError) as e:  # facet list unreadable: fall back to keyword searches
+        print(f"  {c['name']}: Workday facet list failed ({type(e).__name__}); using keyword searches", file=sys.stderr, flush=True)
+        india = None
     if india:  # every India posting, whatever its title: the title filter runs here, not in Workday's search
-        scan("", {india[0]: india[1]}, 2000)
+        total = scan("", {india[0]: india[1]}, WORKDAY_INDIA_CAP)
+        if total and total > WORKDAY_INDIA_CAP:
+            print(f"  {c['name']}: {total} India postings, read the first {WORKDAY_INDIA_CAP}", file=sys.stderr, flush=True)
     else:  # no India filter on this board: search text, which caps results and only finds the words we type
         for query in ("software engineer", "software engineer Bangalore", "software engineer India", "backend engineer", "software developer India"):
             scan(query, {}, 200)
@@ -524,7 +547,7 @@ def li_request(url, params):
     for wait in LI_NET_RETRY_WAITS + (None,):
         try:
             return SESSION.get(url, timeout=30, params=params)
-        except (requests.ConnectionError, requests.Timeout) as e:
+        except (requests.ConnectionError, requests.Timeout, requests.exceptions.ChunkedEncodingError) as e:
             if wait is None:
                 raise
             print(f"  LinkedIn: network error ({type(e).__name__}); retrying in {wait}s", file=sys.stderr, flush=True)
@@ -829,7 +852,7 @@ def evaluate(job, company, max_age):
         "company": job.company,
         "type": company["type"] + (f"; {company['funding']}" if company.get("funding") else ""),
         "title": job.title.strip(),
-        "role_family": family,  # core = the brief's best-fit titles; infra / generic / data = widened, JD-checked
+        "role_family": family,  # core = explicit development titles; generic / ai = no role word, JD-checked
         "location": mode,
         "exp_asked": f"{years}+ yrs" if years is not None else "not stated",
         "exp_band": exp_band(years),
