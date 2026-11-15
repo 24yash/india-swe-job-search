@@ -1,6 +1,6 @@
 # Shortlist table — 2026-11-15
 
-598 roles passed every filter; showing the top 40 (max 3 per company). 436 more pass everything except pay evidence (leads file).
+599 roles passed every filter; showing the top 40 (max 3 per company). 465 more pass everything except pay evidence (leads file).
 
 | # | Company | Company type / stage (latest round) | Role title | Location / mode | Exp asked | Pay (₹ LPA) + confidence + source | Key stack from JD | Score | Gaps vs my profile | Apply link | Posted date |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -64,8 +64,8 @@
 | Qubrid AI | Full Stack AI Engineer | Remote (India) | 2+ yrs | 53 | [link](https://www.qubrid.com/careers/jobs/35a677912add483a96497023cb47e0f6) |
 | Flexiple | SDE I - Java | Bengaluru, hybrid | 1+ yrs | 53 | [link](https://www.linkedin.com/jobs/view/4491093762/) |
 | Albertsons Companies India | Engineer Software (Applied AI) [T500-28172] | Bengaluru, on-site/hybrid (check JD) | 1+ yrs | 53 | [link](https://www.linkedin.com/jobs/view/4448875088/) |
-| Flexiple | SDE I - Java | Bengaluru, hybrid | 1+ yrs | 53 | [link](https://www.linkedin.com/jobs/view/4490778771/) |
 | The Alter Office | SDE II | Bengaluru, on-site/hybrid (check JD) | 2+ yrs | 53 | [link](https://www.linkedin.com/jobs/view/4490735612/) |
+| Flexiple | SDE I - Java | Bengaluru, hybrid | 1+ yrs | 53 | [link](https://www.linkedin.com/jobs/view/4490778771/) |
 | Pallav Technologies | Backend Engineer (Java) | Gurugram, Haryana, India (on-site/hybrid (check JD)) | 2+ yrs | 53 | [link](https://www.linkedin.com/jobs/view/4488313572/) |
 | The Depository Trust & Clearing Corporation (DTCC) | Software Engineering Associate - Snowflake | Hyderabad, India (hybrid) | 1+ yrs | 53 | [link](https://ebxr.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/214039) |
 | Tata Communications | Jr Team Member - Software & Application Development | Pune, Maharashtra, India (on-site/hybrid (check JD)) | 1+ yrs | 52 | [link](https://jobs.tatacommunications.com/#/job/r_4e84cc8d888f391aad579440c2272803) |
@@ -77,14 +77,14 @@
 
 ## Rejected after the title filter, by reason
 
-- title doesn't say software: 636
-- 4+ yrs asked: 218
-- pay below bar: 163
-- 5+ yrs asked: 163
+- title doesn't say software: 669
+- 4+ yrs asked: 216
+- 5+ yrs asked: 166
+- pay below bar: 165
 - 6+ yrs asked: 69
-- 8+ yrs asked: 49
-- 7+ yrs asked: 45
-- 10+ yrs asked: 20
+- 8+ yrs asked: 50
+- 7+ yrs asked: 46
+- 10+ yrs asked: 22
 - 12+ yrs asked: 10
 - pay below bar at this level: 5
 - posted pay 5 LPA below bar: 4
@@ -94,7 +94,7 @@ Examples:
 
 - Eruditus Executive Education: Salesforce Developer (Mumbai, Maharashtra, India) → 4+ yrs asked
 - Linde: Process Systems Engineer - AI Hub (Bangalore, Karnataka, IN) → title doesn't say software (generic) and the JD doesn't show software work
-- Qubrid AI: GPU Kubernetes Cluster Engineer (India (remote)) → title doesn't say software (generic) and the JD doesn't show software work
+- Keywords Studios: AI Engineer (Pune, Maharashtra, India) → title doesn't say software (ai) and the JD doesn't show software work
 - Keywords Studios: Android SE II - Fullstack Engineer (Pune, Maharashtra, India) → 4+ yrs asked
 - Larsen & Toubro: Algorithm Engineer - ADAS Functions (India, Karnataka, Bengaluru) → 6+ yrs asked
 - Larsen & Toubro: Software Engineer - D&DC Land Systems (India, Gujarat, Hazira Mfg Complex) → 8+ yrs asked
@@ -103,14 +103,14 @@ Examples:
 - Larsen & Toubro: Algorithm Developer - ADAS (India, Karnataka, Bengaluru) → 5+ yrs asked
 - Nexthop AI: Software Engineer - Full Stack Software (Bengaluru, KA) → 5+ yrs asked
 - WinZO: Backend Engineer (New Delhi, Delhi, India) → 6+ yrs asked
+- VMware: R&D Engineer Software 5 (IND-Hyderabad 115 IT Park Area) → 10+ yrs asked
+- VMware: R&D Engineer Software 5 (IND-Hyderabad 115 IT Park Area) → 10+ yrs asked
 - AutoZone: JAVA Developer/Application Support - Systems Engineer (India) → 7+ yrs asked
 - AutoZone: Mainframe Systems Programmer (IBM Z16)- Systems Engineer (India) → 7+ yrs asked
 - ABC Fitness: Software Developer II (Front-End) (Hyderabad Office, India.) → posted pay 5 LPA below bar
 - ABC Fitness: Software Developer II (Front-end) (Hyderabad Office, India.) → posted pay 5 LPA below bar
 - Stripe: Software Engineer, Financial Business Insights (Bengaluru, India) → 8+ yrs asked
-- Pure Storage: Cloud Native Escalation Engineer (Bangalore, India) → 10+ yrs asked
 - Cisco: Software Engineering Technical Leader - Backend /. Networking (12+ Years) (Bangalore, India) → 12+ yrs asked
-- Cisco: Software Engineering Technical Leader (GO/Java / 10-15 yrs) (Bangalore, India) → 10+ yrs asked
 - Cisco: Software Engineering Technical Leader - Proxy, Networking + Cloud Security / 12 to 16 yrs (Bangalore, India) → 12+ yrs asked
 - Cisco: Software Engineer Technical Leader - Embedded C, Networking(L2/L3/OSPF/Network Processor/Optical Network/SFP/QSFP - Sonic/ONIE/BMC/IPMI/ Redfish - I2C/SPI/UART/PCIe/GPIO - 13 to 18 years - Bangalore (Bangalore, India) → 13+ yrs asked
 - Cisco: Software Engineering Technical Leader – Full Stack, Ruby on Rails/Python/React.js / 11+ Years / Bangalore (Bangalore, India) → 11+ yrs asked
@@ -119,12 +119,14 @@ Examples:
 - Juspay: Software Development Engineer Backend (Mumbai, India) → contract/intern/temporary
 - Goldman Sachs: Compliance  Engineering - Software Engineer - Associate - Bengaluru (Hyderabad, India) → 9+ yrs asked
 - Fiserv: Advisor, Software Development (Pune, Mahārāshtra, India) → 14+ yrs asked
+- Juniper Networks: L2/L3 Datapath Engineer for DNX based platform (Bengaluru, Karnātaka, India) → 14+ yrs asked
 - X-Rite: Service Engineer - Vapi (Vapi, India) → posted pay 7 LPA below bar
 - TravClan: SDE-1 (Backend Developer) (New Delhi, Delhi, India) → posted pay 14 LPA below bar
 - IT Consulting LLP: Software Engineer – Full Stack (.NET 8 / C# / Golang / ReactJS) (Navi Mumbai, Maharashtra, India) → posted pay 8 LPA below bar
 - Sophos: Software Engineer 1 (Java Developer) (India) → pay below bar at this level (India SE1 15.6 (below), SE2 22.4 LPA; median 45.2 (levels.fyi, Nov 2026))
-- Brevo: Software Engineer - ReactJS FullStack (Noida, Uttar Pradesh, India) → posted pay 10 LPA below bar
 - Artha Group: Analyst - Full Stack Engineer (Mumbai, Maharashtra, India) → posted pay 2 LPA below bar
+- Kuvaka Tech: Forward Deployed Engineer (Healthcare AI) (Indore, Madhya Pradesh, India) → posted pay 6 LPA below bar
+- Brevo: Software Engineer - ReactJS FullStack (Noida, Uttar Pradesh, India) → posted pay 10 LPA below bar
 - <!---->             <div class="base-search-card__metadata">                          <span class="job-search-card__location">             Gurgaon, Haryana, India           </span>                                <!---->              <time class="job-search-card__listdate" datetime="2026-10-08">                                                                                                                                                                             4 weeks ago              </time>  <!---->                   </div>         </div> <!---->: Backend Software Engineer (Gurgaon, Haryana, India) → malformed company name (parser)
 - VMC Soft Technologies, Inc: Java FullStack Developer (Bengaluru, Karnataka, India) → 13+ yrs asked
 - Ericsson: Master 5G System Developer (Bengaluru, KA, IN) → 15+ yrs asked

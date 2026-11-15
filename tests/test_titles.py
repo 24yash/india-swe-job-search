@@ -211,5 +211,22 @@ check("review 3: Web Developer is a core title", fam("Web Developer") == "core",
 row, why = crawl.evaluate(job("Electronics Engineer", "PCB layout and board testing with oscilloscope; SPI, I2C and UART interfaces; microcontroller selection. 1-3 years."), co, 21)
 check("review 3: a bus-protocol list doesn't outweigh hardware penalties", row is None, why)
 
+# Final data audit (15 Nov): non-development roles that reached the shortlist.
+for t in ("Frontend and Backend Disputes Analyst", "Backend Physical Design Engineer", "User Assistance Developer 2", "Low Latency FPGA Developer",
+          "Transformation Success Engineer", "Java Application Support Engineer- (Japanese Speaking)",
+          "WhatsApp - Software Engineer (Technical Leadership) - Android", "IT Analyst Applications (Snowflake Developer)",
+          "Mid-Level Dev(Sec)Ops Engineer – AI Platform / Model Ops", "ML Ops Engineer, Chanakya", "MLOps Engineer"):
+    check(f"audit: excluded: {t}", fam(t) is None, fam(t))
+check("audit: 'rest of the team' is not REST", not crawl.jd_terms(crawl.PROFILE["title"]["software_jd"]["signals"], "the rest of the team"))
+check("audit: REST APIs still count", crawl.jd_terms(crawl.PROFILE["title"]["software_jd"]["signals"], "build REST APIs") >= {"rest api"} or
+      any("rest" in t for t in crawl.jd_terms(crawl.PROFILE["title"]["software_jd"]["signals"], "build REST APIs")))
+row, why = crawl.evaluate(job("Automation Engineer Analyst", "Design and maintain automated test scripts using Selenium and Java. 1-3 years."), co, 21)
+check("audit: Selenium test-automation JD is QA, not development", row is None, why)
+
+for title, jd in (("Platform Engineer, Java Fmwk", "Java frameworks for REST, GraphQL and Batch traffic on a Spring Boot platform; patching and upgrades. Linux administration a plus."),
+                  ("Performance Engineer, Inference", "C++ and CUDA; fluent in vLLM or TensorRT-LLM.")):
+    row, why = crawl.evaluate(job(title, jd + " 1-3 years."), co, 21)
+    check(f"audit: dev JD kept: {title}", row is not None, why)
+
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)
