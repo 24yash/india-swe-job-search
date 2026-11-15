@@ -551,5 +551,194 @@
   "expect": "keep",
   "why": ".NET developer",
   "url": "https://www.keywordsstudios.com/en/careers/browse-careers/2vu-dot-net-developer/"
+ },
+ {
+  "company": "Coinbase",
+  "title": "Machine Learning Engineer",
+  "expect": "keep",
+  "why": "Python services + LLM orchestration",
+  "url": "https://www.coinbase.com/careers/positions/7985187?gh_jid=7985187"
+ },
+ {
+  "company": "Renesas",
+  "title": "Software Engineer",
+  "expect": "keep",
+  "why": "Java/Kotlin/TypeScript app; JD mentions SoC/firmware customers",
+  "url": "https://jobs.renesas.com/job/software-engineer-in-bengaluru-ka-india-jid-7582"
+ },
+ {
+  "company": "Keywords Studios",
+  "title": "AI Engineer",
+  "expect": "keep",
+  "why": "LLM application engineering",
+  "url": "https://www.keywordsstudios.com/en/careers/browse-careers/xLA-ai-engineer/"
+ },
+ {
+  "company": "WisdomAI",
+  "title": "Machine Learning Engineer",
+  "expect": "keep",
+  "why": "LLM agents",
+  "url": "https://jobs.ashbyhq.com/Wisdom-AI/35029bbd-c8cd-448a-8491-65ea639dbea2"
+ },
+ {
+  "company": "Bank of America",
+  "title": "Team Developer",
+  "expect": "drop",
+  "why": "payments operations; SWIFT is the bank network",
+  "url": "https://careers.bankofamerica.com/en-us/job-detail/26039606/team-developer-gandhinagar-india"
+ },
+ {
+  "company": "Macquarie Group",
+  "title": "Learning Experience Designer and Developer",
+  "expect": "drop",
+  "why": "learning content",
+  "url": "https://recruitment.macquarie.com/en_US/careers/JobDetail?jobId=23369"
+ },
+ {
+  "company": "InMobi",
+  "title": "SDE II - Data Engineer",
+  "expect": "drop",
+  "why": "data engineering (user: out)",
+  "url": "https://job-boards.greenhouse.io/inmobi/jobs/7747785"
+ },
+ {
+  "company": "Capillary Technologies",
+  "title": "Escalation Engineer",
+  "expect": "drop",
+  "why": "support escalation",
+  "url": "https://capillarytech.darwinbox.in/ms/candidatev2/main/careers/jobDetails/5dfc72666c35b"
+ },
+ {
+  "company": "Qubrid AI",
+  "title": "GPU Kubernetes Cluster Engineer",
+  "expect": "drop",
+  "why": "cluster operations",
+  "url": "https://www.qubrid.com/careers/jobs/255d4c74189343d586d9d9373499aa7b"
+ },
+ {
+  "company": "Cigna",
+  "title": "Automation Engineer Associate Analyst - Cigna Healthcare",
+  "expect": "drop",
+  "why": "QA test automation",
+  "url": "https://jobs.thecignagroup.com/us/en/job/26013237/Automation-Engineer-Associate-Analyst-Cigna-Healthcare"
+ },
+ {
+  "company": "Slice",
+  "title": "Engineer 1 - Product Security",
+  "expect": "drop",
+  "why": "offensive security",
+  "url": "https://careers.kula.ai/slice/51860-engineer-1-product-security?jobs=true"
+ },
+ {
+  "company": "Texas Instruments",
+  "title": "Software Engineer - UCD",
+  "expect": "drop",
+  "why": "embedded firmware (TI UCD)",
+  "url": "https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25019710"
+ },
+ {
+  "company": "Amazon",
+  "title": "Software Development Engineer II, Alexa Connectivity Devices",
+  "expect": "drop",
+  "why": "device firmware",
+  "url": "https://www.amazon.jobs/en/jobs/10596464/software-development-engineer-ii-alexa-connectivity-devices"
+ },
+ {
+  "company": "Qualcomm",
+  "title": "Telematics Platform Engineer",
+  "expect": "drop",
+  "why": "embedded Linux/BSP",
+  "url": "https://careers.qualcomm.com/careers/job/446720156834"
+ },
+ {
+  "company": "Juniper Networks",
+  "title": "Systems/Software Engineer II - Platforms Developer (MacSec, Timing, Optics)",
+  "expect": "drop",
+  "why": "platform drivers/FPGA",
+  "url": "https://hpe.wd5.myworkdayjobs.com/Jobsathpe/job/Bengaluru-Karntaka-India/Systems-Software-Engineer-II---Platforms-Developer--MacSec--Timing--Optics-_1218144-2"
+ },
+ {
+  "company": "Salesforce",
+  "title": "Systems Engineer- Workday - Finance ERP",
+  "expect": "drop",
+  "why": "Workday ERP administration",
+  "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/India---Hyderabad/Systems-Engineer---Workday---Finance-ERP_JR363887"
+ },
+ {
+  "company": "Rocketlane",
+  "title": "Demo Engineer",
+  "expect": "drop",
+  "why": "pre-sales demos",
+  "url": "https://careers.kula.ai/rocketlane/34782-demo-engineer?jobs=true"
+ },
+ {
+  "company": "Gushwork",
+  "title": "Implementation Engineer",
+  "expect": "drop",
+  "why": "customer implementation",
+  "url": "https://jobs.lever.co/gushwork/5aae2198-4003-4b99-a4c4-00c6fc278697"
+ },
+ {
+  "company": "Google",
+  "title": "Software Engineer III, Full Stack, Google Cloud",
+  "expect": "keep",
+  "why": "Google SE III is L4 and asks 1-2 yrs",
+  "url": "https://www.google.com/about/careers/applications/jobs/results/101212497425375942"
+ },
+ {
+  "company": "Bidgely",
+  "title": "Software Engineer 3 - GenAI",
+  "expect": "keep",
+  "why": "asks 1 yr",
+  "url": "https://jobs.ashbyhq.com/bidgely-inc/1a5e3251-350d-4b3f-b326-df3a2b385af6"
+ },
+ {
+  "company": "Charles Schwab",
+  "title": "Specialist - Software Development & Engineering",
+  "expect": "drop",
+  "why": "QA (Selenium, test cases)",
+  "url": "https://www.schwabjobs.com/job/hyderabad/specialist-software-development-and-engineering/33995/102243674560"
+ },
+ {
+  "company": "United Airlines",
+  "title": "Associate Engineer - Digital Technology",
+  "expect": "drop",
+  "why": "quality engineering",
+  "url": "https://careers.united.com/us/en/job/GGN00002634/Associate-Engineer-Digital-Technology"
+ },
+ {
+  "company": "Meril",
+  "title": "Software Developer - C# .Net WPF",
+  "expect": "keep",
+  "why": "C#/.NET WPF development; mentions QA",
+  "url": "https://www.linkedin.com/jobs/view/4483881275/"
+ },
+ {
+  "company": "Mastercard",
+  "title": "Software Engineer-2",
+  "expect": "keep",
+  "why": "Java services + test frameworks (developer title)",
+  "url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers/job/Navi-Mumbai-India-Finicity/Software-Engineer-2_R-291365"
+ },
+ {
+  "company": "Vanguard India",
+  "title": "Application Engineer - II",
+  "expect": "keep",
+  "why": "Java/Spring/React development",
+  "url": "https://www.linkedin.com/jobs/view/4450310136/"
+ },
+ {
+  "company": "Hewlett Packard Enterprise",
+  "title": "Storage AI Engineer",
+  "expect": "drop",
+  "why": "JD: 'As a QA Engineer'",
+  "url": "https://careers.hpe.com/ca/fr/job/1215532/Storage-AI-Engineer"
+ },
+ {
+  "company": "MathWorks",
+  "title": "Application Engineer: AI - Industrial Automation",
+  "expect": "drop",
+  "why": "customer-facing applications engineering",
+  "url": "https://www.linkedin.com/jobs/view/4478612360/"
  }
 ]

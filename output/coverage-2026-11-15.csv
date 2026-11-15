@@ -16,17 +16,18 @@ Atlassian,A1,1 shortlisted,atlassian:
 Atlys,A1,1 shortlisted,ashby:atlys
 Autodesk,A1,3 shortlisted,eightfold:autodesk.eightfold.ai
 BCG,A1,2 shortlisted,portal:sitemap
+Bidgely,A1,1 shortlisted,ashby:bidgely-inc
 Cadence Design Systems,A1,1 shortlisted,workday:cadence
 Cargill,A1,7 shortlisted,portal:sitemap
-Cashfree,A1,3 shortlisted,portal:kula
+Cashfree,A1,2 shortlisted,portal:kula
 Caterpillar,A1,2 shortlisted,workday:cat
-Cigna,A1,4 shortlisted,portal:sitemap
+Cigna,A1,2 shortlisted,portal:sitemap
 Cisco,A1,11 shortlisted,workday:cisco
 Citi,A1,13 shortlisted,eightfold:citi.eightfold.ai
 Clearwater Analytics,A1,2 shortlisted,greenhouse:clearwater
 ClickHouse,A1,1 shortlisted,ashby:clickhouse
 Cloudflare,A1,2 shortlisted,greenhouse:cloudflare
-Coinbase,A1,1 shortlisted,greenhouse:coinbase
+Coinbase,A1,2 shortlisted,greenhouse:coinbase
 Composio,A1,2 shortlisted,ashby:composio
 Couchbase,A1,1 shortlisted,greenhouse:couchbaseinc
 CrowdStrike,A1,1 shortlisted,workday:crowdstrike
@@ -34,7 +35,6 @@ Databricks,A1,1 shortlisted,greenhouse:databricks
 DigiCert,A1,1 shortlisted,greenhouse:digicert
 Disney,A1,2 shortlisted,portal:sitemap
 DocuSign,A1,2 shortlisted,portal:jibe
-DoorDash,A1,1 shortlisted,greenhouse:doordashindia
 eBay,A1,2 shortlisted,workday:ebay
 Elastic,A1,2 shortlisted,greenhouse:elastic
 Expedia Group,A1,1 shortlisted,workday:expedia
@@ -43,16 +43,16 @@ Fujitsu,A1,2 shortlisted,portal:successfactors
 Fynd,A1,5 shortlisted,portal:keka
 GitLab,A1,4 shortlisted,greenhouse:gitlab
 Goldman Sachs,A1,11 shortlisted,portal:goldman
-Google,A1,5 shortlisted,google:
+Google,A1,11 shortlisted,google:
 Graviton Research Capital,A1,3 shortlisted,greenhouse:gravitonresearchcapital
 GreyOrange,A1,1 shortlisted,portal:zwayam
 Guidewire Software,A1,2 shortlisted,workday:guidewire
 HackerRank,A1,1 shortlisted,greenhouse:hackerrank
 Hevo Data,A1,3 shortlisted,lever:hevodata
-Hewlett Packard Enterprise,A1,5 shortlisted,portal:sitemap
+Hewlett Packard Enterprise,A1,4 shortlisted,portal:sitemap
 HighLevel,A1,5 shortlisted,lever:gohighlevel
 IMC Trading,A1,3 shortlisted,greenhouse:imc
-InMobi,A1,3 shortlisted,greenhouse:inmobi
+InMobi,A1,2 shortlisted,greenhouse:inmobi
 Innovaccer,A1,1 shortlisted,portal:workable
 JPMorgan Chase,A1,1 shortlisted,oracle:jpmc.fa.oraclecloud.com
 Juniper Networks,A1,13 shortlisted,workday:hpe
@@ -89,7 +89,7 @@ Planview,A1,2 shortlisted,portal:jibe
 Postman,A1,1 shortlisted,workday:postman
 project44,A1,2 shortlisted,greenhouse:project44
 Pure Storage,A1,9 shortlisted,greenhouse:purestorage
-Qualcomm,A1,8 shortlisted,eightfold:careers.qualcomm.com
+Qualcomm,A1,10 shortlisted,eightfold:careers.qualcomm.com
 QuantBox,A1,1 shortlisted,greenhouse:quantboxresearchpte
 Rippling,A1,8 shortlisted,rippling:rippling
 Rubrik,A1,2 shortlisted,greenhouse:rubrik
@@ -100,7 +100,7 @@ Saviynt,A1,1 shortlisted,lever:saviynt
 ServiceNow,A1,1 shortlisted,smartrecruiters:servicenow
 Siemens,A1,1 shortlisted,workday:onehealthineers
 Sigmoid,A1,2 shortlisted,greenhouse:sigmoid
-Slice,A1,2 shortlisted,portal:kula
+Slice,A1,1 shortlisted,portal:kula
 Snapmint,A1,5 shortlisted,portal:zwayam
 Socure,A1,1 shortlisted,ashby:socure
 Squarepoint Capital,A1,2 shortlisted,greenhouse:squarepointcapital
@@ -125,7 +125,7 @@ Zscaler,A1,1 shortlisted,greenhouse:zscaler
 100ms,A2,1 leads (pay not yet evidenced),lever:100ms
 Aftershoot,A2,2 leads (pay not yet evidenced),recruitee:aftershoot
 Air Arabia,A2,3 leads (pay not yet evidenced),portal:sitemap
-Airbus,A2,7 leads (pay not yet evidenced),workday:ag
+Airbus,A2,6 leads (pay not yet evidenced),workday:ag
 Airtel Payments Bank,A2,1 leads (pay not yet evidenced),portal:sitemap
 Alphonso,A2,1 leads (pay not yet evidenced),ashby:lgads
 Alstom,A2,1 leads (pay not yet evidenced),portal:successfactors
@@ -139,11 +139,9 @@ Astra Security,A2,1 leads (pay not yet evidenced),portal:links
 Axiamatic,A2,3 leads (pay not yet evidenced),portal:zohorecruit
 Bain & Company,A2,1 leads (pay not yet evidenced),portal:sitemap
 Beghou,A2,2 leads (pay not yet evidenced),lever:beghouconsulting
-Bureau,A2,1 leads (pay not yet evidenced),ashby:bureau
-Capillary Technologies,A2,1 leads (pay not yet evidenced),portal:darwinbox
 Cashflo,A2,5 leads (pay not yet evidenced),portal:freshteam
 Charles River Laboratories,A2,1 leads (pay not yet evidenced),portal:links
-Charles Schwab,A2,2 leads (pay not yet evidenced),portal:sitemap
+Charles Schwab,A2,1 leads (pay not yet evidenced),portal:sitemap
 Cin7,A2,4 leads (pay not yet evidenced),lever:cin7
 CITYFURNISH,A2,1 leads (pay not yet evidenced),portal:links
 CleanStart,A2,1 leads (pay not yet evidenced),portal:sitemap
@@ -155,12 +153,12 @@ Continental,A2,1 leads (pay not yet evidenced),smartrecruiters:continental
 Credgenics,A2,1 leads (pay not yet evidenced),portal:zappyhire
 Curefit,A2,1 leads (pay not yet evidenced),portal:darwinbox
 Decentro,A2,2 leads (pay not yet evidenced),portal:keka
-Deutsche Bank,A2,3 leads (pay not yet evidenced),workday:db
+Deutsche Bank,A2,2 leads (pay not yet evidenced),workday:db
 DHL,A2,6 leads (pay not yet evidenced),portal:sitemap
 Diagrid,A2,1 leads (pay not yet evidenced),ashby:diagrid
 Entropik,A2,1 leads (pay not yet evidenced),smartrecruiters:entropik
 Falcon,A2,2 leads (pay not yet evidenced),portal:keka
-Fampay,A2,2 leads (pay not yet evidenced),lever:fampay
+Fampay,A2,1 leads (pay not yet evidenced),lever:fampay
 Flexera,A2,2 leads (pay not yet evidenced),workday:flexerasoftware
 Foodhub,A2,2 leads (pay not yet evidenced),portal:zohorecruit
 Foxit,A2,1 leads (pay not yet evidenced),lever:foxitsoftware
@@ -178,7 +176,7 @@ Interview Kickstart,A2,2 leads (pay not yet evidenced),ashby:interview-kickstart
 "InvoiceCloud, Inc.",A2,1 leads (pay not yet evidenced),greenhouse:invoicecloud
 isolved,A2,2 leads (pay not yet evidenced),portal:sitemap
 Ixigo,A2,1 leads (pay not yet evidenced),smartrecruiters:ixigo
-Keywords Studios,A2,4 leads (pay not yet evidenced),portal:filterstream
+Keywords Studios,A2,5 leads (pay not yet evidenced),portal:filterstream
 Kinaxis,A2,1 leads (pay not yet evidenced),portal:sitemap
 Light & Wonder,A2,4 leads (pay not yet evidenced),workday:lnw
 Linde,A2,5 leads (pay not yet evidenced),portal:csod
@@ -209,12 +207,12 @@ Platform Science,A2,1 leads (pay not yet evidenced),greenhouse:platformscience
 Plum HQ,A2,1 leads (pay not yet evidenced),portal:kula
 Precisely,A2,2 leads (pay not yet evidenced),portal:sitemap
 Proofpoint,A2,4 leads (pay not yet evidenced),workday:proofpoint
-Qualys,A2,6 leads (pay not yet evidenced),workday:qualys
-Qubrid AI,A2,3 leads (pay not yet evidenced),portal:qubrid
+Qualys,A2,5 leads (pay not yet evidenced),workday:qualys
+Qubrid AI,A2,2 leads (pay not yet evidenced),portal:qubrid
 QuinStreet,A2,2 leads (pay not yet evidenced),greenhouse:quinstreet
 Reelo,A2,1 leads (pay not yet evidenced),portal:keka
 ReliaQuest,A2,1 leads (pay not yet evidenced),workday:reliaquest
-Renesas,A2,1 leads (pay not yet evidenced),portal:sitemap
+Renesas,A2,2 leads (pay not yet evidenced),portal:sitemap
 Resideo,A2,2 leads (pay not yet evidenced),portal:sitemap
 Rocketlane,A2,2 leads (pay not yet evidenced),portal:kula
 Rohde & Schwarz,A2,9 leads (pay not yet evidenced),portal:sitemap
@@ -233,7 +231,7 @@ SolarSquare Energy,A2,3 leads (pay not yet evidenced),portal:keka
 Solventum,A2,3 leads (pay not yet evidenced),workday:healthcare
 SonicWall,A2,2 leads (pay not yet evidenced),greenhouse:sonicwall
 Spreetail,A2,3 leads (pay not yet evidenced),lever:spreetail
-Tata Communications,A2,2 leads (pay not yet evidenced),portal:spire2grow
+Tata Communications,A2,1 leads (pay not yet evidenced),portal:spire2grow
 The Depository Trust & Clearing Corporation (DTCC),A2,2 leads (pay not yet evidenced),oracle:ebxr.fa.us2.oraclecloud.com
 The ePlane Company,A2,2 leads (pay not yet evidenced),portal:zohorecruit
 Thomson Reuters,A2,1 leads (pay not yet evidenced),workday:thomsonreuters
@@ -244,13 +242,12 @@ TripJack,A2,1 leads (pay not yet evidenced),portal:keka
 Truveta,A2,4 leads (pay not yet evidenced),greenhouse:truveta
 Turvo,A2,1 leads (pay not yet evidenced),lever:turvo
 U.S. Bank,A2,2 leads (pay not yet evidenced),portal:sitemap
-Unisys,A2,1 leads (pay not yet evidenced),workday:unisys
-United Airlines,A2,2 leads (pay not yet evidenced),portal:sitemap
+United Airlines,A2,1 leads (pay not yet evidenced),portal:sitemap
 vCommission,A2,1 leads (pay not yet evidenced),portal:links
 Vena Solutions,A2,1 leads (pay not yet evidenced),portal:pinpoint
 Vontier,A2,1 leads (pay not yet evidenced),portal:sitemap
 WinZO,A2,2 leads (pay not yet evidenced),portal:recruiterbox
-WisdomAI,A2,2 leads (pay not yet evidenced),ashby:wisdom-ai
+WisdomAI,A2,3 leads (pay not yet evidenced),ashby:wisdom-ai
 YouTrip,A2,1 leads (pay not yet evidenced),portal:workable
 Zetwerk,A2,1 leads (pay not yet evidenced),portal:freshteam
 Zoid Technologies Private Limited,A2,2 leads (pay not yet evidenced),portal:pyjamahr
@@ -263,12 +260,13 @@ Ansys,A3,"4 India software openings at your level by title, none fit (years / pa
 AutoZone,A3,"6 India software openings at your level by title, none fit (years / pay)",oracle:egud.fa.us2.oraclecloud.com
 Axis Bank,A3,"21 India software openings at your level by title, none fit (years / pay)",portal:ripplehire
 Bank of America,A3,"6 India software openings at your level by title, none fit (years / pay)",portal:sitemap
-BlackRock,A3,"2 India software openings at your level by title, none fit (years / pay)",portal:sitemap
+BlackRock,A3,"1 India software openings at your level by title, none fit (years / pay)",portal:sitemap
 BNY,A3,"1 India software openings at your level by title, none fit (years / pay)",oracle:eofe.fa.us2.oraclecloud.com
 Booking Holdings,A3,"1 India software openings at your level by title, none fit (years / pay)",portal:jibe
 Broadcom,A3,"10 India software openings at your level by title, none fit (years / pay)",workday:broadcom
 Broadcom/VMware,A3,"10 India software openings at your level by title, none fit (years / pay)",workday:broadcom
 Broadridge,A3,"2 India software openings at your level by title, none fit (years / pay)",workday:broadridge
+Bureau,A3,"1 India software openings at your level by title, none fit (years / pay)",ashby:bureau
 Candescent,A3,"1 India software openings at your level by title, none fit (years / pay)",workday:candescent
 Celonis,A3,"2 India software openings at your level by title, none fit (years / pay)",greenhouse:celonis
 Ciena,A3,"1 India software openings at your level by title, none fit (years / pay)",workday:ciena
@@ -312,14 +310,14 @@ ION,A3,"2 India software openings at your level by title, none fit (years / pay)
 IP Infusion,A3,"1 India software openings at your level by title, none fit (years / pay)",portal:jobvite
 Jitterbit,A3,"4 India software openings at your level by title, none fit (years / pay)",smartrecruiters:jitterbit
 Jump Trading,A3,"1 India software openings at your level by title, none fit (years / pay)",greenhouse:jumptrading
-KLA Tencor,A3,"6 India software openings at your level by title, none fit (years / pay)",workday:kla
+KLA Tencor,A3,"5 India software openings at your level by title, none fit (years / pay)",workday:kla
 Koch,A3,"1 India software openings at your level by title, none fit (years / pay)",portal:avature
 Lam Research,A3,"1 India software openings at your level by title, none fit (years / pay)",eightfold:lamresearch.eightfold.ai
 Larsen & Toubro,A3,"223 India software openings at your level by title, none fit (years / pay)",portal:peoplestrong
 Lenskart,A3,"6 India software openings at your level by title, none fit (years / pay)",recruitee:lenskartcareers
 Level AI,A3,"1 India software openings at your level by title, none fit (years / pay)",lever:levelai
 Lowe's,A3,"3 India software openings at your level by title, none fit (years / pay)",portal:sitemap
-Macquarie Group,A3,"7 India software openings at your level by title, none fit (years / pay)",portal:avature
+Macquarie Group,A3,"6 India software openings at your level by title, none fit (years / pay)",portal:avature
 Magellan,A3,"1 India software openings at your level by title, none fit (years / pay)",portal:links
 Maximl,A3,"1 India software openings at your level by title, none fit (years / pay)",portal:zohorecruit
 MediaTek,A3,"4 India software openings at your level by title, none fit (years / pay)",portal:mediatek
@@ -327,10 +325,9 @@ MongoDB,A3,"2 India software openings at your level by title, none fit (years / 
 Motorola Solutions,A3,"12 India software openings at your level by title, none fit (years / pay)",workday:motorolasolutions
 MOZN,A3,"1 India software openings at your level by title, none fit (years / pay)",portal:workable
 MSCI,A3,"1 India software openings at your level by title, none fit (years / pay)",portal:sitemap
-Nasdaq,A3,"6 India software openings at your level by title, none fit (years / pay)",workday:nasdaq
+Nasdaq,A3,"5 India software openings at your level by title, none fit (years / pay)",workday:nasdaq
 NCR Corporation,A3,"9 India software openings at your level by title, none fit (years / pay)",workday:ncr
 NielsenIQ,A3,"5 India software openings at your level by title, none fit (years / pay)",smartrecruiters:nielseniq
-Novartis,A3,"1 India software openings at your level by title, none fit (years / pay)",portal:sitemap
 Nutanix,A3,"1 India software openings at your level by title, none fit (years / pay)",portal:links
 Okta,A3,"1 India software openings at your level by title, none fit (years / pay)",greenhouse:okta
 Onsitego,A3,"2 India software openings at your level by title, none fit (years / pay)",portal:keka
@@ -355,6 +352,7 @@ Shell,A3,"2 India software openings at your level by title, none fit (years / pa
 Signzy,A3,"1 India software openings at your level by title, none fit (years / pay)",portal:keka
 Skyroot Aerospace,A3,"3 India software openings at your level by title, none fit (years / pay)",portal:zohorecruit
 Sophos,A3,"1 India software openings at your level by title, none fit (years / pay)",lever:sophos
+SpotDraft,A3,"1 India software openings at your level by title, none fit (years / pay)",ashby:spotdraft
 Sprinklr,A3,"1 India software openings at your level by title, none fit (years / pay)",workday:sprinklr
 Stripe,A3,"4 India software openings at your level by title, none fit (years / pay)",greenhouse:stripe
 Sureify,A3,"1 India software openings at your level by title, none fit (years / pay)",greenhouse:sureify
@@ -368,6 +366,7 @@ Trane Technologies,A3,"1 India software openings at your level by title, none fi
 Treebo Hotels,A3,"1 India software openings at your level by title, none fit (years / pay)",portal:darwinbox
 Twilio,A3,"1 India software openings at your level by title, none fit (years / pay)",greenhouse:twilio
 unacadamy,A3,"1 India software openings at your level by title, none fit (years / pay)",smartrecruiters:unacademy
+Unisys,A3,"8 India software openings at your level by title, none fit (years / pay)",workday:unisys
 ValGenesis,A3,"2 India software openings at your level by title, none fit (years / pay)",lever:valgenesis
 Vecmocon Technologies,A3,"7 India software openings at your level by title, none fit (years / pay)",portal:keka
 Viasat,A3,"2 India software openings at your level by title, none fit (years / pay)",portal:jibe
@@ -390,7 +389,7 @@ Aerospike,A4,source works; no India software openings at your level today (0 oth
 Affinidi,A4,source works; no India software openings at your level today (0 other roles read),greenhouse:affinidi
 Agoda,A4,source works; no India software openings at your level today (0 other roles read),greenhouse:agoda
 Agrostar,A4,source works; no India software openings at your level today (0 other roles read),portal:darwinbox
-Airbnb,A4,source works; no India software openings at your level today (3 other roles read),greenhouse:airbnb
+Airbnb,A4,source works; no India software openings at your level today (2 other roles read),greenhouse:airbnb
 Airwallex,A4,source works; no India software openings at your level today (483 other roles read),ashby:airwallex
 Aivar Innovations,A4,source works; no India software openings at your level today (0 other roles read),portal:keka
 Akamai,A4,source works; no India software openings at your level today (0 other roles read),oracle:fa-extu-saasfaprod1.fa.ocs.oraclecloud.com
@@ -418,7 +417,6 @@ Axio Biosolutions,A4,source works; no India software openings at your level toda
 Bazaarvoice,A4,source works; no India software openings at your level today (11 other roles read),lever:bazaarvoice
 Benchmark,A4,source works; no India software openings at your level today (0 other roles read),portal:zohorecruit
 Better,A4,source works; no India software openings at your level today (4 other roles read),ashby:better-mortgage
-Bidgely,A4,source works; no India software openings at your level today (19 other roles read),ashby:bidgely-inc
 BigBasket,A4,source works; no India software openings at your level today (0 other roles read),portal:darwinbox
 Bijak,A4,source works; no India software openings at your level today (0 other roles read),portal:keka
 bitly,A4,source works; no India software openings at your level today (0 other roles read),portal:bamboohr
@@ -435,6 +433,7 @@ BukuWarung,A4,source works; no India software openings at your level today (0 ot
 Cambly,A4,source works; no India software openings at your level today (4 other roles read),ashby:cambly
 Cambridge Mobile Telematics,A4,source works; no India software openings at your level today (0 other roles read),greenhouse:cambridgemobiletelematics
 Campaign Monitor,A4,source works; no India software openings at your level today (0 other roles read),workday:campaignmonitor
+Capillary Technologies,A4,source works; no India software openings at your level today (0 other roles read),portal:darwinbox
 Capital One,A4,source works; no India software openings at your level today (0 other roles read),workday:capitalone
 Captain Fresh,A4,source works; no India software openings at your level today (0 other roles read),smartrecruiters:captainfresh
 CarDekho,A4,source works; no India software openings at your level today (0 other roles read),portal:darwinbox
@@ -487,6 +486,7 @@ Discord,A4,source works; no India software openings at your level today (0 other
 Discovery inc,A4,source works; no India software openings at your level today (0 other roles read),portal:sitemap
 Ditto,A4,source works; no India software openings at your level today (7 other roles read),ashby:ditto
 dolby,A4,source works; no India software openings at your level today (0 other roles read),eightfold:jobs.dolby.com
+DoorDash,A4,source works; no India software openings at your level today (1 other roles read),greenhouse:doordashindia
 doximity,A4,source works; no India software openings at your level today (0 other roles read),portal:sitemap
 DrinkPrime,A4,source works; no India software openings at your level today (0 other roles read),portal:zohorecruit
 Drip Capital,A4,source works; no India software openings at your level today (0 other roles read),portal:recruiterbox
@@ -497,7 +497,6 @@ DuPont,A4,source works; no India software openings at your level today (0 other 
 Dynatrace,A4,source works; no India software openings at your level today (0 other roles read),portal:sitemap
 e6data,A4,source works; no India software openings at your level today (0 other roles read),portal:zohorecruit
 Eclipse Trading,A4,source works; no India software openings at your level today (0 other roles read),greenhouse:eclipsetrading
-Edelweiss,A4,source works; no India software openings at your level today (0 other roles read),portal:darwinbox
 Eightfold,A4,source works; no India software openings at your level today (0 other roles read),eightfold:app.eightfold.ai
 Electronic Arts,A4,source works; no India software openings at your level today (0 other roles read),portal:avature
 Emversity,A4,source works; no India software openings at your level today (0 other roles read),portal:keka
@@ -598,6 +597,7 @@ Nium,A4,source works; no India software openings at your level today (31 other r
 Niyo,A4,source works; no India software openings at your level today (0 other roles read),portal:keka
 Nobroker,A4,source works; no India software openings at your level today (0 other roles read),smartrecruiters:nobroker
 Nova Benefits,A4,source works; no India software openings at your level today (0 other roles read),portal:zohorecruit
+Novartis,A4,source works; no India software openings at your level today (1 other roles read),portal:sitemap
 NPCI,A4,source works; no India software openings at your level today (0 other roles read),portal:links
 Ocrolus,A4,source works; no India software openings at your level today (2 other roles read),greenhouse:ocrolusinc
 Olx,A4,source works; no India software openings at your level today (0 other roles read),portal:sitemap
@@ -610,7 +610,6 @@ Paper Boat Drinks,A4,source works; no India software openings at your level toda
 Peoplebox.ai,A4,source works; no India software openings at your level today (0 other roles read),portal:keka
 Perfios,A4,source works; no India software openings at your level today (0 other roles read),portal:darwinbox
 PharmEasy,A4,source works; no India software openings at your level today (0 other roles read),portal:darwinbox
-PhysicsWallah,A4,source works; no India software openings at your level today (0 other roles read),portal:darwinbox
 Ping Identity,A4,source works; no India software openings at your level today (0 other roles read),greenhouse:pingidentity
 Plaid,A4,source works; no India software openings at your level today (0 other roles read),portal:sitemap
 Planful,A4,source works; no India software openings at your level today (0 other roles read),portal:sitemap
@@ -653,7 +652,6 @@ Smith Detection,A4,source works; no India software openings at your level today 
 Snowflake,A4,source works; no India software openings at your level today (376 other roles read),ashby:snowflake
 Societe Generale,A4,source works; no India software openings at your level today (0 other roles read),portal:sitemap
 Spinny,A4,source works; no India software openings at your level today (0 other roles read),portal:darwinbox
-SpotDraft,A4,source works; no India software openings at your level today (17 other roles read),ashby:spotdraft
 Spotify,A4,source works; no India software openings at your level today (87 other roles read),lever:spotify
 Spyne,A4,source works; no India software openings at your level today (0 other roles read),portal:keka
 Squadstack,A4,source works; no India software openings at your level today (0 other roles read),portal:sitemap
@@ -720,6 +718,8 @@ Zerodha,A4,source works; no India software openings at your level today (0 other
 Zluri,A4,source works; no India software openings at your level today (0 other roles read),portal:keka
 Zolve,A4,source works; no India software openings at your level today (0 other roles read),portal:freshteam
 ZS,A4,source works; no India software openings at your level today (0 other roles read),portal:jibe
+Edelweiss,A5,HTTPError: 403 Client Error: Forbidden for url: https://edelweissfin.darwinbox.in/ms/candidateapi/job/alljobs?companyId=,portal:darwinbox
+PhysicsWallah,A5,HTTPError: 403 Client Error: Forbidden for url: https://pwhr.darwinbox.in/ms/candidateapi/job/alljobs?companyId=a62d7a6e,portal:darwinbox
 Reprise,A5,HTTPError: 404 Client Error: Not Found for url: https://api.ashbyhq.com/posting-api/job-board/reprise?includeCompensatio,ashby:reprise
 ACI Worldwide,B,pay below the bar,
 ADP,B,pay below the bar,

@@ -64,7 +64,24 @@ def output_lock():
             fcntl.flock(f, fcntl.LOCK_UN)
 
 
+def _rx(v):
+    """A profile regex: a string, or a list of alternatives (each wrapped in a group, so an anchor or an inner '|'
+    can't leak into its neighbours). Lists make the rules editable item by item instead of by string surgery."""
+    return v if isinstance(v, str) else "|".join(f"(?:{a})" for a in v) if v else r"(?!)"
+
+
+def _compile_rules(node):
+    """Turn every list of regex alternatives in the profile's rule sections into one pattern string."""
+    if isinstance(node, dict):
+        return {k: (_rx(v) if isinstance(v, list) and all(isinstance(x, str) for x in v) and k not in ("families_enabled", "queries", "cities",
+                                                                                                        "city_queries", "india_markers", "home_markers", "exclude_companies")
+                    else _compile_rules(v)) for k, v in node.items()}
+    return node
+
+
 PROFILE = json.loads((ROOT / "profile.json").read_text())
+PROFILE["title"] = _compile_rules(PROFILE["title"])
+PROFILE["fit"] = _compile_rules(PROFILE.get("fit", {}))
 INDIA = PROFILE["location"]["india_markers"]
 HOME = PROFILE["location"]["home_markers"]
 
@@ -172,14 +189,14 @@ def title_family(title):
     t = re.sub(r"\s+", " ", title.lower()).strip()  # "Software  Engineer" (double space) is still a software engineer
     if re.search(T["exclude"], t):  # seniority, eligibility, non-developer role types
         return None
-    if re.search(T.get("exclude_client", r"$^"), t) and not re.search(T.get("client_override", r"$^"), t):
+    if re.search(T.get("exclude_client", r"(?!)"), t) and not re.search(T.get("client_override", r"(?!)"), t):
         return None  # client-side stack words (empty by default: frontend and mobile roles are kept)
-    if (re.search(T.get("exclude_domain", r"$^"), t) and not re.search(T.get("core_override", r"$^"), t)
+    if (re.search(T.get("exclude_domain", r"(?!)"), t) and not re.search(T.get("core_override", r"(?!)"), t)
             and not re.search(T["include"], t)):  # any core title wins: 'Software Development Engineer II, ... Workplace Support Tech'
         return None  # support / hardware-design titles out; 'ML Engineer II - Backend' kept by its marker
     if re.search(T["include"], t):
         return "core"
-    if re.search(T.get("exclude_unless_core", r"$^"), t):  # 'Security Engineer' out, 'Software Engineer - Security' kept above
+    if re.search(T.get("exclude_unless_core", r"(?!)"), t):  # 'Security Engineer' out, 'Software Engineer - Security' kept above
         return None
     for name, rx in T.get("families", {}).items():  # in order: a title in a disabled family stays out,
         if re.search(rx, t):                          # even if a later family ('generic') would match it
@@ -194,50 +211,71 @@ def title_ok(title):
 
 def needs_software_jd(title, family):
     """Titles that don't say 'software' by themselves: the description has to show software work."""
-    return family != "core" or bool(re.search(PROFILE["title"].get("jd_check_titles", r"$^"), title.lower()))
+    return family != "core" or bool(re.search(PROFILE["title"].get("jd_check_titles", r"(?!)"), title.lower()))
 
 
-def jd_terms(pattern, text):
+def jd_terms(pattern, text, group=True):
     """Distinct terms a pattern finds, so 'api' and 'APIs' count once."""
     terms = {re.sub(r"(?<=\w{3})s$", "", m.group(0).lower()) for m in re.finditer(pattern, text or "", re.I)}
+    if not group:
+        return terms
     out = set(terms)
     for name, rx in (("sql/html/css", r"sql|html5?|css3?"),  # query/markup languages count once together
-                     ("bus protocols", r"spi|i2c|uart|jtag")):  # so do hardware bus protocols
+                     ("bus protocols", r"spi|i2c|uart|jtag"),  # so do hardware bus protocols
+                     ("programming languages",  # and bare language names: 'C, C++, Java, Python' is one fact, not four
+                      r"java|python|golang|go|c|c\+\+|c#|in c|javascript|typescript|kotlin|scala|rust|ruby|swift|dart|php|perl|elixir|\.net|dot ?net")):
         group = {t for t in out if re.fullmatch(rx, t)}
         if group:
             out = (out - group) | {name}
     return out
 
 
-def software_jd(text, strict=True):
-    """Does the description show development work? Distinct development terms (languages, frameworks, APIs, services;
-    not ops tooling) minus a penalty per hardware / plant / ops-admin term must reach min_signals. strict=False (core titles that hardware firms
-    also use, like MTS) only rejects when the hardware terms outweigh the software ones."""
+def dev_vocabulary():
+    """The one development vocabulary: general terms plus the strong ones (strong is a subset by construction)."""
     cfg = PROFILE["title"]["software_jd"]
-    sw = len(jd_terms(cfg["signals"], text))
-    hw = len(jd_terms(cfg.get("hardware_signals", r"$^"), text))
+    return f"(?:{cfg['signals']})|(?:{cfg.get('strong_signals', r'$^')})"
+
+
+def software_jd(text, strict=True, allow_empty=True):
+    """Does the description show development work? Development terms come from one vocabulary (general + strong);
+    penalty terms are hardware / plant / ops-admin / QA words. Judged by dominance, never by subtraction.
+    strict (generic / ai titles): >= min_signals development terms, more development than penalty terms, and at
+    least one strong term (one that means building software). Lenient (MTS, Programmer Analyst, titles that say
+    developer): rejected only when penalty terms outnumber development terms; allow_empty=False also needs one term."""
+    cfg = PROFILE["title"]["software_jd"]
+    sw = len(jd_terms(dev_vocabulary(), text))
+    hw = len(jd_terms(cfg.get("hardware_signals", r"(?!)"), text))
     if not strict:  # boilerplate JDs (Citi, Pure Storage MTS): only clear hardware/ops evidence rejects
-        return sw > hw or (hw == 0 and sw == 0)
+        return sw > hw or (allow_empty and hw == 0 and sw == 0)
     strong = len(jd_terms(cfg.get("strong_signals", cfg["signals"]), text))
     # dominance, not subtraction (one stray word can't cancel the evidence), and at least one term that means building software
     return sw >= cfg["min_signals"] and sw > hw and strong >= 1
 
 
-def off_profile_track(title, text, family):
+def off_profile_track(title, text, family, company=""):
     """The development track a role belongs to when it doesn't fit the profile (profile.json `fit`), else None.
     Title naming the track → that track; title silent → the JD needs jd_min track terms and more track terms than
     web/backend terms. A title that says backend / full stack / web / Java overrides both."""
     fit = PROFILE.get("fit", {})
     t = re.sub(r"\s+", " ", title.lower())
-    if re.search(fit.get("track_override", r"$^"), t):
+    if re.search(fit.get("track_override", r"(?!)"), t):
         return None
-    dev = len(jd_terms(fit.get("dev_terms", r"$^"), text))
+    # application-stack terms, one by one (not the whole development vocabulary: 'code review' or 'algorithms' appear in
+    # embedded and web JDs alike, so they can't tell the tracks apart)
+    dev = len(jd_terms(fit.get("app_terms", r"(?!)"), text, group=False))
+    vendor = bool(re.search(fit.get("vendor_employers", r"(?!)"), company.lower())) if company else False
     for name, tr in fit.get("exclude_tracks", {}).items():
         if re.search(tr["title"], t):
             return name
+        if name == "crm_platform" and vendor:  # the vendor's own engineers build the platform: only a title can say otherwise
+            continue
         need = tr["jd_min"] if family == "core" else tr.get("jd_min_non_core", tr["jd_min"])
+        if re.search(tr.get("jd_role", r"(?!)"), text or "", re.I):  # the JD names the role itself: "The Quality Engineer supports…"
+            return name
+        if family == "core" and tr.get("core_needs_role"):  # developers also write tests: only "As a QA Engineer…" counts
+            continue
         n = len(jd_terms(tr["jd"], text))
-        if n >= need and n > dev:  # the track dominates the description; a web/backend-heavy JD stays
+        if n >= need and (n > dev or not tr.get("dominance", True)):  # Apex/SOQL/LWC identify a CRM role outright
             return name
     return None
 
@@ -853,9 +891,10 @@ def evaluate(job, company, max_age):
     if family is None:
         return None, "title/level"
     says_developer = bool(re.search(r"\bdevelopers?\b|\bprogrammers?\b", job.title.lower()))
-    if needs_software_jd(job.title, family) and not software_jd(job.text, strict=family != "core" and not says_developer):
+    lenient = family == "core" or says_developer
+    if needs_software_jd(job.title, family) and not software_jd(job.text, strict=not lenient, allow_empty=family == "core"):
         return None, f"title doesn't say software ({family}) and the JD doesn't show software work"
-    track = off_profile_track(job.title, job.text, family)
+    track = off_profile_track(job.title, job.text, family, job.company)
     if track:
         return None, f"{track.replace('_', ' ')} role (outside the profile's development track)"
     ok, mode = location_mode(job, company)
@@ -869,6 +908,8 @@ def evaluate(job, company, max_age):
         years, snippet = int(m.group(1)), job.title
     if years is not None and years > PROFILE["max_min_years"]:
         return None, f"{years}+ yrs asked"
+    if re.search(PROFILE["title"].get("exclude_level", r"(?!)"), re.sub(r"\s+", " ", job.title.lower())) and years is None:
+        return None, "title level (III / 3) with no years stated"  # Google's 'Software Engineer III' asking 1-2 yrs stays
     if company.get("below_title") and re.search(company["below_title"], job.title, re.I):
         return None, f"pay below bar at this level ({company['pay_note']})"
     if company["pay"] == "below":
@@ -1157,6 +1198,7 @@ def _evaluate_all(ctx, quiet=False):
 
     ctx["boards"]["titles"] = titles = board_titles_now(companies)  # boards may have just been re-crawled
     keep, leads, rejected, errors, seen_urls = [], [], [], [], set()
+    title_rejects = []  # kept apart: title drops are many, but an audit must be able to see them
     activity = collections.defaultdict(lambda: {"seen": 0, "fitting": 0, "leads": 0})
     for source in companies:
         jobs, meta = load_raw(source["name"])
@@ -1183,7 +1225,9 @@ def _evaluate_all(ctx, quiet=False):
                 leads.append(row)
             elif row:
                 keep.append(row)
-            elif why != "title/level":
+            elif why == "title/level":
+                title_rejects.append({"company": job.company, "title": job.title, "location": job.location, "url": job.url})
+            else:
                 rejected.append({"company": job.company, "title": job.title, "location": job.location, "reason": why, "url": job.url})
 
     write_bank(companies, activity, direct, ctx["sweep"])
@@ -1214,6 +1258,7 @@ def _evaluate_all(ctx, quiet=False):
     leads.sort(key=lambda r: -r["score"])
     write_atomic(OUT / f"leads-unverified-pay-{stamp}.csv", csv_text(list(leads[0].keys()) if leads else ["company"], leads))
     write_atomic(OUT / f"rejected-{stamp}.csv", csv_text(["company", "title", "location", "reason", "url"], rejected))
+    write_atomic(OUT / f"rejected-titles-{stamp}.csv", csv_text(["company", "title", "location", "url"], title_rejects))
 
     md = [f"# Job crawl {stamp}", "", f"{len(keep)} roles kept, {len(leads)} leads with unverified pay (see leads CSV), {len(rejected)} rejected after title filter.", "",
           "| # | Company | Type / stage | Role | Location / mode | Exp asked | Pay + confidence | Key stack | Score | Gaps | Link | Posted |",
