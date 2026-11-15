@@ -110,7 +110,8 @@ def post(url, body, **kw):
             continue
         if r.status_code != 429 and r.status_code < 500:
             break
-        time.sleep(2 ** attempt * 3)
+        if attempt < 4:
+            time.sleep(2 ** attempt * 3)
     r.raise_for_status()
     return r.json()
 
@@ -198,7 +199,9 @@ def needs_software_jd(title, family):
 
 def jd_terms(pattern, text):
     """Distinct terms a pattern finds, so 'api' and 'APIs' count once."""
-    return {re.sub(r"(?<=\w)s$", "", m.group(0).lower()) for m in re.finditer(pattern, text or "", re.I)}
+    terms = {re.sub(r"(?<=\w{3})s$", "", m.group(0).lower()) for m in re.finditer(pattern, text or "", re.I)}
+    web = {t for t in terms if re.fullmatch(r"sql|html5?|css3?", t)}  # query/markup languages count once together
+    return (terms - web) | ({"sql/html/css"} if web else set())
 
 
 def software_jd(text, strict=True):
@@ -308,7 +311,14 @@ def workday(c):
     def scan(query, facets, cap):
         offset, total = 0, None
         while offset < cap:
-            d = post(f"{api}/jobs", {"limit": 20, "offset": offset, "searchText": query, "appliedFacets": facets})
+            try:
+                d = post(f"{api}/jobs", {"limit": 20, "offset": offset, "searchText": query, "appliedFacets": facets})
+            except requests.RequestException as e:  # keep the pages already read instead of losing the whole board
+                if offset == 0:
+                    raise
+                print(f"  {c['name']}: Workday page at offset {offset} failed ({type(e).__name__}); keeping {offset} postings read",
+                      file=sys.stderr, flush=True)
+                break
             posts = d.get("jobPostings", [])
             if total is None:
                 total = d.get("total", 0)  # Workday reports the total on the first page only

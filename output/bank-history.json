@@ -7331,7 +7331,7 @@
 0
 ],
 "2026-11-15": [
-1,
+2,
 0
 ]
 }
@@ -32401,7 +32401,7 @@
 0
 ],
 "2026-11-15": [
-8,
+9,
 0
 ]
 }
@@ -36186,7 +36186,7 @@
 0
 ],
 "2026-11-15": [
-1,
+2,
 0
 ]
 }
@@ -37962,6 +37962,60 @@
 },
 "emagine": {
 "name": "emagine",
+"runs": {
+"2026-11-15": [
+1,
+0
+]
+}
+},
+"hm": {
+"name": "H&M",
+"runs": {
+"2026-11-15": [
+2,
+0
+]
+}
+},
+"athenahealth": {
+"name": "athenahealth",
+"runs": {
+"2026-11-15": [
+2,
+0
+]
+}
+},
+"hitachienergy": {
+"name": "Hitachi Energy",
+"runs": {
+"2026-11-15": [
+1,
+0
+]
+}
+},
+"runntv": {
+"name": "RunnTV",
+"runs": {
+"2026-11-15": [
+1,
+0
+]
+}
+},
+"apprely": {
+"name": "AppRely Technologies",
+"runs": {
+"2026-11-15": [
+1,
+0
+]
+}
+},
+"albertsonscompanies": {
+"name": "Albertsons Companies India",
 "runs": {
 "2026-11-15": [
 1,

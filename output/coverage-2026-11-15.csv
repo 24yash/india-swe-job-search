@@ -136,7 +136,7 @@ Airtel Payments Bank,A2,1 leads (pay not yet evidenced),portal:sitemap
 Alphonso,A2,1 leads (pay not yet evidenced),ashby:lgads
 Alstom,A2,1 leads (pay not yet evidenced),portal:successfactors
 Amagi,A2,5 leads (pay not yet evidenced),portal:mynexthire
-Anaplan,A2,2 leads (pay not yet evidenced),greenhouse:anaplan
+Anaplan,A2,1 leads (pay not yet evidenced),greenhouse:anaplan
 Anyscale,A2,2 leads (pay not yet evidenced),ashby:anyscale
 AppZen,A2,1 leads (pay not yet evidenced),lever:appzen
 Arcana,A2,1 leads (pay not yet evidenced),greenhouse:arcanaanalytics
@@ -172,7 +172,7 @@ Flexera,A2,2 leads (pay not yet evidenced),workday:flexerasoftware
 Foodhub,A2,2 leads (pay not yet evidenced),portal:zohorecruit
 Foxit,A2,1 leads (pay not yet evidenced),lever:foxitsoftware
 Franklin Templeton,A2,1 leads (pay not yet evidenced),portal:sitemap
-GE Vernova,A2,18 leads (pay not yet evidenced),workday:gevernova
+GE Vernova,A2,16 leads (pay not yet evidenced),workday:gevernova
 GeeksForGeeks,A2,2 leads (pay not yet evidenced),portal:zohorecruit
 GHX India,A2,1 leads (pay not yet evidenced),greenhouse:globalhealthcareexchangeinc
 Global Payments Inc.,A2,1 leads (pay not yet evidenced),workday:tsys
@@ -262,7 +262,6 @@ Vena Solutions,A2,1 leads (pay not yet evidenced),portal:pinpoint
 Vontier,A2,1 leads (pay not yet evidenced),portal:sitemap
 WinZO,A2,2 leads (pay not yet evidenced),portal:recruiterbox
 WisdomAI,A2,2 leads (pay not yet evidenced),ashby:wisdom-ai
-X-Rite,A2,1 leads (pay not yet evidenced),portal:sitemap
 YouTrip,A2,1 leads (pay not yet evidenced),portal:workable
 Zetwerk,A2,1 leads (pay not yet evidenced),portal:freshteam
 Zoid Technologies Private Limited,A2,2 leads (pay not yet evidenced),portal:pyjamahr
@@ -375,6 +374,7 @@ ValGenesis,A3,"2 India software openings at your level by title, none fit (years
 Viasat,A3,"2 India software openings at your level by title, none fit (years / pay)",portal:jibe
 Walmart,A3,"1 India software openings at your level by title, none fit (years / pay)",workday:walmart
 Wizcommerce,A3,"1 India software openings at your level by title, none fit (years / pay)",portal:kula
+X-Rite,A3,"11 India software openings at your level by title, none fit (years / pay)",portal:sitemap
 Xplor Technologies,A3,"1 India software openings at your level by title, none fit (years / pay)",smartrecruiters:Xplor
 Zinier,A3,"4 India software openings at your level by title, none fit (years / pay)",greenhouse:zinier
 1 mg,A4,source works; no India software openings at your level today (0 other roles read),portal:darwinbox
@@ -1177,9 +1177,12 @@ AiLogic Neural Network Pvt Ltd,E4,never studied by discovery,
 AIQ Space Ventures,E4,never studied by discovery,
 Akku,E4,never studied by discovery,
 Alacriti,E4,website not found yet,
+Albertsons Companies India,E4,never studied by discovery,
 Amgen,E4,never studied by discovery,
+AppRely Technologies,E4,never studied by discovery,
 Aptiv,E4,ok now: site reachable (re-run discovery),
 AQR Capital Management,E4,never studied by discovery,
+athenahealth,E4,never studied by discovery,
 Auric AI Labs,E4,never studied by discovery,
 Bellatrix Aerospace,E4,ok now: site reachable (re-run discovery),
 Bira 91,E4,website not found yet,
@@ -1211,10 +1214,12 @@ Finarkein Analytics,E4,ok now: site reachable (re-run discovery),
 Flex,E4,never studied by discovery,
 Flexiple,E4,never studied by discovery,
 Fresh Platter,E4,never studied by discovery,
+H&M,E4,never studied by discovery,
 Harmonic,E4,never studied by discovery,
 Hashnode,E4,ok now: site reachable (re-run discovery),
 HBO,E4,ok now: site reachable (re-run discovery),
 Health Catalyst,E4,never studied by discovery,
+Hitachi Energy,E4,never studied by discovery,
 HyperTrack,E4,ok now: site reachable (re-run discovery),
 Indifi,E4,website not found yet,
 "Innovative Information Technologies, Inc.",E4,never studied by discovery,
@@ -1253,6 +1258,7 @@ Questhiring,E4,website not found yet,
 Quixta,E4,website not found yet,
 Rabbitstay,E4,never studied by discovery,
 ResilienceSoft,E4,never studied by discovery,
+RunnTV,E4,never studied by discovery,
 Scoutit,E4,never studied by discovery,
 Secfix,E4,never studied by discovery,
 SkillVertex,E4,website not found yet,

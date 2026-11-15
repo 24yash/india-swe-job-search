@@ -160,5 +160,40 @@ got = list(crawl.workday({"name": "Target", "tenant": "target", "wd": "wd5", "si
 check("workday: facet failure falls back to keyword searches", any(b["searchText"] for b in calls if b["limit"] == 20) and [j.title for j in got] == ["Software Engineer"],
       [b["searchText"] for b in calls][:3])
 
+# Second review round.
+for t in ("Software Engineer - Recruiting Platform", "Software Engineer, Recruitment Products", "Backend Engineer - Talent & Recruiting",
+          "Software Engineer - Back Office Systems", "Java Developer - Back Office", "Software Engineer - Production Support Tooling"):
+    check(f"review 2: core title kept: {t}", fam(t) == "core", fam(t))
+for t in ("Software Engineer (Contractor)", "Software Engineer - Contractor", "Contractor - Java Developer", "Software Engineer - Batch 2025",
+          "Technical Recruiter", "Back Office Executive", "Java Production Support Engineer"):
+    check(f"review 2: excluded: {t}", fam(t) is None, fam(t))
+for title, jd in (("Instrumentation Engineer", "Calibrate Type C thermocouples; log readings to the SQL historian."),
+                  ("Planning Engineer", "Primavera schedules, C-suite reporting, SQL dashboards."),
+                  ("Deployment Engineer", "Install SQL Server and IIS; edit HTML and CSS config pages.")):
+    row, why = crawl.evaluate(job(title, jd + " 1-3 years."), co, 21)
+    check(f"review 2: non-dev JD no longer passes on C/SQL/HTML: {title}", row is None, why)
+for title, jd in (("Firmware Developer", "Write firmware in C for ARM microcontrollers: RTOS, device drivers."),
+                  ("SAP Developer", "ABAP development with BAPIs and OData services.")):
+    row, why = crawl.evaluate(job(title, jd + " 1-3 years."), co, 21)
+    check(f"review 2: dev JD still passes: {title}", row is not None, why)
+check("review 2: 'css' isn't shortened to 'cs'", "cs" not in crawl.jd_terms(r"css", "CSS"))
+
+# Review 2: a failure on a later Workday page keeps the pages already read.
+calls.clear()
+
+
+def flaky_pages(url, body, **kw):
+    calls.append(body)
+    if body["limit"] == 1:
+        return {"total": 40, "facets": [{"facetParameter": "locations", "values": [{"descriptor": "Pune, India", "id": "pune"}]}]}
+    if body["offset"] == 20:
+        raise crawl.requests.ConnectionError("page 2 down")
+    return {"total": 40, "jobPostings": [{"title": "Software Engineer", "externalPath": "/job/c", "locationsText": "Pune, India"}]}
+
+
+crawl.post = flaky_pages
+got = list(crawl.workday({"name": "Target", "tenant": "target", "wd": "wd5", "site": "targetcareers"}))
+check("workday: a failed later page keeps the postings already read", [j.title for j in got] == ["Software Engineer"], [j.title for j in got])
+
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)

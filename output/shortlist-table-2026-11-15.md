@@ -1,6 +1,6 @@
 # Shortlist table — 2026-11-15
 
-595 roles passed every filter; showing the top 40 (max 3 per company). 420 more pass everything except pay evidence (leads file).
+596 roles passed every filter; showing the top 40 (max 3 per company). 426 more pass everything except pay evidence (leads file).
 
 | # | Company | Company type / stage (latest round) | Role title | Location / mode | Exp asked | Pay (₹ LPA) + confidence + source | Key stack from JD | Score | Gaps vs my profile | Apply link | Posted date |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -63,6 +63,7 @@
 | United Airlines | Associate Engineer - Digital Technology | Gurugram, Haryana, India (on-site/hybrid (check JD)) | 1+ yrs | 54 | [link](https://careers.united.com/us/en/job/GGN00002634/Associate-Engineer-Digital-Technology) |
 | Qubrid AI | Full Stack AI Engineer | Remote (India) | 2+ yrs | 53 | [link](https://www.qubrid.com/careers/jobs/35a677912add483a96497023cb47e0f6) |
 | Flexiple | SDE I - Java | Bengaluru, hybrid | 1+ yrs | 53 | [link](https://www.linkedin.com/jobs/view/4491093762/) |
+| Albertsons Companies India | Engineer Software (Applied AI) [T500-28172] | Bengaluru, on-site/hybrid (check JD) | 1+ yrs | 53 | [link](https://www.linkedin.com/jobs/view/4448875088/) |
 | Flexiple | SDE I - Java | Bengaluru, hybrid | 1+ yrs | 53 | [link](https://www.linkedin.com/jobs/view/4490778771/) |
 | The Alter Office | SDE II | Bengaluru, on-site/hybrid (check JD) | 2+ yrs | 53 | [link](https://www.linkedin.com/jobs/view/4490735612/) |
 | Pallav Technologies | Backend Engineer (Java) | Gurugram, Haryana, India (on-site/hybrid (check JD)) | 2+ yrs | 53 | [link](https://www.linkedin.com/jobs/view/4488313572/) |
@@ -73,18 +74,17 @@
 | Aspen Technology | Software Developer II (Dev) | Pune (EMR) (on-site/hybrid (check JD)) | 2+ yrs | 52 | [link](https://aspentech.wd5.myworkdayjobs.com/AspenTech/job/Pune-EMR/Software-Developer-II--Dev-_R9578) |
 | Aatmunn | Software Engineer - Java in Bangalore, Bangalore (Hybrid) | Bengaluru, on-site/hybrid (check JD) | 2+ yrs | 52 | [link](https://www.linkedin.com/jobs/view/4487860422/) |
 | Pluang | Software Engineer (SDE-1) | Gurgaon, Haryana, India (hybrid) | 0+ yrs | 52 | [link](https://www.linkedin.com/jobs/view/4489341033/) |
-| Pluang | Software Engineer | Gurugram, Haryana, India (hybrid) | 0+ yrs | 52 | [link](https://www.linkedin.com/jobs/view/4489342033/) |
 
 ## Rejected after the title filter, by reason
 
-- title doesn't say software: 637
+- title doesn't say software: 642
 - 4+ yrs asked: 217
 - pay below bar: 163
 - 5+ yrs asked: 163
 - 6+ yrs asked: 69
 - 8+ yrs asked: 49
 - 7+ yrs asked: 45
-- 10+ yrs asked: 21
+- 10+ yrs asked: 20
 - 12+ yrs asked: 10
 - pay below bar at this level: 5
 - posted pay 5 LPA below bar: 4
