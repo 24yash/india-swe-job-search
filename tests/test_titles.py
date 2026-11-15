@@ -333,5 +333,17 @@ check("review 5: 'Software Engineer - Test Infrastructure' is development", fam(
 row, why = ev("Apps Dev Intmd Programmer Analyst - C11 - CHENNAI", "Participate in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team. " * 5)
 check("review 5: core title with a long boilerplate JD is kept (Citi)", row is not None, why)
 
+# Confirmation pass (a9331b8): seniority words in the title's tail still mean senior; team names don't.
+for t_ in ("Software Engineer (Lead)", "Software Engineer - Tech Lead", "SDE II - Team Lead", "Software Engineer – Manager",
+           "Software Engineer — Engineering Manager", "Software Engineer, Engineering Manager track", "Software Engineer (Architect)",
+           "Software Engineer / Architect", "Software Engineer – Associate Director", "Software Engineer (System Administrator)"):
+    check(f"review 6: senior/non-dev in the tail: {t_}", fam(t_) is None, fam(t_))
+for t_ in ("SDE II - Lead Management", "SWE II, Ads Manager", "Software Engineer - Platform Architecture", "Software Engineer - Azure Active Directory"):
+    check(f"review 6: team names still kept: {t_}", fam(t_) == "core", fam(t_))
+check("review 6: 'test automation is a plus' doesn't make a developer JD QA",
+      crawl.off_profile_track("Software Engineer", "Java services. 2+ years of experience in test automation is a plus.", "core") is None)
+check("review 6: a JD that says 'As a Qualcomm Hardware Engineer' is embedded/hardware",
+      crawl.off_profile_track("Memory CAD Software Engineer", "As a Qualcomm Hardware Engineer, you will build memory CAD flows.", "core") == "embedded")
+
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)

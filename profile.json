@@ -116,7 +116,13 @@
       "learning experience",
       "\\b(?:gpu |k8s |kubernetes )?cluster (?:engineer|administrator|operations)",
       "content (?:strategy|writer|writing|developer|designer|engineer)",
-      "engineer\\s*[-–(,]?\\s*(?:in\\s+)?test\\b(?!\\s*(?:infrastructure|infra|platform|tooling|tools|frameworks?))|\\bsde\\s*[-–]?\\s*t\\b"
+      "engineer\\s*[-–(,]?\\s*(?:in\\s+)?test\\b(?!\\s*(?:infrastructure|infra|platform|tooling|tools|frameworks?))|\\bsde\\s*[-–]?\\s*t\\b",
+      "\\b(?:tech|team|technical) lead\\b",
+      "engineering manager",
+      "\\(\\s*(?:lead|manager|architect|director)\\s*\\)",
+      "[-–—,/:]\\s*(?:lead|manager|architect|associate director|director)\\s*$",
+      "associate director",
+      "system administrator"
     ],
     "families": {
       "infra": [
@@ -845,7 +851,10 @@
         ],
         "jd_min": 3,
         "jd_min_non_core": 2,
-        "dominance": true
+        "dominance": true,
+        "jd_role": [
+          "(?<!certification )\\bas an? (?:\\w+ ){0,2}hardware engineer\\b"
+        ]
       },
       "crm_platform": {
         "title": [
@@ -918,7 +927,7 @@
         "jd_role": [
           "(?<!certification )(?<!certified )(?<!certificate )\\b(?:as an?|you will be an?|we are (?:seeking|hiring|looking for) an?|join (?:us|our team) as an?|role of an?)\\s+(?:\\w+ ){0,2}(?:quality|qa|test(?:ing)?|automation test|sdet)(?: automation)? (?:engineer|analyst|specialist)\\b",
           "(?:^|[.!?]\\s+)the (?:\\w+ ){0,2}(?:quality|qa|test) engineer (?:supports|is responsible|will|designs|owns|ensures)",
-          "\\d+\\s*(?:[-–]|to)?\\s*\\d*\\s*\\+?\\s*years?\\W{0,3}\\s*(?:of\\s+)?(?:\\w+\\s+){0,2}experience in (?:software )?(?:quality assurance|qa\\b|software testing|test automation|manual testing)"
+          "\\d+\\s*(?:[-–]|to)?\\s*\\d*\\s*\\+?\\s*years?\\W{0,3}\\s*(?:of\\s+)?(?:\\w+\\s+){0,2}experience in (?:software )?(?:quality assurance|qa\\b|software testing|test automation|manual testing)(?![^.;]{0,50}\\b(?:a plus|preferred|nice to have|good to have|bonus|desirable)\\b)"
         ],
         "core_needs_role": true
       },

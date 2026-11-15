@@ -1,6 +1,6 @@
 # Shortlist table — 2026-11-15
 
-580 roles passed every filter; showing the top 40 (max 3 per company). 433 more pass everything except pay evidence (leads file).
+579 roles passed every filter; showing the top 40 (max 3 per company). 433 more pass everything except pay evidence (leads file).
 
 | # | Company | Company type / stage (latest round) | Role title | Location / mode | Exp asked | Pay (₹ LPA) + confidence + source | Key stack from JD | Score | Gaps vs my profile | Apply link | Posted date |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -81,7 +81,7 @@
 - 4+ yrs asked: 221
 - 5+ yrs asked: 161
 - pay below bar: 154
-- embedded role: 116
+- embedded role: 117
 - 6+ yrs asked: 77
 - 8+ yrs asked: 56
 - crm platform role: 52
