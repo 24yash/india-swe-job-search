@@ -3388,7 +3388,7 @@
 ],
 "2026-11-15": [
 15,
-6
+5
 ]
 }
 },
@@ -38034,6 +38034,51 @@
 },
 "savainfosystems": {
 "name": "SAVA INFO SYSTEMS PVT LTD",
+"runs": {
+"2026-11-15": [
+1,
+0
+]
+}
+},
+"neurodrift": {
+"name": "NeuroDrift",
+"runs": {
+"2026-11-15": [
+1,
+0
+]
+}
+},
+"mindzmapdigital": {
+"name": "MindzMap | Digital Solutions",
+"runs": {
+"2026-11-15": [
+1,
+0
+]
+}
+},
+"matrixcare": {
+"name": "MatrixCare",
+"runs": {
+"2026-11-15": [
+1,
+0
+]
+}
+},
+"conduent": {
+"name": "Conduent",
+"runs": {
+"2026-11-15": [
+1,
+0
+]
+}
+},
+"ppfasmutualfund": {
+"name": "PPFAS Mutual Fund",
 "runs": {
 "2026-11-15": [
 1,

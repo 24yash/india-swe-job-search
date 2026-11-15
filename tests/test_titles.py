@@ -208,5 +208,8 @@ for title, jd in (("Embedded Developer", "Embedded C on microcontrollers, bare-m
     check(f"review 3: short embedded JD passes: {title}", row is not None, why)
 check("review 3: Web Developer is a core title", fam("Web Developer") == "core", fam("Web Developer"))
 
+row, why = crawl.evaluate(job("Electronics Engineer", "PCB layout and board testing with oscilloscope; SPI, I2C and UART interfaces; microcontroller selection. 1-3 years."), co, 21)
+check("review 3: a bus-protocol list doesn't outweigh hardware penalties", row is None, why)
+
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)

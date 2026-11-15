@@ -200,8 +200,13 @@ def needs_software_jd(title, family):
 def jd_terms(pattern, text):
     """Distinct terms a pattern finds, so 'api' and 'APIs' count once."""
     terms = {re.sub(r"(?<=\w{3})s$", "", m.group(0).lower()) for m in re.finditer(pattern, text or "", re.I)}
-    web = {t for t in terms if re.fullmatch(r"sql|html5?|css3?", t)}  # query/markup languages count once together
-    return (terms - web) | ({"sql/html/css"} if web else set())
+    out = set(terms)
+    for name, rx in (("sql/html/css", r"sql|html5?|css3?"),  # query/markup languages count once together
+                     ("bus protocols", r"spi|i2c|uart|jtag")):  # so do hardware bus protocols
+        group = {t for t in out if re.fullmatch(rx, t)}
+        if group:
+            out = (out - group) | {name}
+    return out
 
 
 def software_jd(text, strict=True):

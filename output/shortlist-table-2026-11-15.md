@@ -1,6 +1,6 @@
 # Shortlist table — 2026-11-15
 
-599 roles passed every filter; showing the top 40 (max 3 per company). 431 more pass everything except pay evidence (leads file).
+598 roles passed every filter; showing the top 40 (max 3 per company). 436 more pass everything except pay evidence (leads file).
 
 | # | Company | Company type / stage (latest round) | Role title | Location / mode | Exp asked | Pay (₹ LPA) + confidence + source | Key stack from JD | Score | Gaps vs my profile | Apply link | Posted date |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -73,11 +73,11 @@
 | Aspen Technology | Software Developer II (Install) | Pune (EMR) (on-site/hybrid (check JD)) | 2+ yrs | 52 | [link](https://aspentech.wd5.myworkdayjobs.com/AspenTech/job/Pune-EMR/Software-Developer-II--Install-_R9579) |
 | Aspen Technology | Software Developer II (Dev) | Pune (EMR) (on-site/hybrid (check JD)) | 2+ yrs | 52 | [link](https://aspentech.wd5.myworkdayjobs.com/AspenTech/job/Pune-EMR/Software-Developer-II--Dev-_R9578) |
 | Aatmunn | Software Engineer - Java in Bangalore, Bangalore (Hybrid) | Bengaluru, on-site/hybrid (check JD) | 2+ yrs | 52 | [link](https://www.linkedin.com/jobs/view/4487860422/) |
-| Pluang | Software Engineer (SDE-1) | Gurgaon, Haryana, India (hybrid) | 0+ yrs | 52 | [link](https://www.linkedin.com/jobs/view/4489341033/) |
+| Pluang | Software Engineer | Gurugram, Haryana, India (hybrid) | 0+ yrs | 52 | [link](https://www.linkedin.com/jobs/view/4489342033/) |
 
 ## Rejected after the title filter, by reason
 
-- title doesn't say software: 635
+- title doesn't say software: 636
 - 4+ yrs asked: 218
 - pay below bar: 163
 - 5+ yrs asked: 163

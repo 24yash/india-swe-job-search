@@ -21,7 +21,6 @@ Cadence Design Systems,EDA software MNC,likely,"India SE I 16.6 (below), SE II 2
 Google,Global product MNC (public),likely,"Levels.fyi India L3 44.8, L4 71.8 LPA median TC",own job board,80,6,0,2026-11-15,hiring now
 Juspay,Late-stage Indian fintech,likely,Fintech unicorn,own job board,9,6,0,2026-11-15,hiring now
 Oracle,Global product MNC (public),likely,Levels.fyi India IC-2 median TC 26.5 LPA,own job board,10,6,0,2026-11-15,hiring now
-Texas Instruments,Semiconductor MNC,likely,"Levels.fyi India level 24 median TC 26.0, 26 38.2 LPA (checked 11 Nov 2026)",own job board,15,6,0,2026-11-15,hiring now
 AMD,Semiconductor MNC (software roles),likely,Levels.fyi India SE median TC 53.6 LPA; L5 (entry) 27.9 LPA (Nov 2026),own job board,13,5,0,2026-11-15,hiring now
 Arista Networks,Public networking product,likely,"Levels.fyi India grade 2 25.7, 3L 41.3 LPA median TC",own job board,14,5,0,2026-11-15,hiring now
 Arm,Semiconductor IP,likely,"Levels.fyi India SE median TC 67.0 LPA; Grade 2 (entry) 21.9, Grade 3 32.0 LPA (Nov 2026)",own job board,10,5,0,2026-11-15,hiring now
@@ -32,6 +31,7 @@ Micron Technology,Semiconductor MNC,likely,"India E1 13.9 (yoe 1), E2 24.1 LPA (
 NVIDIA,Global product MNC,likely,Top-tier bands,own job board,8,5,0,2026-11-15,hiring now (new since last run)
 PhonePe,Late-stage Indian fintech,likely,Levels.fyi India SE1 median TC 28.9 LPA,own job board,14,5,0,2026-11-15,hiring now
 Safe Security,Cyber-risk SaaS,likely,"India SE median TC 31.5 LPA (levels.fyi, Nov 2026)",own job board,16,5,0,2026-11-15,hiring now
+Texas Instruments,Semiconductor MNC,likely,"Levels.fyi India level 24 median TC 26.0, 26 38.2 LPA (checked 11 Nov 2026)",own job board,15,5,0,2026-11-15,hiring now
 Tower Research Capital,HFT firm,likely,Levels.fyi India overall median TC 72.7 LPA (all levels),own job board,6,5,0,2026-11-15,hiring now
 Yubi,Debt fintech,likely,"India SE median TC 34.8 LPA (levels.fyi, Nov 2026)",own job board,7,5,0,2026-11-15,hiring now
 American Express,Global payments MNC,likely,Levels.fyi India SE II median TC 24.3 LPA,own job board,4,4,0,2026-11-15,hiring now
@@ -258,6 +258,7 @@ CommScope,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,
 Commure,Product company,unclear,levels.fyi India SE page has no salary figures (Nov 2026),own job board,4,0,1,never (so far),pay unverified — check levels.fyi
 Compunet Connections,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Comviva,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
+Conduent,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Continental,Global product,unclear,not yet checked,own job board,2,0,1,never (so far),pay unverified — check levels.fyi
 Credgenics,Fintech SaaS,unclear,Bands vary,own job board,1,0,1,never (so far),pay unverified — check levels.fyi
 CredHive,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
@@ -312,15 +313,18 @@ Logical Wings Infoweb Private Limited | Enterprise Software Development,Discover
 LogicMonitor,moreThanFAANGM (product companies list),unclear,"India SE median 23.8 LPA, no level split: borderline (levels.fyi, Nov 2026)",own job board,1,0,1,never (so far),pay unverified — check levels.fyi
 "Logile, Inc.",,unclear,no levels.fyi India data (checked 11 Nov 2026),own job board,2,0,1,never (so far),pay unverified — check levels.fyi
 Loylogic,,unclear,"small startup, not checked in depth; no pay data found (Nov 2026)",own job board,1,0,1,never (so far),pay unverified — check levels.fyi
+MatrixCare,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 MEDFAR,,unclear,,own job board,1,0,1,never (so far),pay unverified — check levels.fyi
 Metaforms,Nexus-backed startup (ISJB),unclear,not yet checked,own job board,8,0,1,never (so far),pay unverified — check levels.fyi
 MetLife,Insurance tech centre,unclear,Levels.fyi India overall 24.6 LPA — borderline,own job board,1,0,1,never (so far),pay unverified — check levels.fyi
+MindzMap | Digital Solutions,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Mizuho,,unclear,,own job board,1,0,1,never (so far),pay unverified — check levels.fyi
 Modulr,,unclear,no levels.fyi India data (checked 14 Nov 2026),own job board,1,0,1,never (so far),pay unverified — check levels.fyi
 MyGlamm,Accel-backed startup (ISJB),unclear,no levels.fyi India data (checked 14 Nov 2026),own job board,1,0,1,never (so far),pay unverified — check levels.fyi
 N-able,IT management SaaS,unclear,no levels.fyi India data (checked 11 Nov 2026),LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Netcomm IT Solutions Pvt. Ltd.,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Network Solutions,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
+NeuroDrift,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 NewSpace Research and Technologies,,unclear,"small startup, not checked in depth; no pay data found (Nov 2026)",own job board,1,0,1,never (so far),pay unverified — check levels.fyi
 Newton School,Nexus-backed startup (ISJB),unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 NikahForever,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
@@ -338,6 +342,7 @@ Perennation Computer Solutions Global Private Limited,Discovered via LinkedIn �
 Pine Labs,Payments (listed),unclear,Bands vary,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Platform Science,Fleet SaaS,unclear,Levels.fyi India overall 20.8 LPA — borderline,own job board,2,0,1,never (so far),pay unverified — check levels.fyi
 Plum HQ,Peak XV-backed startup (ISJB),unclear,no levels.fyi India data (checked 14 Nov 2026),own job board,1,0,1,never (so far),pay unverified — check levels.fyi
+PPFAS Mutual Fund,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Prudent Corporate Advisory Services Ltd.,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Quanteon Solutions,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,1,0,1,never (so far),pay unverified — check levels.fyi
 Questhiring,Discovered via LinkedIn — add to tiers.json,unclear,not yet checked,LinkedIn generic search only,2,0,1,never (so far),pay unverified — check levels.fyi
