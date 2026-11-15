@@ -34,7 +34,7 @@ To use your own requirements:
 1. Edit **`profile.json`**, at minimum:
    - `max_min_years`: the highest "N+ years" ask you'll accept;
    - `min_pay_lpa`: your pay floor;
-   - `title.include` / `title.exclude`: which titles count;
+   - `title`: which titles count (see *Filters* below: core `include`, the `exclude` lists, and opt-in `families` such as `ai`, `infra`, `data`);
    - `stack`: keywords and weights for your skills;
    - `gaps`: skills you lack, flagged per role;
    - `exclude_companies`: **add your current employer**;
@@ -46,6 +46,7 @@ To use your own requirements:
    - About 1 minute: every company job board is crawled, and the shortlist and dashboard are rebuilt.
    - Then LinkedIn runs in the background (light mode, ~5–15 min) and rebuilds the dashboard every ~40 postings. Progress: `tail -f output/linkedin.log`.
    - For an occasional exhaustive pass (hours), run `python3 crawl.py --sources linkedin --deep`.
+   - LinkedIn progress is saved every ~2 minutes (`linkedin.checkpoint_seconds`) with atomic writes, network drops are retried for ~16 minutes, and re-running the same command on the same day resumes the company sweep where it stopped. Keep a laptop plugged in for `--deep`: on battery it may sleep.
 3. Open or reload `dashboard.html`; reload again later to see the LinkedIn results. Your marks carry over (see *Dashboard* below).
 
 ## Quick start (AI agent)
@@ -73,6 +74,7 @@ profile.json  companies.json  tiers.json          ← your criteria, boards craw
         ├─ output/jobs-<date>.csv              roles passing every filter, ranked
         ├─ output/leads-unverified-pay-<date>.csv   pass everything except pay evidence
         ├─ output/rejected-<date>.csv          dropped roles + reason (to audit the filters)
+        ├─ output/rejected-titles-<date>.csv   roles dropped by title alone
         ├─ output/company-bank-<date>.csv      every tracked company: hiring now / quiet / below bar
         └─ output/raw/<source>.json            latest raw data per source (git-ignored); a failed or slow
                                                source keeps its previous data instead of emptying the results
@@ -84,7 +86,7 @@ profile.json  companies.json  tiers.json          ← your criteria, boards craw
 | Source | Covers |
 |---|---|
 | Greenhouse, Lever, Ashby, SmartRecruiters public APIs | Stripe, Databricks, Rubrik, MongoDB, Razorpay, Groww, CRED, Meesho, Snowflake, Sarvam, Freshworks, Swiggy… |
-| Workday search API | Cisco, Salesforce, Adobe, eBay, Mastercard, Target, PayPal, Walmart Global Tech, Citi, Capital One, Cadence… |
+| Workday search API (each board's own India facet: every India posting, not a capped keyword search) | Cisco, Salesforce, Adobe, eBay, Mastercard, Target, PayPal, Walmart Global Tech, Citi, Capital One, Cadence… |
 | Oracle Recruiting Cloud, Eightfold (PCSX and the older v2 API), Rippling public feeds | JPMorgan Chase, American Express, Oracle, Honeywell, BNY, Citi, Qualcomm, Micron, Autodesk, Microsoft, ThoughtSpot, DTCC, HSBC, Netflix, Ericsson |
 | Company portals (`portals/`: one small reader per site, plus a generic job-links reader) | Apple, Goldman Sachs, Uber, Juspay, Urban Company, ShareChat, Nutanix, Intuit, D. E. Shaw India |
 | Careers-site sitemaps + schema.org JobPosting pages (`portals/sitemap.py`) | Phenom, iCIMS, Avature and SuccessFactors sites and custom ones: Fiserv, WEX, Disney, Arm, BlackRock, Moody's, BCG, Lowe's…; Meta (every job page read once, then cached by ID) and Millennium |
@@ -100,12 +102,21 @@ Add a company: `python3 discover_ats.py <slug> …` finds its board (Workday: `-
 
 ### Filters (in order; each rejection records its reason)
 1. India location.
-2. Title include/exclude regexes, with word boundaries so team names like "Research Platform" aren't dropped.
-3. Contract, contract-to-hire or intern wording.
-4. Company pay below the bar, including per-level floors (`below_title`).
-5. Experience asked: the smallest "N+ years" or "N–M years" in the job description; years in the title override it.
-6. A posted INR pay range below the floor.
-7. Pay confidence: **Posted** (stated in the JD) › **Strong** (levels.fyi evidence in `tiers.json`) › **Likely** (tier judgement) › **Unverified** (goes to leads, not the shortlist).
+2. Title, in this order (all regexes in `profile.json` `title`):
+   - `exclude`: seniority (including MTS-3+ and SDE-4+), intern/contract, and work that isn't development (SRE/DevOps, data engineering, QA/SDET, recruiters, technical writers, production support), on the whole title;
+   - `exclude_head`: words that also name teams or products (manager, lead, director, architect, test, security engineer…), checked only against the title's head when the head is a core title, so "SWE II, Ads Manager" stays and "Engineering Manager" goes;
+   - `exclude_level`: III / 3 numerals don't drop a title; the role is dropped only if the job description states no years or more than `max_min_years`;
+   - `exclude_client` / `exclude_domain`: stack or domain words (frontend, mobile, hardware design…) that drop a title unless it also carries a strong developer marker (`client_override`, `core_override`, or any core title). Empty `exclude_client` keeps frontend and mobile roles;
+   - `include`: core development titles (software engineer/developer in any spelling, SDE/SWE, backend, full stack, MTS, FDE, Programmer Analyst, "<language> developer"…);
+   - `exclude_unless_core`: drops a *non*-core title that names non-development work (data engineering, data science, sales, security operations, network, electrical…): "Security Engineer" goes, "Software Engineer - Security" stays;
+   - `families` + `families_enabled`: titles with no role word ("Engineer - Target India", "AI Engineer") pass only if their family is enabled **and** the job description shows development work (`software_jd`: at least two development terms, more than hardware/ops penalty terms, and at least one term that means building software). A disabled family keeps its titles out even when `generic` would match.
+   Every row carries `role_family`, and the dashboard tags non-core rows. `tests/test_titles.py` holds the audited cases.
+3. Profile fit (`profile.json` `fit`): development tracks that don't transfer from your profile are dropped. The shipped example drops embedded/firmware and CRM/low-code platform roles (Salesforce, ServiceNow, Guidewire configuration, SAP ABAP…). A track drops a role when the title names it, when the job description names the role ("As a QA Engineer…"), or when the track's terms outnumber application-stack terms (`fit.app_terms`); a title saying backend / full stack / web / Java overrides it. The shipped example also drops QA and pre-sales work. Remove a track from `exclude_tracks` to keep those roles. Job descriptions for titles with no role word must show at least one term that means building software, not just Python or C.
+4. Contract, contract-to-hire or intern wording.
+5. Company pay below the bar, including per-level floors (`below_title`).
+6. Experience asked: the smallest "N+ years" or "N–M years" in the job description; years in the title override it.
+7. A posted INR pay range below the floor.
+8. Pay confidence: **Posted** (stated in the JD) › **Strong** (levels.fyi evidence in `tiers.json`) › **Likely** (tier judgement) › **Unverified** (goes to leads, not the shortlist).
 
 ### Score (0–100)
 | Part | Points | How |

@@ -11,9 +11,13 @@ Read only: it calls public GET/search endpoints and never applies or signs in.
 """
 import argparse
 import collections
+import contextlib
 import csv
+import fcntl
 import html
+import io
 import json
+import os
 import re
 import sys
 import threading
@@ -31,7 +35,53 @@ UA = {"User-Agent": "Mozilla/5.0 (job-search research script; read-only)"}
 NOW = datetime.now(timezone.utc)  # for posting ages
 TODAY = datetime.now().strftime("%Y-%m-%d")  # local date, for file names and history (matches report.py)
 
+def write_atomic(path, text):
+    """Write through a temp file and a rename, so a crash mid-write or a reader in another process
+    (a LinkedIn run and a board re-crawl can overlap) never sees half a file."""
+    path = Path(path)
+    tmp = path.with_name(f".{path.name}.{os.getpid()}.{threading.get_ident()}.tmp")
+    tmp.write_text(text)
+    os.replace(tmp, path)
+
+
+def csv_text(cols, rows):
+    buf = io.StringIO()
+    w = csv.DictWriter(buf, cols)
+    w.writeheader()
+    w.writerows(rows)
+    return buf.getvalue()
+
+
+@contextlib.contextmanager
+def output_lock():
+    """One output rebuild at a time across processes. Not re-entrant: take it once, at the outermost call."""
+    OUT.mkdir(parents=True, exist_ok=True)
+    with open(OUT / ".rebuild.lock", "w") as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            fcntl.flock(f, fcntl.LOCK_UN)
+
+
+def _rx(v):
+    """A profile regex: a string, or a list of alternatives (each wrapped in a group, so an anchor or an inner '|'
+    can't leak into its neighbours). Lists make the rules editable item by item instead of by string surgery."""
+    return v if isinstance(v, str) else "|".join(f"(?:{a})" for a in v) if v else r"(?!)"
+
+
+def _compile_rules(node):
+    """Turn every list of regex alternatives in the profile's rule sections into one pattern string."""
+    if isinstance(node, dict):
+        return {k: (_rx(v) if isinstance(v, list) and all(isinstance(x, str) for x in v) and k not in ("families_enabled", "queries", "cities",
+                                                                                                        "city_queries", "india_markers", "home_markers", "exclude_companies")
+                    else _compile_rules(v)) for k, v in node.items()}
+    return node
+
+
 PROFILE = json.loads((ROOT / "profile.json").read_text())
+PROFILE["title"] = _compile_rules(PROFILE["title"])
+PROFILE["fit"] = _compile_rules(PROFILE.get("fit", {}))
 INDIA = PROFILE["location"]["india_markers"]
 HOME = PROFILE["location"]["home_markers"]
 
@@ -66,7 +116,19 @@ def get(url, **kw):
 
 
 def post(url, body, **kw):
-    r = SESSION.post(url, json=body, timeout=30, **kw)
+    """POST with the same patience as get(): back off on 429 and 5xx, retry dropped connections."""
+    for attempt in range(5):
+        try:
+            r = SESSION.post(url, json=body, timeout=30, **kw)
+        except (requests.ConnectionError, requests.Timeout):
+            if attempt == 4:
+                raise
+            time.sleep(2 ** attempt * 3)
+            continue
+        if r.status_code != 429 and r.status_code < 500:
+            break
+        if attempt < 4:
+            time.sleep(2 ** attempt * 3)
     r.raise_for_status()
     return r.json()
 
@@ -119,9 +181,111 @@ def in_india(loc):
     return not (hits <= {", in"} and ONLY_IN_CODE.search(l))
 
 
+def title_family(title):
+    """'core', an enabled family from profile.json `title.families` (currently 'ai', 'generic'), or None if the title
+    doesn't fit. Order: exclude (always) → exclude_client / exclude_domain (unless a developer marker or core title)
+    → include (core) → exclude_unless_core → families (a disabled family keeps its titles out)."""
+    T = PROFILE["title"]
+    t = re.sub(r"\s+", " ", title.lower()).strip()  # "Software  Engineer" (double space) is still a software engineer
+    if re.search(T["exclude"], t):  # seniority, eligibility, non-developer role types
+        return None
+    # words that also name teams or products ('Ads Manager', 'Security Engineering', 'Test Infrastructure'): when the
+    # title's head (before ' - ', ',', '(' …) is a core development title, only the head can disqualify it
+    head = re.split(r"\s+[-–—|:/]\s+|\s*[,(]\s*|\s*[–—]\s*", t, maxsplit=1)[0]
+    scope = head if re.search(T["include"], head) else t
+    if re.search(T.get("exclude_head", r"(?!)"), scope):
+        return None
+    if re.search(T.get("exclude_client", r"(?!)"), t) and not re.search(T.get("client_override", r"(?!)"), t):
+        return None  # client-side stack words (empty by default: frontend and mobile roles are kept)
+    if (re.search(T.get("exclude_domain", r"(?!)"), t) and not re.search(T.get("core_override", r"(?!)"), t)
+            and not re.search(T["include"], t)):  # any core title wins: 'Software Development Engineer II, ... Workplace Support Tech'
+        return None  # support / hardware-design titles out; 'ML Engineer II - Backend' kept by its marker
+    if re.search(T["include"], t):
+        return "core"
+    if re.search(T.get("exclude_unless_core", r"(?!)"), t):  # 'Security Engineer' out, 'Software Engineer - Security' kept above
+        return None
+    for name, rx in T.get("families", {}).items():  # in order: a title in a disabled family stays out,
+        if re.search(rx, t):                          # even if a later family ('generic') would match it
+            return name if name in T.get("families_enabled", []) else None
+    return None
+
+
 def title_ok(title):
-    t = title.lower()
-    return (re.search(PROFILE["title"]["include"], t) and not re.search(PROFILE["title"]["exclude"], t))
+    """The cheap gate every reader applies before fetching a description."""
+    return title_family(title) is not None
+
+
+def needs_software_jd(title, family):
+    """Titles that don't say 'software' by themselves: the description has to show software work."""
+    return family != "core" or bool(re.search(PROFILE["title"].get("jd_check_titles", r"(?!)"), title.lower()))
+
+
+def jd_terms(pattern, text, group=True):
+    """Distinct terms a pattern finds, so 'api' and 'APIs' count once."""
+    terms = {re.sub(r"(?<=\w{3})s$", "", m.group(0).lower()) for m in re.finditer(pattern, text or "", re.I)}
+    if not group:
+        return terms
+    out = set(terms)
+    for name, rx in (("sql/html/css", r"sql|html5?|css3?"),  # query/markup languages count once together
+                     ("bus protocols", r"spi|i2c|uart|jtag"),  # so do hardware bus protocols
+                     ("programming languages",  # and bare language names: 'C, C++, Java, Python' is one fact, not four
+                      r"java|python|golang|go|c|c\+\+|c#|in c|javascript|typescript|kotlin|scala|rust|ruby|swift|dart|php|perl|elixir|\.net|dot ?net")):
+        group = {t for t in out if re.fullmatch(rx, t)}
+        if group:
+            out = (out - group) | {name}
+    return out
+
+
+def dev_vocabulary():
+    """The one development vocabulary: general terms plus the strong ones (strong is a subset by construction)."""
+    cfg = PROFILE["title"]["software_jd"]
+    return f"(?:{cfg['signals']})|(?:{cfg.get('strong_signals', r'$^')})"
+
+
+def software_jd(text, strict=True, allow_empty=True):
+    """Does the description show development work? Development terms come from one vocabulary (general + strong);
+    penalty terms are hardware / plant / ops-admin / QA words. Judged by dominance, never by subtraction.
+    strict (generic / ai titles): >= min_signals development terms, more development than penalty terms, and at
+    least one strong term (one that means building software). Lenient (MTS, Programmer Analyst, titles that say
+    developer): rejected only when penalty terms outnumber development terms; allow_empty=False also needs one term."""
+    cfg = PROFILE["title"]["software_jd"]
+    sw = len(jd_terms(dev_vocabulary(), text))
+    hw = len(jd_terms(cfg.get("hardware_signals", r"(?!)"), text))
+    if not strict:  # boilerplate JDs (Citi, Pure Storage MTS): only clear hardware/ops evidence rejects
+        # no terms at all: give the benefit of the doubt only when there's barely any text (a truncated JD), not when a
+        # full description says nothing about development (payments operations under a 'Team Developer' title)
+        return sw > hw or (hw == 0 and sw == 0 and (allow_empty == "always" or (allow_empty and len((text or "").strip()) < 400)))
+    strong = len(jd_terms(cfg.get("strong_signals", cfg["signals"]), text))
+    # dominance, not subtraction (one stray word can't cancel the evidence), and at least one term that means building software
+    return sw >= cfg["min_signals"] and sw > hw and strong >= 1
+
+
+def off_profile_track(title, text, family, company=""):
+    """The development track a role belongs to when it doesn't fit the profile (profile.json `fit`), else None.
+    Title naming the track → that track; title silent → the JD needs jd_min track terms and more track terms than
+    web/backend terms. A title that says backend / full stack / web / Java overrides both."""
+    fit = PROFILE.get("fit", {})
+    t = re.sub(r"\s+", " ", title.lower())
+    if re.search(fit.get("track_override", r"(?!)"), t):
+        return None
+    # application-stack terms, one by one (not the whole development vocabulary: 'code review' or 'algorithms' appear in
+    # embedded and web JDs alike, so they can't tell the tracks apart)
+    dev = len(jd_terms(fit.get("app_terms", r"(?!)"), text, group=False))
+    vendor = bool(re.search(fit.get("vendor_employers", r"(?!)"), company.lower())) if company else False
+    for name, tr in fit.get("exclude_tracks", {}).items():
+        if re.search(tr["title"], t) and not (vendor and name == "crm_platform" and family == "core"):
+            return name  # (Workday's own 'Software Engineer, Workday Extend' builds the platform)
+        if name == "crm_platform" and vendor:  # the vendor's own engineers build the platform: only a title can say otherwise
+            continue
+        need = tr["jd_min"] if family == "core" else tr.get("jd_min_non_core", tr["jd_min"])
+        if re.search(tr.get("jd_role", r"(?!)"), text or "", re.I):  # the JD names the role itself: "The Quality Engineer supports…"
+            return name
+        if family == "core" and tr.get("core_needs_role"):  # developers also write tests: only "As a QA Engineer…" counts
+            continue
+        n = len(jd_terms(tr["jd"], text))
+        if n >= need and (n > dev or not tr.get("dominance", True)):  # Apex/SOQL/LWC identify a CRM role outright
+            return name
+    return None
 
 
 def greenhouse(c):
@@ -183,16 +347,52 @@ def smartrecruiters(c):
             break
 
 
+WORKDAY_INDIA_CAP = 3000  # postings per board through the India facet; larger boards are logged
+
+
+def workday_india_facet(api):
+    """The board's own India filter: a country facet ('India'), else every location value in India.
+    Its values are listed in the response's facets; None if the board has neither."""
+    d = post(f"{api}/jobs", {"limit": 1, "offset": 0, "searchText": "", "appliedFacets": {}})
+    country, locations = None, []
+
+    def walk(facets):
+        nonlocal country
+        for f in facets:
+            values = f.get("values") or []
+            if values and "facetParameter" in values[0]:  # a group (locationMainGroup) holding facets
+                walk(values)
+                continue
+            param = f.get("facetParameter", "")
+            if "country" in param.lower():
+                ids = [v["id"] for v in values if (v.get("descriptor") or "").strip().lower() == "india"]
+                if ids:
+                    country = (param, ids)
+            elif param == "locations":
+                locations.extend(v["id"] for v in values if in_india(v.get("descriptor") or ""))
+
+    walk(d.get("facets", []))
+    return country or (("locations", locations) if locations else None)
+
+
 def workday(c):
     host = f"https://{c['tenant']}.{c['wd']}.myworkdayjobs.com"
     api = f"{host}/wday/cxs/{c['tenant']}/{c['site']}"
-    seen, todo = set(), []
-    # Workday has no country filter without facet IDs, so put the place in the search text.
-    for query in ("software engineer", "software engineer Bangalore", "software engineer India", "backend engineer", "software developer India"):
-        offset = 0
-        while offset < 200:
-            d = post(f"{api}/jobs", {"limit": 20, "offset": offset, "searchText": query, "appliedFacets": {}})
+    seen, todo, failed = set(), [], []
+
+    def scan(query, facets, cap):
+        offset, total = 0, None
+        while offset < cap:
+            try:
+                d = post(f"{api}/jobs", {"limit": 20, "offset": offset, "searchText": query, "appliedFacets": facets})
+            except requests.RequestException as e:  # keep the pages already read instead of losing the whole board
+                if offset == 0:
+                    raise
+                failed.append(f"Workday page at offset {offset} failed ({type(e).__name__})")
+                break
             posts = d.get("jobPostings", [])
+            if total is None:
+                total = d.get("total", 0)  # Workday reports the total on the first page only
             for j in posts:
                 path = j.get("externalPath", "")
                 if path in seen or not title_ok(j.get("title", "")):
@@ -202,8 +402,22 @@ def workday(c):
                 if in_india(loc) or "location" in loc.lower():  # "3 Locations" needs the detail call
                     todo.append(j)
             offset += 20
-            if not posts or offset >= d.get("total", 0):
+            if not posts or offset >= total:
                 break
+        return total
+
+    try:
+        india = workday_india_facet(api)
+    except (requests.RequestException, ValueError) as e:  # facet list unreadable: fall back to keyword searches
+        print(f"  {c['name']}: Workday facet list failed ({type(e).__name__}); using keyword searches", file=sys.stderr, flush=True)
+        india = None
+    if india:  # every India posting, whatever its title: the title filter runs here, not in Workday's search
+        total = scan("", {india[0]: india[1]}, WORKDAY_INDIA_CAP)
+        if total and total > WORKDAY_INDIA_CAP:
+            print(f"  {c['name']}: {total} India postings, read the first {WORKDAY_INDIA_CAP}", file=sys.stderr, flush=True)
+    else:  # no India filter on this board: search text, which caps results and only finds the words we type
+        for query in ("software engineer", "software engineer Bangalore", "software engineer India", "backend engineer", "software developer India"):
+            scan(query, {}, 200)
 
     def detail(j):  # one request per job: run a few at a time instead of one after another
         try:
@@ -217,6 +431,8 @@ def workday(c):
 
     with ThreadPoolExecutor(6) as pool:
         yield from filter(None, pool.map(detail, todo))
+    if failed:  # a partial listing must not look complete: crawl() then merges in the previous crawl's postings
+        raise RuntimeError(f"{failed[0]}; kept the postings read before it")
 
 
 def oracle(c):
@@ -405,6 +621,22 @@ class RateLimited(Exception):
     pass
 
 
+LI_NET_RETRY_WAITS = (15, 30, 60, 120, 240, 480)  # ~16 min in all: rides out sleep/wake, Wi-Fi changes, brief outages
+
+
+def li_request(url, params):
+    """One LinkedIn GET that waits out network drops (the laptop sleeping, Wi-Fi switching) instead of ending
+    the whole pass; only a network that stays down for ~16 min raises. HTTP errors are returned as usual."""
+    for wait in LI_NET_RETRY_WAITS + (None,):
+        try:
+            return SESSION.get(url, timeout=30, params=params)
+        except (requests.ConnectionError, requests.Timeout, requests.exceptions.ChunkedEncodingError) as e:
+            if wait is None:
+                raise
+            print(f"  LinkedIn: network error ({type(e).__name__}); retrying in {wait}s", file=sys.stderr, flush=True)
+            time.sleep(wait)
+
+
 def li_get(url, **params):
     """Every LinkedIn request goes through here: one request per LI_GAP seconds across both LinkedIn
     passes, and a growing back-off on 429. After 4 consecutive 429s, LinkedIn has blocked us for now,
@@ -414,7 +646,7 @@ def li_get(url, **params):
             wait = LI_STATE["last"] + PROFILE["linkedin"]["seconds_between_requests"] - time.time()
             if wait > 0:
                 time.sleep(wait)
-            r = SESSION.get(url, timeout=30, params=params)
+            r = li_request(url, params)
             LI_STATE["last"] = time.time()
             if r.status_code != 429:
                 LI_STATE["strikes"] = 0
@@ -453,7 +685,6 @@ def linkedin(c):
     main() looks each company up in companies.json / tiers.json afterwards."""
     cfg = PROFILE["linkedin"]
     window = f"r{PROFILE['max_age_days'] * 86400}"
-    skip = c.get("skip_companies", set())
     mode = cfg["deep"] if DEEP else {}
     if c.get("sweep_companies") is None:
         searches = [({"keywords": q, "location": "India", "f_TPR": window, "f_E": "2,3,4"}, cfg["max_results_per_query"], None)
@@ -467,25 +698,37 @@ def linkedin(c):
     seen = LI_SEEN
     c["searched"] = []
     label = "company sweep" if c.get("sweep_companies") is not None else "role search"
+    last_save = time.time()
     for n, (params, limit, only) in enumerate(searches, 1):
         if n % 20 == 0 or n == len(searches):  # the LinkedIn passes are the slow part, so show where they are
             print(f"  LinkedIn {label}: {n}/{len(searches)} searches, {len(seen)} postings so far", file=sys.stderr, flush=True)
-        if only:
+        if n > 1 and c.get("checkpoint") and time.time() - last_save >= cfg.get("checkpoint_seconds", 120):
+            # Save on a timer too: a company sweep can go many searches without a fitting posting,
+            # and a crash, sleep or kill would otherwise lose every search since the last save.
+            c["checkpoint"]()
+            last_save = time.time()
+        yield from linkedin_search(c, params, limit, only, seen)
+        if only:  # mark a company searched only once its search has finished, so an interrupted one is redone
             c["searched"].extend(only)
-        for jid, title, comp, loc, date, company_page in linkedin_cards(params, limit):
-            nc = norm(comp)
-            if jid in seen or (only and not any(nc.startswith(o) or o.startswith(nc) for o in only)):
-                continue
-            seen.add(jid)
-            if not title_ok(title) or is_excluded_company(comp) or nc in skip \
-                    or on_own_board(c["boards"]["titles"], comp, title=title):
-                continue
-            if jid not in LI_DETAILS:
-                d = li_get(f"{LI_API}/jobPosting/{jid}")
-                i = d.text.find("show-more-less-html__markup") if d.ok else -1
-                LI_DETAILS[jid] = strip_html(d.text[i:i + 20000]) if i > 0 else ""
-            yield Job(comp, title, loc, f"https://www.linkedin.com/jobs/view/{jid}/", parse_ts(date),
-                      LI_DETAILS[jid], remote="remote" in loc.lower(), meta={"source": "LinkedIn (aggregator)", "company_page": company_page})
+
+
+def linkedin_search(c, params, limit, only, seen):
+    """The postings from one LinkedIn guest search that pass the cheap filters, with their descriptions."""
+    skip = c.get("skip_companies", set())
+    for jid, title, comp, loc, date, company_page in linkedin_cards(params, limit):
+        nc = norm(comp)
+        if jid in seen or (only and not any(nc.startswith(o) or o.startswith(nc) for o in only)):
+            continue
+        seen.add(jid)
+        if not title_ok(title) or is_excluded_company(comp) or nc in skip \
+                or on_own_board(c["boards"]["titles"], comp, title=title):
+            continue
+        if jid not in LI_DETAILS:
+            d = li_get(f"{LI_API}/jobPosting/{jid}")
+            i = d.text.find("show-more-less-html__markup") if d.ok else -1
+            LI_DETAILS[jid] = strip_html(d.text[i:i + 20000]) if i > 0 else ""
+        yield Job(comp, title, loc, f"https://www.linkedin.com/jobs/view/{jid}/", parse_ts(date),
+                  LI_DETAILS[jid], remote="remote" in loc.lower(), meta={"source": "LinkedIn (aggregator)", "company_page": company_page})
 
 
 FETCHERS = {f.__name__: f for f in (greenhouse, lever, ashby, smartrecruiters, workday, oracle, rippling, eightfold, recruitee, portal, amazon, microsoft, atlassian, google, linkedin)}
@@ -652,8 +895,18 @@ def score_parts(stack, level, pay_frac, quality, fresh):
 def evaluate(job, company, max_age):
     if "<" in job.company or len(job.company) > 120:
         return None, "malformed company name (parser)"
-    if not title_ok(job.title):
+    family = title_family(job.title)
+    if family is None:
         return None, "title/level"
+    says_developer = bool(re.search(r"\bdevelopers?\b|\bprogrammers?\b", job.title.lower()))
+    lenient = family == "core" or says_developer
+    # core titles (MTS, Programmer Analyst) carry their own evidence: a boilerplate JD with no tech words keeps them (Citi);
+    # a generic title that merely says 'developer' gets that benefit only when the JD is too short to tell (truncated)
+    if needs_software_jd(job.title, family) and not software_jd(job.text, strict=not lenient, allow_empty="always" if family == "core" else lenient):
+        return None, f"title doesn't say software ({family}) and the JD doesn't show software work"
+    track = off_profile_track(job.title, job.text, family, job.company)
+    if track:
+        return None, f"{track.replace('_', ' ')} role (outside the profile's development track)"
     ok, mode = location_mode(job, company)
     if not ok:
         return None, mode
@@ -665,6 +918,8 @@ def evaluate(job, company, max_age):
         years, snippet = int(m.group(1)), job.title
     if years is not None and years > PROFILE["max_min_years"]:
         return None, f"{years}+ yrs asked"
+    if re.search(PROFILE["title"].get("exclude_level", r"(?!)"), re.sub(r"\s+", " ", job.title.lower())) and years is None:
+        return None, "title level (III / 3) with no years stated"  # Google's 'Software Engineer III' asking 1-2 yrs stays
     if company.get("below_title") and re.search(company["below_title"], job.title, re.I):
         return None, f"pay below bar at this level ({company['pay_note']})"
     if company["pay"] == "below":
@@ -689,6 +944,7 @@ def evaluate(job, company, max_age):
         "company": job.company,
         "type": company["type"] + (f"; {company['funding']}" if company.get("funding") else ""),
         "title": job.title.strip(),
+        "role_family": family,  # core = explicit development titles; generic / ai = no role word, JD-checked
         "location": mode,
         "exp_asked": f"{years}+ yrs" if years is not None else "not stated",
         "exp_band": exp_band(years),
@@ -728,7 +984,7 @@ def load_raw(name):
 
 def save_raw(name, jobs, note=""):
     RAW.mkdir(parents=True, exist_ok=True)
-    raw_path(name).write_text(json.dumps({"source": name, "fetched_at": NOW.isoformat(timespec="seconds"), "note": note,
+    write_atomic(raw_path(name), json.dumps({"source": name, "fetched_at": NOW.isoformat(timespec="seconds"), "note": note,
                                           "jobs": [asdict(j) | {"posted": j.posted.isoformat() if j.posted else None} for j in jobs]}))
 
 
@@ -746,6 +1002,8 @@ def crawl(company, ctx):
     started = time.time()
     jobs, err = [], None
     is_li = company["ats"] == "linkedin"
+    if is_li:  # lets the LinkedIn fetcher save progress on a timer, between searches
+        company["checkpoint"] = lambda: checkpoint(company, jobs, ctx)
     try:
         for job in FETCHERS[company["ats"]](company):
             jobs.append(job)
@@ -814,7 +1072,7 @@ def keep_open_earlier(name, fresh, max_age):
     with LIVENESS_LOCK:  # merge only our changes: the other pass may have saved in the meantime
         current = json.loads(LIVENESS_FILE.read_text()) if LIVENESS_FILE.exists() else {}
         current.update(updates)
-        LIVENESS_FILE.write_text(json.dumps(current))
+        write_atomic(LIVENESS_FILE, json.dumps(current))
     state.update(updates)
     kept, closed = [], 0
     for j in earlier:
@@ -830,10 +1088,10 @@ def checkpoint(company, jobs, ctx):
     with EVAL_LOCK:
         if jobs is not None:
             save_raw(company["name"], with_previous(company["name"], jobs), "in progress")
-        LI_DETAILS_FILE.write_text(json.dumps(LI_DETAILS))
+        write_atomic(LI_DETAILS_FILE, json.dumps(dict(LI_DETAILS)))  # copy: the other LinkedIn pass keeps adding
         state = ctx["sweep_state"]
         state.update({norm(n): TODAY for n in company.get("searched", [])})
-        (OUT / "sweep-state.json").write_text(json.dumps(state, indent=0))
+        write_atomic(OUT / "sweep-state.json", json.dumps(state, indent=0))
         evaluate_all(ctx, quiet=jobs is not None)
 
 
@@ -865,12 +1123,9 @@ def write_bank(companies, activity, direct, sweep):
                      "covered_by": "own job board" if key in direct else "LinkedIn company sweep" if key in swept else "LinkedIn generic search only",
                      "eng_postings_seen_today": act["seen"], "fitting_today": act["fitting"], "leads_today": act["leads"],
                      "last_date_with_fitting_role": fit_dates[-1] if fit_dates else "never (so far)", "status": status})
-    hist_file.write_text(json.dumps(hist, indent=0))
+    write_atomic(hist_file, json.dumps(hist, indent=0))
     rows.sort(key=lambda r: (-r["fitting_today"], -r["leads_today"], r["company"].lower()))
-    with open(OUT / f"company-bank-{stamp}.csv", "w", newline="") as f:
-        w = csv.DictWriter(f, list(rows[0].keys()))
-        w.writeheader()
-        w.writerows(rows)
+    write_atomic(OUT / f"company-bank-{stamp}.csv", csv_text(list(rows[0].keys()), rows))
 
 
 def build_context(args):
@@ -905,8 +1160,9 @@ def build_context(args):
     # Light runs: companies active last run, then top-tier ones (quality >= 13: the big employers with no
     # readable job board), each group least-recently-searched first; deep runs rotate through the whole bank.
     tier = PROFILE["linkedin"]["company_sweep"]["top_tier_quality"]
-    sweep.sort(key=lambda n: (not active(n), not DEEP and quality.get(norm(n), 0) < tier, norm(n) in state,
-                              state.get(norm(n), ""), -quality.get(norm(n), 0)))
+    # Companies already searched today go last, so re-running after an interrupted run resumes where it stopped.
+    sweep.sort(key=lambda n: (state.get(norm(n)) == TODAY, not active(n), not DEEP and quality.get(norm(n), 0) < tier,
+                              norm(n) in state, state.get(norm(n), ""), -quality.get(norm(n), 0)))
     # Companies whose own board no script can read (bot walls, robots.txt, sign-in, token-gated search) are searched
     # every run, on top of the rotating budget: LinkedIn is the only way the pipeline reads them (tiers.json "linkedin_every_run").
     # They are sweep candidates whatever their quality; one that gains a direct source or turns out to pay below the bar drops out.
@@ -933,7 +1189,13 @@ def build_context(args):
 
 def evaluate_all(ctx, quiet=False):
     """Score every source's latest raw file and write the shortlist, leads, rejected, company bank,
-    report table and dashboard. Fast: no network, so it can run after every LinkedIn checkpoint."""
+    report table and dashboard. Fast: no network, so it can run after every LinkedIn checkpoint.
+    Holds the cross-process output lock, so an overlapping crawl waits instead of interleaving writes."""
+    with output_lock():
+        _evaluate_all(ctx, quiet)
+
+
+def _evaluate_all(ctx, quiet=False):
     companies, lookup, direct = ctx["companies"], ctx["lookup"], ctx["direct"]
 
     def resolve(name):
@@ -946,6 +1208,7 @@ def evaluate_all(ctx, quiet=False):
 
     ctx["boards"]["titles"] = titles = board_titles_now(companies)  # boards may have just been re-crawled
     keep, leads, rejected, errors, seen_urls = [], [], [], [], set()
+    title_rejects = []  # kept apart: title drops are many, but an audit must be able to see them
     activity = collections.defaultdict(lambda: {"seen": 0, "fitting": 0, "leads": 0})
     for source in companies:
         jobs, meta = load_raw(source["name"])
@@ -972,7 +1235,9 @@ def evaluate_all(ctx, quiet=False):
                 leads.append(row)
             elif row:
                 keep.append(row)
-            elif why != "title/level":
+            elif why == "title/level":
+                title_rejects.append({"company": job.company, "title": job.title, "location": job.location, "url": job.url})
+            else:
                 rejected.append({"company": job.company, "title": job.title, "location": job.location, "reason": why, "url": job.url})
 
     write_bank(companies, activity, direct, ctx["sweep"])
@@ -997,22 +1262,13 @@ def evaluate_all(ctx, quiet=False):
     for r in keep + leads:
         first_seen.setdefault(r["url"], stamp)
         r["new"] = "NEW" if first_seen[r["url"]] == stamp and len(set(first_seen.values())) > 1 else ""
-    seen_file.write_text(json.dumps(first_seen, indent=0))
+    write_atomic(seen_file, json.dumps(first_seen, indent=0))
 
-    cols = list(keep[0].keys()) if keep else []
-    with open(OUT / f"jobs-{stamp}.csv", "w", newline="") as f:
-        w = csv.DictWriter(f, cols)
-        w.writeheader()
-        w.writerows(keep)
+    write_atomic(OUT / f"jobs-{stamp}.csv", csv_text(list(keep[0].keys()) if keep else [], keep))
     leads.sort(key=lambda r: -r["score"])
-    with open(OUT / f"leads-unverified-pay-{stamp}.csv", "w", newline="") as f:
-        w = csv.DictWriter(f, list(leads[0].keys()) if leads else ["company"])
-        w.writeheader()
-        w.writerows(leads)
-    with open(OUT / f"rejected-{stamp}.csv", "w", newline="") as f:
-        w = csv.DictWriter(f, ["company", "title", "location", "reason", "url"])
-        w.writeheader()
-        w.writerows(rejected)
+    write_atomic(OUT / f"leads-unverified-pay-{stamp}.csv", csv_text(list(leads[0].keys()) if leads else ["company"], leads))
+    write_atomic(OUT / f"rejected-{stamp}.csv", csv_text(["company", "title", "location", "reason", "url"], rejected))
+    write_atomic(OUT / f"rejected-titles-{stamp}.csv", csv_text(["company", "title", "location", "url"], title_rejects))
 
     md = [f"# Job crawl {stamp}", "", f"{len(keep)} roles kept, {len(leads)} leads with unverified pay (see leads CSV), {len(rejected)} rejected after title filter.", "",
           "| # | Company | Type / stage | Role | Location / mode | Exp asked | Pay + confidence | Key stack | Score | Gaps | Link | Posted |",
@@ -1021,7 +1277,7 @@ def evaluate_all(ctx, quiet=False):
         md.append(f"| {i} | {r['company']} | {r['type']} | {r['title']}{f" ({r['reqs']} reqs)" if r['reqs'] > 1 else ""} {r['new']} | {r['location']} | {r['exp_asked']} | {r['pay']} | {r['stack']} | {r['score']} | {r['gaps']} | [link]({r['url']}) | {r['posted']} |")
     if errors:
         md += ["", "## Sources with problems", ""] + [f"- {e}" for e in errors]
-    (OUT / f"jobs-{stamp}.md").write_text("\n".join(md) + "\n")
+    write_atomic(OUT / f"jobs-{stamp}.md", "\n".join(md) + "\n")
 
     import build_dashboard, report  # local modules; imported here to keep crawl.py usable on its own
     report.main([])

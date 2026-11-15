@@ -54,9 +54,15 @@ for text, want in [("Years of Experience: Minimum 6-8 years", 6), ("Experience: 
                    # a bullet after "experience" is not a label: the next bullet's 2 years belong to no requirement here
                    ("- 3+ years of non-internship professional software development experience\n- 2+ years in a fast-moving team", 3)]:
     check(f"labelled experience parsed: {text!r} -> {want}", crawl.min_experience(text)[0] == want, crawl.min_experience(text))
-check("'Mgr' and trailing level-3 titles are senior; Web3 and level-2 titles are not",
-      not crawl.title_ok("Mgr, Software Engineering") and not crawl.title_ok("Software Engineer Apps 3")
-      and crawl.title_ok("Web3 Backend Engineer") and crawl.title_ok("SDE 2 - Data Platform"))
+check("'Mgr' titles are senior; Web3 and level-2 titles are not",
+      not crawl.title_ok("Mgr, Software Engineering") and crawl.title_ok("Web3 Backend Engineer") and crawl.title_ok("SDE 2 - Data Platform"))
+# Level-3 numerals only sometimes mean senior (Google 'Software Engineer III' is L4 and asks 1-2 yrs): the stated years decide.
+row, why = crawl.evaluate(job("Software Engineer III, Full Stack", "Bachelor's degree. 1 year of experience with software development."), company, 30)
+check("level III with 1-2 yrs stated: kept", row is not None, why)
+row, why = crawl.evaluate(job("Software Engineer Apps 3", "Build services."), company, 30)
+check("level 3 with no years stated: dropped", row is None and "title level" in why, why)
+row, why = crawl.evaluate(job("Software Engineer III", "5+ years of experience"), company, 30)
+check("level III asking 5+ yrs: dropped by years", row is None and "5+" in why, why)
 check("level score favours 1-2 years over 3", crawl.level_score("x", 1) > crawl.level_score("x", 3) and crawl.level_score("x", 2) > crawl.level_score("x", 3))
 
 # Score weights: pay and level first, stack never above company quality (a stack can be learned).

@@ -3077,7 +3077,7 @@
    "type": "Global product",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "borderline: Levels.fyi India SE overall median TC 24.7 LPA, no per-level data (checked 14 Nov 2026)"
   },
   {
    "name": "Gen Digital",
@@ -6299,8 +6299,8 @@
    "name": "Protegrity",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE overall median 9.2 LPA (checked 14 Nov 2026)",
    "careers_url": "https://jobs.lever.co/protegrity?location=Bengaluru",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -6671,7 +6671,7 @@
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "borderline: Levels.fyi India SE overall median TC 21.9 LPA, no per-level data (checked 14 Nov 2026)",
    "careers_url": "https://turvo.com/careers/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -7454,7 +7454,7 @@
    "type": "Accel-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "no levels.fyi India data (checked 14 Nov 2026)",
    "careers_url": "https://myglamm.com",
    "source": "Accel-backed startup (ISJB)"
   },
@@ -7976,7 +7976,7 @@
    "type": "Peak XV-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "no levels.fyi India data (checked 14 Nov 2026)",
    "careers_url": "https://plumhq.com",
    "source": "Peak XV-backed startup (ISJB)"
   },
@@ -10414,6 +10414,41 @@
    "quality": 10,
    "pay": "unclear",
    "pay_note": "no levels.fyi India data (checked 11 Nov 2026)"
+  },
+  {
+   "name": "Bain & Company",
+   "type": "Consulting firm (in-house tech)",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "borderline: Levels.fyi India SE overall median TC 22.3 LPA, no per-level data (checked 14 Nov 2026)"
+  },
+  {
+   "name": "MassMutual India",
+   "type": "Insurance MNC captive",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "borderline: Levels.fyi India (MassMutual) SE overall median TC 25.8 LPA, no per-level data (checked 14 Nov 2026)"
+  },
+  {
+   "name": "Vanguard India",
+   "type": "Asset manager captive",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi India data (checked 14 Nov 2026)"
+  },
+  {
+   "name": "Modulr",
+   "type": "UK payments fintech",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi India data (checked 14 Nov 2026)"
+  },
+  {
+   "name": "ServiceChannel",
+   "type": "Facilities SaaS",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi India data (checked 14 Nov 2026)"
   }
  ],
  "services_and_staffing": [
@@ -10573,7 +10608,8 @@
   "WNS",
   "Client of SCHS",
   "SCHS",
-  "SHARDA CONSULTANCY SERVICES"
+  "SHARDA CONSULTANCY SERVICES",
+  "CareerXperts"
  ],
  "staffing_keywords": [
   "Recruitment",

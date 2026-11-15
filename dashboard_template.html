@@ -49,6 +49,7 @@
   .muted { color: var(--muted); font-size: 12px; }
   .badge { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 999px; margin-left: 4px; vertical-align: 1px; }
   .b-new { background: var(--accent-soft); color: var(--accent); }
+  .b-family { background: var(--warn-soft, #fff4e0); color: var(--warn, #8a5a00); }
   .b-sweet { background: var(--good-soft); color: var(--good); font-weight: 600; }
   .b-Posted, .b-Strong { background: var(--good-soft); color: var(--good); }
   .b-Likely { background: var(--warn-soft); color: var(--warn); }
@@ -186,7 +187,7 @@ function renderJobs() {
         <td><button class="toggle" data-open="${id}" title="Details">${isOpen ? "▾" : "▸"}</button></td>
         <td class="score">${j.score}</td>
         <td><div class="co">${esc(j.company)}</div><div class="muted">${esc(j.type)}</div></td>
-        <td>${esc(j.title)}${j.sweet ? '<span class="badge b-sweet" title="Asks 0–2 years and pay is backed by salary data">sweet spot</span>' : ""}${j.isNew && j.inLatest ? '<span class="badge b-new">NEW</span>' : ""}${j.inLatest ? "" : `<span class="badge b-Unverified">no longer listed · last seen ${esc(j.lastSeen)}</span>`}${j.reqs > 1 ? `<span class="muted"> · ${j.reqs} reqs</span>` : ""}</td>
+        <td>${esc(j.title)}${j.sweet ? '<span class="badge b-sweet" title="Asks 0–2 years and pay is backed by salary data">sweet spot</span>' : ""}${j.isNew && j.inLatest ? '<span class="badge b-new">NEW</span>' : ""}${j.family && j.family !== "core" ? `<span class="badge b-family" title="${j.family === "ai" ? "AI / LLM application engineer: kept because the job description shows software development" : "Title doesn't name the role; kept because the job description shows software work"}">${j.family === "ai" ? "AI engineer" : j.family === "infra" ? "infra / SRE" : j.family === "data" ? "data engineering" : "generic title"}</span>` : ""}${j.inLatest ? "" : `<span class="badge b-Unverified">no longer listed · last seen ${esc(j.lastSeen)}</span>`}${j.reqs > 1 ? `<span class="muted"> · ${j.reqs} reqs</span>` : ""}</td>
         <td>${esc(j.city)}<div class="muted">${esc(j.location)}</div></td>
         <td>${esc(j.exp)}</td>
         <td><span class="badge b-${conf}">${esc(j.payConf)}</span><div class="muted">${esc(j.pay.replace(/^(Strong|Likely ≥20|Unverified) — /, ""))}</div></td>

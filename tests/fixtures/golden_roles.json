@@ -1,0 +1,803 @@
+[
+ {
+  "company": "eBay",
+  "title": "Platform Engineer, Java Fmwk",
+  "expect": "keep",
+  "why": "Spring Boot framework dev; wrongly dropped by JD subtraction",
+  "url": "https://ebay.wd5.myworkdayjobs.com/apply/job/Bengaluru-India/Platform-Engineer--Java-Fmwk_R0076364"
+ },
+ {
+  "company": "Sarvam AI",
+  "title": "Performance Engineer, Inference",
+  "expect": "keep",
+  "why": "C++/CUDA serving; wrongly dropped (lexicon gap)",
+  "url": "https://jobs.ashbyhq.com/sarvam/7d2faba2-21a1-4a8a-aff5-f708a6959195"
+ },
+ {
+  "company": "Sarvam AI",
+  "title": "Strategic Deployment Engineer, Chanakya",
+  "expect": "keep",
+  "why": "FDE role; wrongly dropped by JD subtraction",
+  "url": "https://jobs.ashbyhq.com/sarvam/87d5a5af-ea7d-4b94-a0fa-81dc64e54907"
+ },
+ {
+  "company": "Target",
+  "title": "Engineer - Target India",
+  "expect": "keep",
+  "why": "generic title, Java/Spring JD",
+  "url": "https://target.wd5.myworkdayjobs.com/targetcareers/job/Tower-02-Manyata-Embassy-Business-Park-Racenahali--Nagawara-Villages-Outer-Ring-Rd-Bangalore-540065/Engineer---Target-India_R0000453035"
+ },
+ {
+  "company": "CrowdStrike",
+  "title": "Engineer II - Cloud",
+  "expect": "keep",
+  "why": "cloud backend development",
+  "url": "https://crowdstrike.wd5.myworkdayjobs.com/crowdstrikecareers/job/India---Pune/Engineer-II---SRE_R29229"
+ },
+ {
+  "company": "Citi",
+  "title": "Application Development Programmer Analyst",
+  "expect": "keep",
+  "why": "Java/Spring dev, boilerplate JD",
+  "url": "https://citi.eightfold.ai/careers/job/859038902221"
+ },
+ {
+  "company": "Citi",
+  "title": "Java Spark developer",
+  "expect": "keep",
+  "why": "core Java dev",
+  "url": "https://citi.eightfold.ai/careers/job/859038003239"
+ },
+ {
+  "company": "Pure Storage",
+  "title": "Member of Technical Staff, Portworx - Backend (Go, Kubernetes)",
+  "expect": "keep",
+  "why": "MTS backend",
+  "url": "https://job-boards.greenhouse.io/purestorage/jobs/8317409"
+ },
+ {
+  "company": "Pure Storage",
+  "title": "Member of Technical Staff - FlashArray",
+  "expect": "keep",
+  "why": "MTS storage software",
+  "url": "https://job-boards.greenhouse.io/purestorage/jobs/8226182"
+ },
+ {
+  "company": "Google",
+  "title": "Forward Deployed Engineer, GenAI, YouTube",
+  "expect": "keep",
+  "why": "FDE",
+  "url": "https://www.google.com/about/careers/applications/jobs/results/112620530372092614"
+ },
+ {
+  "company": "Notion",
+  "title": "Forward Deployed Engineer, India",
+  "expect": "keep",
+  "why": "FDE",
+  "url": "https://jobs.ashbyhq.com/notion/79c18580-c927-456c-9d5f-72efbc6c43cb"
+ },
+ {
+  "company": "Mastercard",
+  "title": "AI Engineer II",
+  "expect": "keep",
+  "why": "agentic AI services",
+  "url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers/job/Pune-India/AI-Engineer-II_R-294112"
+ },
+ {
+  "company": "Teradata",
+  "title": "AI Engineer",
+  "expect": "keep",
+  "why": "AI product dev",
+  "url": "https://careers.teradata.com/jobs/220497/ai-engineer"
+ },
+ {
+  "company": "Juniper Networks",
+  "title": "Cloud Developer - Golang",
+  "expect": "keep",
+  "why": "Go microservices",
+  "url": "https://hpe.wd5.myworkdayjobs.com/Jobsathpe/job/Hyderabad-Telangana-India/Cloud-Developer---Golang_1217254-2"
+ },
+ {
+  "company": "SAP",
+  "title": "Developer – SAP Concur Expense Pay",
+  "expect": "keep",
+  "why": "Java/React microservices at SAP (the company)",
+  "url": "https://jobs.sap.com/en/jobs/744000161024029/developer-sap-concur-expense-pay/"
+ },
+ {
+  "company": "Microsoft",
+  "title": "Software Engineer - II",
+  "expect": "keep",
+  "why": "Windows systems software; mentions firmware once",
+  "url": "https://apply.careers.microsoft.com/careers/job/1970393557050455"
+ },
+ {
+  "company": "Guidewire Software",
+  "title": "Software Engineer II (Java, backend)",
+  "expect": "keep",
+  "why": "'Guidewire' is the employer",
+  "url": "https://www.linkedin.com/jobs/view/4487703704/"
+ },
+ {
+  "company": "American Express",
+  "title": "Software Engineer II",
+  "expect": "keep",
+  "why": "mentions ServiceNow in passing",
+  "url": "https://www.linkedin.com/jobs/view/4484877272/"
+ },
+ {
+  "company": "Tower Research Capital",
+  "title": "Low Latency Developer",
+  "expect": "keep",
+  "why": "C++ trading systems",
+  "url": "https://www.tower-research.com/open-positions/?gh_jid=4357723"
+ },
+ {
+  "company": "Tower Research Capital",
+  "title": "Quantitative Developer",
+  "expect": "keep",
+  "why": "C++/Python trading dev",
+  "url": "https://www.tower-research.com/open-positions/?gh_jid=7102180"
+ },
+ {
+  "company": "Neuron7.ai",
+  "title": "Frontend Engineer",
+  "expect": "keep",
+  "why": "frontend (kept per user)",
+  "url": "https://jobs.lever.co/neuron7/1f8eb6df-042e-46ea-a687-9be7ba074028"
+ },
+ {
+  "company": "Cashfree",
+  "title": "Frontend Engineer 2",
+  "expect": "keep",
+  "why": "frontend (kept per user)",
+  "url": "https://careers.kula.ai/cashfree/28806-frontend-engineer-2?jobs=true"
+ },
+ {
+  "company": "DocuSign",
+  "title": "Software Engineer - IOS",
+  "expect": "keep",
+  "why": "mobile (kept per user)",
+  "url": "https://careers.docusign.com/jobs/30326?lang=en-us"
+ },
+ {
+  "company": "InMobi",
+  "title": "Machine Learning Engineer II - Backend",
+  "expect": "keep",
+  "why": "backend title",
+  "url": "https://job-boards.greenhouse.io/inmobi/jobs/6898755"
+ },
+ {
+  "company": "Zepto",
+  "title": "Web Developer",
+  "expect": "keep",
+  "why": "web dev",
+  "url": "https://www.linkedin.com/jobs/view/4488283563/"
+ },
+ {
+  "company": "Apple",
+  "title": "Software Engineer - Java, Spring Boot and Microservices",
+  "expect": "keep",
+  "why": "core",
+  "url": "https://jobs.apple.com/en-in/details/200677836/software-engineer-java-spring-boot-and-microservices"
+ },
+ {
+  "company": "Khatabook",
+  "title": "Full Stack Developer - SDE - I",
+  "expect": "keep",
+  "why": "core",
+  "url": "https://khatabook.turbohire.co/job/publicjobs/ac12f619-9782-43b7-a8fb-90efffb8fa48?utm_source=CareerPage"
+ },
+ {
+  "company": "Rubrik",
+  "title": "Software Engineer - Cloud Native Protection",
+  "expect": "keep",
+  "why": "core",
+  "url": "https://www.rubrik.com/company/careers/departments/job.8327940?gh_jid=8327940"
+ },
+ {
+  "company": "NVIDIA",
+  "title": "System Software Engineer - GPU Profiling",
+  "expect": "keep",
+  "why": "GPU systems software (not firmware)",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/India-Pune/System-Software-Engineer---GPU-Profiling_JR2020625"
+ },
+ {
+  "company": "Amagi",
+  "title": "Platform Engineer II",
+  "expect": "drop",
+  "why": "cloud ops/admin",
+  "url": "https://www.amagi.com/job-description?src%3Dcareers%26p%3DeyJwYWdlVHlwZSI6ImpkIiwiY3ZTb3VyY2UiOiJjYXJlZXJzIiwicmVxSWQiOjI3MCwicmVxdWVzdGVyIjp7ImlkIjoiIiwiY29kZSI6IiIsIm5hbWUiOiIifSwicGFnZSI6ImNhcmVlcnMiLCJidWZpbHRlciI6LTEsImN1c3RvbUZpZWxkcyI6e319",
+  "reason": "doesn't say software"
+ },
+ {
+  "company": "SonicWall",
+  "title": "Platform Engineer- GCP and Kubernetes experience is a must",
+  "expect": "drop",
+  "why": "Kubernetes ops/on-call",
+  "url": "https://job-boards.greenhouse.io/sonicwall/jobs/8282577",
+  "reason": "doesn't say software"
+ },
+ {
+  "company": "Oracle",
+  "title": "Systems Engineer 2",
+  "expect": "drop",
+  "why": "Citrix/Windows admin",
+  "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/jobsearch/job/348478",
+  "reason": "doesn't say software"
+ },
+ {
+  "company": "Cigna",
+  "title": "Automation Engineer Analyst",
+  "expect": "drop",
+  "why": "Selenium QA",
+  "url": "https://jobs.thecignagroup.com/us/en/job/26010905/Automation-Engineer-Analyst",
+  "reason": "title/level"
+ },
+ {
+  "company": "Oracle",
+  "title": "User Assistance Developer 2",
+  "expect": "drop",
+  "why": "technical writing",
+  "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/jobsearch/job/348661",
+  "reason": "title/level"
+ },
+ {
+  "company": "Palo Alto Networks",
+  "title": "Transformation Success Engineer",
+  "expect": "drop",
+  "why": "customer success",
+  "url": "https://paloaltonetworks.wd5.myworkdayjobs.com/panwexternalcareers/job/Office---India---Bangalore-Bagmane-Tech-Park/Transformation-Success-Engineer_JR-020783",
+  "reason": "title/level"
+ },
+ {
+  "company": "NK Securities Research",
+  "title": "Low Latency FPGA Developer",
+  "expect": "drop",
+  "why": "RTL/FPGA hardware",
+  "url": "https://job-boards.eu.greenhouse.io/nksecuritiesresearch/jobs/4519817101",
+  "reason": "title/level"
+ },
+ {
+  "company": "Citi",
+  "title": "Frontend and Backend Disputes Analyst",
+  "expect": "drop",
+  "why": "operations analyst",
+  "url": "https://citi.eightfold.ai/careers/job/859038875738",
+  "reason": "title/level"
+ },
+ {
+  "company": "VMware",
+  "title": "Backend Physical Design Engineer",
+  "expect": "drop",
+  "why": "chip physical design",
+  "url": "https://broadcom.wd1.myworkdayjobs.com/External_Career/job/IND-Bangalore-Electronic-City---S1/Backend-Physical-Design-Engineer_R027663",
+  "reason": "title/level"
+ },
+ {
+  "company": "Qualcomm",
+  "title": "Associate Engineer - WLAN Firmware",
+  "expect": "drop",
+  "why": "embedded firmware",
+  "url": "https://careers.qualcomm.com/careers/job/446721778413",
+  "reason": "embedded role"
+ },
+ {
+  "company": "Qualcomm",
+  "title": "Embedded Linux Engineer",
+  "expect": "drop",
+  "why": "embedded",
+  "url": "https://careers.qualcomm.com/careers/job/446720399887",
+  "reason": "doesn't say software"
+ },
+ {
+  "company": "Qualcomm",
+  "title": "Engineer - Audio DSP",
+  "expect": "drop",
+  "why": "DSP",
+  "url": "https://careers.qualcomm.com/careers/job/446720545289",
+  "reason": "embedded role"
+ },
+ {
+  "company": "Qualcomm",
+  "title": "Automotive Audio Systems Engineer",
+  "expect": "drop",
+  "why": "DSP/embedded",
+  "url": "https://careers.qualcomm.com/careers/job/446718623077",
+  "reason": "doesn't say software"
+ },
+ {
+  "company": "Hewlett Packard Enterprise",
+  "title": "Firmware Developer (C/C++ - Security)",
+  "expect": "drop",
+  "why": "firmware",
+  "url": "https://careers.hpe.com/ca/fr/job/1217550/Firmware-Developer-C-C-Security",
+  "reason": "embedded role"
+ },
+ {
+  "company": "Texas Instruments",
+  "title": "Embedded Software Engineer",
+  "expect": "drop",
+  "why": "embedded",
+  "url": "https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25017514",
+  "reason": "embedded role"
+ },
+ {
+  "company": "Cadence Design Systems",
+  "title": "Firmware Engineer II",
+  "expect": "drop",
+  "why": "firmware",
+  "url": "https://cadence.wd1.myworkdayjobs.com/External_Careers/job/NOIDA/Firmware-Engineer-II_R57094",
+  "reason": "doesn't say software"
+ },
+ {
+  "company": "Arm",
+  "title": "Engineer-PDN",
+  "expect": "drop",
+  "why": "chip power signoff",
+  "url": "https://careers.arm.com/job/bengaluru/engineer-pdn/33099/100083846784",
+  "reason": "doesn't say software"
+ },
+ {
+  "company": "Tekion",
+  "title": "Salesforce Developer",
+  "expect": "drop",
+  "why": "Salesforce/Apex",
+  "url": "https://jobs.ashbyhq.com/Tekion/73d38f67-13bc-431e-b142-db93870a3822",
+  "reason": "crm platform role"
+ },
+ {
+  "company": "Pure Storage",
+  "title": "Salesforce Developer",
+  "expect": "drop",
+  "why": "Salesforce/Apex",
+  "url": "https://job-boards.greenhouse.io/purestorage/jobs/8210473",
+  "reason": "crm platform role"
+ },
+ {
+  "company": "Twilio",
+  "title": "Applications Engineer 2",
+  "expect": "drop",
+  "why": "Salesforce/Apex JD under a generic title",
+  "url": "https://job-boards.greenhouse.io/twilio/jobs/7781659",
+  "reason": "crm platform role"
+ },
+ {
+  "company": "Guidewire Software",
+  "title": "Guidewire Configuration Developer - ClaimCenter",
+  "expect": "drop",
+  "why": "Guidewire configuration",
+  "url": "https://wd5.myworkdaysite.com/recruiting/guidewire/external/job/India---Bangalore/Guidewire-Configuration-Developer---ClaimCenter_JR_15266",
+  "reason": "crm platform role"
+ },
+ {
+  "company": "Ericsson",
+  "title": "Webmethods Developer",
+  "expect": "drop",
+  "why": "webMethods integration",
+  "url": "https://jobs.ericsson.com/careers/job/563121777546629",
+  "reason": "crm platform role"
+ },
+ {
+  "company": "Warner Music Group",
+  "title": "Shopify Developer",
+  "expect": "drop",
+  "why": "Shopify",
+  "url": "https://jobs.lever.co/wmg/7d2c01f3-0bbe-45f0-b55d-0ff460126eef",
+  "reason": "crm platform role"
+ },
+ {
+  "company": "Micron Technology",
+  "title": "ServiceNow Engineer- HRSD & CSM",
+  "expect": "drop",
+  "why": "ServiceNow",
+  "url": "https://careers.micron.com/careers/job/44495523",
+  "reason": "crm platform role"
+ },
+ {
+  "company": "LSEG",
+  "title": "Engineer",
+  "expect": "drop",
+  "why": "Salesforce/Apex JD under a generic title",
+  "url": "https://lseg.wd3.myworkdayjobs.com/Careers/job/IND-Hyderabad-CapitaLand/Engineer_R0124055",
+  "reason": "crm platform role"
+ },
+ {
+  "company": "Amazon",
+  "title": "Software Development Engineer, DSP Tech",
+  "expect": "keep",
+  "why": "DSP = Delivery Service Partner, not signal processing",
+  "url": "https://www.amazon.jobs/en/jobs/10597850/software-development-engineer-dsp-tech"
+ },
+ {
+  "company": "Squarepoint Capital",
+  "title": "Quant Developer (Python)",
+  "expect": "keep",
+  "why": "developer title, Python JD",
+  "url": "https://www.squarepoint-capital.com/open-opportunities?id=1433622&gh_jid=1433622"
+ },
+ {
+  "company": "Micron Technology",
+  "title": "IC Package Development Engineer",
+  "expect": "drop",
+  "why": "chip packaging; only scripting languages",
+  "url": "https://careers.micron.com/careers/job/44146168",
+  "reason": "doesn't say software"
+ },
+ {
+  "company": "Cadence Design Systems",
+  "title": "Customer Service Engineer",
+  "expect": "drop",
+  "why": "customer service; only scripting languages",
+  "url": "https://cadence.wd1.myworkdayjobs.com/External_Careers/job/PUNE-05/Customer-Service-Engineer_R55005",
+  "reason": "doesn't say software"
+ },
+ {
+  "company": "GE Vernova",
+  "title": "Grid Modeling Engineer",
+  "expect": "drop",
+  "why": "power-grid modelling",
+  "url": "https://gevernova.wd5.myworkdayjobs.com/Vernova_ExternalSite/job/Chennai/Grid-Modeling-Engineer_R5056082-2",
+  "reason": "doesn't say software"
+ },
+ {
+  "company": "Aspen Technology",
+  "title": "Power Systems Engineer II",
+  "expect": "drop",
+  "why": "power systems; SCADA",
+  "url": "https://aspentech.wd5.myworkdayjobs.com/AspenTech/job/Noida/Power-Systems-Engineer-II_R9243-1",
+  "reason": "doesn't say software"
+ },
+ {
+  "company": "MediaTek",
+  "title": "Functional Modeling Engineer",
+  "expect": "drop",
+  "why": "chip functional modelling",
+  "url": "https://careers.mediatek.com/en/jobs/MTB120240202000",
+  "reason": "doesn't say software"
+ },
+ {
+  "company": "Applied Materials India",
+  "title": "SW Applications Engineer",
+  "expect": "keep",
+  "why": "JD: 'As a Software Engineer… designing, prototyping, developing software' (image processing/AI); an earlier label wrongly said drop",
+  "url": "https://amat.wd1.myworkdayjobs.com/External/job/MumbaiIND/SW-Applications-Engineer_R2625151"
+ },
+ {
+  "company": "Northern Trust",
+  "title": "Cnsltant, Automation Developer",
+  "expect": "drop",
+  "why": "consultant",
+  "url": "https://ntrs.wd1.myworkdayjobs.com/northerntrust/job/Bangalore-India/Cnsltant--Automation-Developer_R154145",
+  "reason": "title/level"
+ },
+ {
+  "company": "Juniper Networks",
+  "title": "Embedded Software Engineer",
+  "expect": "drop",
+  "why": "embedded",
+  "url": "https://hpe.wd5.myworkdayjobs.com/Jobsathpe/job/Bengaluru-Karntaka-India/Embedded-Software-Engineer_1211172-2",
+  "reason": "embedded role"
+ },
+ {
+  "company": "Synopsys",
+  "title": "Salesforce Developer",
+  "expect": "drop",
+  "why": "Salesforce",
+  "url": "https://careers.synopsys.com/job/hyderabad/salesforce-developer/44408/94055936032",
+  "reason": "crm platform role"
+ },
+ {
+  "company": "Harmonic",
+  "title": "Associate SW Development Engineer",
+  "expect": "keep",
+  "why": "'SW' = software",
+  "url": "https://www.linkedin.com/jobs/view/4440692239/"
+ },
+ {
+  "company": "100ms",
+  "title": "AI Engineer – AI Agents (Healthcare)",
+  "expect": "keep",
+  "why": "LLM agent development",
+  "url": "https://jobs.lever.co/100ms/4c9f19c7-4432-4394-ba93-167319c68adc"
+ },
+ {
+  "company": "Cargill",
+  "title": "Trading Engineer (Data)",
+  "expect": "keep",
+  "why": "JD: design and implement new software features, write clean code",
+  "url": "https://careers.cargill.com/en/job/bengaluru/trading-engineer-data/23251/97785303008"
+ },
+ {
+  "company": "Snapmint",
+  "title": "Android Developer",
+  "expect": "keep",
+  "why": "mobile developer (kept per user)",
+  "url": "https://careers.snapmint.com/snapmint/job/android-developer-gurugram-haryana-india-2026052812550323"
+ },
+ {
+  "company": "X-Rite",
+  "title": "Content Developer II",
+  "expect": "drop",
+  "why": "content writing",
+  "url": "https://jobs.veralto.com/global/en/job/R10268588/Content-Developer-II",
+  "reason": "title/level"
+ },
+ {
+  "company": "Trellix",
+  "title": "AI & Digital Learning Content Developer",
+  "expect": "drop",
+  "why": "learning content",
+  "url": "https://trellix.wd1.myworkdayjobs.com/EnterpriseCareers/job/India-Bangalore/AI---Digital-Learning-Content-Developer_JR0038005",
+  "reason": "title/level"
+ },
+ {
+  "company": "DHL",
+  "title": "Automation Designer / Developer (Microsoft Power)",
+  "expect": "drop",
+  "why": "Power Platform low-code",
+  "url": "https://careers.dhl.com/apac/en/job/DPDHGLOBALAV384422ENAPACEXTERNAL/Automation-Designer-Developer-Microsoft-Power",
+  "reason": "crm platform role"
+ },
+ {
+  "company": "Caterpillar",
+  "title": "Model Based Developer  - Transmission / Drivetrain",
+  "expect": "drop",
+  "why": "Simulink automotive",
+  "url": "https://cat.wd5.myworkdayjobs.com/CaterpillarCareers/job/Chennai-Tamil-Nadu/Model-Based-Developer----Matlab---Simulink_R0000390172",
+  "reason": "doesn't say software"
+ },
+ {
+  "company": "Airbnb",
+  "title": "Systems Engineer, Tech Foundations (Jira cloud)",
+  "expect": "drop",
+  "why": "Jira administration",
+  "url": "https://careers.airbnb.com/positions/8312713?gh_jid=8312713",
+  "reason": "title/level"
+ },
+ {
+  "company": "Cisco",
+  "title": "Technical Projects Systems Engineer",
+  "expect": "drop",
+  "why": "project management",
+  "url": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers/job/Bangalore-India/Technical-Projects-Systems-Engineer_2030159",
+  "reason": "title/level"
+ },
+ {
+  "company": "Amazon",
+  "title": "Software Dev Engineer II, DSP Tech, Last Mile Prod DSP, Last Mile Prod DSP",
+  "expect": "keep",
+  "why": "Amazon DSP = delivery partners",
+  "url": "https://www.linkedin.com/jobs/view/4487520657/"
+ },
+ {
+  "company": "Anaplan",
+  "title": "Engineer I",
+  "expect": "drop",
+  "why": "Power BI capacity-planning dashboards",
+  "url": "https://job-boards.greenhouse.io/anaplan/jobs/8571200002",
+  "reason": "doesn't say software"
+ },
+ {
+  "company": "Hitachi Energy",
+  "title": "Associate Project Engineer",
+  "expect": "drop",
+  "why": "project engineering",
+  "url": "https://www.linkedin.com/jobs/view/4485314938/",
+  "reason": "title/level"
+ },
+ {
+  "company": "Keywords Studios",
+  "title": "Dot Net Developer",
+  "expect": "keep",
+  "why": ".NET developer",
+  "url": "https://www.keywordsstudios.com/en/careers/browse-careers/2vu-dot-net-developer/"
+ },
+ {
+  "company": "Coinbase",
+  "title": "Machine Learning Engineer",
+  "expect": "keep",
+  "why": "Python services + LLM orchestration",
+  "url": "https://www.coinbase.com/careers/positions/7985187?gh_jid=7985187"
+ },
+ {
+  "company": "Renesas",
+  "title": "Software Engineer",
+  "expect": "keep",
+  "why": "Java/Kotlin/TypeScript app; JD mentions SoC/firmware customers",
+  "url": "https://jobs.renesas.com/job/software-engineer-in-bengaluru-ka-india-jid-7582"
+ },
+ {
+  "company": "Keywords Studios",
+  "title": "AI Engineer",
+  "expect": "keep",
+  "why": "LLM application engineering",
+  "url": "https://www.keywordsstudios.com/en/careers/browse-careers/xLA-ai-engineer/"
+ },
+ {
+  "company": "WisdomAI",
+  "title": "Machine Learning Engineer",
+  "expect": "keep",
+  "why": "LLM agents",
+  "url": "https://jobs.ashbyhq.com/Wisdom-AI/35029bbd-c8cd-448a-8491-65ea639dbea2"
+ },
+ {
+  "company": "Bank of America",
+  "title": "Team Developer",
+  "expect": "drop",
+  "why": "payments operations; SWIFT is the bank network",
+  "url": "https://careers.bankofamerica.com/en-us/job-detail/26039606/team-developer-gandhinagar-india",
+  "reason": "doesn't say software"
+ },
+ {
+  "company": "Macquarie Group",
+  "title": "Learning Experience Designer and Developer",
+  "expect": "drop",
+  "why": "learning content",
+  "url": "https://recruitment.macquarie.com/en_US/careers/JobDetail?jobId=23369",
+  "reason": "title/level"
+ },
+ {
+  "company": "InMobi",
+  "title": "SDE II - Data Engineer",
+  "expect": "drop",
+  "why": "data engineering (user: out)",
+  "url": "https://job-boards.greenhouse.io/inmobi/jobs/7747785",
+  "reason": "title/level"
+ },
+ {
+  "company": "Capillary Technologies",
+  "title": "Escalation Engineer",
+  "expect": "drop",
+  "why": "support escalation",
+  "url": "https://capillarytech.darwinbox.in/ms/candidatev2/main/careers/jobDetails/5dfc72666c35b",
+  "reason": "title/level"
+ },
+ {
+  "company": "Qubrid AI",
+  "title": "GPU Kubernetes Cluster Engineer",
+  "expect": "drop",
+  "why": "cluster operations",
+  "url": "https://www.qubrid.com/careers/jobs/255d4c74189343d586d9d9373499aa7b",
+  "reason": "title/level"
+ },
+ {
+  "company": "Cigna",
+  "title": "Automation Engineer Associate Analyst - Cigna Healthcare",
+  "expect": "drop",
+  "why": "QA test automation",
+  "url": "https://jobs.thecignagroup.com/us/en/job/26013237/Automation-Engineer-Associate-Analyst-Cigna-Healthcare",
+  "reason": "title/level"
+ },
+ {
+  "company": "Slice",
+  "title": "Engineer 1 - Product Security",
+  "expect": "drop",
+  "why": "offensive security",
+  "url": "https://careers.kula.ai/slice/51860-engineer-1-product-security?jobs=true",
+  "reason": "title/level"
+ },
+ {
+  "company": "Texas Instruments",
+  "title": "Software Engineer - UCD",
+  "expect": "drop",
+  "why": "embedded firmware (TI UCD)",
+  "url": "https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25019710",
+  "reason": "embedded role"
+ },
+ {
+  "company": "Amazon",
+  "title": "Software Development Engineer II, Alexa Connectivity Devices",
+  "expect": "drop",
+  "why": "device firmware",
+  "url": "https://www.amazon.jobs/en/jobs/10596464/software-development-engineer-ii-alexa-connectivity-devices",
+  "reason": "embedded role"
+ },
+ {
+  "company": "Qualcomm",
+  "title": "Telematics Platform Engineer",
+  "expect": "drop",
+  "why": "embedded Linux/BSP",
+  "url": "https://careers.qualcomm.com/careers/job/446720156834",
+  "reason": "embedded role"
+ },
+ {
+  "company": "Juniper Networks",
+  "title": "Systems/Software Engineer II - Platforms Developer (MacSec, Timing, Optics)",
+  "expect": "drop",
+  "why": "platform drivers/FPGA",
+  "url": "https://hpe.wd5.myworkdayjobs.com/Jobsathpe/job/Bengaluru-Karntaka-India/Systems-Software-Engineer-II---Platforms-Developer--MacSec--Timing--Optics-_1218144-2",
+  "reason": "embedded role"
+ },
+ {
+  "company": "Salesforce",
+  "title": "Systems Engineer- Workday - Finance ERP",
+  "expect": "drop",
+  "why": "Workday ERP administration",
+  "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/India---Hyderabad/Systems-Engineer---Workday---Finance-ERP_JR363887",
+  "reason": "crm platform role"
+ },
+ {
+  "company": "Rocketlane",
+  "title": "Demo Engineer",
+  "expect": "drop",
+  "why": "pre-sales demos",
+  "url": "https://careers.kula.ai/rocketlane/34782-demo-engineer?jobs=true",
+  "reason": "title/level"
+ },
+ {
+  "company": "Gushwork",
+  "title": "Implementation Engineer",
+  "expect": "drop",
+  "why": "customer implementation",
+  "url": "https://jobs.lever.co/gushwork/5aae2198-4003-4b99-a4c4-00c6fc278697",
+  "reason": "title/level"
+ },
+ {
+  "company": "Google",
+  "title": "Software Engineer III, Full Stack, Google Cloud",
+  "expect": "keep",
+  "why": "Google SE III is L4 and asks 1-2 yrs",
+  "url": "https://www.google.com/about/careers/applications/jobs/results/101212497425375942"
+ },
+ {
+  "company": "Bidgely",
+  "title": "Software Engineer 3 - GenAI",
+  "expect": "keep",
+  "why": "asks 1 yr",
+  "url": "https://jobs.ashbyhq.com/bidgely-inc/1a5e3251-350d-4b3f-b326-df3a2b385af6"
+ },
+ {
+  "company": "Charles Schwab",
+  "title": "Specialist - Software Development & Engineering",
+  "expect": "drop",
+  "why": "QA (Selenium, test cases)",
+  "url": "https://www.schwabjobs.com/job/hyderabad/specialist-software-development-and-engineering/33995/102243674560",
+  "reason": "qa role"
+ },
+ {
+  "company": "United Airlines",
+  "title": "Associate Engineer - Digital Technology",
+  "expect": "drop",
+  "why": "quality engineering",
+  "url": "https://careers.united.com/us/en/job/GGN00002634/Associate-Engineer-Digital-Technology",
+  "reason": "qa role"
+ },
+ {
+  "company": "Meril",
+  "title": "Software Developer - C# .Net WPF",
+  "expect": "keep",
+  "why": "C#/.NET WPF development; mentions QA",
+  "url": "https://www.linkedin.com/jobs/view/4483881275/"
+ },
+ {
+  "company": "Mastercard",
+  "title": "Software Engineer-2",
+  "expect": "keep",
+  "why": "Java services + test frameworks (developer title)",
+  "url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers/job/Navi-Mumbai-India-Finicity/Software-Engineer-2_R-291365"
+ },
+ {
+  "company": "Vanguard India",
+  "title": "Application Engineer - II",
+  "expect": "keep",
+  "why": "Java/Spring/React development",
+  "url": "https://www.linkedin.com/jobs/view/4450310136/"
+ },
+ {
+  "company": "Hewlett Packard Enterprise",
+  "title": "Storage AI Engineer",
+  "expect": "drop",
+  "why": "JD: 'As a QA Engineer'",
+  "url": "https://careers.hpe.com/ca/fr/job/1215532/Storage-AI-Engineer",
+  "reason": "qa role"
+ },
+ {
+  "company": "MathWorks",
+  "title": "Application Engineer: AI - Industrial Automation",
+  "expect": "drop",
+  "why": "customer-facing applications engineering",
+  "url": "https://www.linkedin.com/jobs/view/4478612360/",
+  "reason": "embedded role"
+ }
+]
