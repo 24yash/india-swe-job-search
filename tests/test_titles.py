@@ -166,9 +166,16 @@ def failing_facets(url, body, **kw):
 
 
 crawl.post = failing_facets
-got = list(crawl.workday({"name": "Target", "tenant": "target", "wd": "wd5", "site": "targetcareers"}))
+got, facet_err = [], None
+try:  # read the way crawl() does: keep what was yielded before the reader raised
+    for j in crawl.workday({"name": "Target", "tenant": "target", "wd": "wd5", "site": "targetcareers"}):
+        got.append(j)
+except RuntimeError as e:
+    facet_err = e
 check("workday: facet failure falls back to keyword searches", any(b["searchText"] for b in calls if b["limit"] == 20) and [j.title for j in got] == ["Software Engineer"],
       [b["searchText"] for b in calls][:3])
+check("workday: a keyword-search fallback is not a complete listing (the read is marked failed, so the last good read is carried)",
+      facet_err is not None and "facet list failed" in str(facet_err), repr(facet_err))
 
 # Second review round.
 for t in ("Software Engineer - Recruiting Platform", "Software Engineer, Recruitment Products", "Backend Engineer - Talent & Recruiting",

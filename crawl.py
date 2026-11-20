@@ -12,6 +12,7 @@ Read only: it calls public GET/search endpoints and never applies or signs in.
 import argparse
 import collections
 import contextlib
+import dataclasses
 import csv
 import fcntl
 import html
@@ -144,8 +145,8 @@ def strip_html(s):
 
 def posting_gone(e):
     """A detail call's failure means the posting closed only on 404/410; a 429, 5xx or dropped connection says nothing
-    about the posting. Readers keep such a posting from the list data (meta detail=unread) and mark the read failed,
-    so crawl() carries the last good read instead of treating the posting as closed."""
+    about the posting. Readers keep such a posting from the list data (meta detail=unread) and end with DetailsUnread,
+    so the posting is not treated as closed (the listing itself was complete, so nothing else is carried)."""
     return getattr(getattr(e, "response", None), "status_code", None) in (404, 410)
 
 
@@ -447,6 +448,8 @@ def workday(c):
     except (requests.RequestException, ValueError) as e:  # facet list unreadable: fall back to keyword searches
         print(f"  {c['name']}: Workday facet list failed ({type(e).__name__}); using keyword searches", file=sys.stderr, flush=True)
         india = None
+        # keyword searches are capped and can miss postings, so this read must not count as a complete listing
+        list_failed.append(f"Workday India facet list failed ({type(e).__name__}); read by keyword search")
     if india:  # every India posting, whatever its title: the title filter runs here, not in Workday's search
         total = scan("", {india[0]: india[1]}, WORKDAY_INDIA_CAP)
         if total and total > WORKDAY_INDIA_CAP:
@@ -463,11 +466,14 @@ def workday(c):
             if code in (404, 410):
                 return None  # closed between the search and the detail call; don't lose the rest of the board
             # throttled (429 / bot check) or a network error: the posting is still open, so a silent None would make
-            # the board read as cleanly empty (Visa, 20 Nov). Keep it from the list data and mark the read as failed.
-            failed.append(f"Workday detail call failed ({code or type(e).__name__})")
+            # the board read as cleanly empty (Visa, 20 Nov). Keep it from the list data (a DetailsUnread read, not a failed one).
             loc = j.get("locationsText", "")
+            if not in_india(loc):  # "3 Locations": no India location to keep a stub with, so the listing is incomplete
+                list_failed.append(f"Workday detail call failed ({code or type(e).__name__}) for a multi-location posting")
+                return None
+            failed.append(f"Workday detail call failed ({code or type(e).__name__})")
             return Job(c["name"], j["title"], loc, f"{host}/{c['site']}{j['externalPath']}", workday_age(j.get("postedOn")), "",
-                       meta={"detail": "unread"}) if in_india(loc) else None
+                       meta={"detail": "unread"})
         locs = " / ".join([info.get("location", "")] + info.get("additionalLocations", []))
         return Job(c["name"], info.get("title", j["title"]), locs, info.get("externalUrl") or f"{host}/{c['site']}{j['externalPath']}",
                    parse_ts(info.get("startDate")) or workday_age(j.get("postedOn")),
@@ -1072,7 +1078,10 @@ def fill_unread(fresh, old):
     def prev(j):
         t = j.url.rstrip("/").rsplit("/", 1)[-1]
         return by_url.get(j.url) or (by_tail.get(t) if tails[t] == 1 else None)
-    return [(prev(j) or j) if j.meta.get("detail") == "unread" else j for j in fresh]
+    def restore(j):  # the earlier read may have been carried: drop its stale liveness label, this read listed it
+        p = prev(j)
+        return dataclasses.replace(p, meta={k: v for k, v in p.meta.items() if k != "liveness"}) if p else j
+    return [restore(j) if j.meta.get("detail") == "unread" else j for j in fresh]
 
 
 def with_previous(name, fresh, liveness=None):
@@ -1298,7 +1307,8 @@ def write_bank(companies, activity, direct, sweep):
 def board_returns_postings(name):
     """The board's last read was clean and kept at least one posting (raw files hold only India, title-matching ones)."""
     jobs, meta = load_raw(name)
-    return bool(jobs) and not (meta or {}).get("note")
+    note = (meta or {}).get("note", "")
+    return bool(jobs) and (not note or note.startswith("DetailsUnread"))  # some descriptions unread is still a good read
 
 
 def build_context(args):

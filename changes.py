@@ -61,6 +61,8 @@ def build(stamp, keep, leads, rejected_rows, title_rows, raw_counts, raw_urls, n
     rejected = {r["url"]: r["reason"] for r in rejected_rows}
     title_rejected = {r["url"] for r in title_rows}
     failing = {name for name, note in notes.items() if "nothing carried" in note}  # failed with nothing to fall back on
+    carried_n = {name: int(m.group(1)) for name, note in notes.items()
+                 if (m := re.search(r"\+ (\d+) carried from the last good read", note))}
 
     now_all, was_all = now_short | now_leads, was_short | was_leads
     gone = {}
@@ -98,7 +100,8 @@ def build(stamp, keep, leads, rejected_rows, title_rows, raw_counts, raw_urls, n
         "moved_lead_to_shortlist": len((was_leads - was_short) & now_short), "moved_shortlist_to_lead": len((was_short - was_leads) & now_leads),
         "left": {why: len(rs) for why, rs in sorted(gone.items(), key=lambda kv: -len(kv[1]))},
         "sources_failing": sorted(failing), "sources_suspect": sorted(n for n, note in notes.items() if note.startswith("suspect")),
-        "sources_failed_but_carried": sorted(n for n, note in notes.items() if "carried from the last good read" in note),
+        "sources_failed_but_carried": sorted(n for n, k in carried_n.items() if k > 0),
+        "sources_failed_nothing_missing": sorted(n for n, k in carried_n.items() if k == 0),
         "companies_started_hiring": sorted(started), "companies_stopped_hiring": sorted(stopped),
         "source_changes": src,
     }
@@ -115,6 +118,7 @@ def build(stamp, keep, leads, rejected_rows, title_rows, raw_counts, raw_urls, n
     md += ["", f"## Sources ({len(raw_counts)} read; baseline {base_date or 'none'})", ""]
     md += [f"- Failed, nothing to carry: {', '.join(sorted(failing)) or 'none'}",
            f"- Failed, last good postings carried: {', '.join(summary['sources_failed_but_carried']) or 'none'}",
+           f"- Failed, nothing missing from the last good read: {', '.join(summary['sources_failed_nothing_missing']) or 'none'}",
            f"- Suspect reads (kept previous postings): {', '.join(summary['sources_suspect']) or 'none'}"]
     if src and base_date:  # first run: no baseline, every source would read "new"
         md += ["", "| Source | Before | Now | Δ |", "|---|---|---|---|"]

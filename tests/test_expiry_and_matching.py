@@ -152,5 +152,14 @@ check("unread description: a core title is kept and labelled", row is not None a
 row, why = crawl.evaluate(unread("Quality Conformance Engineer-Airframe"), co, 30)
 check("unread description: a generic title is not kept on the title alone", row is None, row and row["title"])
 
+# a stub restored from an earlier read that was carried must not keep the stale "carried" label
+crawl.save_raw("Wd2", [J("Wd2", "Software Engineer", "Bengaluru, India", "https://wd/ext/job/Blr/SE_R9", now, "full JD",
+                         meta={"liveness": "carried from the last good read (2026-11-01); this read failed"})],
+               last_ok=crawl.days_ago(2), fresh_count=1)
+crawl.save_board("Wd2", [J("Wd2", "Software Engineer", "Bengaluru, India", "https://x/ext/job/Blr/SE_R9", now, "", meta={"detail": "unread"})],
+                 None, "DetailsUnread: Workday detail call failed (429)")
+got, _ = crawl.load_raw("Wd2")
+check("details unread: a restored earlier read drops its stale carried label", "liveness" not in got[0].meta, got[0].meta)
+
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)
