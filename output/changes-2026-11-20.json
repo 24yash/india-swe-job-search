@@ -8,10 +8,10 @@
  },
  "leads": {
   "before": 433,
-  "now": 447
+  "now": 443
  },
- "added": 231,
- "added_never_seen_before": 207,
+ "added": 227,
+ "added_never_seen_before": 203,
  "added_seen_in_older_runs": 24,
  "moved_lead_to_shortlist": 14,
  "moved_shortlist_to_lead": 0,
@@ -6949,27 +6949,6 @@
    "score": 40
   },
   {
-   "company": "Airbus",
-   "title": "Structures In-Service Engineer",
-   "url": "https://ag.wd3.myworkdayjobs.com/Airbus/job/Bangalore-Area/Structures-In-Service-Engineer_JR10457590-1",
-   "pay_conf": "Unverified",
-   "score": 40
-  },
-  {
-   "company": "Airbus",
-   "title": "Quality Conformance Engineer-Airframe",
-   "url": "https://ag.wd3.myworkdayjobs.com/Airbus/job/Bangalore-Area/Quality-Conformance-Engineer-Airframe_JR10435103",
-   "pay_conf": "Unverified",
-   "score": 40
-  },
-  {
-   "company": "Airbus",
-   "title": "Cabin Vendor Management Engineer",
-   "url": "https://ag.wd3.myworkdayjobs.com/Airbus/job/Bangalore-Area/Cabin-Vendor-Management-Engineer_JR10456567",
-   "pay_conf": "Unverified",
-   "score": 40
-  },
-  {
    "company": "Moody's",
    "title": "Software Engineer",
    "url": "https://careers.moodys.com/en/job/bengaluru/software-engineer/49841/97729536016",
@@ -7024,13 +7003,6 @@
    "url": "https://www.linkedin.com/jobs/view/4486041532/",
    "pay_conf": "Unverified",
    "score": 39
-  },
-  {
-   "company": "Airbus",
-   "title": "AH Industrial System Engineer",
-   "url": "https://ag.wd3.myworkdayjobs.com/Airbus/job/Bangalore-Area/AH-Industrial-System-Engineer_JR10453200",
-   "pay_conf": "Unverified",
-   "score": 38
   },
   {
    "company": "DHL",

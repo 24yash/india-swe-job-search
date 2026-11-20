@@ -1,6 +1,6 @@
 # Shortlist table — 2026-11-20
 
-622 roles passed every filter; showing the top 40 (max 3 per company). 447 more pass everything except pay evidence (leads file).
+622 roles passed every filter; showing the top 40 (max 3 per company). 443 more pass everything except pay evidence (leads file).
 
 | # | Company | Company type / stage (latest round) | Role title | Location / mode | Exp asked | Pay (₹ LPA) + confidence + source | Key stack from JD | Score | Gaps vs my profile | Apply link | Posted date |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -77,14 +77,14 @@
 
 ## Rejected after the title filter, by reason
 
-- title doesn't say software: 679
+- title doesn't say software: 685
 - 4+ yrs asked: 223
-- pay below bar: 178
+- pay below bar: 177
 - 5+ yrs asked: 176
 - embedded role: 127
 - 6+ yrs asked: 75
 - 8+ yrs asked: 66
-- crm platform role: 51
+- crm platform role: 50
 - 7+ yrs asked: 46
 - 10+ yrs asked: 20
 - title level: 19

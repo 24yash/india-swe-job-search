@@ -1725,7 +1725,9 @@
    "type": "Fintech (listed)",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Jupiter",
@@ -1871,7 +1873,9 @@
    "type": "Insurtech",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Turtlemint",
@@ -2110,14 +2114,18 @@
    "type": "Grocery (Tata)",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Tata 1mg",
    "type": "Health commerce",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Tata Digital",
@@ -2131,7 +2139,9 @@
    "type": "Health commerce",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Cars24",
@@ -2154,7 +2164,9 @@
    "type": "Auto commerce",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Licious",
@@ -2198,7 +2210,9 @@
    "type": "Edtech",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Scaler",
@@ -2406,14 +2420,18 @@
    "type": "SaaS",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Capillary Technologies",
    "type": "SaaS",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Unicommerce",
@@ -3563,7 +3581,9 @@
    "type": "Indian product",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Practo",
@@ -4037,7 +4057,9 @@
    "type": "Trading",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Nuvama",
@@ -4155,7 +4177,9 @@
    "type": "SaaS",
    "quality": 9,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Facilio",

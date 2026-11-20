@@ -132,5 +132,25 @@ crawl.li_status = lambda jid: None
 kept4, st4 = crawl.keep_open_earlier("LinkedIn search", [], 30)
 check("a months-old 'open' answer on an old posting doesn't keep it forever", kept4 == [] and st4["aged_out"] == 1, st4)
 
+# detail-only failures: the listing was complete, so nothing absent is carried and the read counts as good
+J = crawl.Job
+crawl.save_raw("Wd", [J("Wd", "Software Engineer", "Bengaluru, India", "https://wd1.myworkdaysite.com/recruiting/wd/ext/job/Blr/SE_R1", now, "full JD"),
+                      J("Wd", "Software Engineer", "Bengaluru, India", "https://wd/ext/job/Blr/SE_R2", now, "closed one")],
+               last_ok=crawl.days_ago(2), fresh_count=2)
+stub = J("Wd", "Software Engineer", "Bengaluru, India", "https://wd.wd1.myworkdayjobs.com/ext/job/Blr/SE_R1", now, "", meta={"detail": "unread"})
+crawl.save_board("Wd", [stub], None, "DetailsUnread: Workday detail call failed (429)")
+got, meta = crawl.load_raw("Wd")
+check("details unread: stub replaced by the last full read even when the host differs", [j.text for j in got] == ["full JD"], [j.url for j in got])
+check("details unread: a posting gone from a complete listing is not carried", len(got) == 1)
+check("details unread: the read still counts as good", meta["last_ok"] == crawl.TODAY and meta["note"].startswith("DetailsUnread"), meta)
+
+# unread descriptions (detail call failed): development titles keep the benefit of the doubt, generic titles wait for a read
+co = {"name": "Acme", "type": "Product", "quality": 12, "pay": "likely", "pay_note": "Levels.fyi India SE1 25 LPA"}
+unread = lambda t: crawl.Job("Acme", t, "Bengaluru, India", "https://acme/" + t, now, "", meta={"detail": "unread"})  # noqa: E731
+row, why = crawl.evaluate(unread("Software Engineer II"), co, 30)
+check("unread description: a core title is kept and labelled", row is not None and "description not read" in row["listed_open"], why)
+row, why = crawl.evaluate(unread("Quality Conformance Engineer-Airframe"), co, 30)
+check("unread description: a generic title is not kept on the title alone", row is None, row and row["title"])
+
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)

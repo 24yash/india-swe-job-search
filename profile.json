@@ -642,7 +642,7 @@
     "liveness_checks_per_run": 120,
     "liveness_recheck_days": 7,
     "unchecked_max_age_days": 90,
-    "_comment_liveness": "Earlier LinkedIn postings not seen again are checked on LinkedIn (up to liveness_checks_per_run per pass, rechecked after liveness_recheck_days): closed ones are dropped, open ones kept at any age. Postings past the window that no check has reached yet (budget or rate limit) are kept until one does, up to unchecked_max_age_days."
+    "_comment_liveness": "Earlier LinkedIn postings not seen again are checked on LinkedIn (up to liveness_checks_per_run per pass, rechecked after liveness_recheck_days): closed ones are dropped, open ones kept at any age while the open answer is recent (an answer older than unchecked_max_age_days needs a fresh check for an equally old posting). Postings past the window that no check has reached yet (budget or rate limit) are kept until one does, up to unchecked_max_age_days."
   },
   "min_pay_lpa": 20,
   "max_age_days": 30,

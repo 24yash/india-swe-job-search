@@ -116,7 +116,7 @@ def build(stamp, keep, leads, rejected_rows, title_rows, raw_counts, raw_urls, n
     md += [f"- Failed, nothing to carry: {', '.join(sorted(failing)) or 'none'}",
            f"- Failed, last good postings carried: {', '.join(summary['sources_failed_but_carried']) or 'none'}",
            f"- Suspect reads (kept previous postings): {', '.join(summary['sources_suspect']) or 'none'}"]
-    if src:
+    if src and base_date:  # first run: no baseline, every source would read "new"
         md += ["", "| Source | Before | Now | Δ |", "|---|---|---|---|"]
         md += [f"| {s['source']} | {s['before'] if s['before'] is not None else 'new'} | {s['now'] if s['now'] is not None else 'gone'} | {s['delta']:+d} |"
                for s in src if abs(s["delta"]) >= 5 or s["before"] is None or s["now"] is None]

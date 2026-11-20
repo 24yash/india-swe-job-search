@@ -36,7 +36,6 @@ NOW = datetime.now(timezone.utc)  # for posting ages
 # Local date for file names and history, fixed when the run starts (report.py uses it too), so a run that crosses midnight
 # writes one set of files. JOB_SEARCH_DATE pins it, e.g. to --rescore a refresh that started the day before.
 TODAY = os.environ.get("JOB_SEARCH_DATE") or datetime.now().strftime("%Y-%m-%d")
-os.environ["JOB_SEARCH_DATE"] = TODAY  # a second import of this module (report.py, changes.py under __main__) gets the same date
 os.environ["JOB_SEARCH_DATE"] = TODAY  # report/changes import `crawl` again while this file runs as __main__: same date
 
 def write_atomic(path, text):
@@ -154,9 +153,14 @@ def detail_failed(failed, reader, e):
     failed.append(f"{reader} detail call failed ({getattr(getattr(e, 'response', None), 'status_code', None) or type(e).__name__})")
 
 
+class DetailsUnread(RuntimeError):
+    """The board's listing was read completely; only some descriptions failed (kept as detail=unread stubs).
+    Postings missing from such a read have closed, so nothing is carried, and the read still counts as good."""
+
+
 def raise_if_failed(failed):
     if failed:  # a read with postings kept from the list only must not look complete
-        raise RuntimeError(f"{failed[0]} ({len(failed)} postings kept from the list)")
+        raise DetailsUnread(f"{failed[0]} ({len(failed)} postings kept from the list)")
 
 
 def parse_ts(v):
@@ -410,7 +414,7 @@ def workday_india_facet(api):
 def workday(c):
     host = f"https://{c['tenant']}.{c['wd']}.myworkdayjobs.com"
     api = f"{host}/wday/cxs/{c['tenant']}/{c['site']}"
-    seen, todo, failed = set(), [], []
+    seen, todo, failed, list_failed = set(), [], [], []
 
     def scan(query, facets, cap):
         offset, total = 0, None
@@ -420,7 +424,7 @@ def workday(c):
             except requests.RequestException as e:  # keep the pages already read instead of losing the whole board
                 if offset == 0:
                     raise
-                failed.append(f"Workday page at offset {offset} failed ({type(e).__name__})")
+                list_failed.append(f"Workday page at offset {offset} failed ({type(e).__name__})")
                 break
             posts = d.get("jobPostings", [])
             if total is None:
@@ -471,8 +475,9 @@ def workday(c):
 
     with ThreadPoolExecutor(6) as pool:
         yield from filter(None, pool.map(detail, todo))
-    if failed:  # a partial listing must not look complete: crawl() then merges in the previous crawl's postings
-        raise RuntimeError(f"{failed[0]}; kept the postings read before it")
+    if list_failed:  # a partial listing must not look complete: crawl() then merges in the previous crawl's postings
+        raise RuntimeError(f"{list_failed[0]}; kept the postings read before it")
+    raise_if_failed(failed)
 
 
 def oracle(c):
@@ -963,8 +968,10 @@ def evaluate(job, company, max_age):
     if family is None:
         return None, "title/level"
     says_developer = bool(re.search(r"\bdevelopers?\b|\bprogrammers?\b", job.title.lower()))
-    lenient = (family == "core" or says_developer or job.meta.get("detail") == "unread"  # description not read: no evidence either way
-               or (family == "ai" and len((job.text or "").strip()) < 400))
+    # an unread description (detail call failed) is no evidence either way: development titles (core, ai, "developer") keep the
+    # benefit of the doubt; a generic title waits for a run that reads its description (an engineering title alone is not enough)
+    lenient = (family == "core" or says_developer
+               or (family == "ai" and (job.meta.get("detail") == "unread" or len((job.text or "").strip()) < 400)))
     # core titles (MTS, Programmer Analyst) carry their own evidence: a boilerplate JD with no tech words keeps them (Citi);
     # a generic title that merely says 'developer' gets that benefit only when the JD is too short to tell (truncated)
     if needs_software_jd(job.title, family) and not software_jd(job.text, strict=not lenient, allow_empty="always" if family == "core" else lenient):
@@ -1023,7 +1030,8 @@ def evaluate(job, company, max_age):
         "gaps": ", ".join(gaps) or "none obvious",
         "url": job.url,
         "posted": job.posted.date().isoformat() if job.posted else "unknown",
-        "listed_open": job.meta.get("liveness", "yes (listed in the latest read)"),
+        "listed_open": job.meta.get("liveness", "yes (listed in the latest read)")
+                       + ("; description not read (detail call failed)" if job.meta.get("detail") == "unread" else ""),
         "older_than_window": "yes" if stale else "",
         "breakdown": ", ".join(f"{k} {v:.0f}/{WEIGHTS[k]}" for k, v in parts.items()),
     }, ""
@@ -1055,14 +1063,23 @@ def save_raw(name, jobs, note="", **extra):
                                           "jobs": [asdict(j) | {"posted": j.posted.isoformat() if j.posted else None} for j in jobs]}))
 
 
+def fill_unread(fresh, old):
+    """A posting whose detail call failed this time (meta detail=unread): its last full read beats the list-data stub.
+    Matched by URL, else by the URL's last segment (Workday's externalUrl can be on another host than the stub's URL)."""
+    by_url = {j.url: j for j in old if j.text}
+    tails = collections.Counter(j.url.rstrip("/").rsplit("/", 1)[-1] for j in old)
+    by_tail = {j.url.rstrip("/").rsplit("/", 1)[-1]: j for j in old if j.text}
+    def prev(j):
+        t = j.url.rstrip("/").rsplit("/", 1)[-1]
+        return by_url.get(j.url) or (by_tail.get(t) if tails[t] == 1 else None)
+    return [(prev(j) or j) if j.meta.get("detail") == "unread" else j for j in fresh]
+
+
 def with_previous(name, fresh, liveness=None):
     """Fresh jobs topped up with the source's previous jobs that weren't seen again (yet).
     liveness: a label for the carried postings, shown in the shortlist's listed_open column."""
     old, _ = load_raw(name)
-    by_url = {j.url: j for j in old}
-    # a posting whose detail call failed this time (meta detail=unread): its last full read beats the list-data stub
-    fresh = [by_url[j.url] if j.meta.get("detail") == "unread" and by_url.get(j.url) and by_url[j.url].text else j
-             for j in fresh]
+    fresh = fill_unread(fresh, old)
     have = {j.url for j in fresh}
     carried = [j for j in old if j.url not in have]
     if liveness:
@@ -1080,13 +1097,16 @@ COLLAPSE_MIN_PREVIOUS, COLLAPSE_RATIO, COLLAPSE_CONFIRM_DAYS = 10, 0.2, 7  # als
 
 
 def days_ago(n):
-    return (datetime.now() - timedelta(days=n)).strftime("%Y-%m-%d")
+    """n days before the run's date (TODAY, which JOB_SEARCH_DATE can pin), as YYYY-MM-DD."""
+    return (datetime.strptime(TODAY, "%Y-%m-%d") - timedelta(days=n)).strftime("%Y-%m-%d")
 
 
-def save_board(name, jobs, err):
-    """Save a company board's read (see BOARD_CARRY_DAYS above). Returns a short note for the log."""
+def save_board(name, jobs, err, unread=""):
+    """Save a company board's read (see BOARD_CARRY_DAYS above). Returns a short note for the log.
+    unread: the listing was complete but some descriptions failed; a good read, noted, nothing carried."""
     prev, meta = load_raw(name)
     meta = meta or {}
+    jobs = fill_unread(jobs, prev)
     last_ok = meta.get("last_ok") or (meta["fetched_at"][:10] if meta else None)  # older files: the last fetch
     good_count = meta.get("fresh_count", len(prev))  # the last clean read's size, not counting carried postings
     if err:
@@ -1106,8 +1126,8 @@ def save_board(name, jobs, err):
                     f"(accepted as real if it lasts {COLLAPSE_CONFIRM_DAYS} days, since {since})")
             save_raw(name, merged, note, last_ok=last_ok, fresh_count=good_count, suspect_since=since)
             return note
-    save_raw(name, jobs, last_ok=TODAY, fresh_count=len(jobs))
-    return ""
+    save_raw(name, jobs, unread, last_ok=TODAY, fresh_count=len(jobs))
+    return unread
 
 
 # Readers whose boards share one front end, so parallel boards add up to one client: every *.myworkdayjobs.com tenant sits
@@ -1120,7 +1140,7 @@ def crawl(company, ctx):
     the raw file (fresh + not-yet-refreshed previous jobs) is saved and the shortlist and dashboard
     are rebuilt, so results appear while LinkedIn is still running."""
     started = time.time()
-    jobs, err = [], None
+    jobs, err, unread = [], None, ""
     is_li = company["ats"] == "linkedin"
     if is_li:  # lets the LinkedIn fetcher save progress on a timer, between searches
         company["checkpoint"] = lambda: checkpoint(company, jobs, ctx)
@@ -1130,6 +1150,8 @@ def crawl(company, ctx):
                 jobs.append(job)
                 if is_li and len(jobs) % PROFILE["linkedin"]["checkpoint_every"] == 0:
                     checkpoint(company, jobs, ctx)
+    except DetailsUnread as e:  # complete listing, some descriptions unread: not a failed read
+        unread = f"{type(e).__name__}: {str(e)[:120]}"
     except Exception as e:  # one broken board should not kill the run; keep what it fetched before failing
         err = f"{type(e).__name__}: {str(e)[:120]}"
     board_note = ""
@@ -1140,7 +1162,7 @@ def crawl(company, ctx):
         save_raw(company["name"], jobs + kept, f"{err} — {note}" if err else "", liveness=st)
         print(f"  {company['name']}: {note}", file=sys.stderr, flush=True)
     else:
-        board_note = save_board(company["name"], jobs, err)
+        board_note = save_board(company["name"], jobs, err, unread)
     if is_li:
         checkpoint(company, None, ctx)
     print(f"{company['name']:<22} {len(jobs):>4} fetched  {time.time() - started:5.1f}s"
