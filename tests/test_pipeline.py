@@ -56,7 +56,9 @@ def fake_get(url, **kw):
     if url.endswith("/jobs"):
         return gh_list
     if url.endswith("/4"):
-        raise requests.HTTPError("404 closed")
+        gone = requests.Response()
+        gone.status_code = 404
+        raise requests.HTTPError("404 closed", response=gone)
     return {"content": "&lt;p&gt;2+ years of experience in Java&lt;/p&gt;"}
 
 
@@ -73,6 +75,23 @@ check("greenhouse skips a failed detail without aborting", "u5" in [j.url for j 
 check("greenhouse fetches descriptions only for matches", len([c for c in calls if not c.endswith("/jobs")]) == 3, calls)
 check("greenhouse description parsed", bool(jobs) and "2+ years" in jobs[0].text)
 check("greenhouse posted date from list", bool(jobs) and jobs[0].posted and jobs[0].posted.year == 2026)
+
+
+def throttled_get(url, **kw):  # a detail call that fails for another reason (dropped connection, 5xx): the posting is open
+    if url.endswith("/5"):
+        raise requests.ConnectionError("reset")
+    return fake_get(url, **kw)
+
+
+crawl.get, got, gerr = throttled_get, [], None
+try:  # read the way crawl() does: keep what was yielded before the reader raised
+    for j in crawl.greenhouse({"name": "Acme", "slug": "acme"}):
+        got.append(j)
+except Exception as e:  # noqa: BLE001
+    gerr = e
+crawl.get = orig_get
+check("greenhouse: a failed (non-404) detail keeps the posting from the list", [j.url for j in got] == ["u1", "u5"] and got[1].meta.get("detail") == "unread", [j.url for j in got])
+check("greenhouse: a failed detail marks the read as failed (so the last good read is carried)", "detail call failed" in str(gerr), repr(gerr))
 
 # ---------------------------------------------------------------- workday: parallel details, order kept, failures skipped
 TEAMS = "ABCDEFGH"
@@ -94,16 +113,18 @@ def wd_get(url, **kw):
 orig_post = crawl.post
 crawl.post, crawl.get = wd_post, wd_get
 check("workday fixture titles all pass the title filter", all(crawl.title_ok(p["title"]) for p in posts[:8]))
-try:
-    wjobs = list(crawl.workday({"name": "Acme", "tenant": "acme", "wd": "wd1", "site": "ext"}))
+wjobs, werr = [], None
+try:  # crawl() keeps what a reader yielded before it raised: read the same way
+    for wj in crawl.workday({"name": "Acme", "tenant": "acme", "wd": "wd1", "site": "ext"}):
+        wjobs.append(wj)
 except Exception as e:  # noqa: BLE001
-    wjobs = []
-    check("workday does not crash on a failed detail", False, repr(e))
+    werr = e
 crawl.post, crawl.get = orig_post, orig_get
 titles = [j.title for j in wjobs]
-check("workday: failed detail skipped, rest kept", len(wjobs) == 7 and "Software Engineer - Team D" not in titles, titles)
+check("workday: a failed detail call marks the read as failed (not a clean, emptier board)", "detail call failed" in str(werr), repr(werr))
+check("workday: failed detail kept from the list data, rest read", len(wjobs) == 8 and next(j for j in wjobs if j.title.endswith("Team D")).text == "", titles)
 check("workday: foreign single-location roles not fetched", "Software Engineer X" not in titles)
-check("workday: order preserved", titles == [f"Software Engineer - Team {TEAMS[i]}" for i in range(8) if i != 3], titles)
+check("workday: order preserved", titles == [f"Software Engineer - Team {TEAMS[i]}" for i in range(8)], titles)
 
 # ---------------------------------------------------------------- discover_ats helpers
 check("same_company: empty after suffix strip -> needs review", discover_ats.same_company("Labs Inc", "Labs") is None)

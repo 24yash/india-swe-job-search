@@ -8,14 +8,19 @@ import argparse
 import collections
 import csv
 import os
-from datetime import date
 from pathlib import Path
 
 OUT = Path(__file__).parent / "output"
 
 
-def rows(name):
-    p = OUT / f"{name}-{date.today().isoformat()}.csv"
+def run_date():
+    """The crawl run's date (its file stamp), so a run that crosses midnight writes one set of dated files."""
+    import crawl
+    return crawl.TODAY
+
+
+def rows(name, stamp):
+    p = OUT / f"{name}-{stamp}.csv"
     return list(csv.DictReader(open(p))) if p.exists() else []
 
 
@@ -29,7 +34,8 @@ def main(argv=None):
     ap.add_argument("--per-company", type=int, default=3)
     args = ap.parse_args(argv)
 
-    jobs, leads, rejected = rows("jobs"), rows("leads-unverified-pay"), rows("rejected")
+    stamp = run_date()
+    jobs, leads, rejected = rows("jobs", stamp), rows("leads-unverified-pay", stamp), rows("rejected", stamp)
     per = collections.Counter()
     picked = []
     for r in sorted(jobs, key=lambda r: -int(r["score"])):
@@ -39,7 +45,7 @@ def main(argv=None):
         if len(picked) == args.top:
             break
 
-    md = [f"# Shortlist table — {date.today().isoformat()}", "",
+    md = [f"# Shortlist table — {stamp}", "",
           f"{len(jobs)} roles passed every filter; showing the top {len(picked)} (max {args.per_company} per company). "
           f"{len(leads)} more pass everything except pay evidence (leads file).", "",
           "| # | Company | Company type / stage (latest round) | Role title | Location / mode | Exp asked | Pay (₹ LPA) + confidence + source | Key stack from JD | Score | Gaps vs my profile | Apply link | Posted date |",
@@ -67,7 +73,7 @@ def main(argv=None):
             shown[key] += 1
             md.append(f"- {cell(r['company'])}: {cell(r['title'])} ({cell(r['location'])}) → {cell(r['reason'])}")
 
-    out = OUT / f"shortlist-table-{date.today().isoformat()}.md"
+    out = OUT / f"shortlist-table-{stamp}.md"
     tmp = out.with_name(f".{out.name}.{os.getpid()}.tmp")
     tmp.write_text("\n".join(md) + "\n")
     tmp.replace(out)  # atomic: never a half-written table

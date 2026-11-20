@@ -33,7 +33,11 @@ ROOT = Path(__file__).parent
 OUT = ROOT / "output"
 UA = {"User-Agent": "Mozilla/5.0 (job-search research script; read-only)"}
 NOW = datetime.now(timezone.utc)  # for posting ages
-TODAY = datetime.now().strftime("%Y-%m-%d")  # local date, for file names and history (matches report.py)
+# Local date for file names and history, fixed when the run starts (report.py uses it too), so a run that crosses midnight
+# writes one set of files. JOB_SEARCH_DATE pins it, e.g. to --rescore a refresh that started the day before.
+TODAY = os.environ.get("JOB_SEARCH_DATE") or datetime.now().strftime("%Y-%m-%d")
+os.environ["JOB_SEARCH_DATE"] = TODAY  # a second import of this module (report.py, changes.py under __main__) gets the same date
+os.environ["JOB_SEARCH_DATE"] = TODAY  # report/changes import `crawl` again while this file runs as __main__: same date
 
 def write_atomic(path, text):
     """Write through a temp file and a rename, so a crash mid-write or a reader in another process
@@ -137,6 +141,22 @@ def strip_html(s):
     s = html.unescape(s or "")
     s = re.sub(r"<(br|/p|/li|/div|/h\d)[^>]*>", "\n", s, flags=re.I)
     return re.sub(r"[ \t]+", " ", re.sub(r"<[^>]+>", " ", s))
+
+
+def posting_gone(e):
+    """A detail call's failure means the posting closed only on 404/410; a 429, 5xx or dropped connection says nothing
+    about the posting. Readers keep such a posting from the list data (meta detail=unread) and mark the read failed,
+    so crawl() carries the last good read instead of treating the posting as closed."""
+    return getattr(getattr(e, "response", None), "status_code", None) in (404, 410)
+
+
+def detail_failed(failed, reader, e):
+    failed.append(f"{reader} detail call failed ({getattr(getattr(e, 'response', None), 'status_code', None) or type(e).__name__})")
+
+
+def raise_if_failed(failed):
+    if failed:  # a read with postings kept from the list only must not look complete
+        raise RuntimeError(f"{failed[0]} ({len(failed)} postings kept from the list)")
 
 
 def parse_ts(v):
@@ -254,7 +274,7 @@ def software_jd(text, strict=True, allow_empty=True):
     if not strict:  # boilerplate JDs (Citi, Pure Storage MTS): only clear hardware/ops evidence rejects
         # no terms at all: give the benefit of the doubt only when there's barely any text (a truncated JD), not when a
         # full description says nothing about development (payments operations under a 'Team Developer' title)
-        return sw > hw or (hw == 0 and sw == 0 and (allow_empty == "always" or (allow_empty and len((text or "").strip()) < 400)))
+        return (sw > 0 and sw >= hw) or (hw == 0 and sw == 0 and (allow_empty == "always" or (allow_empty and len((text or "").strip()) < 400)))
     strong = len(jd_terms(cfg.get("strong_signals", cfg["signals"]), text))
     # dominance, not subtraction (one stray word can't cancel the evidence), and at least one term that means building software
     return sw >= cfg["min_signals"] and sw > hw and strong >= 1
@@ -292,17 +312,29 @@ def greenhouse(c):
     """List first (no descriptions: ~12x smaller for big boards), then fetch descriptions only for
     India roles whose title fits."""
     base = f"https://boards-api.greenhouse.io/v1/boards/{c['slug']}/jobs"
+    failed = []  # detail calls that failed for a reason other than the posting being gone
     for j in get(base)["jobs"]:
         loc = j.get("location", {}).get("name", "")
+        # some boards name only the work mode here ('Hybrid', 'In-Office': Cloudflare) and keep the city in a
+        # metadata field such as 'Job Posting Location'
+        meta = [str(v) for m in j.get("metadata") or [] if "location" in (m.get("name") or "").lower()
+                for v in (m.get("value") if isinstance(m.get("value"), list) else [m.get("value")]) if v]
+        loc = " / ".join(dict.fromkeys(filter(None, [loc, *meta])))
         if not (title_ok(j["title"]) and (in_india(loc) or "remote" in loc.lower())):
             continue
         try:
             detail = get(f"{base}/{j['id']}")
-        except requests.RequestException:
-            continue  # closed between the list and the detail call
+        except requests.RequestException as e:
+            if posting_gone(e):
+                continue  # closed between the list and the detail call
+            detail_failed(failed, "Greenhouse", e)
+            yield Job(c["name"], j["title"], loc, j["absolute_url"], parse_ts(j.get("first_published") or j.get("updated_at")), "",
+                      remote="remote" in loc.lower(), meta={"detail": "unread"})
+            continue
         yield Job(c["name"], j["title"], loc, j["absolute_url"],
                   parse_ts(j.get("first_published") or j.get("updated_at")),
                   strip_html(detail.get("content")), remote="remote" in loc.lower())
+    raise_if_failed(failed)
 
 
 def lever(c):
@@ -422,8 +454,16 @@ def workday(c):
     def detail(j):  # one request per job: run a few at a time instead of one after another
         try:
             info = get(f"{api}{j['externalPath']}").get("jobPostingInfo", {})
-        except requests.RequestException:
-            return None  # closed between the search and the detail call; don't lose the rest of the board
+        except requests.RequestException as e:
+            code = getattr(e.response, "status_code", None)
+            if code in (404, 410):
+                return None  # closed between the search and the detail call; don't lose the rest of the board
+            # throttled (429 / bot check) or a network error: the posting is still open, so a silent None would make
+            # the board read as cleanly empty (Visa, 20 Nov). Keep it from the list data and mark the read as failed.
+            failed.append(f"Workday detail call failed ({code or type(e).__name__})")
+            loc = j.get("locationsText", "")
+            return Job(c["name"], j["title"], loc, f"{host}/{c['site']}{j['externalPath']}", workday_age(j.get("postedOn")), "",
+                       meta={"detail": "unread"}) if in_india(loc) else None
         locs = " / ".join([info.get("location", "")] + info.get("additionalLocations", []))
         return Job(c["name"], info.get("title", j["title"]), locs, info.get("externalUrl") or f"{host}/{c['site']}{j['externalPath']}",
                    parse_ts(info.get("startDate")) or workday_age(j.get("postedOn")),
@@ -438,7 +478,7 @@ def workday(c):
 def oracle(c):
     """Oracle Recruiting Cloud (JPMorgan, Oracle…): the public REST API behind the company's own careers site."""
     api = f"https://{c['host']}/hcmRestApi/resources/latest"
-    seen, todo = set(), []
+    seen, todo, failed = set(), [], []
     for query in ("software engineer", "software developer", "backend engineer"):
         offset = 0
         while offset < 500:
@@ -463,28 +503,38 @@ def oracle(c):
             finder = f'ById;Id="{j["Id"]}",siteNumber={c["site"]}'
             info = (get(f"{api}/recruitingCEJobRequisitionDetails", params={"expand": "all", "onlyData": "true", "finder": finder})
                     .get("items") or [{}])[0]
-        except requests.RequestException:
-            return None
+        except requests.RequestException as e:
+            if posting_gone(e):
+                return None
+            detail_failed(failed, "Oracle", e)
+            info = {"_unread": True}
         text = "\n".join(strip_html(info.get(k)) for k in ("ExternalDescriptionStr", "ExternalResponsibilitiesStr", "ExternalQualificationsStr"))
         return Job(c["name"], j["Title"], " / ".join(filter(None, locs)),
                    f"https://{c['host']}/hcmUI/CandidateExperience/en/sites/{c['site']}/job/{j['Id']}",
                    parse_ts(info.get("ExternalPostedStartDate") or j.get("PostedDate")), text,
-                   remote="remote" in (info.get("WorkplaceType") or "").lower(), meta={"commitment": info.get("JobSchedule") or ""})
+                   remote="remote" in (info.get("WorkplaceType") or "").lower(),
+                   meta={"commitment": info.get("JobSchedule") or ""} | ({"detail": "unread"} if info.get("_unread") else {}))
 
     with ThreadPoolExecutor(6) as pool:
         yield from filter(None, pool.map(detail, todo))
+    raise_if_failed(failed)
 
 
 def rippling(c):
     """Rippling ATS public board (ats.rippling.com/<slug>)."""
     base = f"https://api.rippling.com/platform/api/ats/v1/board/{c['slug']}/jobs"
+    failed = []
     for j in get(base):
         loc = (j.get("workLocation") or {}).get("label", "")
         if not title_ok(j.get("name", "")) or not (in_india(loc) or "remote" in loc.lower()):
             continue
         try:
             d = get(f"{base}/{j['uuid']}")
-        except requests.RequestException:
+        except requests.RequestException as e:
+            if posting_gone(e):
+                continue
+            detail_failed(failed, "Rippling", e)
+            yield Job(c["name"], j["name"], loc, j["url"], None, "", remote="remote" in loc.lower(), meta={"detail": "unread"})
             continue
         desc = d.get("description") or {}
         text = "\n".join(strip_html(v) for v in (desc.values() if isinstance(desc, dict) else [desc]) if isinstance(v, str))
@@ -493,6 +543,7 @@ def rippling(c):
         yield Job(c["name"], j["name"], " / ".join(d.get("workLocations") or [loc]), j["url"], parse_ts(d.get("createdOn")),
                   text, remote="remote" in loc.lower(), pay_posted=pay,
                   meta={"employmentType": (d.get("employmentType") or {}).get("label", "")})
+    raise_if_failed(failed)
 
 
 def amazon(c):
@@ -526,6 +577,7 @@ def recruitee(c):
 def eightfold(c):
     """Eightfold PCSX careers sites (Microsoft, Qualcomm, Autodesk…): the public search API behind the site."""
     host, domain = c["host"], c["domain"]
+    failed = []
     if c.get("api") == "v2":  # older Eightfold sites (Netflix): public list API, description from the detail call
         v2 = f"https://{host}/api/apply/v2/jobs"
         for start in range(0, 500, 10):
@@ -535,13 +587,18 @@ def eightfold(c):
                     continue
                 try:
                     text = strip_html(get(f"{v2}/{p['id']}", params={"domain": domain}).get("job_description"))
-                except requests.RequestException:
-                    continue  # closed between the list and the detail call
+                except requests.RequestException as e:
+                    if posting_gone(e):
+                        continue  # closed between the list and the detail call
+                    detail_failed(failed, "Eightfold", e)
+                    text, p = "", p | {"_unread": True}
                 yield Job(c["name"], p["name"], " / ".join(p.get("locations") or [p.get("location", "")]),
                           p.get("canonicalPositionUrl") or f"https://{host}/careers/job/{p['id']}",
-                          parse_ts(p.get("t_create")), text, remote=(p.get("work_location_option") or "") == "remote")
+                          parse_ts(p.get("t_create")), text, remote=(p.get("work_location_option") or "") == "remote",
+                          meta={"detail": "unread"} if p.get("_unread") else {})
             if len(pos) < 10:
-                return
+                break
+        raise_if_failed(failed)
         return
     api = f"https://{host}/api/pcsx"
     SESSION.get(f"https://{host}/careers?domain={domain}")  # sets the cookies the API expects
@@ -557,14 +614,18 @@ def eightfold(c):
                 time.sleep(0.5)
                 try:
                     det = get(f"{api}/position_details", params={"position_id": p["id"], "domain": domain, "hl": "en"})["data"]
-                except (requests.RequestException, KeyError):
-                    continue
+                except (requests.RequestException, KeyError) as e:
+                    if isinstance(e, KeyError) or posting_gone(e):
+                        continue  # closed between the search and the detail call
+                    detail_failed(failed, "Eightfold", e)
+                    det = {"_unread": True}
                 yield Job(c["name"], p["name"], " / ".join(p.get("standardizedLocations") or p.get("locations", [])),
                           det.get("publicUrl") or f"https://{host}/careers/job/{p['id']}",
                           parse_ts(p.get("postedTs")), strip_html(det.get("jobDescription")),
-                          remote=(p.get("workLocationOption") or "") == "remote")
+                          remote=(p.get("workLocationOption") or "") == "remote", meta={"detail": "unread"} if det.get("_unread") else {})
             if len(pos) < 10:
                 break
+    raise_if_failed(failed)
 
 
 def portal(c):
@@ -723,12 +784,15 @@ def linkedin_search(c, params, limit, only, seen):
         if not title_ok(title) or is_excluded_company(comp) or nc in skip \
                 or on_own_board(c["boards"]["titles"], comp, title=title):
             continue
-        if jid not in LI_DETAILS:
+        text = LI_DETAILS.get(jid)
+        if text is None:
             d = li_get(f"{LI_API}/jobPosting/{jid}")
             i = d.text.find("show-more-less-html__markup") if d.ok else -1
-            LI_DETAILS[jid] = strip_html(d.text[i:i + 20000]) if i > 0 else ""
+            text = strip_html(d.text[i:i + 20000]) if i > 0 else ""
+            if i > 0 or d.status_code in (404, 410):  # cache only a real answer: a failed or walled fetch is retried next run
+                LI_DETAILS[jid] = text
         yield Job(comp, title, loc, f"https://www.linkedin.com/jobs/view/{jid}/", parse_ts(date),
-                  LI_DETAILS[jid], remote="remote" in loc.lower(), meta={"source": "LinkedIn (aggregator)", "company_page": company_page})
+                  text, remote="remote" in loc.lower(), meta={"source": "LinkedIn (aggregator)", "company_page": company_page})
 
 
 FETCHERS = {f.__name__: f for f in (greenhouse, lever, ashby, smartrecruiters, workday, oracle, rippling, eightfold, recruitee, portal, amazon, microsoft, atlassian, google, linkedin)}
@@ -791,15 +855,15 @@ def is_excluded_company(name):
 # ---------------------------------------------------------------- evaluation
 
 EXP_RE = re.compile(
-    r"(?<![\d.])(\d{1,2})\s*(?:\+|plus)?\s*(?:(?:-|–|to)\s*(\d{1,2})\s*\+?)?\s*(?:years?|yrs?)(?:\s+of)?(?=[^.\n]{0,80}(?:experience|exp\b|industry|software|engineering|development|professional|building))",
+    r"(?<![\d.])(\d{1,2})(?:\.\d+)?\s*(?:\+|plus)?\s*(?:(?:-|–|to)\s*(\d{1,2})(?:\.\d+)?\s*\+?)?\s*(?:years?|yrs?)(?:\s+of)?(?=[^.\n]{0,80}(?:experience|exp\b|industry|software|engineering|development|professional|building))",
     re.I)
 
 
 # "Years of Experience: Minimum 6-8 years", "Experience: 2+ yrs", "Experience required - 3 to 5 years".
 # A bare dash is not a label: in bulleted JDs "...development experience\n- 2+ years of..." is the next bullet.
 EXP_LABEL_RE = re.compile(
-    r"(?:years?\s+of\s+)?experience(?:\s*(?:required|needed)\s*[:\-–]?|\s*:)\s*(?:minimum|min\.?|at\s*least)?\s*(\d{1,2})\s*(?:\+|plus)?\s*"
-    r"(?:(?:-|–|to)\s*\d{1,2}\s*)?(?:years?|yrs?)", re.I)
+    r"(?:years?\s+of\s+)?(?:experience|\bexp\b\.?)(?:\s*(?:required|needed)\s*[:\-–]?|\s*:)\s*(?:minimum|min\.?|at\s*least)?\s*(\d{1,2})(?:\.\d+)?\s*(?:\+|plus)?\s*"
+    r"(?:(?:-|–|to)\s*\d{1,2}(?:\.\d+)?\s*)?(?:years?|yrs?)", re.I)
 
 
 def min_experience(text):
@@ -899,7 +963,8 @@ def evaluate(job, company, max_age):
     if family is None:
         return None, "title/level"
     says_developer = bool(re.search(r"\bdevelopers?\b|\bprogrammers?\b", job.title.lower()))
-    lenient = family == "core" or says_developer
+    lenient = (family == "core" or says_developer or job.meta.get("detail") == "unread"  # description not read: no evidence either way
+               or (family == "ai" and len((job.text or "").strip()) < 400))
     # core titles (MTS, Programmer Analyst) carry their own evidence: a boilerplate JD with no tech words keeps them (Citi);
     # a generic title that merely says 'developer' gets that benefit only when the JD is too short to tell (truncated)
     if needs_software_jd(job.title, family) and not software_jd(job.text, strict=not lenient, allow_empty="always" if family == "core" else lenient):
@@ -958,7 +1023,7 @@ def evaluate(job, company, max_age):
         "gaps": ", ".join(gaps) or "none obvious",
         "url": job.url,
         "posted": job.posted.date().isoformat() if job.posted else "unknown",
-        "listed_open": "yes (live on ATS)",
+        "listed_open": job.meta.get("liveness", "yes (listed in the latest read)"),
         "older_than_window": "yes" if stale else "",
         "breakdown": ", ".join(f"{k} {v:.0f}/{WEIGHTS[k]}" for k, v in parts.items()),
     }, ""
@@ -982,17 +1047,72 @@ def load_raw(name):
     return [Job(**j | {"posted": parse_ts(j["posted"])}) for j in d["jobs"]], d
 
 
-def save_raw(name, jobs, note=""):
+def save_raw(name, jobs, note="", **extra):
+    """extra: bookkeeping kept with the source (last_ok, fresh_count, suspect_since; see crawl())."""
     RAW.mkdir(parents=True, exist_ok=True)
     write_atomic(raw_path(name), json.dumps({"source": name, "fetched_at": NOW.isoformat(timespec="seconds"), "note": note,
+                                          **{k: v for k, v in extra.items() if v is not None},
                                           "jobs": [asdict(j) | {"posted": j.posted.isoformat() if j.posted else None} for j in jobs]}))
 
 
-def with_previous(name, fresh):
-    """Fresh jobs topped up with the source's previous jobs that weren't seen again (yet)."""
+def with_previous(name, fresh, liveness=None):
+    """Fresh jobs topped up with the source's previous jobs that weren't seen again (yet).
+    liveness: a label for the carried postings, shown in the shortlist's listed_open column."""
     old, _ = load_raw(name)
+    by_url = {j.url: j for j in old}
+    # a posting whose detail call failed this time (meta detail=unread): its last full read beats the list-data stub
+    fresh = [by_url[j.url] if j.meta.get("detail") == "unread" and by_url.get(j.url) and by_url[j.url].text else j
+             for j in fresh]
     have = {j.url for j in fresh}
-    return fresh + [j for j in old if j.url not in have]
+    carried = [j for j in old if j.url not in have]
+    if liveness:
+        for j in carried:
+            j.meta = j.meta | {"liveness": liveness}
+    return fresh + carried
+
+
+# A board's own listing is authoritative: a posting missing from a clean read has closed. Two exceptions guard
+# against losing open roles to a bad read: a failed read carries the last good postings (for up to BOARD_CARRY_DAYS),
+# and a read that suddenly returns almost nothing without an error (a changed API, an empty page served to scripts)
+# is treated as failed until the drop has lasted COLLAPSE_CONFIRM_DAYS, then accepted as real.
+BOARD_CARRY_DAYS = 21
+COLLAPSE_MIN_PREVIOUS, COLLAPSE_RATIO, COLLAPSE_CONFIRM_DAYS = 10, 0.2, 7  # also: a board of 3+ going to 0
+
+
+def days_ago(n):
+    return (datetime.now() - timedelta(days=n)).strftime("%Y-%m-%d")
+
+
+def save_board(name, jobs, err):
+    """Save a company board's read (see BOARD_CARRY_DAYS above). Returns a short note for the log."""
+    prev, meta = load_raw(name)
+    meta = meta or {}
+    last_ok = meta.get("last_ok") or (meta["fetched_at"][:10] if meta else None)  # older files: the last fetch
+    good_count = meta.get("fresh_count", len(prev))  # the last clean read's size, not counting carried postings
+    if err:
+        if last_ok and last_ok >= days_ago(BOARD_CARRY_DAYS):
+            merged = with_previous(name, jobs, f"carried from the last good read ({last_ok}); this read failed")
+            note = f"{err} — {len(jobs)} fresh + {len(merged) - len(jobs)} carried from the last good read ({last_ok})"
+        else:
+            merged, note = jobs, f"{err} — last good read {last_ok or 'never'} is over {BOARD_CARRY_DAYS} days old, nothing carried"
+        save_raw(name, merged, note, last_ok=last_ok, fresh_count=good_count, suspect_since=meta.get("suspect_since"))
+        return note
+    collapsed = (good_count >= COLLAPSE_MIN_PREVIOUS and len(jobs) < COLLAPSE_RATIO * good_count) or (good_count >= 3 and not jobs)
+    if collapsed:
+        since = meta.get("suspect_since") or TODAY
+        if since > days_ago(COLLAPSE_CONFIRM_DAYS) and (last_ok or TODAY) >= days_ago(BOARD_CARRY_DAYS):
+            merged = with_previous(name, jobs, f"carried: this read returned {len(jobs)} of {good_count} postings")
+            note = (f"suspect read: {len(jobs)} postings vs {good_count} on {last_ok}; kept the previous postings "
+                    f"(accepted as real if it lasts {COLLAPSE_CONFIRM_DAYS} days, since {since})")
+            save_raw(name, merged, note, last_ok=last_ok, fresh_count=good_count, suspect_since=since)
+            return note
+    save_raw(name, jobs, last_ok=TODAY, fresh_count=len(jobs))
+    return ""
+
+
+# Readers whose boards share one front end, so parallel boards add up to one client: every *.myworkdayjobs.com tenant sits
+# behind the same Cloudflare edge, and 16 boards x 6 detail calls at once drew 429s and challenges (20 Nov 2026).
+SHARED_HOST_SLOTS = {"workday": threading.Semaphore(3)}
 
 
 def crawl(company, ctx):
@@ -1005,24 +1125,26 @@ def crawl(company, ctx):
     if is_li:  # lets the LinkedIn fetcher save progress on a timer, between searches
         company["checkpoint"] = lambda: checkpoint(company, jobs, ctx)
     try:
-        for job in FETCHERS[company["ats"]](company):
-            jobs.append(job)
-            if is_li and len(jobs) % PROFILE["linkedin"]["checkpoint_every"] == 0:
-                checkpoint(company, jobs, ctx)
+        with SHARED_HOST_SLOTS.get(company["ats"], contextlib.nullcontext()):
+            for job in FETCHERS[company["ats"]](company):
+                jobs.append(job)
+                if is_li and len(jobs) % PROFILE["linkedin"]["checkpoint_every"] == 0:
+                    checkpoint(company, jobs, ctx)
     except Exception as e:  # one broken board should not kill the run; keep what it fetched before failing
         err = f"{type(e).__name__}: {str(e)[:120]}"
+    board_note = ""
     if is_li:
-        kept, closed = keep_open_earlier(company["name"], jobs, ctx["max_age"])
-        note = f"{len(jobs)} fresh + {len(kept)} earlier still open; {closed} closed dropped"
-        save_raw(company["name"], jobs + kept, f"{err} — {note}" if err else "")
-    elif err:
-        merged = with_previous(company["name"], jobs)
-        save_raw(company["name"], merged, f"{err} — {len(jobs)} fresh + {len(merged) - len(jobs)} from previous crawl")
+        kept, st = keep_open_earlier(company["name"], jobs, ctx["max_age"])
+        note = (f"{len(jobs)} fresh + {len(kept)} earlier kept ({st['unchecked']} past the window awaiting a check); "
+                f"{st['closed']} closed, {st['aged_out']} aged out unchecked")
+        save_raw(company["name"], jobs + kept, f"{err} — {note}" if err else "", liveness=st)
+        print(f"  {company['name']}: {note}", file=sys.stderr, flush=True)
     else:
-        save_raw(company["name"], jobs)  # a board's own listing is authoritative: anything missing has closed
+        board_note = save_board(company["name"], jobs, err)
     if is_li:
         checkpoint(company, None, ctx)
-    print(f"{company['name']:<22} {len(jobs):>4} fetched  {time.time() - started:5.1f}s{'  ERROR ' + err if err else ''}",
+    print(f"{company['name']:<22} {len(jobs):>4} fetched  {time.time() - started:5.1f}s"
+          f"{'  ERROR ' + err if err else ''}{'  ' + board_note if board_note and not err else ''}",
           file=sys.stderr, flush=True)
     return company["name"], err
 
@@ -1038,22 +1160,26 @@ def li_job_id(url):
 
 def li_status(job_id):
     """'open' or 'closed' from LinkedIn's public job page (removed postings return 404; closed ones say
-    'No longer accepting applications'). None if LinkedIn rate-limits or errors."""
+    'No longer accepting applications'). None if LinkedIn rate-limits (stop checking), "error" if this one
+    posting's page failed (skip it, keep checking the rest)."""
     try:
         r = li_get(f"{LI_API}/jobPosting/{job_id}")
-    except (RateLimited, requests.RequestException):
+    except RateLimited:
         return None
+    except requests.RequestException:
+        return "error"
     if r.status_code in (404, 410) or (r.ok and "no longer accepting applications" in r.text.lower()):
         return "closed"
-    return "open" if r.ok else None
+    return "open" if r.ok else "error"
 
 
 def keep_open_earlier(name, fresh, max_age):
     """Earlier LinkedIn postings that this run didn't see again: keep the ones still open, drop the closed.
     The company sweep rotates and searches only cover the last max_age days, so not seeing a posting
     doesn't mean it closed. Each run checks a budget of them on LinkedIn, the ones about to age out first.
-    Unchecked postings are kept while younger than max_age; older ones only once confirmed open,
-    so long-running open roles stay and dead ones go."""
+    Unchecked postings are kept while younger than max_age, and past it until a check answers (up to
+    linkedin.unchecked_max_age_days); confirmed-open ones stay at any age, confirmed-closed ones go.
+    Returns (kept postings, counts for the log and the changes report)."""
     seen = {j.url for j in fresh}
     earlier = [j for j in load_raw(name)[0] if j.url not in seen]
     with LIVENESS_LOCK:
@@ -1068,20 +1194,38 @@ def keep_open_earlier(name, fresh, max_age):
         status = li_status(li_job_id(j.url))
         if status is None:
             break  # rate-limited: stop; the rest keep their previous state
+        if status == "error":
+            continue  # this posting's page failed; don't let one stuck posting block every later check
         updates[li_job_id(j.url)] = {"status": status, "checked": TODAY}
     with LIVENESS_LOCK:  # merge only our changes: the other pass may have saved in the meantime
         current = json.loads(LIVENESS_FILE.read_text()) if LIVENESS_FILE.exists() else {}
         current.update(updates)
         write_atomic(LIVENESS_FILE, json.dumps(current))
     state.update(updates)
-    kept, closed = [], 0
+    # Past the window and not checked yet (the check budget ran out, or LinkedIn rate-limited us): keep it until a
+    # check says closed rather than dropping a possibly open role unseen; it is first in line for the next run's checks.
+    # Only postings far past the window that were never confirmed open age out.
+    hard_cutoff = NOW - timedelta(days=PROFILE["linkedin"].get("unchecked_max_age_days", 90))
+    stale_open = days_ago(PROFILE["linkedin"].get("unchecked_max_age_days", 90))  # an "open" answer this old needs a fresh one
+    kept, st = [], {"closed": 0, "unchecked": 0, "aged_out": 0, "checked_now": len(updates)}
     for j in earlier:
-        status = state.get(li_job_id(j.url), {}).get("status")
-        if status == "closed":
-            closed += 1
-        elif status == "open" or (j.posted and j.posted >= cutoff):
-            kept.append(j)
-    return kept, closed
+        s = state.get(li_job_id(j.url), {})
+        if s.get("status") == "closed":
+            st["closed"] += 1
+            continue
+        if s.get("status") == "open" and (s["checked"] >= stale_open or (j.posted and j.posted >= hard_cutoff)):
+            label = f"open on LinkedIn (checked {s['checked']})"
+        elif j.posted and j.posted >= cutoff:
+            label = "seen in an earlier LinkedIn search; not rechecked yet"
+        elif j.posted and j.posted >= hard_cutoff:
+            label = "past the search window; open/closed not checked yet"
+            st["unchecked"] += 1
+        else:
+            st["aged_out"] += 1
+            continue
+        j.meta = j.meta | {"liveness": label}
+        kept.append(j)
+    return kept, st
 
 
 def checkpoint(company, jobs, ctx):
@@ -1120,12 +1264,19 @@ def write_bank(companies, activity, direct, sweep):
                   "pay unverified — check levels.fyi" if act["leads"] else
                   "quiet — keep watching" if c.get("pay") != "below" else "pay below bar")
         rows.append({"company": c["name"], "type": c.get("type", ""), "pay": c.get("pay", ""), "pay_note": c.get("pay_note", ""),
-                     "covered_by": "own job board" if key in direct else "LinkedIn company sweep" if key in swept else "LinkedIn generic search only",
+                     "covered_by": ("own job board + LinkedIn company sweep" if key in direct and key in swept else "own job board" if key in direct
+                                      else "LinkedIn company sweep" if key in swept else "LinkedIn generic search only"),
                      "eng_postings_seen_today": act["seen"], "fitting_today": act["fitting"], "leads_today": act["leads"],
                      "last_date_with_fitting_role": fit_dates[-1] if fit_dates else "never (so far)", "status": status})
     write_atomic(hist_file, json.dumps(hist, indent=0))
     rows.sort(key=lambda r: (-r["fitting_today"], -r["leads_today"], r["company"].lower()))
     write_atomic(OUT / f"company-bank-{stamp}.csv", csv_text(list(rows[0].keys()), rows))
+
+
+def board_returns_postings(name):
+    """The board's last read was clean and kept at least one posting (raw files hold only India, title-matching ones)."""
+    jobs, meta = load_raw(name)
+    return bool(jobs) and not (meta or {}).get("note")
 
 
 def build_context(args):
@@ -1140,8 +1291,11 @@ def build_context(args):
         if e:
             c.update({k: e[k] for k in ("pay", "pay_note", "below_title") if k in e})
     direct = {norm(c["name"]) for c in companies if c["ats"] != "linkedin"}
+    # A board that is failing or reads no postings at all may be a broken read (a changed API, a 403), not an empty
+    # board, so its company stays in the LinkedIn sweep pool; only boards that actually return postings replace it.
+    readable = {norm(c["name"]) for c in companies if c["ats"] != "linkedin" and board_returns_postings(c["name"])}
     sweep = sorted({c["name"] for c in TIERS["known"]
-                    if not any(same_or_alias(norm(c["name"]), d) for d in direct) and c.get("pay") in ("likely", "unclear")
+                    if not any(same_or_alias(norm(c["name"]), d) for d in readable) and c.get("pay") in ("likely", "unclear")
                     and (c.get("pay") == "likely" or c.get("linkedin_every_run")
                          or c.get("quality", 0) >= PROFILE["linkedin"]["company_sweep"]["min_quality"])},
                    key=norm)
@@ -1161,7 +1315,10 @@ def build_context(args):
     # readable job board), each group least-recently-searched first; deep runs rotate through the whole bank.
     tier = PROFILE["linkedin"]["company_sweep"]["top_tier_quality"]
     # Companies already searched today go last, so re-running after an interrupted run resumes where it stopped.
-    sweep.sort(key=lambda n: (state.get(norm(n)) == TODAY, not active(n), not DEEP and quality.get(norm(n), 0) < tier,
+    # a board that read cleanly but has no India role now is probably right: LinkedIn-only companies come before it
+    clean_empty = {norm(c["name"]) for c in companies if c["ats"] != "linkedin" and not load_raw(c["name"])[0]
+                   and not (load_raw(c["name"])[1] or {}).get("note")}
+    sweep.sort(key=lambda n: (state.get(norm(n)) == TODAY, norm(n) in clean_empty, not active(n), not DEEP and quality.get(norm(n), 0) < tier,
                               norm(n) in state, state.get(norm(n), ""), -quality.get(norm(n), 0)))
     # Companies whose own board no script can read (bot walls, robots.txt, sign-in, token-gated search) are searched
     # every run, on top of the rotating budget: LinkedIn is the only way the pipeline reads them (tiers.json "linkedin_every_run").
@@ -1210,8 +1367,12 @@ def _evaluate_all(ctx, quiet=False):
     keep, leads, rejected, errors, seen_urls = [], [], [], [], set()
     title_rejects = []  # kept apart: title drops are many, but an audit must be able to see them
     activity = collections.defaultdict(lambda: {"seen": 0, "fitting": 0, "leads": 0})
+    raw_counts, raw_urls, notes = {}, set(), {}  # for the changes report
     for source in companies:
         jobs, meta = load_raw(source["name"])
+        raw_counts[source["name"]] = len(jobs)
+        raw_urls.update(j.url for j in jobs)
+        notes[source["name"]] = (meta or {}).get("note", "")
         if meta and meta.get("note"):
             errors.append(f"{source['name']}: {meta['note']} (fetched {meta['fetched_at']})")
         for job in jobs:
@@ -1279,7 +1440,12 @@ def _evaluate_all(ctx, quiet=False):
         md += ["", "## Sources with problems", ""] + [f"- {e}" for e in errors]
     write_atomic(OUT / f"jobs-{stamp}.md", "\n".join(md) + "\n")
 
-    import build_dashboard, report  # local modules; imported here to keep crawl.py usable on its own
+    import build_dashboard, changes, report  # local modules; imported here to keep crawl.py usable on its own
+    try:  # a report, not the pipeline: it must never stop a LinkedIn pass or a board crawl
+        changes.build(stamp, keep, leads, rejected, title_rejects, raw_counts, raw_urls, notes, first_seen,
+                      json.loads((OUT / "bank-history.json").read_text()), out=OUT)
+    except Exception as e:  # noqa: BLE001
+        print(f"changes report skipped: {type(e).__name__}: {e}", file=sys.stderr, flush=True)
     report.main([])
     build_dashboard.main()
     if not quiet:
@@ -1306,8 +1472,12 @@ def main():
         fast = [c for c in sources if c["ats"] != "linkedin"]
         slow = [c for c in sources if c["ats"] == "linkedin"]
         if args.sources in ("fast", "all") and fast:
-            with ThreadPoolExecutor(16) as pool:  # boards are on different hosts, so this is polite per host
-                list(pool.map(lambda c: crawl(c, ctx), fast))
+            shared = [c for c in fast if c["ats"] in SHARED_HOST_SLOTS]
+            with ThreadPoolExecutor(16) as pool, ThreadPoolExecutor(3) as shared_pool:  # boards are on different hosts
+                futures = [shared_pool.submit(crawl, c, ctx) for c in shared] + \
+                          [pool.submit(crawl, c, ctx) for c in fast if c["ats"] not in SHARED_HOST_SLOTS]
+                for f in futures:
+                    f.result()
             evaluate_all(ctx)  # results from company boards are usable now; LinkedIn data is the previous crawl's
         if args.sources in ("linkedin", "all") and slow:
             with ThreadPoolExecutor(len(slow)) as pool:  # both passes share one throttle, so this stays polite

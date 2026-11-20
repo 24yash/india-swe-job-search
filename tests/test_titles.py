@@ -54,6 +54,11 @@ for t in ("Staff Software Engineer", "STAFF, SOFTWARE ENGINEER", "SMTS Software 
           "Senior DevOps Engineer", "Design Verification Engineer",
           "Software Engineer Intern", "Lead Engineer", "Research Engineer", "Research Scientist", "Sales Engineer"):
     check(f"excluded: {t}", fam(t) is None, fam(t))
+# Two-level postings that also take the junior level stay (20 Nov 2026, APT Portfolio); plain senior titles stay out.
+check("kept: 'X / Senior X' posting", fam("Python Developer/ Senior Python Developer") is not None, fam("Python Developer/ Senior Python Developer"))
+check("kept: 'Engineer / Senior Engineer' posting", fam("Software Engineer / Senior Software Engineer") is not None)
+for t in ("Senior Software Engineer", "Staff/Senior Software Engineer", "Senior/Lead Backend Engineer", "Sr. Software Engineer"):
+    check(f"excluded: {t}", fam(t) is None, fam(t))
 for t in ("Forward Deployed Strategist", "Software Development Manager", "Business Development Executive", "Tableau Developer", "Java L1 Support", "SDET", "QA Engineer", "Data Scientist"):
     check(f"excluded: {t}", fam(t) is None, fam(t))
 
@@ -87,7 +92,7 @@ check("evaluate: core title kept without a software-heavy JD", row is not None a
 for t in ("ML Engineer Python", "Embedded Engineer C++", "Platform Engineer for Payments",
           "Programmer", "Software Programmer", "Analyst Programmer", "Microservices Engineer", "Web Services Engineer", "Robotics Developer",
           "CAD Developer", "Sales Cloud Developer", "SailPoint Developer", "Workday Developer"):
-    check(f"review: reaches the JD check: {t}", fam(t) == "generic", fam(t))
+    check(f"review: reaches the JD check: {t}", fam(t) in ("generic", "ai"), fam(t))  # both families are JD-checked
 for t in ("Frontend Engineer Bangalore", "Android Engineer Bengaluru"):
     check(f"review 4: mobile/frontend role titles are core: {t}", fam(t) == "core", fam(t))
 for t in ("Software Engineer - Identity & Access Administration", "Software Engineer - Database Administration Tools",
@@ -344,6 +349,23 @@ check("review 6: 'test automation is a plus' doesn't make a developer JD QA",
       crawl.off_profile_track("Software Engineer", "Java services. 2+ years of experience in test automation is a plus.", "core") is None)
 check("review 6: a JD that says 'As a Qualcomm Hardware Engineer' is embedded/hardware",
       crawl.off_profile_track("Memory CAD Software Engineer", "As a Qualcomm Hardware Engineer, you will build memory CAD flows.", "core") == "embedded")
+
+# Recall audit (20 Nov 2026): development roles the filters dropped.
+for t_, want in (("Engineer II, Software", "core"), ("Forward Deployment Engineer", "core"), ("Junior ML Engineer (Computer Vision)", "ai"),
+                 ("Machine Learning Engineer II", "ai"), ("AI Product Builder", "ai"), ("Applied AI Research Engineer", "ai"),
+                 ("AI & Support Automation - Engineer", "generic")):
+    check(f"audit: dev title reaches the JD check or is core: {t_}", fam(t_) == want, fam(t_))
+for t_ in ("Engineer II, Software Test", "Research Scientist", "Research Engineer", "Customer Support Engineer", "Product Support Specialist"):
+    check(f"audit: still out: {t_}", fam(t_) is None, fam(t_))
+for title, jd in (("Junior AI Engineer", "Junior AI Engineer. Health Care."), ("ML Engineer", "ML Engineer. . "),
+                  ("Crew Optimization Developer", "Configure rules in Python and XML; test driven development; keep runbooks. 2-4 years of software engineering experience.")):
+    row, why = crawl.evaluate(job(title, jd), co, 21)
+    check(f"audit: kept (truncated AI JD / developer JD with a dev-penalty tie): {title}", row is not None, why)
+row, why = crawl.evaluate(job("AR/AI Engineer", "3D Artist. Create 3D models, textures and renders in Blender and Maya. " * 8), co, 21)
+check("audit: a full non-software JD under an AI title is still dropped", row is None, why)
+for text, want in (("SDE II || Work from office || 2.5–4 years of experience", 2), ("Exp : 2+yrs\n Hands on experience designing software", 2),
+                   ("5-7.5 years of related experience", 5)):
+    check(f"audit: years read: {text!r}", crawl.min_experience(text)[0] == want, crawl.min_experience(text))
 
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)

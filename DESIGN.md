@@ -67,12 +67,18 @@ Supporting tools: `discover_ats.py` (find direct boards), `coverage.py` (per-com
 | Situation | What happens |
 |---|---|
 | Role listed on the company's own board | Kept at any age (the board is authoritative) |
-| Role gone from the company's board | Removed (closed) |
+| Role gone from a clean read of the company's board | Removed (closed) |
+| A posting's detail call fails (429, 5xx, dropped connection) | Not a closure: only 404/410 means closed. The posting is kept from the list data (`meta.detail = "unread"`, judged with the lenient JD check), its previous full read wins if there is one, and the read is marked failed so the board's last good postings are carried. Applies to Workday, Greenhouse, Oracle, Rippling and Eightfold (20 Nov 2026) |
+| Board read failed (error, timeout) | The last good read's postings are carried, labelled "carried", for up to 21 days (`BOARD_CARRY_DAYS`) |
+| Board that had 10+ postings suddenly returns under 20% of them, with no error | Treated as a bad read: previous postings kept and the source flagged "suspect"; after 7 days of the drop (`COLLAPSE_CONFIRM_DAYS`) it is accepted as real |
 | LinkedIn role seen again this run | Kept |
 | LinkedIn role not seen again | Checked on LinkedIn's public job page (404 or "No longer accepting applications" = closed). Up to `liveness_checks_per_run` per pass, ones about to age out first, rechecked after `liveness_recheck_days` |
 | … confirmed open | Kept at any age |
 | … confirmed closed | Dropped |
-| … not yet checked (budget or rate limit) | Kept only while posted within `max_age_days` (30) |
+| … not yet checked, within `max_age_days` (30) | Kept |
+| … not yet checked, past the window (budget ran out or rate limit) | Kept until a check answers, first in line for the next run's checks; only postings older than `unchecked_max_age_days` (90) that were never confirmed open age out. (Until 20 Nov 2026 these were dropped unseen.) |
+| Shortlist `listed_open` column | Says how liveness is known: listed in the latest read, carried after a failed read, open on LinkedIn (checked date), or not checked yet |
+| Each run | `output/changes-<date>.md/.json` lists roles added, roles that left and why (closed at source, closed on LinkedIn, aged out, now filtered out), source count changes and companies that started or stopped hiring |
 | Dashboard | A closed role you marked stays visible, tagged "no longer listed"; unmarked ones are hidden |
 
 ## Tried and rejected
@@ -81,7 +87,7 @@ Supporting tools: `discover_ats.py` (find direct boards), `coverage.py` (per-com
 |---|---|
 | **JobSpy** for Naukri, Indeed, Google | Not used. For Naukri it forges the app's anti-bot token, which gets around the reCAPTCHA; for Indeed it uses the mobile app's private API key; for Google it replays internal search parameters. All of these get around access controls. |
 | **Naukri, Instahyre, Hirist, Cutshort** | Need a reCAPTCHA or login; not scripted. A possible legitimate route is an importer for result pages the user saves themselves. |
-| **Darwinbox** (Zepto, BookMyShow…), **TurboHire** (Flipkart), **Myntra's portal** | Darwinbox's job endpoint returns 403, TurboHire has no public data source, and Myntra's portal has bot detection. Covered through LinkedIn instead. |
+| **Darwinbox** (Zepto, BookMyShow…), **TurboHire** (Flipkart), **Myntra's portal** | Darwinbox's job endpoints return 403 (all tenants since 20 Nov 2026: Cloudflare firewall rule on `/ms/candidateapi/`), TurboHire has no public data source, and Myntra's portal has bot detection. Covered through LinkedIn instead. |
 | **Walmart Workday board (old host)** | `wd5` refused requests (422). Discovery found the board on `wd504`, which answers; it is now a direct source. |
 | **VC portfolio boards (Getro: Accel, General Catalyst) as a job source** | Job data is public, but jobs from acquired companies are filed under the old startup's name (Salesforce roles as "Airkit", PayPal as "Simility"…), so as a source it adds mislabelled duplicates. **Used for discovery only**: their apply links reveal company boards. |
 | **Consider-based VC boards** (Peak XV, Lightspeed, Bessemer) | The search endpoint needs a session token from the page; not used. Their portfolio company names come from the ISJB dataset instead. |
@@ -110,8 +116,11 @@ Supporting tools: `discover_ats.py` (find direct boards), `coverage.py` (per-com
 - Many good companies currently list only senior roles in India (e.g. Coupang 42, Celonis 27, Roku). They stay in the bank and appear when they post SDE-level roles.
 - Companies on Darwinbox (403 to scripts), TurboHire (token-gated), and sites blocked by bot protection, are visible only through LinkedIn. Their own boards were checked once in a browser (11 Nov 2026): the blocked ones hold few India software roles (Wayfair 6 jobs, Citadel Securities ~2).
 - The sitemap reader reads at most 150 job pages per company per run, chosen by URL wording (software/engineer/developer…, not senior). A site whose job URLs carry no title words (bare IDs) is read only if it has a search feed (e.g. Jibe).
+- **Darwinbox** (43 companies: Zepto, Porter, Rapido, KreditBee, Moneyview…): since ~15–20 Nov 2026 a Cloudflare firewall rule answers 403 to scripts on every `/ms/candidateapi/` path of every tenant (the careers pages themselves still load). The 28 that pay or may pay ≥ 20 LPA are searched on LinkedIn every run (`linkedin_every_run`); don't work around the block.
+- **Workday throttling:** all `*.myworkdayjobs.com` tenants share one Cloudflare edge, so parallel boards add up. At most 3 Workday boards are read at once (`SHARED_HOST_SLOTS`); a detail call that still gets a 429 keeps the posting from the list data and marks the read failed, so the last good postings are carried. (Until 20 Nov 2026 a failed detail call counted as a closed posting, which made Visa's board read as cleanly empty.)
+- **Direct boards that read empty or fail stay in the LinkedIn company-sweep pool** (since 20 Nov 2026): only a board that returned postings replaces the company's LinkedIn search, so a silently broken reader can't hide a company.
 - Goldman Sachs and Juspay roles have no posting date in their feeds (freshness gets a neutral score). Juspay's links open the careers page, not the single role.
-- LinkedIn liveness checks are budgeted; under heavy rate limiting some old postings may age out before being confirmed open.
+- LinkedIn liveness checks are budgeted; under heavy rate limiting, old postings wait (kept, labelled unchecked) until a later run checks them.
 
 ## Improvement backlog
 

@@ -495,7 +495,7 @@ Some rows include aliases of companies already covered (e.g. AWS under "not reac
 
 | Idea | Why not |
 |---|---|
-| Darwinbox (Zepto, Unacademy…) | The job feed returns 403 to scripts |
+| Darwinbox (Zepto, Unacademy…) | The job feed returns 403 to scripts. Since 20 Nov 2026 every tenant's `/ms/candidateapi/` is blocked by a Cloudflare firewall rule ("Sorry, you have been blocked"), including tenants that read fine until 15 Nov (Curefit, Pixxel, Treebo, Capillary). Searched on LinkedIn every run instead. |
 | Millennium's Eightfold tenant | 403 to scripts |
 | Job portals as a source for their listed companies (Apna, GoodSpace) | Their sitemaps list other employers' jobs, which would be mislabelled |
 | strata-harvest's "stealth"/"impersonating" fetchers, hosted scraping services | They get around bot protection, or are commercial. Only the sitemap + JobPosting idea was adopted. |
@@ -539,3 +539,16 @@ Some rows include aliases of companies already covered (e.g. AWS under "not reac
 - Indian product companies: Navi (TurboHire, token-gated like Flipkart), Slice (Kula; jobs are in the page's streamed data), Zepto (Darwinbox, blocked).
 - Upstox, Media.net and Zerodha: jobs are in the page text, and `links.py` doesn't fit, so each needs a small HTML reader.
 - Enterprise platforms seen in discovery: iCIMS, Phenom (Cisco), Avature (Bloomberg), SuccessFactors.
+
+## Round nine: refresh audit (20 Nov 2026)
+
+- An audit of 61 empty boards of good payers found 50 genuinely empty (only senior/non-dev India roles), 7 losing roles and 4 blocked:
+  - Cloudflare (Greenhouse): the city is in the "Job Posting Location" metadata, not the location field; `greenhouse()` now reads both (+5 roles).
+  - Visa, Morgan Stanley (Workday): throttled detail calls were treated as closed postings; fixed (see DESIGN.md "Workday throttling").
+  - Confluent: careers.confluent.io now redirects to IBM's careers search; new `portals/ibm.py` reads IBM's public search API.
+  - iRage: job links became relative; `job_link` pattern fixed (25 openings visible again).
+  - APT Portfolio: "Python Developer/ Senior Python Developer" was dropped by the senior rule; "X / Senior X" postings now pass.
+  - Hasura: now promptql.io, duplicate of the PromptQL entry; removed.
+  - Blocked (Cloudflare challenge or 403): BrowserStack, Cohesity and Workday (the company) Workday boards; MathWorks job search (now `linkedin_every_run`).
+- Darwinbox fully blocked (see Dead ends); 28 companies moved to every-run LinkedIn searches.
+- Reprise's Ashby board returns 404 (board removed).

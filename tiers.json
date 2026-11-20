@@ -128,7 +128,9 @@
    "quality": 11,
    "pay": "likely",
    "pay_note": "Levels.fyi India SE1 median TC 34.7 LPA",
-   "site": "zeptonow.com"
+   "site": "zeptonow.com",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Myntra",
@@ -768,8 +770,9 @@
    "name": "Honeywell",
    "type": "Industrial tech R&D",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE II median TC 20.1 LPA; SE I 10.7 below bar",
+   "below_title": "(engineer|engr)\\s*[-–]?\\s*(1|i)\\b|associate"
   },
   {
    "name": "Western Digital",
@@ -907,7 +910,8 @@
    "quality": 12,
    "pay": "likely",
    "pay_note": "Levels.fyi India Associate 25.1, SE 2 30.5 LPA median TC",
-   "site": "mathworks.com"
+   "site": "mathworks.com",
+   "linkedin_every_run": true
   },
   {
    "name": "PTC",
@@ -1137,7 +1141,7 @@
    "type": "Security SaaS (Pune)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "India SE median 24.1 LPA, no level split: borderline (levels.fyi, Nov 2026)"
+   "pay_note": "checked 20 Nov 2026: Levels.fyi India SE overall median TC 24.2 LPA, no per-level data"
   },
   {
    "name": "Tekion",
@@ -1380,8 +1384,8 @@
    "name": "Charles Schwab",
    "type": "Brokerage tech",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "below",
+   "pay_note": "AmbitionBox SE 4.5-15 LPA (4 salaries)"
   },
   {
    "name": "FIS",
@@ -1772,14 +1776,18 @@
    "type": "Lending fintech",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Moneyview",
    "type": "Lending fintech",
    "quality": 11,
    "pay": "likely",
-   "pay_note": "India SE TC range 24.5-34.8 LPA, few data points, no level split (levels.fyi, Nov 2026)"
+   "pay_note": "India SE TC range 24.5-34.8 LPA, few data points, no level split (levels.fyi, Nov 2026)",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Dhan",
@@ -1814,7 +1822,9 @@
    "type": "Fintech infra",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Yubi",
@@ -1843,14 +1853,18 @@
    "type": "Insurtech (listed)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Digit Insurance",
    "type": "Insurtech (listed)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "InsuranceDekho",
@@ -2032,7 +2046,9 @@
    "type": "Logistics (listed)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Shadowfax",
@@ -2046,14 +2062,18 @@
    "type": "Logistics",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Rapido",
    "type": "Mobility",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Ola",
@@ -2125,7 +2145,9 @@
    "type": "Auto commerce",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "CarDekho",
@@ -2160,7 +2182,9 @@
    "type": "Edtech (listed)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Unacademy",
@@ -2279,7 +2303,9 @@
    "type": "HR SaaS",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay_note": "Bands vary",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Whatfix",
@@ -2309,8 +2335,8 @@
    "name": "Icertis",
    "type": "Contract SaaS",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "Bands vary"
+   "pay": "below",
+   "pay_note": "Levels.fyi India Software Engineer median TC 10.4 LPA"
   },
   {
    "name": "HighRadius",
@@ -3077,7 +3103,7 @@
    "type": "Global product",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "borderline: Levels.fyi India SE overall median TC 24.7 LPA, no per-level data (checked 14 Nov 2026)"
+   "pay_note": "checked 20 Nov 2026: Levels.fyi India SE overall median TC 24.6 LPA, no per-level data"
   },
   {
    "name": "Gen Digital",
@@ -3097,8 +3123,8 @@
    "name": "Trellix",
    "type": "Global product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "Levels.fyi India Software Engineer median TC 18.7 LPA (Associate SE 14.2; Senior SE 40.8)"
   },
   {
    "name": "Arista",
@@ -3130,7 +3156,7 @@
    "type": "Global product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "Levels.fyi India L8 15.7, L9 20.2, L10 19.4 LPA median TC: L9 at the bar; checked 20 Nov 2026"
   },
   {
    "name": "Capital One",
@@ -3189,14 +3215,16 @@
    "type": "Global product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Franklin Templeton",
    "type": "Global product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "no levels.fyi India data (checked 11 Nov 2026)"
+   "pay_note": "AmbitionBox SE 8–23 LPA (108 salaries): range crosses the bar; checked 20 Nov 2026"
   },
   {
    "name": "T. Rowe Price",
@@ -3526,7 +3554,9 @@
    "type": "Indian product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "borderline: overall 26.0; overall-only 20-30 stays unclear (levels.fyi India, checked 11 Nov 2026)"
+   "pay_note": "borderline: overall 26.0; overall-only 20-30 stays unclear (levels.fyi India, checked 11 Nov 2026)",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "HealthifyMe",
@@ -3601,7 +3631,9 @@
    "quality": 10,
    "pay": "unclear",
    "pay_note": "not yet checked",
-   "site": "mpl.live"
+   "site": "mpl.live",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Mobile Premier League",
@@ -3639,7 +3671,7 @@
    "type": "Indian product",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "borderline: overall 29.4; overall-only 20-30 stays unclear (levels.fyi India, checked 11 Nov 2026)",
+   "pay_note": "checked 20 Nov 2026: Levels.fyi India SE overall median TC 29.4 LPA, no per-level data",
    "site": "amagi.com"
   },
   {
@@ -3937,8 +3969,8 @@
    "name": "Falcon",
    "type": "Indian fintech",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "AmbitionBox Software Developer 8-18.5 LPA (4 salaries)"
   },
   {
    "name": "Hypto",
@@ -4019,7 +4051,9 @@
    "type": "Trading",
    "quality": 8,
    "pay": "likely",
-   "pay_note": "Kotak India SE median TC 46.9 LPA (levels.fyi, Nov 2026)"
+   "pay_note": "Kotak India SE median TC 46.9 LPA (levels.fyi, Nov 2026)",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Two Sigma",
@@ -4319,7 +4353,9 @@
    "type": "AI startups",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "not yet checked",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Skyroot Aerospace",
@@ -4562,7 +4598,7 @@
    "type": "Health-data product",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "no levels.fyi India data (checked 11 Nov 2026)"
+   "pay_note": "checked 20 Nov 2026: no salary data found"
   },
   {
    "name": "Accolite software",
@@ -5057,7 +5093,9 @@
    "pay": "unclear",
    "pay_note": "not yet checked",
    "careers_url": "https://www.notion.so/BukuWarung-Building-the-digital-infrastructure-for-60-million-MSMEs-in-Indonesia-7e8a4f614acb4c4888659f9d36179579",
-   "source": "moreThanFAANGM (product companies list)"
+   "source": "moreThanFAANGM (product companies list)",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "ByteDance",
@@ -5888,7 +5926,9 @@
    "pay": "unclear",
    "pay_note": "not yet checked",
    "careers_url": "https://www.iquanti.com/contact-us/careers/",
-   "source": "moreThanFAANGM (product companies list)"
+   "source": "moreThanFAANGM (product companies list)",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Jaguar",
@@ -6943,7 +6983,9 @@
    "pay": "unclear",
    "pay_note": "not yet checked",
    "careers_url": "https://agrostar.in",
-   "source": "Accel-backed startup (ISJB)"
+   "source": "Accel-backed startup (ISJB)",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Airmeet",
@@ -7075,8 +7117,8 @@
    "name": "CityMall",
    "type": "Accel-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SWE median TC 51.5 LPA (all levels)",
    "careers_url": "https://citymall.live",
    "source": "Accel-backed startup (ISJB)"
   },
@@ -7276,7 +7318,9 @@
    "pay": "unclear",
    "pay_note": "not yet checked",
    "careers_url": "https://homelane.com",
-   "source": "Accel-backed startup (ISJB)"
+   "source": "Accel-backed startup (ISJB)",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Hotelogix",
@@ -7681,7 +7725,9 @@
    "pay": "unclear",
    "pay_note": "not yet checked",
    "careers_url": "https://samunnati.com",
-   "source": "Accel-backed startup (ISJB)"
+   "source": "Accel-backed startup (ISJB)",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Sarla Aviation",
@@ -7717,7 +7763,9 @@
    "pay": "unclear",
    "pay_note": "not yet checked",
    "careers_url": "https://scripbox.com",
-   "source": "Accel-backed startup (ISJB)"
+   "source": "Accel-backed startup (ISJB)",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "SentinelOne",
@@ -7816,7 +7864,9 @@
    "pay": "unclear",
    "pay_note": "not yet checked",
    "careers_url": "https://stanzaliving.com",
-   "source": "Accel-backed startup (ISJB)"
+   "source": "Accel-backed startup (ISJB)",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "SureWaves",
@@ -8048,7 +8098,7 @@
    "type": "Peak XV-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "checked 20 Nov 2026: no software-engineer salary data found (AmbitionBox has company-wide bands only)",
    "careers_url": "https://nathabit.in",
    "source": "Peak XV-backed startup (ISJB)"
   },
@@ -8248,7 +8298,9 @@
    "pay": "unclear",
    "pay_note": "not yet checked",
    "careers_url": "https://careers.peakxv.com/jobs/eruditus-executive-education",
-   "source": "Peak XV-backed startup (ISJB)"
+   "source": "Peak XV-backed startup (ISJB)",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Faces Canada",
@@ -8383,7 +8435,9 @@
    "pay": "unclear",
    "pay_note": "not yet checked",
    "careers_url": "https://careers.peakxv.com/jobs/oneassist",
-   "source": "Peak XV-backed startup (ISJB)"
+   "source": "Peak XV-backed startup (ISJB)",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Paper Boat Drinks",
@@ -8464,7 +8518,9 @@
    "pay": "unclear",
    "pay_note": "not yet checked",
    "careers_url": "https://careers.peakxv.com/jobs/vymo",
-   "source": "Peak XV-backed startup (ISJB)"
+   "source": "Peak XV-backed startup (ISJB)",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Wildcraft India",
@@ -9310,7 +9366,9 @@
    "pay": "unclear",
    "pay_note": "not yet checked",
    "careers_url": "https://innoviti.com",
-   "source": "Bessemer-backed startup (ISJB)"
+   "source": "Bessemer-backed startup (ISJB)",
+   "linkedin_every_run": true,
+   "board_note": "Darwinbox job API blocked to scripts by a Cloudflare firewall rule (403 on /ms/candidateapi/, all tenants, 20 Nov 2026); searched on LinkedIn every run"
   },
   {
    "name": "Lentra",
@@ -9417,7 +9475,7 @@
    "type": "General Catalyst-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "no levels.fyi India data (checked 11 Nov 2026)",
+   "pay_note": "checked 20 Nov 2026: no Levels.fyi India data; AmbitionBox SE 17-21.7 LPA (2 salaries), straddles bar",
    "careers_url": "https://cashflo.io",
    "source": "General Catalyst-backed startup (ISJB)"
   },
@@ -9775,7 +9833,7 @@
    "type": "IT asset SaaS",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "India SE median 26.8 LPA, no level split: borderline (levels.fyi, Nov 2026)"
+   "pay_note": "checked 20 Nov 2026: Levels.fyi India SE overall median TC 27.6 LPA, no per-level data"
   },
   {
    "name": "Atlys",
@@ -9802,8 +9860,8 @@
    "name": "Aspen Technology",
    "type": "",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "No India SE data on levels.fyi (levels.fyi, Nov 2026)"
+   "pay": "below",
+   "pay_note": "AmbitionBox Engineer 4.8-8 LPA (4 salaries)"
   },
   {
    "name": "Anaplan",
@@ -9865,8 +9923,8 @@
    "name": "TripJack",
    "type": "",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+   "pay": "below",
+   "pay_note": "AmbitionBox Software Developer 8-12 LPA, SDE 9-12.5 LPA"
   },
   {
    "name": "Seismic",
@@ -9908,14 +9966,14 @@
    "type": "",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+   "pay_note": "checked 20 Nov 2026: no Levels.fyi India data; AmbitionBox \"ARES\" SE 18.9-24.1 LPA (2 salaries), company match unconfirmed"
   },
   {
    "name": "Cognite",
    "type": "",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "levels.fyi India SE page has no salary figures (Nov 2026)"
+   "pay_note": "checked 20 Nov 2026: no salary data found"
   },
   {
    "name": "Commure",
@@ -9971,7 +10029,7 @@
    "type": "",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "no levels.fyi company page (Nov 2026)"
+   "pay_note": "AmbitionBox SE 12–20 LPA: at the bar; checked 20 Nov 2026"
   },
   {
    "name": "Aftershoot",
@@ -10111,8 +10169,8 @@
    "name": "Health Catalyst",
    "type": "Healthcare data SaaS",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)"
+   "pay": "below",
+   "pay_note": "AmbitionBox SE 10-14 LPA (3 salaries)"
   },
   {
    "name": "Inovalon",
@@ -10153,8 +10211,8 @@
    "name": "Abnormal AI",
    "type": "Email-security AI startup",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "no levels.fyi India data (checked 11 Nov 2026)"
+   "pay": "likely",
+   "pay_note": "LeetCode SDE-2 Bangalore offer TC 53 LPA (1 report, Nov 2023); no Levels.fyi India data"
   },
   {
    "name": "Airtel Payments Bank",
@@ -10231,7 +10289,7 @@
    "type": "Energy MNC tech centre",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "Levels.fyi India J 19.1, I 32.3 LPA — level-dependent (checked 11 Nov 2026)"
+   "pay_note": "checked 20 Nov 2026: Levels.fyi India J 19.1, I 32.3 LPA median TC, level-dependent"
   },
   {
    "name": "SonicWall",
@@ -10286,8 +10344,8 @@
    "name": "Tata Communications",
    "type": "",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "no levels.fyi India data (checked 11 Nov 2026)"
+   "pay": "below",
+   "pay_note": "AmbitionBox SDE 5.9-14.5 LPA"
   },
   {
    "name": "PAR Technology",
@@ -10301,21 +10359,21 @@
    "type": "",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "no levels.fyi India data (checked 11 Nov 2026)"
+   "pay_note": "checked 20 Nov 2026: no Levels.fyi India data; AmbitionBox estimate SE 17.4-22.2 LPA, straddles bar"
   },
   {
    "name": "GHX India",
    "type": "",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "no levels.fyi India data (checked 11 Nov 2026)"
+   "pay_note": "checked 20 Nov 2026: no Levels.fyi India data; AmbitionBox has SE IV 34-38 LPA only, no SE I/II figure"
   },
   {
    "name": "ReliaQuest",
    "type": "",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "no levels.fyi India data (checked 11 Nov 2026)"
+   "pay": "likely",
+   "pay_note": "AmbitionBox SE 31-45 LPA (4 salaries)"
   },
   {
    "name": "JAGGAER",
@@ -10449,6 +10507,62 @@
    "quality": 8,
    "pay": "unclear",
    "pay_note": "no levels.fyi India data (checked 14 Nov 2026)"
+  },
+  {
+   "name": "Qubrid AI",
+   "type": "AI cloud startup",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "checked 20 Nov 2026: no salary data found"
+  },
+  {
+   "name": "Albertsons Companies India",
+   "type": "Global retail tech centre",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE I median TC 11.6 LPA (SE III 38.8)"
+  },
+  {
+   "name": "The Alter Office",
+   "type": "Indian product startup",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "checked 20 Nov 2026: no salary data found"
+  },
+  {
+   "name": "Pluang",
+   "type": "Indian investing fintech",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SWE median TC 30.6 LPA (all levels)"
+  },
+  {
+   "name": "Pallav Technologies",
+   "type": "Indian tech company (unverified)",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "checked 20 Nov 2026: no salary data found"
+  },
+  {
+   "name": "Aatmunn",
+   "type": "Frontline-worker SaaS startup (General Catalyst-backed)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "checked 20 Nov 2026: no salary data found"
+  },
+  {
+   "name": "Auric AI Labs",
+   "type": "Defence AI startup (pre-seed)",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "checked 20 Nov 2026: no salary data found"
+  },
+  {
+   "name": "Docyt",
+   "type": "Accounting-automation SaaS (US)",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "checked 20 Nov 2026: no software-engineer salary data found (AmbitionBox Senior SE 23.4-29.9 LPA from 1 salary)"
   }
  ],
  "services_and_staffing": [

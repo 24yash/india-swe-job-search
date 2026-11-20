@@ -28,14 +28,15 @@
       "software development\\b(?! manag)",
       "software (?:systems |application |applications |product |platform |infrastructure )?(?:engineer|developer|designer)",
       "software design engineer",
-      "forward[- ]deployed (?:software )?engineer",
+      "forward[- ]deploy(?:ed|ment) (?:software )?engineer",
       "\\bfde\\b",
+      "\\bengineer\\s*(?:i{1,2}|[12])?\\s*,\\s*software\\b",
       "\\bweb (?:application )?developer",
       "\\bsw (?:development |dev )?(?:engineer|developer|engr|eng)\\b",
       "\\b(?:android|ios|mobile|front[- ]?end|ui|web|react|angular|vue|flutter|react native)(?: app(?:lication)?)? (?:engineer|developer|sde)\\b"
     ],
     "exclude": [
-      "senior",
+      "(?<!/ )(?<!/)senior",
       "\\bmgr\\b",
       "\\bsr\\b\\.?",
       "(?<!technical )\\bstaff\\b",
@@ -66,7 +67,7 @@
       "\\bqa\\b",
       "sdet",
       "in test",
-      "research (engineer|scientist)",
+      "(?<!applied )(?<!applied ai )research (engineer|scientist)",
       "sales engineer",
       "(?<!web )solutions? (engineer|architect|consultant)",
       "field (engineer|application)",
@@ -154,6 +155,9 @@
         "applied ai",
         "agentic",
         "ai developer",
+        "\\bml engineer",
+        "machine learning engineer",
+        "\\b(?:ai|product) builder\\b",
         "ai enablement",
         "ai orchestration"
       ],
@@ -168,6 +172,7 @@
       "generic"
     ],
     "jd_check_titles": [
+      "\\bengineer\\s*(?:i{1,2}|[12])?\\s*,\\s*software\\b",
       "technical staff",
       "\\bmts\\b",
       "programmer analyst",
@@ -445,7 +450,7 @@
       "physical design",
       "\\brtl\\b",
       "support engineer",
-      "\\bsupport\\b"
+      "\\bsupport\\b(?! automation)"
     ],
     "core_override": [
       "backend",
@@ -453,7 +458,7 @@
       "back end",
       "full[- ]?stack",
       "fullstack",
-      "forward[- ]deployed (?:software )?engineer",
+      "forward[- ]deploy(?:ed|ment) (?:software )?engineer",
       "\\bjava\\b",
       "spring",
       "python",
@@ -470,7 +475,7 @@
       "back end",
       "full[- ]?stack",
       "fullstack",
-      "forward[- ]deployed (?:software )?engineer"
+      "forward[- ]deploy(?:ed|ment) (?:software )?engineer"
     ],
     "exclude_level": [
       "[\\s-](3|iii)\\s*$",
@@ -636,7 +641,8 @@
     },
     "liveness_checks_per_run": 120,
     "liveness_recheck_days": 7,
-    "_comment_liveness": "Earlier LinkedIn postings not seen again are checked on LinkedIn (up to liveness_checks_per_run per pass, rechecked after liveness_recheck_days): closed ones are dropped, open ones kept at any age."
+    "unchecked_max_age_days": 90,
+    "_comment_liveness": "Earlier LinkedIn postings not seen again are checked on LinkedIn (up to liveness_checks_per_run per pass, rechecked after liveness_recheck_days): closed ones are dropped, open ones kept at any age. Postings past the window that no check has reached yet (budget or rate limit) are kept until one does, up to unchecked_max_age_days."
   },
   "min_pay_lpa": 20,
   "max_age_days": 30,
@@ -778,7 +784,7 @@
       "\\bjava\\b",
       "spring",
       "microservice",
-      "forward[- ]deployed"
+      "forward[- ]deploy(?:ed|ment)"
     ],
     "exclude_tracks": {
       "embedded": {

@@ -110,7 +110,7 @@ def main():
                 st, detail = "E4", note.get("reason") or "website not found yet"
         rows.append({"company": n, "status": st, "detail": detail, "source": ""})
 
-    date = datetime.now().strftime("%Y-%m-%d")
+    date = crawl.TODAY  # the crawl run's date (JOB_SEARCH_DATE pins it)
     with open(OUT / f"coverage-{date}.csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["company", "status", "detail", "source"])
         w.writeheader()
