@@ -7,6 +7,8 @@
 # company + title + location match for reposts).
 set -e
 cd "${0:A:h}"
+# Both passes write files dated the day the refresh started, even when LinkedIn finishes after midnight.
+export JOB_SEARCH_DATE="$(date +%F)"  # always today: a value left in the shell from a --rescore must not pin later runs
 python3 crawl.py --sources fast
 if pgrep -f "crawl.py --sources linkedin" >/dev/null; then
   echo "A LinkedIn crawl is already running; not starting another."

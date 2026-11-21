@@ -70,11 +70,27 @@ page = {"items": [{"requisitionList": [
     {"Id": "4", "Title": "Software Engineer II - Python", "PrimaryLocation": "Plano, TX", "PostedDate": "2026-11-01",
      "secondaryLocations": [{"Name": "Hyderabad, Telangana, India"}]}]}]}
 details = {"items": [{"ExternalDescriptionStr": "<p>2+ years of applied experience in Java</p>", "ExternalPostedStartDate": "2026-11-01T06:00:00+00:00"}]}
-patched({"recruitingCEJobRequisitionDetails": lambda k: crawl.requests.RequestException("closed") if 'Id=\\"4\\"' in k else details,
+def _gone():
+    r = crawl.requests.Response()
+    r.status_code = 404
+    return crawl.requests.HTTPError("404", response=r)
+
+
+patched({"recruitingCEJobRequisitionDetails": lambda k: _gone() if 'Id=\\"4\\"' in k else details,
          "recruitingCEJobRequisitions": page})
 jobs = list(crawl.oracle({"name": "JPMorgan", "host": "jpmc.fa.oraclecloud.com", "site": "CX_1001"}))
-check("oracle: India + fitting title only, secondary locations count, failed detail skips just that job",
+check("oracle: India + fitting title only, secondary locations count, a 404 detail skips just that job",
       [j.title for j in jobs] == ["Software Engineer II - Java"], [j.title for j in jobs])
+patched({"recruitingCEJobRequisitionDetails": lambda k: crawl.requests.RequestException("reset") if 'Id=\\"4\\"' in k else details,
+         "recruitingCEJobRequisitions": page})
+got, oerr = [], None
+try:
+    for j in crawl.oracle({"name": "JPMorgan", "host": "jpmc.fa.oraclecloud.com", "site": "CX_1001"}):
+        got.append(j)
+except RuntimeError as e:
+    oerr = e
+check("oracle: a non-404 detail failure keeps the posting (unread) and marks the read failed",
+      len(got) == 2 and got[1].meta.get("detail") == "unread" and "detail call failed" in str(oerr), ([j.title for j in got], repr(oerr)))
 check("oracle: link is the company's own careers page", jobs and jobs[0].url.endswith("/sites/CX_1001/job/1"))
 
 # --- Rippling ------------------------------------------------------------------------------------------
@@ -96,7 +112,7 @@ crawl.time = SimpleNamespace(sleep=lambda s: None, time=time.time)
 jobs = list(crawl.eightfold({"name": "Qualcomm", "host": "careers.qualcomm.com", "domain": "qualcomm.com"}))
 check("eightfold: reads search + details for the given host/domain", len(jobs) == 1 and jobs[0].url.endswith("/job/9"))
 patched({"/api/apply/v2/jobs/7": {"job_description": "<p>1-3 years of Java</p>"},
-         "/api/apply/v2/jobs/8": crawl.requests.RequestException("closed"),
+         "/api/apply/v2/jobs/8": _gone(),
          "/api/apply/v2/jobs": lambda k: {"positions": [
              {"id": 7, "name": "Software Engineer", "locations": ["Mumbai,India"], "t_create": 1793000000, "canonicalPositionUrl": "https://n.example/job/7"},
              {"id": 8, "name": "Software Engineer", "locations": ["Mumbai,India"], "t_create": 1793000000},

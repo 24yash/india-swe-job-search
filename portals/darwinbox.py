@@ -1,6 +1,9 @@
 """Darwinbox careers sites (<company>.darwinbox.in/ms/candidatev2/main/careers): the page loads its open jobs from
 POST /ms/candidateapi/job/alljobs?companyId=main. It's the same public call the careers page makes; no token or sign-in.
-(An older Darwinbox job endpoint answers 403 to scripts; this one doesn't.)
+Status 20 Nov 2026: a Cloudflare firewall rule now answers 403 ("Sorry, you have been blocked") to scripted requests on
+every /ms/candidateapi/ path, on every tenant (it spread tenant by tenant from ~15 Nov). The reader is kept in case the
+rule is relaxed: a failing read carries the last good postings for a while, and the companies are searched on LinkedIn
+every run (tiers.json linkedin_every_run). Don't work around the block.
 companies.json: {"ats": "portal", "portal": "darwinbox", "slug": "mobikwik", "tld": "in"}"""
 import html as htmllib
 from datetime import datetime, timezone

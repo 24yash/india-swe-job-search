@@ -5688,7 +5688,7 @@
    "list_urls": [
     "https://irage.in/recruitment.php"
    ],
-   "job_link": "/job_descriptions\\.php\\?jd_id=\\d+",
+   "job_link": "/?job_descriptions\\.php\\?jd_id=\\d+",
    "location": "India",
    "type": "HFT firm",
    "quality": 13,
@@ -5978,11 +5978,8 @@
   {
    "name": "Confluent",
    "ats": "portal",
-   "portal": "links",
-   "list_urls": [
-    "https://www.ibm.com/careers/search?q=confluent"
-   ],
-   "job_link": "/en_US/careers/JobDetail\\?jobId=\\d+\\&amp;source=WEB_Search_NA",
+   "portal": "ibm",
+   "query": "confluent",
    "type": "Data streaming infra",
    "quality": 14,
    "pay": "likely",
@@ -6466,17 +6463,6 @@
    "quality": 10,
    "pay": "unclear",
    "pay_note": "not yet checked",
-   "found_by": "E1 pass (careers page detectors)"
-  },
-  {
-   "name": "Hasura",
-   "ats": "portal",
-   "portal": "sitemap",
-   "host": "hasura.io",
-   "type": "Devtools startup",
-   "quality": 11,
-   "pay": "likely",
-   "pay_note": "Devtools",
    "found_by": "E1 pass (careers page detectors)"
   },
   {

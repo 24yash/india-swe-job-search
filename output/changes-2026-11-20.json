@@ -1,0 +1,7143 @@
+{
+ "date": "2026-11-20",
+ "previous_run": "2026-11-15",
+ "source_baseline": null,
+ "shortlist": {
+  "before": 579,
+  "now": 622
+ },
+ "leads": {
+  "before": 433,
+  "now": 443
+ },
+ "added": 227,
+ "added_never_seen_before": 203,
+ "added_seen_in_older_runs": 24,
+ "moved_lead_to_shortlist": 14,
+ "moved_shortlist_to_lead": 0,
+ "left": {
+  "closed: no longer on the company's board": 129,
+  "closed on LinkedIn (checked)": 24,
+  "still listed, now filtered out: pay below bar": 10,
+  "still listed, now skipped (duplicate of the company's own board, outside India or excluded company)": 3,
+  "still listed, now filtered out: pay below bar at this level": 2,
+  "still listed, now filtered out: 5+ yrs asked": 1
+ },
+ "sources_failing": [],
+ "sources_suspect": [
+  "DevRev",
+  "Elastic"
+ ],
+ "sources_failed_but_carried": [
+  "Curefit",
+  "Eruditus Executive Education",
+  "Pixxel",
+  "Reprise",
+  "Treebo Hotels"
+ ],
+ "sources_failed_nothing_missing": [
+  "Agrostar",
+  "Airbus",
+  "BigBasket",
+  "BukuWarung",
+  "Capillary Technologies",
+  "CarDekho",
+  "Cisco",
+  "Darwinbox",
+  "Delhivery",
+  "Deutsche Bank",
+  "Digit Insurance",
+  "Edelweiss",
+  "Global Payments Inc.",
+  "Go Digit",
+  "HealthifyMe",
+  "HomeLane",
+  "Innoviti",
+  "InsuranceDekho",
+  "Invesco",
+  "Kotak Securities",
+  "KreditBee",
+  "LeadSquared",
+  "MPL",
+  "Mad Street Den",
+  "Mastercard",
+  "MobiKwik",
+  "Moneyview",
+  "NCR Corporation",
+  "OneAssist",
+  "Paper Boat Drinks",
+  "Perfios",
+  "PharmEasy",
+  "PhysicsWallah",
+  "Porter",
+  "Samunnati",
+  "Scripbox",
+  "Shivalik Small Finance Bank",
+  "Solventum",
+  "Stanza Living",
+  "Tata 1mg",
+  "Vymo",
+  "Zepto",
+  "iQuanti",
+  "upGrad"
+ ],
+ "companies_started_hiring": [
+  [
+   "APT Portfolio",
+   1
+  ],
+  [
+   "Abnormal AI",
+   2
+  ],
+  [
+   "Addepar",
+   1
+  ],
+  [
+   "BlackRock",
+   2
+  ],
+  [
+   "Booking.com",
+   1
+  ],
+  [
+   "CityMall",
+   1
+  ],
+  [
+   "Confluent",
+   1
+  ],
+  [
+   "Ericsson",
+   1
+  ],
+  [
+   "Groww",
+   1
+  ],
+  [
+   "Honeywell",
+   10
+  ],
+  [
+   "Optiver",
+   1
+  ],
+  [
+   "Pluang",
+   2
+  ],
+  [
+   "Razorpay",
+   1
+  ],
+  [
+   "ReliaQuest",
+   1
+  ],
+  [
+   "Snowflake",
+   1
+  ],
+  [
+   "Sumo Logic",
+   1
+  ],
+  [
+   "Trimble",
+   1
+  ],
+  [
+   "Visa",
+   1
+  ],
+  [
+   "Workday",
+   1
+  ],
+  [
+   "iRage",
+   1
+  ]
+ ],
+ "companies_stopped_hiring": [
+  [
+   "AQR",
+   1
+  ],
+  [
+   "Adyen",
+   1
+  ],
+  [
+   "CrowdStrike",
+   1
+  ],
+  [
+   "Target",
+   1
+  ]
+ ],
+ "source_changes": [
+  {
+   "source": "4i Apps",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "6sense",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "AQR",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Able",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Abstract",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Acko",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Activision Blizzard",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Adyen",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Aerospike",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Affinidi",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Agoda",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Agrostar",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Airtel",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Aivar Innovations",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Akamai",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Akridata",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Akuna Capital",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "AlphaGrep",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Alteryx",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Anunta Tech",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Asteria Aerospace Ltd",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Astra Security",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Ati Motors",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Avalara",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Avaya",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Aviatrix",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Awfis",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Axio Biosolutions",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Bain & Co",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Benchmark",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "BigBasket",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Bijak",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "BlackBerry",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Block Inc",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Bloomberg",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Blueshift",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Box",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Brex",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "BrowserStack",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "BukuWarung",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "CITYFURNISH",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "CLO Virtual Fashion",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "CSS Corp",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Cambridge Mobile Telematics",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Campaign Monitor",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Capillary Technologies",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Capital One",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "CarDekho",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Careem",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Cars24",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Celigo",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Charles River Laboratories",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Check Point Software",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Cimpress",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Citrix",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Clari",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "ClearGlass",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Clearwater Analytics",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "CleverTap",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Cloud Software Group",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "CloudBees",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Cloudera",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "CodingNinjas",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Cognida.ai",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Cognite",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Cohesity",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Coinswitch kuber",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Commvault",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Constelli",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Coupang",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Cvent",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "D. E. Shaw & Co.",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Daloopa",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Darwinbox",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Dashlane",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Datadog",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "DeHaat",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Delhivery",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Detect Technologies",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Deutsche Bahn",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Dhan",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Dialpad",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Digit Insurance",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Discord",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Discovery inc",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "DoorDash",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "DrinkPrime",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Drip Capital",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Dropbox",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Druva",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "DuPont",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Dynatrace",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Eclipse Trading",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Edelweiss",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Eightfold AI",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Electronic Arts",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Emversity",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Entytle",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Expedia Group",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Experian",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Exponent Energy",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Fi Money",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Fidelity Investments",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Figma",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "First Citizens India",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Flexport",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Flynote",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Forescout",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Fox Corporation",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Frappe Technologies",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "FreeCharge",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Freshworks",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "FrontRow",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Futures First",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Fyers",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Gather AI",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Github",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Glance",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Go Digit",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Go Pro",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "GoDaddy",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Grab",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Grafana Labs",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Groq",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Groww",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "HSBC",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Haber",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Happay",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Harness",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "HealthifyMe",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Highspot",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "HomeLane",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "HubSpot",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Hudl",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Huggingface",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Impact Analytics",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "InCore Semiconductors",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Infineon",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Innoviti",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "InsuranceDekho",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Intercontinental Exchange",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Intuit",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Invesco",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Ixigo",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Jaguar",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Jar",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Jiraaf",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Jumbotail",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Jump Trading",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Jupiter",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Kiwi",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Kotak Securities",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "KredX",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "KreditBee",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Kroger",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Kulfi",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "LeadSquared",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Leap Finance",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Leap Scholar",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "LetsVenture",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Logile, Inc.",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Loylogic",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "MPL",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Mad Street Den",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Maersk",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Magellan",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "MassMutual",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Mastery",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "MathWorks",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Media.net",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Meolaa",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Meragi",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "MetLife",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Mintoak",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Mizuho",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "MoEngage",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "MobiKwik",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Mobility Global",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Molbio Diagnostics",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Moneyview",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Morningstar",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Mosaic Wellness",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Mudrex",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Myntra",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "NAB",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "NPCI",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Nationwide",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Neo4j",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Netflix",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Netskope",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "New Relic",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "NewSpace Research and Technologies",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Niyo",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Nobroker",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Nokia",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Nova Benefits",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Novartis",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Nutanix",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Observe.AI",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Olx",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "OneAssist",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Open Financial Technologies",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "OpenText",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Openhouse",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Optiver",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Ozonetel",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "PTC",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Paper Boat Drinks",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Peoplebox.ai",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Perfios",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "PharmEasy",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "PhysicsWallah",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Ping Identity",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Plaid",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Planful",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Playlist",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Plivo",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Porter",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Precisely",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "PrimaryIO",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Principal",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "PromptQL",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Proximity Labs",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "PubMatic",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Quantiphi",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "RapidCanvas",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Rapido",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Rapyd",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Refyne",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Resideo",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Rigi",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Roku",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Rupeek",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "SalaryBox",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Samunnati",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Scripbox",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Scrut Automation",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Seagate",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Securin Inc.",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Seismic",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "SentinelOne",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Shaadi.com",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "ShareChat",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Shiprocket",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Shivalik Small Finance Bank",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Siemens Healthineers",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "SiftHub",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Slack",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Smith Detection",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Societe Generale",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Sophos",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Spinny",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Spyne",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Squadstack",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Stanza Living",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "StarTree",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Swiggy",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Syfe",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "T. Rowe Price",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "TE Connectivity",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Take-Two Interactive",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Target",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Tata 1mg",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Teachmint",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Tenable",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "The Home Depot",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "The Honest Company",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Thena",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Thomson Reuters",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Tide",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Toddle",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Trane Technologies",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "TriNet",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Trifacta",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Truecaller",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Turtlemint",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Twitter",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Two Sigma",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Typeface",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "U.S. Bank",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Ubisoft",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Unicommerce",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Unifize",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Uniphore",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Unmannd Autonomy",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Upstox",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Urban Company",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "UrbanPiper",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Vanguard",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Vegrow",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Venwiz",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Vymo",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Warner Bros. Discovery",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "WebEngage",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Western Digital",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Western Union",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Whatfix",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Wingify",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Wise",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "WorldQuant",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Writesonic",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "XFlow",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Xplor Technologies",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Yahoo",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Yellow.ai",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Yugabyte",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Yulu Bikes",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "ZS",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Zendesk",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Zenoti",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Zepto",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Zerodha",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Zluri",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Zolve",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "bitly",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "cult.fit",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "digitalocean",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "dolby",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "doximity",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "dunnhumby",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "e6data",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "iQuanti",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "isolved",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "priceline",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "smallcase",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "upGrad",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "vCommission",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "ABC Fitness",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "APT Portfolio",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Adobe",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Aftershoot",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Airbnb",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Arcadia",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Arcana Analytics",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Arcesium",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Ares Management",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "AssetPlus",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Autodesk",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "BNY",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Carelon",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Chainguard",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Ciena",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "CityMall",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "CleanStart",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Cockroach Labs",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Couchbase",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Credgenics",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Curefit",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "DBS",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "DP World",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Databricks",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Enterpret",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Entropik",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Equinix",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Eruditus Executive Education",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Ethos",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "FedEx",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Fivetran",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Flexera",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Flight Centre Travel Group",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Foodhub",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Fortinet",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Gartner",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "GoKwik",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "HDFC Bank",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "HackerRank",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "IBEE Solutions",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "IP Infusion",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Infoblox",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "InvoiceCloud, Inc.",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Koch",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "LSEG",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Lendingkart",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Licious",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "LogicMonitor",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "MEDFAR",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "MOZN",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "MSCI",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Maximl",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "MiQ",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Modulr",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "MyGlamm",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Navi",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Ocrolus",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Okta",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "OpenFX",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Palo Alto Networks",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "PayPay",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Pixxel",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Planview",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Plum HQ",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Quadeye",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "QuantBox",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Qubrid AI",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "QuinStreet",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Razorpay",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Red Hat",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Reelo",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "ReliaQuest",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Reprise",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Salesforce",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Seekho",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "ServiceNow",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Shell",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Shipsy",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Signzy",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Sprinklr",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Sumo Logic",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Sureify",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Synchrony",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Teradata",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "The D. E. Shaw Group",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "ThoughtSpot",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Toast",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Treebo Hotels",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Trellix",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Trexquant",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Trimble",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "TripJack",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "TrueFoundry",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Unacademy",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Vena Solutions",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Visa",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Wells Fargo",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Wizcommerce",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Workday",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Zetwerk",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Zscaler",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "iRage",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "project44",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Addepar",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Amadeus",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "BCG",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Better",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Booking.com",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Broadridge",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Captain Fresh",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Celonis",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Charles Schwab",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Cigna",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "CloudSEK",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "CommBank",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Commonwealth Bank of Australia",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Confluent",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Decentro",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "DigiCert",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Disney",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Falcon",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "GeeksForGeeks",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "InMobi",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Increff",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Kinaxis",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Lyzr",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "MaxIQ",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Moody's",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Morgan Stanley",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Nike",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Nurix",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "PayPal",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Payfinia",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Platform Science",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Qure.ai",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Rocketlane",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Route Mobile Limited",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "SonicWall",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Standard Chartered",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "TMUS Global Solutions",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Teleradiology Solutions",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Testsigma",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Uber",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Viasat",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Wadhwani AI",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "YouTrip",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Aryaka",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Axiamatic",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "BlackRock",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Candescent",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Clueso",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Contentstack",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Continental",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Copart",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Elastic",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "GHX India",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Icertis",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Innovaccer",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Light & Wonder",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Log 9 Materials",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Lowe's",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Meta",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "NK Securities Research",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Nexthop AI",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Northern Trust",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Onsitego",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Postman",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "SAP",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Sabre",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Sarla Aviation",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Smallest.ai",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Vontier",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Zoid Technologies Private Limited",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "ABB",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "American Express",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Angel One",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "CME Group",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Cambly",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "CrowdStrike",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "DevRev",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Fiserv",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Fujitsu",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Graviton Research Capital",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Haptik",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "IMC Trading",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Jitterbit",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Khatabook",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Lam Research",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "McAfee",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "MediaTek",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Renesas",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Scimplify",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Sigmoid",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Slice",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Smartsheet",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Synopsys",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Transaction Network Services (TNS)",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Truveta",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "United Airlines",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "WinZO",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "ALLEN Digital",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Anaplan",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "AutoZone",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Bolna",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Cloudflare",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Glean",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Global Payments Inc.",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "HighRadius",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "KLA",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "KLA Tencor",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Linde",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Nasdaq",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Proofpoint",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Rubrik",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "S&P Global",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Samsung",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Skyroot Aerospace",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Twilio",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Vapi",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "WEX",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Zinier",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Air Arabia",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "Amagi",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "Aspen Technology",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "Comcast",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "Ditto",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "Eurofins",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "Guidewire Software",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "Lenskart",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "Moxie Beauty",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "NielsenIQ",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "PayU",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "Rippling",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "Squarepoint Capital",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "Tower Research Capital",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "Vecmocon Technologies",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "Anthropic",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Atlan",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Cashfree",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Contra",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Deutsche Bank",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Diagrid",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Foxit",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Franklin Templeton",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Fynd",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Keywords Studios",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Nomura",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Protegrity",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "SolarSquare Energy",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Thermo Fisher Scientific",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Turvo",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Unisys",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Walmart Global Tech India",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "X-Rite",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Yubi",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Cashflo",
+   "before": null,
+   "now": 8,
+   "delta": 8
+  },
+  {
+   "source": "F5",
+   "before": null,
+   "now": 8,
+   "delta": 8
+  },
+  {
+   "source": "Macquarie Group",
+   "before": null,
+   "now": 8,
+   "delta": 8
+  },
+  {
+   "source": "Millennium",
+   "before": null,
+   "now": 8,
+   "delta": 8
+  },
+  {
+   "source": "The Depository Trust & Clearing Corporation (DTCC)",
+   "before": null,
+   "now": 8,
+   "delta": 8
+  },
+  {
+   "source": "DHL",
+   "before": null,
+   "now": 9,
+   "delta": 9
+  },
+  {
+   "source": "GE HealthCare",
+   "before": null,
+   "now": 9,
+   "delta": 9
+  },
+  {
+   "source": "Juspay",
+   "before": null,
+   "now": 9,
+   "delta": 9
+  },
+  {
+   "source": "Metaforms",
+   "before": null,
+   "now": 9,
+   "delta": 9
+  },
+  {
+   "source": "MongoDB",
+   "before": null,
+   "now": 9,
+   "delta": 9
+  },
+  {
+   "source": "NVIDIA",
+   "before": null,
+   "now": 9,
+   "delta": 9
+  },
+  {
+   "source": "Wayground",
+   "before": null,
+   "now": 9,
+   "delta": 9
+  },
+  {
+   "source": "GreyOrange",
+   "before": null,
+   "now": 10,
+   "delta": 10
+  },
+  {
+   "source": "Oracle",
+   "before": null,
+   "now": 10,
+   "delta": 10
+  },
+  {
+   "source": "Philips",
+   "before": null,
+   "now": 10,
+   "delta": 10
+  },
+  {
+   "source": "Pocket FM",
+   "before": null,
+   "now": 10,
+   "delta": 10
+  },
+  {
+   "source": "Snapmint",
+   "before": null,
+   "now": 10,
+   "delta": 10
+  },
+  {
+   "source": "Tata Communications",
+   "before": null,
+   "now": 10,
+   "delta": 10
+  },
+  {
+   "source": "100ms",
+   "before": null,
+   "now": 11,
+   "delta": 11
+  },
+  {
+   "source": "Bank of America",
+   "before": null,
+   "now": 11,
+   "delta": 11
+  },
+  {
+   "source": "Bazaarvoice",
+   "before": null,
+   "now": 11,
+   "delta": 11
+  },
+  {
+   "source": "CRED",
+   "before": null,
+   "now": 11,
+   "delta": 11
+  },
+  {
+   "source": "Cadence Design Systems",
+   "before": null,
+   "now": 11,
+   "delta": 11
+  },
+  {
+   "source": "Onehouse",
+   "before": null,
+   "now": 11,
+   "delta": 11
+  },
+  {
+   "source": "PhonePe",
+   "before": null,
+   "now": 11,
+   "delta": 11
+  },
+  {
+   "source": "Qualys",
+   "before": null,
+   "now": 11,
+   "delta": 11
+  },
+  {
+   "source": "Rohde & Schwarz",
+   "before": null,
+   "now": 11,
+   "delta": 11
+  },
+  {
+   "source": "Arista Networks",
+   "before": null,
+   "now": 12,
+   "delta": 12
+  },
+  {
+   "source": "Broadcom",
+   "before": null,
+   "now": 12,
+   "delta": 12
+  },
+  {
+   "source": "Broadcom/VMware",
+   "before": null,
+   "now": 12,
+   "delta": 12
+  },
+  {
+   "source": "Cargill",
+   "before": null,
+   "now": 12,
+   "delta": 12
+  },
+  {
+   "source": "Enfussion",
+   "before": null,
+   "now": 12,
+   "delta": 12
+  },
+  {
+   "source": "Gushwork",
+   "before": null,
+   "now": 12,
+   "delta": 12
+  },
+  {
+   "source": "SearchApi",
+   "before": null,
+   "now": 12,
+   "delta": 12
+  },
+  {
+   "source": "VMware",
+   "before": null,
+   "now": 12,
+   "delta": 12
+  },
+  {
+   "source": "Alphonso",
+   "before": null,
+   "now": 13,
+   "delta": 13
+  },
+  {
+   "source": "Coinbase",
+   "before": null,
+   "now": 13,
+   "delta": 13
+  },
+  {
+   "source": "Interview Kickstart",
+   "before": null,
+   "now": 13,
+   "delta": 13
+  },
+  {
+   "source": "SigNoz",
+   "before": null,
+   "now": 13,
+   "delta": 13
+  },
+  {
+   "source": "Solventum",
+   "before": null,
+   "now": 13,
+   "delta": 13
+  },
+  {
+   "source": "Tesco",
+   "before": null,
+   "now": 13,
+   "delta": 13
+  },
+  {
+   "source": "ValGenesis",
+   "before": null,
+   "now": 13,
+   "delta": 13
+  },
+  {
+   "source": "Arm",
+   "before": null,
+   "now": 14,
+   "delta": 14
+  },
+  {
+   "source": "Cin7",
+   "before": null,
+   "now": 14,
+   "delta": 14
+  },
+  {
+   "source": "Concurrence",
+   "before": null,
+   "now": 14,
+   "delta": 14
+  },
+  {
+   "source": "DocuSign",
+   "before": null,
+   "now": 14,
+   "delta": 14
+  },
+  {
+   "source": "Fampay",
+   "before": null,
+   "now": 14,
+   "delta": 14
+  },
+  {
+   "source": "Mastercard",
+   "before": null,
+   "now": 14,
+   "delta": 14
+  },
+  {
+   "source": "Microsoft",
+   "before": null,
+   "now": 14,
+   "delta": 14
+  },
+  {
+   "source": "Motorola Solutions",
+   "before": null,
+   "now": 14,
+   "delta": 14
+  },
+  {
+   "source": "SpotDraft",
+   "before": null,
+   "now": 14,
+   "delta": 14
+  },
+  {
+   "source": "Stripe",
+   "before": null,
+   "now": 14,
+   "delta": 14
+  },
+  {
+   "source": "AppZen",
+   "before": null,
+   "now": 15,
+   "delta": 15
+  },
+  {
+   "source": "Dassault Systèmes",
+   "before": null,
+   "now": 15,
+   "delta": 15
+  },
+  {
+   "source": "Caterpillar",
+   "before": null,
+   "now": 16,
+   "delta": 16
+  },
+  {
+   "source": "Phenom",
+   "before": null,
+   "now": 16,
+   "delta": 16
+  },
+  {
+   "source": "Stable Money",
+   "before": null,
+   "now": 16,
+   "delta": 16
+  },
+  {
+   "source": "Bureau",
+   "before": null,
+   "now": 17,
+   "delta": 17
+  },
+  {
+   "source": "Ericsson",
+   "before": null,
+   "now": 17,
+   "delta": 17
+  },
+  {
+   "source": "GitLab",
+   "before": null,
+   "now": 17,
+   "delta": 17
+  },
+  {
+   "source": "Kotak Mahindra Bank",
+   "before": null,
+   "now": 17,
+   "delta": 17
+  },
+  {
+   "source": "NCR Corporation",
+   "before": null,
+   "now": 17,
+   "delta": 17
+  },
+  {
+   "source": "NetApp",
+   "before": null,
+   "now": 17,
+   "delta": 17
+  },
+  {
+   "source": "Alstom",
+   "before": null,
+   "now": 18,
+   "delta": 18
+  },
+  {
+   "source": "Appen",
+   "before": null,
+   "now": 18,
+   "delta": 18
+  },
+  {
+   "source": "Bidgely",
+   "before": null,
+   "now": 18,
+   "delta": 18
+  },
+  {
+   "source": "Neuron7.ai",
+   "before": null,
+   "now": 18,
+   "delta": 18
+  },
+  {
+   "source": "Texas Instruments",
+   "before": null,
+   "now": 18,
+   "delta": 18
+  },
+  {
+   "source": "Axis Bank",
+   "before": null,
+   "now": 19,
+   "delta": 19
+  },
+  {
+   "source": "Level AI",
+   "before": null,
+   "now": 19,
+   "delta": 19
+  },
+  {
+   "source": "Mindtickle",
+   "before": null,
+   "now": 19,
+   "delta": 19
+  },
+  {
+   "source": "eBay",
+   "before": null,
+   "now": 19,
+   "delta": 19
+  },
+  {
+   "source": "Gainsight",
+   "before": null,
+   "now": 20,
+   "delta": 20
+  },
+  {
+   "source": "Goldman Sachs",
+   "before": null,
+   "now": 20,
+   "delta": 20
+  },
+  {
+   "source": "Hewlett Packard Enterprise",
+   "before": null,
+   "now": 20,
+   "delta": 20
+  },
+  {
+   "source": "Singular",
+   "before": null,
+   "now": 20,
+   "delta": 20
+  },
+  {
+   "source": "WisdomAI",
+   "before": null,
+   "now": 20,
+   "delta": 20
+  },
+  {
+   "source": "AMD",
+   "before": null,
+   "now": 21,
+   "delta": 21
+  },
+  {
+   "source": "CertifyOS",
+   "before": null,
+   "now": 21,
+   "delta": 21
+  },
+  {
+   "source": "Micron Technology",
+   "before": null,
+   "now": 21,
+   "delta": 21
+  },
+  {
+   "source": "Safe Security",
+   "before": null,
+   "now": 21,
+   "delta": 21
+  },
+  {
+   "source": "Ironclad",
+   "before": null,
+   "now": 23,
+   "delta": 23
+  },
+  {
+   "source": "Anyscale",
+   "before": null,
+   "now": 24,
+   "delta": 24
+  },
+  {
+   "source": "Emerson",
+   "before": null,
+   "now": 24,
+   "delta": 24
+  },
+  {
+   "source": "JPMorgan Chase & Co.",
+   "before": null,
+   "now": 24,
+   "delta": 24
+  },
+  {
+   "source": "Airbound",
+   "before": null,
+   "now": 25,
+   "delta": 25
+  },
+  {
+   "source": "The ePlane Company",
+   "before": null,
+   "now": 25,
+   "delta": 25
+  },
+  {
+   "source": "Honeywell",
+   "before": null,
+   "now": 27,
+   "delta": 27
+  },
+  {
+   "source": "Intel",
+   "before": null,
+   "now": 28,
+   "delta": 28
+  },
+  {
+   "source": "Redis",
+   "before": null,
+   "now": 29,
+   "delta": 29
+  },
+  {
+   "source": "Composio",
+   "before": null,
+   "now": 30,
+   "delta": 30
+  },
+  {
+   "source": "Nium",
+   "before": null,
+   "now": 31,
+   "delta": 31
+  },
+  {
+   "source": "Warner Music Group",
+   "before": null,
+   "now": 31,
+   "delta": 31
+  },
+  {
+   "source": "Atlys",
+   "before": null,
+   "now": 32,
+   "delta": 32
+  },
+  {
+   "source": "Giga ML",
+   "before": null,
+   "now": 32,
+   "delta": 32
+  },
+  {
+   "source": "Pure Storage",
+   "before": null,
+   "now": 32,
+   "delta": 32
+  },
+  {
+   "source": "Applied Materials India",
+   "before": null,
+   "now": 35,
+   "delta": 35
+  },
+  {
+   "source": "PAR Technology",
+   "before": null,
+   "now": 36,
+   "delta": 36
+  },
+  {
+   "source": "blueorigin",
+   "before": null,
+   "now": 36,
+   "delta": 36
+  },
+  {
+   "source": "Qualcomm",
+   "before": null,
+   "now": 37,
+   "delta": 37
+  },
+  {
+   "source": "Spreetail",
+   "before": null,
+   "now": 38,
+   "delta": 38
+  },
+  {
+   "source": "Ema",
+   "before": null,
+   "now": 39,
+   "delta": 39
+  },
+  {
+   "source": "Hevo Data",
+   "before": null,
+   "now": 40,
+   "delta": 40
+  },
+  {
+   "source": "Rox",
+   "before": null,
+   "now": 40,
+   "delta": 40
+  },
+  {
+   "source": "Sardine",
+   "before": null,
+   "now": 40,
+   "delta": 40
+  },
+  {
+   "source": "Acceldata",
+   "before": null,
+   "now": 41,
+   "delta": 41
+  },
+  {
+   "source": "Appfolio",
+   "before": null,
+   "now": 41,
+   "delta": 41
+  },
+  {
+   "source": "Apple",
+   "before": null,
+   "now": 41,
+   "delta": 41
+  },
+  {
+   "source": "Sarvam AI",
+   "before": null,
+   "now": 43,
+   "delta": 43
+  },
+  {
+   "source": "Meesho",
+   "before": null,
+   "now": 48,
+   "delta": 48
+  },
+  {
+   "source": "Airbus",
+   "before": null,
+   "now": 52,
+   "delta": 52
+  },
+  {
+   "source": "Citi",
+   "before": null,
+   "now": 53,
+   "delta": 53
+  },
+  {
+   "source": "Beghou",
+   "before": null,
+   "now": 54,
+   "delta": 54
+  },
+  {
+   "source": "Saviynt",
+   "before": null,
+   "now": 59,
+   "delta": 59
+  },
+  {
+   "source": "GE Vernova",
+   "before": null,
+   "now": 63,
+   "delta": 63
+  },
+  {
+   "source": "Juniper Networks",
+   "before": null,
+   "now": 68,
+   "delta": 68
+  },
+  {
+   "source": "Commure",
+   "before": null,
+   "now": 73,
+   "delta": 73
+  },
+  {
+   "source": "Hive",
+   "before": null,
+   "now": 73,
+   "delta": 73
+  },
+  {
+   "source": "Google",
+   "before": null,
+   "now": 81,
+   "delta": 81
+  },
+  {
+   "source": "Socure",
+   "before": null,
+   "now": 84,
+   "delta": 84
+  },
+  {
+   "source": "Spotify",
+   "before": null,
+   "now": 89,
+   "delta": 89
+  },
+  {
+   "source": "HighLevel",
+   "before": null,
+   "now": 90,
+   "delta": 90
+  },
+  {
+   "source": "Gen Digital",
+   "before": null,
+   "now": 92,
+   "delta": 92
+  },
+  {
+   "source": "Tekion",
+   "before": null,
+   "now": 92,
+   "delta": 92
+  },
+  {
+   "source": "Temporal",
+   "before": null,
+   "now": 93,
+   "delta": 93
+  },
+  {
+   "source": "ION",
+   "before": null,
+   "now": 100,
+   "delta": 100
+  },
+  {
+   "source": "UiPath",
+   "before": null,
+   "now": 108,
+   "delta": 108
+  },
+  {
+   "source": "Cisco",
+   "before": null,
+   "now": 118,
+   "delta": 118
+  },
+  {
+   "source": "LinkedIn company sweep",
+   "before": null,
+   "now": 141,
+   "delta": 141
+  },
+  {
+   "source": "Checkout.com",
+   "before": null,
+   "now": 163,
+   "delta": 163
+  },
+  {
+   "source": "Notion",
+   "before": null,
+   "now": 169,
+   "delta": 169
+  },
+  {
+   "source": "Ramp",
+   "before": null,
+   "now": 185,
+   "delta": 185
+  },
+  {
+   "source": "Paytm",
+   "before": null,
+   "now": 199,
+   "delta": 199
+  },
+  {
+   "source": "ClickHouse",
+   "before": null,
+   "now": 204,
+   "delta": 204
+  },
+  {
+   "source": "Amazon",
+   "before": null,
+   "now": 233,
+   "delta": 233
+  },
+  {
+   "source": "Larsen & Toubro",
+   "before": null,
+   "now": 244,
+   "delta": 244
+  },
+  {
+   "source": "Atlassian",
+   "before": null,
+   "now": 246,
+   "delta": 246
+  },
+  {
+   "source": "Snowflake",
+   "before": null,
+   "now": 375,
+   "delta": 375
+  },
+  {
+   "source": "Airwallex",
+   "before": null,
+   "now": 495,
+   "delta": 495
+  },
+  {
+   "source": "LinkedIn search",
+   "before": null,
+   "now": 725,
+   "delta": 725
+  },
+  {
+   "source": "OpenAI",
+   "before": null,
+   "now": 854,
+   "delta": 854
+  }
+ ],
+ "left_roles": {
+  "closed: no longer on the company's board": [
+   {
+    "company": "Microsoft",
+    "title": "Software Engineer 2",
+    "url": "https://apply.careers.microsoft.com/careers/job/1970393557038608",
+    "was": "shortlist"
+   },
+   {
+    "company": "Target",
+    "title": "Engineer - Target India",
+    "url": "https://target.wd5.myworkdayjobs.com/targetcareers/job/Tower-02-Manyata-Embassy-Business-Park-Racenahali--Nagawara-Villages-Outer-Ring-Rd-Bangalore-540065/Engineer---Target-India_R0000453035",
+    "was": "shortlist"
+   },
+   {
+    "company": "Disney",
+    "title": "Product Software Engineer II",
+    "url": "https://join.disneycareers.com/global/en/job/10164621/Product-Software-Engineer-II",
+    "was": "shortlist"
+   },
+   {
+    "company": "Expedia Group",
+    "title": "Software Development Engineer II",
+    "url": "https://expedia.wd108.myworkdayjobs.com/search/job/India---Gurgaon/Software-Development-Engineer-II_R-110899",
+    "was": "shortlist"
+   },
+   {
+    "company": "Google",
+    "title": "Web Solutions Engineer, Tools Automation and Infrastructure",
+    "url": "https://www.google.com/about/careers/applications/jobs/results/140070817412063942",
+    "was": "shortlist"
+   },
+   {
+    "company": "American Express",
+    "title": "Software Engineer I",
+    "url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26015127",
+    "was": "shortlist"
+   },
+   {
+    "company": "NetApp",
+    "title": "Software Engineer",
+    "url": "https://careers.netapp.com/job/bengaluru/software-engineer/27600/103209335808",
+    "was": "shortlist"
+   },
+   {
+    "company": "PhonePe",
+    "title": "Software Engineer, Backend  (1-2 years)",
+    "url": "https://jobs.smartrecruiters.com/PHONEPELIMITED/1000000000006099-software-engineer-backend-1-2-years-",
+    "was": "shortlist"
+   },
+   {
+    "company": "Teradata",
+    "title": "AI Engineer - II",
+    "url": "https://careers.teradata.com/jobs/220606/ai-engineer-ii",
+    "was": "shortlist"
+   },
+   {
+    "company": "Citi",
+    "title": "Java Spark developer",
+    "url": "https://citi.eightfold.ai/careers/job/859038003239",
+    "was": "shortlist"
+   },
+   {
+    "company": "Teradata",
+    "title": "AI Engineer",
+    "url": "https://careers.teradata.com/jobs/220497/ai-engineer",
+    "was": "shortlist"
+   },
+   {
+    "company": "Citi",
+    "title": "Java Full Stack Developer with Angular",
+    "url": "https://citi.eightfold.ai/careers/job/859038541336",
+    "was": "shortlist"
+   },
+   {
+    "company": "Expedia Group",
+    "title": "Mobile Engineer III, iOS",
+    "url": "https://expedia.wd108.myworkdayjobs.com/search/job/India---Gurgaon/Mobile-Engineer-III--iOS_R-108296",
+    "was": "shortlist"
+   },
+   {
+    "company": "Citi",
+    "title": "Application Development Programmer Analyst",
+    "url": "https://citi.eightfold.ai/careers/job/859038902221",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Development Engineer, CS ARIA",
+    "url": "https://www.amazon.jobs/en/jobs/10604005/software-development-engineer-cs-aria",
+    "was": "shortlist"
+   },
+   {
+    "company": "Citi",
+    "title": "Full Stack Java and Angular Developer",
+    "url": "https://citi.eightfold.ai/careers/job/859038657788",
+    "was": "shortlist"
+   },
+   {
+    "company": "Rippling",
+    "title": "Software Engineer I",
+    "url": "https://ats.rippling.com/rippling/jobs/472ecc5e-9610-477b-bbb9-8b075c8f5a67",
+    "was": "shortlist"
+   },
+   {
+    "company": "Guidewire Software",
+    "title": "Software Engineer II (Java, backend)",
+    "url": "https://wd5.myworkdaysite.com/recruiting/guidewire/external/job/India---Bangalore/Software-Engineer-II--Java--backend-_JR_15169",
+    "was": "shortlist"
+   },
+   {
+    "company": "Nike",
+    "title": "Software Engineer -II, ITC",
+    "url": "https://careers.nike.com/zh-tw/software-engineer-ii-itc/job/R-49963",
+    "was": "shortlist"
+   },
+   {
+    "company": "NetApp",
+    "title": "Full Stack Programmer",
+    "url": "https://careers.netapp.com/job/bengaluru/full-stack-programmer/27600/103149056128",
+    "was": "shortlist"
+   },
+   {
+    "company": "Google",
+    "title": "Software Engineer II, Corp Eng",
+    "url": "https://www.google.com/about/careers/applications/jobs/results/138674961899233990",
+    "was": "shortlist"
+   },
+   {
+    "company": "Rippling",
+    "title": "Software Engineer I - FullStack",
+    "url": "https://ats.rippling.com/rippling/jobs/acf82f7d-5595-47c4-8e08-45c9d9a93529",
+    "was": "shortlist"
+   },
+   {
+    "company": "CrowdStrike",
+    "title": "Engineer II - Cloud",
+    "url": "https://crowdstrike.wd5.myworkdayjobs.com/crowdstrikecareers/job/India---Pune/Engineer-II---SRE_R29229",
+    "was": "shortlist"
+   },
+   {
+    "company": "AQR",
+    "title": "Engineering - Portfolio Analytics - Java Developer - Associate",
+    "url": "https://careers.aqr.com/jobs?gh_jid=7546806&gh_jid=7546806",
+    "was": "shortlist"
+   },
+   {
+    "company": "JPMorgan Chase & Co.",
+    "title": "Java Full Stack (Java, ReactJS, AWS, and exposure to AI tools) Software Engineer II",
+    "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210754767",
+    "was": "shortlist"
+   },
+   {
+    "company": "BCG",
+    "title": "Delivery AI Software Engineer",
+    "url": "https://careers.bcg.com/ca/fr/job/60007/Delivery-AI-Software-Engineer",
+    "was": "shortlist"
+   },
+   {
+    "company": "Hewlett Packard Enterprise",
+    "title": "Software Engineer 2",
+    "url": "https://careers.hpe.com/ca/fr/job/1214507/Software-Engineer-2",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Development Engineer -I, IESP Merchant Tech",
+    "url": "https://www.amazon.jobs/en/jobs/10511883/software-development-engineer-i-iesp-merchant-tech",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Development Engineer, Prime Video Live Events - Sports Data Platform",
+    "url": "https://www.amazon.jobs/en/jobs/10556180/software-development-engineer-prime-video-live-events-sports-data-platform",
+    "was": "shortlist"
+   },
+   {
+    "company": "Citi",
+    "title": "Apps Dev Intmd Programmer Analyst - C11 - CHENNAI",
+    "url": "https://citi.eightfold.ai/careers/job/859038345541",
+    "was": "shortlist"
+   },
+   {
+    "company": "Microsoft",
+    "title": "Software Engineer",
+    "url": "https://apply.careers.microsoft.com/careers/job/1970393557045581",
+    "was": "shortlist"
+   },
+   {
+    "company": "Goldman Sachs",
+    "title": "GBM - Public Dept-Bengaluru-Associate-Software Engineering",
+    "url": "https://higher.gs.com/roles/185273",
+    "was": "shortlist"
+   },
+   {
+    "company": "Citi",
+    "title": "GenAI Developer",
+    "url": "https://citi.eightfold.ai/careers/job/859037145612",
+    "was": "shortlist"
+   },
+   {
+    "company": "Microsoft",
+    "title": "Software Engineer 2",
+    "url": "https://apply.careers.microsoft.com/careers/job/1970393557054138",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "SDE II, AB Mobile",
+    "url": "https://www.amazon.jobs/en/jobs/10591189/sde-ii-ab-mobile",
+    "was": "shortlist"
+   },
+   {
+    "company": "PayPal",
+    "title": "Software Engineer",
+    "url": "https://wd1.myworkdaysite.com/recruiting/paypal/jobs/job/Bangalore-Karnataka-India/Software-Engineer_R0138600",
+    "was": "shortlist"
+   },
+   {
+    "company": "JPMorgan Chase & Co.",
+    "title": "Software Engineer III - React Developer",
+    "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210808210",
+    "was": "shortlist"
+   },
+   {
+    "company": "ServiceNow",
+    "title": "Applications Dev Engineer",
+    "url": "https://jobs.smartrecruiters.com/ServiceNow/744000161219059-applications-dev-engineer",
+    "was": "shortlist"
+   },
+   {
+    "company": "Cargill",
+    "title": "Platform Engineer",
+    "url": "https://careers.cargill.com/en/job/bengaluru/platform-engineer/23251/96288117680",
+    "was": "shortlist"
+   },
+   {
+    "company": "Juniper Networks",
+    "title": "Cloud Developer",
+    "url": "https://hpe.wd5.myworkdayjobs.com/Jobsathpe/job/Bengaluru-Karntaka-India/Cloud-Developer--Virtualization_1211072-2",
+    "was": "shortlist"
+   },
+   {
+    "company": "JPMorgan Chase & Co.",
+    "title": "Software Engineer III - (Java, AWS)",
+    "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210754105",
+    "was": "shortlist"
+   },
+   {
+    "company": "JPMorgan Chase & Co.",
+    "title": "Software Engineer III - .Net Core/Java and React/Angular with AWS",
+    "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210802861",
+    "was": "shortlist"
+   },
+   {
+    "company": "Pure Storage",
+    "title": "MTS - VIFA",
+    "url": "https://job-boards.greenhouse.io/purestorage/jobs/8034917",
+    "was": "shortlist"
+   },
+   {
+    "company": "Kotak Mahindra Bank",
+    "title": "Software Engineering III-SUPPORT SERVICES-Applications-CTB",
+    "url": "https://hcbt.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/222599",
+    "was": "shortlist"
+   },
+   {
+    "company": "GitLab",
+    "title": "Intermediate Backend Engineer, Authorization",
+    "url": "https://job-boards.greenhouse.io/gitlab/jobs/8905402002",
+    "was": "shortlist"
+   },
+   {
+    "company": "Kotak Mahindra Bank",
+    "title": "Software Developer Engineer 1-Digital Banking Kotak 811-Regional Sales",
+    "url": "https://hcbt.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/222300",
+    "was": "shortlist"
+   },
+   {
+    "company": "Kotak Mahindra Bank",
+    "title": "Software Developer Engineer 1-Digital Banking Kotak 811-Regional Sales",
+    "url": "https://hcbt.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/223070",
+    "was": "shortlist"
+   },
+   {
+    "company": "Innovaccer",
+    "title": "4697- Software Development Engineer-II Backend",
+    "url": "https://apply.workable.com/j/488D9AC184",
+    "was": "shortlist"
+   },
+   {
+    "company": "Citi",
+    "title": "Java Developer",
+    "url": "https://citi.eightfold.ai/careers/job/859038313093",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Dev Engineer II, Amazon India CFX team",
+    "url": "https://www.amazon.jobs/en/jobs/10594182/software-dev-engineer-ii-amazon-india-cfx-team",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Dev Engineer II , Finance Tech",
+    "url": "https://www.amazon.jobs/en/jobs/10512283/software-dev-engineer-ii-finance-tech",
+    "was": "shortlist"
+   },
+   {
+    "company": "JPMorgan Chase & Co.",
+    "title": "Software Engineer III - Full Stack (Python and React)",
+    "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210799717",
+    "was": "shortlist"
+   },
+   {
+    "company": "Disney",
+    "title": "Software Engineer II",
+    "url": "https://join.disneycareers.com/global/en/job/10163777/Software-Engineer-II",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Development Engineer, FinTech General Ledger",
+    "url": "https://www.amazon.jobs/en/jobs/10491197/software-development-engineer-fintech-general-ledger",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Development Engineer II, Alexa Excellence",
+    "url": "https://www.amazon.jobs/en/jobs/10591315/software-development-engineer-ii-alexa-excellence",
+    "was": "shortlist"
+   },
+   {
+    "company": "SAP",
+    "title": "Developer – SAP Concur Expense Pay",
+    "url": "https://jobs.sap.com/en/jobs/744000161024029/developer-sap-concur-expense-pay/",
+    "was": "shortlist"
+   },
+   {
+    "company": "JPMorgan Chase & Co.",
+    "title": "Software Engineer III - Amazon Connect, AWS, Python",
+    "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210801631",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Development Engineer II,  Digital Pricing and Competitive Intelligence (D-PRICIQ ), Digital Acceleration",
+    "url": "https://www.amazon.jobs/en/jobs/10424933/software-development-engineer-ii-digital-pricing-and-competitive-intelligence-d-priciq-digital-acceleration",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "SDE, Alexa For Shopping",
+    "url": "https://www.amazon.jobs/en/jobs/10478388/sde-alexa-for-shopping",
+    "was": "shortlist"
+   },
+   {
+    "company": "Google",
+    "title": "Cloud AI Engineer, Technical Onboarding Center",
+    "url": "https://www.google.com/about/careers/applications/jobs/results/115807151561024198",
+    "was": "shortlist"
+   },
+   {
+    "company": "Google",
+    "title": "Cloud AI Engineer, Technical Onboarding Center, Google Cloud",
+    "url": "https://www.google.com/about/careers/applications/jobs/results/79193913646031558",
+    "was": "shortlist"
+   },
+   {
+    "company": "Juniper Networks",
+    "title": "Systems/Software Engineer I",
+    "url": "https://hpe.wd5.myworkdayjobs.com/Jobsathpe/job/Bengaluru-Karntaka-India/Lab-Engineer-I_1216116-2",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Development Engineer II, Digital Acceleration",
+    "url": "https://www.amazon.jobs/en/jobs/10438962/software-development-engineer-ii-digital-acceleration",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Development II",
+    "url": "https://www.amazon.jobs/en/jobs/10500291/software-development-ii",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Dev Engineer II, Paragon Workbench",
+    "url": "https://www.amazon.jobs/en/jobs/10530717/software-dev-engineer-ii-paragon-workbench",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Development Engineer II, Grocery In-store",
+    "url": "https://www.amazon.jobs/en/jobs/10571293/software-development-engineer-ii-grocery-in-store",
+    "was": "shortlist"
+   },
+   {
+    "company": "JPMorgan Chase & Co.",
+    "title": "Software Engineer III - Python LLM Engineer",
+    "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210790233",
+    "was": "shortlist"
+   },
+   {
+    "company": "LSEG",
+    "title": "Software Engineer",
+    "url": "https://lseg.wd3.myworkdayjobs.com/Careers/job/IND-Bangalore-A-RMZ-Infinity/Software-Engineer_R0122852",
+    "was": "shortlist"
+   },
+   {
+    "company": "Cisco",
+    "title": "IT Software Engineer",
+    "url": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers/job/Bangalore-India/IT-Software-Engineer_2026172-1",
+    "was": "shortlist"
+   },
+   {
+    "company": "JPMorgan Chase & Co.",
+    "title": "Software Engineer III-Python",
+    "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210805775",
+    "was": "shortlist"
+   },
+   {
+    "company": "JPMorgan Chase & Co.",
+    "title": "Software Engineer III - Oracle HCM",
+    "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210789789",
+    "was": "shortlist"
+   },
+   {
+    "company": "Cigna",
+    "title": "Software Engineering Advisor - HIH - Evernorth",
+    "url": "https://jobs.thecignagroup.com/us/en/job/26012886/Software-Engineering-Associate-Advisor-HIH-Evernorth",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Development Engineer, FinTech - TFAW",
+    "url": "https://www.amazon.jobs/en/jobs/10439823/software-development-engineer-fintech-tfaw",
+    "was": "shortlist"
+   },
+   {
+    "company": "Qualcomm",
+    "title": "Engineer - Linker Developer",
+    "url": "https://careers.qualcomm.com/careers/job/446717801058",
+    "was": "shortlist"
+   },
+   {
+    "company": "Angel One",
+    "title": "SDE 2 Backend - Referral",
+    "url": "https://angelone.mynexthire.com/employer/jobs/careers#req6937",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Development Engineer, FBA",
+    "url": "https://www.amazon.jobs/en/jobs/10486982/software-development-engineer-fba",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Development Engineer II , Amazon Cross Border Tech",
+    "url": "https://www.amazon.jobs/en/jobs/10488199/software-development-engineer-ii-amazon-cross-border-tech",
+    "was": "shortlist"
+   },
+   {
+    "company": "Kotak Mahindra Bank",
+    "title": "Software Engineering II-SUPPORT SERVICES-Applications-CTB",
+    "url": "https://hcbt.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/226035",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Development Engineer, Everyday Essentials Experiences",
+    "url": "https://www.amazon.jobs/en/jobs/10534417/software-development-engineer-everyday-essentials-experiences",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Development Engineer, Customer Experience and Business Trends",
+    "url": "https://www.amazon.jobs/en/jobs/10558329/software-development-engineer-customer-experience-and-business-trends",
+    "was": "shortlist"
+   },
+   {
+    "company": "Amazon",
+    "title": "Software Dev Engineer II, Mesa",
+    "url": "https://www.amazon.jobs/en/jobs/10582204/software-dev-engineer-ii-mesa",
+    "was": "shortlist"
+   },
+   {
+    "company": "LSEG",
+    "title": "C# OR C++ / .NET Engineer",
+    "url": "https://lseg.wd3.myworkdayjobs.com/Careers/job/IND-BLR-Divyasree-Technopolis/C--OR-C-----NET-Engineer_R0117319",
+    "was": "shortlist"
+   },
+   {
+    "company": "Fujitsu",
+    "title": "Application Developer_MFT Engineer",
+    "url": "https://www.jobs.global.fujitsu.com/job/Pune-Application-Developer_MFT-Engineer-MH/4609250/",
+    "was": "shortlist"
+   },
+   {
+    "company": "Adyen",
+    "title": "Backend Engineer (Java)",
+    "url": "https://job-boards.greenhouse.io/adyen/jobs/8041307",
+    "was": "shortlist"
+   },
+   {
+    "company": "Sarvam AI",
+    "title": "Agent Engineer",
+    "url": "https://jobs.ashbyhq.com/sarvam/36f89b00-2010-4d23-aae3-17a2f53d9eaa",
+    "was": "shortlist"
+   },
+   {
+    "company": "Northern Trust",
+    "title": "Associate- Software Eng",
+    "url": "https://ntrs.wd1.myworkdayjobs.com/northerntrust/job/Pune-India/Associate--L1-Support-Engineer-Java-Cloud_R159224",
+    "was": "lead"
+   },
+   {
+    "company": "Flexera",
+    "title": "Software Engineer",
+    "url": "https://flexerasoftware.wd1.myworkdayjobs.com/FlexeraSoftware/job/Bangalore/Software-Engineer_17469-2",
+    "was": "lead"
+   },
+   {
+    "company": "GE Vernova",
+    "title": "Software Engineering Specialist",
+    "url": "https://gevernova.wd5.myworkdayjobs.com/Vernova_ExternalSite/job/Bengaluru/Software-Engineering-Specialist_R5058074",
+    "was": "lead"
+   },
+   {
+    "company": "The Depository Trust & Clearing Corporation (DTCC)",
+    "title": "Software Engineering Associate - Snowflake",
+    "url": "https://ebxr.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/214039",
+    "was": "lead"
+   },
+   {
+    "company": "Aspen Technology",
+    "title": "Software Developer II (Dev)",
+    "url": "https://aspentech.wd5.myworkdayjobs.com/AspenTech/job/Pune-EMR/Software-Developer-II--Dev-_R9578",
+    "was": "lead"
+   },
+   {
+    "company": "Aftershoot",
+    "title": "Backend Engineer - SDE 1",
+    "url": "https://careers.aftershoot.com/o/backend-engineer-sde-1",
+    "was": "lead"
+   },
+   {
+    "company": "Mobility Global",
+    "title": "Associate Software Engineer (React+Java)",
+    "url": "/jobs/associate-software-engineer-react-java-location-gurugram-haryana-jobs-category-information-technology-326433",
+    "was": "lead"
+   },
+   {
+    "company": "Air Arabia",
+    "title": "Software Engineer",
+    "url": "https://www.airarabiagroupcareers.com/sa/ar/job/18122/Software-Engineer",
+    "was": "lead"
+   },
+   {
+    "company": "Bureau",
+    "title": "Integration Engineer (SDK)",
+    "url": "https://jobs.ashbyhq.com/bureau/8786a55b-dd03-450a-872d-9d50feeb4f93",
+    "was": "lead"
+   },
+   {
+    "company": "Charles Schwab",
+    "title": "Specialist - Software Development & Engineering- iOS Developer",
+    "url": "https://www.schwabjobs.com/job/hyderabad/specialist-software-development-and-engineering-ios-developer/33995/103152279872",
+    "was": "lead"
+   },
+   {
+    "company": "AppZen",
+    "title": "AI/ML Engineer",
+    "url": "https://jobs.lever.co/appzen/cce93662-196a-4814-b80c-bfa0b37384af",
+    "was": "lead"
+   },
+   {
+    "company": "Mobility Global",
+    "title": "AI Engineer",
+    "url": "/jobs/ai-engineer-location-bengaluru-karnataka-jobs-category-information-technology-475",
+    "was": "lead"
+   },
+   {
+    "company": "Honeywell",
+    "title": "Software Engr I",
+    "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Honeywell/job/161459",
+    "was": "lead"
+   },
+   {
+    "company": "Honeywell",
+    "title": "Software Engr I",
+    "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Honeywell/job/158516",
+    "was": "lead"
+   },
+   {
+    "company": "Observe.AI",
+    "title": "AI Agent Engineer",
+    "url": "https://www.observe.ai/position?gh_jid=5432596008",
+    "was": "lead"
+   },
+   {
+    "company": "DHL",
+    "title": "Software Engineer - AI Platform",
+    "url": "https://careers.dhl.com/eu/tr/job/DPDHGLOBALAV389295TREUEXTERNAL/Software-Engineer-AI-Platform",
+    "was": "lead"
+   },
+   {
+    "company": "Honeywell",
+    "title": "Software Engr II",
+    "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Honeywell/job/161284",
+    "was": "lead"
+   },
+   {
+    "company": "U.S. Bank",
+    "title": "Associate Software Engineer",
+    "url": "https://careers.usbank.com/global/en/job/UBNAGLOBAL20260017256EXTERNALENGLOBAL/Associate-Software-Engineer",
+    "was": "lead"
+   },
+   {
+    "company": "Honeywell",
+    "title": "Advanced Software Engr",
+    "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Honeywell/job/161357",
+    "was": "lead"
+   },
+   {
+    "company": "Honeywell",
+    "title": "Software Engr II",
+    "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Honeywell/job/161523",
+    "was": "lead"
+   },
+   {
+    "company": "DHL",
+    "title": "Software Engineer",
+    "url": "https://careers.dhl.com/africa/ar/job/DPDHGLOBALAV371939ARAFRICAEXTERNAL/Software-Engineer",
+    "was": "lead"
+   },
+   {
+    "company": "Honeywell",
+    "title": "Advanced Software Engr",
+    "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Honeywell/job/161450",
+    "was": "lead"
+   },
+   {
+    "company": "Aspen Technology",
+    "title": "Software Developer II",
+    "url": "https://aspentech.wd5.myworkdayjobs.com/AspenTech/job/Noida/Software-Developer-II_R9311",
+    "was": "lead"
+   },
+   {
+    "company": "Aspen Technology",
+    "title": "Software Developer II",
+    "url": "https://aspentech.wd5.myworkdayjobs.com/AspenTech/job/Noida/Software-Developer-II_R9191",
+    "was": "lead"
+   },
+   {
+    "company": "QuinStreet",
+    "title": "Java Developer",
+    "url": "https://www.quinstreet.com/careers/?gh_jid=8088244",
+    "was": "lead"
+   },
+   {
+    "company": "DHL",
+    "title": "AI Software Engineer",
+    "url": "https://careers.dhl.com/eu/tr/job/DPDHGLOBALAV305189TREUEXTERNAL/AI-Software-Engineer",
+    "was": "lead"
+   },
+   {
+    "company": "Resideo",
+    "title": "Software Engineer II",
+    "url": "/jobs/software-engineer-ii-bangalore-metropolitan-area-karnataka-india-300027849108134-jobs--software-engineering--",
+    "was": "lead"
+   },
+   {
+    "company": "DHL",
+    "title": "Software Engineer",
+    "url": "https://careers.dhl.com/eu/tr/job/DPDHGLOBALAV389706TREUEXTERNAL/Software-Engineer",
+    "was": "lead"
+   },
+   {
+    "company": "Deutsche Bank",
+    "title": "TDI HUBBLE Agile Developer, AS",
+    "url": "https://db.wd3.myworkdayjobs.com/DBWebsite/job/Mumbai-Nirlon-Knowledge-Park/TDI-HUBBLE-Agile-Developer--AS_R0424787",
+    "was": "lead"
+   },
+   {
+    "company": "GE Vernova",
+    "title": "Software Engineer",
+    "url": "https://gevernova.wd5.myworkdayjobs.com/Vernova_ExternalSite/job/Bengaluru/Software-Engineer_R5052758",
+    "was": "lead"
+   },
+   {
+    "company": "DHL",
+    "title": "Data Engineer & Analyst – Data Pipelines & Analytics (Backend)",
+    "url": "https://careers.dhl.com/eu/tr/job/DPDHGLOBALAV378103TREUEXTERNAL/Data-Engineer-Analyst-Data-Pipelines-Analytics-Backend",
+    "was": "lead"
+   },
+   {
+    "company": "Ixigo",
+    "title": "Founding Engineer - Voice AI",
+    "url": "https://jobs.smartrecruiters.com/ixigo/744000161252449-founding-engineer-voice-ai",
+    "was": "lead"
+   },
+   {
+    "company": "DHL",
+    "title": "Software Engineer",
+    "url": "https://careers.dhl.com/eu/tr/job/DPDHGLOBALAV388663TREUEXTERNAL/Software-Engineer",
+    "was": "lead"
+   },
+   {
+    "company": "Resideo",
+    "title": "Backend -.net/C# and Azure Engineer",
+    "url": "/jobs/backend-net-c-and-azure-engineer-bangalore-metropolitan-area-karnataka-india-300026087197346-jobs--software-engineering--",
+    "was": "lead"
+   },
+   {
+    "company": "Airbus",
+    "title": "Engineer - Methods & Tools",
+    "url": "https://ag.wd3.myworkdayjobs.com/Airbus/job/Bangalore-Area/Engineer---Methods---Tools_JR10424042",
+    "was": "lead"
+   },
+   {
+    "company": "Lyzr",
+    "title": "Full Stack Engineer - GenAI",
+    "url": "https://careers.lyzr.ai/jobs/536318-full-stack-engineer-genai",
+    "was": "lead"
+   },
+   {
+    "company": "Rohde & Schwarz",
+    "title": "Engineer Software Development Technology Systems",
+    "url": "https://www.rohde-schwarz.com/us/career/jobs/engineer-software-development-technology-systems_251563-1625695.html",
+    "was": "lead"
+   },
+   {
+    "company": "Alstom",
+    "title": "Software Designer",
+    "url": "https://jobsearch.alstom.com/job/Bangalore-Software-Designer-KA/1385470733/",
+    "was": "lead"
+   },
+   {
+    "company": "Linde",
+    "title": "Software Engineer - AI Hub",
+    "url": "https://linde.csod.com/ux/ats/careersite/25/home/requisition/33184?c=linde",
+    "was": "lead"
+   },
+   {
+    "company": "Light & Wonder",
+    "title": "Software Engineer",
+    "url": "https://lnw.wd5.myworkdayjobs.com/LightWonderExternalCareers/job/Chennai-India/Software-Engineer_R322599",
+    "was": "lead"
+   },
+   {
+    "company": "DHL",
+    "title": "Associate Software Engineer",
+    "url": "https://careers.dhl.com/eu/tr/job/DPDHGLOBALAV343941TREUEXTERNAL/Associate-Software-Engineer",
+    "was": "lead"
+   },
+   {
+    "company": "Rohde & Schwarz",
+    "title": "Software Application Development Engineer",
+    "url": "https://www.rohde-schwarz.com/us/career/jobs/software-application-development-engineer_251563-1617856.html",
+    "was": "lead"
+   },
+   {
+    "company": "SonicWall",
+    "title": "Software Dev Engineer - C, Linux & Networking (3-5 Years)",
+    "url": "https://job-boards.greenhouse.io/sonicwall/jobs/8072639",
+    "was": "lead"
+   },
+   {
+    "company": "Falcon",
+    "title": "React Native Developer",
+    "url": "https://falcon.keka.com/careers/jobdetails/144903",
+    "was": "lead"
+   }
+  ],
+  "still listed, now skipped (duplicate of the company's own board, outside India or excluded company)": [
+   {
+    "company": "American Express",
+    "title": "Software Engineer II",
+    "url": "https://www.linkedin.com/jobs/view/4486032858/",
+    "was": "shortlist"
+   },
+   {
+    "company": "American Express",
+    "title": "Software Engineer II",
+    "url": "https://www.linkedin.com/jobs/view/4484877272/",
+    "was": "shortlist"
+   },
+   {
+    "company": "Cloudflare",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4466900053/",
+    "was": "shortlist"
+   }
+  ],
+  "closed on LinkedIn (checked)": [
+   {
+    "company": "project44",
+    "title": "Software Engineer - Backend",
+    "url": "https://www.linkedin.com/jobs/view/4424845412/",
+    "was": "shortlist"
+   },
+   {
+    "company": "Trench Legal",
+    "title": "Applied AI Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4489684637/",
+    "was": "shortlist"
+   },
+   {
+    "company": "Flexiple",
+    "title": "SDE I - Java",
+    "url": "https://www.linkedin.com/jobs/view/4491093762/",
+    "was": "lead"
+   },
+   {
+    "company": "Docyt",
+    "title": "Associate Product Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4487707812/",
+    "was": "lead"
+   },
+   {
+    "company": "Flexiple",
+    "title": "SDE I - Golang",
+    "url": "https://www.linkedin.com/jobs/view/4491086502/",
+    "was": "lead"
+   },
+   {
+    "company": "Ditto Insurance",
+    "title": "Backend Developer (Python and Django)",
+    "url": "https://www.linkedin.com/jobs/view/4489891446/",
+    "was": "lead"
+   },
+   {
+    "company": "AQR Capital Management",
+    "title": "Engineering - Portfolio Analytics - Java Developer - Associate",
+    "url": "https://www.linkedin.com/jobs/view/4429577706/",
+    "was": "lead"
+   },
+   {
+    "company": "Joblet-AI",
+    "title": "Fullstack Software Engineer (Remote)",
+    "url": "https://www.linkedin.com/jobs/view/4490204671/",
+    "was": "lead"
+   },
+   {
+    "company": "ResilienceSoft",
+    "title": "MERN Developer",
+    "url": "https://www.linkedin.com/jobs/view/4488674456/",
+    "was": "lead"
+   },
+   {
+    "company": "Gizmeon",
+    "title": "Android Developer - 0-2 years",
+    "url": "https://www.linkedin.com/jobs/view/4487442617/",
+    "was": "lead"
+   },
+   {
+    "company": "Foodhub",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4477659590/",
+    "was": "lead"
+   },
+   {
+    "company": "Data Eminence",
+    "title": "PHP Developer",
+    "url": "https://www.linkedin.com/jobs/view/4489076170/",
+    "was": "lead"
+   },
+   {
+    "company": "Flexiple",
+    "title": "SDE I - Frontend (React + React Native)",
+    "url": "https://www.linkedin.com/jobs/view/4491203292/",
+    "was": "lead"
+   },
+   {
+    "company": "NeuroDrift",
+    "title": "Back End Developer",
+    "url": "https://www.linkedin.com/jobs/view/4489368220/",
+    "was": "lead"
+   },
+   {
+    "company": "Avance Consulting",
+    "title": "Forward Deployed Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4489072710/",
+    "was": "lead"
+   },
+   {
+    "company": "SAVA INFO SYSTEMS PVT LTD",
+    "title": "JavaScript Developer (0-3 Years) | Full-Time, On-Site | New Ranip - Ahmedabad",
+    "url": "https://www.linkedin.com/jobs/view/4486213162/",
+    "was": "lead"
+   },
+   {
+    "company": "Albertsons Companies India",
+    "title": "Engineer Software - AI/Agentic AI [T500-30274]",
+    "url": "https://www.linkedin.com/jobs/view/4480479073/",
+    "was": "lead"
+   },
+   {
+    "company": "H&M",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4491228279/",
+    "was": "lead"
+   },
+   {
+    "company": "ThreatXIntel",
+    "title": "Junior Full-Stack & Mobile App Developer (React / Next.js / React Native)",
+    "url": "https://www.linkedin.com/jobs/view/4480772905/",
+    "was": "lead"
+   },
+   {
+    "company": "Prudent Corporate Advisory Services Ltd.",
+    "title": "Dotnet Developer",
+    "url": "https://www.linkedin.com/jobs/view/4480939389/",
+    "was": "lead"
+   },
+   {
+    "company": "Questhiring",
+    "title": "Back End Developer",
+    "url": "https://www.linkedin.com/jobs/view/4480314914/",
+    "was": "lead"
+   },
+   {
+    "company": "emagine",
+    "title": "React Developer",
+    "url": "https://www.linkedin.com/jobs/view/4486770595/",
+    "was": "lead"
+   },
+   {
+    "company": "Collegedunia",
+    "title": "Python Developer (Tier1 B.Tech College)",
+    "url": "https://www.linkedin.com/jobs/view/4480010629/",
+    "was": "lead"
+   },
+   {
+    "company": "Recrew AI",
+    "title": "Back End Developer",
+    "url": "https://www.linkedin.com/jobs/view/4479294108/",
+    "was": "lead"
+   }
+  ],
+  "still listed, now filtered out: 5+ yrs asked": [
+   {
+    "company": "Cloudflare",
+    "title": "Software Engineer, AI Agents",
+    "url": "https://www.linkedin.com/jobs/view/4476432647/",
+    "was": "shortlist"
+   }
+  ],
+  "still listed, now filtered out: pay below bar": [
+   {
+    "company": "Trellix",
+    "title": "Software Development Engineer",
+    "url": "https://trellix.wd1.myworkdayjobs.com/EnterpriseCareers/job/India-Bangalore/Software-Development-Engineer_JR0038027",
+    "was": "lead"
+   },
+   {
+    "company": "Albertsons Companies India",
+    "title": "Engineer Software (Applied AI) [T500-28172]",
+    "url": "https://www.linkedin.com/jobs/view/4448875088/",
+    "was": "lead"
+   },
+   {
+    "company": "Tata Communications",
+    "title": "Jr Team Member - Software & Application Development",
+    "url": "https://jobs.tatacommunications.com/#/job/r_4e84cc8d888f391aad579440c2272803",
+    "was": "lead"
+   },
+   {
+    "company": "Aspen Technology",
+    "title": "Software Developer II (Install)",
+    "url": "https://aspentech.wd5.myworkdayjobs.com/AspenTech/job/Pune-EMR/Software-Developer-II--Install-_R9579",
+    "was": "lead"
+   },
+   {
+    "company": "Health Catalyst",
+    "title": "Java Software Development Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4488370624/",
+    "was": "lead"
+   },
+   {
+    "company": "TripJack",
+    "title": "SDE 1 - Backend (Java)",
+    "url": "https://tripjack.keka.com/careers/jobdetails/48681",
+    "was": "lead"
+   },
+   {
+    "company": "Aspen Technology",
+    "title": "Software Developer I (Install)",
+    "url": "https://aspentech.wd5.myworkdayjobs.com/AspenTech/job/Pune-EMR/Software-Developer-I--Install-_R9577",
+    "was": "lead"
+   },
+   {
+    "company": "Aspen Technology",
+    "title": "Software Developer I (Install)",
+    "url": "https://aspentech.wd5.myworkdayjobs.com/AspenTech/job/Pune-EMR/Software-Developer-I--Install-_R9576",
+    "was": "lead"
+   },
+   {
+    "company": "Falcon",
+    "title": "Software Developer - Backend",
+    "url": "https://falcon.keka.com/careers/jobdetails/530",
+    "was": "lead"
+   },
+   {
+    "company": "Aspen Technology",
+    "title": "C++ Developers",
+    "url": "https://aspentech.wd5.myworkdayjobs.com/AspenTech/job/Bengaluru-India/C---Developers_R6599",
+    "was": "lead"
+   }
+  ],
+  "still listed, now filtered out: pay below bar at this level": [
+   {
+    "company": "Honeywell",
+    "title": "Software Engr I",
+    "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Honeywell/job/161543",
+    "was": "lead"
+   },
+   {
+    "company": "Honeywell",
+    "title": "Software Engr I",
+    "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Honeywell/job/160453",
+    "was": "lead"
+   }
+  ]
+ },
+ "added_roles": [
+  {
+   "company": "Apple",
+   "title": "Fullstack Engineer - ETS",
+   "url": "https://jobs.apple.com/en-in/details/200694893/fullstack-engineer-ets",
+   "pay_conf": "Strong evidence",
+   "score": 90
+  },
+  {
+   "company": "Apple",
+   "title": "Software Engineer - AI & Data Platforms",
+   "url": "https://jobs.apple.com/en-in/details/200696143/software-engineer-ai-data-platforms",
+   "pay_conf": "Strong evidence",
+   "score": 88
+  },
+  {
+   "company": "JPMorgan Chase & Co.",
+   "title": "Software Engineer II - Java / TypeScript",
+   "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210743912",
+   "pay_conf": "Strong evidence",
+   "score": 88
+  },
+  {
+   "company": "Citi",
+   "title": "Junior Full Stack Engineer with AI",
+   "url": "https://citi.eightfold.ai/careers/job/859038902222",
+   "pay_conf": "Strong evidence",
+   "score": 87
+  },
+  {
+   "company": "Microsoft",
+   "title": "Software Engineer",
+   "url": "https://apply.careers.microsoft.com/careers/job/1970393557051010",
+   "pay_conf": "Strong evidence",
+   "score": 87
+  },
+  {
+   "company": "Microsoft",
+   "title": "Software Engineering IC2",
+   "url": "https://apply.careers.microsoft.com/careers/job/1970393557069836",
+   "pay_conf": "Strong evidence",
+   "score": 87
+  },
+  {
+   "company": "Apple",
+   "title": "Junior Fullstack Engineer - ETS",
+   "url": "https://jobs.apple.com/en-in/details/200694892/junior-fullstack-engineer-ets",
+   "pay_conf": "Strong evidence",
+   "score": 86
+  },
+  {
+   "company": "Postman",
+   "title": "Software Engineer",
+   "url": "https://postman.wd108.myworkdayjobs.com/careers/job/Hyderabad-India/Software-Engineer_JR1000067",
+   "pay_conf": "Strong evidence",
+   "score": 86
+  },
+  {
+   "company": "Disney",
+   "title": "Software Engineer II",
+   "url": "https://join.disneycareers.com/global/en/job/10162465/Software-Engineer-II",
+   "pay_conf": "Strong evidence",
+   "score": 86
+  },
+  {
+   "company": "Sumo Logic",
+   "title": "Software Engineer II",
+   "url": "https://job-boards.greenhouse.io/sumologic/jobs/8402011",
+   "pay_conf": "Strong evidence",
+   "score": 85
+  },
+  {
+   "company": "Citi",
+   "title": "Full Stack Java and Angular Developer",
+   "url": "https://citi.eightfold.ai/careers/job/859038732082",
+   "pay_conf": "Strong evidence",
+   "score": 85
+  },
+  {
+   "company": "Citi",
+   "title": "Java  Development Programmer Analyst",
+   "url": "https://citi.eightfold.ai/careers/job/859038222834",
+   "pay_conf": "Strong evidence",
+   "score": 85
+  },
+  {
+   "company": "Rubrik",
+   "title": "Software Engineer Product Infra: Core Services",
+   "url": "https://www.rubrik.com/company/careers/departments/job.8282005?gh_jid=8282005",
+   "pay_conf": "Strong evidence",
+   "score": 84
+  },
+  {
+   "company": "Oracle",
+   "title": "Platform Software Engineer 2",
+   "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/jobsearch/job/350972",
+   "pay_conf": "Strong evidence",
+   "score": 84
+  },
+  {
+   "company": "BCG",
+   "title": "Delivery AI Software Engineer",
+   "url": "https://careers.bcg.com/global/en/job/60007/Delivery-AI-Software-Engineer",
+   "pay_conf": "Strong evidence",
+   "score": 84
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Development Engineer, Amazon International Seller Services",
+   "url": "https://www.amazon.jobs/en/jobs/10594150/software-development-engineer-amazon-international-seller-services",
+   "pay_conf": "Strong evidence",
+   "score": 83
+  },
+  {
+   "company": "Qualcomm",
+   "title": "Engineer- Camera",
+   "url": "https://careers.qualcomm.com/careers/job/446720848928",
+   "pay_conf": "Strong evidence",
+   "score": 83
+  },
+  {
+   "company": "Caterpillar",
+   "title": "AI Full Stack Engineer – Service Technology",
+   "url": "https://cat.wd5.myworkdayjobs.com/CaterpillarCareers/job/Chennai-Tamil-Nadu/AI-Full-Stack-Engineer---Service-Technology_R0000405446",
+   "pay_conf": "Strong evidence",
+   "score": 83
+  },
+  {
+   "company": "BlackRock",
+   "title": "AI/ML Engineer, Aladdin Data, Associate",
+   "url": "https://careers.blackrock.com/job/mumbai/ai-ml-engineer-aladdin-data-associate/45831/103420773344",
+   "pay_conf": "Strong evidence",
+   "score": 83
+  },
+  {
+   "company": "Qualcomm",
+   "title": "CPU Software Engineer",
+   "url": "https://careers.qualcomm.com/careers/job/446722234783",
+   "pay_conf": "Strong evidence",
+   "score": 83
+  },
+  {
+   "company": "Qualcomm",
+   "title": "CPU - Engineer",
+   "url": "https://careers.qualcomm.com/careers/job/446722024119",
+   "pay_conf": "Strong evidence",
+   "score": 83
+  },
+  {
+   "company": "Citi",
+   "title": "Java Developer",
+   "url": "https://citi.eightfold.ai/careers/job/859038817065",
+   "pay_conf": "Strong evidence",
+   "score": 83
+  },
+  {
+   "company": "Citi",
+   "title": "Java Fullstack with React",
+   "url": "https://citi.eightfold.ai/careers/job/859038495687",
+   "pay_conf": "Strong evidence",
+   "score": 82
+  },
+  {
+   "company": "Nike",
+   "title": "Software Engineer III, ITC",
+   "url": "https://careers.nike.com/zh-tw/software-engineer-iii-itc/job/R-89600",
+   "pay_conf": "Strong evidence",
+   "score": 82
+  },
+  {
+   "company": "Goldman Sachs",
+   "title": "The Core Engineering - NFR & Controls Data Eng - Associate - Hyderabad (Software Engineering)",
+   "url": "https://higher.gs.com/roles/185650",
+   "pay_conf": "Strong evidence",
+   "score": 82
+  },
+  {
+   "company": "Goldman Sachs",
+   "title": "The Core Engineering - NFR & Controls Data Eng - Associate - Bengaluru (Software Engineering)",
+   "url": "https://higher.gs.com/roles/171543",
+   "pay_conf": "Strong evidence",
+   "score": 82
+  },
+  {
+   "company": "Goldman Sachs",
+   "title": "The Core Engineering - KYC Model Eng - Associate - Bengaluru (Software Engineering)",
+   "url": "https://higher.gs.com/roles/177617",
+   "pay_conf": "Strong evidence",
+   "score": 82
+  },
+  {
+   "company": "Expedia Group",
+   "title": "Software Development Engineer II",
+   "url": "https://www.linkedin.com/jobs/view/4492558313/",
+   "pay_conf": "Strong evidence",
+   "score": 81
+  },
+  {
+   "company": "Rippling",
+   "title": "Software Engineer I - FullStack",
+   "url": "https://www.linkedin.com/jobs/view/4485643271/",
+   "pay_conf": "Strong evidence",
+   "score": 80
+  },
+  {
+   "company": "Pure Storage",
+   "title": "Member of Technical Staff, DFS",
+   "url": "https://job-boards.greenhouse.io/purestorage/jobs/8210205",
+   "pay_conf": "Strong evidence",
+   "score": 79
+  },
+  {
+   "company": "Citi",
+   "title": "DB Developer",
+   "url": "https://citi.eightfold.ai/careers/job/859038851060",
+   "pay_conf": "Strong evidence",
+   "score": 79
+  },
+  {
+   "company": "Siemens",
+   "title": "Full Stack Dev (Angular + C#) 3-6 Y",
+   "url": "https://www.linkedin.com/jobs/view/4489585806/",
+   "pay_conf": "Strong evidence",
+   "score": 78
+  },
+  {
+   "company": "Citi",
+   "title": "Application Developer Intermediate Programmer Analyst",
+   "url": "https://citi.eightfold.ai/careers/job/859038862857",
+   "pay_conf": "Strong evidence",
+   "score": 78
+  },
+  {
+   "company": "Razorpay",
+   "title": "Frontend Engineer",
+   "url": "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4731054005",
+   "pay_conf": "Strong evidence",
+   "score": 77
+  },
+  {
+   "company": "Guidewire Software",
+   "title": "Software Engineer II (Java, backend)",
+   "url": "https://www.linkedin.com/jobs/view/4487703704/",
+   "pay_conf": "Strong evidence",
+   "score": 77
+  },
+  {
+   "company": "Cashfree",
+   "title": "Software Development Engineer 1",
+   "url": "https://careers.kula.ai/cashfree/5565-software-development-engineer-1?jobs=true",
+   "pay_conf": "Strong evidence",
+   "score": 76
+  },
+  {
+   "company": "JPMorganChase",
+   "title": "Java Full Stack (Java, ReactJS, AWS, and exposure to AI tools) Software Engineer II",
+   "url": "https://www.linkedin.com/jobs/view/4457019075/",
+   "pay_conf": "Strong evidence",
+   "score": 76
+  },
+  {
+   "company": "Goldman Sachs",
+   "title": "GBM - Public Dept-Bengaluru-Associate-Software Engineering",
+   "url": "https://www.linkedin.com/jobs/view/4486376455/",
+   "pay_conf": "Strong evidence",
+   "score": 76
+  },
+  {
+   "company": "Visa",
+   "title": "SW Engineer (Python, Product Reliability / DB Reliability Eng - 1 to 2 years' exp only)",
+   "url": "https://visa.wd5.myworkdayjobs.com/Visa/job/IN---Bengaluru-India/SW-Engineer--Python--Product-Reliability---DB-Reliability-Eng---1-to-2-years--exp-only-_REF089081W",
+   "pay_conf": "Likely",
+   "score": 76
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Development Engineer - Agentic Data Infrastructure, Partner Data And Analytics",
+   "url": "https://www.amazon.jobs/en/jobs/10602100/software-development-engineer-agentic-data-infrastructure-partner-data-and-analytics",
+   "pay_conf": "Strong evidence",
+   "score": 76
+  },
+  {
+   "company": "Citi",
+   "title": "Java Full Stack Developer",
+   "url": "https://citi.eightfold.ai/careers/job/859038620108",
+   "pay_conf": "Strong evidence",
+   "score": 76
+  },
+  {
+   "company": "Google",
+   "title": "Cloud Web Application Engineer",
+   "url": "https://www.google.com/about/careers/applications/jobs/results/93716158804304582",
+   "pay_conf": "Strong evidence",
+   "score": 75
+  },
+  {
+   "company": "Oracle",
+   "title": "Platform Software Engineer 2",
+   "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/jobsearch/job/350856",
+   "pay_conf": "Strong evidence",
+   "score": 75
+  },
+  {
+   "company": "American Express",
+   "title": "Software Engineer II",
+   "url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26014297",
+   "pay_conf": "Strong evidence",
+   "score": 75
+  },
+  {
+   "company": "SAP",
+   "title": "Developer Associate (SAP Concur Travel Engineering AI & Core team)",
+   "url": "https://jobs.sap.com/en/jobs/744000162254142/developer-associate-sap-concur-travel-engineering-ai-core-team/",
+   "pay_conf": "Likely",
+   "score": 75
+  },
+  {
+   "company": "Siemens",
+   "title": "Software Engineer (C++ / Linux)",
+   "url": "https://www.linkedin.com/jobs/view/4489734448/",
+   "pay_conf": "Strong evidence",
+   "score": 74
+  },
+  {
+   "company": "Citi",
+   "title": "Core Java Backend - Prime Brokerage Technology",
+   "url": "https://citi.eightfold.ai/careers/job/859038766493",
+   "pay_conf": "Strong evidence",
+   "score": 74
+  },
+  {
+   "company": "NetApp",
+   "title": "Software Engineer (Full Stack Developer AI/ML)",
+   "url": "https://careers.netapp.com/job/bengaluru/software-engineer-full-stack-developer-ai-ml/27600/103426369344",
+   "pay_conf": "Strong evidence",
+   "score": 74
+  },
+  {
+   "company": "Siemens EDA (Siemens Digital Industries Software)",
+   "title": "Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4491197690/",
+   "pay_conf": "Strong evidence",
+   "score": 74
+  },
+  {
+   "company": "Pure Storage",
+   "title": "Member of Technical staff, Backend (Product Security)",
+   "url": "https://job-boards.greenhouse.io/purestorage/jobs/8382538",
+   "pay_conf": "Strong evidence",
+   "score": 74
+  },
+  {
+   "company": "Workday",
+   "title": "AI Platforms Engineer",
+   "url": "https://workday.wd5.myworkdayjobs.com/Workday/job/INDPune/AI-Platforms-Engineer_JR-0111017-1",
+   "pay_conf": "Likely",
+   "score": 74
+  },
+  {
+   "company": "Cloudflare",
+   "title": "Systems Engineer (Data Intelligence & Analytics Team)",
+   "url": "https://boards.greenhouse.io/cloudflare/jobs/8022909?gh_jid=8022909",
+   "pay_conf": "Strong evidence",
+   "score": 73
+  },
+  {
+   "company": "apna",
+   "title": "Forward Deployed Engineer (Voice AI / Telephony) - Mumbai",
+   "url": "https://www.linkedin.com/jobs/view/4481698459/",
+   "pay_conf": "Strong evidence",
+   "score": 73
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Development Engineer, Amazon Business India",
+   "url": "https://www.amazon.jobs/en/jobs/10605712/software-development-engineer-amazon-business-india",
+   "pay_conf": "Strong evidence",
+   "score": 73
+  },
+  {
+   "company": "Rubrik",
+   "title": "Software Engineer",
+   "url": "https://www.rubrik.com/company/careers/departments/job.8349847?gh_jid=8349847",
+   "pay_conf": "Strong evidence",
+   "score": 73
+  },
+  {
+   "company": "NetApp",
+   "title": "Software Engineer (Full Stack Developer, Cloud, AI)",
+   "url": "https://careers.netapp.com/job/bengaluru/software-engineer-full-stack-developer-cloud-ai/27600/103426369408",
+   "pay_conf": "Strong evidence",
+   "score": 73
+  },
+  {
+   "company": "Hewlett Packard Enterprise",
+   "title": "Storage AI Engineer",
+   "url": "https://careers.hpe.com/ca/fr/job/1215528/Storage-AI-Engineer",
+   "pay_conf": "Strong evidence",
+   "score": 73
+  },
+  {
+   "company": "Amazon",
+   "title": "SDE II , AWS IoT Fleet Management",
+   "url": "https://www.amazon.jobs/en/jobs/10608894/sde-ii-aws-iot-fleet-management",
+   "pay_conf": "Strong evidence",
+   "score": 73
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Development Engineer II, AWS IoT Fleet Management",
+   "url": "https://www.amazon.jobs/en/jobs/10608895/software-development-engineer-ii-aws-iot-fleet-management",
+   "pay_conf": "Strong evidence",
+   "score": 73
+  },
+  {
+   "company": "PayPal",
+   "title": "Software Engineer, Android",
+   "url": "https://wd1.myworkdaysite.com/recruiting/paypal/jobs/job/Bangalore-Karnataka-India/Software-Engineer--Android_R0138414-1",
+   "pay_conf": "Likely",
+   "score": 73
+  },
+  {
+   "company": "ServiceNow",
+   "title": "Software Engineer",
+   "url": "https://jobs.smartrecruiters.com/ServiceNow/744000162697254-software-engineer",
+   "pay_conf": "Likely",
+   "score": 73
+  },
+  {
+   "company": "Hewlett Packard Enterprise",
+   "title": "System Engineer – Virtualization",
+   "url": "https://careers.hpe.com/us/en/job/1216815/System-Engineer-Virtualization",
+   "pay_conf": "Strong evidence",
+   "score": 73
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Development Engineer, ASA",
+   "url": "https://www.amazon.jobs/en/jobs/10606051/software-development-engineer-asa",
+   "pay_conf": "Strong evidence",
+   "score": 72
+  },
+  {
+   "company": "Apple",
+   "title": "Java Frontend Engineer",
+   "url": "https://jobs.apple.com/en-in/details/200694466/java-frontend-engineer",
+   "pay_conf": "Strong evidence",
+   "score": 72
+  },
+  {
+   "company": "Confluent",
+   "title": "Software Developer - Confluent",
+   "url": "https://careers.ibm.com/careers/JobDetail?jobId=139000",
+   "pay_conf": "Likely",
+   "score": 72
+  },
+  {
+   "company": "PayPal",
+   "title": "Machine Learning Engineer, Fraud (Crypto & Debit Card)",
+   "url": "https://wd1.myworkdaysite.com/recruiting/paypal/jobs/job/Bangalore-Karnataka-India/Machine-Learning-Engineer--Fraud--Crypto---Debit-Card-_R0139149",
+   "pay_conf": "Likely",
+   "score": 72
+  },
+  {
+   "company": "JPMorgan Chase & Co.",
+   "title": "Software Engineer III Java Springboot AWS",
+   "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210800940",
+   "pay_conf": "Strong evidence",
+   "score": 72
+  },
+  {
+   "company": "McAfee",
+   "title": "Golang / Python Platform Engineer",
+   "url": "https://careers.mcafee.com/jobs/1956?lang=en-us",
+   "pay_conf": "Strong evidence",
+   "score": 72
+  },
+  {
+   "company": "Goldman Sachs",
+   "title": "Global Investment Research-Associate-Software Engineering",
+   "url": "https://higher.gs.com/roles/188067",
+   "pay_conf": "Strong evidence",
+   "score": 72
+  },
+  {
+   "company": "Goldman Sachs",
+   "title": "Software Engineer, Global Investment Research, Agentic Systems",
+   "url": "https://higher.gs.com/roles/187976",
+   "pay_conf": "Strong evidence",
+   "score": 72
+  },
+  {
+   "company": "Cloudflare",
+   "title": "Software Engineer",
+   "url": "https://boards.greenhouse.io/cloudflare/jobs/8212060?gh_jid=8212060",
+   "pay_conf": "Strong evidence",
+   "score": 71
+  },
+  {
+   "company": "Goldman Sachs",
+   "title": "The Core Engineering-L2-Hyderabad-Associate-Software Engineering",
+   "url": "https://www.linkedin.com/jobs/view/4489561642/",
+   "pay_conf": "Strong evidence",
+   "score": 71
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Dev Engineer II , Last Mile Delivery Prdct&Tech",
+   "url": "https://www.amazon.jobs/en/jobs/10607545/software-dev-engineer-ii-last-mile-delivery-prdct-tech",
+   "pay_conf": "Strong evidence",
+   "score": 71
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Development Engineer II, Account Compliance Tech",
+   "url": "https://www.amazon.jobs/en/jobs/10608163/software-development-engineer-ii-account-compliance-tech",
+   "pay_conf": "Strong evidence",
+   "score": 71
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Development Engineer II, Sales Abuse Prevention",
+   "url": "https://www.amazon.jobs/en/jobs/10609444/software-development-engineer-ii-sales-abuse-prevention",
+   "pay_conf": "Strong evidence",
+   "score": 71
+  },
+  {
+   "company": "Disney",
+   "title": "Product Software Engineer II",
+   "url": "https://join.disneycareers.com/global/en/job/10151936/Product-Software-Engineer-II",
+   "pay_conf": "Strong evidence",
+   "score": 71
+  },
+  {
+   "company": "Nike",
+   "title": "Software Engineer II, ITC",
+   "url": "https://careers.nike.com/zh-tw/software-engineer-ii-itc/job/R-85403",
+   "pay_conf": "Strong evidence",
+   "score": 71
+  },
+  {
+   "company": "Millennium",
+   "title": "Software Engineer",
+   "url": "https://mlp.eightfold.ai/careers/job/755959103944-software-engineer-bangalore-karnataka-india?domain=mlp.com",
+   "pay_conf": "Strong evidence",
+   "score": 71
+  },
+  {
+   "company": "MongoDB",
+   "title": "Software Engineer 3 - Enterprise Architecture",
+   "url": "https://www.mongodb.com/careers/job/?gh_jid=8221290",
+   "pay_conf": "Likely",
+   "score": 70
+  },
+  {
+   "company": "Caterpillar",
+   "title": "Software Engineer- Performance Engineering",
+   "url": "https://cat.wd5.myworkdayjobs.com/CaterpillarCareers/job/Chennai-Tamil-Nadu/Software-Engineer--Performance-Engineering_R0000376755",
+   "pay_conf": "Strong evidence",
+   "score": 70
+  },
+  {
+   "company": "Hewlett Packard Enterprise",
+   "title": "Fullstack Developer",
+   "url": "https://www.linkedin.com/jobs/view/4490604584/",
+   "pay_conf": "Strong evidence",
+   "score": 70
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Development Engineer II, Edge Intelli",
+   "url": "https://www.amazon.jobs/en/jobs/10607819/software-development-engineer-ii-edge-intelli",
+   "pay_conf": "Strong evidence",
+   "score": 70
+  },
+  {
+   "company": "Arm",
+   "title": "Functional Safety Engineer- Tools & AI",
+   "url": "https://careers.arm.com/job/bengaluru/functional-safety-engineer-tools-and-ai/33099/103454416960",
+   "pay_conf": "Strong evidence",
+   "score": 70
+  },
+  {
+   "company": "Urban Company",
+   "title": "Software Development Engineer – II",
+   "url": "https://www.linkedin.com/jobs/view/4491324431/",
+   "pay_conf": "Likely",
+   "score": 70
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Development Engineer II, FAI Asset Creation Technology (FACT)",
+   "url": "https://www.amazon.jobs/en/jobs/10609505/software-development-engineer-ii-fai-asset-creation-technology-fact",
+   "pay_conf": "Strong evidence",
+   "score": 70
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Development Engineer II, Alexa 3P Experiences, Alexa 3P Experiences",
+   "url": "https://www.amazon.jobs/en/jobs/10603415/software-development-engineer-ii-alexa-3p-experiences-alexa-3p-experiences",
+   "pay_conf": "Strong evidence",
+   "score": 70
+  },
+  {
+   "company": "BlackRock",
+   "title": "Python Developer (Securities Lending), BlackRock Global Markets, Associate",
+   "url": "https://careers.blackrock.com/job/gurgaon/python-developer-securities-lending-blackrock-global-markets-associate/45831/103520748448",
+   "pay_conf": "Strong evidence",
+   "score": 70
+  },
+  {
+   "company": "Cargill",
+   "title": "Platform Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4423698099/",
+   "pay_conf": "Strong evidence",
+   "score": 69
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Development Engineer, Trust Sensitive & Content Intelligence",
+   "url": "https://www.amazon.jobs/en/jobs/10592583/software-development-engineer-trust-sensitive-content-intelligence",
+   "pay_conf": "Strong evidence",
+   "score": 69
+  },
+  {
+   "company": "JPMorgan Chase & Co.",
+   "title": "Analyst - Python Developer",
+   "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210784897",
+   "pay_conf": "Strong evidence",
+   "score": 69
+  },
+  {
+   "company": "Hevo Data",
+   "title": "Associate SDE",
+   "url": "https://jobs.lever.co/hevodata/4eccaf98-ba19-42ea-b040-e0976d4dadfe",
+   "pay_conf": "Likely",
+   "score": 69
+  },
+  {
+   "company": "LSEG",
+   "title": "Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4475462628/",
+   "pay_conf": "Strong evidence",
+   "score": 69
+  },
+  {
+   "company": "Ericsson",
+   "title": "AI Product Engineer",
+   "url": "https://jobs.ericsson.com/careers/job/563121777619023",
+   "pay_conf": "Strong evidence",
+   "score": 69
+  },
+  {
+   "company": "Cashfree",
+   "title": "Software Development Engineer Infra 2",
+   "url": "https://careers.kula.ai/cashfree/37894-software-development-engineer-infra-2?jobs=true",
+   "pay_conf": "Strong evidence",
+   "score": 68
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Development Engineer II, Alexa Endpoint Experiences, Alexa Devices",
+   "url": "https://www.linkedin.com/jobs/view/4462829040/",
+   "pay_conf": "Strong evidence",
+   "score": 68
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Dev Engineer II, Paragon Workbench",
+   "url": "https://www.linkedin.com/jobs/view/4463779884/",
+   "pay_conf": "Strong evidence",
+   "score": 68
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Development Engineer II, Digital Acceleration",
+   "url": "https://www.linkedin.com/jobs/view/4455795149/",
+   "pay_conf": "Strong evidence",
+   "score": 68
+  },
+  {
+   "company": "JPMorgan Chase & Co.",
+   "title": "Software Engineer III - SQL, Python, Databricks, BI/Reporting, AWS",
+   "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210806725",
+   "pay_conf": "Strong evidence",
+   "score": 68
+  },
+  {
+   "company": "Khatabook",
+   "title": "Android Developer - II",
+   "url": "https://khatabook.turbohire.co/job/publicjobs/4314b8e4-47ff-4997-b55d-2f38a9e0a474?utm_source=CareerPage",
+   "pay_conf": "Strong evidence",
+   "score": 68
+  },
+  {
+   "company": "Innovaccer",
+   "title": "4697- Software Development Engineer-II Backend",
+   "url": "https://www.linkedin.com/jobs/view/4478763907/",
+   "pay_conf": "Strong evidence",
+   "score": 67
+  },
+  {
+   "company": "LSEG",
+   "title": "Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4481352361/",
+   "pay_conf": "Strong evidence",
+   "score": 67
+  },
+  {
+   "company": "Trimble",
+   "title": "Software Engineer II",
+   "url": "https://trimble.wd1.myworkdayjobs.com/TrimbleCareers/job/India---Chennai/Software-Engineer-II_R56695-1",
+   "pay_conf": "Strong evidence",
+   "score": 67
+  },
+  {
+   "company": "Citi",
+   "title": "Apps Dev Intmd Programmer Analyst - C11 - PUNE",
+   "url": "https://citi.eightfold.ai/careers/job/859038900356",
+   "pay_conf": "Strong evidence",
+   "score": 67
+  },
+  {
+   "company": "JPMorgan Chase & Co.",
+   "title": "Software Engineer III",
+   "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210810738",
+   "pay_conf": "Strong evidence",
+   "score": 67
+  },
+  {
+   "company": "Postman",
+   "title": "Software Engineer (Backend), Automation Testing",
+   "url": "https://postman.wd108.myworkdayjobs.com/careers/job/Bangalore-India/Software-Engineer--Backend---Automation-Testing_JR1000061",
+   "pay_conf": "Strong evidence",
+   "score": 66
+  },
+  {
+   "company": "Urban Company",
+   "title": "SDE - II - Growth",
+   "url": "https://www.linkedin.com/jobs/view/4487166859/",
+   "pay_conf": "Likely",
+   "score": 66
+  },
+  {
+   "company": "Caterpillar",
+   "title": "Software Engineer",
+   "url": "https://cat.wd5.myworkdayjobs.com/CaterpillarCareers/job/Chennai-Tamil-Nadu/Software-Engineer_R0000383550",
+   "pay_conf": "Strong evidence",
+   "score": 66
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Engineer, Cross Border Science and Analytics",
+   "url": "https://www.amazon.jobs/en/jobs/10525236/software-engineer-cross-border-science-and-analytics",
+   "pay_conf": "Strong evidence",
+   "score": 65
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Development Engineer, FinTech General Ledger",
+   "url": "https://www.linkedin.com/jobs/view/4455782992/",
+   "pay_conf": "Strong evidence",
+   "score": 65
+  },
+  {
+   "company": "JPMorganChase",
+   "title": "Software Engineer III - (Java, AWS)",
+   "url": "https://www.linkedin.com/jobs/view/4484094709/",
+   "pay_conf": "Strong evidence",
+   "score": 64
+  },
+  {
+   "company": "Juniper Networks",
+   "title": "System Engineer – Virtualization",
+   "url": "https://hpe.wd5.myworkdayjobs.com/Jobsathpe/job/Bengaluru-Karntaka-India/System-Engineer---Virtualization_1216815-2",
+   "pay_conf": "Likely",
+   "score": 64
+  },
+  {
+   "company": "Yubi",
+   "title": "ML Engineer",
+   "url": "https://go-yubi.zohorecruit.in/jobs/Careers/66789000016612888",
+   "pay_conf": "Strong evidence",
+   "score": 64
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Development Engineer II, Grocery In-store",
+   "url": "https://www.linkedin.com/jobs/view/4476703916/",
+   "pay_conf": "Strong evidence",
+   "score": 63
+  },
+  {
+   "company": "Amazon",
+   "title": "Software Development Engineer II, Alexa Excellence",
+   "url": "https://www.linkedin.com/jobs/view/4484765597/",
+   "pay_conf": "Strong evidence",
+   "score": 62
+  },
+  {
+   "company": "Snowflake",
+   "title": "Forward Deployed Engineer, Frontier Engineering",
+   "url": "https://jobs.ashbyhq.com/snowflake/a276eb40-644b-4384-9d9a-bae1c263baa6",
+   "pay_conf": "Likely",
+   "score": 62
+  },
+  {
+   "company": "Moneyview",
+   "title": "Mobile Application Developer",
+   "url": "https://www.linkedin.com/jobs/view/4483597297/",
+   "pay_conf": "Strong evidence",
+   "score": 61
+  },
+  {
+   "company": "Qualcomm",
+   "title": "Memory CAD Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4475443379/",
+   "pay_conf": "Strong evidence",
+   "score": 61
+  },
+  {
+   "company": "Sarvam AI",
+   "title": "SDE2 - Full Stack",
+   "url": "https://jobs.ashbyhq.com/sarvam/fa96b55d-0c77-423d-8eef-f579c8496adb",
+   "pay_conf": "Likely",
+   "score": 61
+  },
+  {
+   "company": "APT Portfolio",
+   "title": "Python Developer/ Senior Python Developer",
+   "url": "https://job-boards.greenhouse.io/aptportfolio/jobs/6395093002",
+   "pay_conf": "Likely",
+   "score": 60
+  },
+  {
+   "company": "Groww",
+   "title": "Android Developer -2",
+   "url": "https://www.linkedin.com/jobs/view/4490269740/",
+   "pay_conf": "Likely",
+   "score": 58
+  },
+  {
+   "company": "Addepar",
+   "title": "Software Engineer - ADM",
+   "url": "https://job-boards.greenhouse.io/addepar1/jobs/8799881002",
+   "pay_conf": "Likely",
+   "score": 57
+  },
+  {
+   "company": "Meta",
+   "title": "Full Stack Engineer, WhatsApp",
+   "url": "https://www.metacareers.com/profile/job_details/1132443246177105/",
+   "pay_conf": "Likely",
+   "score": 57
+  },
+  {
+   "company": "Booking.com",
+   "title": "Platform Engineer II",
+   "url": "https://jobs.booking.com/jobs/30642?lang=en-us",
+   "pay_conf": "Likely",
+   "score": 56
+  },
+  {
+   "company": "Optiv",
+   "title": "Engineer - SOAR | On-Site, Bangalore.",
+   "url": "https://www.linkedin.com/jobs/view/4469151115/",
+   "pay_conf": "Likely",
+   "score": 56
+  },
+  {
+   "company": "iRage",
+   "title": "Desktop and Data Center Engineer",
+   "url": "https://irage.in/job_descriptions.php?jd_id=25",
+   "pay_conf": "Likely",
+   "score": 54
+  },
+  {
+   "company": "Qualys",
+   "title": "Software Engineer",
+   "url": "https://qualys.wd5.myworkdayjobs.com/Careers/job/Pune/Software-Engineer_R0005296",
+   "pay_conf": "Unverified",
+   "score": 57
+  },
+  {
+   "company": "Qualys",
+   "title": "Software Engineer",
+   "url": "https://qualys.wd5.myworkdayjobs.com/Careers/job/Pune/Software-Engineer_R0005297",
+   "pay_conf": "Unverified",
+   "score": 57
+  },
+  {
+   "company": "Qualys",
+   "title": "Software Engineer",
+   "url": "https://qualys.wd5.myworkdayjobs.com/Careers/job/Pune/Software-Engineer_R0005294",
+   "pay_conf": "Unverified",
+   "score": 57
+  },
+  {
+   "company": "Qualys",
+   "title": "Software Engineer",
+   "url": "https://qualys.wd5.myworkdayjobs.com/Careers/job/Pune/Software-Engineer_R0005295",
+   "pay_conf": "Unverified",
+   "score": 57
+  },
+  {
+   "company": "Amagi",
+   "title": "Software Development Engineer II - AgentHelix",
+   "url": "https://www.amagi.com/job-description?src%3Dcareers%26p%3DeyJwYWdlVHlwZSI6ImpkIiwiY3ZTb3VyY2UiOiJjYXJlZXJzIiwicmVxSWQiOjQzMCwicmVxdWVzdGVyIjp7ImlkIjoiIiwiY29kZSI6IiIsIm5hbWUiOiIifSwicGFnZSI6ImNhcmVlcnMiLCJidWZpbHRlciI6LTEsImN1c3RvbUZpZWxkcyI6e319",
+   "pay_conf": "Unverified",
+   "score": 53
+  },
+  {
+   "company": "Nat Habit",
+   "title": "Backend Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4492013011/",
+   "pay_conf": "Unverified",
+   "score": 52
+  },
+  {
+   "company": "athenahealth",
+   "title": "Member of Technical Staff- Backend",
+   "url": "https://www.linkedin.com/jobs/view/4490691416/",
+   "pay_conf": "Unverified",
+   "score": 52
+  },
+  {
+   "company": "Astranova Mobility",
+   "title": "Full Stack Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4490199339/",
+   "pay_conf": "Unverified",
+   "score": 52
+  },
+  {
+   "company": "Vanguard",
+   "title": "Application Engineer - I",
+   "url": "https://www.linkedin.com/jobs/view/4492046958/",
+   "pay_conf": "Unverified",
+   "score": 52
+  },
+  {
+   "company": "Vanguard India",
+   "title": "Application Engineer - I",
+   "url": "https://www.linkedin.com/jobs/view/4491834475/",
+   "pay_conf": "Unverified",
+   "score": 52
+  },
+  {
+   "company": "Ariqt Global Technologies",
+   "title": "Java Full Stack Developer",
+   "url": "https://www.linkedin.com/jobs/view/4492532835/",
+   "pay_conf": "Unverified",
+   "score": 52
+  },
+  {
+   "company": "Synchrony",
+   "title": "Analyst, Analytics - Data Quality Developer",
+   "url": "https://www.synchronycareers.com/job/hyderabad/analyst-analytics-data-quality-developer/49398/101930451840",
+   "pay_conf": "Unverified",
+   "score": 51
+  },
+  {
+   "company": "Air Arabia",
+   "title": "Software Engineer",
+   "url": "https://www.airarabiagroupcareers.com/gb/en/job/18122/Software-Engineer",
+   "pay_conf": "Unverified",
+   "score": 51
+  },
+  {
+   "company": "Foodhub",
+   "title": "Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4491793800/",
+   "pay_conf": "Unverified",
+   "score": 51
+  },
+  {
+   "company": "Air Arabia",
+   "title": "Crew Optimization Developer-Hyderabad",
+   "url": "https://www.airarabiagroupcareers.com/gb/en/job/18267/Crew-Optimization-Developer-Hyderabad",
+   "pay_conf": "Unverified",
+   "score": 50
+  },
+  {
+   "company": "Air Arabia",
+   "title": "Crew Optimization Developer - Ahmedabad",
+   "url": "https://www.airarabiagroupcareers.com/gb/en/job/18263/Crew-Optimization-Developer-Ahmedabad",
+   "pay_conf": "Unverified",
+   "score": 50
+  },
+  {
+   "company": "Air Arabia",
+   "title": "Crew Optimization Developer",
+   "url": "https://www.airarabiagroupcareers.com/sa/ar/job/18265/Crew-Optimization-Developer",
+   "pay_conf": "Unverified",
+   "score": 50
+  },
+  {
+   "company": "RedSeal, Inc.",
+   "title": "Software Engineer II, Backend",
+   "url": "https://www.linkedin.com/jobs/view/4491492883/",
+   "pay_conf": "Unverified",
+   "score": 50
+  },
+  {
+   "company": "Ford Motor Company",
+   "title": "Java Full Stack Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4492003808/",
+   "pay_conf": "Unverified",
+   "score": 50
+  },
+  {
+   "company": "MUFG Pension & Market Services",
+   "title": "Associate Developer, JAVA",
+   "url": "https://www.linkedin.com/jobs/view/4491364869/",
+   "pay_conf": "Unverified",
+   "score": 50
+  },
+  {
+   "company": "TurboHire",
+   "title": "Software Developer I",
+   "url": "https://www.linkedin.com/jobs/view/4489786373/",
+   "pay_conf": "Unverified",
+   "score": 50
+  },
+  {
+   "company": "Refold AI",
+   "title": "Forward Deployed Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4492458568/",
+   "pay_conf": "Unverified",
+   "score": 50
+  },
+  {
+   "company": "Resideo",
+   "title": "Software Engineer II",
+   "url": "https://www.linkedin.com/jobs/view/4484612587/",
+   "pay_conf": "Unverified",
+   "score": 50
+  },
+  {
+   "company": "V2 Retail Ltd",
+   "title": "Python Developer",
+   "url": "https://www.linkedin.com/jobs/view/4492573591/",
+   "pay_conf": "Unverified",
+   "score": 49
+  },
+  {
+   "company": "CDK Global",
+   "title": "Assoc Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4492968597/",
+   "pay_conf": "Unverified",
+   "score": 49
+  },
+  {
+   "company": "iThink Digital",
+   "title": "Junior Backend Developer",
+   "url": "https://www.linkedin.com/jobs/view/4491377928/",
+   "pay_conf": "Unverified",
+   "score": 49
+  },
+  {
+   "company": "The Citco Group Limited",
+   "title": "IT.Developer",
+   "url": "https://www.linkedin.com/jobs/view/4488249368/",
+   "pay_conf": "Unverified",
+   "score": 49
+  },
+  {
+   "company": "AiLogic Neural Network Pvt Ltd",
+   "title": "Node.js Backend Developer",
+   "url": "https://www.linkedin.com/jobs/view/4491500085/",
+   "pay_conf": "Unverified",
+   "score": 49
+  },
+  {
+   "company": "Vahan.ai",
+   "title": "Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4492007079/",
+   "pay_conf": "Unverified",
+   "score": 49
+  },
+  {
+   "company": "Parspec",
+   "title": "Software Engineer - 1 (Backend)",
+   "url": "https://www.linkedin.com/jobs/view/4491702018/",
+   "pay_conf": "Unverified",
+   "score": 49
+  },
+  {
+   "company": "Cornerstone OnDemand",
+   "title": "Forward Deployment Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4492441012/",
+   "pay_conf": "Unverified",
+   "score": 49
+  },
+  {
+   "company": "CertifyOS",
+   "title": "AI & Support Automation - Engineer",
+   "url": "https://jobs.ashbyhq.com/certifyos/4f4e27fb-b4c0-4b86-8783-3bcf14928a1a",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "Anaplan",
+   "title": "Engineer II, Infrastructure",
+   "url": "https://job-boards.greenhouse.io/anaplan/jobs/8926294002",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "Sathya Educare Competency Trust",
+   "title": "Software Engineer (Full-Stack Development & IT Support)",
+   "url": "https://www.linkedin.com/jobs/view/4490839722/",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "Transak C-Corp",
+   "title": "Software Engineer, Backend: Multiple Levels (SDE 1 – EM)",
+   "url": "https://www.linkedin.com/jobs/view/4490667012/",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "Navera Ventures Pvt. Ltd.",
+   "title": "Forward Deployed Engineer, Retail and Commerce",
+   "url": "https://www.linkedin.com/jobs/view/4491808654/",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "Mobility Global",
+   "title": "Associate Software Engineer (React+Java)",
+   "url": "https://www.linkedin.com/jobs/view/4452582848/",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "Global Payments Inc.",
+   "title": "Associate Software Engineer",
+   "url": "https://tsys.wd1.myworkdayjobs.com/TSYS/job/PUNE--INDIA/Associate-Software-Engineer_R0077227",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "Maximl",
+   "title": "Junior ML Engineer (Computer Vision)",
+   "url": "https://maximl.zohorecruit.in/jobs/Careers/65263000006394057",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "Bajaj Finserv",
+   "title": "Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4485914223/",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "Bajaj Finserv",
+   "title": "Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4485915198/",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "Bajaj Finserv",
+   "title": "Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4485900551/",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "Teladoc Health",
+   "title": "Software Engineer III - India Hyderabad Hybrid",
+   "url": "https://www.linkedin.com/jobs/view/4479574059/",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "Quanteon Solutions",
+   "title": "Software Engineer (React Native + AI)",
+   "url": "https://www.linkedin.com/jobs/view/4490465246/",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "Wadhwani AI Global",
+   "title": "Associate Full Stack Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4491862392/",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "Algohire Technologies Private Limited",
+   "title": "Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4388903725/",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "Joblet-AI",
+   "title": "Fullstack Software Engineer (Remote)",
+   "url": "https://www.linkedin.com/jobs/view/4492104887/",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "Arise TechGlobal",
+   "title": "Junior Software Engineer / Developer",
+   "url": "https://www.linkedin.com/jobs/view/4490898706/",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "Moody's",
+   "title": "Financial Engineer",
+   "url": "https://careers.moodys.com/en/job/gurugram/financial-engineer/49841/100120026272",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "Teleradiology Solutions",
+   "title": "Junior AI Engineer",
+   "url": "https://telradsol.zohorecruit.in/jobs/Careers/102249000007241027",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "Teleradiology Solutions",
+   "title": "Junior AI Engineer – Applied AI (Non-Clinical)",
+   "url": "https://telradsol.zohorecruit.in/jobs/Careers/102249000007241014",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "JioSaavn",
+   "title": "Back End Developer",
+   "url": "https://www.linkedin.com/jobs/view/4491491862/",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "Bytebeam",
+   "title": "Backend Engineer (SDE 1)",
+   "url": "https://www.linkedin.com/jobs/view/4491611372/",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "Deltek",
+   "title": "Associate Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4492936960/",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "SkillsNCR",
+   "title": "Junior Full-Stack Developer",
+   "url": "https://www.linkedin.com/jobs/view/4491162784/",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "Recrew AI",
+   "title": "Software Development Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4491500535/",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "MergerDomo",
+   "title": "Full Stack Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4490865570/",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "Osheeva",
+   "title": "Junior Software Developer",
+   "url": "https://www.linkedin.com/jobs/view/4492153724/",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "Dexcom",
+   "title": "SW Development Engineer 1",
+   "url": "https://www.linkedin.com/jobs/view/4492918236/",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "EnglishYaari: English For Professionals",
+   "title": "Back End Developer",
+   "url": "https://www.linkedin.com/jobs/view/4490238935/",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "Deltek",
+   "title": "Associate Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4492954113/",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "Vanyar",
+   "title": "Palantir Applied Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4492135465/",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "Truveta",
+   "title": "Software Engineer – Infrastructure Services",
+   "url": "https://www.linkedin.com/jobs/view/4437604230/",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "Stable Money",
+   "title": "AI Product Builder",
+   "url": "https://jobs.lever.co/stable-money1/137a91f9-d910-4d9d-8f42-6bf7a5aa6c86",
+   "pay_conf": "Unverified",
+   "score": 45
+  },
+  {
+   "company": "DHL",
+   "title": "Software Engineer - AI Platform",
+   "url": "https://careers.dhl.com/apac/en/job/DPDHGLOBALAV389295ENAPACEXTERNAL/Software-Engineer-AI-Platform",
+   "pay_conf": "Unverified",
+   "score": 45
+  },
+  {
+   "company": "Wadhwani AI",
+   "title": "Software Development Engineer - I",
+   "url": "https://wadhwaniai.zohorecruit.in/jobs/Careers/146520000006894001",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "NikahForever",
+   "title": "Software Development Engineer 1",
+   "url": "https://www.linkedin.com/jobs/view/4491816896/",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "Prudent Corporate Advisory Services Ltd.",
+   "title": "Dotnet Developer",
+   "url": "https://www.linkedin.com/jobs/view/4492295117/",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "FM",
+   "title": "Appl Developer Analyst - AcrGIS Administration [T500-30566]",
+   "url": "https://www.linkedin.com/jobs/view/4486135842/",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "DHL",
+   "title": "AI Software Engineer",
+   "url": "https://careers.dhl.com/apac/en/job/DPDHGLOBALAV392225ENAPACEXTERNAL/AI-Software-Engineer",
+   "pay_conf": "Unverified",
+   "score": 42
+  },
+  {
+   "company": "IRIS Business Services Limited",
+   "title": "Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4489852491/",
+   "pay_conf": "Unverified",
+   "score": 42
+  },
+  {
+   "company": "Duck Creek Technologies",
+   "title": "Associate Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4483427932/",
+   "pay_conf": "Unverified",
+   "score": 42
+  },
+  {
+   "company": "Global Payments Inc.",
+   "title": "Software Engineer",
+   "url": "https://tsys.wd1.myworkdayjobs.com/TSYS/job/PUNE--INDIA/Software-Engineer_R0076663-1",
+   "pay_conf": "Unverified",
+   "score": 42
+  },
+  {
+   "company": "Thales",
+   "title": "Software engineer",
+   "url": "https://www.linkedin.com/jobs/view/4488123096/",
+   "pay_conf": "Unverified",
+   "score": 41
+  },
+  {
+   "company": "GE Vernova",
+   "title": "Software Engineering Specialist",
+   "url": "https://gevernova.wd5.myworkdayjobs.com/Vernova_ExternalSite/job/Hyderabad-TS-IN-26/Software-Engineering-Specialist_R5054322",
+   "pay_conf": "Unverified",
+   "score": 40
+  },
+  {
+   "company": "Moody's",
+   "title": "Software Engineer",
+   "url": "https://careers.moodys.com/en/job/bengaluru/software-engineer/49841/97729536016",
+   "pay_conf": "Unverified",
+   "score": 40
+  },
+  {
+   "company": "DHL",
+   "title": "Software Engineer",
+   "url": "https://careers.dhl.com/apac/en/job/DPDHGLOBALAV389706ENAPACEXTERNAL/Software-Engineer",
+   "pay_conf": "Unverified",
+   "score": 40
+  },
+  {
+   "company": "Endava",
+   "title": "Full Stack Java Developer",
+   "url": "https://www.linkedin.com/jobs/view/4492569201/",
+   "pay_conf": "Unverified",
+   "score": 40
+  },
+  {
+   "company": "Duck Creek Technologies",
+   "title": "Software Engineer II - PL/SQL Developer",
+   "url": "https://www.linkedin.com/jobs/view/4490466538/",
+   "pay_conf": "Unverified",
+   "score": 40
+  },
+  {
+   "company": "Bridgestone Americas",
+   "title": "Java Backend Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4463044174/",
+   "pay_conf": "Unverified",
+   "score": 39
+  },
+  {
+   "company": "Pearson",
+   "title": "Software Engineer II",
+   "url": "https://www.linkedin.com/jobs/view/4492511618/",
+   "pay_conf": "Unverified",
+   "score": 39
+  },
+  {
+   "company": "Vanguard",
+   "title": "Application Engineer - II Data - ESG/Reference GIFS",
+   "url": "https://www.linkedin.com/jobs/view/4486893948/",
+   "pay_conf": "Unverified",
+   "score": 39
+  },
+  {
+   "company": "Vanguard India",
+   "title": "Application Engineer - II Data - ESG/Reference GIFS",
+   "url": "https://www.linkedin.com/jobs/view/4486041532/",
+   "pay_conf": "Unverified",
+   "score": 39
+  },
+  {
+   "company": "DHL",
+   "title": "Data Engineer & Analyst – Data Pipelines & Analytics (Backend)",
+   "url": "https://careers.dhl.com/apac/en/job/DPDHGLOBALAV378103ENAPACEXTERNAL/Data-Engineer-Analyst-Data-Pipelines-Analytics-Backend",
+   "pay_conf": "Unverified",
+   "score": 38
+  },
+  {
+   "company": "Acquarius Capstorm Limited",
+   "title": "Mid-Level Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4487624964/",
+   "pay_conf": "Unverified",
+   "score": 38
+  },
+  {
+   "company": "RedSeal, Inc.",
+   "title": "Software Engineer III, Backend",
+   "url": "https://www.linkedin.com/jobs/view/4490912049/",
+   "pay_conf": "Unverified",
+   "score": 38
+  },
+  {
+   "company": "Flight Centre Travel Group",
+   "title": "Software Engineer (Full-Stack)",
+   "url": "https://careers.fctgcareers.com/en/job/531279/software-engineer-fullstack",
+   "pay_conf": "Unverified",
+   "score": 37
+  },
+  {
+   "company": "DHL",
+   "title": "Software Engineer",
+   "url": "https://careers.dhl.com/apac/en/job/DPDHGLOBALAV388663ENAPACEXTERNAL/Software-Engineer",
+   "pay_conf": "Unverified",
+   "score": 37
+  },
+  {
+   "company": "Ford Motor Company",
+   "title": "Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4492741502/",
+   "pay_conf": "Unverified",
+   "score": 37
+  },
+  {
+   "company": "Mactores",
+   "title": "Mactores - Generative AI Forward Deployed Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4490540839/",
+   "pay_conf": "Unverified",
+   "score": 37
+  },
+  {
+   "company": "The ePlane Company",
+   "title": "Machine Learning Engineer - Engineering Models",
+   "url": "https://eplane.zohorecruit.in/jobs/Careers/211173000008089459",
+   "pay_conf": "Unverified",
+   "score": 36
+  },
+  {
+   "company": "Everpure",
+   "title": "Member of Technical Staff, Flash Array (Files)",
+   "url": "https://www.linkedin.com/jobs/view/4489086817/",
+   "pay_conf": "Unverified",
+   "score": 36
+  },
+  {
+   "company": "Boardapp",
+   "title": "Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4490477587/",
+   "pay_conf": "Unverified",
+   "score": 36
+  },
+  {
+   "company": "Daimler Truck Innovation Center India (DTICI)",
+   "title": "AI Augmented - Full Stack Developer BSA",
+   "url": "https://www.linkedin.com/jobs/view/4492571407/",
+   "pay_conf": "Unverified",
+   "score": 36
+  },
+  {
+   "company": "The Depository Trust & Clearing Corporation (DTCC)",
+   "title": "Software Engineer (Java with Snowflake)",
+   "url": "https://www.linkedin.com/jobs/view/4465652055/",
+   "pay_conf": "Unverified",
+   "score": 36
+  },
+  {
+   "company": "NRG Foods Pvt.Ltd.",
+   "title": "Jr Software Developer",
+   "url": "https://www.linkedin.com/jobs/view/4490437898/",
+   "pay_conf": "Unverified",
+   "score": 35
+  },
+  {
+   "company": "IOURING Private limited",
+   "title": "Software Engineer",
+   "url": "https://www.linkedin.com/jobs/view/4490994059/",
+   "pay_conf": "Unverified",
+   "score": 35
+  },
+  {
+   "company": "Binated",
+   "title": "Full Stack Developer",
+   "url": "https://www.linkedin.com/jobs/view/4491813155/",
+   "pay_conf": "Unverified",
+   "score": 35
+  },
+  {
+   "company": "Deutsche Bank",
+   "title": "Full Stack Developer, AS",
+   "url": "https://db.wd3.myworkdayjobs.com/DBWebsite/job/do-not-use-Bangalore-Velankani-Tech-Park/Full-Stack-Developer--AS_R0449355",
+   "pay_conf": "Unverified",
+   "score": 34
+  },
+  {
+   "company": "Appen",
+   "title": "Applied AI Research Engineer",
+   "url": "https://jobs.lever.co/appen-2/cf26dee7-d6ec-4e86-acaf-f481eace21e2",
+   "pay_conf": "Unverified",
+   "score": 34
+  },
+  {
+   "company": "DHL",
+   "title": "Associate Software Engineer",
+   "url": "https://careers.dhl.com/apac/en/job/DPDHGLOBALAV343941ENAPACEXTERNAL/Associate-Software-Engineer",
+   "pay_conf": "Unverified",
+   "score": 34
+  },
+  {
+   "company": "Webito",
+   "title": "Jr. Full Stack Laravel Developer",
+   "url": "https://www.linkedin.com/jobs/view/4480650316/",
+   "pay_conf": "Unverified",
+   "score": 30
+  }
+ ]
+}
