@@ -137,7 +137,7 @@
    "type": "",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "",
+   "pay_note": "IBEE Cloud (ibee.ai) builds its own cloud platform; no salary data found (checked 21 Nov 2026)",
    "found_by": "research agent (batch B)"
   },
   {
@@ -192,7 +192,7 @@
    "type": "Lightspeed-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "No Levels.fyi India data; only a job-board estimate 6–12 LPA (not company-disclosed) (checked 21 Nov 2026)",
    "found_by": "new bamboohr reader"
   },
   {
@@ -235,8 +235,8 @@
    "slug": "winzogames",
    "type": "Indian product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE overall median TC 47.4 LPA (no level split); AmbitionBox SDE fresher estimate 19.8-25.3 LPA (checked 21 Nov 2026)",
    "found_by": "new recruiterbox reader"
   },
   {
@@ -276,8 +276,8 @@
    "location": "Gurugram, India",
    "type": "",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "",
+   "pay": "below",
+   "pay_note": "AmbitionBox Software Developer 5.5–7.5 LPA (1–3 yrs), Full Stack Developer 7.1–9 LPA (checked 21 Nov 2026)",
    "found_by": "research agent (batch A)"
   },
   {
@@ -338,8 +338,8 @@
    "list_path": "/jobs/Careers",
    "type": "",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "",
+   "pay": "below",
+   "pay_note": "AmbitionBox SE 6.5–14 LPA (2–4 yrs, 13 salaries), fresher SE avg 7.4 LPA (checked 21 Nov 2026)",
    "found_by": "research agent (batch C)"
   },
   {
@@ -438,8 +438,8 @@
    "site": "mizuhoamericas",
    "type": "",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "",
+   "pay": "below",
+   "pay_note": "AmbitionBox Mizuho Global Services Senior SE 11.7–15 LPA (7–9 yrs, estimate), company-wide 12.6–16.1 LPA; no Levels.fyi India data (checked 21 Nov 2026)",
    "found_by": "E1 triage (rendered page + one hop)"
   },
   {
@@ -558,7 +558,7 @@
    "type": "",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "",
+   "pay_note": "No India salary data for Diagrid (Dapr company) on Levels.fyi/AmbitionBox (checked 21 Nov 2026)",
    "found_by": "discovery cache (board found, never added)"
   },
   {
@@ -568,7 +568,7 @@
    "type": "",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "",
+   "pay_note": "No MEDFAR pay data on Levels.fyi, AmbitionBox or Glassdoor; role is in Visakhapatnam (checked 21 Nov 2026)",
    "found_by": "discovery cache (board found, never added)"
   },
   {
@@ -773,7 +773,7 @@
    "type": "",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "",
+   "pay_note": "Levels.fyi no India data; AmbitionBox Flight Centre India page shows only Technical Lead 54.6-60.4 LPA, no SE figure (checked 21 Nov 2026)",
    "found_by": "paginated readers (Avature, XML feed)"
   },
   {
@@ -2342,7 +2342,7 @@
    "type": "SaaS",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "AmbitionBox SDE-1 8.7–24.8 LPA (5 salaries), SE 7.4–18 LPA (0–2 yrs, 2024); Levels.fyi SE India median TC 27.3 LPA all levels (checked 21 Nov 2026)"
   },
   {
    "name": "Arista Networks",
@@ -2476,8 +2476,8 @@
    "slug": "continental",
    "type": "Global product",
    "quality": 8,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "Levels.fyi India Software Engineer median TC 10.5 LPA, Associate SE 7.2 LPA, Senior SE 20.7 LPA (checked 21 Nov 2026)"
   },
   {
    "name": "Gainsight",
@@ -2543,15 +2543,6 @@
    "pay_note": "Bands vary"
   },
   {
-   "name": "Upstox",
-   "ats": "smartrecruiters",
-   "slug": "upstox",
-   "type": "Indian fintech",
-   "quality": 10,
-   "pay": "likely",
-   "pay_note": "SDE bands around 20+"
-  },
-  {
    "name": "Turtlemint",
    "ats": "smartrecruiters",
    "slug": "turtlemint",
@@ -2611,7 +2602,7 @@
    "type": "Product company",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "No OpenFX salary data; Greenhouse postings say 'competitive salary + equity' only (checked 21 Nov 2026)",
    "slug": "openfx"
   },
   {
@@ -2620,7 +2611,7 @@
    "type": "Product company",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "AmbitionBox Software Developer 3.6–4.6 LPA vs Senior SE 47.5–52.5 LPA (1 salary each, low confidence); no entry SE figure (checked 21 Nov 2026)",
    "slug": "certifyos"
   },
   {
@@ -2908,7 +2899,7 @@
    "type": "Nexus-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "No salary data; Product Engineer (3+ yrs, Bengaluru) postings say only 'salary + meaningful equity'; $9M Series A (checked 21 Nov 2026)"
   },
   {
    "name": "6sense",
@@ -2926,7 +2917,7 @@
    "type": "Lightspeed-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "AmbitionBox Software Developer 17.1–21.9 LPA (1 salary); Bengaluru 2-yr estimate 12.6–16.1 LPA (8 salaries); no FDE pay; leans below (checked 21 Nov 2026)"
   },
   {
    "name": "Vegrow",
@@ -3006,8 +2997,8 @@
    "slug": "entropik",
    "type": "Bessemer-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "AmbitionBox Entropik Tech SE 5.7–7.2 LPA; fresher 5.4–6.9 LPA (checked 21 Nov 2026)"
   },
   {
    "name": "Protegrity",
@@ -3691,8 +3682,8 @@
    "slug": "appen-2",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE overall median TC 6.5 LPA (checked 21 Nov 2026)",
    "found_by": "find_careers.py"
   },
   {
@@ -3768,7 +3759,7 @@
    "type": "General Catalyst-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "AmbitionBox Singular Software Developer 31.5-40.2 LPA (1 salary, low confidence), Engineer 12.5-18 LPA (3 salaries); Integration Engineer page returned 403 (checked 21 Nov 2026)",
    "found_by": "find_careers.py"
   },
   {
@@ -4532,7 +4523,7 @@
    "type": "Accel-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "No salary data on AmbitionBox/Glassdoor/Wellfound; postings say 'competitive', roles ask 2–6 yrs (checked 21 Nov 2026)",
    "found_by": "find_careers.py --more"
   },
   {
@@ -4542,8 +4533,8 @@
    "slug": "scimplify",
    "type": "Accel-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "AmbitionBox SDE II (2 yrs) 14–17.8 LPA, SDE 6.8–8.6 LPA; Glassdoor SE II avg 13.7 LPA (1 salary) (checked 21 Nov 2026)",
    "found_by": "find_careers.py --more"
   },
   {
@@ -4677,8 +4668,8 @@
    "tld": "in",
    "type": "Nexus-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "AmbitionBox Maximl Labs Software Engineer (1-2 yrs) 12-15 LPA, 4 salaries (checked 21 Nov 2026)",
    "found_by": "find_careers.py --more"
   },
   {
@@ -4700,8 +4691,8 @@
    "tld": "in",
    "type": "Bessemer-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "AmbitionBox: top 10% company-wide >13 LPA; sister Telerad Tech AI Engineer 4–9 LPA (1–4 yrs), SE 3–8.1 LPA (checked 21 Nov 2026)",
    "found_by": "find_careers.py --more"
   },
   {
@@ -4724,7 +4715,7 @@
    "type": "General Catalyst-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "No Levels.fyi/AmbitionBox SE figure; one listing Senior ML Engineer Bengaluru 50–90 LPA - leans likely but no entry-level data (checked 21 Nov 2026)",
    "found_by": "find_careers.py --more"
   },
   {
@@ -5555,7 +5546,7 @@
    "type": "Indian fintech",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "No levels.fyi India data; AmbitionBox Software & QA dept estimates conflict (2 yrs 31.5–40.2 LPA vs 3 yrs 11.7–15 LPA); Software Developer 9.1–11.6 LPA (1 salary) (checked 21 Nov 2026)",
    "found_by": "Google search in the user's browser"
   },
   {
@@ -6791,8 +6782,8 @@
    "host": "careers.united.com",
    "type": "Global product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE median TC 19.0 LPA all levels; AmbitionBox Associate SE 7.7–11.2 LPA (0–1 yr estimate) (checked 21 Nov 2026)",
    "found_by": "find_careers.py --more (full run)"
   },
   {
@@ -6803,8 +6794,8 @@
    "tld": "in",
    "type": "AI startups",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE overall median TC 19.8 LPA (all levels, no split), so SDE I sits under 20 (checked 21 Nov 2026)",
    "found_by": "find_careers.py --more (full run)"
   },
   {
@@ -6850,7 +6841,7 @@
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "No SDE figure; AmbitionBox fresher estimate 7.2–9.2 LPA (role unclear), salary rating 3.0/5 (checked 21 Nov 2026)",
    "found_by": "find_careers.py --more (full run)"
   },
   {
@@ -6883,8 +6874,8 @@
    "slug": "solarsquare",
    "type": "Lightspeed-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "Wellfound SDE-3 Backend posting 15–20 LPA (also used for MERN full-stack); no SDE pay on AmbitionBox, so SDE I/II sits under 20 (checked 21 Nov 2026)",
    "found_by": "find_careers.py --more (full run)"
   },
   {
@@ -7881,6 +7872,1743 @@
    "pay": "likely",
    "pay_note": "Known to pay well for engineers",
    "found_by": "unblockers 11 Nov 2026: public feed the careers page calls (found in the user's Chrome)"
+  },
+  {
+   "name": "Amway",
+   "ats": "portal",
+   "portal": "successfactors",
+   "host": "jobs.amway.com",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Bottemline Technologies",
+   "ats": "greenhouse",
+   "slug": "bottomlinetechnologies",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bottomline: Levels.fyi India SE median TC 22.6 LPA all levels; AmbitionBox SE 9.7–21 LPA (58 salaries), SE II 15–20 LPA (2–4 yrs) - leans below (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Kantar",
+   "ats": "workday",
+   "tenant": "kantar",
+   "wd": "wd3",
+   "site": "KANTAR",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Optym",
+   "ats": "rippling",
+   "slug": "optymcareers",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Polygon Technology",
+   "ats": "ashby",
+   "slug": "polygon-labs",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Rockstar Games",
+   "ats": "greenhouse",
+   "slug": "rockstargames",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "SanDisk",
+   "ats": "portal",
+   "portal": "sitemap",
+   "host": "avature.sandisk.com",
+   "sitemaps": [
+    "https://avature.sandisk.com/Careers/sitemap.xml"
+   ],
+   "job_path": "/JobDetail/",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "SerpApi",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://serpapi.com/careers"
+   ],
+   "job_link": "/careers/[a-z0-9-]+",
+   "title_from_url": true,
+   "location": "Remote, India",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Facilio",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://facilio.com/careers/"
+   ],
+   "job_link": "/careers/[a-z0-9-]+/",
+   "title_from_url": true,
+   "location": "Chennai, India",
+   "type": "SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Middleware",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://middleware.io/careers/"
+   ],
+   "job_link": "/careers/[a-z0-9-]+/",
+   "title_from_url": true,
+   "location": "Ahmedabad, India",
+   "type": "SaaS",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Bosch",
+   "ats": "smartrecruiters",
+   "slug": "BoschGroup",
+   "type": "Global product",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Apna",
+   "ats": "portal",
+   "portal": "workable",
+   "slug": "apna",
+   "type": "Jobs platform",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "overall median TC 47.5 LPA (levels.fyi India, checked 11 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Emergent",
+   "ats": "greenhouse",
+   "slug": "emergentlabsinc",
+   "type": "AI startup",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "JioHotstar",
+   "ats": "workday",
+   "tenant": "jiostar",
+   "wd": "wd102",
+   "site": "JioStar",
+   "type": "Streaming",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Auzmor",
+   "ats": "portal",
+   "portal": "jsonlist",
+   "url": "https://hire.api.auzmor.com/api/v1/careers/auzmor/groupByDepartment",
+   "params": {
+    "limit": 50,
+    "offset": 0
+   },
+   "items": "data.*.jobs",
+   "title": "title",
+   "location": "location.name",
+   "posted": "publishedDate",
+   "link": "https://hire.auzmor.com/auzmor/careers/{uuid}",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "Levels.fyi has no India data; AmbitionBox Software Engineer (1-2 yrs) 6.0-11.5 LPA, 9 salaries (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Garuda Aerospace private Ltd",
+   "ats": "portal",
+   "portal": "jsonlist",
+   "url": "https://server.garudaaerospace.com/career",
+   "items": "data",
+   "title": "title",
+   "location": "location",
+   "description": [
+    "aboutThisRole",
+    "keyResponsibility",
+    "qualification"
+   ],
+   "posted": "createdAt",
+   "page": "https://www.garudaaerospace.com/company/careers",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox (239 salaries) no SE title shown; Junior Engineer 1.8–6 LPA; Levels.fyi has too few submissions. Low confidence (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Neysa",
+   "ats": "portal",
+   "portal": "kula",
+   "slug": "neysa",
+   "type": "AI cloud startup",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Gnani.ai",
+   "ats": "portal",
+   "portal": "jsonlist",
+   "url": "https://careers.gnani.ai/api/jobs",
+   "items": "data.jobs",
+   "title": "title",
+   "location": "location",
+   "default_location": "India",
+   "link": "https://careers.gnani.ai/apply/{code}",
+   "posted": "positionPublishDate",
+   "min_exp": "minExperience",
+   "max_exp": "maxExperience",
+   "type": "AI startup",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "CoRover",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://corover.ai/company/careers"
+   ],
+   "job_link": "/company/careers/[a-z0-9-]+",
+   "title_from_url": true,
+   "location": "Bengaluru, India",
+   "inner_max": 5000,
+   "type": "AI startups",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "AmbitionBox Full Stack Developer 12–27 LPA (3–6 yrs, 3 salaries, Nov 2023), fresher 1.8–3.5 LPA; posting asks 4–6 yrs — crosses 20, leans below at 0–3 yrs (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Bachatt",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://bachatt.app/careers?section=open-positions"
+   ],
+   "job_link": "/careers/\\d+",
+   "location": "Gurgaon, India",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Only figure: SDE 2 Backend (3+ yrs, Gurgaon) listing USD 10k–35k (~8.5–30 LPA), marked filled — crosses 20 (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)",
+   "title_split": "\\s{2,}"
+  },
+  {
+   "name": "Dezerv",
+   "ats": "portal",
+   "portal": "jsonlist",
+   "url": "https://nexus.dezerv.in/app-server/v1/job-postings",
+   "params": {
+    "sourceId": 1,
+    "limit": 500
+   },
+   "items": "data",
+   "title": "requisitionTitle",
+   "location": "officeLocationNames",
+   "url_field": "jobDetailUrl",
+   "min_exp": "yrsOfExpMin",
+   "max_exp": "yrsOfExpMax",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Easebuzz",
+   "ats": "portal",
+   "portal": "recruiterbox",
+   "slug": "easebuzz",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "below",
+   "pay_note": "AmbitionBox SE 4–7 LPA (1–4 yrs, 14 salaries, Sep 2024) (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Freight Tiger",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://freighttiger.com/careers/"
+   ],
+   "job_link": "/careers/[a-z0-9]+(?:-[a-z0-9]+)+/",
+   "location": "India",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Leena AI",
+   "ats": "portal",
+   "portal": "workable",
+   "slug": "leena-ai",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Lookout",
+   "ats": "greenhouse",
+   "slug": "lookout",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Mesh",
+   "ats": "portal",
+   "portal": "freshteam",
+   "slug": "mesh",
+   "type": "Peak XV-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Rentomojo",
+   "ats": "portal",
+   "portal": "pyjamahr",
+   "slug": "rentomojo",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "below",
+   "pay_note": "AmbitionBox Rentomojo Software Engineer 1-5 yrs 6.5-12 LPA; Software Developer 1-3 yrs 9-14 LPA (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Newton School",
+   "ats": "portal",
+   "portal": "zwayam",
+   "base": "https://careers.newtonschool.co/newtonschool",
+   "domain": "careers.newtonschool.co",
+   "company_id": "MTU3Mjk=",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE median TC ~25 LPA; SDE 2 (3 yrs) entry ~21.8 LPA (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Moglix",
+   "ats": "portal",
+   "portal": "jsonlist",
+   "url": "https://moglix-api.flexiele.com/api-pub/rec/careers/list",
+   "method": "POST",
+   "body": {
+    "formCode": "FRM0001379",
+    "gridCode": "GRD0000837",
+    "where": {
+     "condition": "and",
+     "isComplex": true,
+     "predicates": []
+    },
+    "sorted": [],
+    "skip": 0,
+    "take": 500,
+    "requiresCounts": true
+   },
+   "items": "data.rows",
+   "title": "job_title",
+   "location": "location",
+   "description": [
+    "jd",
+    "skill"
+   ],
+   "posted": "date_posted",
+   "date_format": "%d-%m-%Y",
+   "min_exp": "min_yrs_of_exp",
+   "max_exp": "max_yrs_of_exp",
+   "link": "https://moglix.flexiele.com/careers/moglix/jobs?job={id}",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Sahi",
+   "ats": "portal",
+   "portal": "jsonlist",
+   "url": "https://www.sahi.com/career",
+   "html_json": "__NEXT_DATA__",
+   "items": "props.pageProps.contentData.OpenRolesSection.open_roles",
+   "where": {
+    "IsOpen": true
+   },
+   "title": "Role",
+   "location": "Location",
+   "description": "Description",
+   "posted": "publishedAt",
+   "page": "https://www.sahi.com/career",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Optimized Electrotech",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://optimizedelectrotech.com/company/careers/"
+   ],
+   "job_link": "https://optimizedelectrotech.com/careers/[a-z0-9-]+/",
+   "location": "India",
+   "type": "Blume-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Sukino Continuum Care",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://sukinohealthcare.com/careers/"
+   ],
+   "job_link": "https://sukinohealthcare.com/career/(?!career-opportunities)[a-z0-9-]+/",
+   "location": "Bengaluru, India",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Gojek",
+   "ats": "lever",
+   "slug": "GoToGroup",
+   "type": "Global product",
+   "quality": 12,
+   "pay": "likely",
+   "pay_note": "tier judgement",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Setu",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://setu.co/careers"
+   ],
+   "job_link": "https://pinelabsgroup\\.turbohire\\.co/get/",
+   "location": "Bengaluru, India",
+   "type": "Fintech infra (Pine Labs)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "borderline: Pine Labs SE 17.6, Senior 22.9; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Slikk",
+   "ats": "portal",
+   "portal": "jsonlist",
+   "urls": [
+    "https://www.slikk.club/careers/1",
+    "https://www.slikk.club/careers/2"
+   ],
+   "html_json": "__NEXT_DATA__",
+   "items": "props.pageProps.jobs",
+   "title": "title",
+   "location": "location",
+   "description": [
+    "description",
+    "responsibilities"
+   ],
+   "min_exp": "min_experience",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "314e Corporation",
+   "ats": "portal",
+   "portal": "sitemap",
+   "host": "www.314e.com",
+   "job_path": "/career/[a-z0-9-]+/$",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "BMC software",
+   "ats": "portal",
+   "portal": "avature",
+   "base": "https://jobs.bmc.com/Careers",
+   "per_page": 6,
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "borderline: overall 23.0; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Josh",
+   "ats": "portal",
+   "portal": "successfactors",
+   "host": "jobs.careerswith-us.com",
+   "type": "Indian product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "borderline: VerSe overall 23.7; overall-only 20-30 stays unverified (levels.fyi India, checked 10 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Maxim AI",
+   "ats": "portal",
+   "portal": "jsonlist",
+   "url": "https://www.getmaxim.ai/api/careers",
+   "items": "careers",
+   "title": "title",
+   "location": "location",
+   "description": "description",
+   "link": "https://www.getmaxim.ai/careers/{slug}",
+   "type": "AI startups",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Wellfound postings: Applied AI Engineer 25–50 LPA (3 yrs), Founding Full-stack 25–45 LPA + equity; MTS posting gives no figure (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Ringg AI",
+   "ats": "portal",
+   "portal": "kula",
+   "slug": "ringg",
+   "type": "Series A AI startup (Peak XV)",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "Bands vary",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Elements Energy",
+   "ats": "portal",
+   "portal": "sitemap",
+   "host": "elementsenergies.com",
+   "job_path": "/talent/[A-Za-z0-9_-]+$",
+   "cache_pages": true,
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Abnormal AI",
+   "ats": "greenhouse",
+   "slug": "abnormalsecurity",
+   "type": "Email-security AI startup",
+   "quality": 11,
+   "pay": "likely",
+   "pay_note": "LeetCode SDE-2 Bangalore offer TC 53 LPA (1 report, Nov 2023); no Levels.fyi India data",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Inovalon",
+   "ats": "ashby",
+   "slug": "inovalon",
+   "type": "US healthcare SaaS",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "overall median TC 47.4 LPA (levels.fyi India, checked 11 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Tracxn",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://w.tracxn.com/careers"
+   ],
+   "job_link": "/career/[a-z0-9-]+",
+   "location": "Bengaluru, India",
+   "title_from_url": true,
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "below",
+   "pay_note": "AmbitionBox SE 2.1–12 LPA (0–3 yrs, 69 salaries); Levels.fyi India SE median 19.3 LPA (few submissions) (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Accredible",
+   "ats": "portal",
+   "portal": "pinpoint",
+   "slug": "accredible",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Amgen",
+   "ats": "portal",
+   "portal": "sitemap",
+   "host": "careers.amgen.com",
+   "india_in_url": true,
+   "type": "Biotech MNC",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India L3 15.2, L4 21.1 LPA; overall 16.9 — level-dependent (checked 11 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Aptiv",
+   "ats": "workday",
+   "tenant": "aptiv",
+   "wd": "wd5",
+   "site": "APTIV_CAREERS",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Sources conflict: Levels.fyi India SE median TC L1 21.3 LPA but L4 19.5 LPA (inconsistent data); AmbitionBox Aptiv Software Engineer 4.5-16.6 LPA, Senior SE 2-8 yrs 8.3-21 LPA (532 salaries). Leans below; lead is a SW functional-testing role (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "bp",
+   "ats": "workday",
+   "tenant": "bpinternational",
+   "wd": "wd3",
+   "site": "bpCareers",
+   "type": "Energy MNC tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "checked 20 Nov 2026: Levels.fyi India J 19.1, I 32.3 LPA median TC, level-dependent",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Entain India",
+   "ats": "smartrecruiters",
+   "slug": "Entain",
+   "type": "Betting/gaming tech centre",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "borderline: overall 26.3; overall-only 20-30 stays unclear (levels.fyi India, checked 11 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "JAGGAER",
+   "ats": "portal",
+   "portal": "sitemap",
+   "host": "incareers-jaggaer.icims.com",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi India data (checked 11 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Meril",
+   "ats": "portal",
+   "portal": "zohorecruit",
+   "slug": "merillife",
+   "tld": "in",
+   "list_path": "/jobs/merilcareer",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi India data (checked 11 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "N-able",
+   "ats": "portal",
+   "portal": "jibe",
+   "host": "careers.n-able.com",
+   "type": "IT management SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi India data (checked 11 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "PeopleStrong",
+   "ats": "portal",
+   "portal": "peoplestrong",
+   "host": "careers.peoplestrong.com",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "PUMA Group",
+   "ats": "portal",
+   "portal": "sitemap",
+   "host": "about.puma.com",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi India data (checked 11 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Sling Media",
+   "ats": "portal",
+   "portal": "jibe",
+   "host": "jobs.echostar.com",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "TeamViewer",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://careers.teamviewer.com/jobs?country=India&page={page}"
+   ],
+   "max_pages": 4,
+   "job_link": "https://careers\\.teamviewer\\.com/jobs/\\d+-[^\"'/?]+",
+   "title_from_url": true,
+   "location": "India",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi India data (checked 11 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Docyt",
+   "ats": "portal",
+   "portal": "workable",
+   "slug": "docyt",
+   "type": "Accounting-automation SaaS (US)",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "checked 20 Nov 2026: no software-engineer salary data found (AmbitionBox Senior SE 23.4-29.9 LPA from 1 salary)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "SupplyHouse",
+   "ats": "greenhouse",
+   "slug": "supplyhouse",
+   "type": "US e-commerce",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi India data (checked 11 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Akku",
+   "ats": "portal",
+   "portal": "zohorecruit",
+   "slug": "cloudnowtech",
+   "tld": "com",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No Akku-specific pay data; generic India API Developer ranges 2.4-15 LPA (AmbitionBox) (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "AssetMark Global Wealth",
+   "ats": "workday",
+   "tenant": "assetmark",
+   "wd": "wd5",
+   "site": "AssetMark_Careers",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No Levels.fyi India data; no AmbitionBox/Glassdoor India page; only US postings (130–168k USD) (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "athenahealth",
+   "ats": "portal",
+   "portal": "sitemap",
+   "host": "careers.athenahealth.com",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE median TC AMTS 12.0 LPA, MTS 17.2 LPA, SMTS 26.2 LPA (checked 21 Nov 2026); MTS leads sit under 20",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Bajaj Finserv",
+   "ats": "portal",
+   "portal": "peoplestrong",
+   "host": "bflcareers.peoplestrong.com",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox Software Engineer 4.8–16 LPA (238 salaries); Levels.fyi India SE median TC 14.0 LPA all levels (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Blue Machines AI",
+   "ats": "portal",
+   "portal": "workable",
+   "slug": "blue-machines-ai",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Apna's voice-AI arm; no Blue Machines data. Parent Apna Levels.fyi India SE median TC 47.4 LPA all levels (no per-level) - leans likely (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Botsync",
+   "ats": "portal",
+   "portal": "workable",
+   "slug": "botsync-1",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox SE 13.1–16.7 LPA, SE L1 11.7–15 LPA (1–2 yrs); own postings Robotics SE L1 12–15 LPA, L2 18–22 LPA (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Brevan Howard",
+   "ats": "portal",
+   "portal": "sitemap",
+   "host": "careers.brevanhoward.com",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No levels.fyi India data; Bengaluru Middle Office IT quant dev posting 'estimated' 12–18 LPA vs AmbitionBox senior quant dev 49–66 LPA; no entry SE figure (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "CDK Global",
+   "ats": "workday",
+   "tenant": "cdk",
+   "wd": "wd1",
+   "site": "CDK",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "Levels.fyi India 'Software Engineer' level median TC 18.1 LPA (Assoc SE sits below it); all-levels 21.6 LPA (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "CommScope",
+   "ats": "portal",
+   "portal": "successfactors",
+   "host": "jobs.commscope.com",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "Levels.fyi India Software Engineer I median TC 14.9 LPA; Senior SE 19.9 LPA (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Cornerstone OnDemand",
+   "ats": "portal",
+   "portal": "csod",
+   "corp": "cornerstone",
+   "site": 2,
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India SWE all-levels median TC 23.5 LPA (no per-level split); AmbitionBox SE 7–21.6 LPA, Assoc SE 7–15.3 LPA — crosses 20 (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Cursor",
+   "ats": "ashby",
+   "slug": "cursor",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Daimler Truck Innovation Center India (DTICI)",
+   "ats": "portal",
+   "portal": "sitemap",
+   "host": "jobsearch.daimlertruck.com",
+   "job_path": "ac=jobad",
+   "cache_pages": true,
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "Levels.fyi Daimler Truck India all-levels median 17.7 LPA (no per-level); AmbitionBox Daimler Truck SE 10–20 LPA (1–4 yrs, 50+ employees) (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "DeepIntent",
+   "ats": "greenhouse",
+   "slug": "deepintent",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox Pune engineering 13.5–17 LPA for 2–5 yrs (~40 salaries, Dec 2024); no Levels.fyi India data (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Deltek",
+   "ats": "portal",
+   "portal": "jsonlist",
+   "url": "https://jobsapi-google.m-cloud.io/api/job/search",
+   "params": {
+    "companyName": "companies/d78c5717-c840-461e-8f42-7e005f1a8068",
+    "pageSize": 100,
+    "offset": 0,
+    "callback": "cb"
+   },
+   "jsonp": true,
+   "items": "searchResults",
+   "title": "job.title",
+   "location": [
+    "job.primary_city",
+    "job.primary_country"
+   ],
+   "url_field": "job.url",
+   "posted": "job.open_date",
+   "description": "summary.job_summary",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox Associate SE 7.2–10.5 LPA, SE 11.3–14.4 LPA; Levels.fyi India SE median TC 17.6 LPA all levels (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)",
+   "total": "totalHits",
+   "page_param": "offset",
+   "page_step": 100
+  },
+  {
+   "name": "Dexcom",
+   "ats": "eightfold",
+   "host": "careers.dexcom.com",
+   "domain": "dexcom.com",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No Levels.fyi India data; only job-board estimates: iOS SDE 1 10–15 LPA, SDE 2 18–35 LPA (unofficial) (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Duck Creek Technologies",
+   "ats": "workday",
+   "tenant": "duckcreek",
+   "wd": "wd1",
+   "site": "duckcreekcareers",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox SE (1 yr) 6–14.9 LPA, fresher 4.7–6 LPA; Levels.fyi India SE median TC 20.9 LPA all levels (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Experity",
+   "ats": "workday",
+   "tenant": "experity",
+   "wd": "wd108",
+   "site": "Experity_Careers",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No levels.fyi India data; AmbitionBox company page 403; no Experity-specific India SE II pay found in search (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Flex",
+   "ats": "workday",
+   "tenant": "flextronics",
+   "wd": "wd1",
+   "site": "Careers",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "No levels.fyi India data; AmbitionBox Associate Software Engineer 3.2–6 LPA (68 salaries), fresher 3.5–4.7 LPA; SE 2–5 yrs 3.1–11.6 LPA (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "FM",
+   "ats": "portal",
+   "portal": "jsonlist",
+   "url": "https://prod-warmachine.talent500.co/api/v3/jobs/search/",
+   "params": {
+    "company_id": "6e9b4866-fa55-42ed-addf-8448051a14fa",
+    "size": 100
+   },
+   "items": "data",
+   "title": "title",
+   "location": [
+    "location",
+    "country.name"
+   ],
+   "link": "https://talent500.com/jobs/{company.slug}/{slug}/",
+   "posted": "created_at",
+   "min_exp": "min_experience_years",
+   "max_exp": "max_experience_years",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "FM Global: no Levels.fyi India data; AmbitionBox Bengaluru has no software-engineer figure (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)",
+   "total": "total"
+  },
+  {
+   "name": "Ford Motor Company",
+   "ats": "portal",
+   "portal": "sitemap",
+   "host": "www.careers.ford.com",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "Levels.fyi India median TC GSR5 10.0 LPA, GSR6 17.3 LPA, GSR7 28.4 LPA; overall 17.9 LPA (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Giant Eagle GCC",
+   "ats": "portal",
+   "portal": "sitemap",
+   "host": "jobs.gianteagle.com",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "No Levels.fyi data; AmbitionBox Giant Eagle Software Engineer 1 yr 9.5-11.6 LPA, 3 yrs 11.4-13.9 LPA (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Harmonic",
+   "ats": "oracle",
+   "host": "egmn.fa.us2.oraclecloud.com",
+   "site": "CX_1",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "No Levels.fyi India data; AmbitionBox Software Engineer (4-5 yrs) 11.7-15 LPA (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "IRIS Business Services Limited",
+   "ats": "portal",
+   "portal": "keka",
+   "slug": "irsl",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox Software Engineer 2.8–9 LPA (57 salaries); Senior SE 7.8–14 LPA (3–10 yrs) (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Keysight Technologies",
+   "ats": "portal",
+   "portal": "jibe",
+   "host": "jobs.keysight.com",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India SE median TC L1 11.6 LPA, L2 20.0 LPA, L3 27.8 LPA (checked 21 Nov 2026); entry level below bar, L2 right at 20; leads are 'IT Engineer, Software, Entry'",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Liquidity Services",
+   "ats": "oracle",
+   "host": "ebwi.fa.us2.oraclecloud.com",
+   "site": "CX_1",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi has no India data; no AmbitionBox page for Liquidity Services India (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "MatrixCare",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://matrixcarejobs.agscandidateconnection.com/search-jobs?page={page}"
+   ],
+   "job_link": "/job/[a-z0-9-]+-\\d+",
+   "max_pages": 6,
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "No Levels.fyi India data; Indeed MatrixCare Software Engineer avg 9.2 LPA (7 salaries); AmbitionBox MatrixCare India QA 3.6-7.6 LPA (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Medpace",
+   "ats": "portal",
+   "portal": "jibe",
+   "host": "careers.medpace.com",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "No levels.fyi India data; India SE postings 4–12 LPA entry, 10–18 LPA mid (job listings, no AmbitionBox SE page) (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "MUFG Pension & Market Services",
+   "ats": "oracle",
+   "host": "hcmn.fa.ap1.oraclecloud.com",
+   "site": "CX_1001",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "No Levels.fyi India data; AmbitionBox Senior Developer (8 yrs) 14.3-18.2 LPA, Analyst fresher 5-5.7 LPA, so 0-3 yr developers are well under 20 (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Navera Ventures Pvt. Ltd.",
+   "ats": "portal",
+   "portal": "jsonlist",
+   "url": "https://evaluateapi.naveraventures.com/api/jobs",
+   "params": {
+    "company_id": "39699df7-e2ae-4e49-b94b-ab65cd7f08ab"
+   },
+   "items": "",
+   "where": {
+    "status": "active"
+   },
+   "title": "title",
+   "default_location": "Bengaluru, India",
+   "description": "description",
+   "posted": "created_at",
+   "link": "https://evaluate.naveraventures.com/jobs/{id}?company_id=39699df7-e2ae-4e49-b94b-ab65cd7f08ab",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No pay data; the closest match is Navera, a Bangalore apparel (saree) D2C brand, with no salary pages on Levels.fyi or AmbitionBox (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Orvera AI",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://orvera.ai/careers"
+   ],
+   "job_link": "/careers/[a-z0-9-]+",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No Levels.fyi, AmbitionBox or Glassdoor pay data found for Orvera AI (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Parspec",
+   "ats": "ashby",
+   "slug": "parspec",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India SE overall median 30.2 LPA, no per-level split; no AmbitionBox page (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Pearson",
+   "ats": "oracle",
+   "host": "hccz.fa.em3.oraclecloud.com",
+   "site": "CX_2",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Levels.fyi India SE median TC 27.3 LPA all levels (Senior SE 29.3), no SE I/II figure; AmbitionBox SE 5.2–7.5 LPA tiny 2023 sample (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "PPFAS Mutual Fund",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://amc.ppfas.com/about-us/we-are-hiring/"
+   ],
+   "job_link": "job-detail\\.php\\?id=\\d+",
+   "location": "Mumbai, India",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox Software Developer 5–9 LPA (5 salaries) (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "RedSeal",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://redseal.applytojob.com/apply"
+   ],
+   "job_link": "https://redseal\\.applytojob\\.com/apply/[A-Za-z0-9]+/[^\"'/?]+",
+   "title_from_url": true,
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No levels.fyi India data; AmbitionBox RedSeal Networks Principal SE 19.8–25.3 LPA, Senior SE 37.5–42 LPA (3 salaries); no SE II figure (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Refold AI",
+   "ats": "ashby",
+   "slug": "refoldai",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No Refold-specific pay data; India FDE market medians 13-17 LPA (Salary.com, Glassdoor, Levels.fyi) but startup FDE pay varies widely; role asks 2-5 yrs (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Secfix",
+   "ats": "ashby",
+   "slug": "secfix",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Fresh-grad Backend (GTM) role listed 16–25 LPA expected / USD 20–32k (~17.7–28.4 LPA); SWE Golang 1–2 yrs 15–30 LPA (Weekday) — crosses 20 (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Teladoc Health",
+   "ats": "workday",
+   "tenant": "teladoc",
+   "wd": "wd503",
+   "site": "teladochealth_is_hiring",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Thales",
+   "ats": "workday",
+   "tenant": "thales",
+   "wd": "wd3",
+   "site": "Careers",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Sources conflict: Levels.fyi India SE median TC LR7 25.3 LPA, LR8 29.1 LPA (lowest listed level, may not be entry); AmbitionBox Thales Software Engineer 5-20 LPA across 0-5 yrs (180 salaries), SE II 1-2 yrs 8.3-15 LPA. Leans below (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "The Citco Group Limited",
+   "ats": "oracle",
+   "host": "fa-euxc-saasfaprod1.fa.ocs.oraclecloud.com",
+   "site": "CX_1",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "AmbitionBox Junior Developer 7.5–9.2 LPA (0–2 yrs), Software Developer 18–20.9 LPA (3–10 yrs, low confidence), SE 19.9–25.5 LPA (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Tradl AI",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://tradl.ai/careers"
+   ],
+   "job_link": "https://binary\\.so/[A-Za-z0-9]+",
+   "location": "Bengaluru, India",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No pay data for Tradl AI on Levels.fyi, AmbitionBox or Glassdoor; postings show no range (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Transak C-Corp",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://careers.transak.com/"
+   ],
+   "job_link": "/p/[0-9a-f]{12,16}-[a-z0-9-]+",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No levels.fyi India data; AmbitionBox SE 22.5–28.8 LPA at 3 yrs (1 salary) but Software Developer 12.6–16.1 LPA (low confidence); leans likely for SDE II (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "V2 Retail Ltd",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://v2retail.com/jobs/"
+   ],
+   "job_link": "https://v2retail\\.com/jobs/(?!feed/)[a-z0-9-]+/",
+   "title_from_url": true,
+   "location": "Gurugram, India",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox Software Engineer 6.8–8.6 LPA (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Vahan.ai",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://www.vahan.ai/careers/"
+   ],
+   "job_link": "/careers/[a-z0-9-]+/",
+   "title_from_url": true,
+   "location": "Bengaluru, India",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "AmbitionBox Vahan Software Engineer 23-36.7 LPA (4 salaries), Senior SE 22-35 LPA for 1-5 yrs; Software Developer 1-3 yrs 16.4-21 LPA (2 salaries, low confidence) (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Visdum",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://www.visdum.com/careers"
+   ],
+   "job_link": "/career/[a-z0-9-]+",
+   "title_from_url": true,
+   "location": "Noida, India",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox Software Engineer 6.8–8.6 LPA (~2 yrs, 1 salary); developer estimates 3.6–11.5 LPA (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Analog Devices",
+   "ats": "workday",
+   "tenant": "analogdevices",
+   "wd": "wd1",
+   "site": "External",
+   "type": "Semiconductor MNC",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "Bands vary",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Elecbits",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://elecbits.in/careers/"
+   ],
+   "job_link": "https://elecbits\\.in/elecbits-jd-[a-z0-9-]+/",
+   "title_from_url": true,
+   "location": "Bengaluru, India",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Xylem",
+   "ats": "workday",
+   "tenant": "xylem",
+   "wd": "wd5",
+   "site": "xylem-careers",
+   "type": "Discovered via LinkedIn — add to tiers.json",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox Xylem Water Solutions SE 5–11.3 LPA (30 salaries); no Levels.fyi India data (checked 21 Nov 2026)",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "zango",
+   "ats": "portal",
+   "portal": "links",
+   "list_urls": [
+    "https://www.zango.ai/career"
+   ],
+   "job_link": "/careers/[a-z0-9-]+",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "American Airlines",
+   "ats": "portal",
+   "portal": "jsonlist",
+   "url": "https://prod-warmachine.talent500.co/api/v3/jobs/search/",
+   "params": {
+    "company_id": "79766e7b-ac43-46ab-bf39-e63183aee04d",
+    "size": 100
+   },
+   "items": "data",
+   "title": "title",
+   "location": [
+    "location",
+    "country.name"
+   ],
+   "link": "https://talent500.com/jobs/{company.slug}/{slug}/",
+   "posted": "created_at",
+   "min_exp": "min_experience_years",
+   "max_exp": "max_experience_years",
+   "type": "Global product",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "pending-companies round (21 Nov 2026)",
+   "total": "total"
+  },
+  {
+   "name": "Rockwell Automation",
+   "ats": "workday",
+   "tenant": "rockwellautomation",
+   "wd": "wd1",
+   "site": "External_Rockwell_Automation",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "",
+   "found_by": "pending-companies round (21 Nov 2026)"
+  },
+  {
+   "name": "Employ",
+   "ats": "lever",
+   "slug": "employ",
+   "region": "eu",
+   "type": "Global product (HR tech: Lever, Jobvite, JazzHR; private)",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "No levels.fyi India data and no AmbitionBox/Glassdoor India SE figures for Employ Inc found (checked 21 Nov 2026)",
+   "found_by": "round eleven (21 Nov 2026)"
+  },
+  {
+   "name": "India Mart",
+   "ats": "portal",
+   "portal": "klimb",
+   "company": "indiamart",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "round eleven (21 Nov 2026)"
+  },
+  {
+   "name": "Zema Global Data Corporation",
+   "ats": "portal",
+   "portal": "deel",
+   "board": "zema.global",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No levels.fyi India data; no AmbitionBox/Glassdoor SE figures found (Navi Mumbai office) (checked 21 Nov 2026)",
+   "found_by": "round eleven (21 Nov 2026)"
+  },
+  {
+   "name": "Indifi",
+   "ats": "portal",
+   "portal": "cards",
+   "url": "https://www.indifi.com/careers",
+   "card": ".tab-content div.panel",
+   "title": "h3",
+   "location": "h3 span.location",
+   "detail": "div > p.margin-b-0, div.panel-body",
+   "type": "Indian fintech",
+   "quality": 8,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "round eleven (21 Nov 2026)"
+  },
+  {
+   "name": "TransBnk",
+   "ats": "portal",
+   "portal": "cards",
+   "url": "https://www.tbx.co.in/careers",
+   "card": "div.rounded-3xl",
+   "title": "h2",
+   "location": "div.text-gray-500 span",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "round eleven (21 Nov 2026)",
+   "require": "•\\s*(?:Full|Part)[ -]?Time\\b|•\\s*(?:Contract|Internship)\\b"
+  },
+  {
+   "name": "graph ai",
+   "ats": "portal",
+   "portal": "cards",
+   "url": "https://graphsafety.ai/careers/",
+   "card": "div.job-post-loop-item",
+   "title": "h3",
+   "location": "div.jd-info",
+   "location_re": "\\|\\s*([^|]+?)\\s*\\|",
+   "type": "Bessemer-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "round eleven (21 Nov 2026)"
+  },
+  {
+   "name": "Atomicwork",
+   "ats": "portal",
+   "portal": "cards",
+   "url": "https://www.atomicwork.com/company/careers",
+   "card": "div.oj-item",
+   "title": "h4",
+   "location": ".location",
+   "link": "a[href]",
+   "fetch_detail": "div.jd_wrapper",
+   "type": "AI SaaS",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bands vary",
+   "found_by": "round eleven (21 Nov 2026)"
+  },
+  {
+   "name": "Accord software",
+   "ats": "portal",
+   "portal": "cards",
+   "url": "https://www.accord-soft.com/career.php",
+   "card": "div.accordion-item",
+   "title": "button strong",
+   "detail": "div.accordion-body",
+   "default_location": "Bengaluru, India",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "round eleven (21 Nov 2026)"
+  },
+  {
+   "name": "Joveo",
+   "ats": "portal",
+   "portal": "sitemap",
+   "host": "careers.joveo.com",
+   "sitemaps": [
+    "https://careers.joveo.com/job-sitemap.xml"
+   ],
+   "job_path": "careers\\.joveo\\.com/job/[0-9a-f-]{36}$",
+   "cache_pages": true,
+   "page_data": {
+    "script": "__NEXT_DATA__",
+    "item": "props.pageProps.jobDetails",
+    "title": "title",
+    "location": [
+     "locations.*.city",
+     "locations.*.state",
+     "locations.*.country"
+    ],
+    "description": "description",
+    "posted": "createdAt",
+    "remote": "jobLocationType",
+    "where": {
+     "status": "OPEN"
+    },
+    "default_location": "India (location not stated)"
+   },
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "round eleven (21 Nov 2026)"
+  },
+  {
+   "name": "Billdesk",
+   "ats": "portal",
+   "portal": "billdesk",
+   "url": "https://www.billdesk.com/web/careers",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "round eleven (21 Nov 2026)"
+  },
+  {
+   "name": "Indian Energy Exchange",
+   "ats": "portal",
+   "portal": "cards",
+   "url": "https://www.iexindia.com/career",
+   "card": "h6.MuiTypography-h6",
+   "card_parent": 1,
+   "title": "h6",
+   "location_re": "^Location:\\s*(.+)$",
+   "type": "Lightspeed-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "round eleven (21 Nov 2026)",
+   "require": "^Location:"
+  },
+  {
+   "name": "NikahForever",
+   "ats": "portal",
+   "portal": "cards",
+   "url": "https://career.nikahforever.com/jobs",
+   "card": "div[data-job-id]",
+   "title": "h3",
+   "location": "span.leading-none",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No Levels.fyi data and no AmbitionBox SDE salary figure; AmbitionBox salary & benefits rating 3.5/5 from 13 reviews (checked 21 Nov 2026)",
+   "found_by": "round eleven (21 Nov 2026)"
+  },
+  {
+   "name": "Houseeazy",
+   "ats": "portal",
+   "portal": "cards",
+   "url": "https://www.houseeazy.com/career",
+   "card": "div.shadow-xs",
+   "title": "h2",
+   "location": "div.font-instrument-sans",
+   "location_re": "Location:\\s*([^\\n]+)",
+   "type": "Accel-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "round eleven (21 Nov 2026)",
+   "require": "^Location:"
+  },
+  {
+   "name": "Upstox",
+   "ats": "portal",
+   "portal": "jsonlist",
+   "url": "https://service.upstox.com/content/open/v1/jobs/",
+   "page": "https://upstox.com/careers/",
+   "items": "data",
+   "where": {
+    "post_on_careers_page": 1
+   },
+   "title": "job_title",
+   "location": [
+    "location_city",
+    "location_country"
+   ],
+   "link": "https://upstox.darwinbox.in/ms/candidatev2/main/careers/jobDetails/{job_id}?from=all",
+   "posted": "job_created_timestamp",
+   "date_format": "%d-%m-%Y %H:%M:%S",
+   "min_exp": "experience_from",
+   "max_exp": "experience_to",
+   "type": "Indian fintech",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "SDE bands around 20+",
+   "found_by": "round eleven (21 Nov 2026)"
+  },
+  {
+   "name": "Pratilipi",
+   "ats": "portal",
+   "portal": "jsonlist",
+   "url": "https://pratilipi.talentzq.io/api/1009/jd",
+   "page": "https://pratilipi.talentzq.io/careers",
+   "link": "https://pratilipi.talentzq.io/careers#{Id}",
+   "items": "",
+   "where": {
+    "Published": true,
+    "Status": "active"
+   },
+   "title": "Title",
+   "location": "JobLocation",
+   "posted": "Datecreated",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)",
+   "found_by": "round eleven (21 Nov 2026)"
+  },
+  {
+   "name": "Classplus",
+   "ats": "portal",
+   "portal": "jsonlist",
+   "url": "https://crm.classplus.co/ts/jobs/get-job-list",
+   "page": "https://classplusapp.com/careers/open-role",
+   "items": "data.Jobs",
+   "title": "title",
+   "location": "locationCity",
+   "default_location": "Noida, India",
+   "link": "https://classplusapp.com/careers/job-description?jobId={jobId}",
+   "type": "Indian product",
+   "quality": 9,
+   "pay": "unclear",
+   "pay_note": "no levels.fyi India data (checked 10 Nov 2026)",
+   "found_by": "round eleven (21 Nov 2026)"
+  },
+  {
+   "name": "Ghost",
+   "ats": "portal",
+   "portal": "homerun",
+   "slug": "ghost",
+   "type": "moreThanFAANGM (product companies list)",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "round eleven (21 Nov 2026)"
+  },
+  {
+   "name": "Agilitas",
+   "ats": "portal",
+   "portal": "pockethrms",
+   "schema": "0OE/OA9NNuq9lGOJjhAZRg==",
+   "company": "74nptQxi3x8gf4Sn3roRfQ==",
+   "type": "Nexus-backed startup (ISJB)",
+   "quality": 11,
+   "pay": "unclear",
+   "pay_note": "not yet checked",
+   "found_by": "round eleven (21 Nov 2026)"
   }
  ]
 }

@@ -1,0 +1,115 @@
+{
+ "success": true,
+ "data": [
+  {
+   "job_id": "a6a72fa32e6f62",
+   "job_code": "UP0108",
+   "group_company": "Upstox Securities Private Limited",
+   "parent_department": "Finance and Accounts",
+   "department": "Finance and Accounts",
+   "division": null,
+   "business_unit": "Upstox Securities Private Limited",
+   "location": [
+    "Sunshine Tower, Mumbai, Maharashtra, India (UPSL.BOM.OO1)"
+   ],
+   "location_city": [
+    "Mumbai"
+   ],
+   "location_country": "India",
+   "job_title": "Manager \u2013 Controllership",
+   "post_on_careers_page": 1,
+   "post_on_refer_page": 1,
+   "post_on_ijp_page": 0,
+   "employee_type": "Permanent",
+   "job_created_timestamp": "05-08-2026 14:24:10",
+   "job_updated_timestamp": "12-11-2026 18:11:17",
+   "experience_from": "",
+   "experience_to": "",
+   "is_remote": 0
+  },
+  {
+   "job_id": "a6ab3671ee2c3e",
+   "job_code": "UP0137",
+   "group_company": "UPSTOX",
+   "parent_department": "Tech (Engg+IT)",
+   "department": "Tech (Engg+IT)",
+   "division": null,
+   "business_unit": "RKSV Securities India Private Limited",
+   "location": [
+    "Sunshine Tower, Mumbai, Maharashtra, India (BOM.001)",
+    "Umiya Business Bay I, Bangalore, Karnataka, India (BANG.001)"
+   ],
+   "location_city": [
+    "Mumbai",
+    "Bangalore"
+   ],
+   "location_country": "India",
+   "job_title": "SRE II",
+   "post_on_careers_page": 1,
+   "post_on_refer_page": 1,
+   "post_on_ijp_page": 1,
+   "employee_type": "Permanent",
+   "job_created_timestamp": "23-09-2026 11:13:58",
+   "job_updated_timestamp": "20-11-2026 23:13:12",
+   "experience_from": "3",
+   "experience_to": "5",
+   "is_remote": 0
+  },
+  {
+   "job_id": "a6ae307ebb2428",
+   "job_code": "UP0165",
+   "group_company": "UPSTOX",
+   "parent_department": "Tech (Engg+IT)",
+   "department": "Tech (Engg+IT)",
+   "division": null,
+   "business_unit": "RKSV Securities India Private Limited",
+   "location": [
+    "Sunshine Tower, Mumbai, Maharashtra, India (BOM.001)"
+   ],
+   "location_city": [
+    "Mumbai"
+   ],
+   "location_country": "India",
+   "job_title": "Software Developement Engineer III (JAVA+Rust)",
+   "post_on_careers_page": 1,
+   "post_on_refer_page": 1,
+   "post_on_ijp_page": 0,
+   "employee_type": "Permanent",
+   "job_created_timestamp": "29-10-2026 14:16:35",
+   "job_updated_timestamp": "21-11-2026 01:15:04",
+   "experience_from": "",
+   "experience_to": "",
+   "is_remote": 0
+  },
+  {
+   "job_id": "a60a75e9b092aa",
+   "job_code": "UP045",
+   "group_company": "UPSTOX",
+   "parent_department": "DB",
+   "department": "DB",
+   "division": null,
+   "business_unit": "",
+   "location": [
+    "Sunshine Tower, Mumbai, Maharashtra, India (BOM.001)",
+    "Work From Home - Headquartered in, Mumbai, Maharashtra, India (BOM.002)"
+   ],
+   "location_city": [
+    "Mumbai",
+    "Mumbai"
+   ],
+   "location_country": "India",
+   "job_title": "Dummy Designation Name",
+   "post_on_careers_page": 0,
+   "post_on_refer_page": 0,
+   "post_on_ijp_page": 0,
+   "employee_type": "Permanent",
+   "job_created_timestamp": "21-05-2021 12:47:47",
+   "job_updated_timestamp": "05-05-2026 12:33:15",
+   "experience_from": "1",
+   "experience_to": "2",
+   "is_remote": 0
+  }
+ ],
+ "metaData": null,
+ "requestId": "x"
+}

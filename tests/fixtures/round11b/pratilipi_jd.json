@@ -1,0 +1,73 @@
+[
+ {
+  "Id": "c06f905f-4ce7-47a8-93f4-97b1a4cf7352",
+  "Type": "jd",
+  "Tenantid": "1009",
+  "Title": "Market Place Growth Manager",
+  "Jdcode": "MPG-15-05-26",
+  "JdCurrency": "INR",
+  "Version": "eQIe3YSsOECz7EXGREbEpA",
+  "Status": "active",
+  "Jobcategory": "Pratilipi Literature",
+  "Datecreated": "2026-05-15T11:36:54.9906294Z",
+  "Expectedenddate": "2026-05-31T00:00:00",
+  "Published": true,
+  "Priority": "normal",
+  "Location": [],
+  "JobLocation": [
+   [
+    "Bangalore",
+    "Karnataka",
+    "India"
+   ]
+  ],
+  "Jobtype": "fulltime",
+  "Experience": "mid-experience",
+  "Skills": [
+   "Marketing",
+   "D2C",
+   "Amazon",
+   "Marketplace Growth",
+   "Revenue"
+  ],
+  "WorkMode": null,
+  "DisplaySalaryRange": null,
+  "DisplayExperienceRange": null,
+  "ShowSkillsInJob": false
+ },
+ {
+  "Id": "531f4c5e-6249-4197-95e9-928242f53c91",
+  "Type": "jd",
+  "Tenantid": "1009",
+  "Title": "Backend Engineer",
+  "Jdcode": "P-FS-02",
+  "JdCurrency": null,
+  "Version": "gaDupCEUQkWJim3uVKbzpw",
+  "Status": "active",
+  "Jobcategory": "Pratilipi Literature",
+  "Datecreated": "2025-11-18T07:33:45.1768945Z",
+  "Expectedenddate": "2026-01-15T00:00:00",
+  "Published": false,
+  "Priority": "urgent",
+  "Location": [],
+  "JobLocation": [
+   [
+    "Bangalore",
+    "Karnataka",
+    "India"
+   ]
+  ],
+  "Jobtype": "fulltime",
+  "Experience": "junior",
+  "Skills": [
+   "Python",
+   "Go",
+   "Node.js",
+   "AWS"
+  ],
+  "WorkMode": null,
+  "DisplaySalaryRange": null,
+  "DisplayExperienceRange": null,
+  "ShowSkillsInJob": false
+ }
+]

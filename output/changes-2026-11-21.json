@@ -1,0 +1,2944 @@
+{
+ "date": "2026-11-21",
+ "previous_run": "2026-11-20",
+ "source_baseline": "2026-11-20",
+ "shortlist": {
+  "before": 622,
+  "now": 638
+ },
+ "leads": {
+  "before": 443,
+  "now": 457
+ },
+ "added": 167,
+ "added_never_seen_before": 167,
+ "added_seen_in_older_runs": 0,
+ "moved_lead_to_shortlist": 6,
+ "moved_shortlist_to_lead": 0,
+ "left": {
+  "still listed, now skipped (duplicate of the company's own board, outside India or excluded company)": 91,
+  "still listed, now filtered out: pay below bar": 43,
+  "closed: no longer on the company's board": 3
+ },
+ "sources_failing": [],
+ "sources_suspect": [
+  "DevRev",
+  "Elastic"
+ ],
+ "sources_failed_but_carried": [
+  "Curefit",
+  "Eruditus Executive Education",
+  "Pixxel",
+  "Reprise",
+  "Treebo Hotels"
+ ],
+ "sources_failed_nothing_missing": [
+  "Agrostar",
+  "Airbus",
+  "Aptiv",
+  "AssetMark Global Wealth",
+  "BigBasket",
+  "BukuWarung",
+  "Capillary Technologies",
+  "CarDekho",
+  "Cisco",
+  "Darwinbox",
+  "Delhivery",
+  "Deutsche Bank",
+  "Digit Insurance",
+  "Edelweiss",
+  "Global Payments Inc.",
+  "Go Digit",
+  "HealthifyMe",
+  "HomeLane",
+  "Innoviti",
+  "InsuranceDekho",
+  "Invesco",
+  "Kotak Securities",
+  "KreditBee",
+  "LeadSquared",
+  "MPL",
+  "Mad Street Den",
+  "Mastercard",
+  "MobiKwik",
+  "Moneyview",
+  "NCR Corporation",
+  "OneAssist",
+  "Paper Boat Drinks",
+  "Perfios",
+  "PharmEasy",
+  "PhysicsWallah",
+  "Porter",
+  "Samunnati",
+  "Scripbox",
+  "Shivalik Small Finance Bank",
+  "Solventum",
+  "Stanza Living",
+  "Tata 1mg",
+  "Vymo",
+  "Zepto",
+  "iQuanti",
+  "upGrad"
+ ],
+ "companies_started_hiring": [
+  [
+   "Arcana",
+   1
+  ],
+  [
+   "Everpure",
+   1
+  ],
+  [
+   "JioSaavn",
+   1
+  ],
+  [
+   "Maxim AI",
+   1
+  ],
+  [
+   "Newton School",
+   6
+  ],
+  [
+   "Vahan.ai",
+   1
+  ],
+  [
+   "WinZO",
+   2
+  ]
+ ],
+ "companies_stopped_hiring": [
+  [
+   "ServiceNow",
+   1
+  ]
+ ],
+ "source_changes": [
+  {
+   "source": "American Express",
+   "before": 4,
+   "now": 2,
+   "delta": -2
+  },
+  {
+   "source": "JPMorgan Chase & Co.",
+   "before": 24,
+   "now": 23,
+   "delta": -1
+  },
+  {
+   "source": "ServiceNow",
+   "before": 1,
+   "now": 0,
+   "delta": -1
+  },
+  {
+   "source": "314e Corporation",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Accredible",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Agilitas",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Amway",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "AssetMark Global Wealth",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Atomicwork",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Classplus",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Daimler Truck Innovation Center India (DTICI)",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Elecbits",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Emergent",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Entain India",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Facilio",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Freight Tiger",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Ghost",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Houseeazy",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "India Mart",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Indian Energy Exchange",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Josh",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Kantar",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Leena AI",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Lookout",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "MatrixCare",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Mesh",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Middleware",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "NikahForever",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Optimized Electrotech",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Optym",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "PeopleStrong",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Pratilipi",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Ringg AI",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Rockstar Games",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Setu",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Slikk",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Sling Media",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Sukino Continuum Care",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "V2 Retail Ltd",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "zango",
+   "before": null,
+   "now": 0,
+   "delta": 0
+  },
+  {
+   "source": "Accord software",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Akku",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Billdesk",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Brevan Howard",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "CoRover",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "CommScope",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Dezerv",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Docyt",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Joveo",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Maxim AI",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Moglix",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "N-able",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Navera Ventures Pvt. Ltd.",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Sahi",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "SerpApi",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "SupplyHouse",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "The Depository Trust & Clearing Corporation (DTCC)",
+   "before": 8,
+   "now": 9,
+   "delta": 1
+  },
+  {
+   "source": "Tracxn",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Tradl AI",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "TransBnk",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Transak C-Corp",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Upstox",
+   "before": 0,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Vahan.ai",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Zema Global Data Corporation",
+   "before": null,
+   "now": 1,
+   "delta": 1
+  },
+  {
+   "source": "Apna",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Bachatt",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Bottemline Technologies",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "CDK Global",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Elements Energy",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Employ",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Gnani.ai",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "JAGGAER",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Meril",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "RedSeal",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "TeamViewer",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "Teladoc Health",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "athenahealth",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "graph ai",
+   "before": null,
+   "now": 2,
+   "delta": 2
+  },
+  {
+   "source": "DeepIntent",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Deltek",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Garuda Aerospace private Ltd",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Giant Eagle GCC",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Kotak Mahindra Bank",
+   "before": 17,
+   "now": 20,
+   "delta": 3
+  },
+  {
+   "source": "Liquidity Services",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Orvera AI",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Rentomojo",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Visdum",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "bp",
+   "before": null,
+   "now": 3,
+   "delta": 3
+  },
+  {
+   "source": "Dexcom",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Duck Creek Technologies",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Fortinet",
+   "before": 1,
+   "now": 5,
+   "delta": 4
+  },
+  {
+   "source": "Harmonic",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Indifi",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "PPFAS Mutual Fund",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "The Citco Group Limited",
+   "before": null,
+   "now": 4,
+   "delta": 4
+  },
+  {
+   "source": "Analog Devices",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "BMC software",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Botsync",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Easebuzz",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "FM",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Ford Motor Company",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Honeywell",
+   "before": 27,
+   "now": 32,
+   "delta": 5
+  },
+  {
+   "source": "MUFG Pension & Market Services",
+   "before": null,
+   "now": 5,
+   "delta": 5
+  },
+  {
+   "source": "Oracle",
+   "before": 10,
+   "now": 15,
+   "delta": 5
+  },
+  {
+   "source": "Cornerstone OnDemand",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "Neysa",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "Polygon Technology",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "SanDisk",
+   "before": null,
+   "now": 6,
+   "delta": 6
+  },
+  {
+   "source": "Flex",
+   "before": null,
+   "now": 7,
+   "delta": 7
+  },
+  {
+   "source": "Auzmor",
+   "before": null,
+   "now": 8,
+   "delta": 8
+  },
+  {
+   "source": "Experity",
+   "before": null,
+   "now": 8,
+   "delta": 8
+  },
+  {
+   "source": "Newton School",
+   "before": null,
+   "now": 8,
+   "delta": 8
+  },
+  {
+   "source": "Blue Machines AI",
+   "before": null,
+   "now": 9,
+   "delta": 9
+  },
+  {
+   "source": "Rockwell Automation",
+   "before": null,
+   "now": 9,
+   "delta": 9
+  },
+  {
+   "source": "Thales",
+   "before": null,
+   "now": 9,
+   "delta": 9
+  },
+  {
+   "source": "Abnormal AI",
+   "before": null,
+   "now": 10,
+   "delta": 10
+  },
+  {
+   "source": "IRIS Business Services Limited",
+   "before": null,
+   "now": 10,
+   "delta": 10
+  },
+  {
+   "source": "Medpace",
+   "before": null,
+   "now": 10,
+   "delta": 10
+  },
+  {
+   "source": "Pearson",
+   "before": null,
+   "now": 10,
+   "delta": 10
+  },
+  {
+   "source": "Parspec",
+   "before": null,
+   "now": 11,
+   "delta": 11
+  },
+  {
+   "source": "Texas Instruments",
+   "before": 18,
+   "now": 30,
+   "delta": 12
+  },
+  {
+   "source": "American Airlines",
+   "before": null,
+   "now": 13,
+   "delta": 13
+  },
+  {
+   "source": "JioHotstar",
+   "before": null,
+   "now": 15,
+   "delta": 15
+  },
+  {
+   "source": "PUMA Group",
+   "before": null,
+   "now": 16,
+   "delta": 16
+  },
+  {
+   "source": "Refold AI",
+   "before": null,
+   "now": 16,
+   "delta": 16
+  },
+  {
+   "source": "Secfix",
+   "before": null,
+   "now": 17,
+   "delta": 17
+  },
+  {
+   "source": "Xylem",
+   "before": null,
+   "now": 18,
+   "delta": 18
+  },
+  {
+   "source": "Keysight Technologies",
+   "before": null,
+   "now": 19,
+   "delta": 19
+  },
+  {
+   "source": "Amgen",
+   "before": null,
+   "now": 23,
+   "delta": 23
+  },
+  {
+   "source": "Aptiv",
+   "before": null,
+   "now": 24,
+   "delta": 24
+  },
+  {
+   "source": "Emerson",
+   "before": 24,
+   "now": 55,
+   "delta": 31
+  },
+  {
+   "source": "Gojek",
+   "before": null,
+   "now": 32,
+   "delta": 32
+  },
+  {
+   "source": "Bajaj Finserv",
+   "before": null,
+   "now": 34,
+   "delta": 34
+  },
+  {
+   "source": "Inovalon",
+   "before": null,
+   "now": 43,
+   "delta": 43
+  },
+  {
+   "source": "Eurofins",
+   "before": 6,
+   "now": 63,
+   "delta": 57
+  },
+  {
+   "source": "Cursor",
+   "before": null,
+   "now": 89,
+   "delta": 89
+  },
+  {
+   "source": "Bosch",
+   "before": null,
+   "now": 93,
+   "delta": 93
+  }
+ ],
+ "left_roles": {
+  "still listed, now skipped (duplicate of the company's own board, outside India or excluded company)": [
+   {
+    "company": "Abnormal AI",
+    "title": "Software Engineer 1 - Platform & Infrastructure",
+    "url": "https://www.linkedin.com/jobs/view/4480450380/",
+    "was": "shortlist"
+   },
+   {
+    "company": "apna",
+    "title": "Full Stack Software Developer",
+    "url": "https://www.linkedin.com/jobs/view/4484073044/",
+    "was": "shortlist"
+   },
+   {
+    "company": "PUMA Group",
+    "title": "Software Engineer I (Backend)",
+    "url": "https://www.linkedin.com/jobs/view/4490364317/",
+    "was": "lead"
+   },
+   {
+    "company": "Flexiple",
+    "title": "SDE I - Java",
+    "url": "https://www.linkedin.com/jobs/view/4490778771/",
+    "was": "lead"
+   },
+   {
+    "company": "athenahealth",
+    "title": "Member of Technical Staff- Backend",
+    "url": "https://www.linkedin.com/jobs/view/4490691416/",
+    "was": "lead"
+   },
+   {
+    "company": "JAGGAER",
+    "title": "Associate Developer, Agentic AI",
+    "url": "https://www.linkedin.com/jobs/view/4477823398/",
+    "was": "lead"
+   },
+   {
+    "company": "Ariqt Global Technologies",
+    "title": "Java Full Stack Developer",
+    "url": "https://www.linkedin.com/jobs/view/4492532835/",
+    "was": "lead"
+   },
+   {
+    "company": "RedSeal, Inc.",
+    "title": "Software Engineer II, Backend",
+    "url": "https://www.linkedin.com/jobs/view/4491492883/",
+    "was": "lead"
+   },
+   {
+    "company": "MUFG Pension & Market Services",
+    "title": "Associate Developer, JAVA",
+    "url": "https://www.linkedin.com/jobs/view/4491364869/",
+    "was": "lead"
+   },
+   {
+    "company": "Refold AI",
+    "title": "Forward Deployed Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4492458568/",
+    "was": "lead"
+   },
+   {
+    "company": "Crowe Capabilities Center – India",
+    "title": "Junior Software Engineer 1",
+    "url": "https://www.linkedin.com/jobs/view/4490718208/",
+    "was": "lead"
+   },
+   {
+    "company": "Flexiple",
+    "title": "SDE I - Golang",
+    "url": "https://www.linkedin.com/jobs/view/4490732846/",
+    "was": "lead"
+   },
+   {
+    "company": "DeepIntent",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4485588531/",
+    "was": "lead"
+   },
+   {
+    "company": "PUMA Group",
+    "title": "Software Engineer I (Backend) - Consumer Intelligence & Engagement",
+    "url": "https://www.linkedin.com/jobs/view/4487299117/",
+    "was": "lead"
+   },
+   {
+    "company": "CDK Global",
+    "title": "Assoc Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4492968597/",
+    "was": "lead"
+   },
+   {
+    "company": "iThink Digital",
+    "title": "Junior Backend Developer",
+    "url": "https://www.linkedin.com/jobs/view/4491377928/",
+    "was": "lead"
+   },
+   {
+    "company": "The Citco Group Limited",
+    "title": "IT.Developer",
+    "url": "https://www.linkedin.com/jobs/view/4488249368/",
+    "was": "lead"
+   },
+   {
+    "company": "AiLogic Neural Network Pvt Ltd",
+    "title": "Node.js Backend Developer",
+    "url": "https://www.linkedin.com/jobs/view/4491500085/",
+    "was": "lead"
+   },
+   {
+    "company": "Parspec",
+    "title": "Software Engineer - 1 (Backend)",
+    "url": "https://www.linkedin.com/jobs/view/4491702018/",
+    "was": "lead"
+   },
+   {
+    "company": "Cornerstone OnDemand",
+    "title": "Forward Deployment Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4492441012/",
+    "was": "lead"
+   },
+   {
+    "company": "athenahealth",
+    "title": "Member of Technical Staff – MTS",
+    "url": "https://www.linkedin.com/jobs/view/4487008096/",
+    "was": "lead"
+   },
+   {
+    "company": "Transak C-Corp",
+    "title": "Software Engineer, Backend: Multiple Levels (SDE 1 – EM)",
+    "url": "https://www.linkedin.com/jobs/view/4490667012/",
+    "was": "lead"
+   },
+   {
+    "company": "Amgen",
+    "title": "Associcate Python Developer- Backend (Commercialization Technology)",
+    "url": "https://www.linkedin.com/jobs/view/4479090890/",
+    "was": "lead"
+   },
+   {
+    "company": "Xylem",
+    "title": "Java Backend Developer with basic AWS knowledge",
+    "url": "https://www.linkedin.com/jobs/view/4260094537/",
+    "was": "lead"
+   },
+   {
+    "company": "Amgen",
+    "title": "Associate Fullstack Software Engineer – R&D PPM",
+    "url": "https://www.linkedin.com/jobs/view/4479099481/",
+    "was": "lead"
+   },
+   {
+    "company": "Navera Ventures Pvt. Ltd.",
+    "title": "Forward Deployed Engineer, Retail and Commerce",
+    "url": "https://www.linkedin.com/jobs/view/4491808654/",
+    "was": "lead"
+   },
+   {
+    "company": "Crowe Capabilities Center – India",
+    "title": "Junior AI Platform Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4490300205/",
+    "was": "lead"
+   },
+   {
+    "company": "Bajaj Finserv",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4485914223/",
+    "was": "lead"
+   },
+   {
+    "company": "Bajaj Finserv",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4485915198/",
+    "was": "lead"
+   },
+   {
+    "company": "Bajaj Finserv",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4485900551/",
+    "was": "lead"
+   },
+   {
+    "company": "Teladoc Health",
+    "title": "Software Engineer III - India Hyderabad Hybrid",
+    "url": "https://www.linkedin.com/jobs/view/4479574059/",
+    "was": "lead"
+   },
+   {
+    "company": "Quanteon Solutions",
+    "title": "Software Engineer (React Native + AI)",
+    "url": "https://www.linkedin.com/jobs/view/4490465246/",
+    "was": "lead"
+   },
+   {
+    "company": "Joblet-AI",
+    "title": "Fullstack Software Engineer (Remote)",
+    "url": "https://www.linkedin.com/jobs/view/4492104887/",
+    "was": "lead"
+   },
+   {
+    "company": "Dev Satva",
+    "title": "Full Stack Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4483983773/",
+    "was": "lead"
+   },
+   {
+    "company": "Joblet-AI",
+    "title": "Fullstack Software Engineer (Remote)",
+    "url": "https://www.linkedin.com/jobs/view/4489856290/",
+    "was": "lead"
+   },
+   {
+    "company": "Nuaav",
+    "title": "Full Stack Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4485808375/",
+    "was": "lead"
+   },
+   {
+    "company": "Deltek",
+    "title": "Associate Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4492936960/",
+    "was": "lead"
+   },
+   {
+    "company": "MindzMap | Digital Solutions",
+    "title": "Junior Laravel (PHP) Developer",
+    "url": "https://www.linkedin.com/jobs/view/4489453042/",
+    "was": "lead"
+   },
+   {
+    "company": "Deltek",
+    "title": "Associate Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4492954113/",
+    "was": "lead"
+   },
+   {
+    "company": "Medpace",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4436228490/",
+    "was": "lead"
+   },
+   {
+    "company": "Vanyar",
+    "title": "Palantir Applied Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4492135465/",
+    "was": "lead"
+   },
+   {
+    "company": "Conduent",
+    "title": "App Dev & Support Engineer I",
+    "url": "https://www.linkedin.com/jobs/view/4489903869/",
+    "was": "lead"
+   },
+   {
+    "company": "Konrad",
+    "title": ".NET Developer",
+    "url": "https://www.linkedin.com/jobs/view/4485840698/",
+    "was": "lead"
+   },
+   {
+    "company": "Cursor",
+    "title": "Forward Deployed Engineer - India",
+    "url": "https://www.linkedin.com/jobs/view/4472493055/",
+    "was": "lead"
+   },
+   {
+    "company": "Logical Wings Infoweb Private Limited | Enterprise Software Development",
+    "title": "Junior Full Stack Developer – Angular, PHP, MySQL & GCP (1.5 Years Experience).",
+    "url": "https://www.linkedin.com/jobs/view/4488279768/",
+    "was": "lead"
+   },
+   {
+    "company": "Secfix",
+    "title": "Backend Engineer – GTM Engineering (Fresh grad, India)",
+    "url": "https://www.linkedin.com/jobs/view/4488432838/",
+    "was": "lead"
+   },
+   {
+    "company": "Cursor",
+    "title": "Forward Deployed Engineer - India",
+    "url": "https://www.linkedin.com/jobs/view/4472481672/",
+    "was": "lead"
+   },
+   {
+    "company": "Newton School of Technology",
+    "title": "SDE + Associate Instructor - Applied Cryptopraphy",
+    "url": "https://www.linkedin.com/jobs/view/4483605810/",
+    "was": "lead"
+   },
+   {
+    "company": "Keysight Technologies",
+    "title": "IT Engineer,Software,Entry",
+    "url": "https://www.linkedin.com/jobs/view/4489413044/",
+    "was": "lead"
+   },
+   {
+    "company": "TeamViewer",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4475550705/",
+    "was": "lead"
+   },
+   {
+    "company": "Blue Machines AI",
+    "title": "Forward Deployed Engineer (Voice AI / Telephony) - Bengaluru",
+    "url": "https://www.linkedin.com/jobs/view/4482853201/",
+    "was": "lead"
+   },
+   {
+    "company": "Break The Code",
+    "title": "Junior Web Developer in Mumbai",
+    "url": "https://www.linkedin.com/jobs/view/4487855684/",
+    "was": "lead"
+   },
+   {
+    "company": "Blue Machines AI",
+    "title": "Forward Deployed Engineer (Voice AI / Telephony) - Gov.",
+    "url": "https://www.linkedin.com/jobs/view/4482863193/",
+    "was": "lead"
+   },
+   {
+    "company": "Elements Energy",
+    "title": "Software Developer",
+    "url": "https://www.linkedin.com/jobs/view/4478077363/",
+    "was": "lead"
+   },
+   {
+    "company": "IRIS Business Services Limited",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4489852491/",
+    "was": "lead"
+   },
+   {
+    "company": "Duck Creek Technologies",
+    "title": "Associate Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4483427932/",
+    "was": "lead"
+   },
+   {
+    "company": "Liquidity Services",
+    "title": "Engineer, Software Dev.",
+    "url": "https://www.linkedin.com/jobs/view/4482158082/",
+    "was": "lead"
+   },
+   {
+    "company": "Netcomm IT Solutions Pvt. Ltd.",
+    "title": "Backend Developer (Java + Spring Boot)",
+    "url": "https://www.linkedin.com/jobs/view/4488515111/",
+    "was": "lead"
+   },
+   {
+    "company": "Thales",
+    "title": "Software engineer",
+    "url": "https://www.linkedin.com/jobs/view/4488123096/",
+    "was": "lead"
+   },
+   {
+    "company": "AiLogic Neural Network Pvt Ltd",
+    "title": ".NET Full Stack Developer",
+    "url": "https://www.linkedin.com/jobs/view/4481550045/",
+    "was": "lead"
+   },
+   {
+    "company": "PPFAS Mutual Fund",
+    "title": "PHP Laravel Developer",
+    "url": "https://www.linkedin.com/jobs/view/4480347473/",
+    "was": "lead"
+   },
+   {
+    "company": "EduRun Group",
+    "title": "Java Spring Boot Developer - Microservices, Angular, Rest API",
+    "url": "https://www.linkedin.com/jobs/view/4489553196/",
+    "was": "lead"
+   },
+   {
+    "company": "Whitefield Careers",
+    "title": "Java Developer",
+    "url": "https://www.linkedin.com/jobs/view/4489583583/",
+    "was": "lead"
+   },
+   {
+    "company": "Endava",
+    "title": "Full Stack Java Developer",
+    "url": "https://www.linkedin.com/jobs/view/4492569201/",
+    "was": "lead"
+   },
+   {
+    "company": "Duck Creek Technologies",
+    "title": "Software Engineer II - PL/SQL Developer",
+    "url": "https://www.linkedin.com/jobs/view/4490466538/",
+    "was": "lead"
+   },
+   {
+    "company": "People Tech Group Inc",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4489924508/",
+    "was": "lead"
+   },
+   {
+    "company": "Pearson",
+    "title": "Software Engineer II",
+    "url": "https://www.linkedin.com/jobs/view/4492511618/",
+    "was": "lead"
+   },
+   {
+    "company": "Innovative Information Technologies, Inc.",
+    "title": "Java Developer - Java 21, Docker, Spring Boot",
+    "url": "https://www.linkedin.com/jobs/view/4489090491/",
+    "was": "lead"
+   },
+   {
+    "company": "AppRely Technologies",
+    "title": "Front End Developer",
+    "url": "https://www.linkedin.com/jobs/view/4481615983/",
+    "was": "lead"
+   },
+   {
+    "company": "Experity",
+    "title": "Software Engineer II, Java Platform",
+    "url": "https://www.linkedin.com/jobs/view/4455706821/",
+    "was": "lead"
+   },
+   {
+    "company": "Whitefield Careers",
+    "title": "Backend Engineer - Gen AI (Python,Node.JS)",
+    "url": "https://www.linkedin.com/jobs/view/4489228887/",
+    "was": "lead"
+   },
+   {
+    "company": "Appinventiv",
+    "title": "Application Developer",
+    "url": "https://www.linkedin.com/jobs/view/4488507100/",
+    "was": "lead"
+   },
+   {
+    "company": "RedSeal, Inc.",
+    "title": "Software Engineer III, Backend",
+    "url": "https://www.linkedin.com/jobs/view/4490912049/",
+    "was": "lead"
+   },
+   {
+    "company": "Ford Motor Company",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4492741502/",
+    "was": "lead"
+   },
+   {
+    "company": "Mactores",
+    "title": "Mactores - Generative AI Forward Deployed Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4490540839/",
+    "was": "lead"
+   },
+   {
+    "company": "Perennation Computer Solutions Global Private Limited",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4489371341/",
+    "was": "lead"
+   },
+   {
+    "company": "Scoutit",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4489886041/",
+    "was": "lead"
+   },
+   {
+    "company": "Brevan Howard",
+    "title": "Software Engineer - Middle Office Applications",
+    "url": "https://www.linkedin.com/jobs/view/4490381314/",
+    "was": "lead"
+   },
+   {
+    "company": "Newpage Solutions",
+    "title": "NewPage - Forward Deployed Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4485640806/",
+    "was": "lead"
+   },
+   {
+    "company": "PUMA Group",
+    "title": "Software Engineer II - Consumer Intelligence & Engagement",
+    "url": "https://www.linkedin.com/jobs/view/4473940071/",
+    "was": "lead"
+   },
+   {
+    "company": "PUMA Group",
+    "title": "Software Engineer II (Full Stack) - Consumer Intelligence & Engagement",
+    "url": "https://www.linkedin.com/jobs/view/4473940062/",
+    "was": "lead"
+   },
+   {
+    "company": "Appinventiv",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4488502346/",
+    "was": "lead"
+   },
+   {
+    "company": "Konrad",
+    "title": "MERN developer",
+    "url": "https://www.linkedin.com/jobs/view/4485844459/",
+    "was": "lead"
+   },
+   {
+    "company": "Compunet Connections",
+    "title": "Python Full Stack Developer",
+    "url": "https://www.linkedin.com/jobs/view/4489429163/",
+    "was": "lead"
+   },
+   {
+    "company": "TechDoQuest",
+    "title": "Java Backend Developer",
+    "url": "https://www.linkedin.com/jobs/view/4481077800/",
+    "was": "lead"
+   },
+   {
+    "company": "NESCODE",
+    "title": "Software Engineer-IC1",
+    "url": "https://www.linkedin.com/jobs/view/4489459397/",
+    "was": "lead"
+   },
+   {
+    "company": "SupplyHouse",
+    "title": "Backend Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4482195510/",
+    "was": "lead"
+   },
+   {
+    "company": "NESCODE",
+    "title": "Software Engineer- IC2",
+    "url": "https://www.linkedin.com/jobs/view/4489451808/",
+    "was": "lead"
+   },
+   {
+    "company": "Akku",
+    "title": "API Developer",
+    "url": "https://www.linkedin.com/jobs/view/4489097994/",
+    "was": "lead"
+   },
+   {
+    "company": "Quanteon Solutions",
+    "title": "Quanteon Solutions - Full Stack Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4487077875/",
+    "was": "lead"
+   },
+   {
+    "company": "Z47",
+    "title": "Forward Deployed Engineers | Multiple roles across Z47 portfolio companies",
+    "url": "https://www.linkedin.com/jobs/view/4483298726/",
+    "was": "lead"
+   }
+  ],
+  "closed: no longer on the company's board": [
+   {
+    "company": "ServiceNow",
+    "title": "Software Engineer",
+    "url": "https://jobs.smartrecruiters.com/ServiceNow/744000162697254-software-engineer",
+    "was": "shortlist"
+   },
+   {
+    "company": "JPMorgan Chase & Co.",
+    "title": "Software Engineer III - Java, Spring, AWS cloud, and Kafka",
+    "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210799155",
+    "was": "shortlist"
+   },
+   {
+    "company": "American Express",
+    "title": "AI Engineer II",
+    "url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26015961",
+    "was": "shortlist"
+   }
+  ],
+  "still listed, now filtered out: pay below bar": [
+   {
+    "company": "Foodhub",
+    "title": "Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4491793800/",
+    "was": "lead"
+   },
+   {
+    "company": "Ford Motor Company",
+    "title": "Java Full Stack Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4492003808/",
+    "was": "lead"
+   },
+   {
+    "company": "TurboHire",
+    "title": "Software Developer I",
+    "url": "https://www.linkedin.com/jobs/view/4489786373/",
+    "was": "lead"
+   },
+   {
+    "company": "V2 Retail Ltd",
+    "title": "Python Developer",
+    "url": "https://www.linkedin.com/jobs/view/4492573591/",
+    "was": "lead"
+   },
+   {
+    "company": "Maximl",
+    "title": "Junior ML Engineer (Computer Vision)",
+    "url": "https://maximl.zohorecruit.in/jobs/Careers/65263000006394057",
+    "was": "lead"
+   },
+   {
+    "company": "SolarSquare Energy",
+    "title": "Flutter Mobile Developer",
+    "url": "https://solarsquare.keka.com/careers/jobdetails/91602",
+    "was": "lead"
+   },
+   {
+    "company": "athenahealth",
+    "title": "Member of Technical Staff- FullStack",
+    "url": "https://www.linkedin.com/jobs/view/4480513025/",
+    "was": "lead"
+   },
+   {
+    "company": "MatrixCare",
+    "title": "Associate Engineer(C#, .net, ASP.NET MVC, SQL, AWS or Azure)",
+    "url": "https://www.linkedin.com/jobs/view/4483160320/",
+    "was": "lead"
+   },
+   {
+    "company": "Brigade Group",
+    "title": "Back End Developer",
+    "url": "https://www.linkedin.com/jobs/view/4488686627/",
+    "was": "lead"
+   },
+   {
+    "company": "Teleradiology Solutions",
+    "title": "Junior AI Engineer",
+    "url": "https://telradsol.zohorecruit.in/jobs/Careers/102249000007241027",
+    "was": "lead"
+   },
+   {
+    "company": "Teleradiology Solutions",
+    "title": "Junior AI Engineer – Applied AI (Non-Clinical)",
+    "url": "https://telradsol.zohorecruit.in/jobs/Careers/102249000007241014",
+    "was": "lead"
+   },
+   {
+    "company": "Bytebeam",
+    "title": "Backend Engineer (SDE 1)",
+    "url": "https://www.linkedin.com/jobs/view/4491611372/",
+    "was": "lead"
+   },
+   {
+    "company": "Botsync",
+    "title": "Software Development Engineer - I",
+    "url": "https://www.linkedin.com/jobs/view/4489558252/",
+    "was": "lead"
+   },
+   {
+    "company": "Visdum",
+    "title": "Laravel Developer",
+    "url": "https://www.linkedin.com/jobs/view/4489528757/",
+    "was": "lead"
+   },
+   {
+    "company": "Giant Eagle GCC",
+    "title": "Associate Engineer .Net",
+    "url": "https://www.linkedin.com/jobs/view/4485479064/",
+    "was": "lead"
+   },
+   {
+    "company": "Flex",
+    "title": "Associate Software Engineer - IT",
+    "url": "https://www.linkedin.com/jobs/view/4489092257/",
+    "was": "lead"
+   },
+   {
+    "company": "CommScope",
+    "title": "Application developer AI, CRM",
+    "url": "https://www.linkedin.com/jobs/view/4488500031/",
+    "was": "lead"
+   },
+   {
+    "company": "Sanmina",
+    "title": "Programmer Analyst",
+    "url": "https://www.linkedin.com/jobs/view/4487822829/",
+    "was": "lead"
+   },
+   {
+    "company": "Wadhwani AI",
+    "title": "Software Development Engineer - I",
+    "url": "https://wadhwaniai.zohorecruit.in/jobs/Careers/146520000006894001",
+    "was": "lead"
+   },
+   {
+    "company": "Wonder Worth Solutions",
+    "title": "L1 – Junior Software Developer ( THE BUILDER )",
+    "url": "https://www.linkedin.com/jobs/view/4487276562/",
+    "was": "lead"
+   },
+   {
+    "company": "Simple Energy",
+    "title": "SDE I – Android HMI App",
+    "url": "https://www.linkedin.com/jobs/view/4482975797/",
+    "was": "lead"
+   },
+   {
+    "company": "Prudent Corporate Advisory Services Ltd.",
+    "title": "Dotnet Developer",
+    "url": "https://www.linkedin.com/jobs/view/4492295117/",
+    "was": "lead"
+   },
+   {
+    "company": "Olive Crypto Systems Pvt. Ltd.",
+    "title": "SDE II",
+    "url": "https://www.linkedin.com/jobs/view/4488685763/",
+    "was": "lead"
+   },
+   {
+    "company": "Comviva",
+    "title": "Backend Developer",
+    "url": "https://www.linkedin.com/jobs/view/4490097005/",
+    "was": "lead"
+   },
+   {
+    "company": "Mizuho",
+    "title": "Java Developer, Equities IT",
+    "url": "https://www.linkedin.com/jobs/view/4486991051/",
+    "was": "lead"
+   },
+   {
+    "company": "Harmonic",
+    "title": "Associate SW Development Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4440692239/",
+    "was": "lead"
+   },
+   {
+    "company": "United Airlines",
+    "title": "Engineer - Machine Learning",
+    "url": "https://careers.united.com/us/en/job/GGN00002560/Engineer-Machine-Learning",
+    "was": "lead"
+   },
+   {
+    "company": "Wonder Worth Solutions",
+    "title": "L1 – Junior Software Developer ( THE BUILDER )",
+    "url": "https://www.linkedin.com/jobs/view/4479031515/",
+    "was": "lead"
+   },
+   {
+    "company": "SolarSquare Energy",
+    "title": "Backend Developer (Node Js)",
+    "url": "https://solarsquare.keka.com/careers/jobdetails/91589",
+    "was": "lead"
+   },
+   {
+    "company": "1% Club",
+    "title": "SDE-I (Backend)",
+    "url": "https://www.linkedin.com/jobs/view/4479984032/",
+    "was": "lead"
+   },
+   {
+    "company": "Scimplify",
+    "title": "SDE 1 - Back End",
+    "url": "https://scimplify.keka.com/careers/jobdetails/13661",
+    "was": "lead"
+   },
+   {
+    "company": "SolarSquare Energy",
+    "title": "MERN - Full Stack Developer",
+    "url": "https://solarsquare.keka.com/careers/jobdetails/91605",
+    "was": "lead"
+   },
+   {
+    "company": "Visteon Corporation",
+    "title": "AI Forward Deployed Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4486973631/",
+    "was": "lead"
+   },
+   {
+    "company": "Visteon Corporation",
+    "title": "AI Forward Deployed Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4486956972/",
+    "was": "lead"
+   },
+   {
+    "company": "Thryve Digital Health LLP",
+    "title": "Java Fullstack Developer",
+    "url": "https://www.linkedin.com/jobs/view/4486360066/",
+    "was": "lead"
+   },
+   {
+    "company": "Foodhub",
+    "title": "AI Application Developer",
+    "url": "https://jobs.foodhubcareers.com/jobs/Careers/345994000211499009",
+    "was": "lead"
+   },
+   {
+    "company": "Daimler Truck Innovation Center India (DTICI)",
+    "title": "AI Augmented - Full Stack Developer BSA",
+    "url": "https://www.linkedin.com/jobs/view/4492571407/",
+    "was": "lead"
+   },
+   {
+    "company": "Binated",
+    "title": "Full Stack Developer",
+    "url": "https://www.linkedin.com/jobs/view/4491813155/",
+    "was": "lead"
+   },
+   {
+    "company": "Entropik",
+    "title": "Android Developer",
+    "url": "https://jobs.smartrecruiters.com/Entropik/90975162-android-developer",
+    "was": "lead"
+   },
+   {
+    "company": "Appen",
+    "title": "Applied AI Research Engineer",
+    "url": "https://jobs.lever.co/appen-2/cf26dee7-d6ec-4e86-acaf-f481eace21e2",
+    "was": "lead"
+   },
+   {
+    "company": "Continental",
+    "title": "IT B2B/EDI Developer",
+    "url": "https://jobs.smartrecruiters.com/Continental/744000148716589-it-b2b-edi-developer-",
+    "was": "lead"
+   },
+   {
+    "company": "CITYFURNISH",
+    "title": "Full Stack Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4483855798/",
+    "was": "lead"
+   },
+   {
+    "company": "Geojit Technologies",
+    "title": "Java Software Engineer",
+    "url": "https://www.linkedin.com/jobs/view/4484437004/",
+    "was": "lead"
+   }
+  ]
+ },
+ "added_roles": [
+  {
+   "company": "Abnormal AI",
+   "title": "Software Engineer 1 - Platform & Infrastructure",
+   "url": "https://abnormal.ai/careers/jobs/8016870003?gh_jid=8016870003",
+   "pay_conf": "Strong evidence",
+   "score": 78
+  },
+  {
+   "company": "Honeywell",
+   "title": "Cloud Developer II",
+   "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Honeywell/job/162196",
+   "pay_conf": "Strong evidence",
+   "score": 78
+  },
+  {
+   "company": "Apna",
+   "title": "Full Stack Software Developer",
+   "url": "https://apply.workable.com/j/B5820BBA78",
+   "pay_conf": "Strong evidence",
+   "score": 75
+  },
+  {
+   "company": "Newton School",
+   "title": "SDE 1",
+   "url": "https://careers.newtonschool.co/newtonschool/job/sde-1-bengaluru-karnataka-india-2026090719223268",
+   "pay_conf": "Strong evidence",
+   "score": 74
+  },
+  {
+   "company": "Newton School",
+   "title": "SDE 1 + Associate Instructor - Software Development & System Designs",
+   "url": "https://careers.newtonschool.co/newtonschool/job/sde-1-associate-instructor-software-development-system-designs-pune-maharashtra-india-202609241322299",
+   "pay_conf": "Strong evidence",
+   "score": 74
+  },
+  {
+   "company": "Newton School",
+   "title": "SDE + SME - Software Development & System Designs",
+   "url": "https://careers.newtonschool.co/newtonschool/job/sde-sme-software-development-system-designs--2026092413192471",
+   "pay_conf": "Strong evidence",
+   "score": 74
+  },
+  {
+   "company": "Newton School",
+   "title": "SDE + Associate Instructor - Applied Cryptopraphy",
+   "url": "https://careers.newtonschool.co/newtonschool/job/sde-associate-instructor-applied-cryptopraphy-pune-maharashtra-india-2026102617162963",
+   "pay_conf": "Strong evidence",
+   "score": 74
+  },
+  {
+   "company": "Newton School",
+   "title": "SDE + Instructor - Mobile Application Development",
+   "url": "https://careers.newtonschool.co/newtonschool/job/sde-instructor-mobile-application-development-bengaluru-karnataka-india-2026020417002029",
+   "pay_conf": "Strong evidence",
+   "score": 72
+  },
+  {
+   "company": "Newton School",
+   "title": "SDE + Associate Instructor - Mobile Application Development",
+   "url": "https://careers.newtonschool.co/newtonschool/job/sde-associate-instructor-mobile-application-development-pune-maharashtra-india-2026020416575013",
+   "pay_conf": "Strong evidence",
+   "score": 72
+  },
+  {
+   "company": "Abnormal AI",
+   "title": "Software Engineer 2 - ADEX",
+   "url": "https://abnormal.ai/careers/jobs/8210392003?gh_jid=8210392003",
+   "pay_conf": "Strong evidence",
+   "score": 72
+  },
+  {
+   "company": "Abnormal AI",
+   "title": "Software Engineer II - ADEX",
+   "url": "https://abnormal.ai/careers/jobs/7774637003?gh_jid=7774637003",
+   "pay_conf": "Strong evidence",
+   "score": 67
+  },
+  {
+   "company": "Abnormal AI",
+   "title": "Software Engineer II -  Data Integration Platform (DIP) Ingestion",
+   "url": "https://abnormal.ai/careers/jobs/8006504003?gh_jid=8006504003",
+   "pay_conf": "Strong evidence",
+   "score": 65
+  },
+  {
+   "company": "Kotak Mahindra Bank",
+   "title": "Software Engineer_Digital Banking-Net & Mobile Banking HO Team_Mumbai",
+   "url": "https://hcbt.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/274306",
+   "pay_conf": "Strong evidence",
+   "score": 64
+  },
+  {
+   "company": "Maxim AI",
+   "title": "Member of Technical Staff",
+   "url": "https://www.getmaxim.ai/careers/member-of-technical-staff",
+   "pay_conf": "Likely",
+   "score": 64
+  },
+  {
+   "company": "Apna",
+   "title": "Full Stack Developer",
+   "url": "https://apply.workable.com/j/5883933961",
+   "pay_conf": "Strong evidence",
+   "score": 63
+  },
+  {
+   "company": "Docyt",
+   "title": "Associate Product Engineer",
+   "url": "https://apply.workable.com/j/0CC23F9D8E",
+   "pay_conf": "Unverified",
+   "score": 57
+  },
+  {
+   "company": "Rockwell Automation",
+   "title": "AI/ML Engineer",
+   "url": "https://rockwellautomation.wd1.myworkdayjobs.com/External_Rockwell_Automation/job/Pune-India/AI-ML-Engineer_R26-7600",
+   "pay_conf": "Unverified",
+   "score": 56
+  },
+  {
+   "company": "Rockwell Automation",
+   "title": "Software Engineer Product Security",
+   "url": "https://rockwellautomation.wd1.myworkdayjobs.com/External_Rockwell_Automation/job/Bengaluru-India/Software-Engineer_R26-5603",
+   "pay_conf": "Unverified",
+   "score": 56
+  },
+  {
+   "company": "JioHotstar",
+   "title": "Software Development Engineer II - FullStack GenAI",
+   "url": "https://jiostar.wd102.myworkdayjobs.com/JioStar/job/Bengaluru--We-Work/Software-Development-Engineer-II---FullStack-GenAI_JR12582",
+   "pay_conf": "Unverified",
+   "score": 55
+  },
+  {
+   "company": "Cornerstone OnDemand",
+   "title": "Software Engineer",
+   "url": "https://cornerstone.csod.com/ux/ats/careersite/2/home/requisition/11818?c=cornerstone",
+   "pay_conf": "Unverified",
+   "score": 55
+  },
+  {
+   "company": "Cornerstone OnDemand",
+   "title": "Software Engineer",
+   "url": "https://cornerstone.csod.com/ux/ats/careersite/2/home/requisition/11813?c=cornerstone",
+   "pay_conf": "Unverified",
+   "score": 55
+  },
+  {
+   "company": "Cornerstone OnDemand",
+   "title": "Software Engineer",
+   "url": "https://cornerstone.csod.com/ux/ats/careersite/2/home/requisition/11812?c=cornerstone",
+   "pay_conf": "Unverified",
+   "score": 55
+  },
+  {
+   "company": "RedSeal",
+   "title": "Software Engineer II, Backend",
+   "url": "https://redseal.applytojob.com/apply/O8BNXddGmX/Software-Engineer-II-Backend",
+   "pay_conf": "Unverified",
+   "score": 55
+  },
+  {
+   "company": "Refold AI",
+   "title": "Forward Deployed Engineer",
+   "url": "https://jobs.ashbyhq.com/refoldai/c37ea990-850c-4cc2-a4fb-d3066f08d952",
+   "pay_conf": "Unverified",
+   "score": 55
+  },
+  {
+   "company": "Blue Machines AI",
+   "title": "Backend Engineer - SDE 2 (Voice AI / Telephony Platform)",
+   "url": "https://apply.workable.com/j/EEB0D754E6",
+   "pay_conf": "Unverified",
+   "score": 54
+  },
+  {
+   "company": "Cornerstone OnDemand",
+   "title": "Forward Deployment Engineer",
+   "url": "https://cornerstone.csod.com/ux/ats/careersite/2/home/requisition/11757?c=cornerstone",
+   "pay_conf": "Unverified",
+   "score": 54
+  },
+  {
+   "company": "Parspec",
+   "title": "Software Engineer - 1 (Backend)",
+   "url": "https://jobs.ashbyhq.com/parspec/33854703-7d89-4bf1-9a08-9555f22cd21b",
+   "pay_conf": "Unverified",
+   "score": 54
+  },
+  {
+   "company": "The Citco Group Limited",
+   "title": "IT.Developer",
+   "url": "https://fa-euxc-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/20445",
+   "pay_conf": "Unverified",
+   "score": 54
+  },
+  {
+   "company": "JioHotstar",
+   "title": "Software Development Engineer II",
+   "url": "https://jiostar.wd102.myworkdayjobs.com/JioStar/job/Bengaluru--We-Work/Software-Development-Engineer-II_JR12478-1",
+   "pay_conf": "Unverified",
+   "score": 52
+  },
+  {
+   "company": "N-able",
+   "title": "Software Engineer .NET",
+   "url": "https://careers.n-able.com/jobs/21111?lang=en-us",
+   "pay_conf": "Unverified",
+   "score": 52
+  },
+  {
+   "company": "Cornerstone OnDemand",
+   "title": "AI Engineer",
+   "url": "https://cornerstone.csod.com/ux/ats/careersite/2/home/requisition/11559?c=cornerstone",
+   "pay_conf": "Unverified",
+   "score": 52
+  },
+  {
+   "company": "JioHotstar",
+   "title": "Software Development Engineer II",
+   "url": "https://jiostar.wd102.myworkdayjobs.com/JioStar/job/Bengaluru--We-Work/Software-Development-Engineer-II_JR12574",
+   "pay_conf": "Unverified",
+   "score": 51
+  },
+  {
+   "company": "JioHotstar",
+   "title": "Software Development Engineer II",
+   "url": "https://jiostar.wd102.myworkdayjobs.com/JioStar/job/Bengaluru--We-Work/Software-Development-Engineer-II_JR12470-1",
+   "pay_conf": "Unverified",
+   "score": 51
+  },
+  {
+   "company": "Moglix",
+   "title": "Java Software developer",
+   "url": "https://moglix.flexiele.com/careers/moglix/jobs?job=4057",
+   "pay_conf": "Unverified",
+   "score": 51
+  },
+  {
+   "company": "JioHotstar",
+   "title": "Software Development Engineer II",
+   "url": "https://jiostar.wd102.myworkdayjobs.com/JioStar/job/Bengaluru--We-Work/Software-Development-Engineer-II_JR12029",
+   "pay_conf": "Unverified",
+   "score": 50
+  },
+  {
+   "company": "JioHotstar",
+   "title": "Software Development Engineer II",
+   "url": "https://jiostar.wd102.myworkdayjobs.com/JioStar/job/Bengaluru--We-Work/Software-Development-Engineer-II_JR12511",
+   "pay_conf": "Unverified",
+   "score": 50
+  },
+  {
+   "company": "JioHotstar",
+   "title": "Software Development Engineer II",
+   "url": "https://jiostar.wd102.myworkdayjobs.com/JioStar/job/Bengaluru--We-Work/Software-Development-Engineer-II_JR12389-1",
+   "pay_conf": "Unverified",
+   "score": 50
+  },
+  {
+   "company": "JioHotstar",
+   "title": "Software Development Engineer II",
+   "url": "https://jiostar.wd102.myworkdayjobs.com/JioStar/job/Bengaluru--We-Work/Software-Development-Engineer-II_JR11982",
+   "pay_conf": "Unverified",
+   "score": 50
+  },
+  {
+   "company": "Amgen",
+   "title": "Fullstack Developer",
+   "url": "https://careers.amgen.com/en/job/hyderabad/fullstack-developer/87/95978710624",
+   "pay_conf": "Unverified",
+   "score": 50
+  },
+  {
+   "company": "JAGGAER",
+   "title": "Associate Developer, Agentic AI",
+   "url": "https://incareers-jaggaer.icims.com/jobs/4197/associate-developer%2c-agentic-ai/job",
+   "pay_conf": "Unverified",
+   "score": 50
+  },
+  {
+   "company": "Secfix",
+   "title": "Backend Engineer – GTM Engineering (Fresh grad, India)",
+   "url": "https://jobs.ashbyhq.com/secfix/583140f4-b26c-47b4-a9be-c7a88dc3c0f5",
+   "pay_conf": "Unverified",
+   "score": 50
+  },
+  {
+   "company": "Bosch",
+   "title": "GenAI/Agentic AI specialists",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000161679729-genai-agentic-ai-specialists",
+   "pay_conf": "Unverified",
+   "score": 49
+  },
+  {
+   "company": "Bosch",
+   "title": "GenAI/Agentic AI specialists",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000161679689-genai-agentic-ai-specialists",
+   "pay_conf": "Unverified",
+   "score": 49
+  },
+  {
+   "company": "JioHotstar",
+   "title": "Software Development Engineer II",
+   "url": "https://jiostar.wd102.myworkdayjobs.com/JioStar/job/Bengaluru--We-Work/Software-Development-Engineer-II_JR12406",
+   "pay_conf": "Unverified",
+   "score": 49
+  },
+  {
+   "company": "JioHotstar",
+   "title": "Software Development Engineer II",
+   "url": "https://jiostar.wd102.myworkdayjobs.com/JioStar/job/Bengaluru--We-Work/Software-Development-Engineer-II_JR12226",
+   "pay_conf": "Unverified",
+   "score": 49
+  },
+  {
+   "company": "Dexcom",
+   "title": "SW Development Engineer 2",
+   "url": "https://careers.dexcom.com/careers/job/45374441",
+   "pay_conf": "Unverified",
+   "score": 49
+  },
+  {
+   "company": "Keysight Technologies",
+   "title": "IT Engineer,Software,Entry",
+   "url": "https://jobs.keysight.com/jobs/56451?lang=en-us",
+   "pay_conf": "Unverified",
+   "score": 49
+  },
+  {
+   "company": "Keysight Technologies",
+   "title": "IT Engineer,Software,Expert",
+   "url": "https://jobs.keysight.com/jobs/55179?lang=en-us",
+   "pay_conf": "Unverified",
+   "score": 49
+  },
+  {
+   "company": "Teladoc Health",
+   "title": "Software Engineer III - India Hyderabad Hybrid",
+   "url": "https://teladoc.wd503.myworkdayjobs.com/teladochealth_is_hiring/job/IND---Any-Location-Remote/Software-Engineer-III---India-Hyderabad-Hybrid_JR21230",
+   "pay_conf": "Unverified",
+   "score": 49
+  },
+  {
+   "company": "Gnani.ai",
+   "title": "Applied AI Engineer",
+   "url": "https://careers.gnani.ai/apply/App--2026-04-03-66",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "Amgen",
+   "title": "Associate Front End Developer , Commercialization Technology",
+   "url": "https://careers.amgen.com/en/job/hyderabad/associate-front-end-developer-commercialization-technology/87/101898173072",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "Amgen",
+   "title": "Associcate Python Developer- Backend (Commercialization Technology)",
+   "url": "https://careers.amgen.com/en/job/hyderabad/associcate-python-developer-backend-commercialization-technology/87/101898173056",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "Amgen",
+   "title": "Associate Fullstack Software Engineer – R&D PPM",
+   "url": "https://careers.amgen.com/en/job/hyderabad/associate-fullstack-software-engineer-r-and-d-ppm/87/101898173008",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "PUMA Group",
+   "title": "Software Engineer I (Backend)",
+   "url": "https://about.puma.com/en/jobs/software-engineer-i-backend-r44425",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "PUMA Group",
+   "title": "Software Engineer I (Full Stack)",
+   "url": "https://about.puma.com/en/jobs/software-engineer-i-full-stack-r44422",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "PUMA Group",
+   "title": "Software Engineer I (Backend) - Consumer Intelligence & Engagement",
+   "url": "https://about.puma.com/en/jobs/software-engineer-i-backend-consumer-intelligence-engagement-r44264",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "PUMA Group",
+   "title": "Software Engineer I (Full Stack) - Consumer Intelligence &",
+   "url": "https://about.puma.com/en/jobs/software-engineer-i-full-stack-consumer-intelligence-r44265",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "Blue Machines AI",
+   "title": "Forward Deployed Engineer (Voice AI / Telephony) - Bengaluru",
+   "url": "https://apply.workable.com/j/99E7C7C77A",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "Blue Machines AI",
+   "title": "Forward Deployed Engineer (Voice AI / Telephony) - Chennai",
+   "url": "https://apply.workable.com/j/775F8D241C",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "Blue Machines AI",
+   "title": "Forward Deployed Engineer (Voice AI / Telephony) - Delhi",
+   "url": "https://apply.workable.com/j/E42C10C461",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "Blue Machines AI",
+   "title": "Forward Deployed Engineer (Voice AI / Telephony) - Gov.",
+   "url": "https://apply.workable.com/j/EF54892402",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "Blue Machines AI",
+   "title": "Forward Deployed Engineer (Voice AI / Telephony) - Mumbai",
+   "url": "https://apply.workable.com/j/663954B40B",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "FM",
+   "title": "Appl Developer Analyst IND",
+   "url": "https://talent500.com/jobs/fmindia/appl-developer-analyst-acrgis-administration-bengaluru-T500-30594/",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "Transak C-Corp",
+   "title": "Software Engineer, Backend: Multiple Levels (SDE 1 – EM)",
+   "url": "https://careers.transak.com/p/750b99be3a2101-software-engineer-backend-multiple-levels-sde-1-em",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "TransBnk",
+   "title": "Junior java developer",
+   "url": "https://www.tbx.co.in/careers#junior-java-developer",
+   "pay_conf": "Unverified",
+   "score": 48
+  },
+  {
+   "company": "JioHotstar",
+   "title": "Software Development Engineer II",
+   "url": "https://jiostar.wd102.myworkdayjobs.com/JioStar/job/Bengaluru--We-Work/Software-Development-Engineer-II_JR12421",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "JioHotstar",
+   "title": "Software Development Engineer II",
+   "url": "https://jiostar.wd102.myworkdayjobs.com/JioStar/job/Bengaluru--We-Work/Senior-Software-Development-Engineer_JR11940",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "JioHotstar",
+   "title": "Software Development Engineer II - Web",
+   "url": "https://jiostar.wd102.myworkdayjobs.com/JioStar/job/Bengaluru/Software-Development-Engineer-II---Web_JR10301",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "JioHotstar",
+   "title": "Software Development Engineer II - Web",
+   "url": "https://jiostar.wd102.myworkdayjobs.com/JioStar/job/Bengaluru/Software-Development-Engineer-II---Web_JR10487",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "Gnani.ai",
+   "title": "Full Stack+AI Engineer",
+   "url": "https://careers.gnani.ai/apply/Fil--2026-11-02-159",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "Amgen",
+   "title": "Associate IS Engineer - Veeva Vault",
+   "url": "https://careers.amgen.com/en/job/hyderabad/associate-is-engineer-veeva-vault/87/92624297568",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "Keysight Technologies",
+   "title": "IT Engineer,Software,Entry",
+   "url": "https://jobs.keysight.com/jobs/55173?lang=en-us",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "Keysight Technologies",
+   "title": "IT Engineer,Software,Entry",
+   "url": "https://jobs.keysight.com/jobs/55169?lang=en-us",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "Liquidity Services",
+   "title": "Engineer, Software Dev.",
+   "url": "https://ebwi.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/408",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "Pearson",
+   "title": "Cloud Services Engineer III",
+   "url": "https://hccz.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/26373",
+   "pay_conf": "Unverified",
+   "score": 47
+  },
+  {
+   "company": "JioHotstar",
+   "title": "Software Development Engineer II",
+   "url": "https://jiostar.wd102.myworkdayjobs.com/JioStar/job/Bengaluru--We-Work/Software-Development-Engineer-II--Web----VX_JR10213",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "Amgen",
+   "title": "Associate Software Engineer - DTI Marketing",
+   "url": "https://careers.amgen.com/en/job/hyderabad/associate-software-engineer-dti-marketing/87/101019321792",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "Indifi",
+   "title": "Andriod Developer",
+   "url": "https://www.indifi.com/careers#andriod-developer",
+   "pay_conf": "Unverified",
+   "score": 46
+  },
+  {
+   "company": "FM",
+   "title": "Software Engineer IND",
+   "url": "https://talent500.com/jobs/fmindia/software-engineer-ind-dynamics-365-bengaluru-T500-29560/",
+   "pay_conf": "Unverified",
+   "score": 45
+  },
+  {
+   "company": "FM",
+   "title": "Software Engineer IND",
+   "url": "https://talent500.com/jobs/fmindia/software-engineer-ind-bengaluru-T500-29928/",
+   "pay_conf": "Unverified",
+   "score": 45
+  },
+  {
+   "company": "Thales",
+   "title": "Software engineer",
+   "url": "https://thales.wd3.myworkdayjobs.com/Careers/job/Noida/Software-engineer_R0346585-1",
+   "pay_conf": "Unverified",
+   "score": 45
+  },
+  {
+   "company": "Bosch",
+   "title": "Full stack Engineer",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000160794268-full-stack-engineer",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "Bosch",
+   "title": "Apriso MES Engineer",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000146789028-apriso-mes-engineer",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "Bosch",
+   "title": "GenAI/Agentic AI specialists",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000143515178-genai-agentic-ai-specialists",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "PUMA Group",
+   "title": "Software Engineer II (Backend)",
+   "url": "https://about.puma.com/en/jobs/software-engineer-ii-backend-r44426",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "PUMA Group",
+   "title": "Software Engineer II (Full stack)",
+   "url": "https://about.puma.com/en/jobs/software-engineer-ii-full-stack-r44423",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "PUMA Group",
+   "title": "Software Engineer II (Quality) - Core Commerce Platfor",
+   "url": "https://about.puma.com/en/jobs/software-engineer-ii-quality-core-commerce-platfor-r44419",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "PUMA Group",
+   "title": "Software Engineer II - Core Commerce Platform",
+   "url": "https://about.puma.com/en/jobs/software-engineer-ii-core-commerce-platform-r44418",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "PUMA Group",
+   "title": "Software Engineer II (Backend) - Consumer Intelligence & Engagement",
+   "url": "https://about.puma.com/en/jobs/software-engineer-ii-backend-consumer-intelligence-engagement-r44266",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "PUMA Group",
+   "title": "Software Engineer II (Full stack) - Consumer Intelligence & Engagement",
+   "url": "https://about.puma.com/en/jobs/software-engineer-ii-full-stack-consumer-intelligence-engagement-r44267",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "PUMA Group",
+   "title": "Software Engineer II (Quality) - Core Commerce Platform",
+   "url": "https://about.puma.com/en/jobs/software-engineer-ii-quality-core-commerce-platform-r43180",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "PUMA Group",
+   "title": "Software Engineer II (Quality) - Consumer Intelligence & Engagement",
+   "url": "https://about.puma.com/en/jobs/software-engineer-ii-quality-consumer-intelligence-engagement-r43556",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "PUMA Group",
+   "title": "Software Engineer II - Consumer Intelligence & Engagement",
+   "url": "https://about.puma.com/en/jobs/software-engineer-ii-consumer-intelligence-engagement-r43558",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "PUMA Group",
+   "title": "Software Engineer II (Mobile) - CONSUMER EXPERIENCE ENGINEERING",
+   "url": "https://about.puma.com/en/jobs/software-engineer-ii-mobile-consumer-experience-engineering-r43725",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "Dexcom",
+   "title": "SW Development Engineer 2 - IOS",
+   "url": "https://careers.dexcom.com/careers/job/44431523",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "Pearson",
+   "title": "Software Engineer II",
+   "url": "https://hccz.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/24944",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "Indifi",
+   "title": "UI Developer",
+   "url": "https://www.indifi.com/careers#ui-developer",
+   "pay_conf": "Unverified",
+   "score": 44
+  },
+  {
+   "company": "Experity",
+   "title": "Software Engineer II",
+   "url": "https://experity.wd108.myworkdayjobs.com/Experity_Careers/job/Bengaluru-Office/Software-Engineer-II_JR100356",
+   "pay_conf": "Unverified",
+   "score": 43
+  },
+  {
+   "company": "Keysight Technologies",
+   "title": "R&D Engineer 3, Software",
+   "url": "https://jobs.keysight.com/jobs/57071?lang=en-us",
+   "pay_conf": "Unverified",
+   "score": 43
+  },
+  {
+   "company": "RedSeal",
+   "title": "Software Engineer III, Backend",
+   "url": "https://redseal.applytojob.com/apply/5Me2CkeOW2/Software-Engineer-III-Backend",
+   "pay_conf": "Unverified",
+   "score": 43
+  },
+  {
+   "company": "Brevan Howard",
+   "title": "Software Engineer - Middle Office Applications",
+   "url": "https://careers.brevanhoward.com/gb/en/job/BHABHAGBJR101661EXTERNALENGB/Software-Engineer-Middle-Office-Applications",
+   "pay_conf": "Unverified",
+   "score": 42
+  },
+  {
+   "company": "Parspec",
+   "title": "Software Engineer - 2 (Backend)",
+   "url": "https://jobs.ashbyhq.com/parspec/55ae4708-5bca-4b9f-b3d4-c9f75ca288d5",
+   "pay_conf": "Unverified",
+   "score": 42
+  },
+  {
+   "company": "Thales",
+   "title": "Golang Developer",
+   "url": "https://thales.wd3.myworkdayjobs.com/Careers/job/Bangalore---Indraprastha/Golang-Developer_R0338517-1",
+   "pay_conf": "Unverified",
+   "score": 42
+  },
+  {
+   "company": "Zema Global Data Corporation",
+   "title": "Software Engineer (India)",
+   "url": "https://jobs.deel.com/zema.global/job-details/f5fc6ab6-7fef-423b-a607-ed90a5169590/overview",
+   "pay_conf": "Unverified",
+   "score": 42
+  },
+  {
+   "company": "TeamViewer",
+   "title": "Software Engineer",
+   "url": "https://careers.teamviewer.com/jobs/8497054-software-engineer",
+   "pay_conf": "Unverified",
+   "score": 41
+  },
+  {
+   "company": "Navera Ventures Pvt. Ltd.",
+   "title": "Forward Deployed Engineer, Retail and Commerce",
+   "url": "https://evaluate.naveraventures.com/jobs/c578853d-8f47-4dcf-b0d8-29155977dbfe?company_id=39699df7-e2ae-4e49-b94b-ab65cd7f08ab",
+   "pay_conf": "Unverified",
+   "score": 41
+  },
+  {
+   "company": "Thales",
+   "title": "AI Engineer",
+   "url": "https://thales.wd3.myworkdayjobs.com/Careers/job/Bangalore/Full-Stack---Scrum-Master-Lead_R0341051-1",
+   "pay_conf": "Unverified",
+   "score": 41
+  },
+  {
+   "company": "Bosch",
+   "title": "STIBO STEP Jr Developer",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000161763598-stibo-step-jr-developer",
+   "pay_conf": "Unverified",
+   "score": 40
+  },
+  {
+   "company": "Bosch",
+   "title": "Full Stack Developer",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000160600719-full-stack-developer",
+   "pay_conf": "Unverified",
+   "score": 40
+  },
+  {
+   "company": "PUMA Group",
+   "title": "AI Engineer – DTC Platform Engineering",
+   "url": "https://about.puma.com/en/jobs/ai-engineer-dtc-platform-engineering-r44420",
+   "pay_conf": "Unverified",
+   "score": 40
+  },
+  {
+   "company": "Cornerstone OnDemand",
+   "title": "AI Engineer - India",
+   "url": "https://cornerstone.csod.com/ux/ats/careersite/2/home/requisition/11241?c=cornerstone",
+   "pay_conf": "Unverified",
+   "score": 40
+  },
+  {
+   "company": "Keysight Technologies",
+   "title": "IT Engineer,Software,Entry",
+   "url": "https://jobs.keysight.com/jobs/56452?lang=en-us",
+   "pay_conf": "Unverified",
+   "score": 40
+  },
+  {
+   "company": "Bosch",
+   "title": "AI & Backend Software Engineer – Intellectual Property Rights(Python / FastAPI / GenAI)",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000162220979-ai-backend-software-engineer-intellectual-property-rights-python-fastapi-genai-",
+   "pay_conf": "Unverified",
+   "score": 39
+  },
+  {
+   "company": "Bosch",
+   "title": "Python_Fullstack_And_Cloud_Developer",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000160790108-python-fullstack-and-cloud-developer",
+   "pay_conf": "Unverified",
+   "score": 39
+  },
+  {
+   "company": "Experity",
+   "title": "Software Engineer II, Java Platform",
+   "url": "https://experity.wd108.myworkdayjobs.com/Experity_Careers/job/Bengaluru-Office/Software-Engineer-II--Java-Platform_JR100193",
+   "pay_conf": "Unverified",
+   "score": 39
+  },
+  {
+   "company": "Experity",
+   "title": "Software Engineer II, EMR Platform",
+   "url": "https://experity.wd108.myworkdayjobs.com/Experity_Careers/job/Bengaluru-Office/Senior-Software-Engineer--EMR-Platform_JR100201",
+   "pay_conf": "Unverified",
+   "score": 39
+  },
+  {
+   "company": "Rockwell Automation",
+   "title": "IFS Cloud Developer",
+   "url": "https://rockwellautomation.wd1.myworkdayjobs.com/External_Rockwell_Automation/job/India-Bengaluru/Senior-Developer-IFS-Cloud_R26-5159",
+   "pay_conf": "Unverified",
+   "score": 39
+  },
+  {
+   "company": "Indifi",
+   "title": "NodeJs developer",
+   "url": "https://www.indifi.com/careers#nodejs-developer",
+   "pay_conf": "Unverified",
+   "score": 39
+  },
+  {
+   "company": "SanDisk",
+   "title": "AI and ML Engineer",
+   "url": "https://avature.sandisk.com/Careers/JobDetail/AI-and-ML-Engineer/4453",
+   "pay_conf": "Unverified",
+   "score": 38
+  },
+  {
+   "company": "Bosch",
+   "title": "VM Brakes - ASW Algorithm Software Developer [Indian OEM]-",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000162443139-vm-brakes-asw-algorithm-software-developer-indian-oem-",
+   "pay_conf": "Unverified",
+   "score": 38
+  },
+  {
+   "company": "Bosch",
+   "title": "VM Brakes - ASW Algorithm Software Developer [Indian OEM]-",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000162442879-vm-brakes-asw-algorithm-software-developer-indian-oem-",
+   "pay_conf": "Unverified",
+   "score": 38
+  },
+  {
+   "company": "Bosch",
+   "title": "Algorithm SW (ASW) Developer for Braking Systems (Hybrid Electric & Autonomous Vehicle Functions) -2026",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000162442809-algorithm-sw-asw-developer-for-braking-systems-hybrid-electric-autonomous-vehicle-functions-2026",
+   "pay_conf": "Unverified",
+   "score": 38
+  },
+  {
+   "company": "Bosch",
+   "title": "UX Designer/ Java developer",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000159553918-ux-designer-java-developer",
+   "pay_conf": "Unverified",
+   "score": 38
+  },
+  {
+   "company": "Bachatt",
+   "title": "Java Springboot Backend SDE 2 / SDE 3",
+   "url": "https://bachatt.app/careers/2",
+   "pay_conf": "Unverified",
+   "score": 38
+  },
+  {
+   "company": "Aptiv",
+   "title": "Advanced Software Engineer- C++ Simulation",
+   "url": "https://aptiv.wd5.myworkdayjobs.com/APTIV_CAREERS/job/Bangalore-India/Advanced-Software-Engineer--C---Simulation_J000704017",
+   "pay_conf": "Unverified",
+   "score": 38
+  },
+  {
+   "company": "Orvera AI",
+   "title": "Backend Engineer (Python)",
+   "url": "https://orvera.ai/careers/backend-engineer-python",
+   "pay_conf": "Unverified",
+   "score": 38
+  },
+  {
+   "company": "SupplyHouse",
+   "title": "Backend Engineer",
+   "url": "https://boards.greenhouse.io/supplyhouse/jobs/6208712004?gh_jid=6208712004",
+   "pay_conf": "Unverified",
+   "score": 37
+  },
+  {
+   "company": "Experity",
+   "title": "AI & ML Engineer",
+   "url": "https://experity.wd108.myworkdayjobs.com/Experity_Careers/job/Bengaluru-Office/AI---ML-Engineer_JR100184",
+   "pay_conf": "Unverified",
+   "score": 37
+  },
+  {
+   "company": "Thales",
+   "title": "Cyber Security-Software Development",
+   "url": "https://thales.wd3.myworkdayjobs.com/Careers/job/Bangalore---Indraprastha/Senior-Engineer---Cyber-Security_R0328167-1",
+   "pay_conf": "Unverified",
+   "score": 37
+  },
+  {
+   "company": "Thales",
+   "title": "AdvSec Software Development Engineer – STL /",
+   "url": "https://thales.wd3.myworkdayjobs.com/Careers/job/Noida/AdvSec-Software-Development-Engineer---STL--_R0270564",
+   "pay_conf": "Unverified",
+   "score": 37
+  },
+  {
+   "company": "graph ai",
+   "title": "Full-stack Developer",
+   "url": "https://graphsafety.ai/careers/#full-stack-developer",
+   "pay_conf": "Unverified",
+   "score": 37
+  },
+  {
+   "company": "The Depository Trust & Clearing Corporation (DTCC)",
+   "title": "KNIME / PowerApps Developer",
+   "url": "https://ebxr.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/214172",
+   "pay_conf": "Unverified",
+   "score": 36
+  },
+  {
+   "company": "Bottemline Technologies",
+   "title": "Forward-Deployed AI Engineer",
+   "url": "https://job-boards.greenhouse.io/bottomlinetechnologies/jobs/8860076002",
+   "pay_conf": "Unverified",
+   "score": 36
+  },
+  {
+   "company": "Bottemline Technologies",
+   "title": "Forward-Deployed AI Engineer",
+   "url": "https://job-boards.greenhouse.io/bottomlinetechnologies/jobs/8860069002",
+   "pay_conf": "Unverified",
+   "score": 36
+  },
+  {
+   "company": "Bosch",
+   "title": "Oracle SQL developer",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000153495804-oracle-sql-developer",
+   "pay_conf": "Unverified",
+   "score": 36
+  },
+  {
+   "company": "Akku",
+   "title": "API Developer",
+   "url": "https://cloudnowtech.zohorecruit.com/jobs/Careers/773744000003474096",
+   "pay_conf": "Unverified",
+   "score": 36
+  },
+  {
+   "company": "Blue Machines AI",
+   "title": "Software Development Engineer II - Multichannel Agents",
+   "url": "https://apply.workable.com/j/0452C0CC4F",
+   "pay_conf": "Unverified",
+   "score": 36
+  },
+  {
+   "company": "The Citco Group Limited",
+   "title": "AI/ML Engineer",
+   "url": "https://fa-euxc-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/19832",
+   "pay_conf": "Unverified",
+   "score": 36
+  },
+  {
+   "company": "Analog Devices",
+   "title": "Software Engineer",
+   "url": "https://analogdevices.wd1.myworkdayjobs.com/External/job/India-Bangalore-Nova/Software-Engineer_R266038",
+   "pay_conf": "Unverified",
+   "score": 36
+  },
+  {
+   "company": "Bosch",
+   "title": "Infrastructure, Automation & Integration Engineer",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000153674539-infrastructure-automation-integration-engineer",
+   "pay_conf": "Unverified",
+   "score": 35
+  },
+  {
+   "company": "Amgen",
+   "title": "Associate IS Engineer",
+   "url": "https://careers.amgen.com/en/job/hyderabad/associate-is-engineer/87/102473130192",
+   "pay_conf": "Unverified",
+   "score": 35
+  },
+  {
+   "company": "Liquidity Services",
+   "title": "Engineer II, Software Dev.",
+   "url": "https://ebwi.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/409",
+   "pay_conf": "Unverified",
+   "score": 35
+  },
+  {
+   "company": "Pearson",
+   "title": "Software Engineering, Team Manager",
+   "url": "https://hccz.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/26270",
+   "pay_conf": "Unverified",
+   "score": 35
+  },
+  {
+   "company": "Pearson",
+   "title": "Software Engineer III",
+   "url": "https://hccz.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/25730",
+   "pay_conf": "Unverified",
+   "score": 35
+  },
+  {
+   "company": "Teladoc Health",
+   "title": "Software Engineer III",
+   "url": "https://teladoc.wd503.myworkdayjobs.com/teladochealth_is_hiring/job/IND---Any-Location-Remote/Software-Engineer-III_JR21202",
+   "pay_conf": "Unverified",
+   "score": 35
+  },
+  {
+   "company": "The Citco Group Limited",
+   "title": "Python Developer - Intelligence Automation",
+   "url": "https://fa-euxc-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/20301",
+   "pay_conf": "Unverified",
+   "score": 35
+  },
+  {
+   "company": "Joveo",
+   "title": "Software Engineer (AWS)",
+   "url": "https://careers.joveo.com/job/01a0481d-ee3b-7a72-993f-f91fc90eae5a",
+   "pay_conf": "Unverified",
+   "score": 35
+  },
+  {
+   "company": "SanDisk",
+   "title": "AI and ML Engineer",
+   "url": "https://avature.sandisk.com/Careers/JobDetail/AI-and-ML-Engineer/3874",
+   "pay_conf": "Unverified",
+   "score": 34
+  },
+  {
+   "company": "Bosch",
+   "title": "Full stack (Angular & C#)",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000138994758-full-stack-angular-c-",
+   "pay_conf": "Unverified",
+   "score": 34
+  },
+  {
+   "company": "CoRover",
+   "title": "full stack developer",
+   "url": "https://corover.ai/company/careers/full-stack-developer",
+   "pay_conf": "Unverified",
+   "score": 34
+  },
+  {
+   "company": "Aptiv",
+   "title": "Advanced Software Engineer - SW Functional Testing",
+   "url": "https://aptiv.wd5.myworkdayjobs.com/APTIV_CAREERS/job/Bangalore-India/Advanced-Software-Engineer_J000705138",
+   "pay_conf": "Unverified",
+   "score": 34
+  },
+  {
+   "company": "Aptiv",
+   "title": "Member of Technical Staff - Typescript",
+   "url": "https://aptiv.wd5.myworkdayjobs.com/APTIV_CAREERS/job/IND-Bangalore-India-2-SEZ---WR/Sr-Member-of-Technical-Staff---Typescript_J000693517",
+   "pay_conf": "Unverified",
+   "score": 34
+  },
+  {
+   "company": "Aptiv",
+   "title": "Advance Software Engineer",
+   "url": "https://aptiv.wd5.myworkdayjobs.com/APTIV_CAREERS/job/Bangalore-India/Advance-Software-Engineer_J000705058",
+   "pay_conf": "Unverified",
+   "score": 34
+  },
+  {
+   "company": "Aptiv",
+   "title": "Member of Technical Staff",
+   "url": "https://aptiv.wd5.myworkdayjobs.com/APTIV_CAREERS/job/IND-India-Home-Office---WR/Member-of-Technical-Staff---Remote-Role_J000702686",
+   "pay_conf": "Unverified",
+   "score": 34
+  },
+  {
+   "company": "Aptiv",
+   "title": "Member of Technical Staff – DO178/ IEC 61508/ IEC 62304 Certification",
+   "url": "https://aptiv.wd5.myworkdayjobs.com/APTIV_CAREERS/job/IND-Bangalore-India-2-SEZ---WR/Member-of-Technical-Staff---DO178-Certification_J000702388-1",
+   "pay_conf": "Unverified",
+   "score": 34
+  },
+  {
+   "company": "Aptiv",
+   "title": "SWDL/OTA Software Developer",
+   "url": "https://aptiv.wd5.myworkdayjobs.com/APTIV_CAREERS/job/Bangalore-India/SWDL-OTA-Software-Developer_J000704666",
+   "pay_conf": "Unverified",
+   "score": 34
+  },
+  {
+   "company": "Orvera AI",
+   "title": "Frontend Engineer",
+   "url": "https://orvera.ai/careers/frontend-engineer",
+   "pay_conf": "Unverified",
+   "score": 34
+  },
+  {
+   "company": "Pearson",
+   "title": "Software Engineer III",
+   "url": "https://hccz.fa.em3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/25010",
+   "pay_conf": "Unverified",
+   "score": 34
+  },
+  {
+   "company": "SanDisk",
+   "title": "Software Engineer , Software Development Engineering (Apps)  3-6 years - Artifactory",
+   "url": "https://avature.sandisk.com/Careers/JobDetail/Software-Engineer-Software-Development-Engineering-Apps-3-6-years-Artifactory/3134",
+   "pay_conf": "Unverified",
+   "score": 33
+  },
+  {
+   "company": "Bosch",
+   "title": "Full Stack Software Developer with AI expertise, Pune",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000155451389-full-stack-software-developer-with-ai-expertise-pune",
+   "pay_conf": "Unverified",
+   "score": 33
+  },
+  {
+   "company": "Bosch",
+   "title": "Software Developer",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000153372859-software-developer",
+   "pay_conf": "Unverified",
+   "score": 33
+  },
+  {
+   "company": "Bosch",
+   "title": "C# & C++ developer",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000152510308-c-c-developer",
+   "pay_conf": "Unverified",
+   "score": 33
+  },
+  {
+   "company": "Bosch",
+   "title": "C# & C++ developer",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000152442368-c-c-developer",
+   "pay_conf": "Unverified",
+   "score": 33
+  },
+  {
+   "company": "Bosch",
+   "title": "C# & C++ developer",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000152327948-c-c-developer",
+   "pay_conf": "Unverified",
+   "score": 33
+  },
+  {
+   "company": "Bosch",
+   "title": "SW Developer - Frontend & Backend (Core Java & Angular)",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000138992861-sw-developer-frontend-backend-core-java-angular-",
+   "pay_conf": "Unverified",
+   "score": 33
+  },
+  {
+   "company": "Bosch",
+   "title": "SAP SLT Developer-2n",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000155412979-sap-slt-developer-2n",
+   "pay_conf": "Unverified",
+   "score": 32
+  },
+  {
+   "company": "Bosch",
+   "title": "Automotive Aftermarket Diagnostic Developer (BAN & PUNE)",
+   "url": "https://jobs.smartrecruiters.com/BoschGroup/744000146001769-automotive-aftermarket-diagnostic-developer-ban-pune-",
+   "pay_conf": "Unverified",
+   "score": 32
+  }
+ ]
+}

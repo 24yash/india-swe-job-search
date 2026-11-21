@@ -1,0 +1,64 @@
+{
+ "jobs": {
+  "company": {
+   "name": "Acme InterMESH Ltd.",
+   "slug": "acme"
+  },
+  "loadMore": true,
+  "positions": [
+   {
+    "id": "6afe8f11959ab66da6cf450e",
+    "title": "Software Engineer - Backend",
+    "location": {
+     "searchText": "Noida, Uttar Pradesh, India",
+     "gPlace": {
+      "formatted_address": "Noida, Uttar Pradesh, India"
+     }
+    },
+    "expRange": {
+     "minimum": "2",
+     "maximum": "5"
+    },
+    "department": "Technology",
+    "role": "Engineer",
+    "salary": {
+     "minimum": "1500000",
+     "maximum": "2500000"
+    },
+    "salType": "P.A",
+    "description": "<p>Build services in Java.</p><script>alert(1)</script><p>Own APIs.</p>"
+   },
+   {
+    "id": "6afe8dc5959ab66da6cf44ca",
+    "title": "Zonal Manager",
+    "location": {
+     "searchText": "Surat, Gujarat, India",
+     "gPlace": {
+      "formatted_address": "Surat, Gujarat, India"
+     }
+    },
+    "expRange": {
+     "minimum": "7",
+     "maximum": "10"
+    },
+    "description": "<p>Sales.</p>"
+   },
+   {
+    "id": "6af6a347c8c46ac30f8f4cf6",
+    "title": "Backend Engineer",
+    "location": {
+     "searchText": "Dubai, Dubai, United Arab Emirates",
+     "gPlace": {
+      "formatted_address": "Dubai, Dubai, United Arab Emirates"
+     }
+    },
+    "expRange": {
+     "minimum": "2",
+     "maximum": "4"
+    },
+    "description": "<p>Go.</p>"
+   }
+  ]
+ },
+ "showLoadMore": true
+}

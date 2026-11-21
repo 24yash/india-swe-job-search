@@ -30,6 +30,16 @@ ROOT = Path(__file__).parent
 OUT = ROOT / "output"
 
 
+FAILED_NOTE = re.compile(r"^[A-Za-z_]\w*:|^suspect read")  # crawl() writes "<ExceptionName>: ..." for every reader failure
+
+
+def failed_read(note):
+    """A raw file's note marks a failed or suspect read: crawl() writes "<ExceptionName>: message — ..." for any
+    reader exception (HTTPError, RuntimeError, ValueError…) and "suspect read: ..." for a collapse. DetailsUnread
+    (complete listing, some descriptions unread) is a good read."""
+    return bool(FAILED_NOTE.search(note)) and not note.startswith("DetailsUnread")
+
+
 def latest(prefix):
     files = sorted(p for p in OUT.glob(f"{prefix}-*.csv") if re.fullmatch(rf"{prefix}-\d{{4}}-\d{{2}}-\d{{2}}\.csv", p.name))
     return list(csv.DictReader(open(files[-1]))) if files else []
@@ -69,7 +79,7 @@ def main():
             s, l, r = sum(short[x] for x in names), sum(leads[x] for x in names), sum(rej[x] for x in names)
             if d is None:
                 st, detail = "A6", "not crawled yet"
-            elif d.get("note", "").split(" — ")[0].startswith(("HTTPError", "ConnectionError", "Timeout", "JSONDecodeError", "KeyError", "TypeError")):
+            elif failed_read(d.get("note", "")):
                 st, detail = "A5", d["note"].split(" — ")[0][:120]
             elif s:
                 st, detail = "A1", f"{s} shortlisted"

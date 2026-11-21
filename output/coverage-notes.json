@@ -210,10 +210,10 @@
   "by": "scripted probe"
  },
  "American Airlines": {
-  "status": "blocked",
-  "reason": "blocked (403/challenge)",
-  "checked": "2026-11-07",
-  "by": "scripted probe"
+  "status": "source",
+  "reason": "read directly: AA Tech Hub India's Talent500 board (jsonlist); americanairlines careers site stays blocked",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Caterpillar": {
   "status": "nothing_to_read",
@@ -710,10 +710,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "5ire": {
-  "status": "retryable",
-  "reason": "retryable: server error 530",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "dead",
+  "reason": "5ire.org and www.5ire.org return Cloudflare 530 / error 1016 (origin DNS gone) on 2 tries; Sifted reported the crypto startup's collapse, aggregators report the site offline since 2026 and no network commits for a year.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Absolute Foods": {
   "status": "dead",
@@ -722,10 +722,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "Accolite software": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "excluded",
+  "reason": "Accolite is an IT services / digital-engineering consultancy (merged into Bounteous x Accolite in 2023); accolite.com TLS cert expired Jul 2025. IT services = excluded.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Agile Solutions": {
   "status": "blocked",
@@ -735,9 +735,9 @@
  },
  "Agilitas": {
   "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "reason": "needs a reader (pockethrms): agilitas.com/pages/careers 'See open roles' links to a PocketHRMS career portal (ess.pockethrms.com). 23 Bangalore postings (marketing, finance, design, retail, 'Product Manager - Merchandising'), no software-dev roles today. Sportswear maker (Lotto, ONE8); has a Chief D",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
  },
  "Agnikul": {
   "status": "dead",
@@ -758,22 +758,22 @@
   "by": "re-probe with Clearbit domains"
  },
  "Analog Devices": {
-  "status": "retryable",
-  "reason": "retryable: timeout",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "source",
+  "reason": "read directly: workday (workday)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Aptiv": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "source",
+  "reason": "read directly: workday (workday)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Avail finance": {
-  "status": "retryable",
-  "reason": "retryable: connection error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "dead",
+  "reason": "defunct (acquired by Ola Financial); avail.money doesn't answer",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Avalara": {
   "status": "pending",
@@ -788,10 +788,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "Bellatrix Aerospace": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "Site moved to bellatrix.aero (Framer). The footer 'Careers' item has no link; /careers, /career, /join are 404; only info@bellatrix.aero. Space-propulsion maker; mechanical/thermal roles appear on Foundit/Weekday only.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Bharti Airtel": {
   "status": "dead",
@@ -806,10 +806,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "Billdesk": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "pending",
+  "reason": "needs a reader (custom SPA (jobs hard-coded in the JS bundle)): billdesk.co (the recorded site) is a parked Porkbun domain-for-sale page; the real site is www.billdesk.com, a Vite SPA. Its careers route /web/careers renders a list that is hard-coded in the bundle (\"currentOpenings\":[...], 9 Mumbai r",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
  },
  "Billion Hearts": {
   "status": "dead",
@@ -818,22 +818,22 @@
   "by": "re-probe with Clearbit domains"
  },
  "bitdefender": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "no India roles: Bitdefender's jobs page embeds Greenhouse board 'scbitdefendersrl' (54 jobs: Bucharest/Romania 34, Cluj, Berlin, Singapore, Jakarta, Philippines...), 0 India. No India engineering office (India is a sales/consumer market only). If wanted as a watch: {\"ats\":\"greenhouse\",\"slug\":\"scbitd",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "BlackBuck": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "blackbuck.com (static S3 site, also rendered) has no careers link; /careers returns 502 with an S3 'AccessDenied ... object_key careers' error, i.e. the page no longer exists. No board on greenhouse/lever/ashby/smartrecruiters for blackbuck/zinka. Jobs appear only on LinkedIn, Accel/B Capital Getro ",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "BlueJeans": {
-  "status": "retryable",
-  "reason": "retryable: connection error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "dead",
+  "reason": "Verizon shut BlueJeans down (announced Aug 2023, website closed Mar 2024 per Wikipedia/TechCrunch); bluejeans.com no longer resolves. Verizon is not a source.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "boAt": {
   "status": "dead",
@@ -848,16 +848,16 @@
   "by": "re-probe with Clearbit domains"
  },
  "Breathe Well-being": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "dead",
+  "reason": "breathewellbeing.in (the site Accel's board records) no longer resolves: DNS lookups for A and NS time out on two tries today (and failed 7 Nov). Accel portfolio page shows 0 jobs; last news is a 2023 pre-Series B. No other domain found",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Brightpoint Studios": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "Site reachable now (earlier TLS error transient). Bengaluru casual mobile-game studio; careers page says 'No open roles right now. Send your CV to hr@brightpointstudios.com' (same for internships). No list or ATS behind it; past roles were artists/interns",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Cent AI": {
   "status": "dead",
@@ -884,16 +884,16 @@
   "by": "re-probe with Clearbit domains"
  },
  "Covvalent": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "Site works on www.covvalent.com (bare covvalent.com has a cert mismatch - the earlier TLS error). R&D-led specialty chemicals manufacturer/sourcing; /careers renders 'Page under construction'. No job list or ATS; software hiring unlikely",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Creator Stack": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "dead",
+  "reason": "creatorstack.com (site on Accel's board) is abandoned: www points to a Netlify placeholder app (vigilant-lalande-40e6e2.netlify.app) whose certificate doesn't match the host (TLS error on every try); creatorstack.co refuses connections. Accel page shows 0 jobs; no news since a 2022 acquisition of Mi",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "cult.fit": {
   "status": "pending",
@@ -914,10 +914,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "DealShare": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "dealshare.in footer 'Careers' goes to about.dealshare.in (React SPA on S3); the /careers route's component (read from the JS bundle) holds only culture/benefits copy, no job list, ATS or apply link. Search found no current board.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Digit Insurance": {
   "status": "pending",
@@ -938,28 +938,28 @@
   "by": "careers-link fix, checked 10 Nov 2026"
  },
  "Dunzo": {
-  "status": "retryable",
-  "reason": "retryable: connection error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "dead",
+  "reason": "Dunzo's app and website went offline in Jan 2025 after the co-founder left for Flipkart; Reliance wrote off its investment in Aug 2025; dunzo.com resolves to 127.0.0.1 / times out.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "EduPristine": {
   "status": "retryable",
-  "reason": "retryable: server error 502",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "reason": "www.edupristine.com and /careers return 502 'Hosting Server Connect Timeout | Sucuri Website Firewall' on two tries today (also 502 on 7 Nov). Mumbai finance/accounting certification training company; no ATS found via search. If it stays down, consider dead; pay for tech roles likely low",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Elecbits": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "source",
+  "reason": "read directly: links (custom (WordPress, 'See details' links to /elecbits-jd-<slug>/))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Emergent": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "source",
+  "reason": "read directly: greenhouse (greenhouse)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "FICO": {
   "status": "dead",
@@ -968,10 +968,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "Finarkein Analytics": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "finarkein.com (Pune AA tech provider) has no careers link (plain + rendered); sitemap lists only home and contact-us; /careers 404; no board on greenhouse/lever/ashby/smartrecruiters. Roles seen only on Hirist/LinkedIn.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "FrontRow": {
   "status": "pending",
@@ -986,10 +986,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "GetSupp": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "dead",
+  "reason": "getsupp.com (and getsupp.in, www) resolve but time out on 443 and 80 on two tries today (TLS error on 7 Nov). Bengaluru nutrition marketplace, only news is the 2022 seed round; no working site or job board found",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Haptik": {
   "status": "pending",
@@ -998,16 +998,17 @@
   "by": "re-probe with Clearbit domains"
  },
  "Hashnode": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "Old careers site careers.hashnode.com no longer resolves (DNS); hashnode.com/careers is a suspended user profile; Polymer API says org 'hashnode' not found; no greenhouse/lever/ashby/smartrecruiters board. Last roles (May 2026) were remote, seen only on aggregators.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "HBO": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "alias",
+  "reason": "HBO is a Warner Bros. Discovery brand; WBD's careers site (already read via portal:sitemap) carries HBO roles.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)",
+  "parent": "Warner Bros. Discovery"
  },
  "HERE": {
   "status": "nothing_to_read",
@@ -1016,10 +1017,10 @@
   "by": "hand-built readers round, checked 10 Nov 2026"
  },
  "Holidayme": {
-  "status": "retryable",
-  "reason": "retryable: connection error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "dead",
+  "reason": "holidayme.com / www.holidayme.com don't resolve (DNS A and NS lookups time out on two tries; connection error on 7 Nov). Dubai travel startup whose last news is a 2018 Series B; Accel portfolio page 404",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Hotelogix": {
   "status": "dead",
@@ -1034,16 +1035,16 @@
   "by": "re-probe with Clearbit domains"
  },
  "HyperTrack": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "hypertrack.com/jobs (team across US, Eastern Europe, India) says 'No open roles right now. Follow us on LinkedIn'; no ATS link or job list behind it; no greenhouse/lever/ashby/smartrecruiters board for 'hypertrack'.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "IdeaForge": {
-  "status": "retryable",
-  "reason": "retryable: timeout",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "Webbtree board (58 India postings) read fine, but they are drone hardware/manufacturing roles with generic 'Engineer' titles and the job pages give no description to scripts, so no software role can be confirmed (21 Nov 2026)",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
  },
  "IHS Markit": {
   "status": "blocked",
@@ -1058,10 +1059,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "Indian Energy Exchange": {
-  "status": "retryable",
-  "reason": "retryable: server error 502",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "pending",
+  "reason": "needs a reader (custom (Next.js app router page)): iexindia.com/career (reachable now) lists openings as cards with no per-job links: 4 today (Deputy Manager BD Mumbai, Market Operations Associate Noida, Manager Strategy Noida, Deputy Manager Admin Mumbai), apply by email careers@iexindia.com, JD as",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
  },
  "INDmoney": {
   "status": "nothing_to_read",
@@ -1070,10 +1071,10 @@
   "by": "hand-built readers round, checked 10 Nov 2026"
  },
  "Investmint": {
-  "status": "retryable",
-  "reason": "retryable: connection error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "dead",
+  "reason": "investmint.club has no DNS record (no A record, connection fails on http/https/www); CB Insights says it ceased operations June 2024, PitchBook lists it Out of Business.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "ISRO": {
   "status": "dead",
@@ -1088,10 +1089,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "KGEN": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "blocked",
+  "reason": "kgen.io and kgen.io/careers answer HTTP 451 'Access to this website is restricted in your region' (geo-block). Jobs (Bengaluru: security, DevOps, data, AI roles) are only visible on Accel's Getro portfolio board jobs.accel.com/companies/kgen, whose job list loads from api.getro.com (plain POST got 4",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Kotak Mahindra Bank": {
   "status": "pending",
@@ -1124,16 +1125,16 @@
   "by": "re-probe with Clearbit domains"
  },
  "MedGenome": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "Career page (plain and rendered) is only a profile-submission form (dropdowns for location/department/experience + Submit Details); no job list or ATS; www.medgenome.com/careers redirects to the diagnostics homepage",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "MediBuddy": {
-  "status": "retryable",
-  "reason": "retryable: timeout",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "pending",
+  "reason": "Trakstar Hire feed (jsapi.recruiterbox.com, client medibuddy) lists 50 India openings incl. SDE roles, but every job page on medibuddy.hire.trakstar.com returns 404, so they can't be confirmed open; not added (21 Nov 2026)",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
  },
  "Mercedes-Benz Research and Development India": {
   "status": "dead",
@@ -1154,10 +1155,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "Mitigata": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "mitigata.com/company/careers lists 35 numbered roles (all Bengaluru) with no descriptions, dates or per-job pages, one shared '#apply-now' form, and an intern twin for most roles. The Wayback Machine copy of 16 Jul 2026 has the same 34 titles (only 'DevOps/Platform Engineer' added since) and the Jan 2026 copy carries the same titles too: a standing 'roles we hire for' list, not openings. A source would report the same Fullstack/Frontend/Backend Developer roles forever.",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
  },
  "Mobile Premier League": {
   "status": "alias",
@@ -1166,34 +1167,34 @@
   "by": "checked by hand"
  },
  "Mount talent": {
-  "status": "retryable",
-  "reason": "retryable: server error 530",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "excluded",
+  "reason": "Mount Talent Consulting (mounttalent.com, title 'MTC | Reputed Recruitment Company Noida') is a recruitment/staffing firm (full-time hiring, contract staffing, RPO, IT staffing); its 'current openings' are clients' jobs.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "MoveInSync": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "moveinsync.com/careers (plain fetch and headless render) has culture/testimonial content only; its 'Join Us' button links back to the same page; no ATS, iframe, form or job list; no greenhouse/lever/ashby/smartrecruiters board. Roles appear only on LinkedIn/aggregators.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "myUpchar.com": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "join-us page lists 7 static role descriptions (Android Developer, ROR Developer, QA, PM, content writers) whose every 'Apply Here' link is bit.ly/jobsinmyupchar -> a Google Form; no job list/feed behind it, page looks stale.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Namaste Credit": {
   "status": "retryable",
-  "reason": "retryable: timeout",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "reason": "namastecredit.com (Bengaluru MSME-lending fintech, still operating per 2026 Decimal Technologies partnership news) returns Cloudflare 'error code: 522' (origin timeout) on www and apex, 3 tries spaced ~10 min apart; job boards (Wellfound, ZeroG) show 0 open jobs.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Nektar.ai": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "Homepage links nektar.ai/careers/ but it returns 404 (also old ?p=1497 careers page 404); no Lever/Greenhouse/Ashby board under nektar/nektarai/nektar-ai; B Capital and Wellfound boards show no jobs and point to careers@nektar.ai (email only).",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "NextBillion.ai": {
   "status": "dead",
@@ -1202,10 +1203,11 @@
   "by": "re-probe with Clearbit domains"
  },
  "Nimble Storage": {
-  "status": "retryable",
-  "reason": "retryable: timeout",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "alias",
+  "reason": "HPE acquired Nimble Storage in April 2017 (HPE press release); nimblestorage.com no longer answers; Nimble's India R&D is now HPE, already read via 'Hewlett Packard Enterprise | portal:sitemap'.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)",
+  "parent": "Hewlett Packard Enterprise"
  },
  "Ninjacart": {
   "status": "dead",
@@ -1226,10 +1228,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "nurture.farm": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "nurture.farm is a UPL subsidiary (nurture.farm/careers 404s); its category page on UPL's SuccessFactors site says 'There are currently no open positions matching this category' and then lists UPL-wide recent jobs. A host-wide SF config (careers.upl-ltd.com) would read UPL's jobs under the wrong name",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "NXP Semiconductors": {
   "status": "dead",
@@ -1244,10 +1246,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "Oneplus": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "oneplus.in/careers embeds a Zoho Recruit portal (recruit.zohopublic.in Portal.na?digest=...) that says 'no job openings available at this time'; oneplus.zohorecruit.in/jobs/Careers says 'does not exist'. The site footer's Careers link is oneplus.kekahire.com, whose TLS certificate has expired (not r",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "OYO": {
   "status": "nothing_to_read",
@@ -1268,10 +1270,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "PeopleStrong": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "source",
+  "reason": "read directly: peoplestrong (peoplestrong (own Altone portal))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Pixxel": {
   "status": "pending",
@@ -1280,10 +1282,11 @@
   "by": "re-probe with Clearbit domains"
  },
  "Plex Systems, Inc.": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "alias",
+  "reason": "acquired by Rockwell Automation (2021); Plex India roles are on Rockwell's Workday board",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)",
+  "parent": "Rockwell Automation"
  },
  "Practo": {
   "status": "pending",
@@ -1292,10 +1295,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "Prodapt": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "excluded",
+  "reason": "Prodapt describes itself as a consulting, technology and managed-services provider to telecom/'connectedness' companies (IT services/consulting firm), so excluded by the brief's rule.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Property Share": {
   "status": "dead",
@@ -1304,10 +1307,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "PropTiger.com": {
-  "status": "retryable",
-  "reason": "retryable: timeout",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "www.proptiger.com/careers server-renders 'There are currently no jobs available'; the openings exist only in the Next.js RSC payload (\"openings\":[]) with no cards in the HTML, so the cards reader would raise on every run (no card to match) and a separate RSC parser isn't worth it for 0 openings.",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
  },
  "Qure.ai": {
   "status": "pending",
@@ -1316,10 +1319,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "Qwikcilver": {
-  "status": "retryable",
-  "reason": "retryable: connection error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "blocked",
+  "reason": "merged into Pine Labs (2022); Pine Labs' careers listings are blocked (403/challenge)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Rapido": {
   "status": "pending",
@@ -1339,16 +1342,16 @@
   "by": "E1 triage, reviewed by hand"
  },
  "Rivigo": {
-  "status": "retryable",
-  "reason": "retryable: timeout",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "dead",
+  "reason": "Mahindra Logistics bought Rivigo's B2B express business, team, tech platform and the Rivigo brand in 2022 (Rs 225 cr); rivigo.com now fails TLS (GoDaddy cert expired 27 Jun 2026, chain incomplete); LinkedIn calls it 'part of Mahindra Logistics'. Mahindra Logistics is not in existing-sources or tiers",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Rolls-Royce": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "blocked",
+  "reason": "The job list is loaded by JS from POST https://rollsroyceats-prod-api.connectid.cloud/api/jobs with an 'Authorization: Bearer <token>' obtained from the site's /auth/gettoken call (latest-carreers-cards.js); the server-rendered /en/jobs page has no jobs and the sitemap has no job URLs. Token-gated =",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Sainsbury's": {
   "status": "blocked",
@@ -1363,16 +1366,18 @@
   "by": "re-probe with Clearbit domains"
  },
  "Shivalik Bank": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "alias",
+  "reason": "Same bank: Shivalik Small Finance Bank (shivalikbank.com resets the connection to scripts); already in existing-sources as 'Shivalik Small Finance Bank | portal:darwinbox' (that source itself is Darwinbox, blocked since 20 Nov).",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)",
+  "parent": "Shivalik Small Finance Bank"
  },
  "Simility, a Paypal Service": {
-  "status": "retryable",
-  "reason": "retryable: connection error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "alias",
+  "reason": "Simility was acquired by PayPal (2018) and run as 'Simility, a PayPal Service'; simility.com no longer resolves; its India team hires under PayPal, already read as 'PayPal | workday:paypal'.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)",
+  "parent": "PayPal"
  },
  "Simpl": {
   "status": "dead",
@@ -1381,10 +1386,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "Singulr AI": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "singulr.ai has no careers link (singulr.ai/careers is 404; sitemap of 187 URLs has no careers/jobs page); no Lever/Greenhouse/Ashby/Workable board under singulr/singulrai/singulr-ai; web search finds no postings.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Skyroot Aerospace": {
   "status": "pending",
@@ -1404,10 +1409,10 @@
   "by": "checked by hand"
  },
  "STMicroelectronics": {
-  "status": "retryable",
-  "reason": "retryable: timeout",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "blocked",
+  "reason": "www.st.com (Akamai) kills script connections: HTTP/2 'stream not closed cleanly: INTERNAL_ERROR' and HTTP/1.1 30s timeouts on 3 spaced tries (homepage and careers page) - Akamai bot handling, so stopped. Web search did not reveal a separate ATS host (listings only point to st.com/careers). ST has la",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "TATA Advanced Sysytems Ltd": {
   "status": "dead",
@@ -1416,16 +1421,16 @@
   "by": "re-probe with Clearbit domains"
  },
  "Tijoree": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "tijoree.money (React SPA, rendered) has a single careers link pointing to LinkedIn's jobs tab; no own board; no greenhouse/lever/ashby/smartrecruiters board.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Topcoder": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "excluded",
+  "reason": "Topcoder is a crowdsourcing/freelance talent marketplace owned by Wipro (IT services) since 2020; its 'jobs' are client gigs for other companies (job-portal pattern). Excluded.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Trell": {
   "status": "retryable",
@@ -1452,10 +1457,10 @@
   "by": "re-probe with Clearbit domains"
  },
  "Valuefy": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "valuefy.com (Mumbai wealthtech, Next.js site) has no careers page or job links (/careers, /career, /join-us all 404; nav only About/Platform/Insights/Contact). Jobs appear only on Cutshort/iimjobs/LinkedIn; one Cutshort listing shows Rs 4-9 L, likely below the bar.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "VerSe Innovation": {
   "status": "nothing_to_read",
@@ -1463,16 +1468,16 @@
   "by": "E1 triage, reviewed by hand"
  },
  "Vicara": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "vicara.co is now 'Vicara AI Lab' (a Lovable-built one-page site); its 'Join Us' section is only an email early-access/newsletter form, FAQ says 'check Join the Team' but there is no job list in the page or its JS bundle.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Vogo": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "dead",
+  "reason": "Vogo was acquired by Chalo (Mar 2022); https://www.vogo.in and vogo.in fail TLS (cert doesn't match host) and http://www.vogo.in serves only 'Error. Page cannot be displayed. Please contact your service provider'. Chalo is not in existing-sources/tiers.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Wadhwani AI": {
   "status": "pending",
@@ -1487,28 +1492,28 @@
   "by": "re-probe with Clearbit domains"
  },
  "Xiaomi": {
-  "status": "pending",
-  "reason": "ok now: site reachable (re-run discovery)",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "nothing_to_read",
+  "reason": "xiaomi.app.param.ai/jobs/ is a generic Param.ai template ('Careers at Our Company') showing 0 job openings. Xiaomi India's own careers page (mi.com/in/careers, same as /in/promotion/2025/careers-page/) sends 'open roles' to linkedin.com/company/xiaomi-india/jobs and has a talent-pool form (careers.e",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "zango": {
-  "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "source",
+  "reason": "read directly: links (webflow (links))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Zinc": {
   "status": "retryable",
-  "reason": "retryable: TLS/SSL error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "reason": "Taken to be Zinc (zinc.money), the Nexus-led $25.5M-seed edu-wealth fintech (Mumbai/GIFT City, ~66 staff). www.zinc.money answers nginx 503 Service Temporarily Unavailable on 2 spaced tries; zinc.money/careers is 404; no careers board found by web search (other 'Zinc' hits are unrelated UK/US compan",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "ZivaMe": {
-  "status": "retryable",
-  "reason": "retryable: connection error",
-  "checked": "2026-11-07",
-  "by": "re-probe with Clearbit domains"
+  "status": "blocked",
+  "reason": "www.zivame.com/careers returns 403 with a Cloudflare 'Just a moment...' challenge; the old WordPress careers.zivame.com (seen in search results with Frontend/iOS/QA roles) no longer resolves. Stopped there.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Eternal": {
   "status": "nothing_to_read",
@@ -1619,22 +1624,25 @@
   "by": "checked in the user's Chrome"
  },
  "Hotstar": {
-  "status": "blocked",
-  "reason": "JioStar Workday answers scripts with 403; searched on LinkedIn every run",
-  "checked": "2026-11-11",
-  "by": "checked in the user's Chrome + scripted probe"
+  "status": "alias",
+  "parent": "JioHotstar",
+  "reason": "same company (JioStar); its Workday board jiostar.wd102/JioStar answers plain requests again (21 Nov 2026) and is read as JioHotstar",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Disney+ Hotstar": {
-  "status": "blocked",
-  "reason": "JioStar Workday 403",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "alias",
+  "parent": "JioHotstar",
+  "reason": "same company (JioStar); its Workday board jiostar.wd102/JioStar answers plain requests again (21 Nov 2026) and is read as JioHotstar",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "JioStar": {
-  "status": "blocked",
-  "reason": "Workday 403",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "alias",
+  "parent": "JioHotstar",
+  "reason": "same company (JioStar); its Workday board jiostar.wd102/JioStar answers plain requests again (21 Nov 2026) and is read as JioHotstar",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Amdocs": {
   "status": "blocked",
@@ -1869,16 +1877,16 @@
   "by": "Google search in the user's browser"
  },
  "314e Corporation": {
-  "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "source",
+  "reason": "read directly: sitemap (built in the 21 Nov round)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Bluestone": {
-  "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "bluestone.com/career is an About Us page with no openings list, form target or ATS link; only customer-care mailtos.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Hexagon": {
   "status": "pending",
@@ -1887,28 +1895,28 @@
   "by": "checked by hand"
  },
  "Unify Apps": {
-  "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "unifyapps.com/careers redirects to unifyapps.com/error; homepage and sitemap have no careers/jobs link. No Greenhouse/Lever/Ashby/Kula board; the 'unifyapps' Keka tenant is a different firm ('Uniapps', empty list). Its India roles (Gurugram/Bengaluru SWE, FDE, mobile) appear only on LinkedIn and agg",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Supernova": {
-  "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "Batch site supernova-business.com is a different (French business-plan) company. The AI startup is getsupernova.ai (L8 Cones Interactive, HSR Bengaluru; Supernova spoken-English + Superflow apps). Its Framer careers page /career#open-roles says 'There are no open roles at the moment' and asks for re",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Ringg AI": {
-  "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "source",
+  "reason": "read directly: kula (kula)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Maxim AI": {
-  "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "source",
+  "reason": "read directly: jsonlist (built in the 21 Nov round)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Jiraaf": {
   "status": "pending",
@@ -1917,16 +1925,16 @@
   "by": "checked by hand"
  },
  "Josh": {
-  "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "source",
+  "reason": "read directly: successfactors (successfactors)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Even Healthcare": {
-  "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "Real site is even.in (evenhealthcare.com/careers 404); its careers link is careers.even.in, a Super.so/Notion page. /open-roles lists no roles: just 'send your CV ... to jobs@even.in', referral and relocation notes, plus GSoC. Email-only, no job list or ATS behind it.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "hoichoi": {
   "status": "blocked",
@@ -1934,10 +1942,10 @@
   "by": "research agent (batch C)"
  },
  "Fintrac": {
-  "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "dead",
+  "reason": "fintrac.io is a German personal-finance blog (Contao, 'AI-generated content', /careers 404), not an Indian fintech; web searches find no Indian company named Fintrac (only Canada's FINTRAC agency). Name can't be tied to a real hiring company.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "AssetPlus": {
   "status": "pending",
@@ -1957,32 +1965,34 @@
   "by": "research agent (batch C)"
  },
  "Uppercase": {
-  "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "uppercase.co.in is a Shopify luggage store; its 'Want to join us...' block is a brand-community section linking to products, not jobs; /pages/careers 404; no ATS, no Keka tenant. (Built In's 'Uppercase Brands' is a different, NYC company.)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "ZOOP": {
-  "status": "pending",
-  "reason": "The LinkedIn post (Golang SDE 2, Pune) describes an EV-charging/energy-management company. zoop.com is an unrelated social app, and zoop.one is a KYC firm (no careers page answered). A web search found no site for the EV company, so I could",
-  "by": "checked by hand"
+  "status": "excluded",
+  "reason": "The LinkedIn 'Golang SDE 2, Pune' employer is Zoop.one (Quagga Tech Pvt Ltd, Pune KYC/verification APIs); the same role on Cutshort (posted 8 Oct 2026, 'Bootstrapped') pays Rs 12L-18L/yr for 3-6 years' experience: clearly below the Rs 20 LPA bar. Its own site has no list anyway: zoop.one/career is a",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Boldfit": {
-  "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "Shopify page /pages/careers exists but has an empty body (title only); no list, form or ATS link.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Slikk": {
-  "status": "pending",
-  "reason": "Google-searched: own careers page with no feed, platform or job list we can read",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "source",
+  "reason": "read directly: jsonlist (built in the 21 Nov round)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "The Alter Office": {
-  "status": "pending",
-  "reason": "needs a reader: Custom one-company: GET https://assessment-backend-prod.altergame.click/api/public/roles -> list of {id,name,slug,location_text,employment_type,department_name,posted_at,closes_at,is_closed}. Detail G",
-  "by": "checked by hand"
+  "status": "excluded",
+  "reason": "Pay clearly below the bar: the company's own public roles API lists its only engineering role, Android SDK Developer (Bangalore, 3-5 yrs), with salary_offer '10-18LPA' (salary_max 1,800,000 INR), i.e. under Rs 20 LPA even for 3-5 years' experience. The board itself is public and readable (GET .../ap",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "AtomicAds": {
   "status": "nothing_to_read",
@@ -1990,39 +2000,40 @@
   "by": "research agent (batch C)"
  },
  "Elements Energy": {
-  "status": "pending",
-  "reason": "needs a reader: Small extension, no new platform: either (a) links reader option to skip the list-title filter and take the title from the detail page's JobPosting (list https://elementsenergies.com/talent, job_link ",
-  "by": "checked by hand"
+  "status": "source",
+  "reason": "read directly: sitemap (built in the 21 Nov round)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Faces Canada": {
-  "status": "pending",
-  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "Cosmetics brand Shopify store; no careers link on the site; /careers, /pages/careers, /pages/career all 404 (first fetch of /careers reset the connection). The \"breezy\" hint was a product image name, not Breezy HR.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Unreal Foods": {
-  "status": "pending",
-  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "unrealfoods.in brings global restaurant brands to India (franchise operator: About/Strategy/Coverage/Contact only); /careers is 404, no ATS references or Keka tenant. Restaurant business, no software job list.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Newme": {
-  "status": "pending",
-  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "newme.asia (Gen-Z fashion, Bengaluru) has no careers page (/careers 404, no careers link). Its roles appear on Accel's portfolio board, whose job records point to LinkedIn postings (e.g. in.linkedin.com/jobs/view/...-at-newme-4458930648); mostly buying/merchandising/ops, occasionally a React/React N",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Virgio": {
-  "status": "pending",
-  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "virgio.com (fast-fashion D2C, Bengaluru) footer links /careers but it returns 404 (the .ae site has its own); no ATS references; Accel's portfolio board shows Virgio with no open jobs; web search finds no own job list. Nothing to read; LinkedIn covers it.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Pazo": {
-  "status": "pending",
-  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "Pazo is a Bengaluru retail-operations SaaS (Techstars), not a consumer brand. gopazo.com/career -> /job-openings is a hand-made Webflow page with 2 cards (Sales Development Representative, People Culture Manager; Bengaluru) whose links are href=\"#\" (no job pages, no ATS); looks stale. Nothing a read",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Meolaa": {
   "status": "pending",
@@ -2037,76 +2048,76 @@
   "by": "checked by hand"
  },
  "Babaclick": {
-  "status": "pending",
-  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "babaclick.com ('The Supply Layer for Global Commerce', Webflow) has a static 'Join the Team' section describing internship/full-time tracks (Content Creation Intern, AI Builder Track...) whose only apply link is https://www.linkedin.com/company/babaclick/jobs/. No ATS or job list of its own; LinkedI",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Consure Medical": {
-  "status": "pending",
-  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "/careers is 404; the Careers section on /company/ only says \"Contact us for career opportunities\" with a popup contact form. Medical device maker, no job list.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Curejoy": {
-  "status": "pending",
-  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "curejoy.com is now a health-content blog (About/Editorial/Write for us); /careers 404 and no careers or jobs link anywhere on the site.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Dpanda": {
-  "status": "pending",
-  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "dpanda.in (publisher monetisation platform) has no careers link; /careers and /career 404; only support@ mailto.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "GutWellness Club": {
-  "status": "pending",
-  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "gutwellnessclub.in is a small Wix site for a gut-reset nutrition program (Home/Consult/Testimonials/About/Contact); no careers page (/careers 404), no ATS references, no Keka tenant. No software hiring visible.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Koye Pharmaceuticals": {
-  "status": "pending",
-  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "koye.co is a one-screen splash page ('Koye - Health happiness ... Enter'), /careers returns 'The resource cannot be found'; no ATS references, no Keka tenant. Pharma company; no job list to read.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "ISA": {
-  "status": "pending",
-  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "isa.in = International Subscription Agency (distributor of Elsevier/Wiley/Springer etc. e-resources to Indian institutions): no careers page (/careers 404), no ATS references, no Keka tenant. Caveat: I couldn't confirm that the LinkedIn employer 'ISA' (2 eng postings) is this company rather than ano",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Lio": {
-  "status": "pending",
-  "reason": "low priority: consumer / pharma brand, software roles unlikely; not searched yet",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "dead",
+  "reason": "The Lightspeed/Sequoia-backed Lio (data-workspace app, Vijayvergia brothers, Pune/Bengaluru, seed 2021) lists lio.io as its site, which now returns Framer 'Site Not Found' (404). Batch site tdot.uk is an unrelated UK firm (Tech Dot). lio.ai / Ashby 'lio' is a different company (Munich/NYC AI-procure",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Dream Sports": {
-  "status": "pending",
-  "reason": "Lever board listed on its page no longer exists (404); no other listing",
-  "checked": "2026-11-07",
+  "status": "blocked",
+  "reason": "blocked: dreamsports.group/careers (now /lifeatdreamsports) still links only jobs.lever.co/dreamsports, which is 404 (api.lever.co and api.eu.lever.co too). The newer board is Peerlist (peerlist.io/company/dreamsports_/careers, seen in search results), which answers scripts with 403 + a Cloudflare 'Just a moment' challenge; stopped there. Built In's Dream Sports listings were removed on 1 Nov 2026. Keep on LinkedIn every run.",
+  "checked": "2026-11-21",
   "by": "checked by hand"
  },
  "Gojek": {
-  "status": "pending",
-  "reason": "GoTo Lever board 404; no India listing",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "source",
+  "reason": "read directly: lever (lever)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Magicpin": {
-  "status": "pending",
-  "reason": "Darwinbox candidate API errors (500)",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "blocked",
+  "reason": "magicpin.in/careers is a Next.js page with empty pageProps; the job list ('All open roles') is fetched client-side through an axios client that sends a hard-coded 'Authorization: Bearer <JWT>' from the JS bundle (chunk 4674, module 91065). Using a token scraped from the page is off-limits, so not ca",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Netmeds": {
-  "status": "pending",
-  "reason": "Darwinbox candidate API errors (500)",
-  "checked": "2026-11-07",
-  "by": "checked by hand"
+  "status": "blocked",
+  "reason": "netmeds.com/careers is 404; the site's only careers link goes to Reliance Retail's SAP e-recruiting portal (rcareers.ril.com), whose home page shows only 'Walk In', 'Login / Sign up' and offer validation: job search sits behind sign-in. The old netmeds.darwinbox.in tenant is Darwinbox (Cloudflare fi",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Liebherr": {
   "status": "nothing_to_read",
@@ -2244,9 +2255,10 @@
   "by": "research agent (batch C)"
  },
  "Wonder Worth Solutions": {
-  "status": "pending",
-  "reason": "wonderws.com/careers is a 404; homepage links careers.wonderws.com (also named in the LinkedIn JD for 'L1 Junior Software Developer', Vellore), but that host (Cloudflare) connects and then never answers, from curl or headless Chrome. Try ag",
-  "by": "checked by hand"
+  "status": "excluded",
+  "reason": "careers.wonderws.com now answers (200). It describes WWS as a 'Leading Multi Speciality Medical Billing and Coding Service Company' (US healthcare revenue-cycle outsourcing, Vellore): job categories are mostly Medical Billing/AR/Coding/Credentialing plus an IT team; recent posts: Senior Software Tes",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "AiSensy": {
   "status": "pending",
@@ -2330,9 +2342,10 @@
   "by": "research agent (batch B)"
  },
  "Nuaav": {
-  "status": "pending",
-  "reason": "needs a reader: Own page, one GET https://www.nuaav.com/careers: each role is <span class=\"acc-title\">TITLE</span><span class=\"acc-meta t-sm\">TEAM · Noida, India · Full time</span>; description is client-rendered on ",
-  "by": "checked by hand"
+  "status": "excluded",
+  "reason": "IT services / engineering consultancy: nuaav.com says 'A Hexaview Company' (Hexaview Technologies, IT services), sells 'Engineering solutions that scale with your ambition', 'Start a project', 'Projects delivered', client case studies ('we build the system... and stay until it is owned by your team'",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "ServiceChannel": {
   "status": "blocked",
@@ -2381,7 +2394,8 @@
  },
  "Joveo": {
   "status": "pending",
-  "reason": "needs a reader: Joveo career-site CMS ('joveo'): GET https://careers.joveo.com/job-sitemap-0.xml (via robots Sitemap: job-sitemap.xml index) -> for each https://careers.joveo.com/job/<uuid> page, parse <script id=__N",
+  "reason": "needs a reader (joveo (own career-site CMS, Next.js)): www.joveo.com/careers returns nginx 403 to scripts, but careers.joveo.com ('Joveo New Career Site') is public: robots.txt -> job-sitemap.xml -> job-sitemap-0.xml lists 11 /job/<uuid> pages, all company 'Joveo' (Software Engineer (AWS), Customer ",
+  "checked": "2026-11-21",
   "by": "checked by hand"
  },
  "M2P Fintech": {
@@ -2643,22 +2657,22 @@
   "by": "careers-link fix, checked 10 Nov 2026"
  },
  "Dream11": {
-  "status": "nothing_to_read",
-  "reason": "careers page dreamsports.group links only to jobs.lever.co/dreamsports, which is a 404; LinkedIn only",
-  "checked": "2026-11-10",
-  "by": "careers-link fix, checked 10 Nov 2026"
+  "status": "blocked",
+  "reason": "blocked: alias of Dream Sports (same careers page, same Lever 404, newer board on Peerlist behind Cloudflare)",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
  },
  "FPL Technologies": {
-  "status": "pending",
-  "reason": "OneCard's employer; careers page fplabs.tech/careers loads jobs from a hosted API (none listed 10 Nov); not read yet",
-  "checked": "2026-11-10",
-  "by": "checked by hand"
+  "status": "blocked",
+  "reason": "careers page's job API (onrender.com /hr/jobs) needs an x-api-key copied from the page source; not used (0 openings listed today)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Simplilearn": {
-  "status": "pending",
-  "reason": "job list at simplilearn.com/job-openings is a CEIPAL widget; no reader for CEIPAL",
-  "checked": "2026-11-10",
-  "by": "checked by hand"
+  "status": "blocked",
+  "reason": "CEIPAL widget needs the api_key from the page's iframe URL, and CEIPAL answers scripts with 'Bot access is not allowed' (seen at Comviva)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Land rover": {
   "status": "alias",
@@ -2699,16 +2713,16 @@
   "by": "new readers round, checked 10 Nov 2026"
  },
  "CTERA": {
-  "status": "pending",
-  "reason": "only a Bessemer (Consider) portfolio listing; no own board found on Greenhouse/Lever/Ashby/SmartRecruiters",
-  "checked": "2026-11-10",
-  "by": "checked by hand"
+  "status": "nothing_to_read",
+  "reason": "no India roles: CTERA's own careers page lists 2 openings (QA Automation Engineer - Israel, Senior Application Security Lead - Israel); R&D is in Israel; past India roles were sales/customer engineering. Also the /position/<id> detail pages return a Cloudflare \"Attention Required\" challenge, so a li",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Klook": {
-  "status": "pending",
-  "reason": "only a Bessemer (Consider) portfolio listing; no own board found on Greenhouse/Lever/Ashby/SmartRecruiters",
-  "checked": "2026-11-10",
-  "by": "checked by hand"
+  "status": "blocked",
+  "reason": "klook.com/careers (DataDome-protected site) links to a MokaHR board. The board HTML (after server-set cookies) embeds init-data with only the first 15 of 115 jobs (Singapore/Taipei/Hanoi/Tokyo...); the rest come from MokaHR's API, which needs the session's CSRF cookie and returns AES-encrypted data ",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Booking Holdings": {
   "status": "alias",
@@ -2815,22 +2829,22 @@
   "by": "checked in the user's Chrome + scripted probe"
  },
  "ASML": {
-  "status": "pending",
-  "reason": "site search uses a per-session Sitecore token",
-  "checked": "2026-11-10",
+  "status": "nothing_to_read",
+  "reason": "job_posting-sitemap.xml works (846 /en/careers/find-your-job/<slug>-j<id> URLs) but job pages carry no schema.org JobPosting (the job is only in __NEXT_DATA__ props.pageProps.jobData). The 5 India-named roles (Field Application / Technical Support / Field Service Engineer, CS Site Manager, Senior Supply Chain Planner, all '(Based in Gujarat, India)') are filed under location 'Singapore, Singapore' in that data, so even a page_data config would drop them, and none is a software role. Apply links go to Workday (asml.wd3.myworkdayjobs.com/ASMLEXT1), not touched this round; if ASML is wanted, that",
+  "checked": "2026-11-21",
   "by": "checked by hand"
  },
  "HashiCorp": {
   "status": "pending",
-  "reason": "now IBM; IBM careers search is an internal API, not built",
-  "checked": "2026-11-10",
+  "reason": "now IBM: IBM's careers search for 'hashicorp' (portals/ibm.py) returns mostly IBM roles that merely mention Terraform/Vault, so a source would mislabel them; not added",
+  "checked": "2026-11-21",
   "by": "checked by hand"
  },
  "BMC software": {
-  "status": "pending",
-  "reason": "Workday tenant not found (the 'bmc' tenant is a different company)",
-  "checked": "2026-11-10",
-  "by": "checked by hand"
+  "status": "source",
+  "reason": "read directly: avature (avature)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
  },
  "Ola": {
   "status": "blocked",
@@ -2839,9 +2853,1666 @@
   "by": "checked in the user's Chrome + scripted probe"
  },
  "Setu": {
+  "status": "source",
+  "reason": "read directly: links (links (Framer page + TurboHire job links))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "LinkedIn": {
+  "status": "blocked",
+  "reason": "careers.linkedin.com returns 403 with a Cloudflare 'Just a moment...' challenge; LinkedIn lists its own jobs only on linkedin.com/jobs (already covered by the LinkedIn search source)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "DRW": {
+  "status": "nothing_to_read",
+  "reason": "no India roles: DRW board is Greenhouse slug drweng (board name \"DRW\", job links job-boards.greenhouse.io/drweng); 150 jobs in Chicago/London/Singapore/Montreal/NY/Tel Aviv/Amsterdam, none in India; DRW has no India office. Watch config if wanted: {\"name\":\"DRW\",\"ats\":\"greenhouse\",\"slug\":\"drweng\"}",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Indeed": {
+  "status": "blocked",
+  "reason": "careers page sends the job list to in.indeed.com/cmp/Indeed/jobs (and other country /cmp/Indeed/jobs pages), which return 403 to scripts; Greenhouse slug 'indeed' exists but has 0 jobs (unused); Lever 404",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Directi": {
+  "status": "nothing_to_read",
+  "reason": "careers.directi.com (a 2020 page) only has a 'View job posting' button to jobs.lever.co/directi, which now 404s (api.lever.co too). Directi business units hire under their own names (Media.net is already read)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Shopify": {
+  "status": "nothing_to_read",
+  "reason": "shopify.com/careers server-renders ~120 jobs with no ATS; 1 India posting (Remote - India, partner success, not dev) on 21 Nov 2026; revisit if India dev roles appear",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
+ },
+ "ScyllaDB": {
+  "status": "nothing_to_read",
+  "reason": "no India roles: Job list is the Comeet WordPress plugin, server-rendered on /company/careers/job-openings/: 8 positions in Israel, Poland, California/USA; no India office or postings",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Trip.com": {
+  "status": "nothing_to_read",
+  "reason": "no India roles: Overseas list (190 jobs) comes from POST https://careers.trip.com/api/oversea/getOverseaJobAd; the workplace list (POST /api/oversea/getLocation {'countryCode':'','citycode':'','type':'OverseasCareersWorkPlace'}) has 58 cities and no Indian city today. India presence is airline/sales",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Accord software": {
   "status": "pending",
-  "reason": "TurboHire (pinelabsgroup.turbohire.co) is token-gated",
-  "checked": "2026-11-10",
+  "reason": "needs a reader (custom static page): accord-global.com (batch URL) is now a casino spam page; the real company is Accord Software & Systems, Bangalore (GNSS/defence electronics). career.php lists 12 Bangalore jobs inline as a Bootstrap accordion with no per-job links (1 software: Embedded Software E",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
+ },
+ "Amway": {
+  "status": "source",
+  "reason": "read directly: successfactors (successfactors)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Atomicwork": {
+  "status": "pending",
+  "reason": "jobs are on Polymer (jobs.polymer.co shows a Cloudflare challenge, so its API is not used); atomicwork.com/company/careers server-renders the list but its links read only 'Apply Now', which the links reader can't title; needs a title-from-card option",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
+ },
+ "Automatic Data Processing": {
+  "status": "blocked",
+  "reason": "jobs.adp.com returns 403 with a Cloudflare 'Just a moment...' challenge page to a plain GET; stopped there",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Bottemline Technologies": {
+  "status": "source",
+  "reason": "read directly: greenhouse (greenhouse)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "ByteDance": {
+  "status": "blocked",
+  "reason": "joinbytedance.com links to jobs.bytedance.com; its job search API (POST /api/v1/search/job/posts) answers 405 to a plain POST without the site's CSRF token/cookie, i.e. needs a session token; lifeattiktok.com returned 503. Stopped per rules.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Cleartrip": {
+  "status": "blocked",
+  "reason": "careers.cleartrip.com only links to flipkart.turbohire.co/careerpage/4d757ba0-...; Flipkart's TurboHire feed needs a session token (known dead end in CAREERS_DISCOVERY) and the Cleartrip page itself serves no job list",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Fischer Jordan": {
+  "status": "excluded",
+  "reason": "FischerJordan is a management-consulting firm (careers page: 'high-impact consulting team helping our clients transform their businesses'; current opening is Business Analyst). Consulting = excluded.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Ghost": {
+  "status": "pending",
+  "reason": "needs a reader (homerun): careers.ghost.org uses the Homerun widget; its public Atom feed feed.homerun.co/ghost has 1 job (Senior Security Engineer, location 'UTC-6 - UTC+2', so not open to India). Ghost is a ~50-person remote non-profit hiring 'from anywhere' by timezone band; low value, but the fe",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
+ },
+ "Groupon": {
+  "status": "nothing_to_read",
+  "reason": "no India roles: careers.groupon.com (Vite SPA whose bundle references Greenhouse) -> Greenhouse board \"groupon\" (name Groupon, job links job-boards.eu.greenhouse.io/groupon): 27 jobs in Chicago/Dallas/Madrid/Valencia/Prague/Milan/London, none in India; Groupon closed its India engineering years ago.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Kantar": {
+  "status": "source",
+  "reason": "read directly: workday (workday)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "khoros": {
+  "status": "nothing_to_read",
+  "reason": "careers.ignitetech.ai/jobs is IgniteTech's group-wide board (ESW Capital), not Khoros's: 4 roles today (AI-DNA Content Moderation Technician, Senior Account Manager, Inside Sales Representative, Senior SRE), all 'remote, paid in USD, open to candidates worldwide' (said on the page), none software-dev. Adding it under 'khoros' would label IgniteTech's pool as Khoros, the same problem as HashiCorp/IBM. The cards config below works (4 cards, 0 fitting) if you want it anyway.",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
+ },
+ "Optym": {
+  "status": "source",
+  "reason": "read directly: rippling (rippling)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Polygon Technology": {
+  "status": "source",
+  "reason": "read directly: ashby (ashby)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Rockstar Games": {
+  "status": "source",
+  "reason": "read directly: greenhouse (greenhouse)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "SanDisk": {
+  "status": "source",
+  "reason": "read directly: sitemap (built in the 21 Nov round)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "SerpApi": {
+  "status": "source",
+  "reason": "read directly: links (custom (server-rendered list + JobPosting))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Glass Door": {
+  "status": "blocked",
+  "reason": "Glassdoor is now part of Indeed; Indeed's own careers listings answer 403 to scripts",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Shopee": {
+  "status": "nothing_to_read",
+  "reason": "no India roles: careers.shopee.sg is a Vue SPA whose job API base I could not find (the bundle's relative '/api/user/city/job_count/' 404s on careers.shopee.sg). Shopee left India in 2022; web search finds only Singapore/Vietnam/Indonesia engineering roles (portal listings that say 'India' refer to ",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Tencent": {
+  "status": "nothing_to_read",
+  "reason": "no India roles: Public JSON API GET https://careers.tencent.com/tencentcareer/api/post/Query?keyword=&pageIndex=N&pageSize=100&language=en-us&area=us (fields RecruitPostName, CountryName, LocationName, Responsibility, PostURL). All 2065 postings read (21 pages, 1 req/s): China 1796, Singapore 100, U",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "TestingBot": {
+  "status": "nothing_to_read",
+  "reason": "Static page (also /careers.md) with one opening, 'Technical Content Writer' (remote), applied for through the contact form. No job list or feed; tiny Belgian company.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "TSMC": {
+  "status": "blocked",
+  "reason": "www.tsmc.com returns 403 with a Cloudflare 'Just a moment...' challenge to a plain GET; stopped. (TSMC has no known India engineering office either.)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Facilio": {
+  "status": "source",
+  "reason": "read directly: links (custom (server-rendered list))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Middleware": {
+  "status": "source",
+  "reason": "read directly: links (custom (server-rendered list))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Starbucks": {
+  "status": "nothing_to_read",
+  "reason": "no India roles: careers.starbucks.com links to apply.starbucks.com, an Eightfold PCSX site (domain starbucks.com); search location India or Bengaluru returns 0, \"software engineer\" returns 41, all US (Seattle/Nashville). India stores are the separate Tata Starbucks JV. Dry-run of {\"name\":\"Starbucks\"",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Bosch": {
+  "status": "source",
+  "reason": "read directly: smartrecruiters (smartrecruiters)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Hasura": {
+  "status": "alias",
+  "reason": "hasura.io/careers 301-redirects to promptql.io/careers; Hasura rebranded as PromptQL, already read via portal:gem promptql",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)",
+  "parent": "PromptQL"
+ },
+ "Apna": {
+  "status": "source",
+  "reason": "read directly: workable (workable)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "JioHotstar": {
+  "status": "source",
+  "reason": "read directly: workday (workday)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Agnikul Cosmos": {
+  "status": "retryable",
+  "reason": "agnikul.in and www.agnikul.in timed out on connect 3 times over ~40 minutes (possibly blocking non-Indian IPs). A web-search snapshot of the careers page shows 4 Chennai roles (Power Electronics Engineer, Mission Design Software Developer, Launch Vehicle Operations Strategist, ERPNext Developer) wit",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "AppInventiv": {
+  "status": "excluded",
+  "reason": "Appinventiv is a mobile/web app development agency (IT services for clients); careers page also returns 403 to a plain GET",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Auzmor": {
+  "status": "source",
+  "reason": "read directly: jsonlist (built in the 21 Nov round)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "bankbazaar": {
+  "status": "nothing_to_read",
+  "reason": "Careers page says to write to careers@bankbazaar.com with a CV; no job list. Workable account bankbazaar exists but has 0 jobs; no Greenhouse/Lever/Ashby/Keka/Recruitee board found",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "BARC India": {
+  "status": "nothing_to_read",
+  "reason": "barcindia.co.in/careers (Broadcast Audience Research Council) has no job list either as served or rendered (about 1.4k chars of nav text plus a reCAPTCHA-protected jQuery form, i.e. a resume drop). No ATS slug found for barc/barcindia. Web search for its careers returns only Bhabha Atomic Research C",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Bluestacks": {
+  "status": "nothing_to_read",
+  "reason": "work-at-bluestacks page describes teams and says drop us an email; no job list. Workable account bluestacks exists with 0 jobs",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "droom": {
+  "status": "nothing_to_read",
+  "reason": "droom.in/career embeds a frozen list: newest posting 03 Jun 2024, the 2 dev roles are from Sep 2021 (checked 21 Nov 2026)",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
+ },
+ "Garuda Aerospace private Ltd": {
+  "status": "source",
+  "reason": "read directly: jsonlist (built in the 21 Nov round)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "GeekyAnts": {
+  "status": "excluded",
+  "reason": "GeekyAnts sells AI consulting, product engineering and system modernization to clients (services firm, per its own site menu); openings link out to topgeek.io",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Godrej Aerospace": {
+  "status": "nothing_to_read",
+  "reason": "only a group-wide Godrej Enterprises board (42 India jobs, 4 aerospace, none software); not added, it would label the group's jobs Godrej Aerospace",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "GoodSpace": {
+  "status": "excluded",
+  "reason": "GoodSpace AI is a recruitment/job platform (CAREERS_DISCOVERY dead end: job portal). Its careers page lists 3 open roles drawn from its own portal (2 belong to another employer, Ekansh Test Labs), pay shown 2-12 LPA: below the bar",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Gravitont Rading": {
+  "status": "alias",
+  "reason": "Misspelt name for Graviton (gravitontrading.com). Its careers page embeds a Greenhouse board whose job URLs are job-boards.greenhouse.io/gravitonresearchcapital, already read as greenhouse:gravitonresearchcapital",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)",
+  "parent": "Graviton Research Capital"
+ },
+ "Hashedin": {
+  "status": "excluded",
+  "reason": "HashedIn by Deloitte: digital product engineering services/consulting (site menu: Services, custom app development, software modernization); part of Deloitte",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Hyperpure": {
+  "status": "nothing_to_read",
+  "reason": "Zomato's B2B arm (Eternal); its careers page is 'Page Not found' and Eternal hires by referral only",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "India Mart": {
+  "status": "pending",
+  "reason": "needs a reader (klimb.io): careers.indiamart.com loads the Klimb widget (klimb_init company indiamart). Public JSON lists 303 IndiaMART InterMESH postings, all India; tech ones (Noida) include Lead Engineer Frontend & Android, Engineer/Sr Engineer SOA, Data Engineering, DevOps, Cloud Security. Posit",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
+ },
+ "Infospoke": {
+  "status": "excluded",
+  "reason": "Infospoke Integrated Solutions describes itself (meta description) as providing IT consulting, digital transformation and technology services; careers page is an Angular shell with no job list",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "JM Financial": {
+  "status": "nothing_to_read",
+  "reason": "jmfl.com careers pages (overview, career-space) describe culture only; their only apply link, jobs.jmfl.com/ApplyNow.aspx, returns HTTP 404 (jobs.jmfl.com root also 404). No job list found; web search found no ATS board either.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "LogicFruit": {
+  "status": "excluded",
+  "reason": "Logic Fruit Technologies is an FPGA/ASIC and hardware design house that also sells engineering services (site: Bring us your toughest technical challenge... Talk to our Engineers). Its 9 current openings (Gurugram/Bengaluru, rendered page) are FPGA RTL, verification, RF architect, IT expert, sales, ",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Maq Software": {
+  "status": "excluded",
+  "reason": "MAQ Software is a Microsoft consulting/software services firm (builds for clients); careers link to careers.jobscore.com/careers/maqsoftware",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "MTX": {
+  "status": "excluded",
+  "reason": "MTX Group is a Salesforce/cloud consulting and systems-integration firm (IT services); careers page is a Salesforce Experience site",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Neysa": {
+  "status": "source",
+  "reason": "read directly: kula (kula)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Privado.ai": {
+  "status": "nothing_to_read",
+  "reason": "Careers page only says send your resume to hello@privado.ai; no job list, no ATS link; no Greenhouse/Lever/Ashby/Workable/Keka board for privado or privadoai",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Saavan": {
+  "status": "nothing_to_read",
+  "reason": "JioSaavn corporate jobs page is server-rendered with an empty #all-jobs list and every office (Mumbai, Bengaluru, Gurgaon, NY, Mountain View) showing 0 Openings; Workable account jiosaavn exists with 0 jobs. Nothing listed to read today; if roles reappear they would be in this page HTML.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Xicom Technologies": {
+  "status": "excluded",
+  "reason": "Xicom is a software/AI development services company (site sells AI development, app development, consulting to clients); careers page lists 12 generic job-description pages",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "ZoomCar": {
+  "status": "nothing_to_read",
+  "reason": "zoomcar.com/careers is the booking app shell (rendered with the repo renderer: no careers content, no ATS link). Workable account zoomcar exists with 0 jobs. Its engineering listings on investor boards (jobs.ngpcap.com) point to LinkedIn job views, so it stays LinkedIn-only.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Classplus": {
+  "status": "pending",
+  "reason": "needs a reader (custom JSON API (crm.classplus.co)): Classplus careers React app (open-role page) loads its list from a public JSON API; today it returns Jobs: [] (page shows No results found). Board is live but empty, so a reader would only be a watch source; low priority until it lists roles.",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
+ },
+ "Freo": {
+  "status": "nothing_to_read",
+  "reason": "Framer careers page (MWYN Tech Pvt Ltd) has only Apply Now buttons to a Tally form (tally.so/r/3xQzpk); no job list; no ATS board found for freo/freomoney/mwyntech",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Gnani.ai": {
+  "status": "source",
+  "reason": "read directly: jsonlist (built in the 21 Nov round)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Tata Digital": {
+  "status": "nothing_to_read",
+  "reason": "Uncertain. Tata Digital used SuccessFactors at career.tatadigital.in (still in search results), but every URL there now 410-redirects to /deactivated-site/ (try_source with successfactors host: HTTP 410). tatadigital.com/careers redirects to tataneu.com/careers, a Flutter canvas app: no HTML, and th",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Tata Neu": {
+  "status": "nothing_to_read",
+  "reason": "same careers page as Tata Digital (old SuccessFactors site 410; new Flutter careers app with no readable list found)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "CoRover": {
+  "status": "source",
+  "reason": "read directly: links (built in the 21 Nov round)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Kotak811": {
+  "status": "alias",
+  "reason": "kotak811.bank.in/careers only links to LinkedIn; Kotak811 roles are posted on the Kotak group Oracle board (hcbt.fa.em2, site CX) as 'Digital Banking Kotak 811-...' (keyword 811 search: 568 hits, mostly contact-centre/sales)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)",
+  "parent": "Kotak Mahindra Bank"
+ },
+ "Mswipe": {
+  "status": "nothing_to_read",
+  "reason": "Careers page's only 'See open positions' button points to https://www.mswipe.com/mswipe-career/#/open-positions, which 404s (plain fetch and rendered); no ATS link in page/JS, sitemap lists only /careers; no Keka/Freshteam/GH/Lever/Ashby/Workable boards for mswipe slugs",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Nazara": {
+  "status": "nothing_to_read",
+  "reason": "nazara.com is a Vite SPA; its careers section's only CTA is a forms.app application form (gn2h0l10.forms.app/applicationform); no job list in the bundle",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Unstop": {
+  "status": "excluded",
+  "reason": "Unstop is a hiring/jobs/competitions portal that lists other employers' jobs and internships (job portal rule); careers page is behind a cookie/JS wall anyway; Workable slug 'unstop' answers with 0 jobs",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Aavenir": {
+  "status": "nothing_to_read",
+  "reason": "aavenir.com/jobs/ says 'No open roles today... Send us your profile through the form below' (HubSpot form); no ATS link; /jobs.md is behind a Cloudflare challenge (not pursued)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Animall": {
+  "status": "nothing_to_read",
+  "reason": "Animall's careers link is a Notion page (Notion = nothing to read per brief); animall.in/careers itself 404s",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Bachatt": {
+  "status": "source",
+  "reason": "read directly: links (custom (Next.js, links reader))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "BestDoc": {
+  "status": "nothing_to_read",
+  "reason": "Open Positions are written inline on the one WordPress page with 'share your resume to <recruiter>@bestdocapp.com' (no per-job links, no ATS); today 2 roles (Customer Success Specialist, Associate Product Manager), none software-dev",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Bizongo": {
+  "status": "retryable",
+  "reason": "bizongo.com/careers 'Show Job Listing' button links https://careers.bizongo.com/, which fails the TLS handshake (TLSV1_ALERT_INTERNAL_ERROR from Akamai edge; plain http returns Akamai 400) on 2 tries ~10 min apart - possibly a permanently broken subdomain. No GH/Lever/Ashby/Keka/Freshteam board; Wor",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Byju's": {
+  "status": "nothing_to_read",
+  "reason": "careers-at-byjus lists departments only; each 'View Jobs' link (/careers/all-openings/job-category/...) redirects to unrelated content pages (tech -> /chemistry/technetium/) and /careers/all-openings/ is 404; applying is via /apply/ form or recruitments@ email. Company is in insolvency proceedings",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Chai Shots": {
+  "status": "nothing_to_read",
+  "reason": "chaishots.in (and www.) currently returns Framer 'Site Not Found' 404 on every path; when live, its careers page linked roles as Notion JDs (flower-wolverine-d0b.notion.site) with Tally apply forms, so even then no readable job list. App is still live (App Store), so company exists",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Convosight": {
+  "status": "nothing_to_read",
+  "reason": "convosight.com/careers just renders the homepage (no careers section, no ATS link even after rendering); roles surface only on Cutshort / agency (Hashone) listings",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Crown Castle": {
+  "status": "nothing_to_read",
+  "reason": "no India roles: US tower/fiber REIT (likely misattributed as Accel-backed). Board recruiting2.ultipro.com/CRO1010CCUSA (UKG) LoadSearchResults: 4 openings, all USA; no India presence",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Dezerv": {
+  "status": "source",
+  "reason": "read directly: jsonlist (built in the 21 Nov round)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Easebuzz": {
+  "status": "source",
+  "reason": "read directly: recruiterbox (recruiterbox (Trakstar Hire))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Eduvanz": {
+  "status": "nothing_to_read",
+  "reason": "eduvanz.com/career 'View Openings' opens a lead form ('Our recruiters will get in touch with you'); no job list or ATS link",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Fabheads Automation": {
+  "status": "nothing_to_read",
+  "reason": "10 roles listed inline (VP Defence, Stores Head, SCM, QA, BD, Marketing, CS, HR; all Bengaluru) each with only a 'Send an email' mailto, no per-job links/ATS; none software-dev (deep-tech manufacturing)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Fashinza": {
+  "status": "nothing_to_read",
+  "reason": "/job-list is a hardcoded array in the page's JS bundle (4 stale roles: 2 Gurgaon interns, 2 USA; 'Viewing 0 jobs' header), no API or ATS; none software-dev",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Finova Capital": {
+  "status": "blocked",
+  "reason": "process-hiring page has no job list, only an 'Apply Now' link to https://finova.in/apply, which returns a security-service page 'You have been blocked' (HTTP 404) to a plain GET; stopped there",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Freight Tiger": {
+  "status": "source",
+  "reason": "read directly: links (custom (links reader))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "FreshMenu": {
+  "status": "nothing_to_read",
+  "reason": "freshmenu.com is now a single-page menu/bulk-order board; /careers serves the same SPA and its bundle has no careers/jobs content or ATS link (only its menu API and Swiggy/Zomato links); no GH/Lever/Ashby/Keka/Freshteam/Workable board for 'freshmenu'",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Fundly.ai": {
+  "status": "nothing_to_read",
+  "reason": "fundly.ai/careers renders the homepage (no careers section, no job links or ATS reference); only contact is connect@fundly.ai; Workable 'fundly' is a same-name catch-all with 0 jobs",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "graph ai": {
+  "status": "pending",
+  "reason": "needs a reader (custom (WordPress/Elementor inline list)): Graph AI (pharmacovigilance SaaS, Hyderabad + US). Careers page lists 8 roles inline in an Elementor accordion (6 Hyderabad: Full-stack Developer, Infrastructure & Enterprise Applications Engineer, QA Engineer, Quantitative Safety Science, T",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
+ },
+ "House of X": {
+  "status": "nothing_to_read",
+  "reason": "houseofx.in/careers is a static-export Next page whose careers component renders an empty <div> (chunk pages/careers-*.js has no content); no ATS link, no jobs",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Houseeazy": {
+  "status": "pending",
+  "reason": "needs a reader (custom (Next.js RSC)): Current Openings are embedded in the /career page's RSC payload: 5 active roles (CRM, real-estate sales, Founder's Office, Telecaller; Noida/Gurgaon), JDs are PDFs, no software roles today",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
+ },
+ "Innovist": {
+  "status": "nothing_to_read",
+  "reason": "Shopify careers page (D2C personal-care brand) only links to LinkedIn (linkedin.com/jobs/innovist-jobs-worldwide); no ATS or job list",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "InRisk Labs": {
+  "status": "nothing_to_read",
+  "reason": "Careers page says 'No open positions right now. We're not actively hiring at the moment'; no ATS link, no GH/Lever/Ashby/Keka/Freshteam/Workable board for inrisk/inrisklabs. Re-check later: if roles appear they may be server-rendered on this page",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "K12 Techno Services": {
+  "status": "nothing_to_read",
+  "reason": "careers page (plain and rendered) has no openings or ATS link, only a RomethemeForm application form and LinkedIn; no Keka/Freshteam/GH/Lever boards for k12 slugs",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Kirusa": {
+  "status": "nothing_to_read",
+  "reason": "SPA careers page shows 3 hardcoded roles (Data Scientist, AI/ML Developer, Java Developer 8-9 yrs; 'Remote / Hybrid', no city) under a 'Position No Longer Available... already been filled' banner; no ATS/API behind it",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Knight FinTech": {
+  "status": "nothing_to_read",
+  "reason": "knightfintech.com/careers is a 404 ('This page took a wrong turn', rendered), the homepage has no careers/jobs link or ATS reference; no boards for slug knightfintech; iimjobs shows no jobs",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Leena AI": {
+  "status": "source",
+  "reason": "read directly: workable (workable)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Lookout": {
+  "status": "source",
+  "reason": "read directly: greenhouse (greenhouse)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "MediSage": {
+  "status": "nothing_to_read",
+  "reason": "Rendered page lists 5 Mumbai roles (BD Manager, Medical Writer, Social Media Manager, Live Streaming Exec, Medical Associate), none software; every 'Apply now'/'Job Description' goes to the same Google Form, no per-job URLs or ATS (list is client-rendered, not in plain HTML)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Mesh": {
+  "status": "source",
+  "reason": "read directly: freshteam (freshteam)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Rentomojo": {
+  "status": "source",
+  "reason": "read directly: pyjamahr (pyjamahr)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Newton School": {
+  "status": "source",
+  "reason": "read directly: zwayam (zwayam)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Moglix": {
+  "status": "source",
+  "reason": "read directly: jsonlist (built in the 21 Nov round)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Sahi": {
+  "status": "source",
+  "reason": "read directly: jsonlist (built in the 21 Nov round)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "TransBnk": {
+  "status": "pending",
+  "reason": "needs a reader (custom (Next.js page, jobs in server HTML)): tbx.co.in/careers (TransBnk, now TBX) server-renders 6 job cards (all Mumbai): Module lead, Client project Manager, Senior Java developer, Junior java developer, QA Junior, Technical Writer. Apply Now is a button (form), no per-job links, ",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
+ },
+ "Pratilipi": {
+  "status": "pending",
+  "reason": "needs a reader (talentzq): english.pratilipi.com/work-with-us lists 3 non-tech roles as Google Docs; www.pratilipi.com/careers -> See Openings -> pratilipi.talentzq.io/careers (TalentZQ, Blazor WASM). Board shows 1 open job (Market Place Growth Manager, Bangalore). Its public JSON has 23 active JDs,",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
+ },
+ "Zumutor Biologics": {
+  "status": "nothing_to_read",
+  "reason": "Biotech; careers page says \"Currently no job offers available\" and asks for resumes by email; no list or platform behind it.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "OncoStem": {
+  "status": "nothing_to_read",
+  "reason": "Diagnostics company; careers.php is only a resume-upload form (name/email/message/resume), no job list or ATS link.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Raphe mPhibr": {
+  "status": "nothing_to_read",
+  "reason": "Drone maker; Webflow careers page Open Positions collection is empty (\"No items found\"), no ATS link; nothing to read today (LinkedIn only).",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Omli Technologies": {
+  "status": "nothing_to_read",
+  "reason": "omli.in/careers renders a 404 (\"Looks like Doro got lost\"); site (Omli Kids) has no careers page or ATS link in its nav; nothing to read.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "NAKAD": {
+  "status": "blocked",
+  "reason": "nakad.co/careers (Join Us) links to nakad.turbohire.co; TurboHire job feed needs a session token and the board robots.txt disallows all bots; nakad.co serves no public list of its own.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Mirana Toys": {
+  "status": "nothing_to_read",
+  "reason": "miranatoys.com/careers (linked in the site footer) renders the shop 404 page (\"We can't find the page\"); /in/careers 404; no ATS slug found (greenhouse/lever/ashby 404); web search finds no board. LinkedIn only.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Progcap": {
+  "status": "nothing_to_read",
+  "reason": "progcap.com/careers serves the homepage; Life @ Progcap page has culture content and only \"Reach out to HR\" (mailto:hr@progcap.com); no job list or ATS link; Keka/greenhouse/lever/ashby slugs absent.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Rupifi": {
+  "status": "nothing_to_read",
+  "reason": "Webflow careers page says \"Explore our current job openings\" but renders no list, no ATS link or iframe (only contact mailto); no Keka/greenhouse/lever/ashby board for rupifi.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "SplashLearn": {
+  "status": "nothing_to_read",
+  "reason": "Webflow careers page is culture + founders text only, no openings list, iframe or ATS link (rendered and checked network calls); no greenhouse/lever/ashby/keka board for splashlearn or studypad; Accel job board says no jobs. LinkedIn only.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Optimized Electrotech": {
+  "status": "source",
+  "reason": "read directly: links (wordpress)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Sukino Continuum Care": {
+  "status": "source",
+  "reason": "read directly: links (wordpress)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "S4S Technologies": {
+  "status": "nothing_to_read",
+  "reason": "Careers page is two DROP YOUR RESUME buttons (job / internship) pointing at generic awsm_job_openings posts; no job list. The post URLs and wp-json return Mod_Security \"Not Acceptable\" to scripts, so not pursued.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Sayre Therapeutics": {
+  "status": "nothing_to_read",
+  "reason": "Pharma; careers page lists 4 openings inline (Key Accounts Manager Oncology / Molecular Diagnostics, Marketing Executive, Medical Advisor) with one application form and no per-job links; no software roles and no ATS.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Stan": {
+  "status": "nothing_to_read",
+  "reason": "getstan.app/careers is a marketing page with only contact@getstan.app; General Catalyst board entries for STAN link out to LinkedIn job posts; an old Notion careers page (water-visitor-184.notion.site, last updated Sep 2024) is stale. LinkedIn only.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "The Good Glamm Group": {
+  "status": "alias",
+  "reason": "goodglamm.com/careers is a 404 on a site titled \"CIRP - Sanghvi Beauty and Technologies Private Limited\" (the group's parent entity is under insolvency resolution). Its consumer brand MyGlamm is already read (freshteam myglamm); no separate group board.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)",
+  "parent": "MyGlamm"
+ },
+ "Trinkerr": {
+  "status": "dead",
+  "reason": "trinkerr.com redirects to a GoDaddy parked-domain lander (\"trinkerr.com is parked free\").",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Wildcraft India": {
+  "status": "nothing_to_read",
+  "reason": "Magento CMS careers page with culture text and a single HR mailto (divya.mahesh@wildcraft.com); no job list or ATS.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Wiom": {
+  "status": "nothing_to_read",
+  "reason": "wiom.in/careers loads the app shell only; the main bundle has no careers route or ATS reference (checked for lever/greenhouse/keka/darwinbox/zoho/turbohire/ashby/kula). Wiom posts on hirist/foundit/LinkedIn and Accel job board, not an own board.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Abnormal AI": {
+  "status": "source",
+  "reason": "read directly: greenhouse (greenhouse)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Inovalon": {
+  "status": "source",
+  "reason": "read directly: ashby (ashby)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Pluang": {
+  "status": "blocked",
+  "reason": "Darwinbox (Cloudflare firewall): pluang.com/careers returns Akamai 'Access Denied' (403) and the Accel portfolio listing points its jobs to pluanghrms.darwinbox.com; no Greenhouse/Lever/Ashby board. Gurugram SDE roles exist (seen on Accel/Foundit).",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Bira 91": {
+  "status": "dead",
+  "reason": "bira91.com resolves but times out on http and https (www doesn't resolve); press (Inc42, Nov 2025) reports the site offline and the company shrank 600->200 staff, founder exited Jul 2026, operations in restructuring. Beer maker, no careers board found anywhere.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Cloudnine Group of Hospitals": {
+  "status": "nothing_to_read",
+  "reason": "cloudninecare.com/career (also rendered) has no job list, only hr@cloudninecare.com; hospital chain, clinical/nursing roles posted on third-party portals.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Craftsvilla": {
+  "status": "dead",
+  "reason": "www.craftsvilla.com no longer resolves; craftsvilla.com http 301s to https which times out (2 tries, ~10 min apart); no careers page or board found by search. Ethnic-wear marketplace, appears defunct.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Fi": {
+  "status": "alias",
+  "reason": "Fi is the neobank Fi Money (epiFi Technologies, Peak XV-backed); already read via lever:epifi.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)",
+  "parent": "Fi Money"
+ },
+ "Innovcare Lifesciences": {
+  "status": "nothing_to_read",
+  "reason": "innovcare.in (Mumbai pharma, Chembur) links to /career/ which returns 404; only hr@innovcare.in in the footer. No tech roles expected.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Nexprt": {
+  "status": "dead",
+  "reason": "nexprt.com returns Cloudflare 522 (origin down) on https; no web presence or job board found by search. Lightspeed-backed B2B export startup appears defunct.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "People Home Finance Limited": {
+  "status": "nothing_to_read",
+  "reason": "Formerly Capital India Home Loans, site peoplehome.in (from lsvp.com portfolio page). Careers page (rendered) lists one 'Relationship Manager' with apply-by-email to careers@peoplehome.in; no ATS or job feed. Affordable-housing lender, no tech roles seen.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Sumosave Retail Ventures": {
+  "status": "nothing_to_read",
+  "reason": "careers page lists 2 store jobs only; no tech hiring",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Tracxn": {
+  "status": "source",
+  "reason": "read directly: links (custom (Webflow CMS, jobs as links in HTML))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Aatmunn": {
+  "status": "nothing_to_read",
+  "reason": "aatmunn.com/careers shows website-template placeholder cards ('Software Engineering - USA Remote', 'Bangladesh Remote', same boilerplate text, FAQ about 'AirTide'), not real jobs; no ATS; only LinkedIn.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Accredible": {
+  "status": "source",
+  "reason": "read directly: pinpoint (pinpoint)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Alacriti": {
+  "status": "nothing_to_read",
+  "reason": "alacriti.com/careers says statically 'We do not have any open positions at this time'; India (Madhapur, Hyderabad) Java hiring runs via HackerEarth hiring challenges and job portals (Foundit), aggregator pay 6-16 LPA SE / 10-24 LPA Sr SE (unverified). No ATS board found.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Amgen": {
+  "status": "source",
+  "reason": "read directly: sitemap (radancy/talentbrew (sitemap + JobPosting))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "bp": {
+  "status": "source",
+  "reason": "read directly: workday (workday)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "CodeParva Technologies Pvt Ltd": {
+  "status": "nothing_to_read",
+  "reason": "codeparva.com/career (rendered) says 'NO OPENINGS CURRENTLY. Keep a lookout for new job openings' (footer (c) 2021); no ATS or job feed; no greenhouse/lever/ashby/smartrecruiters board. Bengaluru self-storage software maker, 11-50 staff.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Entain India": {
+  "status": "source",
+  "reason": "read directly: smartrecruiters (smartrecruiters)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "JAGGAER": {
+  "status": "source",
+  "reason": "read directly: sitemap (icims (sitemap + JobPosting))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Kesari bharat": {
+  "status": "dead",
+  "reason": "Kesari Bharat Remote Navigation Solutions (Jaipur, 'Bharat Maps' iOS app, iStart Rajasthan-backed) has no reachable website: kesaribharat.com is a parked domain (JS redirect to /lander), kesaribharat.in doesn't resolve, bharatmaps.com timed out twice; no careers page or board found by search.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Meril": {
+  "status": "source",
+  "reason": "read directly: zohorecruit (zohorecruit)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "N-able": {
+  "status": "source",
+  "reason": "read directly: jibe (jibe (iCIMS))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "PUMA Group": {
+  "status": "source",
+  "reason": "read directly: sitemap (custom (about.puma.com sitemap + JobPosting))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "SkillVertex": {
+  "status": "dead",
+  "reason": "skillvertex.com resolves (139.59.3.47) but every request times out (4 tries over ~20 min, http and https, www and bare). Directories describe it as a Bengaluru edtech selling online training/internship programmes (pay likely below bar). Could be re-checked as retryable, but nothing indicates a job b",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Sling Media": {
+  "status": "source",
+  "reason": "read directly: jibe (jibe (iCIMS))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "TeamViewer": {
+  "status": "source",
+  "reason": "read directly: links (teamtailor)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Docyt": {
+  "status": "source",
+  "reason": "read directly: workable (workable)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "SupplyHouse": {
+  "status": "source",
+  "reason": "read directly: greenhouse (greenhouse)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Vertiv": {
+  "status": "blocked",
+  "reason": "vertiv.com careers pages return a Cloudflare 'Just a moment...' challenge (403) to plain fetches; no public ATS found behind it (Workday vertiv.wd1/3/5/12 cxs guesses answer 422, web search shows no Workday/Oracle link). Pune has many software roles per Indeed/foundit, so it stays on LinkedIn.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Auric AI Labs": {
+  "status": "nothing_to_read",
+  "reason": "auricai.in (Bengaluru defence-AI startup, pre-seed) careers page's only 'View all jobs' link goes to linkedin.com/company/auric-ai/jobs; no ATS. Roles otherwise appear on Weekday/getmereferred.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Indifi": {
+  "status": "pending",
+  "reason": "needs a reader (custom static page + HROne apply links): indifi.com/careers is hand-coded HTML: 7 live job blocks (Android Developer, Engineering Manager, Information Security Officer, Java Backend Developer, NodeJs developer, Tech Lead, UI Developer; all Gurgaon) each with an 'Apply Now' link to ap",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
+ },
+ "Pallav Technologies": {
+  "status": "nothing_to_read",
+  "reason": "Pallav Technologies Pte Ltd (pallav.tech; AI lending software, Jakarta office, '100% remote team'): careers page says 'We don't have any open positions currently' and has no job list or ATS behind it.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Acquarius Capstorm Limited": {
+  "status": "dead",
+  "reason": "No website, registry record or any web mention found for 'Acquarius Capstorm' (two searches only return unrelated UK 'Aquarius Capital' companies); name can't be tied to a real company.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "AiLogic Neural Network Pvt Ltd": {
+  "status": "excluded",
+  "reason": "Ailogic Neural Network Pvt Ltd (CIN U72900TG2018FTC121842, Kondapur Hyderabad, subsidiary of a foreign company, ~17 staff, Rs 1 L paid-up) is described as custom software development for clients (web/mobile apps, CRM, data analytics) - an IT-services shop; no website or careers page found.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "AIQ Space Ventures": {
+  "status": "dead",
+  "reason": "No website or web mention found for 'AIQ Space Ventures' (two searches; only unrelated AIQ (UAE) and other space VCs). Name can't be tied to a real company.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Akku": {
+  "status": "source",
+  "reason": "read directly: zohorecruit (zohorecruit)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Algohire Technologies Private Limited": {
+  "status": "nothing_to_read",
+  "reason": "Algohire (algohire.ai, Hyderabad AI-recruiting SaaS, ~10 staff, founded 2023): site has no careers link or ATS reference; /careers and /career 404. Hiring only via LinkedIn.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "AppRely Technologies": {
+  "status": "excluded",
+  "reason": "AppRely Technologies LLP (Pune): apprely.com sells 'Development Services', custom ERP and CTRM build work for clients - an IT-services firm.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Ariqt Global Technologies": {
+  "status": "excluded",
+  "reason": "Ariqt Global Technologies (Amsterdam HQ, hubs Noida/Hyderabad) calls itself 'a developer-first company ... helping our clients modernize their technology'; directories list it as IT services and consulting. Excluded as IT services.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Arise TechGlobal": {
+  "status": "dead",
+  "reason": "No website or web mention of 'Arise TechGlobal' found; results are only unrelated Arise (US gig CX platform), Arise Corporation (Bangkok) and Arise Global (Singapore). Can't be tied to a real company.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "AssetMark Global Wealth": {
+  "status": "source",
+  "reason": "read directly: workday (workday)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Astranova Mobility": {
+  "status": "dead",
+  "reason": "No website or web mention of 'Astranova Mobility' found (only unrelated Astara, Astemo, etc.). Can't be tied to a real company.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "athenahealth": {
+  "status": "source",
+  "reason": "read directly: sitemap (phenom (sitemap + JobPosting))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Bajaj Finserv": {
+  "status": "source",
+  "reason": "read directly: peoplestrong (peoplestrong)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Binated": {
+  "status": "excluded",
+  "reason": "Binated Inc. (binated.com): site describes 'business process consulting, AI driven workflow automation' for client businesses - consulting/services firm. No careers page found.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Blue Machines AI": {
+  "status": "source",
+  "reason": "read directly: workable (workable)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Boardapp": {
+  "status": "dead",
+  "reason": "No company found: boardapp.com redirects to a HugeDomains for-sale page, boardapp.in / boardapp.io don't resolve, and searches return only unrelated Board/Boardable/BoardPAC. Can't tie the name to a real company.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Botsync": {
+  "status": "source",
+  "reason": "read directly: workable (workable)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Break The Code": {
+  "status": "excluded",
+  "reason": "Break The Code is a Mumbai digital-marketing/content agency (client services); listings are marketing/design roles at Rs 2-8 L or Rs 10-15k/month - agency and pay clearly below the bar.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Brevan Howard": {
+  "status": "source",
+  "reason": "read directly: sitemap (phenom (sitemap + JobPosting))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Bridgestone Americas": {
+  "status": "nothing_to_read",
+  "reason": "no India roles: Bridgestone Americas jobs live on Workday bridgestone.wd5/external (linked from bebridgestone.com/jobs): 2867 postings, country facet = United States only; 'India' search hits only Indianapolis/Indio etc., 'Bengaluru' search = 0. Caveat: foundit shows a couple of 'Bridgestone America",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Brigade Group": {
+  "status": "blocked",
+  "reason": "Darwinbox (Cloudflare firewall): brigadegroup.com/careers links to brigadegroup.darwinbox.in/ms/candidate/careers. Not called. (Real-estate developer; tech roles are internal IT.)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Bytebeam": {
+  "status": "nothing_to_read",
+  "reason": "Bytebeam (IoTExpress Technologies, Bengaluru connected-vehicle IoT platform): bytebeam.io/careers and /careers-lf now 404 and the site has no careers link; no Greenhouse/Lever/Ashby/Workable/Keka board for bytebeam or iotexpress. Roles appear only on LinkedIn/foundit.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "CDK Global": {
+  "status": "source",
+  "reason": "read directly: workday (workday)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Closer : Influencer Marketing & UGC ads": {
+  "status": "excluded",
+  "reason": "New Delhi influencer-marketing / UGC-ads agency (marketing services); roles seen are influencer marketing, BD, video editor; listed pay Rs 25-30k/month for client servicing (sercanto.in). Not a software employer at the bar.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "CommScope": {
+  "status": "source",
+  "reason": "read directly: successfactors (successfactors)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Compunet Connections": {
+  "status": "excluded",
+  "reason": "compunet.in homepage: 'Scale with dedicated offshore teams and carefully matched technology professionals' - IT services / staff augmentation since 2004 (Village profile also says IT services & consulting, staffing dev teams)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Comviva": {
+  "status": "blocked",
+  "reason": "job list is a CEIPAL widget (jobsapi.ceipal.com iframe, careerapi.ceipal.com/<api_key>/CareerPortalJobPostings/ POST); a plain POST of the widget's own form returns 400 {'message':'Bot access is not allowed'}. Stopped there.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Conduent": {
+  "status": "excluded",
+  "reason": "Conduent is a business-process-services / outsourcing company (spun off from Xerox; BPO for government, healthcare, transport). Careers site is Phenom (careers.conduent.com) if ever wanted.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Cornerstone OnDemand": {
+  "status": "source",
+  "reason": "read directly: csod (csod)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Crowe Capabilities Center – India": {
+  "status": "excluded",
+  "reason": "captive India centre (C3 India Delivery Centre LLP, formerly Crowe Horwath IT Services LLP) of Crowe LLP, a US public accounting & consulting firm; roles seen are audit, tax, HR ops, business ops, ServiceNow/Power Platform support - consulting/accounting services, not a product employer",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Cursor": {
+  "status": "source",
+  "reason": "read directly: ashby (ashby)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Dailoqa": {
+  "status": "excluded",
+  "reason": "Built In profile: 'compliance-first, AI-native, engineering-powered consultancy' building AI solutions for financial institutions (UK + Noida) - consulting firm. For the record its jobs are on dailoqa.zohorecruit.in/jobs/Careers if the user wants it anyway.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Daimler Truck Innovation Center India (DTICI)": {
+  "status": "source",
+  "reason": "read directly: sitemap (built in the 21 Nov round)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "DeepIntent": {
+  "status": "source",
+  "reason": "read directly: greenhouse (greenhouse)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Deltek": {
+  "status": "source",
+  "reason": "read directly: jsonlist (built in the 21 Nov round)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Dexcom": {
+  "status": "source",
+  "reason": "read directly: eightfold (eightfold)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "DOMGYS": {
+  "status": "dead",
+  "reason": "no company named DOMGYS found by web search (closest: Belgian 'Dom&gy' energy-services firm, unrelated); no website to tie the LinkedIn name to",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Duck Creek Technologies": {
+  "status": "source",
+  "reason": "read directly: workday (workday)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "EduRun Group": {
+  "status": "excluded",
+  "reason": "edurungroup.in homepage offers software development services, 'top-tier talent through innovative recruitment solutions' and digital marketing - IT services + recruitment firm (first fetch timed out, second worked)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Employ": {
+  "status": "pending",
+  "reason": "needs a reader (lever (EU instance)): Employ Inc. (parent of Jobvite, Lever, JazzHR; HR-tech product company with a Bangalore Center of Excellence). Its India roles are on the EU Lever instance: api.eu.lever.co/v0/postings/employ has 2 jobs incl. 'Lead, Web Developer | Bangalore, India'. The US boar",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
+ },
+ "Endava": {
+  "status": "excluded",
+  "reason": "Endava is an IT services / digital engineering outsourcing firm (NYSE: DAVA)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "EnglishYaari: English For Professionals": {
+  "status": "nothing_to_read",
+  "reason": "spoken-English tutoring startup; /careers is a static page with 4 hardcoded cards (Customer Support Executive, UI/UX Designer, Video Editor, Video Presenter) and 'Apply Now' buttons, no job URLs or feed; no software-dev roles; other listings are sales at ~Rs 60k/month",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Everpure": {
+  "status": "alias",
+  "reason": "Pure Storage rebranded to Everpure (NYSE: P); greenhouse board 'purestorage' now returns name 'Everpure'; already read as Pure Storage | greenhouse:purestorage",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)",
+  "parent": "Pure Storage"
+ },
+ "Experity": {
+  "status": "source",
+  "reason": "read directly: workday (workday)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Flex": {
+  "status": "source",
+  "reason": "read directly: workday (workday)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Flexiple": {
+  "status": "excluded",
+  "reason": "Flexiple is a freelance/contract developer talent marketplace (hires out vetted developers to client companies) - recruitment/staffing platform; /careers 404",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "FM": {
+  "status": "source",
+  "reason": "read directly: jsonlist (built in the 21 Nov round)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Ford Motor Company": {
+  "status": "source",
+  "reason": "read directly: sitemap (radancy (sitemap))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Fresh Platter": {
+  "status": "nothing_to_read",
+  "reason": "banana supply-chain agri-tech startup (thefreshplatter.com -> freshplatter.ag, Bengaluru); site has no careers page (/careers and /jobs 404, only info@ mailto); roles seen only on Weekday/LinkedIn (ops lead in CEO's office)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Giant Eagle GCC": {
+  "status": "source",
+  "reason": "read directly: sitemap (phenom (sitemap))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Harmonic": {
+  "status": "source",
+  "reason": "read directly: oracle (oracle)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Host360": {
+  "status": "dead",
+  "reason": "Indian sovereign-cloud provider (Mumbai; G2/Verdantix profiles) but no website could be reached: host360.in serves a certificate for another host (hostname mismatch) and host360.in/.co/.cloud did not answer; no careers page found in search, roles only on aggregators (interns at Rs 15k stipend, OpenS",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Innovative Information Technologies, Inc.": {
+  "status": "excluded",
+  "reason": "Princeton NJ 'full-service IT consulting and solutions firm' (LeadIQ: IT Services and IT Consulting; India arm PMR Soft Tech; files H-1B LCAs) - IT services/consulting",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "IOURING Private limited": {
+  "status": "nothing_to_read",
+  "reason": "iouring.com (Chennai capital-markets trading software: NxTrad, NxtOption) - 'Open Positions' section only says send your resume to the careers@ address; no job list",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "IRIS Business Services Limited": {
+  "status": "source",
+  "reason": "read directly: keka (keka)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "iThink Digital": {
+  "status": "excluded",
+  "reason": "Mohali/Chandigarh digital-marketing agency founded 2023, <50 staff (DesignRush/GoodFirms/Manifest profiles: social media, SEO, branding, AI marketing). ithinkdigital.in does not resolve; ithinkdigital.com is a parked HugeDomains page. Marketing services, not a product employer",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "JioSaavn": {
+  "status": "nothing_to_read",
+  "reason": "careers page renders its openings server-side in a '#jobs' list, which today is empty ('0 Openings' for Mumbai, Bengaluru, Gurgaon, NYC, Mountain View); no ATS or feed behind it. Recheck later: once a job appears its link format can go into a links.py entry",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Joblet-AI": {
+  "status": "excluded",
+  "reason": "joblet.ai titles itself an AI-Powered Job Board (\"Browse thousands of jobs across all industries\"): a job portal listing other employers jobs; no own careers board found (/careers 404).",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Keel": {
+  "status": "dead",
+  "reason": "Could not tie the LinkedIn company (ca.linkedin.com/company/getkeel, one remote-India SDE1 Full Stack Java + Agentic AI posting) to a real website: getkeel.com is an unrelated Indian study-abroad site (no careers list, /careers 404); other Keels (keel.so London ops platform, Keel Infrastructure NY, ",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Keysight Technologies": {
+  "status": "source",
+  "reason": "read directly: jibe (jibe (iCIMS Career Sites))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Konrad": {
+  "status": "excluded",
+  "reason": "Konrad Group (Toronto, Gurugram office) describes itself as a next generation digital consultancy building apps/sites for clients (AEM, Salesforce, MERN devs): IT services/consulting.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Liquidity Services": {
+  "status": "source",
+  "reason": "read directly: oracle (oracle)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Logical Wings Infoweb Private Limited | Enterprise Software Development": {
+  "status": "excluded",
+  "reason": "Vadodara software-development services firm (LinkedIn name itself says Enterprise Software Development; posting: Junior Full Stack Angular/PHP, Gujarat candidates only): IT services, pay well below bar.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Mactores": {
+  "status": "excluded",
+  "reason": "Its own LinkedIn posting: Mactores is the agent-native AWS modernization firm (client engagements, cutover delivery): cloud consulting / IT services.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "MatrixCare": {
+  "status": "source",
+  "reason": "read directly: links (workllama (AGS candidate connection), server-rendered links)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Medpace": {
+  "status": "source",
+  "reason": "read directly: jibe (jibe (iCIMS Career Sites))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "MergerDomo": {
+  "status": "nothing_to_read",
+  "reason": "mergerdomo.com (SME M&A marketplace, Delhi) has no careers link; /careers and /career 404; no greenhouse/lever/ashby board; jobs only on LinkedIn.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "MindzMap | Digital Solutions": {
+  "status": "excluded",
+  "reason": "Chennai digital-solutions agency (posting: Junior Laravel PHP developer for client web apps): IT services, pay below bar.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "MUFG Pension & Market Services": {
+  "status": "source",
+  "reason": "read directly: oracle (oracle)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Navera Ventures Pvt. Ltd.": {
+  "status": "source",
+  "reason": "read directly: jsonlist (built in the 21 Nov round)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "NESCODE": {
+  "status": "excluded",
+  "reason": "Nescode Technologies (Bangalore, 2-10 staff per LinkedIn) is an internet engineering / services firm building websites, apps and ERP (Odoo) for clients, plus consulting: IT services.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Netcomm IT Solutions Pvt. Ltd.": {
+  "status": "excluded",
+  "reason": "Posting says Netcomm IT Solutions provides IT solutions and consulting services to multinational organizations: IT services.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Network Solutions": {
+  "status": "blocked",
+  "reason": "Network Solutions is a brand of Newfold Digital (LinkedIn posting: Software Engineer, Mumbai, Who We Are. Newfold Digital...). Newfold careers (newfold.com/careers, /careers/jobs) returns Cloudflare Just a moment... 403; no public ATS board found (newfold.wd1 Workday guesses 4xx). Newfold has a Mumb",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Newpage Solutions": {
+  "status": "excluded",
+  "reason": "newpage.io describes itself as a leading custom technology solutions provider for Life Sciences industry (builds software for pharma/biotech clients): IT services/consulting.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "NikahForever": {
+  "status": "pending",
+  "reason": "needs a reader (custom (Next.js careers portal career.nikahforever.com)): nikahforever.com links to career.nikahforever.com; /jobs is server-rendered and shows 2 roles today (Customer Support Executive, Business Development Executive, In Office Delhi) with an Engineering filter but no engineering ro",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
+ },
+ "NRG Foods Pvt.Ltd.": {
+  "status": "excluded",
+  "reason": "food exporter with no software roles (3 plant/office jobs on nrgfoods.in)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Nudge": {
+  "status": "blocked",
+  "reason": "Nudge (justnudge.com, Bengaluru bill-scanning rewards app, ex-BeBetta) has no careers page on its site; its jobs are posted on Peerlist (peerlist.io/company/justnudge/careers), which returns a Cloudflare Just a moment... 403. Ashby slug nudge is a different (SF neurotech) company.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Olive Crypto Systems Pvt. Ltd.": {
+  "status": "nothing_to_read",
+  "reason": "olivecrypto.com (payment products for banks, Hyderabad) is a one-page site with only a mailto:jobs@olivecrypto.com; /careers 404; no ATS board found; jobs appear on Cutshort/Weekday/LinkedIn only.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Orvera AI": {
+  "status": "source",
+  "reason": "read directly: links (custom (server-rendered links, JobPosting on detail pages))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Osheeva": {
+  "status": "excluded",
+  "reason": "osheeva.com (Dehradun) sells maintenance of clients legacy .NET & PHP apps (title: Legacy .NET & PHP, kept alive. Extended on AWS.): IT services; posting is a fresher junior dev role, pay below bar.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Parspec": {
+  "status": "source",
+  "reason": "read directly: ashby (ashby)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Pearson": {
+  "status": "source",
+  "reason": "read directly: oracle (oracle)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "People Tech Group Inc": {
+  "status": "excluded",
+  "reason": "People Tech Group (Seattle/Hyderabad) is an IT services and staffing/consulting firm (Java dev role for client work): IT services.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Perennation Computer Solutions Global Private Limited": {
+  "status": "excluded",
+  "reason": "Posting: PCS Global is an Information Technology services provider (web/mobile dev, staff augmentation, 1,500 staff): IT services/staffing.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "PPFAS Mutual Fund": {
+  "status": "source",
+  "reason": "read directly: links (custom (server-rendered PHP job links))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Prudent Corporate Advisory Services Ltd.": {
+  "status": "blocked",
+  "reason": "prudentcorporate.com homepage and /careers both return Cloudflare Attention Required 403 to a plain fetch. Ahmedabad wealth/distribution firm; LinkedIn roles are 0-3 yr .NET developers (pay likely below bar).",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Quixta": {
+  "status": "excluded",
+  "reason": "quixta.com titles itself Web Design & Software Development Company in Bangalore (client web/software projects): IT services / agency.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Rabbitstay": {
+  "status": "nothing_to_read",
+  "reason": "rabbitstay.com (Hyderabad travel-booking app) is a Flutter web app (canvas-rendered, no text in the DOM even after render); /careers returns the same app shell; no greenhouse/lever/ashby board and no web mentions of a careers page. Hiring appears LinkedIn-only.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "RedSeal, Inc.": {
+  "status": "source",
+  "reason": "read directly: links (jazzhr)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Refold AI": {
+  "status": "source",
+  "reason": "read directly: ashby (ashby)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "RunnTV": {
+  "status": "nothing_to_read",
+  "reason": "RunnTV (Noida FAST-channel streaming) site runn.tv is a Next.js app on S3/CloudFront with no careers link; /careers, /career, /jobs give S3 AccessDenied (same as any missing path). LinkedIn posting asks candidates to email resumes. No ATS board found.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Sanmina": {
+  "status": "blocked",
+  "reason": "sanmina.com/careers links to jobs.sanmina.com, which returns a Cloudflare managed challenge (403 Just a moment...) even for robots.txt; old careers.sanmina.com no longer resolves. India (Chennai) roles are mostly hardware/EMS.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Sathya Educare Competency Trust": {
+  "status": "nothing_to_read",
+  "reason": "Bengaluru NGO/vocational trust training geriatric caregivers; no own careers page found, openings only on third-party boards (ngobox, placementindia) with email/WhatsApp applications; no software roles",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Scoutit": {
+  "status": "excluded",
+  "reason": "Job aggregator/candidate-sourcing partner: scoutit.in says 'Personalized career opportunities from all platforms on the web'; Weekday listings call Scoutit an 'independent candidate sourcing partner' for other employers",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Secfix": {
+  "status": "source",
+  "reason": "read directly: ashby (ashby)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "SkillsNCR": {
+  "status": "excluded",
+  "reason": "Early-stage Gurugram skilling/training company (school tuition, employability training, corporate training for GCCs). 10 roles on skillsncr.com/careers, mostly teachers/trainers; only tech role is 'Graduate Trainee - Technology & Solutions'; applications by email. Pay clearly below the bar. (Readabl",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "SUNAMY.AI": {
+  "status": "nothing_to_read",
+  "reason": "sunamy.ai (AI personal-assistant product) has no careers/jobs page: /careers 404, sitemap-pages.xml lists only about/research/ai-lab/legal pages, no ATS reference in page or JS bundle",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "SyncMyStudio": {
+  "status": "nothing_to_read",
+  "reason": "syncmystudio.com (photo/video studio management app) has no careers page: sitemap has only home/terms/privacy/contact, /careers just serves the homepage, no ATS reference",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Teladoc Health": {
+  "status": "source",
+  "reason": "read directly: workday (workday)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Thales": {
+  "status": "source",
+  "reason": "read directly: workday (workday)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "The Citco Group Limited": {
+  "status": "source",
+  "reason": "read directly: oracle (oracle)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Thryve Digital Health LLP": {
+  "status": "blocked",
+  "reason": "Darwinbox (Cloudflare firewall): thryvedigital.com now redirects to goengen.in (enGen Global, Highmark Health's India captive); its careers page 'JOIN US' links tdh.darwinbox.in/ms/candidate/careers. Not called.",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Tradl AI": {
+  "status": "source",
+  "reason": "read directly: links (custom (tradl.ai/careers, server-rendered; Apply links go to binary.so forms))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Trail": {
+  "status": "dead",
+  "reason": "Real early-stage Bengaluru AI startup ('Trail is the context layer AI agents run on', FDE posting on Foundit 15 days ago) but no website could be tied to it: searches found none, trail.ai serves a blank page titled 'trail-ai' (even rendered), trailhq.ai/trail.co.in unrelated/parked. Keep on LinkedIn",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Transak C-Corp": {
+  "status": "source",
+  "reason": "read directly: links (breezy (custom domain careers.transak.com))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "TurboHire": {
+  "status": "blocked",
+  "reason": "turbohire.co and /careers return 403 Cloudflare 'Just a moment... Enable JavaScript and cookies' challenge; stopped. (Hyderabad HR-tech product company; only third-party listings e.g. Cutshort seen)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "V2 Retail Ltd": {
+  "status": "source",
+  "reason": "read directly: links (custom (WordPress AWSM job openings; RSS at /jobs/feed/))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Vahan.ai": {
+  "status": "source",
+  "reason": "read directly: links (custom (Astro site, server-rendered role links with 'Apply' text))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Vanyar": {
+  "status": "excluded",
+  "reason": "vanyar.com: 'Palantir Foundry & AIP specialists' - a consulting/implementation partner (What we do / Talk to us). Consulting firm, excluded",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Visdum": {
+  "status": "source",
+  "reason": "read directly: links (custom (Webflow, /career/<slug> links))",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Zema Global Data Corporation": {
+  "status": "pending",
+  "reason": "needs a reader (deel): zema.global/careers links Deel ATS (zema.deel.team shareable link -> jobs.deel.com/job-boards/zema.global). 23 postings, 5 in Navi Mumbai (Software Engineer (India) RQ-0023, SRE, Senior Network Engineer, Oracle DBA, IT Helpdesk). links reader yields 0: the list page has no <a>",
+  "checked": "2026-11-21",
+  "by": "checked by hand"
+ },
+ "Z47": {
+  "status": "nothing_to_read",
+  "reason": "Z47 (ex-Matrix Partners India) is a VC firm; z47.com has no careers or jobs page (/careers and /jobs 404, sitemap has only podcast/insight pages, no jobs./careers. subdomains, no ATS link). Its own hiring is tiny/LinkedIn-only; any portfolio job board would list other employers' jobs anyway",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Whitefield Careers": {
+  "status": "excluded",
+  "reason": "Staffing/recruitment firm: its own page describes it as a staffing firm placing talent with employers; jobs on PyjamaHR are for client employers",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Webito": {
+  "status": "excluded",
+  "reason": "Webito Infotech (Surat/Ahmedabad/New Jersey) is an IT services firm: webitoinfotech.com sells custom software development, MVP/SaaS development, staff augmentation (offshore, dedicated, hourly). Keka board webito.keka.com has 6 jobs (1 Jr Laravel dev). webito.in is a parked domain",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Wafynet": {
+  "status": "excluded",
+  "reason": "wafynet.com ('WafyNet - Where ambition finds its path', meta 'Find Jobs. Build Your Business. Grow Your Network with AI') is a job/networking portal app; no careers page of its own found (SPA with Google/Apple sign-in only). Job portal -> excluded; if treated as an employer it would be nothing_to_re",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Xylem": {
+  "status": "source",
+  "reason": "read directly: workday (workday)",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "Visteon Corporation": {
+  "status": "blocked",
+  "reason": "visteon.com/careers returns 403 Cloudflare 'Just a moment... Enable JavaScript and cookies' challenge, so the 'search all open positions' link can't be read; stopped. Guessed boards not found (Workday visteon wd1/wd3/wd5 sites Visteon/External/Visteon_Careers -> 422/500, careers-visteon.icims.com 40",
+  "checked": "2026-11-21",
+  "by": "research agent (pending round, 21 Nov 2026)"
+ },
+ "DroomMedia": {
+  "status": "alias",
+  "parent": "droom",
+  "reason": "same company as droom (LinkedIn name)",
+  "checked": "2026-11-21",
   "by": "checked by hand"
  }
 }

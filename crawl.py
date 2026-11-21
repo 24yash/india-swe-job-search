@@ -197,8 +197,14 @@ INDIA_RE = re.compile("|".join(("(?<![a-z])" if k[:1].isalpha() else "") + re.es
 ONLY_IN_CODE = re.compile(r"(?:^|/)\s*[^,/]+,\s*in\s*(?:$|/)")  # "Greenwood, IN" = Indiana; "Pune, MH, IN" stays India
 
 
+IND_PREFIX = re.compile(r"(?:^|[/|;]\s*)ind\s*[-–:]")  # Workday's "IND - Any Location (Remote)" (Teladoc)
+US_IND = re.compile(r"indianapolis|indiana|plainfield|,\s*in\b|\busa?\b|united states")  # "IND" is also Indianapolis's code
+
+
 def in_india(loc):
     l = (loc or "").lower()
+    if IND_PREFIX.search(l) and not US_IND.search(l):
+        return True
     if not INDIA_RE.search(l) or "kota kinabalu" in l:
         return False
     # ", in" alone is ambiguous: a two-part "City, IN" is the US state code, so it needs another India marker
@@ -343,7 +349,10 @@ def greenhouse(c):
 
 
 def lever(c):
-    for j in get(f"https://api.lever.co/v0/postings/{c['slug']}?mode=json"):
+    """Lever's public postings API. Boards hosted on Lever's EU instance (companies.json "region": "eu") answer only
+    on api.eu.lever.co (Employ's India roles, 21 Nov 2026)."""
+    api = "api.eu.lever.co" if c.get("region") == "eu" else "api.lever.co"
+    for j in get(f"https://{api}/v0/postings/{c['slug']}?mode=json"):
         cat = j.get("categories") or {}
         locs = cat.get("allLocations") or [cat.get("location") or ""]
         text = j.get("descriptionPlain", "") + "\n" + "\n".join(
@@ -364,24 +373,49 @@ def ashby(c):
                   meta={"employmentType": j.get("employmentType", "")})
 
 
+SMARTRECRUITERS_INDIA_CAP = 3000  # India postings per board; Bosch lists ~670
+
+
 def smartrecruiters(c):
+    """SmartRecruiters' public postings API, filtered to India on the server (country=in): paging the whole board
+    stopped at 1,000 of Bosch's 5,000+ postings and missed most of its India ones (21 Nov 2026)."""
     base = f"https://api.smartrecruiters.com/v1/companies/{c['slug']}/postings"
-    offset = 0
+    offset, failed, streak = 0, [], 0
     while True:
-        d = get(base, params={"limit": 100, "offset": offset})
-        for j in d.get("content", []):
+        d = get(base, params={"limit": 100, "offset": offset, "country": "in"})
+        if "content" not in d:  # an error body or a changed API must not read as an empty board
+            raise RuntimeError("SmartRecruiters answer has no content list")
+        for j in d["content"]:
             if (j.get("location") or {}).get("country", "").lower() != "in" or not title_ok(j["name"]):
                 continue
-            det = get(f"{base}/{j['id']}")
+            loc = j.get("location") or {}
+            # same form as the postingUrl a detail read returns ("<id>-<title slug>"), so a stub keeps the posting's identity
+            url = f"https://jobs.smartrecruiters.com/{c['slug']}/{j['id']}-{re.sub(r'[^a-z0-9]+', '-', j['name'].lower())}"
+            if streak >= 3:  # throttled: stop calling (each failure waits ~90 s in get()); keep the rest from the list
+                failed.append("SmartRecruiters detail calls stopped after 3 failures in a row")
+                det = {"_unread": True}
+            else:
+                try:
+                    det = get(f"{base}/{j['id']}")
+                    streak = 0
+                except requests.RequestException as e:
+                    if posting_gone(e):
+                        continue
+                    detail_failed(failed, "SmartRecruiters", e)
+                    streak += 1
+                    det = {"_unread": True}
             sec = (det.get("jobAd") or {}).get("sections") or {}
             text = "\n".join(strip_html((sec.get(k) or {}).get("text")) for k in ("jobDescription", "qualifications", "additionalInformation"))
-            loc = j.get("location") or {}
             yield Job(c["name"], j["name"], ", ".join(filter(None, [loc.get("city"), loc.get("country", "").upper()])),
-                      det.get("postingUrl") or f"https://jobs.smartrecruiters.com/{c['slug']}/{j['id']}",
-                      parse_ts(j.get("releasedDate")), text, remote=bool(loc.get("remote")))
+                      det.get("postingUrl") or url, parse_ts(j.get("releasedDate")), text, remote=bool(loc.get("remote")),
+                      meta={"detail": "unread"} if det.get("_unread") else {})
         offset += 100
-        if offset >= d.get("totalFound", 0) or offset >= 1000:
+        total = d.get("totalFound", 0)
+        if offset >= total:
             break
+        if offset >= SMARTRECRUITERS_INDIA_CAP:  # a partial listing must not look complete
+            raise RuntimeError(f"SmartRecruiters lists {total} India postings; read the first {SMARTRECRUITERS_INDIA_CAP}")
+    raise_if_failed(failed)
 
 
 WORKDAY_INDIA_CAP = 3000  # postings per board through the India facet; larger boards are logged
@@ -479,34 +513,63 @@ def workday(c):
                    parse_ts(info.get("startDate")) or workday_age(j.get("postedOn")),
                    strip_html(info.get("jobDescription")), remote="remote" in (info.get("remoteType") or "").lower())
 
-    with ThreadPoolExecutor(6) as pool:
+    # 3 detail calls per board (x 3 boards in SHARED_HOST_SLOTS): 6 per board still drew 429s on 20-21 Nov 2026
+    with ThreadPoolExecutor(3) as pool:
         yield from filter(None, pool.map(detail, todo))
     if list_failed:  # a partial listing must not look complete: crawl() then merges in the previous crawl's postings
         raise RuntimeError(f"{list_failed[0]}; kept the postings read before it")
     raise_if_failed(failed)
 
 
+ORACLE_INDIA_CAP = 3000  # India requisitions per site; JPMorgan lists ~280, Oracle ~340
+# Sites with more India requisitions than the cap (Kotak lists ~11,700, mostly branch banking) are read by these broad
+# keywords instead; each keyword's results must fit under the cap, or the read is partial.
+ORACLE_KEYWORDS = ("software", "engineer", "developer", "programmer", "SDE", "SWE", "technical staff", "full stack", "backend", "frontend")
+
+
 def oracle(c):
-    """Oracle Recruiting Cloud (JPMorgan, Oracle…): the public REST API behind the company's own careers site."""
+    """Oracle Recruiting Cloud (JPMorgan, Oracle…): the public REST API behind the company's own careers site.
+    Lists every India requisition (no keyword) and filters titles here: keyword searches missed titles such as
+    "Engineer II, Software Dev." (Liquidity Services, 21 Nov 2026)."""
     api = f"https://{c['host']}/hcmRestApi/resources/latest"
-    seen, todo, failed = set(), [], []
-    for query in ("software engineer", "software developer", "backend engineer"):
-        offset = 0
-        while offset < 500:
-            finder = (f'findReqs;siteNumber={c["site"]},keyword="{query}",location=India,limit=25,offset={offset},'
-                      f'sortBy=POSTING_DATES_DESC')
+    seen, todo, failed, page_size = set(), [], [], 200
+    capped = []
+
+    def scan(keyword):
+        """Read one search to the end (or the cap); returns the site's total for it."""
+        offset, total = 0, None
+        while True:
+            finder = (f'findReqs;siteNumber={c["site"]},' + (f'keyword="{keyword}",' if keyword else "")
+                      + f'location=India,limit={page_size},offset={offset},sortBy=POSTING_DATES_DESC')
             d = get(f"{api}/recruitingCEJobRequisitions", params={"onlyData": "true", "finder": finder,
                                                                   "expand": "requisitionList.secondaryLocations"})
-            page = ((d.get("items") or [{}])[0]).get("requisitionList") or []
+            item = (d.get("items") or [{}])[0]
+            if "requisitionList" not in item:  # a changed or broken answer must not read as "no openings"
+                raise RuntimeError("Oracle search answer has no requisitionList")
+            page = item.get("requisitionList") or []
+            total = item.get("TotalJobsCount", total)
+            if offset == 0 and not keyword and (total or 0) > ORACLE_INDIA_CAP:
+                return total  # too many to list: the caller switches to keyword searches
             for j in page:
                 locs = [j.get("PrimaryLocation") or ""] + [s.get("Name", "") for s in j.get("secondaryLocations") or []]
                 if j["Id"] in seen or not title_ok(j.get("Title", "")) or not any(in_india(l) for l in locs):
                     continue
                 seen.add(j["Id"])
                 todo.append((j, locs))
-            offset += 25
-            if len(page) < 25:
-                break
+            offset += page_size
+            # the reported total decides the end; a short page alone (postings closing mid-read) doesn't
+            if not page or (total is not None and offset >= total) or (total is None and len(page) < page_size):
+                return total
+            if offset >= ORACLE_INDIA_CAP:
+                capped.append(f"Oracle search {keyword or 'India'!r} lists {total}; read the first {ORACLE_INDIA_CAP}")
+                return total
+
+    total = scan("")
+    if (total or 0) > ORACLE_INDIA_CAP:
+        print(f"  {c['name']}: {total} India requisitions; reading by keyword", file=sys.stderr, flush=True)
+        for keyword in ORACLE_KEYWORDS:
+            scan(keyword)
+    capped = capped[0] if capped else ""
 
     def detail(item):
         j, locs = item
@@ -528,6 +591,8 @@ def oracle(c):
 
     with ThreadPoolExecutor(6) as pool:
         yield from filter(None, pool.map(detail, todo))
+    if capped:  # a partial listing must not look complete
+        raise RuntimeError(capped)
     raise_if_failed(failed)
 
 
@@ -1071,13 +1136,22 @@ def save_raw(name, jobs, note="", **extra):
 
 def fill_unread(fresh, old):
     """A posting whose detail call failed this time (meta detail=unread): its last full read beats the list-data stub.
-    Matched by URL, else by the URL's last segment (Workday's externalUrl can be on another host than the stub's URL)."""
+    Matched by URL, else by the URL's last segment (Workday's externalUrl can be on another host than the stub's URL),
+    else by a leading numeric id in that segment (a SmartRecruiters stub vs its postingUrl with the title slug)."""
     by_url = {j.url: j for j in old if j.text}
     tails = collections.Counter(j.url.rstrip("/").rsplit("/", 1)[-1] for j in old)
     by_tail = {j.url.rstrip("/").rsplit("/", 1)[-1]: j for j in old if j.text}
+    def lead_id(u):  # SmartRecruiters' "<id>-<title-slug>": the id alone identifies the posting
+        m = re.match(r"\d{6,}", u.rstrip("/").rsplit("/", 1)[-1])
+        return m.group(0) if m else None
+    ids = collections.Counter(lead_id(j.url) for j in old)
+    by_id = {lead_id(j.url): j for j in old if j.text and lead_id(j.url)}
+
     def prev(j):
         t = j.url.rstrip("/").rsplit("/", 1)[-1]
-        return by_url.get(j.url) or (by_tail.get(t) if tails[t] == 1 else None)
+        i = lead_id(j.url)
+        return (by_url.get(j.url) or (by_tail.get(t) if tails[t] == 1 else None)
+                or (by_id.get(i) if i and ids[i] == 1 else None))
     def restore(j):  # the earlier read may have been carried: drop its stale liveness label, this read listed it
         p = prev(j)
         return dataclasses.replace(p, meta={k: v for k, v in p.meta.items() if k != "liveness"}) if p else j

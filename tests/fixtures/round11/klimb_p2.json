@@ -1,0 +1,29 @@
+{
+ "jobs": {
+  "positions": [
+   {
+    "id": "6ac8cdc010b3e78a16868a1e",
+    "title": "Android Developer",
+    "location": {
+     "searchText": "Noida, Uttar Pradesh, India",
+     "gPlace": {
+      "formatted_address": "Noida, Uttar Pradesh, India"
+     }
+    },
+    "expRange": {
+     "minimum": "1",
+     "maximum": "3"
+    },
+    "description": "<p>Kotlin.</p>"
+   },
+   {
+    "id": "6ac8cc8210b3e78a168689c9",
+    "title": "Software Engineer",
+    "remote": true,
+    "location": null,
+    "description": "<p>Remote.</p>"
+   }
+  ]
+ },
+ "showLoadMore": false
+}

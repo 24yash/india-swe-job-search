@@ -6,7 +6,8 @@
    "job_link": "/en/jobs/\\d+/[^\"/]+/", "max_pages": 10, "location": "India"}
 
 The title is the link text (cut at a ':' or a run of spaces), or the URL slug with "title_from_url"; detail pages are fetched only for India-fitting
-titles. "location" is used when the detail page names no Indian city (only set it when the list URL is
+titles. "title_split": a regex; the title is cut at its first match. "inner_max" (default 3000) bounds the link's inner HTML, for sites with long job cards (CoRover).
+"location" is used when the detail page names no Indian city (only set it when the list URL is
 already filtered to India)."""
 import html as htmllib
 import re
@@ -14,7 +15,7 @@ from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import urljoin
 
 CITIES = ("Bengaluru", "Bangalore", "Hyderabad", "Pune", "Mumbai", "Gurugram", "Gurgaon", "Noida", "Chennai", "New Delhi", "Delhi",
-          "Ahmedabad", "Kolkata", "Thiruvananthapuram", "Trivandrum", "Kochi", "Coimbatore", "Jaipur", "Indore", "Remote")
+          "Ahmedabad", "Kolkata", "Thiruvananthapuram", "Trivandrum", "Kochi", "Coimbatore", "Jaipur", "Indore")
 
 
 def page_text(h, url):
@@ -30,7 +31,7 @@ def fetch(c, h):
             url = tmpl.format(page=page)
             body = page_text(h, url)
             found = 0
-            for href, inner in re.findall(r'<a\b[^>]{0,1500}?href=["\'](' + c["job_link"] + r'[^"\']{0,600})["\'][^>]{0,1500}>(.{0,3000}?)</a>', body[:3_000_000], re.S | re.I):
+            for href, inner in re.findall(r'<a\b[^>]{0,1500}?href=["\'](' + c["job_link"] + r'[^"\']{0,600})["\'][^>]{0,1500}>(.{0,' + str(int(c.get("inner_max", 3000))) + r'}?)</a>', body[:3_000_000], re.S | re.I):
                 link = urljoin(url, htmllib.unescape(href))
                 inner = re.sub(r"<svg.*?</svg>", " ", inner, flags=re.S | re.I)
                 named = re.search(r'class="[^"]*(?:title|name)[^"]*"[^>]*>(.*?)<', inner, re.S | re.I)
@@ -40,6 +41,8 @@ def fetch(c, h):
                     parts = re.sub(r"[?#].*", "", link).rstrip("/").split("/")
                     slug = parts[-2] if parts[-1].isdigit() and len(parts) > 1 else parts[-1]  # .../Title-Words/216221
                     title = re.sub(r"^\d+-|-\d+$", "", slug).replace("-", " ")
+                if c.get("title_split"):  # link text runs on into the date / location (Bachatt: "Gen AI Developer  Gurgaon  March 23")
+                    title = re.split(c["title_split"], title)[0].strip()
                 found += 1
                 if link in seen or not title or not h.title_ok(title):
                     continue
@@ -55,18 +58,25 @@ def fetch(c, h):
         except Exception:
             return None
         from portals.sitemap import job_postings, place  # job pages with schema.org JobPosting data (e.g. Kula)
-        for jp in job_postings(body):
-            locs = [l for l in place(jp) if h.in_india(l)]
-            if jp.get("title") and (locs or c.get("location")):
+        postings = [jp for jp in job_postings(body) if jp.get("title")]
+        for jp in postings:
+            places = [l for l in place(jp) if not re.fullmatch(r"\s*(remote|anywhere|multiple locations?|various)\s*", l, re.I)]
+            locs = [l for l in places if h.in_india(l)]
+            # the configured location only stands in when the posting names no place; a posting placed outside India is dropped
+            if locs or (not places and c.get("location")):
                 return h.Job(c["name"], jp["title"].strip(), " / ".join(locs) or c["location"], link, h.parse_ts(jp.get("datePosted")),
                              h.strip_html(jp.get("description") or ""), meta={"employmentType": str(jp.get("employmentType") or "")})
+        if any(not h.in_india(l) and not re.fullmatch(r"\s*(remote|anywhere|multiple locations?|various)\s*", l, re.I)
+               for jp in postings for l in place(jp)):
+            return None
         main = re.search(r"<main.*?</main>", body, re.S | re.I)
         text = h.strip_html(main.group(0) if main else body)
         cities = [x for x in CITIES if re.search(rf"\b{x}\b", text[:4000])]
         loc = " / ".join(dict.fromkeys(cities)) + (", India" if cities else "")
         if not cities and not c.get("location"):
             return None
-        return h.Job(c["name"], title, loc or c["location"], link, None, text, remote="Remote" in cities)
+        remote = bool(re.search(r"\bremote\b", text[:4000], re.I)) and bool(cities or "remote" in c.get("location", "").lower())
+        return h.Job(c["name"], title, loc or c["location"], link, None, text, remote=remote)
 
     with ThreadPoolExecutor(4) as pool:
         yield from filter(None, pool.map(detail, todo))

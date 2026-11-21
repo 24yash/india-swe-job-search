@@ -7,6 +7,19 @@ companies.json: {"name": "Fiserv", "ats": "portal", "portal": "sitemap", "host":
 Optional: "sitemaps": [explicit sitemap URLs], "max_pages": detail pages to read per run (default 150),
 "india_in_url": true when every job URL names its city (Eightfold: .../full-stack-developer-bangalore-karnataka-india),
 so only URLs naming an Indian city are read.
+"job_path": a regex for this site's job URLs (matched against the whole URL, query included) when they don't use a
+usual /job/, /careers/jobs/… path: 314e "/career/[a-z0-9-]+/$", SanDisk's Avature "/JobDetail/". Every sub-sitemap
+then counts as one the jobs may come from (a failed one fails the read). URLs whose path carries no role words
+(bare ids, ?ac=jobad&id=…) need "cache_pages", since the role-word check on the URL would drop them.
+"page_data": for job pages without JobPosting markup that carry the job in a JSON script (Joveo's career-site CMS:
+__NEXT_DATA__ props.pageProps.jobDetails): {"script": "__NEXT_DATA__", "item": "props.pageProps.jobDetails",
+"title": "title", "location": ["locations.*.city", "locations.*.country"], "description": "description",
+"posted": "createdAt", "where": {"status": "OPEN"}, "default_location": "India"} (paths as in jsonlist; location
+parts joined with ", ", and paths under one list ("locations.*.") are paired per entry, places joined with " / ":
+"Reston, Virginia, United States / Bangalore, Karnataka, India"; "default_location" only for a job naming no place
+at all; a page whose item fails "where" counts as closed). A page with neither JobPosting nor the script is read
+again next run, as usual. With cache_pages, a cached page_data job is read again after PAGE_DATA_RECHECK_DAYS days
+(these pages carry no closing date, so a job that turned CLOSED must not stay listed); a failed re-read keeps it.
 "cache_pages": true for sites whose job URLs are bare IDs (Meta: /profile/job_details/<id>/): every job page is read
 once and its JobPosting summary kept in output/sitemap-cache/<company>.json, so a run reads only new URLs (at most
 max_pages) and drops jobs that left the sitemap (closed).
@@ -15,7 +28,9 @@ Steps: sitemap URLs from robots.txt (+ /sitemap.xml, /sitemal.xml) → job URLs 
 like a software role (and isn't senior by its wording) → newest first → read each page's JobPosting data →
 keep India roles that haven't passed their closing date. robots.txt is respected for every request.
 """
+import dataclasses
 import gzip
+import html
 import json
 import re
 from concurrent.futures import ThreadPoolExecutor
@@ -25,7 +40,7 @@ from urllib.parse import urlparse
 JOB_PATH = re.compile(r"/(jobs?|job[-_]details?|careers?/jobs?|positions?|vacanc\w*|requisitions?|openings?)/", re.I)
 ROLE_SLUG = re.compile(r"software|engineer|developer|\bsde\b|sde-|backend|back-end|full-?stack|platform|devops|\bsre\b|site-reliability|"
                        r"java|python|golang|cloud|data-engineer|member-of-technical|mts", re.I)
-SENIOR_SLUG = re.compile(r"senior|\bsr\b|sr-|staff|principal|lead|manager|director|architect|head-of|vice-president|\bvp\b|"
+SENIOR_SLUG = re.compile(r"senior|\bsr\b|sr-|consulting[-_ ]member|(?<!technical)(?<!technical[-_ ])staff|principal|lead|manager|director|architect|head-of|vice-president|\bvp\b|"
                          r"distinguished|fellow|intern\b|internship|apprentice", re.I)
 INDIA = re.compile(r"\b(india|bengaluru|bangalore|hyderabad|pune|mumbai|gurugram|gurgaon|noida|chennai|new delhi|delhi|kolkata|"
                    r"ahmedabad|kochi|thiruvananthapuram|trivandrum|coimbatore|jaipur|indore|karnataka|telangana|maharashtra|"
@@ -142,6 +157,7 @@ def job_urls(h, c, robots, max_maps=40):
     The guessed /sitemap.xml and /sitemal.xml may fail; a sitemap that loads and lists nothing means no openings."""
     todo, seen, jobs, read = sitemap_urls(h, c, robots), set(), {}, 0
     required, failed = set(c.get("sitemaps") or []), []
+    job_path = re.compile(c["job_path"], re.I) if c.get("job_path") else None  # this site's job URLs (full URL, query included)
     while todo and len(seen) < max_maps:
         sm = todo.pop(0)
         if sm in seen:
@@ -155,17 +171,18 @@ def job_urls(h, c, robots, max_maps=40):
         read += 1
         if "<sitemapindex" in xml:
             subs = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", xml)
-            required |= {u for u in subs if JOB_MAP.search(urlparse(u).path)}
+            required |= {u for u in subs if job_path or JOB_MAP.search(urlparse(u).path)}  # job_path sites: any sub-sitemap may hold the jobs
             # job sitemaps first; skip other languages' copies when an English one exists
             subs.sort(key=lambda u: (not JOB_MAP.search(u), bool(re.search(r"/(?!en)[a-z]{2}[-_][a-z]{2}/", u, re.I))))
             todo = subs + todo
             continue
         for block in re.findall(r"<url>(.*?)</url>", xml, re.S):
             loc = re.search(r"<loc>\s*([^<\s]+)\s*</loc>", block)
-            if not loc or not JOB_PATH.search(urlparse(loc.group(1)).path):
+            url = (html.unescape(loc.group(1)) if job_path else loc.group(1)) if loc else ""  # query-string job URLs (DTICI's ?ac=jobad&id=)
+            if not url or not (job_path.search(url) if job_path else JOB_PATH.search(urlparse(url).path)):
                 continue
             mod = re.search(r"<lastmod>\s*([^<\s]+)\s*</lastmod>", block)
-            jobs.setdefault(loc.group(1), mod.group(1) if mod else "")
+            jobs.setdefault(url, mod.group(1) if mod else "")
     if not read or failed:
         raise RuntimeError(f"{'job sitemap ' + failed[0] if failed else 'no sitemap'} could not be read for {c['host']} "
                            "(network, HTTP error or robots.txt)")
@@ -233,7 +250,59 @@ def to_job(c, h, s, now):
                  h.strip_html(s["text"]), remote=s["remote"], meta={"employmentType": s["type"]})
 
 
-def page_summaries(h, url, robots):
+def paired_places(h, it, paths):
+    """Location text for paths that fan out over one list ("locations.*.city", "locations.*.country"): each entry's
+    parts joined with ", ", entries with " / ". None when the paths don't share such a list (read them as before)."""
+    paths = paths if isinstance(paths, list) else [paths] if paths else []
+    split = [p.split(".") for p in paths]
+    if len(split) < 2:
+        return None
+    common = 0
+    while all(len(x) > common and x[common] == split[0][common] for x in split):
+        common += 1
+    star = max((i for i in range(common) if split[0][i] == "*"), default=-1)
+    if star < 0:
+        return None
+    from portals.jsonlist import dig, text_at
+    rest = [".".join(x[star + 1:]) for x in split]
+    places = []
+    for entry in dig(it, ".".join(split[0][:star + 1])):
+        parts = text_at(h, entry, rest, ", ")
+        parts = ", ".join(dict.fromkeys(p for p in parts.split(", ") if p))  # no "India, India"
+        if parts:
+            places.append(parts)
+    return " / ".join(dict.fromkeys(places))
+
+
+def data_summaries(c, h, page, url):
+    """Summaries from a job page's JSON script ("page_data"), [] when the job is closed, None when there is no data."""
+    from portals.jsonlist import dig, first, matches, text_at
+    cfg = c.get("page_data") or {}
+    m = re.search(r'<script[^>]{0,500}?id="' + re.escape(cfg.get("script", "__NEXT_DATA__")) + r'"[^>]{0,500}>(.*?)</script>', page, re.S)
+    if not m:
+        return None
+    try:
+        data = json.loads(m.group(1))
+    except ValueError:
+        return None
+    items = [x for x in dig(data, cfg.get("item", "")) if isinstance(x, dict)]
+    if not items:
+        return None
+    out = []
+    for it in items:
+        if not matches(it, cfg.get("where")):
+            continue
+        loc = paired_places(h, it, cfg.get("location"))
+        loc = text_at(h, it, cfg.get("location"), ", ") if loc is None else loc
+        out.append({"title": text_at(h, it, cfg.get("title", "title"), " "), "locs": [loc] if loc else
+                    ([cfg["default_location"]] if cfg.get("default_location") else []), "url": url,
+                    "posted": str(first(it, cfg["posted"]) or "") if cfg.get("posted") else "", "until": "",
+                    "remote": bool(cfg.get("remote") and re.search(r"remote", str(first(it, cfg["remote"]) or ""), re.I)),
+                    "remote_india": False, "text": text_at(h, it, cfg.get("description"), "\n\n"), "type": ""})
+    return out
+
+
+def page_summaries(h, url, robots, c=None):
     """JobPosting summaries on one job page, or None when the page couldn't be read or parsed (try again next run)."""
     if ".icims.com" in url and "in_iframe=1" not in url:  # classic iCIMS: JobPosting data only in the iframe view
         url += ("&" if "?" in url else "?") + "in_iframe=1"
@@ -241,9 +310,24 @@ def page_summaries(h, url, robots):
     if page is None:
         return None
     try:
-        return [summary(jp, url) for jp in job_postings(page)]
+        out = [summary(jp, url) for jp in job_postings(page)]
+        if not out and c and c.get("page_data"):
+            return data_summaries(c, h, page, url)
+        if out and not any(o["locs"] for o in out):  # Avature's newer theme: no jobLocation, but labelled fields on the page
+            f = avature_fields(page)
+            loc = ", ".join(v for v in (f.get("city"), f.get("state"), f.get("country/region") or f.get("country")) if v)
+            for o in out:
+                o["locs"] = [loc] if loc else []
+        return out
     except Exception:  # one malformed page must not cost the rest of the run
         return None
+
+
+def avature_fields(page):
+    """Avature job pages' 'General Information' block: {label (lower case): value}, e.g. country/region, city."""
+    pairs = re.findall(r'field__label"[^>]{0,200}>\s*([^<]{1,80}?)\s*</div>\s*<div class="[^"]{0,200}field__value"[^>]{0,200}>\s*([^<]{1,200}?)\s*</div>',
+                       page[:3_000_000])
+    return {k.strip().lower(): re.sub(r"\s+", " ", v).strip() for k, v in pairs}
 
 
 def cache_path(h, c):
@@ -251,13 +335,18 @@ def cache_path(h, c):
 
 
 EMPTY_RECHECK_DAYS = 7
+PAGE_DATA_RECHECK_DAYS = 3
 
 
 def fetch_cached(c, h, robots, urls, now):
     """Bare-ID job URLs: read each page once, keep its summary (description only for India roles), reuse it while
     the URL stays in the sitemap. A page that couldn't be read is retried next run. A page that loaded without any
     JobPosting data (possibly a block or rate-limit page) is stored as {"empty": date} and read again after
-    EMPTY_RECHECK_DAYS days. New URLs come first, then those rechecks, at most max_pages in all."""
+    EMPTY_RECHECK_DAYS days. With page_data, every summary carries the date it was read ("read") and the page is read
+    again after PAGE_DATA_RECHECK_DAYS days (one cached before the stamp existed is due now): such pages have no
+    closing date, so this is how a job that turned CLOSED leaves the list (the re-read fails "where" and the page is
+    stored as empty). A re-read that fails keeps the cached summary. New URLs come first, then the empty rechecks, then
+    the page_data rechecks (oldest first), at most max_pages in all."""
     path = cache_path(h, c)
     old = json.loads(path.read_text()) if path.exists() else {}
     listed = dict(urls)
@@ -265,15 +354,25 @@ def fetch_cached(c, h, robots, urls, now):
     due = (now.date().toordinal() - EMPTY_RECHECK_DAYS)
     stale = [u for u, v in cache.items() if isinstance(v, dict) and datetime.fromisoformat(v["empty"]).toordinal() <= due]
     new = [u for u, _ in sorted(urls, key=lambda x: x[1], reverse=True) if u not in cache]
-    todo = (new + stale)[: c.get("max_pages", 150)]
+    recheck = []
+    if c.get("page_data"):
+        data_due = now.date().toordinal() - PAGE_DATA_RECHECK_DAYS
+
+        def read_on(v):
+            return min(datetime.fromisoformat(str(s.get("read") or "2000-01-01")[:10]).toordinal() for s in v)
+        recheck = sorted((u for u, v in cache.items() if isinstance(v, list) and v and read_on(v) <= data_due),
+                         key=lambda u: read_on(cache[u]))
+    todo = (new + stale + recheck)[: c.get("max_pages", 150)]
 
     def read(u):
-        got = page_summaries(h, u, robots)
+        got = page_summaries(h, u, robots, c)
         if got is None:
             return u, None
         for s in got:
             if not any(INDIA.search(l) for l in s["locs"]) and not s["remote_india"]:
                 s["text"] = ""  # only India roles are ever shown; keep the cache small
+            if c.get("page_data"):
+                s["read"] = now.date().isoformat()
         return u, got
 
     with ThreadPoolExecutor(4) as pool:
@@ -304,10 +403,27 @@ def fetch(c, h):
     # URLs that name an Indian city first (many sites put the location in the URL), then the newest of the rest
     todo = ([x for x in newest if INDIA.search(x[0])] + [x for x in newest if not INDIA.search(x[0])])[: c.get("max_pages", 150)]
 
+    # a job page that can't be read this run is not a closed job: the last read's posting for that page is kept
+    # (detail=unread) and the read ends as DetailsUnread, like a failed detail call on any board (DESIGN.md, Expiry)
+    prev = {}
+    for j in (h.load_raw(c["name"])[0] if hasattr(h, "load_raw") else []):
+        for k in (j.meta.get("page"), j.url):
+            if k:
+                prev.setdefault(k, j)
+    failed = []
+
     def detail(item):
-        for s in page_summaries(h, item[0], robots) or []:
+        summaries = page_summaries(h, item[0], robots, c)
+        if summaries is None:
+            p = prev.get(item[0])
+            if p:
+                failed.append("sitemap job page could not be read")
+                return dataclasses.replace(p, meta={k: v for k, v in p.meta.items() if k != "liveness"} | {"detail": "unread", "page": item[0]})
+            return None
+        for s in summaries:
             job = to_job(c, h, s, now)
             if job:
+                job.meta = job.meta | {"page": item[0]}
                 return job
         return None
 
@@ -318,3 +434,5 @@ def fetch(c, h):
             if key not in seen:  # sitemaps often list each job once per language
                 seen.add(key)
                 yield job
+    if failed and hasattr(h, "DetailsUnread"):
+        raise h.DetailsUnread(f"{failed[0]} ({len(failed)} postings kept from the last read)")
