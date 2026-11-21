@@ -2279,8 +2279,7 @@
    "pay": "likely",
    "pay_note": "Known strong bands",
    "site": "jiostar.com",
-   "linkedin_every_run": true,
-   "board_note": "JioStar Workday answers scripts with 403 (checked 11 Nov 2026)"
+   "board_note": "JioStar Workday (jiostar.wd102/JioStar) answers plain requests again (21 Nov 2026); read as JioHotstar"
   },
   {
    "name": "Nobroker",
@@ -3290,8 +3289,8 @@
    "name": "United Airlines",
    "type": "Global product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE median TC 19.0 LPA all levels; AmbitionBox Associate SE 7.7–11.2 LPA (0–1 yr estimate) (checked 21 Nov 2026)"
   },
   {
    "name": "American Airlines",
@@ -3407,8 +3406,8 @@
    "name": "Continental",
    "type": "Global product",
    "quality": 8,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "Levels.fyi India Software Engineer median TC 10.5 LPA, Associate SE 7.2 LPA, Senior SE 20.7 LPA (checked 21 Nov 2026)"
   },
   {
    "name": "ABB",
@@ -3641,8 +3640,8 @@
    "name": "WinZO",
    "type": "Indian product",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE overall median TC 47.4 LPA (no level split); AmbitionBox SDE fresher estimate 19.8-25.3 LPA (checked 21 Nov 2026)",
    "site": "winzogames.com"
   },
   {
@@ -3842,7 +3841,7 @@
    "type": "Indian fintech",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "No levels.fyi India data; AmbitionBox Software & QA dept estimates conflict (2 yrs 31.5–40.2 LPA vs 3 yrs 11.7–15 LPA); Software Developer 9.1–11.6 LPA (1 salary) (checked 21 Nov 2026)",
    "site": "stablemoney.in"
   },
   {
@@ -4258,7 +4257,7 @@
    "type": "SaaS",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "AmbitionBox SDE-1 8.7–24.8 LPA (5 salaries), SE 7.4–18 LPA (0–2 yrs, 2024); Levels.fyi SE India median TC 27.3 LPA all levels (checked 21 Nov 2026)"
   },
   {
    "name": "Astra Security",
@@ -4299,8 +4298,8 @@
    "name": "Arcana",
    "type": "SaaS",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "Levels.fyi Arcana Backend SE India median TC 54.9 LPA (top 64.5 LPA); AmbitionBox SE 49.4–54.6 LPA (1 salary). No per-level split but whole range far above 20 LPA (checked 21 Nov 2026)"
   },
   {
    "name": "Ema",
@@ -4320,8 +4319,8 @@
    "name": "Maxim AI",
    "type": "AI startups",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "likely",
+   "pay_note": "Wellfound postings: Applied AI Engineer 25–50 LPA (3 yrs), Founding Full-stack 25–45 LPA + equity; MTS posting gives no figure (checked 21 Nov 2026)"
   },
   {
    "name": "Dashtoon",
@@ -4356,7 +4355,7 @@
    "type": "AI startups",
    "quality": 8,
    "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay_note": "AmbitionBox Full Stack Developer 12–27 LPA (3–6 yrs, 3 salaries, Nov 2023), fresher 1.8–3.5 LPA; posting asks 4–6 yrs — crosses 20, leans below at 0–3 yrs (checked 21 Nov 2026)"
   },
   {
    "name": "Rephrase.ai",
@@ -4369,8 +4368,8 @@
    "name": "Wadhwani AI",
    "type": "AI startups",
    "quality": 9,
-   "pay": "unclear",
-   "pay_note": "not yet checked"
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE overall median TC 19.8 LPA (all levels, no split), so SDE I sits under 20 (checked 21 Nov 2026)"
   },
   {
    "name": "Pixxel",
@@ -4790,8 +4789,8 @@
    "name": "Appen",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "Levels.fyi India SE overall median TC 6.5 LPA (checked 21 Nov 2026)",
    "careers_url": "https://appen.com/jobs/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -4818,7 +4817,7 @@
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "Sources conflict: Levels.fyi India SE median TC L1 21.3 LPA but L4 19.5 LPA (inconsistent data); AmbitionBox Aptiv Software Engineer 4.5-16.6 LPA, Senior SE 2-8 yrs 8.3-21 LPA (532 salaries). Leans below; lead is a SW functional-testing role (checked 21 Nov 2026)",
    "careers_url": "https://jobs.aptiv.com/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -4871,8 +4870,8 @@
    "name": "Auzmor",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "Levels.fyi has no India data; AmbitionBox Software Engineer (1-2 yrs) 6.0-11.5 LPA, 9 salaries (checked 21 Nov 2026)",
    "careers_url": "https://auzmor.com/careers/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -5088,7 +5087,7 @@
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "Bottomline: Levels.fyi India SE median TC 22.6 LPA all levels; AmbitionBox SE 9.7–21 LPA (58 salaries), SE II 15–20 LPA (2–4 yrs) - leans below (checked 21 Nov 2026)",
    "careers_url": "https://www.bottomline.com/apac/about/careers",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -5649,8 +5648,8 @@
    "name": "Garuda Aerospace private Ltd",
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "AmbitionBox (239 salaries) no SE title shown; Junior Engineer 1.8–6 LPA; Levels.fyi has too few submissions. Low confidence (checked 21 Nov 2026)",
    "careers_url": "https://www.garudaaerospace.com/",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -6427,7 +6426,7 @@
    "type": "moreThanFAANGM (product companies list)",
    "quality": 10,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "No SDE figure; AmbitionBox fresher estimate 7.2–9.2 LPA (role unclear), salary rating 3.0/5 (checked 21 Nov 2026)",
    "careers_url": "https://angel.co/company/reelohq",
    "source": "moreThanFAANGM (product companies list)"
   },
@@ -7692,8 +7691,8 @@
    "name": "Rentomojo",
    "type": "Accel-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "AmbitionBox Rentomojo Software Engineer 1-5 yrs 6.5-12 LPA; Software Developer 1-3 yrs 9-14 LPA (checked 21 Nov 2026)",
    "careers_url": "https://rentomojo.com",
    "source": "Accel-backed startup (ISJB)"
   },
@@ -7758,7 +7757,7 @@
    "type": "Accel-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "No salary data on AmbitionBox/Glassdoor/Wellfound; postings say 'competitive', roles ask 2–6 yrs (checked 21 Nov 2026)",
    "careers_url": "https://sarla-aviation.com",
    "source": "Accel-backed startup (ISJB)"
   },
@@ -7775,8 +7774,8 @@
    "name": "Scimplify",
    "type": "Accel-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "AmbitionBox SDE II (2 yrs) 14–17.8 LPA, SDE 6.8–8.6 LPA; Glassdoor SE II avg 13.7 LPA (1 salary) (checked 21 Nov 2026)",
    "careers_url": "https://scimplify.com",
    "source": "Accel-backed startup (ISJB)"
   },
@@ -7932,8 +7931,8 @@
    "name": "Tracxn",
    "type": "Accel-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "AmbitionBox SE 2.1–12 LPA (0–3 yrs, 69 salaries); Levels.fyi India SE median 19.3 LPA (few submissions) (checked 21 Nov 2026)",
    "careers_url": "https://tracxn.com",
    "source": "Accel-backed startup (ISJB)"
   },
@@ -8122,7 +8121,7 @@
    "type": "Peak XV-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "checked 20 Nov 2026: no software-engineer salary data found (AmbitionBox has company-wide bands only)",
+   "pay_note": "No SE title data; AmbitionBox Gurugram estimates 9–11.5 LPA (2 yrs) to 27–34.5 LPA (3 yrs), role unnamed (checked 21 Nov 2026)",
    "careers_url": "https://nathabit.in",
    "source": "Peak XV-backed startup (ISJB)"
   },
@@ -8568,8 +8567,8 @@
    "name": "SolarSquare Energy",
    "type": "Lightspeed-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "Wellfound SDE-3 Backend posting 15–20 LPA (also used for MERN full-stack); no SDE pay on AmbitionBox, so SDE I/II sits under 20 (checked 21 Nov 2026)",
    "careers_url": "https://jobs.lsvp.com/jobs/solarsquare-energy",
    "source": "Lightspeed-backed startup (ISJB)"
   },
@@ -8605,7 +8604,7 @@
    "type": "Lightspeed-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "No Levels.fyi India data; only a job-board estimate 6–12 LPA (not company-disclosed) (checked 21 Nov 2026)",
    "careers_url": "https://jobs.lsvp.com/jobs/nexthop-ai",
    "source": "Lightspeed-backed startup (ISJB)"
   },
@@ -8650,7 +8649,7 @@
    "type": "Lightspeed-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "AmbitionBox Software Developer 17.1–21.9 LPA (1 salary); Bengaluru 2-yr estimate 12.6–16.1 LPA (8 salaries); no FDE pay; leans below (checked 21 Nov 2026)",
    "careers_url": "https://jobs.lsvp.com/jobs/gushwork",
    "source": "Lightspeed-backed startup (ISJB)"
   },
@@ -8740,7 +8739,7 @@
    "type": "Lightspeed-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "Only figure: SDE 2 Backend (3+ yrs, Gurgaon) listing USD 10k–35k (~8.5–30 LPA), marked filled — crosses 20 (checked 21 Nov 2026)",
    "careers_url": "https://jobs.lsvp.com/jobs/bachatt",
    "source": "Lightspeed-backed startup (ISJB)"
   },
@@ -8910,8 +8909,8 @@
    "name": "Newton School",
    "type": "Nexus-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE median TC ~25 LPA; SDE 2 (3 yrs) entry ~21.8 LPA (checked 21 Nov 2026)",
    "careers_url": "https://newtonschool.co",
    "source": "Nexus-backed startup (ISJB)"
   },
@@ -9054,8 +9053,8 @@
    "name": "Maximl",
    "type": "Nexus-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "AmbitionBox Maximl Labs Software Engineer (1-2 yrs) 12-15 LPA, 4 salaries (checked 21 Nov 2026)",
    "careers_url": "https://maximl.com",
    "source": "Nexus-backed startup (ISJB)"
   },
@@ -9163,7 +9162,7 @@
    "type": "Nexus-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "No salary data; Product Engineer (3+ yrs, Bengaluru) postings say only 'salary + meaningful equity'; $9M Series A (checked 21 Nov 2026)",
    "careers_url": "https://jobs.nexusvp.com/jobs/metaforms",
    "source": "Nexus-backed startup (ISJB)"
   },
@@ -9234,8 +9233,8 @@
    "name": "Easebuzz",
    "type": "Bessemer-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "AmbitionBox SE 4–7 LPA (1–4 yrs, 14 salaries, Sep 2024) (checked 21 Nov 2026)",
    "careers_url": "https://easebuzz.in",
    "source": "Bessemer-backed startup (ISJB)"
   },
@@ -9279,8 +9278,8 @@
    "name": "Teleradiology Solutions",
    "type": "Bessemer-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "AmbitionBox: top 10% company-wide >13 LPA; sister Telerad Tech AI Engineer 4–9 LPA (1–4 yrs), SE 3–8.1 LPA (checked 21 Nov 2026)",
    "careers_url": "https://telradsol.com",
    "source": "Bessemer-backed startup (ISJB)"
   },
@@ -9360,8 +9359,8 @@
    "name": "Entropik",
    "type": "Bessemer-backed startup (ISJB)",
    "quality": 11,
-   "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay": "below",
+   "pay_note": "AmbitionBox Entropik Tech SE 5.7–7.2 LPA; fresher 5.4–6.9 LPA (checked 21 Nov 2026)",
    "careers_url": "https://jobs.bvp.com/jobs/entropik",
    "source": "Bessemer-backed startup (ISJB)"
   },
@@ -9589,7 +9588,7 @@
    "type": "General Catalyst-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "No Levels.fyi/AmbitionBox SE figure; one listing Senior ML Engineer Bengaluru 50–90 LPA - leans likely but no entry-level data (checked 21 Nov 2026)",
    "careers_url": "https://nurix.ai",
    "source": "General Catalyst-backed startup (ISJB)"
   },
@@ -9661,7 +9660,7 @@
    "type": "General Catalyst-backed startup (ISJB)",
    "quality": 11,
    "pay": "unclear",
-   "pay_note": "not yet checked",
+   "pay_note": "AmbitionBox Singular Software Developer 31.5-40.2 LPA (1 salary, low confidence), Engineer 12.5-18 LPA (3 salaries); Integration Engineer page returned 403 (checked 21 Nov 2026)",
    "careers_url": "https://singular.net",
    "source": "General Catalyst-backed startup (ISJB)"
   },
@@ -10587,6 +10586,468 @@
    "quality": 9,
    "pay": "unclear",
    "pay_note": "checked 20 Nov 2026: no software-engineer salary data found (AmbitionBox Senior SE 23.4-29.9 LPA from 1 salary)"
+  },
+  {
+   "name": "Host360",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No salary or company data found on Levels.fyi/AmbitionBox/search (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Keel",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No India data; Himalayas estimate for keel.xyz remote SE EUR 90–130k worldwide, identity unconfirmed (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Wadhwani AI Global",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "AmbitionBox SE 15–32 LPA (1–4 yrs, 5 salaries); Associate 7.5–9.5 LPA (2 salaries) (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Arise TechGlobal",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No company or salary data found in search (possibly a small IT-services firm, unconfirmed) (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Rabbitstay",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No company-specific salary data found (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Bytebeam",
+   "type": "",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox Back End Engineer 6.3–8 LPA (1 salary, low confidence), SDE estimate 4.5–5.8 LPA (checked 21 Nov 2026)"
+  },
+  {
+   "name": "MergerDomo",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No company-specific salary data found (search only returns Domo Inc.) (checked 21 Nov 2026)"
+  },
+  {
+   "name": "EnglishYaari: English For Professionals",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No company-specific salary data found (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Simple Energy",
+   "type": "",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox SDE 8.1–10.4 LPA, SE 8.6–10.9 LPA (estimates) (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Closer : Influencer Marketing & UGC ads",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Delhi influencer-marketing agency; no engineering pay data, its marketing roles list 3–4 LPA - leans below (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Comviva",
+   "type": "",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox Comviva Technology SE 3.8–14 LPA (0–5 yrs, New Delhi, 30 salaries); Developer 5–10 LPA (0–2 yrs) (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Trail",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Bengaluru AI-agent knowledge-graph startup; FDE posting (2–4 yrs) shows no pay, no salary data (checked 21 Nov 2026)"
+  },
+  {
+   "name": "SyncMyStudio",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No company or salary data found (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Quixta",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Quixta Ventures LLP; only a senior (6–10 yrs) posting found, no pay data (checked 21 Nov 2026)"
+  },
+  {
+   "name": "SolarSquare",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No software-engineer page on AmbitionBox; general Engineer 3.1–3.9 LPA (2 salaries), fresher 4–6 LPA; company rating 3.2/5 (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Acquarius Capstorm Limited",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Kochi-based maker of Resonate CX; postings show no pay, no AmbitionBox/Levels.fyi data (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Third Wave Coffee",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "AmbitionBox has only store/management roles (677 salaries); no engineering figure (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Thryve Digital Health LLP",
+   "type": "",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox Thryve Digital Developer 3.5–4.8 LPA (0–3 yrs), Engineer 1 3.2–4 LPA, Lead Engineer 6.3–8.1 LPA (checked 21 Nov 2026)"
+  },
+  {
+   "name": "IOURING Private limited",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Chennai capital-markets fintech; no salary data on AmbitionBox/Levels.fyi (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Renesas Electronics",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "AmbitionBox SE 15–32 LPA (0–3 yrs, 4 salaries); Associate SE min 15–18 LPA; no Levels.fyi India data (checked 21 Nov 2026)"
+  },
+  {
+   "name": "ISA",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "ISA = Information Systems Associates (Air Arabia's tech arm, Pune); Data Analytics Engineer I posting 6–11 LPA; SE pay not disclosed, no AmbitionBox page; leans below (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Wonder Worth Solutions",
+   "type": "",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox 28 salaries: 1.1–4 LPA (tech support, medical billing roles); 1–10 employees, BPO-like (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Visteon Corporation",
+   "type": "",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "Levels.fyi India all-levels median 7.7 LPA; AmbitionBox SE 4.8–16.1 LPA, SE II 10–11.7 LPA (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Astranova Mobility",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No company-specific salary data found; only generic India full-stack benchmarks (checked 21 Nov 2026)"
+  },
+  {
+   "name": "TurboHire",
+   "type": "",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox Software Developer 8.5–10 LPA (<1 yr); Software Engineer2 9.9–10.8 LPA (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Zema Global Data Corporation",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No levels.fyi India data; no AmbitionBox/Glassdoor SE figures found (Navi Mumbai office) (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Dailoqa",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No salary data found; Noida Python dev postings show no pay (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Algohire Technologies Private Limited",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No salary data found; Hyderabad SE (0–2 yrs) posting shows no pay; company runs hiring/skilling platforms for public-sector workforce programmes (checked 21 Nov 2026)"
+  },
+  {
+   "name": "SkillsNCR",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No company or salary info found in search (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Osheeva",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No company or salary info found in search (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Sanmina",
+   "type": "",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox Sanmina-SCI Programmer Analyst 3.8–7.8 LPA (149 salaries) (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Prudent Corporate Advisory Services Ltd.",
+   "type": "",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox ASP.NET Web Developer 1.6–6.8 LPA; Software Developer 2.1–7 LPA (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Olive Crypto Systems Pvt. Ltd.",
+   "type": "",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox Software Development Engineer II 3.8–7.5 LPA (28 salaries) (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Fresh Platter",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No salary page for Fresh Platter on AmbitionBox/levels.fyi; only similarly named companies (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Archer",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "exclude not confirmed (job page 403); titles look like reposted Accenture roles (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Heads Up For Tails",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "AmbitionBox has 770 salaries but none for software/dev roles (retail/sales only) (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Bridgestone Americas",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "AmbitionBox Bridgestone SE 9.5–23 LPA (3–6 yrs, 13 salaries), Software Developer 12.4–23.6 LPA (3 salaries), Java Developer 2.1–8 LPA — crosses 20; leans below (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Fintel Research Labs Pvt Ltd",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No company profile or salary data found (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Everpure",
+   "type": "",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Everpure = Pure Storage. Levels.fyi India MTS3 TC 50.6 LPA, MTS4 80.1 LPA, median ~48.8 LPA (no entry-level row); AmbitionBox SE 9.4–16 LPA from only 4 salaries (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Binated",
+   "type": "",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "Full Stack Engineer (mid-level, remote) and Web Developer listings state INR 60K (~7.2 LPA even if monthly) (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Alluraa",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Only a Delhi LinkedIn listing found; no company or pay info (checked 21 Nov 2026)"
+  },
+  {
+   "name": "JuiceLabs AI",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Cutshort Software Engineer/AI Engineer (3–6 yrs, Bengaluru) 15–25 LPA — crosses 20 (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Geojit Technologies",
+   "type": "",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "AmbitionBox Software Engineer 2–6 LPA (50 salaries), Senior SE 4–9.3 LPA (checked 21 Nov 2026)"
+  },
+  {
+   "name": "NikahForever",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No Levels.fyi data and no AmbitionBox SDE salary figure; AmbitionBox salary & benefits rating 3.5/5 from 13 reviews (checked 21 Nov 2026)"
+  },
+  {
+   "name": "RunnTV",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No Levels.fyi or AmbitionBox page found for RunnTV (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Sathya Educare Competency Trust",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Educational trust, not a tech company; the role mixes full-stack work with IT support; no salary data found. Very likely below (not searched separately) (checked 21 Nov 2026)"
+  },
+  {
+   "name": "CredHive",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No Levels.fyi, AmbitionBox or Glassdoor data for CredHive; only an unreliable aggregator estimate (checked 21 Nov 2026)"
+  },
+  {
+   "name": "DOMGYS",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No public company or pay data found (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Brigade Group",
+   "type": "",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "Real-estate developer; AmbitionBox Brigade Group Software Developer estimate 13.5-17.3 LPA (checked 21 Nov 2026)"
+  },
+  {
+   "name": "SUNAMY.AI",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No public company or pay data found (checked 21 Nov 2026)"
+  },
+  {
+   "name": "JioSaavn",
+   "type": "",
+   "quality": 10,
+   "pay": "likely",
+   "pay_note": "Levels.fyi India SE overall median TC 28.3 LPA; AmbitionBox SDE1 (2 yrs) 28.8-36.8 LPA (older estimate), SE 0-3 yrs 16-36.3 LPA (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Recrew AI",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No pay data for Recrew AI on Levels.fyi, AmbitionBox or Glassdoor (checked 21 Nov 2026)"
+  },
+  {
+   "name": "AIQ Space Ventures",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No public company or pay data found (checked 21 Nov 2026)"
+  },
+  {
+   "name": "hoichoi",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No hoichoi page on Levels.fyi or AmbitionBox; only a possibly unrelated 'Hoi' Senior Software Developer estimate 17.1-21.8 LPA (checked 21 Nov 2026)"
+  },
+  {
+   "name": "SAMS DIGITAL",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No public company or pay data found; the name suggests a digital agency but this is unconfirmed (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Babaclick",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No pay data for Babaclick; only Foundit listing for Gurugram full-stack SDE-1, no range (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Fancall Private Limited",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No public company or pay data found (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Wafynet",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No public company or pay data found (checked 21 Nov 2026)"
+  },
+  {
+   "name": "1% Club",
+   "type": "",
+   "quality": 10,
+   "pay": "below",
+   "pay_note": "SDE-I (Backend) listing on aggregator gives expected 12-20 LPA; no AmbitionBox/Levels.fyi company data (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Nudge",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No Nudge-specific SDE pay on Levels.fyi, AmbitionBox or Glassdoor (checked 21 Nov 2026)"
+  },
+  {
+   "name": "DroomMedia",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No public company or pay data found (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Boardapp",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No pay data; only a Weekday listing and a LinkedIn page (software development) found (checked 21 Nov 2026)"
+  },
+  {
+   "name": "NRG Foods Pvt.Ltd.",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "Food company, not a tech employer; no salary data for its Jr Software Developer role. Very likely below (not searched separately) (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Network Solutions",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No SE-specific figure; AmbitionBox Network Solutions company-wide 1-2 yrs 3.8-4.8 LPA (72 responses), mostly support roles. Leans below (checked 21 Nov 2026)"
+  },
+  {
+   "name": "ZOOP",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "AmbitionBox Zoop.One Software Engineer 8-25 LPA across 0-4 yrs (crosses 20); Senior SE 19-25 LPA; fresher developer 6-8.3 LPA (checked 21 Nov 2026)"
+  },
+  {
+   "name": "Webito",
+   "type": "",
+   "quality": 10,
+   "pay": "unclear",
+   "pay_note": "No public company or pay data found; a junior Laravel role suggests a small web agency, unconfirmed (checked 21 Nov 2026)"
   }
  ],
  "services_and_staffing": [
@@ -10747,7 +11208,38 @@
   "Client of SCHS",
   "SCHS",
   "SHARDA CONSULTANCY SERVICES",
-  "CareerXperts"
+  "CareerXperts",
+  "Logical Wings Infoweb Private Limited | Enterprise Software Development",
+  "Endava",
+  "EduRun Group",
+  "Mactores",
+  "Z47",
+  "AiLogic Neural Network Pvt Ltd",
+  "Quanteon Solutions",
+  "Whitefield Careers",
+  "NESCODE",
+  "Dev Satva",
+  "Nuaav",
+  "Vanyar",
+  "Break The Code",
+  "Netcomm IT Solutions Pvt. Ltd.",
+  "People Tech Group Inc",
+  "AppRely Technologies",
+  "Perennation Computer Solutions Global Private Limited",
+  "Newpage Solutions",
+  "TechDoQuest",
+  "Flexiple",
+  "Crowe Capabilities Center – India",
+  "Joblet-AI",
+  "Konrad",
+  "Appinventiv",
+  "Ariqt Global Technologies",
+  "iThink Digital",
+  "MindzMap | Digital Solutions",
+  "Conduent",
+  "Innovative Information Technologies, Inc.",
+  "Scoutit",
+  "Compunet Connections"
  ],
  "staffing_keywords": [
   "Recruitment",

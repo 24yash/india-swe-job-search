@@ -12,7 +12,9 @@ def fetch(c, h):
     r = h.SESSION.get(base + c.get("list_path", "/careers"), timeout=30)
     r.raise_for_status()
     m = re.search(r'value="(\[[^"]*)"\s+id="jobs"', r.text)
-    for j in json.loads(htmllib.unescape(m.group(1))) if m else []:
+    if not m:  # the field is there even with no openings ("[]"); without it the page changed or isn't the board
+        raise ValueError(f"no jobs field on {base}{c.get('list_path', '/careers')}")
+    for j in json.loads(htmllib.unescape(m.group(1))):
         title = (j.get("Posting_Title") or j.get("Job_Opening_Name") or "").strip()
         loc = ", ".join(x for x in (j.get("City"), j.get("State"), j.get("Country")) if x)
         if str(j.get("Publish")).lower() != "true" or not h.title_ok(title) or "india" not in loc.lower():

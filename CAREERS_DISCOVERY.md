@@ -474,22 +474,24 @@ Result: A 704 -> 717, pending 286 -> 245, shortlist 451 -> 461; Khatabook's SDE-
 
 ## Where we still can't get data
 
-**819 bank companies** still have no direct source after both rounds (931 after round one). Their roles still reach the dashboard through LinkedIn's public search.
+Snapshot from `coverage.py` on 21 Nov 2026, after round ten: **1,403 bank companies, 829 with a direct source** (A). The rest
+reach the dashboard through LinkedIn's public search, or are out of scope.
 
 | Reason | Companies | Examples (good payers in bold) |
 |---|---|---|
-| **Website not reachable by a plain fetch** (bot protection, robots.txt, or not found) | 220 | **Meta, Netflix, LinkedIn, Flipkart, Zomato, Blinkit, NetApp main site, Dropbox, Bloomberg, Citadel, Revolut, Wayfair, Indeed** |
-| Website found, no careers page found | 144 | **Games24x7, Couchbase, Moj** |
-| Careers page found but no platform, feed or JobPosting sitemap (custom or JavaScript-only) | 311 | **Eternal/Zomato, Myntra (bot protection), Zerodha, Dream11, Media.net, Rippling, VMware, Chargebee, Confluent (now IBM careers), HubSpot, Spotify, HashiCorp, Ramp, Deel, Two Sigma, DRW, Da Vinci, AlphaGrep, iRage, Dolat** |
-| Darwinbox (job feed returns 403 to scripts) | 33 | **Zepto**, BharatPe, MobiKwik, KreditBee, Moneyview, Perfios, Go Digit, InsuranceDekho, Delhivery, Tata 1mg |
-| Boards found but with no India roles today (Greenhouse 17, Workday 11, Ashby 9, Lever 5) | ~40 | They are checked again on every discovery run |
-| SuccessFactors without a sitemap | 10 | Seagate, Alstom, OneCard (FPL) |
-| TurboHire (feed needs a session token) | 8 | **Navi**, Flipkart, Cleartrip, Ola Electric, Purplle, Khatabook |
-| Eightfold tenants that refuse scripts or weren't found | 5 | **Millennium (403)**, NAB |
-| Phenom / Avature without a usable sitemap | 9 | Franklin Templeton (corporate site), Bloomberg, MetLife, Ansys |
-| RippleHire and others | 1–5 each | HDFC Bank, Axis Bank (MyNextHire and Workable now have readers) |
+| Blocked (D): Cloudflare / Akamai / PerimeterX challenge | 49 | **Citadel, Citadel Securities, HRT, BookMyShow, LinkedIn**, ADP, TSMC, Sanmina, Vertiv, Visteon, ZivaMe, TurboHire (the company) |
+| Blocked (D): token, session or signed-in API | 6 | **ByteDance** (CSRF token), Rolls-Royce (bearer token), Magicpin (token in the page's JS), Klook (MokaHR), Best Buy and UBS (BrassRing) |
+| Blocked (D): 403 to scripts | 7 | **Indeed** (and Glassdoor, now part of it), Interactive Brokers, hoichoi |
+| Blocked (D): TurboHire feed needs a session token | 7 | **Flipkart**, Cleartrip, Shopsy, Ola, Purplle, NAKAD |
+| Blocked (D): Darwinbox (Cloudflare firewall since 20 Nov) | 7 + 38 sources failing (A5) | **Zepto**, BharatPe, Pluang, Brigade Group, Thryve Digital (enGen) |
+| Blocked (D): other (API key in the page, "Bot access is not allowed", ASP.NET postbacks, sign-in) | 11 | FPL Technologies / OneCard, Simplilearn and Comviva (CEIPAL), Jio, Amdocs, Info Edge |
+| Searched by hand, not readable yet (E2): one-company custom pages | 26 | **Shopify, HashiCorp (inside IBM's search)**, IndiaMART (Klimb), Zema (Deel), Agilitas (PocketHRMS), Pratilipi (TalentZQ), ASML (no JobPosting), Employ (Lever EU), MediBuddy (Trakstar pages 404) |
+| Checked, nothing to read (C) | 289 | email-only, LinkedIn-only, forms, "no openings", referral-only (Eternal), no India roles (DRW, ScyllaDB, Trip.com, Starbucks) |
+| Website dead / wrong / no domain (F) | 63 dead, 5 retryable | Dunzo, BlueJeans, Rivigo, Vogo, Investmint; retryable: Namaste Credit, Zinc, EduPristine, Bizongo, Agnikul |
+| Not pursued (B) | 106 | pay below the bar, IT services / staffing / consulting, job portals |
 
-Some rows include aliases of companies already covered (e.g. AWS under "not reachable"); those are covered through the parent company's board.
+Workday boards also answer 429 when many are read close together (several new sources failed their first crawl on
+21 Nov for this reason, see DESIGN.md "Workday throttling"); they are sources that read fine at a slower pace.
 
 ## Dead ends (don't retry)
 
@@ -499,7 +501,9 @@ Some rows include aliases of companies already covered (e.g. AWS under "not reac
 | Millennium's Eightfold tenant | 403 to scripts |
 | Job portals as a source for their listed companies (Apna, GoodSpace) | Their sitemaps list other employers' jobs, which would be mislabelled |
 | strata-harvest's "stealth"/"impersonating" fetchers, hosted scraping services | They get around bot protection, or are commercial. Only the sitemap + JobPosting idea was adopted. |
-| JioStar (Disney+ Hotstar) Workday | 403 to scripts |
+| API keys or tokens copied from a careers page (FPL/OneCard's `x-api-key`, Magicpin's bearer token, CEIPAL's `api_key`) | Using a credential lifted from a page to call a gated API is getting around access control. CEIPAL also answers scripts with "Bot access is not allowed". |
+| A platform's API when its own board page shows a challenge (Polymer: jobs.polymer.co is behind Cloudflare) | Treated as blocked even though the API answers; Atomicwork's own careers page is the fallback. |
+| Workable, Gem, BambooHR, Ashby and Greenhouse slugs guessed from a name alone | They answer for unrelated companies with the same name ("nudge" on Ashby is a San Francisco company). Take the slug from a link on the company's own site. |
 | Walmart's new careers site | Ignores the search and lists US store jobs. (Walmart's tech roles are now read from its Workday board, `walmart.wd504`, which discovery found answering again.) |
 | Myntra's portal | Bot detection |
 | Flipkart's TurboHire page | Lists departments for résumé drops, not jobs, and its feed needs a session token. Flipkart stays on LinkedIn. |
@@ -552,3 +556,155 @@ Some rows include aliases of companies already covered (e.g. AWS under "not reac
   - Blocked (Cloudflare challenge or 403): BrowserStack, Cohesity and Workday (the company) Workday boards; MathWorks job search (now `linkedin_every_run`).
 - Darwinbox fully blocked (see Dead ends); 28 companies moved to every-run LinkedIn searches.
 - Reprise's Ashby board returns 404 (board removed).
+
+## Round ten: every pending company gets a verdict (21 Nov 2026)
+
+The 378 pending companies from the 20 Nov coverage report (E1 129, E2 43, E4 168, F-retryable 38) were split into 11
+batches of ~35 and studied by research agents under the usual rules: plain GET/POST, ~1 request/s per host, stop at
+any 403 or challenge, no Darwinbox calls, nothing taken from pages to call gated APIs. Each agent found the real
+careers site (many recorded sites were wrong: Apna's pointed at a nurses' association, Bachatt's at a Shopify store,
+Mesh's at Mesh Payments, Emergent's at a US consultancy, Accord's at a casino spam page), checked that the board was the
+right company's, counted India postings and dry-ran the config through the real reader. Every config was then crawled
+with `--only`, and 16 postings were opened against the live pages.
+
+### Before → after (coverage.py)
+
+| | 20 Nov | 21 Nov |
+|---|---|---|
+| A. Have a source | 721 | **829** (10 of them Workday boards failing on throttling today, see below) |
+| E1 careers page found, no source | 129 | **0** |
+| E2 searched by hand, not readable yet | 43 | **26** |
+| E4 never studied / website not found | 168 | **0** |
+| F-retryable | 38 | **5** |
+| Companies in the report (aliases counted once) | 1,415 | 1,403 |
+| Shortlist / leads | 622 / 443 | 626 / 600 |
+
+Verdicts for the 378: **111 read directly** (RedSeal, Inc. is now listed as RedSeal) + 6 aliases of companies already
+read (Graviton, Kotak 811, MyGlamm, Pure Storage/Everpure, HPE/Nimble, PayPal/Simility), 119 nothing to read (C), 53 excluded (B: IT services,
+consulting, staffing, job portals, pay below), 30 blocked (D), 28 dead, 5 retryable, 26 still pending (E2, each with
+a written spec). The leads jump comes from the new sources' fitting roles whose pay isn't evidenced yet (JioHotstar 15
+SDE II, Keysight 19, Bajaj Finserv 34, Bosch 30, Amgen 23…); checking their pay on levels.fyi is the next step.
+
+Outside the 378, three blocked names now read through one source each: **American Airlines** (its own site is
+blocked; AA Tech Hub India posts on Talent500, 13 fitting Hyderabad roles) and **JioStar / Hotstar / Disney+ Hotstar**
+(aliases of JioHotstar: the `jiostar.wd102/JioStar` Workday board answers plain requests again; it was a dead end).
+Rockwell Automation was added as the parent of Plex Systems.
+
+### Sources added (108), by reader
+
+links 22, workday 14, **jsonlist 12 (new)**, sitemap 11, greenhouse 7, ashby 6, workable 5, oracle 5, jibe 4,
+successfactors 3, smartrecruiters 2, kula 2, zohorecruit 2, peoplestrong 2, one each for rippling, recruiterbox,
+freshteam, pyjamahr, zwayam, lever, avature, pinpoint, csod, eightfold, keka. `"found_by": "pending-companies round
+(21 Nov 2026)"` in `companies.json`.
+
+### Readers built or extended
+
+| Change | What it unlocked |
+|---|---|
+| **`portals/jsonlist.py`** (new, generic): one public JSON call the careers page makes, configured per company (dot path to the list, `*` to flatten groups, field paths, link template, `where` filter, POST body, JSONP, or a page's `__NEXT_DATA__`). Titles and fields are treated as untrusted text (tags and script contents stripped). | Gnani.ai, Dezerv, Garuda Aerospace, Maxim AI, Navera, Moglix (Flexiele), Auzmor (Auzmor Hire), Deltek (Symphony Talent JSONP), Sahi and Slikk (`__NEXT_DATA__`), FM and American Airlines (**Talent500**, ANSR's hiring platform for India GCCs: `prod-warmachine.talent500.co/api/v3/jobs/search/?company_id=<uuid>`; only `company_id` filters) |
+| `portals/sitemap.py`: `job_path` option (the site's job-URL regex, matched on the whole URL, query included, `&amp;` unescaped) | 314e (`/career/`), Elements Energy (`/talent/`), SanDisk (Avature `/JobDetail/`), Daimler Truck Innovation Center India (`?ac=jobad&id=`, with `cache_pages`) |
+| `portals/sitemap.py`: Avature's labelled "Country/Region / City" fields when the JobPosting has no location | SanDisk (Avature's newer theme): 6 fitting Bengaluru roles |
+| `portals/sitemap.py`: "Member of Technical Staff" URLs no longer dropped as senior ("staff") | athenahealth's MTS roles (Bengaluru, Chennai); helps every sitemap site with MTS titles |
+| `portals/links.py`: `inner_max` (long job cards) and `title_split` (link text that runs on into city and date) | CoRover, Bachatt |
+
+Each has fixture tests in `tests/test_sources.py`.
+
+### Independent review (21 Nov 2026) and fixes
+
+A review agent read the new reader, the diffs and all 108 entries (no network). Fixed, with tests:
+
+- **links reader labelled non-India jobs as India** (pre-existing, but five new entries relied on it): a JobPosting
+  placed only outside India is now dropped, "Remote" in page text no longer counts as an Indian city, and the
+  configured `location` fills in only when the posting names no place. Existing links sources re-checked: same counts.
+- **jsonlist silent empties:** a missing list path, items without the title field, or a feed reporting more jobs
+  than were read (`total`: Deltek, FM, American Airlines) now raise (Deltek's 103 jobs over a 100-job page tripped it
+  at once, so offset paging was added: `page_param` / `page_step`), so a broken read isn't taken for "all
+  closed". Double-escaped HTML can't come back as a tag, `javascript:` links fall back to the page, relative links
+  are joined, a template with a missing field falls back to `page#id`, a maximum alone no longer invents
+  "Experience: 0-N years", every place in a list is kept, `%z` dates are converted, and the page-data regex is bounded.
+- **sitemap:** `job_path` is matched after entities are decoded; with `job_path` every sub-sitemap counts as a job
+  sitemap (a failed one fails the read); MTS spelled with underscores or run together is kept, "Consulting Member of
+  Technical Staff" counts as senior. DTICI reads 150 pages a run (the default) so its India roles surface sooner.
+- **zohorecruit:** a page without the hidden `jobs` field now raises (it is present even with no openings, checked on 8 boards).
+- Left for `coverage.py`'s owner: it marks a source as failing only for a few exception names, so a jsonlist
+  `ValueError` or sitemap `RuntimeError` shows as "source works" (A3/A4) rather than A5.
+
+### Checked and left (reasons in `output/coverage-notes.json`)
+
+- **Blocked:** LinkedIn, ADP, TSMC, Sanmina, Vertiv, Visteon, ZivaMe, Prudent, Newfold (Network Solutions), Nudge
+  (Peerlist) behind Cloudflare; ByteDance (CSRF token), Rolls-Royce (bearer token), Magicpin (token in JS), Klook
+  (MokaHR session + encrypted data); Indeed / Glassdoor (403); Cleartrip and NAKAD (TurboHire); FPL/OneCard
+  (`x-api-key` from the page), Simplilearn and Comviva (CEIPAL); Pluang, Brigade, Thryve (Darwinbox); KGEN (HTTP 451);
+  STMicroelectronics (Akamai drops scripted connections); Finova (security block); Netmeds (Reliance SAP sign-in).
+- **Not built (one company each, spec recorded):** Klimb (IndiaMART: 303 India jobs, 7 tech, 16 paged calls), Deel job
+  boards (Zema), PocketHRMS (Agilitas, session cookies), TalentZQ (Pratilipi), Homerun (Ghost), Webbtree (IdeaForge,
+  0 dev), Polymer (Atomicwork, see Dead ends), Shopify's embedded list (fragile; 1 India role, not dev), Billdesk
+  (jobs in the JS bundle), Lever's EU instance (Employ), Next.js RSC payloads (Houseeazy, PropTiger, IEX), inline
+  cards without links (TransBnk, graph ai, Mitigata, Indifi, droom). HashiCorp is now inside IBM's search, where a
+  "hashicorp" query returns mostly IBM roles that mention Terraform, so it would mislabel them.
+- **MediBuddy:** its Trakstar feed lists 50 India openings, but every job page 404s, so it was not added.
+- **Excluded (53):** IT services and consulting (AppInventiv, GeekyAnts, HashedIn, MAQ, MTX, Xicom, Prodapt, Endava,
+  Konrad, Mactores, Accolite…), staffing and job portals (Mount Talent, Whitefield Careers, Flexiple, Scoutit,
+  GoodSpace, Unstop, Joblet-AI, Wafynet), BPO (Conduent), agencies, pay below (The Alter Office 10–18 LPA, ZOOP 12–18 LPA).
+
+### Gaps found in `crawl.py` readers (not changed here; `crawl.py` belongs to the review session)
+
+- `smartrecruiters()` pages the whole board without `country=in` and stops at offset 1000, so Bosch's 666 India
+  postings are mostly unread (30 fitting found anyway).
+- `in_india()` doesn't read Workday's "IND - Any Location (Remote)" (Teladoc).
+- `oracle()` searches only three keywords, so "Engineer II, Software Dev." titles are missed (Liquidity Services).
+- `lever()` calls only the US API; Employ's India roles are on `api.eu.lever.co`.
+- Workday: several new boards (Thales, Xylem, Analog Devices, Rockwell, CDK, Duck Creek, bp, AssetMark, Flex, Aptiv)
+  failed their first crawl with 429s or HTML throttle pages while many boards were read in parallel.
+
+### Workday throttling on 21 Nov (re-crawl note)
+
+The research agents dry-ran these ten Workday boards cleanly in the morning (Thales 9 fitting India roles, Xylem ~6,
+Analog Devices 5, Rockwell 9, CDK 2, Duck Creek 4, bp 3, Aptiv 26, AssetMark and Flex 0-1). By the afternoon Workday's
+wd1/wd3/wd5 hosts answered every request from this machine with 429 or an HTML throttle page, long-standing boards
+(Visa) included, while wd102 (JioStar) still answered. Re-crawls two and three hours later, together and one board
+alone, still failed, so the ten show as A5 today. They need no change: the next refresh reads them once Workday lifts
+the throttle. If they still fail then, check one board by hand before touching the config.
+
+## Round eleven: reader gaps, the last pending companies, pay checks (21 Nov 2026)
+
+### Reader fixes (`crawl.py`)
+
+| Gap (from round ten) | Fix | Effect |
+|---|---|---|
+| `oracle()` searched three keywords ("Engineer II, Software Dev." missed) | Lists every India requisition (no keyword, 200 a page) and filters titles here; a site over 3,000 (Kotak, ~11,700, mostly branch banking) is read by ten broad keywords; an answer without `requisitionList` or a capped search fails the read | Liquidity Services 1 → 3; Kotak read completely (20 software roles) |
+| `smartrecruiters()` paged the whole board and stopped at 1,000 | Server-side `country=in`; cap 3,000 then a failed read; a missing `content` list fails the read; non-404 detail failures keep a stub with the same `<id>-<title slug>` URL; detail calls stop after 3 failures in a row | Bosch 41 → 93 India postings read |
+| `lever()` called only the US API | `"region": "eu"` → `api.eu.lever.co` | Employ added (Bangalore web developer) |
+| `in_india()` missed Workday's "IND - Any Location (Remote)" | `IND -` prefix counts as India unless the string names Indianapolis/Indiana/the US | Teladoc's remote India roles |
+| Workday 429s | 3 detail calls per board (was 6), 3 boards at once | 7 of the 10 throttled boards read (Aptiv 24, Xylem 18, Rockwell 9, Flex 7, Analog Devices 5, Duck Creek 4, CDK 2); AssetMark still failing |
+| `coverage.py` counted only some exception names as failing | Any `<ExceptionName>:` note or suspect read is A5 | — |
+| Sitemap: a job page that failed to load dropped its job for the run | The last read's posting for that page is kept (detail=unread), read ends as DetailsUnread | — |
+
+### The 26 pending (E2) companies
+
+New readers: `portals/cards.py` (job cards without per-job links: keys are page URL + `#title-slug`, the location added to every copy of a repeated title; optional `require` regex so non-job elements can't pass as cards), `klimb.py` (IndiaMART), `deel.py` (Zema), `billdesk.py` (jobs in the JS bundle), `homerun.py` (Ghost), `pockethrms.py` (Agilitas), `webbtree.py`; `sitemap.py` gained `page_data` (job data in `__NEXT_DATA__`, cached pages re-read every 3 days so closed jobs drop). Upstox now reads its own careers API (`service.upstox.com/content/open/v1/jobs/`; the SmartRecruiters board held one 2021 dummy posting).
+
+Added (17): India Mart, Zema Global, Indifi, TransBnk, graph ai, Atomicwork, Accord, Joveo, Billdesk, Indian Energy Exchange, NikahForever, Houseeazy, Upstox, Pratilipi, Classplus, Ghost, Agilitas. Checked and left: Mitigata (evergreen list, same titles since Jan 2026), ASML (5 India roles, all field/supply-chain, filed under Singapore in the page data), khoros (IgniteTech's group board would mislabel roles), PropTiger (0 openings, RSC payload only), IdeaForge (drone hardware, no descriptions), droom (frozen 2024 list), Shopify (1 India role, not dev), Dream Sports / Dream11 (Lever 404; Peerlist behind Cloudflare). iCIMS and Phenom: every bank company on them is already read through Jibe/sitemap or blocked (Riverbed's robots.txt disallows all). Left as E2: HashiCorp (inside IBM search), MediBuddy (feed lists jobs whose pages 404).
+
+### Coverage (coverage.py)
+
+| | After round ten | After round eleven |
+|---|---|---|
+| A. Have a source | 829 | **846** (848 sources in companies.json) |
+| E2 searched by hand, not readable | 26 | **2** |
+| A5 source failing | 52 | 53 (43 Darwinbox tenants: Cloudflare; the rest Workday throttling) |
+
+### Pay checks
+
+182 lead companies (those never checked) were checked on Levels.fyi, then AmbitionBox/Glassdoor/posted ranges: 7 likely (Newton School, WinZO, JioSaavn, Vahan.ai, Maxim AI, Arcana, Everpure), 51 below (Bajaj Finserv's 33 leads, IRIS Business Services 9, Auzmor 8, Medpace, athenahealth, Harmonic, MUFG Pension, Ford, Duck Creek, Deltek…), 31 excluded as staffing / IT services / agencies (added to `services_and_staffing`), 93 unclear (no public data; Thales, Aptiv and Keysight lean below). Shortlist 626 → 638 rows; leads 600 → 457.
+
+### Independent review (21 Nov 2026), all fixed with tests
+
+SmartRecruiters stub URLs differed from full-read URLs (a throttled read made roles look closed and new); `failed_read` missed some exception names; card keys depended on card order; IEX's selector also matched company-value headings (now `require`); Klimb, PocketHRMS, Homerun and Webbtree could read a changed page as empty; cached `page_data` jobs were never re-read; Joveo's default location now reads "India (location not stated)"; a duplicate Nat Habit bank entry merged; `IND -` no longer matches Indianapolis.
+
+### Still open
+
+- Darwinbox (43 tenants) behind Cloudflare: LinkedIn every run.
+- Workday throttling from this machine: AssetMark and parts of Aptiv, Airbus, Cisco, Deutsche Bank, Mastercard, NCR, Solventum, Global Payments keep 429-ing detail calls (roles kept from the list).
+- 93 lead companies still have no public pay data (Bosch 24 leads, JioHotstar 15, PUMA 15, GE Vernova 11).
+- `cards.py` `fetch_detail` failures keep the card text without the unread mark (Atomicwork only).

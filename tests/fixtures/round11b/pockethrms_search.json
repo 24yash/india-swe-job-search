@@ -1,0 +1,305 @@
+{
+ "TotalCount": 3,
+ "Jobs": [
+  {
+   "Id": 37,
+   "CompanyId": 1,
+   "Title": "Growth & Performance Marketing",
+   "JobCode": "JOB038",
+   "DepartmentName": 254,
+   "HiringManager": 0,
+   "Recruiter": "",
+   "NoOfPosition": 2,
+   "JobType": 1,
+   "InterviewPanel": "",
+   "ShortJobDescription": "We are looking for a results-driven Growth & Performance Marketing professional to drive customer acquisition, revenue growth and marketing efficiency across digital channels. This role will own growth strategy, performance marketing, media planning and budget optimisation while improving the customer journey from acquisition to conversion and retention.  The ideal candidate combines strong analytical capabilities with hands-on expertise in digital advertising, commercial thinking and a test-and-learn mindset to deliver measurable business outcomes.",
+   "Description": "<h1>Associate Director &ndash; Growth &amp; Performance Marketing</h1>\n<p><strong>Experience:</strong> 5&ndash;8 years<br /><strong>Location:</strong> Bengaluru<br /><strong>Reports to:</strong> Business Head</p>\n<h2>About Agilitas</h2>\n<p>Agilitas is building India&rsquo;s first global sports company by bringing together world-class product innovation, manufacturing excellence, iconic brands, and",
+   "JobResponsibilities": "",
+   "IsPublished": true,
+   "PublishAsType": 0,
+   "JobAccessToken": "redacted",
+   "EligibilityJson": null,
+   "NotifyReferrerOnStatusChange": false,
+   "PositionType": null,
+   "ReplacementForEmpIds": null,
+   "JobStatus": 0,
+   "ZipCode": "",
+   "JobStageTemplate": "b0811137-dc6c-438d-9271-3d8a4c1c6086",
+   "Creator": null,
+   "PublishedDate": "2026-10-27T00:00:00",
+   "UnPublishDate": null,
+   "CreatedAt": "2026-10-27T11:51:44.007",
+   "UpdatedAt": null,
+   "Country": 99,
+   "Industry": 5,
+   "Region": "Karnataka",
+   "Followers": "",
+   "Costcentre": 0,
+   "Currency": "INR",
+   "City": "Bangalore",
+   "Education": "0",
+   "SalaryFrom": null,
+   "SalaryTo": null,
+   "ExperienceFrom": 5,
+   "ExperienceTo": 8,
+   "DynamicFields": [
+    {
+     "FieldName": "WorkMode",
+     "FieldValue": "On-Site"
+    },
+    {
+     "FieldName": "location",
+     "FieldValue": "Bangalore"
+    },
+    {
+     "FieldName": "Requirements",
+     "FieldValue": ""
+    },
+    {
+     "FieldName": "PayStructure",
+     "FieldValue": "CTC (Cost to Company)"
+    },
+    {
+     "FieldName": "Country",
+     "FieldValue": "India"
+    },
+    {
+     "FieldName": "Department",
+     "FieldValue": "D2C"
+    },
+    {
+     "FieldName": "Industry",
+     "FieldValue": "Apparel and Fashion"
+    },
+    {
+     "FieldName": "JobType",
+     "FieldValue": "Permanent"
+    },
+    {
+     "FieldName": "State",
+     "FieldValue": "Karnataka"
+    },
+    {
+     "FieldName": "MinimumEducation",
+     "FieldValue": "0"
+    }
+   ],
+   "ScreeningQuestions": [],
+   "ScreeningQuestionsLoaded": false,
+   "PageType": 0,
+   "Recruitment_JobOpeningV2s": null,
+   "Salary": "INR @ 4000000 , 5000000",
+   "Experience": "5 - 8",
+   "Applications": 0,
+   "QualifiedCandidates": 0,
+   "hired": 0,
+   "Follow": null,
+   "DepartmentString": "D2C",
+   "CountryName": "India",
+   "JobAppliedDate": null,
+   "CostCenterString": "",
+   "CompanyName": "",
+   "IsCrossCompany": false
+  },
+  {
+   "Id": 36,
+   "CompanyId": 1,
+   "Title": "Senior Manager \u2013 Warehouse Operations",
+   "JobCode": "JOB037",
+   "DepartmentName": 333,
+   "HiringManager": 0,
+   "Recruiter": "",
+   "NoOfPosition": 0,
+   "JobType": 1,
+   "InterviewPanel": "",
+   "ShortJobDescription": "We are looking for an experienced Senior Manager \u2013 Warehouse Operations to lead end-to-end warehouse operations across B2B and D2C channels. The role will be responsible for daily operations, capacity and inventory planning, 3PL management, logistics coordination and continuous process improvement.  Working closely with Sales Operations, Planning, Go-to-Market (GTM), Sourcing and other stakeholders, you will drive warehouse productivity, operational quality, cost efficiency and service levels while supporting Agilitas\u2019 growth ambitions.",
+   "Description": "<h1>Senior Manager &ndash; Warehouse Operations</h1>\n<p><strong>Experience:</strong> 8&ndash;10 years<br /><strong>Location:</strong> Bengaluru<br /><strong>Department:</strong> Supply Chain<br /><strong>Reports to:</strong> Head &ndash; Supply Chain</p>\n<h2>About Agilitas</h2>\n<p>Agilitas is building India&rsquo;s first global sports company by bringing together world-class product innovation, ma",
+   "JobResponsibilities": "",
+   "IsPublished": true,
+   "PublishAsType": 0,
+   "JobAccessToken": "redacted",
+   "EligibilityJson": null,
+   "NotifyReferrerOnStatusChange": false,
+   "PositionType": null,
+   "ReplacementForEmpIds": null,
+   "JobStatus": 0,
+   "ZipCode": "",
+   "JobStageTemplate": "b0811137-dc6c-438d-9271-3d8a4c1c6086",
+   "Creator": null,
+   "PublishedDate": "2026-10-19T00:00:00",
+   "UnPublishDate": null,
+   "CreatedAt": "2026-10-19T11:47:18.32",
+   "UpdatedAt": null,
+   "Country": 99,
+   "Industry": 5,
+   "Region": "Karnataka",
+   "Followers": "",
+   "Costcentre": 0,
+   "Currency": "INR",
+   "City": "Bangalore",
+   "Education": "0",
+   "SalaryFrom": null,
+   "SalaryTo": null,
+   "ExperienceFrom": 8,
+   "ExperienceTo": 10,
+   "DynamicFields": [
+    {
+     "FieldName": "WorkMode",
+     "FieldValue": "On-Site"
+    },
+    {
+     "FieldName": "location",
+     "FieldValue": "Bangalore"
+    },
+    {
+     "FieldName": "Requirements",
+     "FieldValue": ""
+    },
+    {
+     "FieldName": "PayStructure",
+     "FieldValue": "CTC (Cost to Company)"
+    },
+    {
+     "FieldName": "Country",
+     "FieldValue": "India"
+    },
+    {
+     "FieldName": "Department",
+     "FieldValue": "Supply\u00a0Chain\u00a0Management"
+    },
+    {
+     "FieldName": "Industry",
+     "FieldValue": "Apparel and Fashion"
+    },
+    {
+     "FieldName": "JobType",
+     "FieldValue": "Permanent"
+    },
+    {
+     "FieldName": "State",
+     "FieldValue": "Karnataka"
+    },
+    {
+     "FieldName": "MinimumEducation",
+     "FieldValue": "0"
+    }
+   ],
+   "ScreeningQuestions": [],
+   "ScreeningQuestionsLoaded": false,
+   "PageType": 0,
+   "Recruitment_JobOpeningV2s": null,
+   "Salary": "INR @ 1000000 , 1500000",
+   "Experience": "8 - 10",
+   "Applications": 0,
+   "QualifiedCandidates": 0,
+   "hired": 0,
+   "Follow": null,
+   "DepartmentString": "Supply\u00a0Chain\u00a0Management",
+   "CountryName": "India",
+   "JobAppliedDate": null,
+   "CostCenterString": "",
+   "CompanyName": "",
+   "IsCrossCompany": false
+  },
+  {
+   "Id": 35,
+   "CompanyId": 1,
+   "Title": "Brand Associate \u2013 Lotto",
+   "JobCode": "JOB036",
+   "DepartmentName": 198,
+   "HiringManager": 0,
+   "Recruiter": "",
+   "NoOfPosition": 1,
+   "JobType": 1,
+   "InterviewPanel": "",
+   "ShortJobDescription": "Lotto is an iconic Italian sportswear brand with a rich heritage in sport, style and culture. At Agilitas, we are reimagining Lotto for a new generation in India, bringing its sporting legacy into contemporary fashion, street culture and everyday life. We are looking for a curious, energetic and creative Brand Associate who can bring ideas to life across campaigns, product launches, retail experiences and digital platforms. This role is ideal for someone who understands youth culture, has a strong eye for brands and enjoys both developing creative ideas and ensuring flawless execution.",
+   "Description": "<h1>Brand Associate &ndash; Lotto</h1>\n<p><strong>Experience:</strong>&nbsp;3&ndash;6 years<br /><strong>Location:</strong> Bengaluru<br /><strong>Department:</strong> Brand &amp; Marketing<br /><strong>Reports to:</strong> Brand Marketing Lead</p>\n<h2>About Agilitas</h2>\n<p>Agilitas is building India&rsquo;s first global sports company by bringing together world-class product innovation, manufact",
+   "JobResponsibilities": "",
+   "IsPublished": true,
+   "PublishAsType": 0,
+   "JobAccessToken": "redacted",
+   "EligibilityJson": null,
+   "NotifyReferrerOnStatusChange": false,
+   "PositionType": null,
+   "ReplacementForEmpIds": null,
+   "JobStatus": 0,
+   "ZipCode": "",
+   "JobStageTemplate": "b0811137-dc6c-438d-9271-3d8a4c1c6086",
+   "Creator": null,
+   "PublishedDate": "2026-10-14T00:00:00",
+   "UnPublishDate": null,
+   "CreatedAt": "2026-10-14T18:30:09.257",
+   "UpdatedAt": null,
+   "Country": 99,
+   "Industry": 5,
+   "Region": "Karnataka",
+   "Followers": "",
+   "Costcentre": 0,
+   "Currency": "INR",
+   "City": "Bangalore",
+   "Education": "0",
+   "SalaryFrom": null,
+   "SalaryTo": null,
+   "ExperienceFrom": 3,
+   "ExperienceTo": 6,
+   "DynamicFields": [
+    {
+     "FieldName": "WorkMode",
+     "FieldValue": "On-Site"
+    },
+    {
+     "FieldName": "location",
+     "FieldValue": "Bangalore"
+    },
+    {
+     "FieldName": "Requirements",
+     "FieldValue": ""
+    },
+    {
+     "FieldName": "PayStructure",
+     "FieldValue": "CTC (Cost to Company)"
+    },
+    {
+     "FieldName": "Country",
+     "FieldValue": "India"
+    },
+    {
+     "FieldName": "Department",
+     "FieldValue": "Marketing"
+    },
+    {
+     "FieldName": "Industry",
+     "FieldValue": "Apparel and Fashion"
+    },
+    {
+     "FieldName": "JobType",
+     "FieldValue": "Permanent"
+    },
+    {
+     "FieldName": "State",
+     "FieldValue": "Karnataka"
+    },
+    {
+     "FieldName": "MinimumEducation",
+     "FieldValue": "0"
+    }
+   ],
+   "ScreeningQuestions": [],
+   "ScreeningQuestionsLoaded": false,
+   "PageType": 0,
+   "Recruitment_JobOpeningV2s": null,
+   "Salary": "INR @ 60000 , 1000000",
+   "Experience": "3 - 6",
+   "Applications": 0,
+   "QualifiedCandidates": 0,
+   "hired": 0,
+   "Follow": null,
+   "DepartmentString": "Marketing",
+   "CountryName": "India",
+   "JobAppliedDate": null,
+   "CostCenterString": "",
+   "CompanyName": "",
+   "IsCrossCompany": false
+  }
+ ]
+}

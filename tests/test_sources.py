@@ -5,6 +5,7 @@ Covers the Oracle, Rippling and Eightfold readers, the portals/ readers (generic
 Apple, Urban Company, ShareChat, sitemap, Jibe, Keka, Zoho Recruit, Kula), board recognition in URLs/pages, and find_careers helpers (bounded link parsing,
 company check for guessed domains, careers-page candidates).
 """
+import dataclasses
 import json
 import sys
 import time
@@ -249,6 +250,25 @@ _sess_get2 = crawl.SESSION.get
 crawl.SESSION.get = lambda url, **kw: SimpleNamespace(status_code=200, content=_sess_get2(url).text.encode(), text=_sess_get2(url).text)
 jobs = list(portals.fetch({"name": "Acme", "portal": "sitemap", "host": "careers.acme.com", "sitemaps": ["https://careers.acme.com/jobs-sitemap.xml"]}, crawl))
 check("sitemap: a job whose closing date (validThrough) has passed is dropped", [j.title for j in jobs] == ["Software Engineer II"], [j.title for j in jobs])
+# a job page that fails this run keeps the last read's posting (unread) and the read ends as DetailsUnread
+prev_job = crawl.Job("Acme", "Software Engineer II", "Bengaluru, India", "https://careers.acme.com/job/bengaluru/software-engineer-ii/1", None, "2+ years of Java")
+patched({"robots.txt": "", "jobs-sitemap.xml": smap, "sitemap.xml": "", "sitemal.xml": "",
+         "/job/bengaluru/software-engineer-ii/1": crawl.requests.RequestException("reset")}, raw=True)
+crawl.SESSION.headers = {"User-Agent": "test"}
+_sess_get3 = crawl.SESSION.get
+crawl.SESSION.get = lambda url, **kw: SimpleNamespace(status_code=200, content=_sess_get3(url).text.encode(), text=_sess_get3(url).text)
+_load_raw = crawl.load_raw
+crawl.load_raw = lambda name: ([prev_job], {}) if name == "Acme" else ([], None)
+got, serr = [], None
+try:
+    for j in portals.fetch({"name": "Acme", "portal": "sitemap", "host": "careers.acme.com", "sitemaps": ["https://careers.acme.com/jobs-sitemap.xml"]}, crawl):
+        got.append(j)
+except crawl.DetailsUnread as e:
+    serr = e
+crawl.load_raw = _load_raw
+check("sitemap: an unreadable job page keeps the last read's posting (unread) and the read ends as DetailsUnread",
+      [j.url for j in got] == [prev_job.url] and got[0].meta.get("detail") == "unread" and got[0].text == prev_job.text and serr is not None,
+      ([(j.url, j.meta) for j in got], repr(serr)))
 
 from portals.sitemap import place
 check("sitemap: addresses given as a list (Gartner) or missing don't crash",
@@ -274,6 +294,15 @@ patched({"zohorecruit.in/careers": zpage}, raw=True)
 jobs = list(portals.fetch({"name": "GfG", "portal": "zohorecruit", "slug": "geeksforgeeks", "tld": "in"}, crawl))
 check("zoho recruit: published India roles from the embedded list, years readable",
       len(jobs) == 1 and crawl.min_experience(jobs[0].text)[0] == 1 and jobs[0].url.endswith("/jobs/Careers/5"), [(j.title, j.text) for j in jobs])
+patched({"zohorecruit.in/careers": '<input type="hidden" value="[]" id="jobs">'}, raw=True)
+empty_ok = list(portals.fetch({"name": "GfG", "portal": "zohorecruit", "slug": "geeksforgeeks", "tld": "in"}, crawl)) == []
+patched({"zohorecruit.in/careers": "<html>Maintenance</html>"}, raw=True)
+try:
+    list(portals.fetch({"name": "GfG", "portal": "zohorecruit", "slug": "geeksforgeeks", "tld": "in"}, crawl))
+    raised = False
+except ValueError:
+    raised = True
+check("zoho recruit: an empty list is 'no openings', a page without the jobs field is a failed read", empty_ok and raised)
 
 patched({"/slice/1-sde-2-data-platform": ld("SDE 2 - Data Platform", "Bengaluru"),
          "careers.kula.ai/slice?jobs=true": '<a href="/slice/1-sde-2-data-platform?jobs=true">Apply Now</a><a href="/slice/2-fraud-analyst?jobs=true">Apply Now</a>'}, raw=True)
@@ -781,6 +810,319 @@ zd = {"count": 3, "data": [{"job_title": "Backend Developer", "location": "Banga
 got = [(j.title, j.location, j.url) for j in zerodha.fetch({"name": "Zerodha"}, page_h(json_by_url={"careers.zerodha.com/api/jobs": zd}))]
 check("Zerodha: its careers page's /api/jobs list; India + title filter; link names the opening",
       got == [("Backend Developer", "Bangalore, India", "https://careers.zerodha.com/#backend-developer")], got)
+
+# --- 21 Nov 2026 round: jsonlist reader, sitemap job_path / Avature fields / MTS, links inner_max -----------
+from portals import jsonlist, links  # noqa: E402
+
+
+def json_h(by_url=None, pages=None, posts=None):
+    """h for jsonlist: h.get / h.post answer JSON, SESSION.get answers page text; first key contained in the URL wins."""
+    def pick(table, url):
+        for k, v in (table or {}).items():
+            if k in url:
+                return v
+        raise crawl.requests.RequestException(f"no fixture for {url}")
+    page = lambda text: SimpleNamespace(text=text, status_code=200, raise_for_status=lambda: None)  # noqa: E731
+    return SimpleNamespace(Job=crawl.Job, title_ok=crawl.title_ok, in_india=crawl.in_india, strip_html=crawl.strip_html, parse_ts=crawl.parse_ts,
+                           get=lambda url, params=None, **k: pick(by_url, url + " " + json.dumps(params or {})),
+                           post=lambda url, body, **k: pick(posts, url + " " + json.dumps(body)),
+                           SESSION=SimpleNamespace(get=lambda url, **k: page(pick(pages, url)), post=lambda url, **k: page(pick(pages, url))))
+
+
+gnani = {"success": True, "data": {"jobs": [
+    {"title": "Full Stack+AI Engineer", "code": "Fil 159", "location": None, "minExperience": 1, "maxExperience": 3, "positionPublishDate": "2026-11-02 10:00:00"},
+    {"title": "Software Engineer", "code": "S1", "location": ["Austin"], "minExperience": 2},
+    {"title": "Sales Manager", "code": "M1", "location": ["Bengaluru"]},
+    {"title": "<script>alert(1)</script>Backend Developer", "code": "B1", "location": ["Pune"], "status": "active"}]}}
+cfg = {"name": "G", "portal": "jsonlist", "url": "https://g.test/api/jobs", "items": "data.jobs", "title": "title", "location": "location",
+       "default_location": "India", "link": "https://g.test/apply/{code}", "posted": "positionPublishDate",
+       "min_exp": "minExperience", "max_exp": "maxExperience"}
+got = list(jsonlist.fetch(cfg, json_h({"g.test/api/jobs": gnani})))
+check("jsonlist: dot-path list, default location, foreign and non-dev roles dropped, link template (URL-quoted), years asked, date",
+      [(j.title, j.location, j.url) for j in got] == [("Full Stack+AI Engineer", "India", "https://g.test/apply/Fil%20159"),
+                                                       ("Backend Developer", "Pune", "https://g.test/apply/B1")]
+      and got[0].text.startswith("Experience: 1-3 years") and got[0].posted and got[0].posted.day == 2,
+      [(j.title, j.location, j.url, j.text[:30], j.posted) for j in got])
+check("jsonlist: HTML in a title (a script tag) is stripped, not passed through", all("<" not in j.title and "alert" not in j.title for j in got))
+got = list(jsonlist.fetch(cfg | {"where": {"status": ["active", "open"]}}, json_h({"g.test/api/jobs": gnani})))
+check("jsonlist: 'where' keeps only matching items", [j.title for j in got] == ["Backend Developer"], [j.title for j in got])
+grouped = {"data": [{"department": {"name": "Eng"}, "jobs": [{"uuid": "u1", "title": "Software Engineer - Front end", "location": {"name": "Hyderabad, Telangana, India"}}]},
+                    {"department": None, "jobs": [{"uuid": "u2", "title": "Ruby on Rails developer", "location": {"name": "Chennai, Tamil Nadu, India"}}]}]}
+got = list(jsonlist.fetch({"name": "A", "url": "https://a.test/careers", "items": "data.*.jobs", "location": "location.name",
+                           "link": "https://a.test/careers/{uuid}"}, json_h({"a.test/careers": grouped})))
+check("jsonlist: '*' flattens jobs grouped by department; nested location field", [j.url for j in got] == ["https://a.test/careers/u1", "https://a.test/careers/u2"],
+      [j.url for j in got])
+rows = {"data": {"rows": [{"id": 7, "job_title": "Java Software developer", "location": "Hyderabad", "date_posted": "05-11-2026", "jd": "<p>Spring</p>"}]}}
+got = list(jsonlist.fetch({"name": "Mo", "url": "https://mo.test/list", "method": "POST", "body": {"take": 500}, "items": "data.rows", "title": "job_title",
+                           "location": "location", "description": "jd", "posted": "date_posted", "date_format": "%d-%m-%Y",
+                           "link": "https://mo.test/jobs?job={id}"}, json_h(posts={'mo.test/list {"take": 500}': rows})))
+check("jsonlist: POST body sent; custom date format; a bare Indian city counts as India",
+      [(j.title, j.location, j.url, j.posted.month, j.text) for j in got] == [("Java Software developer", "Hyderabad", "https://mo.test/jobs?job=7", 11, "Spring")],
+      [(j.title, j.location, j.url, j.posted, j.text) for j in got])
+nd = '<html><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"roles":[{"Role":"Backend Engineer","Location":"Whitefield, Bengaluru","IsOpen":true,"id":28},{"Role":"Frontend Engineer","Location":"Bengaluru","IsOpen":false,"id":29}]}}}</script></html>'
+got = list(jsonlist.fetch({"name": "S", "url": "https://s.test/career", "html_json": "__NEXT_DATA__", "items": "props.pageProps.roles", "where": {"IsOpen": True},
+                           "title": "Role", "location": "Location"}, json_h(pages={"s.test/career": nd})))
+check("jsonlist: list read from a page's __NEXT_DATA__; closed roles skipped; link falls back to page#id",
+      [(j.title, j.url) for j in got] == [("Backend Engineer", "https://s.test/career#28")], [(j.title, j.url) for j in got])
+jp = 'cb({"searchResults":[{"job":{"title":"Associate Software Engineer","primary_city":"Bengaluru","primary_country":"IN","url":"https://d.test/job/1/x/"}}]});'
+got = list(jsonlist.fetch({"name": "D", "url": "https://d.test/api/job/search", "jsonp": True, "items": "searchResults", "title": "job.title",
+                           "location": ["job.primary_city", "job.primary_country"], "url_field": "job.url"}, json_h(pages={"d.test/api": jp})))
+check("jsonlist: JSONP wrapper stripped; location joined from two fields; url field used",
+      [(j.location, j.url) for j in got] == [("Bengaluru, IN", "https://d.test/job/1/x/")], [(j.location, j.url) for j in got])
+try:
+    list(jsonlist.fetch({"name": "S", "url": "https://s.test/career", "html_json": "__NEXT_DATA__", "items": "x"}, json_h(pages={"s.test/career": "<html></html>"})))
+    raised = False
+except ValueError:
+    raised = True
+check("jsonlist: a page without its data script raises (a failed read, not 'no openings')", raised)
+
+check("sitemap: 'Member of Technical Staff' URLs are not dropped as senior; 'Staff Engineer' still is",
+      not sm.SENIOR_SLUG.search("/job/R1/Member-of-Technical-Staff-Backend") and sm.SENIOR_SLUG.search("/job/R2/Staff-Engineer"))
+avat = ('<script type="application/ld+json">{"@type":"JobPosting","title":"Software Engineer","datePosted":"2026-11-20"}</script>'
+        '<div class="article__content__view__field__label" > Country/Region </div> <div class="article__content__view__field__value"> India </div>'
+        '<div class="article__content__view__field__label" > City </div> <div class="article__content__view__field__value"> Bengaluru </div>')
+avat_my = avat.replace("India", "Malaysia").replace("Bengaluru", "Penang").replace("Software Engineer", "Software Engineer II")
+crawl.SESSION = site({"/robots.txt": (200, ""), "/sitemap.xml": (200, "<urlset>" + "".join(f"<url><loc>https://av.test/Careers/JobDetail/{s}</loc><lastmod>2026-11-20</lastmod></url>"
+                                                                                           for s in ("Software-Engineer/1", "Software-Engineer-II/2", "About/3")) + "</urlset>"),
+                      "/JobDetail/Software-Engineer/1": (200, avat), "/JobDetail/Software-Engineer-II/2": (200, avat_my)})
+got = [(j.title, j.location) for j in portals.fetch({"name": "Av", "portal": "sitemap", "host": "av.test", "job_path": "/JobDetail/"}, crawl)]
+check("sitemap: 'job_path' picks the site's job URLs; Avature labelled fields give the location when JobPosting has none",
+      got == [("Software Engineer", "Bengaluru, India")], got)
+crawl.SESSION = site({"/robots.txt": (200, ""), "/sitemap.xml": (200, "<urlset><url><loc>https://dt.test//index.php?ac=jobad&amp;id=9</loc></url>"
+                                                                       "<url><loc>https://dt.test/index.php?ac=search</loc></url></urlset>")})
+check("sitemap: 'job_path' matches query-string job URLs and unescapes &amp;",
+      [u for u, _ in sm.job_urls(crawl, {"host": "dt.test", "job_path": "ac=jobad"}, {})] == ["https://dt.test//index.php?ac=jobad&id=9"])
+long_card = '<a href="/company/careers/full-stack-developer"><div class="card">' + "x" * 3200 + '</div></a>'
+pages = {"/careers": long_card, "/company/careers/full-stack-developer": "<main>Full stack developer, Bengaluru</main>"}
+crawl.SESSION = SimpleNamespace(get=lambda url, **kw: SimpleNamespace(text=next(v for k, v in pages.items() if url.endswith(k)), raise_for_status=lambda: None))
+lc = {"name": "Co", "portal": "links", "list_urls": ["https://co.test/careers"], "job_link": "/company/careers/[a-z0-9-]+", "title_from_url": True,
+      "location": "Bengaluru, India"}
+check("links: 'inner_max' reads job cards longer than the default 3000 characters",
+      not list(links.fetch(lc, crawl)) and [j.title for j in links.fetch(lc | {"inner_max": 5000}, crawl)] == ["full stack developer"])
+pages = {"/careers": '<a href="/careers/3"><div>Gen AI Developer  Gurgaon  March 23, 2026  Apply</div></a>', "/careers/3": "<main>Gen AI Developer, Gurgaon</main>"}
+bc = {"name": "B", "portal": "links", "list_urls": ["https://b.test/careers"], "job_link": r"/careers/\d+", "location": "Gurgaon, India"}
+check("links: 'title_split' cuts link text that runs on into the city and date",
+      [j.title for j in links.fetch(bc | {"title_split": r"\s{2,}"}, crawl)] == ["Gen AI Developer"]
+      and [j.title for j in links.fetch(bc, crawl)] == ["Gen AI Developer  Gurgaon  March 23, 2026  Apply"])
+ld = lambda loc: ('<script type="application/ld+json">{"@type":"JobPosting","title":"Software Engineer"' + (f',"jobLocation":{{"address":{{"addressLocality":"{loc}"}}}}' if loc else "")  # noqa: E731
+                  + '}</script><main>This role is Remote (US only). Office in Sunnyvale.</main>')
+pages = {"/careers": '<a href="/careers/1">Software Engineer</a><a href="/careers/2">Software Engineer</a><a href="/careers/3">Software Engineer</a>',
+         "/careers/1": ld("Sunnyvale, CA, US"), "/careers/2": ld(""), "/careers/3": ld("Pune, India")}
+lc2 = {"name": "L", "portal": "links", "list_urls": ["https://l.test/careers"], "job_link": r"/careers/\d+"}
+got_plain = sorted((j.url[-1], j.location) for j in links.fetch(lc2, crawl))
+got_loc = sorted((j.url[-1], j.location) for j in links.fetch(lc2 | {"location": "Chennai, India"}, crawl))
+check("links (review): a posting placed outside India is dropped, 'Remote' in page text isn't India, the configured location only fills an unplaced posting",
+      got_plain == [("3", "Pune, India")] and got_loc == [("2", "Chennai, India"), ("3", "Pune, India")], (got_plain, got_loc))
+crawl.SESSION = site({"/robots.txt": (200, ""), "/sitemap.xml": (200, "<urlset><url><loc>https://dt.test//index.php?ac=jobad&amp;id=9</loc></url></urlset>")})
+check("sitemap (review): job_path is matched after &amp; is decoded",
+      [u for u, _ in sm.job_urls(crawl, {"host": "dt.test", "job_path": r"ac=jobad&id=\d+"}, {})] == ["https://dt.test//index.php?ac=jobad&id=9"])
+crawl.SESSION = site({"/robots.txt": (200, ""), "/sitemap.xml": (200, "<sitemapindex><sitemap><loc>https://dt.test/talent-sitemap.xml</loc></sitemap></sitemapindex>"),
+                      "/talent-sitemap.xml": (503, "")})
+try:
+    sm.job_urls(crawl, {"host": "dt.test", "job_path": "/talent/"}, {})
+    raised = False
+except RuntimeError:
+    raised = True
+check("sitemap (review): with job_path, a failed sub-sitemap fails the read even when its name doesn't say 'job'", raised)
+check("sitemap (review): MTS spelled with underscores or run together is kept; 'Consulting Member of Technical Staff' is senior",
+      not any(sm.SENIOR_SLUG.search(u) for u in ("/job/Member_of_Technical_Staff", "/job/MemberOfTechnicalStaff"))
+      and sm.SENIOR_SLUG.search("/job/consulting-member-of-technical-staff"))
+crawl.SESSION = real_session
+for name, cfg_, reply in (("missing list", {"items": "data.jobs"}, {"success": False}),
+                          ("renamed title field", {"items": "jobs", "title": "title"}, {"jobs": [{"name": "Software Engineer", "location": "Pune"}]}),
+                          ("page size too small", {"items": "jobs", "total": "total"}, {"total": 120, "jobs": [{"title": "Software Engineer", "location": "Pune"}]})):
+    try:
+        list(jsonlist.fetch({"name": "X", "url": "https://x.test/api", "location": "location"} | cfg_, json_h({"x.test/api": reply})))
+        raised = False
+    except ValueError:
+        raised = True
+    check(f"jsonlist (review): a {name} raises instead of reading as 'no openings'", raised)
+got = list(jsonlist.fetch({"name": "X", "url": "https://x.test/api", "items": "jobs", "location": "loc", "url_field": "u", "max_exp": "hi"},
+                          json_h({"x.test/api": {"jobs": [{"id": 1, "title": "&amp;lt;img src=x onerror=alert(1)&amp;gt;Software Engineer", "loc": "Pune",
+                                                           "u": "javascript:alert(1)", "hi": 3},
+                                                          {"id": 2, "title": "Backend Engineer", "loc": {"name": ["Austin", "Pune"]}, "u": "/jobs/2"}]}})))
+check("jsonlist (review): double-escaped HTML can't come back as a tag; javascript: links replaced; relative links joined; every place in a list kept",
+      [(j.title, j.url) for j in got] == [("Software Engineer", "https://x.test/api#1"), ("Backend Engineer", "https://x.test/jobs/2")]
+      and got[1].location == "Austin, Pune", [(j.title, j.url, j.location) for j in got])
+check("jsonlist (review): a maximum alone doesn't invent an 'Experience: 0-N years' line", got and not got[0].text.startswith("Experience"))
+got = list(jsonlist.fetch({"name": "X", "url": "https://x.test/api", "items": "jobs", "location": "loc", "link": "https://x.test/apply/{code}"},
+                          json_h({"x.test/api": {"jobs": [{"id": 5, "title": "Software Engineer", "loc": "Pune", "code": None}]}})))
+check("jsonlist (review): a link template with a missing field falls back to page#id, not '/apply/None'", [j.url for j in got] == ["https://x.test/api#5"])
+pages_seen = []
+
+
+def paged(url, params=None, **k):
+    pages_seen.append(params["offset"])
+    rows = [{"id": i, "title": "Software Engineer", "loc": "Pune"} for i in range(params["offset"], min(params["offset"] + 2, 3))]
+    return {"total": 3, "jobs": rows}
+
+
+hp = json_h()
+hp.get = paged
+got = list(jsonlist.fetch({"name": "X", "url": "https://x.test/api", "items": "jobs", "location": "loc", "total": "total", "params": {"offset": 0},
+                           "page_param": "offset", "page_step": 2}, hp))
+check("jsonlist: offset paging reads until a short page, and the total check counts every page", len(got) == 3 and pages_seen == [0, 2], (len(got), pages_seen))
+
+# --- Round eleven reader fixes (21 Nov 2026) -----------------------------------------------------------
+finders = []
+
+
+def or_search(k):
+    finders.append(k)
+    return {"items": [{"TotalJobsCount": 2, "requisitionList": [
+        {"Id": "7", "Title": "Engineer II, Software Dev.", "PrimaryLocation": "Chennai, India", "PostedDate": "2026-11-01"},
+        {"Id": "8", "Title": "HR Business Partner", "PrimaryLocation": "Chennai, India", "PostedDate": "2026-11-01"}]}]}
+
+
+patched({"recruitingCEJobRequisitionDetails": details, "recruitingCEJobRequisitions": or_search})
+got = list(crawl.oracle({"name": "Liquidity Services", "host": "x.oraclecloud.com", "site": "CX_1"}))
+check("oracle: one India listing with no keyword, titles filtered here ('Engineer II, Software Dev.' found)",
+      [j.title for j in got] == ["Engineer II, Software Dev."] and len(finders) == 1 and "keyword" not in finders[0], ([j.title for j in got], finders))
+patched({"recruitingCEJobRequisitions": {"items": [{"TotalJobsCount": 0}]}})
+try:
+    list(crawl.oracle({"name": "X", "host": "x.oraclecloud.com", "site": "CX_1"}))
+    oerr = None
+except RuntimeError as e:
+    oerr = e
+check("oracle: an answer without requisitionList fails the read instead of reading as no openings", oerr is not None)
+patched({"recruitingCEJobRequisitions": {"items": [{"TotalJobsCount": 0, "requisitionList": []}]}})
+check("oracle: an empty requisitionList is a clean empty read", list(crawl.oracle({"name": "X", "host": "x.oraclecloud.com", "site": "CX_1"})) == [])
+finders = []
+
+
+def or_big(k):  # 11,666 India requisitions in all; the keyword searches are small
+    finders.append(k)
+    if "keyword" not in k:
+        return {"items": [{"TotalJobsCount": 11666, "requisitionList": [{"Id": "x", "Title": "Branch Manager", "PrimaryLocation": "Pune, India"}] * 200}]}
+    return {"items": [{"TotalJobsCount": 1, "requisitionList": [
+        {"Id": "9", "Title": "Software Engineering II_CTO_Bangalore", "PrimaryLocation": "Bengaluru, India", "PostedDate": "2026-11-01"}]}]}
+
+
+patched({"recruitingCEJobRequisitionDetails": details, "recruitingCEJobRequisitions": or_big})
+got = list(crawl.oracle({"name": "Kotak", "host": "x.oraclecloud.com", "site": "CX"}))
+check("oracle: a site over the cap is read by broad keywords, as a complete read (no error), one posting once",
+      [j.title for j in got] == ["Software Engineering II_CTO_Bangalore"] and len(finders) == 1 + len(crawl.ORACLE_KEYWORDS), ([j.title for j in got], len(finders)))
+
+sr_params = []
+
+
+def sr_list(k):
+    sr_params.append(k)
+    return {"totalFound": 3, "content": [
+        {"id": "a", "name": "Software Engineer", "location": {"city": "Bangalore", "country": "in"}, "releasedDate": "2026-11-01T00:00:00Z"},
+        {"id": "b", "name": "Software Engineer", "location": {"city": "Pune", "country": "in"}, "releasedDate": "2026-11-01T00:00:00Z"},
+        {"id": "c", "name": "Software Engineer", "location": {"city": "Hyderabad", "country": "in"}, "releasedDate": "2026-11-01T00:00:00Z"}]}
+
+
+patched({"/postings/a": {"jobAd": {"sections": {"jobDescription": {"text": "<p>2+ years</p>"}}}, "postingUrl": "https://jobs.smartrecruiters.com/B/a"},
+         "/postings/b": _gone(), "/postings/c": crawl.requests.RequestException("reset"), "/postings": sr_list})
+got, serr = [], None
+try:
+    for j in crawl.smartrecruiters({"name": "Bosch", "slug": "BoschGroup"}):
+        got.append(j)
+except crawl.DetailsUnread as e:
+    serr = e
+check("smartrecruiters: India filtered on the server (country=in), 404 detail skips the job, other failures keep it unread",
+      '"country": "in"' in sr_params[0] and [j.url.rsplit("/", 1)[1] for j in got] == ["a", "c-software-engineer"]
+      and got[1].meta.get("detail") == "unread" and serr is not None, (sr_params, [j.url for j in got], repr(serr)))
+patched({"/postings/": {"jobAd": {}}, "/postings": lambda k: {"totalFound": 5000, "content": []}})
+try:
+    list(crawl.smartrecruiters({"name": "Big", "slug": "Big"}))
+    serr = None
+except RuntimeError as e:
+    serr = e
+check("smartrecruiters: more India postings than the cap fails the read (partial listing)",
+      serr is not None and not isinstance(serr, crawl.DetailsUnread) and "India postings" in str(serr), repr(serr))
+
+# a stub keeps the posting's identity: same "<id>-<title slug>" URL as a full read, and its earlier text comes back
+full = crawl.Job("Bosch", "VM Brakes BSW CAN Developer (Indian OEM)", "Bangalore, IN",
+                 "https://jobs.smartrecruiters.com/BoschGroup/744000162443389-vm-brakes-bsw-can-developer-indian-oem-", None, "2+ years of C++")
+patched({"/postings/744000162443389": crawl.requests.RequestException("429"), "/postings": {"totalFound": 1, "content": [
+    {"id": "744000162443389", "name": "VM Brakes BSW CAN Developer (Indian OEM)", "location": {"city": "Bangalore", "country": "in"}}]}})
+got = []
+try:
+    for j in crawl.smartrecruiters({"name": "Bosch", "slug": "BoschGroup"}):
+        got.append(j)
+except crawl.DetailsUnread:
+    pass
+filled = crawl.fill_unread(got, [full])
+check("smartrecruiters: an unread stub has the same URL as the full read, and fill_unread restores its text",
+      got and got[0].url == full.url and filled[0].text == full.text, ([j.url for j in got], [j.text for j in filled]))
+stub = dataclasses.replace(full, url="https://jobs.smartrecruiters.com/BoschGroup/744000162443389", text="", meta={"detail": "unread"})
+check("fill_unread: matches a stub to the earlier read by the leading numeric id", crawl.fill_unread([stub], [full])[0].text == full.text)
+patched({"/postings": {"message": "error"}})
+try:
+    list(crawl.smartrecruiters({"name": "X", "slug": "X"}))
+    serr = None
+except RuntimeError as e:
+    serr = e
+check("smartrecruiters: an answer without a content list fails the read", serr is not None and not isinstance(serr, crawl.DetailsUnread), repr(serr))
+calls = []
+
+
+def sr_429(k):
+    calls.append(k)
+    return crawl.requests.RequestException("429")
+
+
+patched({"/postings/": sr_429, "/postings": {"totalFound": 6, "content": [
+    {"id": str(i), "name": "Software Engineer", "location": {"city": "Pune", "country": "in"}} for i in range(6)]}})
+got = []
+try:
+    for j in crawl.smartrecruiters({"name": "X", "slug": "X"}):
+        got.append(j)
+except crawl.DetailsUnread:
+    pass
+check("smartrecruiters: after 3 failed detail calls in a row it stops calling and keeps the rest from the list",
+      len(calls) == 3 and len(got) == 6 and all(j.meta.get("detail") == "unread" for j in got), (len(calls), len(got)))
+
+finders = []
+
+
+def or_two_pages(k):
+    finders.append(k)
+    rows = [{"Id": f"p{i}", "Title": "Software Engineer", "PrimaryLocation": "Pune, India"} for i in range(200)] if "offset=0," in k else \
+        [{"Id": "q1", "Title": "Software Engineer II", "PrimaryLocation": "Pune, India"}]
+    return {"items": [{"TotalJobsCount": 201, "requisitionList": rows}]}
+
+
+patched({"recruitingCEJobRequisitionDetails": details, "recruitingCEJobRequisitions": or_two_pages})
+got = list(crawl.oracle({"name": "X", "host": "x.oraclecloud.com", "site": "CX_1"}))
+check("oracle: pages until the reported total (two pages of 200)", len(got) == 201 and len(finders) == 2, (len(got), len(finders)))
+
+
+def or_big_keyword(k):
+    if "keyword" not in k:
+        return {"items": [{"TotalJobsCount": 11666, "requisitionList": []}]}
+    return {"items": [{"TotalJobsCount": 5000, "requisitionList": [
+        {"Id": f"{k[-40:]}{i}", "Title": "Branch Officer", "PrimaryLocation": "Pune, India"} for i in range(200)]}]}
+
+
+patched({"recruitingCEJobRequisitionDetails": details, "recruitingCEJobRequisitions": or_big_keyword})
+try:
+    list(crawl.oracle({"name": "Kotak", "host": "x.oraclecloud.com", "site": "CX"}))
+    oerr = None
+except RuntimeError as e:
+    oerr = e
+check("oracle: a keyword search that hits the cap fails the read (partial listing)", oerr is not None and "read the first" in str(oerr), repr(oerr))
+
+import coverage  # noqa: E402
+check("coverage.failed_read: any '<ExceptionName>:' note and suspect reads fail; DetailsUnread and LinkedIn notes don't",
+      all(coverage.failed_read(n) for n in ("TooManyRedirects: x", "error: zlib", "HTTPError: 429 — 3 fresh + 2 carried", "suspect read: 0 vs 12"))
+      and not any(coverage.failed_read(n) for n in ("", "DetailsUnread: Workday detail call failed (429)", "12 fresh + 3 earlier kept (0 past the window)")))
+
+lever_urls = []
+crawl.get = lambda url, **kw: lever_urls.append(url) or []
+list(crawl.lever({"name": "Employ", "slug": "employ", "region": "eu"}))
+list(crawl.lever({"name": "X", "slug": "x"}))
+check("lever: EU-hosted boards use api.eu.lever.co, others api.lever.co",
+      lever_urls[0].startswith("https://api.eu.lever.co/") and lever_urls[1].startswith("https://api.lever.co/"), lever_urls)
+crawl.get, crawl.post, crawl.SESSION = real_get, real_post, real_session
+
+check("in_india: Workday's 'IND - Any Location (Remote)' is India; Indiana and 'City, IN' still are not",
+      crawl.in_india("IND - Any Location (Remote)") and crawl.in_india("US - Remote / IND - Hyderabad")
+      and not crawl.in_india("Indianapolis, IN") and not crawl.in_india("Greenwood, IN") and not crawl.in_india("Industry City, NY")
+      and not crawl.in_india("IND - Indianapolis, IN") and not crawl.in_india("USA | IND - Indianapolis") and not crawl.in_india("IND: Plainfield, Indiana"))
 
 print(f"\n{'ALL PASSED' if not failures else str(len(failures)) + ' FAILED: ' + ', '.join(failures)}")
 sys.exit(1 if failures else 0)
